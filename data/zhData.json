@@ -1,0 +1,1070 @@
+{
+  "chapters": [
+    {
+      "id": 1,
+      "title": "Chapter 1",
+      "subtitle": "Pinyin, 4 Nada & Sapaan Dasar",
+      "xpRequired": 0,
+      "color": "#ef4444",
+      "ring": "#f87171",
+      "stages": [
+        { "id": "zh-1-1", "label": "Apa itu Pinyin?",     "type": "vocabulary", "xpReward": 100, "stars": 0, "feedKey": "zhc1s1" },
+        { "id": "zh-1-2", "label": "4 Nada Mandarin",     "type": "quiz",       "xpReward": 100, "stars": 0, "feedKey": "zhc1s2" },
+        { "id": "zh-1-3", "label": "Sapaan Harian",       "type": "matching",   "xpReward": 100, "stars": 0, "feedKey": "zhc1s3" },
+        { "id": "zh-1-4", "label": "Terima Kasih & Maaf", "type": "quiz",       "xpReward": 100, "stars": 0, "feedKey": "zhc1s4" },
+        { "id": "zh-1-5", "label": "Review Chapter 1",    "type": "matching",   "xpReward": 200, "stars": 0, "feedKey": "zhc1s5" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Chapter 2",
+      "subtitle": "Kalimat Dasar, Kata Ganti & Keluarga",
+      "xpRequired": 500,
+      "color": "#f59e0b",
+      "ring": "#fcd34d",
+      "stages": [
+        { "id": "zh-2-1", "label": "Kata Ganti Orang",    "type": "vocabulary", "xpReward": 100, "stars": 0, "feedKey": "zhc2s1" },
+        { "id": "zh-2-2", "label": "Kata 是 (shì)",       "type": "quiz",       "xpReward": 100, "stars": 0, "feedKey": "zhc2s2" },
+        { "id": "zh-2-3", "label": "Anggota Keluarga",    "type": "vocabulary", "xpReward": 100, "stars": 0, "feedKey": "zhc2s3" },
+        { "id": "zh-2-4", "label": "Kalimat Perkenalan",  "type": "quiz",       "xpReward": 100, "stars": 0, "feedKey": "zhc2s4" },
+        { "id": "zh-2-5", "label": "Review Chapter 2",    "type": "matching",   "xpReward": 200, "stars": 0, "feedKey": "zhc2s5" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Chapter 3",
+      "subtitle": "Angka, Tanggal & Kosakata Sehari-hari",
+      "xpRequired": 1500,
+      "color": "#10b981",
+      "ring": "#34d399",
+      "stages": [
+        { "id": "zh-3-1", "label": "Angka 0–10",          "type": "vocabulary", "xpReward": 100, "stars": 0, "feedKey": "zhc3s1" },
+        { "id": "zh-3-2", "label": "Hari & Bulan",        "type": "matching",   "xpReward": 100, "stars": 0, "feedKey": "zhc3s2" },
+        { "id": "zh-3-3", "label": "Makanan & Minuman",   "type": "vocabulary", "xpReward": 100, "stars": 0, "feedKey": "zhc3s3" },
+        { "id": "zh-3-4", "label": "Warna & Bentuk",      "type": "quiz",       "xpReward": 100, "stars": 0, "feedKey": "zhc3s4" },
+        { "id": "zh-3-5", "label": "Review Chapter 3",    "type": "matching",   "xpReward": 200, "stars": 0, "feedKey": "zhc3s5" }
+      ]
+    }
+  ],
+
+  "feeds": {
+    "zhc1s1": [
+      {
+        "id": "zhc1s1_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "拼音",
+          "phonetic": "pīnyīn",
+          "meaning": "Pinyin — sistem romanisasi Mandarin",
+          "meaningId": "Alfabet Latin untuk baca Mandarin",
+          "exampleSentence": "学拼音很重要 (Belajar pinyin sangat penting)",
+          "audioUrl": "tts://拼音"
+        }
+      },
+      {
+        "id": "zhc1s1_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "声调",
+          "phonetic": "shēngdiào",
+          "meaning": "Nada / Ton",
+          "meaningId": "Mandarin punya 4 nada berbeda",
+          "exampleSentence": "四个声调 (Empat nada)",
+          "audioUrl": "tts://声调"
+        }
+      },
+      {
+        "id": "zhc1s1_3", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Pinyin (拼音) adalah...",
+          "options": ["Sistem karakter Mandarin", "Sistem romanisasi untuk membaca Mandarin", "Nama bahasa Mandarin", "Buku pelajaran Mandarin"],
+          "correctAnswer": "Sistem romanisasi untuk membaca Mandarin",
+          "explanation": "Pinyin (拼音) = sistem penulisan bunyi Mandarin menggunakan huruf Latin. Sangat penting untuk pemula!"
+        }
+      },
+      {
+        "id": "zhc1s1_4", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Mandarin memiliki berapa nada dasar?",
+          "options": ["2 nada", "3 nada", "4 nada", "5 nada"],
+          "correctAnswer": "4 nada",
+          "explanation": "Mandarin punya 4 nada: ā (datar), á (naik), ǎ (turun-naik), à (turun). Nada yang berbeda = arti yang berbeda!"
+        }
+      },
+      {
+        "id": "zhc1s1_5", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan istilah Pinyin dengan artinya!",
+          "pairs": [
+            { "word": "拼音 (pīnyīn)", "meaning": "Sistem romanisasi" },
+            { "word": "声调 (shēngdiào)", "meaning": "Nada/Ton" },
+            { "word": "汉字 (hànzì)", "meaning": "Karakter Mandarin" }
+          ],
+          "shuffledMeanings": ["Karakter Mandarin", "Sistem romanisasi", "Nada/Ton"],
+          "explanation": "拼音=pinyin, 声调=nada, 汉字=karakter Mandarin. Tiga konsep dasar belajar Mandarin!"
+        }
+      },
+      {
+        "id": "zhc1s1_6", "type": "listening_quiz", "xpReward": 15,
+        "content": {
+          "audioText": "拼音",
+          "question": "Kata apa yang didengar?",
+          "options": ["声调 (shēngdiào)", "拼音 (pīnyīn)", "汉字 (hànzì)"],
+          "correctAnswer": "拼音 (pīnyīn)",
+          "explanation": "拼音 (pīnyīn) = pinyin. Dengarkan nada: pīn (nada 1 datar) + yīn (nada 1 datar)."
+        }
+      }
+    ],
+
+    "zhc1s2": [
+      {
+        "id": "zhc1s2_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "ā / 妈",
+          "phonetic": "Nada 1 — datar tinggi (ˉ)",
+          "meaning": "Ibu",
+          "meaningId": "māma = ibu",
+          "exampleSentence": "妈妈 (māma) = Ibu",
+          "audioUrl": "tts://妈妈"
+        }
+      },
+      {
+        "id": "zhc1s2_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "á / 麻",
+          "phonetic": "Nada 2 — naik (ˊ)",
+          "meaning": "Wijen/Rami",
+          "meaningId": "Seperti nada bertanya 'hah?'",
+          "exampleSentence": "麻烦 (máfan) = Merepotkan",
+          "audioUrl": "tts://麻烦"
+        }
+      },
+      {
+        "id": "zhc1s2_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "ǎ / 马",
+          "phonetic": "Nada 3 — turun lalu naik (ˇ)",
+          "meaning": "Kuda",
+          "meaningId": "Seperti nada ragu 'hmm...'",
+          "exampleSentence": "马 (mǎ) = Kuda",
+          "audioUrl": "tts://马"
+        }
+      },
+      {
+        "id": "zhc1s2_4", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "à / 骂",
+          "phonetic": "Nada 4 — turun tajam (ˋ)",
+          "meaning": "Memaki",
+          "meaningId": "Seperti nada marah atau tegas",
+          "exampleSentence": "骂人 (mà rén) = Memaki orang",
+          "audioUrl": "tts://骂人"
+        }
+      },
+      {
+        "id": "zhc1s2_5", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "妈 (mā) menggunakan nada ke berapa?",
+          "options": ["Nada 1 (datar tinggi)", "Nada 2 (naik)", "Nada 3 (turun-naik)", "Nada 4 (turun tajam)"],
+          "correctAnswer": "Nada 1 (datar tinggi)",
+          "explanation": "妈 (mā) = ibu, nada 1 datar. Tanda: ā. Bayangkan menyanyi nada tinggi yang datar."
+        }
+      },
+      {
+        "id": "zhc1s2_6", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan nada dengan simbolnya!",
+          "pairs": [
+            { "word": "ā (nada 1)", "meaning": "Datar tinggi ˉ" },
+            { "word": "á (nada 2)", "meaning": "Naik ˊ" },
+            { "word": "ǎ (nada 3)", "meaning": "Turun-naik ˇ" },
+            { "word": "à (nada 4)", "meaning": "Turun tajam ˋ" }
+          ],
+          "shuffledMeanings": ["Turun tajam ˋ", "Datar tinggi ˉ", "Turun-naik ˇ", "Naik ˊ"],
+          "explanation": "4 nada Mandarin: ā datar, á naik, ǎ turun-naik, à turun. Ingat: mā=ibu, má=wijen, mǎ=kuda, mà=memaki!"
+        }
+      }
+    ],
+
+    "zhc1s3": [
+      {
+        "id": "zhc1s3_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "你好",
+          "phonetic": "nǐ hǎo",
+          "meaning": "Halo / Hai",
+          "meaningId": "Sapaan paling umum sepanjang waktu",
+          "exampleSentence": "你好！我叫小明。(Halo! Saya bernama Xiao Ming.)",
+          "audioUrl": "tts://你好"
+        }
+      },
+      {
+        "id": "zhc1s3_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "你好吗",
+          "phonetic": "nǐ hǎo ma",
+          "meaning": "Apa kabar?",
+          "meaningId": "Tanya kabar secara formal",
+          "exampleSentence": "你好吗？— 我很好！(Apa kabar? — Saya baik!)",
+          "audioUrl": "tts://你好吗"
+        }
+      },
+      {
+        "id": "zhc1s3_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "早上好",
+          "phonetic": "zǎoshang hǎo",
+          "meaning": "Selamat pagi",
+          "meaningId": "Digunakan di pagi hari",
+          "exampleSentence": "早上好！新的一天开始了。(Selamat pagi! Hari baru dimulai.)",
+          "audioUrl": "tts://早上好"
+        }
+      },
+      {
+        "id": "zhc1s3_4", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "晚上好",
+          "phonetic": "wǎnshang hǎo",
+          "meaning": "Selamat malam",
+          "meaningId": "Sapaan saat bertemu malam hari",
+          "exampleSentence": "晚上好！今天怎么样？(Selamat malam! Bagaimana harimu?)",
+          "audioUrl": "tts://晚上好"
+        }
+      },
+      {
+        "id": "zhc1s3_5", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "再见",
+          "phonetic": "zàijiàn",
+          "meaning": "Sampai jumpa / Selamat tinggal",
+          "meaningId": "Pamitan standar",
+          "exampleSentence": "再见！明天见！(Sampai jumpa! Sampai besok!)",
+          "audioUrl": "tts://再见"
+        }
+      },
+      {
+        "id": "zhc1s3_6", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan sapaan Mandarin dengan artinya!",
+          "pairs": [
+            { "word": "你好", "meaning": "Halo" },
+            { "word": "早上好", "meaning": "Selamat pagi" },
+            { "word": "晚上好", "meaning": "Selamat malam" },
+            { "word": "再见", "meaning": "Sampai jumpa" }
+          ],
+          "shuffledMeanings": ["Sampai jumpa", "Selamat pagi", "Halo", "Selamat malam"],
+          "explanation": "你好=halo, 早上好=selamat pagi, 晚上好=selamat malam, 再见=sampai jumpa."
+        }
+      }
+    ],
+
+    "zhc1s4": [
+      {
+        "id": "zhc1s4_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "谢谢",
+          "phonetic": "xièxie",
+          "meaning": "Terima kasih",
+          "meaningId": "Ekspresi paling dasar kesopanan",
+          "exampleSentence": "谢谢你！(Terima kasih!)",
+          "audioUrl": "tts://谢谢"
+        }
+      },
+      {
+        "id": "zhc1s4_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "不客气",
+          "phonetic": "bú kèqi",
+          "meaning": "Sama-sama / Terima kasih kembali",
+          "meaningId": "Respon untuk 谢谢",
+          "exampleSentence": "谢谢！— 不客气！(Terima kasih! — Sama-sama!)",
+          "audioUrl": "tts://不客气"
+        }
+      },
+      {
+        "id": "zhc1s4_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "对不起",
+          "phonetic": "duìbuqǐ",
+          "meaning": "Maaf (sungguh-sungguh)",
+          "meaningId": "Untuk minta maaf atas kesalahan",
+          "exampleSentence": "对不起，我来晚了。(Maaf, saya terlambat.)",
+          "audioUrl": "tts://对不起"
+        }
+      },
+      {
+        "id": "zhc1s4_4", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "没关系",
+          "phonetic": "méi guānxi",
+          "meaning": "Tidak apa-apa / Tidak masalah",
+          "meaningId": "Respon untuk 对不起",
+          "exampleSentence": "没关系！(Tidak apa-apa!)",
+          "audioUrl": "tts://没关系"
+        }
+      },
+      {
+        "id": "zhc1s4_5", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "请",
+          "phonetic": "qǐng",
+          "meaning": "Tolong / Silakan",
+          "meaningId": "Kata sopan serbaguna",
+          "exampleSentence": "请坐！(Silakan duduk!) / 请帮我 (Tolong bantu saya)",
+          "audioUrl": "tts://请"
+        }
+      },
+      {
+        "id": "zhc1s4_6", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Bagaimana membalas 谢谢 (xièxie)?",
+          "options": ["对不起 (duìbuqǐ)", "不客气 (bú kèqi)", "再见 (zàijiàn)", "你好 (nǐ hǎo)"],
+          "correctAnswer": "不客气 (bú kèqi)",
+          "explanation": "不客气 (bú kèqi) = sama-sama. Diucapkan sebagai balasan atas 谢谢 (terima kasih)."
+        }
+      },
+      {
+        "id": "zhc1s4_7", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan pasangan percakapan!",
+          "pairs": [
+            { "word": "谢谢", "meaning": "Terima kasih" },
+            { "word": "不客气", "meaning": "Sama-sama" },
+            { "word": "对不起", "meaning": "Maaf" },
+            { "word": "没关系", "meaning": "Tidak apa-apa" }
+          ],
+          "shuffledMeanings": ["Tidak apa-apa", "Terima kasih", "Maaf", "Sama-sama"],
+          "explanation": "谢谢↔不客气 (terima kasih↔sama-sama), 对不起↔没关系 (maaf↔tidak apa-apa). Dua pasangan penting!"
+        }
+      }
+    ],
+
+    "zhc1s5": [
+      {
+        "id": "zhc1s5_1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Review Chapter 1 — cocokkan semua!",
+          "pairs": [
+            { "word": "你好", "meaning": "Halo" },
+            { "word": "谢谢", "meaning": "Terima kasih" },
+            { "word": "对不起", "meaning": "Maaf" },
+            { "word": "再见", "meaning": "Sampai jumpa" }
+          ],
+          "shuffledMeanings": ["Sampai jumpa", "Halo", "Maaf", "Terima kasih"],
+          "explanation": "Review Chapter 1 selesai! Kamu sudah tahu sapaan, terima kasih, dan maaf dalam Mandarin."
+        }
+      },
+      {
+        "id": "zhc1s5_2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Nada mana yang TURUN TAJAM seperti nada marah?",
+          "options": ["Nada 1 (ā)", "Nada 2 (á)", "Nada 3 (ǎ)", "Nada 4 (à)"],
+          "correctAnswer": "Nada 4 (à)",
+          "explanation": "Nada 4 (à) turun tajam dari tinggi ke rendah. Contoh: 骂 (mà) = memaki, 是 (shì) = adalah."
+        }
+      },
+      {
+        "id": "zhc1s5_3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Selamat pagi dalam Mandarin: ___",
+          "options": ["晚上好", "早上好", "你好吗", "再见"],
+          "correctAnswer": "早上好",
+          "explanation": "早上好 (zǎoshang hǎo) = selamat pagi. 早上 = pagi hari, 好 = baik/halo."
+        }
+      },
+      {
+        "id": "zhc1s5_4", "type": "listening_quiz", "xpReward": 15,
+        "content": {
+          "audioText": "谢谢",
+          "question": "Apa yang diucapkan?",
+          "options": ["你好 (nǐ hǎo)", "谢谢 (xièxie)", "再见 (zàijiàn)", "对不起 (duìbuqǐ)"],
+          "correctAnswer": "谢谢 (xièxie)",
+          "explanation": "谢谢 (xièxie) = terima kasih. Perhatikan: 谢 dibaca dua kali, nada ke-4 lalu netral."
+        }
+      },
+      {
+        "id": "zhc1s5_5", "type": "speaking_test", "xpReward": 20,
+        "content": {
+          "phrase": "nǐ hǎo",
+          "hint": "Ucapkan: 你好 (nǐ hǎo) = Halo!",
+          "translation": "你好 — Halo!"
+        }
+      }
+    ],
+
+    "zhc2s1": [
+      {
+        "id": "zhc2s1_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "我",
+          "phonetic": "wǒ",
+          "meaning": "Saya / Aku",
+          "meaningId": "Kata ganti orang pertama",
+          "exampleSentence": "我是学生。(Saya adalah pelajar.)",
+          "audioUrl": "tts://我"
+        }
+      },
+      {
+        "id": "zhc2s1_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "你",
+          "phonetic": "nǐ",
+          "meaning": "Kamu / Anda (kasual)",
+          "meaningId": "Kata ganti orang kedua",
+          "exampleSentence": "你叫什么名字？(Siapa namamu?)",
+          "audioUrl": "tts://你"
+        }
+      },
+      {
+        "id": "zhc2s1_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "您",
+          "phonetic": "nín",
+          "meaning": "Anda (formal/hormat)",
+          "meaningId": "Bentuk sopan dari 你 — ke orang lebih tua/terhormat",
+          "exampleSentence": "您好！(Halo, Anda! — formal)",
+          "audioUrl": "tts://您"
+        }
+      },
+      {
+        "id": "zhc2s1_4", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "他 / 她",
+          "phonetic": "tā / tā",
+          "meaning": "Dia (laki-laki / perempuan)",
+          "meaningId": "Keduanya dibaca 'tā' tapi karakter berbeda",
+          "exampleSentence": "他是我朋友。(Dia [laki] temanku.)",
+          "audioUrl": "tts://他"
+        }
+      },
+      {
+        "id": "zhc2s1_5", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "我们 / 你们 / 他们",
+          "phonetic": "wǒmen / nǐmen / tāmen",
+          "meaning": "Kami / Kalian / Mereka",
+          "meaningId": "Tambah 们 (-men) untuk bentuk jamak",
+          "exampleSentence": "我们是朋友。(Kami adalah teman.)",
+          "audioUrl": "tts://我们"
+        }
+      },
+      {
+        "id": "zhc2s1_6", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata ganti dengan artinya!",
+          "pairs": [
+            { "word": "我 (wǒ)", "meaning": "Saya" },
+            { "word": "你 (nǐ)", "meaning": "Kamu" },
+            { "word": "他/她 (tā)", "meaning": "Dia" },
+            { "word": "我们 (wǒmen)", "meaning": "Kami" },
+            { "word": "他们 (tāmen)", "meaning": "Mereka" }
+          ],
+          "shuffledMeanings": ["Mereka", "Saya", "Kamu", "Dia", "Kami"],
+          "explanation": "我=saya, 你=kamu, 他/她=dia, 我们=kami, 他们=mereka. Pola jamak: tambah 们!"
+        }
+      }
+    ],
+
+    "zhc2s2": [
+      {
+        "id": "zhc2s2_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "是",
+          "phonetic": "shì",
+          "meaning": "Adalah (to be)",
+          "meaningId": "Kata kerja paling dasar Mandarin",
+          "exampleSentence": "我是印尼人。(Saya adalah orang Indonesia.)",
+          "audioUrl": "tts://是"
+        }
+      },
+      {
+        "id": "zhc2s2_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "不是",
+          "phonetic": "bú shì",
+          "meaning": "Bukan / Tidak adalah",
+          "meaningId": "Bentuk negatif dari 是",
+          "exampleSentence": "我不是老师。(Saya bukan guru.)",
+          "audioUrl": "tts://不是"
+        }
+      },
+      {
+        "id": "zhc2s2_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "吗",
+          "phonetic": "ma",
+          "meaning": "Partikel tanya (ya/tidak)",
+          "meaningId": "Tambah 吗 di akhir kalimat = kalimat tanya",
+          "exampleSentence": "你是学生吗？(Apakah kamu pelajar?)",
+          "audioUrl": "tts://吗"
+        }
+      },
+      {
+        "id": "zhc2s2_4", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Bagaimana mengatakan 'Saya bukan pelajar'?",
+          "options": ["我是学生", "我不是学生", "你是学生吗", "他是学生"],
+          "correctAnswer": "我不是学生",
+          "explanation": "我 (saya) + 不是 (bukan) + 学生 (pelajar) = 我不是学生. 不 diletakkan sebelum kata kerja untuk negasi."
+        }
+      },
+      {
+        "id": "zhc2s2_5", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "你是老师___ ? (Apakah kamu guru?)",
+          "options": ["吗", "的", "了", "呢"],
+          "correctAnswer": "吗",
+          "explanation": "吗 (ma) = partikel tanya ya/tidak. Tambahkan di akhir kalimat pernyataan untuk jadi kalimat tanya."
+        }
+      },
+      {
+        "id": "zhc2s2_6", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan pola kalimat!",
+          "pairs": [
+            { "word": "我是学生", "meaning": "Saya adalah pelajar" },
+            { "word": "我不是老师", "meaning": "Saya bukan guru" },
+            { "word": "你是学生吗", "meaning": "Apakah kamu pelajar?" }
+          ],
+          "shuffledMeanings": ["Apakah kamu pelajar?", "Saya adalah pelajar", "Saya bukan guru"],
+          "explanation": "是=adalah, 不是=bukan, +吗=kalimat tanya. Tiga pola paling dasar Mandarin!"
+        }
+      }
+    ],
+
+    "zhc2s3": [
+      {
+        "id": "zhc2s3_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "爸爸",
+          "phonetic": "bàba",
+          "meaning": "Ayah",
+          "meaningId": "Panggilan kasual untuk ayah",
+          "exampleSentence": "我爸爸是医生。(Ayah saya adalah dokter.)",
+          "audioUrl": "tts://爸爸"
+        }
+      },
+      {
+        "id": "zhc2s3_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "妈妈",
+          "phonetic": "māma",
+          "meaning": "Ibu",
+          "meaningId": "Panggilan kasual untuk ibu",
+          "exampleSentence": "妈妈做饭很好吃。(Masakan ibu sangat enak.)",
+          "audioUrl": "tts://妈妈"
+        }
+      },
+      {
+        "id": "zhc2s3_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "哥哥 / 姐姐",
+          "phonetic": "gēge / jiějie",
+          "meaning": "Kakak laki-laki / Kakak perempuan",
+          "meaningId": "Mandarin membedakan kakak berdasarkan jenis kelamin",
+          "exampleSentence": "我有一个哥哥。(Saya punya seorang kakak laki-laki.)",
+          "audioUrl": "tts://哥哥"
+        }
+      },
+      {
+        "id": "zhc2s3_4", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "弟弟 / 妹妹",
+          "phonetic": "dìdi / mèimei",
+          "meaning": "Adik laki-laki / Adik perempuan",
+          "meaningId": "Mandarin membedakan adik berdasarkan jenis kelamin",
+          "exampleSentence": "她有一个妹妹。(Dia punya seorang adik perempuan.)",
+          "audioUrl": "tts://妹妹"
+        }
+      },
+      {
+        "id": "zhc2s3_5", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "朋友",
+          "phonetic": "péngyou",
+          "meaning": "Teman",
+          "meaningId": "Kata yang sangat sering dipakai",
+          "exampleSentence": "他是我最好的朋友。(Dia adalah teman terbaikku.)",
+          "audioUrl": "tts://朋友"
+        }
+      },
+      {
+        "id": "zhc2s3_6", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan anggota keluarga!",
+          "pairs": [
+            { "word": "爸爸 (bàba)", "meaning": "Ayah" },
+            { "word": "妈妈 (māma)", "meaning": "Ibu" },
+            { "word": "哥哥 (gēge)", "meaning": "Kakak laki-laki" },
+            { "word": "妹妹 (mèimei)", "meaning": "Adik perempuan" }
+          ],
+          "shuffledMeanings": ["Adik perempuan", "Ayah", "Kakak laki-laki", "Ibu"],
+          "explanation": "爸爸=ayah, 妈妈=ibu, 哥哥=kakak laki, 姐姐=kakak perempuan, 弟弟=adik laki, 妹妹=adik perempuan."
+        }
+      }
+    ],
+
+    "zhc2s4": [
+      {
+        "id": "zhc2s4_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "叫",
+          "phonetic": "jiào",
+          "meaning": "Bernama / Dipanggil",
+          "meaningId": "Digunakan untuk menyebutkan nama",
+          "exampleSentence": "我叫小明。(Saya bernama Xiao Ming.)",
+          "audioUrl": "tts://我叫小明"
+        }
+      },
+      {
+        "id": "zhc2s4_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "哪国人",
+          "phonetic": "nǎ guó rén",
+          "meaning": "Orang dari negara mana?",
+          "meaningId": "Cara tanya kewarganegaraan",
+          "exampleSentence": "你是哪国人？(Kamu orang negara mana?)",
+          "audioUrl": "tts://你是哪国人"
+        }
+      },
+      {
+        "id": "zhc2s4_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "印尼人",
+          "phonetic": "Yìnní rén",
+          "meaning": "Orang Indonesia",
+          "meaningId": "印尼 = Indonesia, 人 = orang",
+          "exampleSentence": "我是印尼人。(Saya orang Indonesia.)",
+          "audioUrl": "tts://我是印尼人"
+        }
+      },
+      {
+        "id": "zhc2s4_4", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Bagaimana cara memperkenalkan nama: 'Saya bernama Sari'?",
+          "options": ["我是Sari", "我叫Sari", "你叫Sari", "她叫Sari吗"],
+          "correctAnswer": "我叫Sari",
+          "explanation": "我叫 (wǒ jiào) = saya bernama/dipanggil. Ini cara paling natural memperkenalkan nama di Mandarin."
+        }
+      },
+      {
+        "id": "zhc2s4_5", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "你___什么名字？(Siapa namamu?)",
+          "options": ["是", "叫", "有", "在"],
+          "correctAnswer": "叫",
+          "explanation": "你叫什么名字 (nǐ jiào shénme míngzi) = siapa namamu? 叫 = bernama/dipanggil."
+        }
+      },
+      {
+        "id": "zhc2s4_6", "type": "speaking_test", "xpReward": 20,
+        "content": {
+          "phrase": "wǒ jiào",
+          "hint": "Ucapkan: 我叫 (wǒ jiào) lalu tambahkan namamu!",
+          "translation": "我叫... — Saya bernama..."
+        }
+      }
+    ],
+
+    "zhc2s5": [
+      {
+        "id": "zhc2s5_1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Review Chapter 2 — cocokkan semua!",
+          "pairs": [
+            { "word": "我 (wǒ)", "meaning": "Saya" },
+            { "word": "是 (shì)", "meaning": "Adalah" },
+            { "word": "不是 (bú shì)", "meaning": "Bukan" },
+            { "word": "朋友 (péngyou)", "meaning": "Teman" }
+          ],
+          "shuffledMeanings": ["Teman", "Bukan", "Adalah", "Saya"],
+          "explanation": "Chapter 2 selesai! Kamu sudah bisa buat kalimat dasar Mandarin."
+        }
+      },
+      {
+        "id": "zhc2s5_2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Apa perbedaan 他 dan 她?",
+          "options": [
+            "Tidak ada bedanya",
+            "他 = dia laki-laki, 她 = dia perempuan (bunyi sama: tā)",
+            "他 = kamu, 她 = saya",
+            "他 = formal, 她 = kasual"
+          ],
+          "correctAnswer": "他 = dia laki-laki, 她 = dia perempuan (bunyi sama: tā)",
+          "explanation": "他 dan 她 keduanya dibaca 'tā' (nada 1), tapi karakter berbeda. 他 untuk laki-laki, 她 untuk perempuan. Di ucapan lisan, tidak ada bedanya!"
+        }
+      },
+      {
+        "id": "zhc2s5_3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "我___ 印尼人。(Saya adalah orang Indonesia.)",
+          "options": ["不是", "是", "叫", "有"],
+          "correctAnswer": "是",
+          "explanation": "我是印尼人 (wǒ shì Yìnní rén) = Saya adalah orang Indonesia. 是 = adalah."
+        }
+      },
+      {
+        "id": "zhc2s5_4", "type": "listening_quiz", "xpReward": 15,
+        "content": {
+          "audioText": "我叫小明，我是中国人",
+          "question": "Dari kalimat tersebut, kita tahu...",
+          "options": [
+            "Nama: Xiao Ming, Kebangsaan: China",
+            "Nama: Xiao Ming, Kebangsaan: Indonesia",
+            "Nama tidak disebutkan, Kebangsaan: China",
+            "Nama: China, Kebangsaan: tidak disebutkan"
+          ],
+          "correctAnswer": "Nama: Xiao Ming, Kebangsaan: China",
+          "explanation": "我叫小明 = saya bernama Xiao Ming, 我是中国人 = saya orang Cina/China."
+        }
+      },
+      {
+        "id": "zhc2s5_5", "type": "speaking_test", "xpReward": 20,
+        "content": {
+          "phrase": "nǐ hǎo wǒ jiào",
+          "hint": "Ucapkan perkenalan: 你好！我叫... (Halo! Saya bernama...)",
+          "translation": "你好！我叫... — Halo! Saya bernama..."
+        }
+      }
+    ],
+
+    "zhc3s1": [
+      {
+        "id": "zhc3s1_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "零 / 〇",
+          "phonetic": "líng",
+          "meaning": "0 (Nol)",
+          "meaningId": "Angka nol",
+          "exampleSentence": "零度 (líng dù) = 0 derajat",
+          "audioUrl": "tts://零"
+        }
+      },
+      {
+        "id": "zhc3s1_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "一 二 三 四 五",
+          "phonetic": "yī èr sān sì wǔ",
+          "meaning": "1, 2, 3, 4, 5",
+          "meaningId": "Lima angka pertama",
+          "exampleSentence": "一二三四五，上山打老虎 (Lagu anak Mandarin terkenal!)",
+          "audioUrl": "tts://一二三四五"
+        }
+      },
+      {
+        "id": "zhc3s1_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "六 七 八 九 十",
+          "phonetic": "liù qī bā jiǔ shí",
+          "meaning": "6, 7, 8, 9, 10",
+          "meaningId": "Lima angka berikutnya",
+          "exampleSentence": "十全十美 (shí quán shí měi) = Sempurna segalanya",
+          "audioUrl": "tts://六七八九十"
+        }
+      },
+      {
+        "id": "zhc3s1_4", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan angka Mandarin!",
+          "pairs": [
+            { "word": "一 (yī)", "meaning": "1" },
+            { "word": "三 (sān)", "meaning": "3" },
+            { "word": "七 (qī)", "meaning": "7" },
+            { "word": "十 (shí)", "meaning": "10" },
+            { "word": "零 (líng)", "meaning": "0" }
+          ],
+          "shuffledMeanings": ["10", "3", "0", "1", "7"],
+          "explanation": "零=0, 一=1, 二=2, 三=3, 四=4, 五=5, 六=6, 七=7, 八=8, 九=9, 十=10."
+        }
+      },
+      {
+        "id": "zhc3s1_5", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Angka 8 dalam Mandarin adalah...",
+          "options": ["七 (qī)", "八 (bā)", "九 (jiǔ)", "六 (liù)"],
+          "correctAnswer": "八 (bā)",
+          "explanation": "八 (bā) = 8. Angka 8 sangat beruntung dalam budaya Mandarin karena bunyinya mirip 发 (fā) = kaya/berkembang!"
+        }
+      },
+      {
+        "id": "zhc3s1_6", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "十一 (shíyī) = ___",
+          "options": ["11", "10", "12", "21"],
+          "correctAnswer": "11",
+          "explanation": "十 (10) + 一 (1) = 十一 (11). Sistem angka Mandarin sangat logis! 十二=12, 二十=20, 二十一=21."
+        }
+      }
+    ],
+
+    "zhc3s2": [
+      {
+        "id": "zhc3s2_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "星期一 ～ 星期日",
+          "phonetic": "xīngqī yī ~ xīngqī rì",
+          "meaning": "Senin ~ Minggu",
+          "meaningId": "星期 = minggu, 一～六 = Senin-Sabtu, 日/天 = Minggu",
+          "exampleSentence": "今天是星期几？(Hari ini hari apa?)",
+          "audioUrl": "tts://今天是星期几"
+        }
+      },
+      {
+        "id": "zhc3s2_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "今天 / 明天 / 昨天",
+          "phonetic": "jīntiān / míngtiān / zuótiān",
+          "meaning": "Hari ini / Besok / Kemarin",
+          "meaningId": "Tiga kata waktu paling dasar",
+          "exampleSentence": "今天星期几？(Hari ini hari apa?) 明天见！(Sampai besok!)",
+          "audioUrl": "tts://今天明天昨天"
+        }
+      },
+      {
+        "id": "zhc3s2_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "几月几号",
+          "phonetic": "jǐ yuè jǐ hào",
+          "meaning": "Tanggal berapa bulan berapa?",
+          "meaningId": "月 = bulan, 号 = tanggal",
+          "exampleSentence": "今天几月几号？(Hari ini tanggal berapa?)",
+          "audioUrl": "tts://今天几月几号"
+        }
+      },
+      {
+        "id": "zhc3s2_4", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata waktu!",
+          "pairs": [
+            { "word": "今天 (jīntiān)", "meaning": "Hari ini" },
+            { "word": "明天 (míngtiān)", "meaning": "Besok" },
+            { "word": "昨天 (zuótiān)", "meaning": "Kemarin" },
+            { "word": "星期一 (xīngqī yī)", "meaning": "Senin" }
+          ],
+          "shuffledMeanings": ["Senin", "Kemarin", "Besok", "Hari ini"],
+          "explanation": "今天=hari ini, 明天=besok, 昨天=kemarin, 后天=lusa, 前天=2 hari lalu."
+        }
+      },
+      {
+        "id": "zhc3s2_5", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Hari Rabu dalam Mandarin adalah...",
+          "options": ["星期一", "星期三", "星期五", "星期日"],
+          "correctAnswer": "星期三",
+          "explanation": "星期三 (xīngqī sān) = Rabu. 三=3, jadi hari ke-3 dalam seminggu. Senin=星期一, Selasa=星期二, Rabu=星期三, dst."
+        }
+      },
+      {
+        "id": "zhc3s2_6", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "今天是___ (Hari ini adalah hari Jumat)",
+          "options": ["星期四", "星期五", "星期六", "星期日"],
+          "correctAnswer": "星期五",
+          "explanation": "星期五 (xīngqī wǔ) = Jumat. 五=5, hari ke-5. Sabtu=星期六 (liù=6), Minggu=星期日/天."
+        }
+      }
+    ],
+
+    "zhc3s3": [
+      {
+        "id": "zhc3s3_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "米饭 / 面条",
+          "phonetic": "mǐfàn / miàntiáo",
+          "meaning": "Nasi / Mie",
+          "meaningId": "Dua makanan pokok paling umum",
+          "exampleSentence": "我要一碗米饭。(Saya mau semangkuk nasi.)",
+          "audioUrl": "tts://米饭"
+        }
+      },
+      {
+        "id": "zhc3s3_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "水 / 茶 / 咖啡",
+          "phonetic": "shuǐ / chá / kāfēi",
+          "meaning": "Air / Teh / Kopi",
+          "meaningId": "Minuman sehari-hari",
+          "exampleSentence": "请给我一杯茶。(Tolong beri saya secangkir teh.)",
+          "audioUrl": "tts://茶"
+        }
+      },
+      {
+        "id": "zhc3s3_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "好吃 / 好喝",
+          "phonetic": "hǎochī / hǎohē",
+          "meaning": "Enak (makanan) / Enak (minuman)",
+          "meaningId": "好 = baik, 吃 = makan, 喝 = minum",
+          "exampleSentence": "这个很好吃！(Ini sangat enak!)",
+          "audioUrl": "tts://好吃"
+        }
+      },
+      {
+        "id": "zhc3s3_4", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "要 / 想",
+          "phonetic": "yào / xiǎng",
+          "meaning": "Mau / Ingin",
+          "meaningId": "要 = mau (lebih pasti), 想 = ingin (masih mempertimbangkan)",
+          "exampleSentence": "我要一杯咖啡。(Saya mau secangkir kopi.)",
+          "audioUrl": "tts://我要一杯咖啡"
+        }
+      },
+      {
+        "id": "zhc3s3_5", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan makanan & minuman!",
+          "pairs": [
+            { "word": "米饭 (mǐfàn)", "meaning": "Nasi" },
+            { "word": "面条 (miàntiáo)", "meaning": "Mie" },
+            { "word": "茶 (chá)", "meaning": "Teh" },
+            { "word": "咖啡 (kāfēi)", "meaning": "Kopi" }
+          ],
+          "shuffledMeanings": ["Kopi", "Nasi", "Teh", "Mie"],
+          "explanation": "米饭=nasi, 面条=mie, 水=air, 茶=teh, 咖啡=kopi, 果汁=jus buah."
+        }
+      },
+      {
+        "id": "zhc3s3_6", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Bagaimana mengatakan 'Ini sangat enak!' untuk makanan?",
+          "options": ["这个很好喝！", "这个很好吃！", "这个很好看！", "这个很好听！"],
+          "correctAnswer": "这个很好吃！",
+          "explanation": "好吃 (hǎochī) = enak untuk makanan. 这个 = ini, 很 = sangat. 好喝 = enak untuk minuman, 好看 = bagus/cantik untuk dilihat."
+        }
+      }
+    ],
+
+    "zhc3s4": [
+      {
+        "id": "zhc3s4_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "红 / 蓝 / 绿",
+          "phonetic": "hóng / lán / lǜ",
+          "meaning": "Merah / Biru / Hijau",
+          "meaningId": "Tiga warna dasar",
+          "exampleSentence": "我喜欢红色。(Saya suka warna merah.)",
+          "audioUrl": "tts://红色蓝色绿色"
+        }
+      },
+      {
+        "id": "zhc3s4_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "黄 / 白 / 黑",
+          "phonetic": "huáng / bái / hēi",
+          "meaning": "Kuning / Putih / Hitam",
+          "meaningId": "Tiga warna lagi",
+          "exampleSentence": "白色的衣服很漂亮。(Baju putih sangat cantik.)",
+          "audioUrl": "tts://黄白黑"
+        }
+      },
+      {
+        "id": "zhc3s4_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "大 / 小",
+          "phonetic": "dà / xiǎo",
+          "meaning": "Besar / Kecil",
+          "meaningId": "Dua kata sifat paling dasar",
+          "exampleSentence": "这个太大了！(Ini terlalu besar!) 那个很小。(Itu sangat kecil.)",
+          "audioUrl": "tts://大小"
+        }
+      },
+      {
+        "id": "zhc3s4_4", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan warna dengan artinya!",
+          "pairs": [
+            { "word": "红 (hóng)", "meaning": "Merah" },
+            { "word": "蓝 (lán)", "meaning": "Biru" },
+            { "word": "黄 (huáng)", "meaning": "Kuning" },
+            { "word": "白 (bái)", "meaning": "Putih" },
+            { "word": "黑 (hēi)", "meaning": "Hitam" }
+          ],
+          "shuffledMeanings": ["Kuning", "Merah", "Hitam", "Biru", "Putih"],
+          "explanation": "红=merah, 蓝=biru, 绿=hijau, 黄=kuning, 白=putih, 黑=hitam. Tambah 色 di belakang = warna ... (contoh: 红色=warna merah)."
+        }
+      },
+      {
+        "id": "zhc3s4_5", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Bendera Indonesia warnanya 红色和___色 (merah dan ...)?",
+          "options": ["蓝 (lán)", "白 (bái)", "黄 (huáng)", "绿 (lǜ)"],
+          "correctAnswer": "白 (bái)",
+          "explanation": "Bendera Indonesia: 红色和白色 (hóng sè hé bái sè) = merah dan putih! Ini cara mudah mengingat 红=merah, 白=putih."
+        }
+      },
+      {
+        "id": "zhc3s4_6", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "大的相反是___ (Lawan kata dari besar adalah...)",
+          "options": ["高 (gāo)", "小 (xiǎo)", "多 (duō)", "长 (cháng)"],
+          "correctAnswer": "小 (xiǎo)",
+          "explanation": "大 (dà) = besar, lawannya 小 (xiǎo) = kecil. Pasangan lain: 高(tinggi)↔矮(pendek), 多(banyak)↔少(sedikit)."
+        }
+      }
+    ],
+
+    "zhc3s5": [
+      {
+        "id": "zhc3s5_1", "type": "matching_word", "xpReward": 20,
+        "content": {
+          "instruction": "Review GRAND FINAL Chapter 3 — cocokkan semua!",
+          "pairs": [
+            { "word": "八 (bā)", "meaning": "8 (angka keberuntungan!)" },
+            { "word": "星期三 (xīngqī sān)", "meaning": "Rabu" },
+            { "word": "米饭 (mǐfàn)", "meaning": "Nasi" },
+            { "word": "红 (hóng)", "meaning": "Merah" },
+            { "word": "今天 (jīntiān)", "meaning": "Hari ini" }
+          ],
+          "shuffledMeanings": ["Hari ini", "Nasi", "Rabu", "Merah", "8 (angka keberuntungan!)"],
+          "explanation": "SELAMAT! Kamu telah menyelesaikan 3 chapter pertama Mandarin. 恭喜！(Gōngxǐ = Selamat!)"
+        }
+      },
+      {
+        "id": "zhc3s5_2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Kalimat 我是印尼人，我叫Sari artinya...",
+          "options": [
+            "Saya orang China, nama saya Sari",
+            "Saya orang Indonesia, nama saya Sari",
+            "Kamu orang Indonesia, nama kamu Sari",
+            "Saya orang Indonesia, kamu bernama Sari"
+          ],
+          "correctAnswer": "Saya orang Indonesia, nama saya Sari",
+          "explanation": "我是印尼人 = saya orang Indonesia, 我叫Sari = saya bernama Sari. Kalimat perkenalan standar!"
+        }
+      },
+      {
+        "id": "zhc3s5_3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Cara menyebut 'Terima kasih' dalam Mandarin: ___",
+          "options": ["再见", "你好", "谢谢", "对不起"],
+          "correctAnswer": "谢谢",
+          "explanation": "谢谢 (xièxie) = terima kasih. Salah satu kata pertama yang harus dihafalkan saat belajar Mandarin."
+        }
+      },
+      {
+        "id": "zhc3s5_4", "type": "listening_quiz", "xpReward": 15,
+        "content": {
+          "audioText": "你好，我叫小明，我是中国人，我喜欢吃米饭",
+          "question": "Dari kalimat di atas, mana yang BENAR?",
+          "options": [
+            "Xiao Ming suka minum teh",
+            "Xiao Ming adalah orang Indonesia",
+            "Xiao Ming suka makan nasi",
+            "Xiao Ming tidak suka makanan Cina"
+          ],
+          "correctAnswer": "Xiao Ming suka makan nasi",
+          "explanation": "我喜欢吃米饭 = saya suka makan nasi. 喜欢 = suka, 吃 = makan, 米饭 = nasi."
+        }
+      },
+      {
+        "id": "zhc3s5_5", "type": "speaking_test", "xpReward": 20,
+        "content": {
+          "phrase": "nǐ hǎo wǒ jiào wǒ shì Yìnní rén",
+          "hint": "Ucapkan perkenalan lengkap: 你好！我叫... 我是印尼人。",
+          "translation": "你好！我叫... 我是印尼人。— Halo! Saya bernama... Saya orang Indonesia."
+        }
+      }
+    ]
+  }
+}

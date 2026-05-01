@@ -1,0 +1,1315 @@
+{
+  "zhc1s1": {
+    "title": "Apa itu Pinyin?",
+    "intro": "Sebelum belajar karakter Mandarin (汉字), kamu perlu menguasai Pinyin dulu. Pinyin adalah 'alfabet' bahasa Mandarin yang ditulis dengan huruf Latin. Dengan Pinyin, kamu bisa membaca dan mengucapkan kata Mandarin dengan benar sejak hari pertama!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Apa itu Pinyin?",
+        "body": "Pinyin (拼音, pīnyīn) adalah sistem romanisasi resmi bahasa Mandarin. Diciptakan tahun 1950-an oleh pemerintah China untuk memudahkan pembelajaran. Semua kata Mandarin bisa ditulis dalam Pinyin.",
+        "examples": [
+          { "en": "你好 → nǐ hǎo", "id": "Halo — karakter → pinyin" },
+          { "en": "中国 → Zhōngguó", "id": "China — karakter → pinyin" },
+          { "en": "谢谢 → xièxie", "id": "Terima kasih" },
+          { "en": "朋友 → péngyou", "id": "Teman" }
+        ],
+        "tip": "Pinyin bukan tujuan akhir — ini jembatan menuju karakter. Tapi untuk pemula, Pinyin sangat membantu!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Struktur Pinyin: Initial + Final + Nada",
+        "body": "Setiap suku kata Mandarin terdiri dari tiga bagian: initial (konsonan awal), final (vokal/ending), dan tanda nada di atas vokal.",
+        "examples": [
+          { "en": "nǐ = n + i + ǐ (nada 3)", "id": "n = konsonan, i = vokal, ǐ = tanda nada 3" },
+          { "en": "hǎo = h + ao + ǎo (nada 3)", "id": "h = konsonan, ao = vokal gabungan" },
+          { "en": "Zhōng = Zh + ong + ō (nada 1)", "id": "Zh = konsonan gabungan, ong = ending" },
+          { "en": "Tidak semua suku kata punya initial", "id": "Contoh: ā (ah), ōu (ou), ān (an)" }
+        ],
+        "tip": "Fokus pada nada dulu! Nada yang salah = kata yang berbeda. Lebih penting dari pelafalan konsonan."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Konsonan Pinyin yang Berbeda dari Indonesia",
+        "body": "Beberapa konsonan Pinyin dibaca berbeda dari cara baca huruf Latin biasa. Ini yang paling penting untuk diketahui pemula:",
+        "examples": [
+          { "en": "x → seperti 'sy' dalam 'syarat'", "id": "xī (barat), xiǎo (kecil), xièxie (terima kasih)" },
+          { "en": "q → seperti 'cy' sangat keras", "id": "qǐng (tolong), qī (tujuh)" },
+          { "en": "zh → seperti 'j' dalam 'jeans'", "id": "Zhōngguó (China), zhè (ini)" },
+          { "en": "c → seperti 'ts' dalam 'tsunami'", "id": "cí (kata), cǎo (rumput)" },
+          { "en": "r → seperti 'r' Perancis atau antara r dan zh", "id": "rén (orang), rì (hari/matahari)" }
+        ],
+        "tip": "Jangan khawatir hafal semua sekaligus. Fokus pada x, q, zh karena paling sering muncul di kata-kata dasar."
+      },
+      {
+        "type": "culture",
+        "heading": "Hanzi (汉字) — Karakter Mandarin",
+        "body": "Selain Pinyin, Mandarin ditulis dengan karakter yang disebut Hanzi (汉字, hànzì). Ada ribuan karakter, tapi untuk percakapan sehari-hari cukup hafal 500-1000 karakter paling umum.",
+        "examples": [
+          { "en": "~3000 karakter", "id": "Untuk membaca koran/berita standar" },
+          { "en": "~500 karakter", "id": "Cukup untuk percakapan sehari-hari" },
+          { "en": "Setiap karakter = 1 suku kata", "id": "中国 = 2 karakter = 2 suku kata = Zhōngguó" },
+          { "en": "Simplified vs Traditional", "id": "China daratan pakai Simplified (简体), Taiwan pakai Traditional (繁體)" }
+        ],
+        "tip": "Di kursus ini kita pakai Simplified Chinese (简体字) — lebih umum dan lebih mudah ditulis."
+      }
+    ],
+    "practice": [
+      {
+        "id": "zhc1s1_p1", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Pinyin (拼音) adalah...",
+          "options": ["Sistem karakter Mandarin", "Sistem romanisasi untuk membaca Mandarin", "Nama bahasa Mandarin", "Buku pelajaran Mandarin"],
+          "correctAnswer": "Sistem romanisasi untuk membaca Mandarin",
+          "explanation": "Pinyin = sistem penulisan bunyi Mandarin dengan huruf Latin. Sangat penting untuk pemula!"
+        }
+      },
+      {
+        "id": "zhc1s1_p2", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Setiap suku kata Mandarin terdiri dari: initial + ___ + nada",
+          "options": ["konsonan", "final", "karakter", "simbol"],
+          "correctAnswer": "final",
+          "explanation": "Struktur: initial (konsonan awal) + final (vokal/ending) + tanda nada. Contoh: nǐ = n(initial) + i(final) + ǐ(nada 3)."
+        }
+      },
+      {
+        "id": "zhc1s1_p3", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Konsonan 'x' dalam Pinyin dibaca seperti...",
+          "options": ["'ks' seperti dalam 'ekstra'", "'sh' seperti dalam 'shower'", "'sy' seperti dalam 'syarat'", "'z' seperti dalam 'zebra'"],
+          "correctAnswer": "'sy' seperti dalam 'syarat'",
+          "explanation": "x dalam Pinyin = bunyi 'sy' lembut. Contoh: xièxie (sy-e-sy-e = terima kasih), xiǎo (sy-iao = kecil)."
+        }
+      }
+    ]
+  },
+
+  "zhc1s2": {
+    "title": "4 Nada Mandarin",
+    "intro": "Ini adalah kunci terpenting Mandarin! Kata yang sama dengan nada berbeda = arti yang BERBEDA TOTAL. Contoh terkenal: mā=ibu, má=wijen, mǎ=kuda, mà=memaki. Kuasai 4 nada dari awal dan belajar Mandarin akan jauh lebih mudah.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "4 Nada Dasar — Kartu Hafalan",
+        "body": "Bayangkan bentuk nada seperti grafik: nada 1 = garis lurus tinggi, nada 2 = garis naik, nada 3 = lembah (turun-naik), nada 4 = garis turun tajam.",
+        "examples": [
+          { "en": "ā — Nada 1: ˉ (datar tinggi)", "id": "妈 (māma) = ibu. Seperti menyanyi nada tinggi yang datar." },
+          { "en": "á — Nada 2: ˊ (naik)", "id": "麻 (má) = wijen. Seperti nada bertanya 'hah?' dalam bahasa Indonesia." },
+          { "en": "ǎ — Nada 3: ˇ (turun lalu naik)", "id": "马 (mǎ) = kuda. Seperti nada ragu 'hmm...' atau mempertanyakan." },
+          { "en": "à — Nada 4: ˋ (turun tajam)", "id": "骂 (mà) = memaki. Seperti nada marah, tegas, atau menekan." }
+        ],
+        "tip": "Cara hafal: bayangkan garis melodi. Nada 1 = _ (datar), Nada 2 = / (naik), Nada 3 = \\/ (turun-naik), Nada 4 = \\ (turun)."
+      },
+      {
+        "type": "grammar",
+        "heading": "Mengapa Nada Sangat Penting?",
+        "body": "Dalam bahasa Mandarin, nada adalah bagian dari kata itu sendiri, bukan sekadar ekspresi emosi. Nada yang salah bisa menyebabkan salah paham yang lucu atau memalukan.",
+        "examples": [
+          { "en": "mā (妈) = ibu vs mà (骂) = memaki", "id": "Bayangkan salah sebut nama ibu dengan nada 'memaki'!" },
+          { "en": "wèn (问) = bertanya vs wěn (吻) = mencium", "id": "Perbedaan nada yang sangat penting dalam konteks romantis!" },
+          { "en": "mǎi (买) = membeli vs mài (卖) = menjual", "id": "Nada 3 vs nada 4 — beli vs jual, beda total maknanya." },
+          { "en": "shū (书) = buku vs shú (熟) = matang/familiar", "id": "Nada 1 vs nada 2." }
+        ],
+        "tip": "Orang China paham dari konteks kalau nadarmu sedikit salah. Tapi latihan nada yang benar dari awal akan membuat kamu jauh lebih mudah dipahami!"
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Melatih 4 Nada",
+        "body": "Teknik praktis untuk melatih nada setiap hari:",
+        "examples": [
+          { "en": "Teknik 1: Nyanyikan", "id": "Nyanyi skala musik: do (nada 1 tinggi), lalu naik (nada 2), lalu sol-mi-sol (nada 3), lalu do turun (nada 4)" },
+          { "en": "Teknik 2: Minimal pairs", "id": "Latih berpasangan: mā-má-mǎ-mà berulang-ulang sampai terdengar berbeda" },
+          { "en": "Teknik 3: Rekam suara", "id": "Rekam dirimu dan bandingkan dengan audio native speaker di aplikasi seperti Forvo" },
+          { "en": "Teknik 4: Shadowing", "id": "Tiru persis cara bicara orang China di video/podcast — ikuti nada, kecepatan, dan ritme" }
+        ],
+        "tip": "Riset menunjukkan: pemula lebih mudah mendengar perbedaan nada daripada mengucapkannya. Latih mendengar dulu!"
+      },
+      {
+        "type": "culture",
+        "heading": "Nada Netral (Nada 0) — Bonus!",
+        "body": "Selain 4 nada utama, ada 'nada netral' (轻声, qīngshēng) yang dibaca pendek dan ringan. Sering muncul di akhir kata atau partikel.",
+        "examples": [
+          { "en": "吗 (ma) — partikel tanya", "id": "Selalu dibaca nada netral: pendek, ringan, tidak ada tanda nada" },
+          { "en": "的 (de) — partikel kepemilikan", "id": "我的 (wǒde) = punyaku — de dibaca ringan" },
+          { "en": "妈妈 (māma)", "id": "Suku kata kedua 'ma' dibaca lebih pendek dari yang pertama" },
+          { "en": "爸爸 (bàba)", "id": "Sama — suku kata kedua 'ba' lebih ringan dan pendek" }
+        ],
+        "tip": "Tidak perlu khawatir soal nada netral sekarang. Yang penting hafal 4 nada utama dulu!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "zhc1s2_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan nada dengan deskripsinya!",
+          "pairs": [
+            { "word": "ā (nada 1)", "meaning": "Datar tinggi — seperti menyanyi" },
+            { "word": "á (nada 2)", "meaning": "Naik — seperti bertanya 'hah?'" },
+            { "word": "ǎ (nada 3)", "meaning": "Turun-naik — seperti ragu-ragu" },
+            { "word": "à (nada 4)", "meaning": "Turun tajam — seperti nada marah" }
+          ],
+          "shuffledMeanings": ["Turun tajam — seperti nada marah", "Datar tinggi — seperti menyanyi", "Turun-naik — seperti ragu-ragu", "Naik — seperti bertanya 'hah?'"],
+          "explanation": "4 nada Mandarin: datar, naik, turun-naik, turun tajam. Ingat dengan mā-má-mǎ-mà!"
+        }
+      },
+      {
+        "id": "zhc1s2_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "马 (mǎ) = kuda menggunakan nada ke...",
+          "options": ["Nada 1 (datar)", "Nada 2 (naik)", "Nada 3 (turun-naik)", "Nada 4 (turun)"],
+          "correctAnswer": "Nada 3 (turun-naik)",
+          "explanation": "mǎ = kuda, nada 3 (ǎ). Ingat: mā=ibu, má=wijen, mǎ=kuda, mà=memaki. Satu huruf, 4 arti berbeda!"
+        }
+      },
+      {
+        "id": "zhc1s2_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "mǎi (买) = membeli, lawannya mài (卖) = ___",
+          "options": ["Membeli lagi", "Menjual", "Menukar", "Menyewa"],
+          "correctAnswer": "Menjual",
+          "explanation": "买 (mǎi, nada 3) = membeli, 卖 (mài, nada 4) = menjual. Hanya beda nada, beda arti total!"
+        }
+      }
+    ]
+  },
+
+  "zhc1s3": {
+    "title": "Sapaan Harian",
+    "intro": "Orang China sangat menghargai sapaan yang tepat. Berbeda dari Jepang, Mandarin tidak terlalu membedakan formal/kasual dalam sapaan sehari-hari — yang penting adalah mengucapkan sapaan itu sendiri. Pelajari sapaan ini dan kamu siap berinteraksi!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Sapaan Berdasarkan Waktu",
+        "body": "Sapaan Mandarin bisa digunakan hampir sepanjang waktu. 你好 adalah sapaan paling universal yang bisa dipakai kapan saja.",
+        "examples": [
+          { "en": "你好 (nǐ hǎo)", "id": "Halo — KAPAN SAJA, paling umum dipakai" },
+          { "en": "早上好 (zǎoshang hǎo)", "id": "Selamat pagi — sebelum ~10 pagi" },
+          { "en": "下午好 (xiàwǔ hǎo)", "id": "Selamat siang/sore — setelah tengah hari" },
+          { "en": "晚上好 (wǎnshang hǎo)", "id": "Selamat malam — saat bertemu di malam hari" },
+          { "en": "晚安 (wǎn'ān)", "id": "Selamat malam — saat mau tidur atau pamit malam" }
+        ],
+        "tip": "Di percakapan sehari-hari orang China, 你好 lebih sering dipakai daripada sapaan berdasarkan waktu. Sapaan waktu lebih formal."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Sapaan Kasual & Perpisahan",
+        "body": "Selain sapaan formal, ini adalah sapaan kasual yang sering dipakai terutama di kalangan anak muda:",
+        "examples": [
+          { "en": "嗨 (hāi) / 哈喽 (hāluó)", "id": "Hi / Hello — serapan dari Inggris, sangat kasual" },
+          { "en": "再见 (zàijiàn)", "id": "Sampai jumpa (secara harfiah: 'sampai ketemu lagi')" },
+          { "en": "拜拜 (bàibài)", "id": "Bye-bye — serapan dari Inggris, sangat kasual dan umum" },
+          { "en": "明天见 (míngtiān jiàn)", "id": "Sampai besok (míngtiān = besok, jiàn = bertemu)" },
+          { "en": "回头见 (huítóu jiàn)", "id": "Sampai nanti (huítóu = nanti/sebentar lagi)" }
+        ],
+        "tip": "拜拜 (bàibài) sangat umum dipakai oleh semua kalangan di China sekarang, tidak hanya anak muda."
+      },
+      {
+        "type": "grammar",
+        "heading": "Struktur 你好 — Kenapa 'Nǐ Hǎo'?",
+        "body": "Memahami arti harfiah sapaan membantu mengingatnya:",
+        "examples": [
+          { "en": "你 (nǐ) = kamu + 好 (hǎo) = baik", "id": "你好 = 'kamu baik' → Halo! Semoga kamu baik-baik saja." },
+          { "en": "您好 (nín hǎo)", "id": "Versi formal/hormat: Anda baik? — ke orang lebih tua atau atasan" },
+          { "en": "你们好 (nǐmen hǎo)", "id": "Halo semua! — menyapa banyak orang sekaligus" },
+          { "en": "大家好 (dàjiā hǎo)", "id": "Halo semua! — lebih formal, seperti 'selamat datang semuanya'" }
+        ],
+        "tip": "大家好 (dàjiā hǎo) sering dipakai pembicara saat memulai presentasi atau siaran. Dàjiā = semua orang."
+      },
+      {
+        "type": "culture",
+        "heading": "Sapaan Unik Budaya China",
+        "body": "Beberapa sapaan Mandarin mencerminkan budaya yang unik dan berbeda dari sapaan Barat:",
+        "examples": [
+          { "en": "吃了吗？(chī le ma?)", "id": "Sudah makan? — sapaan kasual pengganti 'apa kabar' di antara kerabat/kenalan lama. Cerminan budaya yang menghargai makanan!" },
+          { "en": "去哪儿？(qù nǎr?)", "id": "Mau ke mana? — sapaan kasual di kampung/lingkungan. Tidak selalu butuh jawaban detail, cukup 'jalan-jalan'" },
+          { "en": "最近怎么样？(zuìjìn zěnmeyàng?)", "id": "Bagaimana kabarmu belakangan ini? — sapaan untuk kenalan yang lama tidak bertemu" }
+        ],
+        "tip": "Kalau ditanya 吃了吗 (sudah makan?), jawab 吃了 (sudah) atau 还没 (belum). Ini sapaan, bukan undangan makan!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "zhc1s3_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan sapaan dengan waktu yang tepat!",
+          "pairs": [
+            { "word": "你好 (nǐ hǎo)", "meaning": "Kapan saja" },
+            { "word": "早上好 (zǎoshang hǎo)", "meaning": "Pagi hari" },
+            { "word": "晚上好 (wǎnshang hǎo)", "meaning": "Malam hari (bertemu)" },
+            { "word": "晚安 (wǎn'ān)", "meaning": "Malam hari (pamit/tidur)" }
+          ],
+          "shuffledMeanings": ["Malam hari (pamit/tidur)", "Pagi hari", "Kapan saja", "Malam hari (bertemu)"],
+          "explanation": "你好 bisa dipakai kapan saja. Sapaan berdasarkan waktu lebih formal dan spesifik."
+        }
+      },
+      {
+        "id": "zhc1s3_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "再见 (zàijiàn) secara harfiah berarti...",
+          "options": ["Selamat malam", "Sampai ketemu lagi", "Halo", "Terima kasih"],
+          "correctAnswer": "Sampai ketemu lagi",
+          "explanation": "再 (zài) = lagi, 见 (jiàn) = bertemu/melihat. Jadi 再见 = sampai bertemu lagi. Sangat logis!"
+        }
+      },
+      {
+        "id": "zhc1s3_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Menyapa banyak orang sekaligus (halo semua!): ___",
+          "options": ["你好", "您好", "大家好", "你们"],
+          "correctAnswer": "大家好",
+          "explanation": "大家好 (dàjiā hǎo) = halo semua orang! 大家 = semua orang, 好 = baik/halo."
+        }
+      }
+    ]
+  },
+
+  "zhc1s4": {
+    "title": "Terima Kasih, Maaf & Tolong",
+    "intro": "Kata-kata sopan santun adalah kunci interaksi yang mulus di mana pun. Dalam budaya China, ekspresi terima kasih dan maaf yang tepat mencerminkan karakter seseorang. Kuasai kata-kata ini dan kamu akan langsung meninggalkan kesan baik!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Terima Kasih & Balasannya",
+        "body": "Pasangan percakapan yang wajib diketahui:",
+        "examples": [
+          { "en": "谢谢 (xièxie)", "id": "Terima kasih — kasual, dipakai sehari-hari" },
+          { "en": "谢谢你 (xièxie nǐ)", "id": "Terima kasih (kepada) kamu — lebih personal" },
+          { "en": "非常感谢 (fēicháng gǎnxiè)", "id": "Terima kasih sekali / Sangat berterima kasih — lebih formal" },
+          { "en": "不客气 (bú kèqi)", "id": "Sama-sama / Tidak usah sungkan — respon paling umum" },
+          { "en": "不谢 (bú xiè)", "id": "Tidak perlu berterima kasih — lebih kasual dari 不客气" }
+        ],
+        "tip": "Menariknya, orang China sering merasa tidak perlu berterima kasih untuk hal-hal kecil di antara keluarga dekat — terlalu banyak 谢谢 ke keluarga bisa terasa aneh dan formal!"
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Maaf & Permisi",
+        "body": "Mandarin punya beberapa cara minta maaf yang berbeda tergantung tingkat kesalahannya:",
+        "examples": [
+          { "en": "对不起 (duìbuqǐ)", "id": "Maaf sungguh-sungguh — untuk kesalahan nyata yang kamu perbuat" },
+          { "en": "不好意思 (bù hǎoyìsi)", "id": "Maaf / Permisi (ringan) — saat mengganggu, menyela, atau melakukan hal kecil yang kurang sopan. LEBIH SERING dipakai dari 对不起!" },
+          { "en": "没关系 (méi guānxi)", "id": "Tidak apa-apa — respon untuk 对不起 maupun 不好意思" },
+          { "en": "请 (qǐng)", "id": "Tolong / Silakan — kata sopan serbaguna" }
+        ],
+        "tip": "不好意思 (bù hǎoyìsi) jauh lebih sering dipakai dari 对不起 dalam kehidupan sehari-hari. Gunakan ini untuk hampir semua situasi ringan: minta lewat, menyela, dll."
+      },
+      {
+        "type": "grammar",
+        "heading": "Kata 不 (bù) — Negasi Universal",
+        "body": "不 (bù, nada 4) adalah kata negasi paling penting Mandarin. Letakkan sebelum kata kerja atau kata sifat untuk membuat kalimat negatif.",
+        "examples": [
+          { "en": "不客气 = tidak + sungkan", "id": "= sama-sama (tidak usah sungkan)" },
+          { "en": "不好意思 = tidak + nyaman/malu", "id": "= merasa tidak enak hati → maaf/permisi" },
+          { "en": "不好 (bù hǎo) = tidak + baik", "id": "= tidak baik / jelek" },
+          { "en": "不是 (bú shì) = tidak + adalah", "id": "= bukan (bentuk negatif dari 是)" }
+        ],
+        "tip": "Perhatikan: 不 biasanya nada 4 (bù), TAPI berubah menjadi nada 2 (bú) saat diikuti kata bernada 4. Contoh: 不是 dibaca 'bú shì' bukan 'bù shì'."
+      },
+      {
+        "type": "culture",
+        "heading": "Sopan Santun dalam Budaya China",
+        "body": "Budaya sopan santun China memiliki nuansa yang berbeda dari Indonesia:",
+        "examples": [
+          { "en": "Menolak tawaran pertama", "id": "Budaya China: wajar menolak tawaran (makan, hadiah) 1-2 kali sebelum menerima — ini tanda tidak serakah, bukan penolakan sungguhan" },
+          { "en": "请 (qǐng) = silakan", "id": "Sering digunakan untuk mempersilakan seseorang: 请坐 (silakan duduk), 请喝茶 (silakan minum teh)" },
+          { "en": "Tidak berterima kasih berlebihan", "id": "Di antara keluarga/teman dekat, terlalu banyak 谢谢 bisa membuat suasana menjadi kaku" }
+        ],
+        "tip": "Perbedaan budaya sopan santun ini penting diketahui agar tidak salah paham saat berinteraksi dengan penutur asli Mandarin."
+      }
+    ],
+    "practice": [
+      {
+        "id": "zhc1s4_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan pasangan percakapan yang tepat!",
+          "pairs": [
+            { "word": "谢谢 (xièxie)", "meaning": "Terima kasih" },
+            { "word": "不客气 (bú kèqi)", "meaning": "Sama-sama" },
+            { "word": "对不起 (duìbuqǐ)", "meaning": "Maaf sungguh-sungguh" },
+            { "word": "没关系 (méi guānxi)", "meaning": "Tidak apa-apa" }
+          ],
+          "shuffledMeanings": ["Tidak apa-apa", "Terima kasih", "Maaf sungguh-sungguh", "Sama-sama"],
+          "explanation": "谢谢↔不客气 dan 对不起↔没关系 adalah dua pasangan percakapan paling dasar!"
+        }
+      },
+      {
+        "id": "zhc1s4_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Untuk minta permisi ringan (menyela/mengganggu sedikit), kata yang paling tepat adalah...",
+          "options": ["对不起 (duìbuqǐ)", "不好意思 (bù hǎoyìsi)", "谢谢 (xièxie)", "没关系 (méi guānxi)"],
+          "correctAnswer": "不好意思 (bù hǎoyìsi)",
+          "explanation": "不好意思 lebih tepat untuk situasi ringan sehari-hari seperti minta lewat, menyela pembicaraan, dll. 对不起 untuk kesalahan yang lebih serius."
+        }
+      },
+      {
+        "id": "zhc1s4_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "请___ (Silakan duduk)",
+          "options": ["走 (zǒu)", "坐 (zuò)", "吃 (chī)", "喝 (hē)"],
+          "correctAnswer": "坐 (zuò)",
+          "explanation": "请坐 (qǐng zuò) = silakan duduk. 请 + kata kerja = 'tolong/silakan melakukan sesuatu'. 请喝水 = silakan minum air."
+        }
+      }
+    ]
+  },
+
+  "zhc1s5": {
+    "title": "Review Chapter 1",
+    "intro": "Chapter 1 selesai! Kamu sudah mempelajari Pinyin, 4 nada Mandarin, sapaan harian, dan kata sopan santun dasar. Sebelum lanjut ke Chapter 2, pastikan semua ini sudah tertanam dengan baik.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Semua yang Sudah Dipelajari",
+        "body": "Ringkasan lengkap Chapter 1:",
+        "examples": [
+          { "en": "Pinyin: sistem romanisasi + initial/final/nada", "id": "Fondasi membaca Mandarin" },
+          { "en": "4 nada: ā á ǎ à (datar/naik/turun-naik/turun)", "id": "Ingat: mā=ibu, má=wijen, mǎ=kuda, mà=memaki" },
+          { "en": "Sapaan: 你好, 早上好, 晚上好, 再见", "id": "Halo, selamat pagi, selamat malam, sampai jumpa" },
+          { "en": "Sopan santun: 谢谢, 不客气, 对不起, 没关系, 请", "id": "Terima kasih, sama-sama, maaf, tidak apa-apa, tolong/silakan" }
+        ],
+        "tip": "Sebelum lanjut ke Chapter 2, coba praktikkan percakapan singkat: 你好！谢谢！再见！"
+      },
+      {
+        "type": "culture",
+        "heading": "Tips Belajar Mandarin untuk Pemula",
+        "body": "Beberapa strategi yang terbukti efektif untuk pemula belajar Mandarin:",
+        "examples": [
+          { "en": "Setiap hari 15-20 menit", "id": "Lebih baik sedikit tapi konsisten daripada banyak tapi jarang" },
+          { "en": "Dengarkan lebih banyak", "id": "Podcast, lagu, drama China — biasakan telinga dengan ritme Mandarin" },
+          { "en": "Jangan takut salah nada", "id": "Native speaker akan mengerti dari konteks. Yang penting berani bicara!" },
+          { "en": "Hafal frasa, bukan hanya kata", "id": "我叫... 我是... 你好... — frasa utuh lebih berguna dari kata terpisah" }
+        ],
+        "tip": "加油！(jiāyóu) = Semangat! Ini ekspresi penyemangat paling populer dalam bahasa Mandarin. Secara harfiah artinya 'tambahkan bensin!'"
+      }
+    ],
+    "practice": [
+      {
+        "id": "zhc1s5_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Review Final — cocokkan semuanya!",
+          "pairs": [
+            { "word": "你好", "meaning": "Halo" },
+            { "word": "谢谢", "meaning": "Terima kasih" },
+            { "word": "再见", "meaning": "Sampai jumpa" },
+            { "word": "没关系", "meaning": "Tidak apa-apa" }
+          ],
+          "shuffledMeanings": ["Sampai jumpa", "Halo", "Tidak apa-apa", "Terima kasih"],
+          "explanation": "Chapter 1 selesai! Kamu sudah menguasai dasar-dasar Mandarin."
+        }
+      },
+      {
+        "id": "zhc1s5_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Nada dalam Mandarin penting karena...",
+          "options": [
+            "Hanya untuk ekspresi emosi",
+            "Nada berbeda = arti kata yang berbeda",
+            "Hanya berlaku untuk kata sapaan",
+            "Tidak terlalu penting bagi pemula"
+          ],
+          "correctAnswer": "Nada berbeda = arti kata yang berbeda",
+          "explanation": "Nada adalah bagian dari kata itu sendiri! mā=ibu, mà=memaki — beda nada = beda arti total."
+        }
+      },
+      {
+        "id": "zhc1s5_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "加油 (jiāyóu) artinya ___ dalam bahasa Indonesia",
+          "options": ["Sampai jumpa", "Semangat!", "Terima kasih", "Tidak apa-apa"],
+          "correctAnswer": "Semangat!",
+          "explanation": "加油 (jiāyóu) = semangat! Ekspresi penyemangat paling populer Mandarin. Harfiah: 'tambah bensin/minyak' → terus melaju!"
+        }
+      },
+      {
+        "id": "zhc1s5_p4", "type": "speaking_test", "xpReward": 20,
+        "content": {
+          "phrase": "nǐ hǎo xièxie zàijiàn",
+          "hint": "Ucapkan tiga sapaan: 你好！谢谢！再见！",
+          "translation": "Halo! Terima kasih! Sampai jumpa!"
+        }
+      }
+    ]
+  },
+
+  "zhc2s1": {
+    "title": "Kata Ganti Orang",
+    "intro": "Kata ganti adalah fondasi setiap kalimat! Dalam Mandarin, sistem kata ganti jauh lebih sederhana dari banyak bahasa lain — tidak ada konjugasi kata kerja berdasarkan orang, dan cara membuat bentuk jamak hanya dengan menambahkan satu karakter!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Kata Ganti Tunggal",
+        "body": "Tiga kata ganti dasar yang menjadi pondasi semua kalimat Mandarin:",
+        "examples": [
+          { "en": "我 (wǒ)", "id": "Saya/Aku — nada 3 (turun-naik)" },
+          { "en": "你 (nǐ)", "id": "Kamu — nada 3 (kasual, untuk teman sebaya)" },
+          { "en": "您 (nín)", "id": "Anda — nada 2 (FORMAL/HORMAT, untuk orang lebih tua/terhormat)" },
+          { "en": "他 (tā)", "id": "Dia (laki-laki) — nada 1" },
+          { "en": "她 (tā)", "id": "Dia (perempuan) — nada 1, bunyi SAMA dengan 他 tapi karakter beda" }
+        ],
+        "tip": "他 dan 她 keduanya dibaca 'tā' — di ucapan lisan tidak ada bedanya! Perbedaan hanya terlihat dalam tulisan."
+      },
+      {
+        "type": "grammar",
+        "heading": "Bentuk Jamak: Tambah 们 (-men)",
+        "body": "Cara membuat kata ganti jamak di Mandarin sangat sederhana: tambahkan satu karakter 们 (men) di belakang!",
+        "examples": [
+          { "en": "我 (wǒ) → 我们 (wǒmen)", "id": "Saya → Kami/Kita" },
+          { "en": "你 (nǐ) → 你们 (nǐmen)", "id": "Kamu → Kalian" },
+          { "en": "他 (tā) → 他们 (tāmen)", "id": "Dia → Mereka" },
+          { "en": "她 (tā) → 她们 (tāmen)", "id": "Dia (perempuan) → Mereka (perempuan semua)" }
+        ],
+        "tip": "们 (men) sendiri tidak punya arti; hanya berfungsi sebagai penanda jamak. Sangat simpel dibanding bahasa Inggris yang mengubah bentuk kata (I→we, he→they)!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Tidak Ada Konjugasi Kata Kerja!",
+        "body": "Ini adalah berita BAGUS untuk pemula. Kata kerja Mandarin tidak berubah berdasarkan siapa yang melakukan:",
+        "examples": [
+          { "en": "我吃 (wǒ chī) = saya makan", "id": "Kata kerja 吃 tidak berubah" },
+          { "en": "你吃 (nǐ chī) = kamu makan", "id": "Tetap 吃, tidak jadi 'chīs'" },
+          { "en": "他吃 (tā chī) = dia makan", "id": "Tetap 吃 — berbeda dari Inggris: I eat, he eats" },
+          { "en": "我们吃 (wǒmen chī) = kami makan", "id": "Jamak pun tidak mengubah kata kerja" }
+        ],
+        "tip": "Mandarin tidak punya konjugasi seperti bahasa Inggris, Spanyol, atau Arab. Ini membuat tata bahasa Mandarin jauh lebih mudah dari yang dibayangkan!"
+      },
+      {
+        "type": "culture",
+        "heading": "您 (nín) — Bentuk Hormat yang Penting",
+        "body": "Penggunaan 您 vs 你 mencerminkan rasa hormat dalam budaya China:",
+        "examples": [
+          { "en": "Ke orang yang lebih tua", "id": "Selalu gunakan 您 — ke orang tua, kakek-nenek, guru senior" },
+          { "en": "Di lingkungan bisnis/formal", "id": "您好 terdengar lebih profesional dan sopan dari 你好" },
+          { "en": "Ke tamu atau pelanggan", "id": "Staf toko/hotel akan menggunakan 您 ke pelanggan sebagai tanda hormat" },
+          { "en": "Antara teman sebaya", "id": "Cukup pakai 你 — menggunakan 您 ke teman bisa terdengar terlalu kaku" }
+        ],
+        "tip": "Di percakapan kasual dengan orang sebaya atau lebih muda, selalu pakai 你. Simpan 您 untuk situasi yang memang butuh kesopanan ekstra."
+      }
+    ],
+    "practice": [
+      {
+        "id": "zhc2s1_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata ganti dengan artinya!",
+          "pairs": [
+            { "word": "我们 (wǒmen)", "meaning": "Kami" },
+            { "word": "你们 (nǐmen)", "meaning": "Kalian" },
+            { "word": "他们 (tāmen)", "meaning": "Mereka" },
+            { "word": "您 (nín)", "meaning": "Anda (formal)" }
+          ],
+          "shuffledMeanings": ["Anda (formal)", "Kalian", "Kami", "Mereka"],
+          "explanation": "Pola jamak: tambah 们. 我→我们, 你→你们, 他→他们. 您 adalah bentuk hormat dari 你."
+        }
+      },
+      {
+        "id": "zhc2s1_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Mengapa kata kerja Mandarin lebih mudah dari Inggris?",
+          "options": [
+            "Kata kerja Mandarin lebih pendek",
+            "Kata kerja Mandarin tidak berubah berdasarkan subjek",
+            "Mandarin tidak punya kata kerja",
+            "Kata kerja Mandarin hanya satu suku kata"
+          ],
+          "correctAnswer": "Kata kerja Mandarin tidak berubah berdasarkan subjek",
+          "explanation": "我吃, 你吃, 他吃 — kata kerja 吃 selalu sama! Tidak seperti Inggris: I eat, he EATS. Ini keunggulan besar Mandarin untuk pemula."
+        }
+      },
+      {
+        "id": "zhc2s1_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Kamu menyapa guru dengan: ___ 好！",
+          "options": ["你 (nǐ)", "您 (nín)", "他 (tā)", "我 (wǒ)"],
+          "correctAnswer": "您 (nín)",
+          "explanation": "Ke guru gunakan 您 (formal/hormat): 您好！Menggunakan 你好 ke guru bisa terdengar kurang sopan."
+        }
+      }
+    ]
+  },
+
+  "zhc2s2": {
+    "title": "Kata 是 (shì) — To Be",
+    "intro": "是 (shì) adalah kata kerja paling fundamental dalam Mandarin — setara dengan 'adalah/merupakan' dalam bahasa Indonesia. Dengan satu kata ini, kamu sudah bisa membuat ratusan kalimat identitas dan deskripsi!",
+    "sections": [
+      {
+        "type": "grammar",
+        "heading": "Pola Dasar: Subjek + 是 + Predikat",
+        "body": "Struktur kalimat 是 sangat sederhana dan konsisten:",
+        "examples": [
+          { "en": "我是学生 (wǒ shì xuésheng)", "id": "Saya adalah pelajar" },
+          { "en": "他是老师 (tā shì lǎoshī)", "id": "Dia adalah guru" },
+          { "en": "这是书 (zhè shì shū)", "id": "Ini adalah buku" },
+          { "en": "北京是首都 (Běijīng shì shǒudū)", "id": "Beijing adalah ibukota" }
+        ],
+        "tip": "Tidak ada 'a' atau 'the' dalam Mandarin! Tidak perlu khawatir soal artikel seperti dalam bahasa Inggris."
+      },
+      {
+        "type": "grammar",
+        "heading": "Negatif: 不是 (bú shì) = Bukan",
+        "body": "Untuk membuat kalimat negatif, tambahkan 不 sebelum 是:",
+        "examples": [
+          { "en": "我不是老师 (wǒ bú shì lǎoshī)", "id": "Saya bukan guru" },
+          { "en": "他不是中国人 (tā bú shì Zhōngguórén)", "id": "Dia bukan orang China" },
+          { "en": "这不是书 (zhè bú shì shū)", "id": "Ini bukan buku" },
+          { "en": "北京不是上海 (Běijīng bú shì Shànghǎi)", "id": "Beijing bukan Shanghai" }
+        ],
+        "tip": "Perhatikan: 不 biasanya nada 4 (bù), tapi berubah jadi nada 2 (bú) di depan kata nada 4 lainnya. 是 (shì) nada 4 → 不是 dibaca 'bú shì'."
+      },
+      {
+        "type": "grammar",
+        "heading": "Kalimat Tanya: Tambah 吗 di Akhir",
+        "body": "Cara paling mudah membuat kalimat tanya ya/tidak: tambahkan 吗 (ma) di akhir kalimat pernyataan!",
+        "examples": [
+          { "en": "你是学生吗？(nǐ shì xuésheng ma?)", "id": "Apakah kamu pelajar?" },
+          { "en": "他是老师吗？(tā shì lǎoshī ma?)", "id": "Apakah dia guru?" },
+          { "en": "这是你的书吗？(zhè shì nǐ de shū ma?)", "id": "Apakah ini buku kamu?" }
+        ],
+        "tip": "Pola: [kalimat pernyataan] + 吗？= kalimat tanya ya/tidak. Jauh lebih mudah dari bahasa Inggris yang harus membalik urutan kata!"
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Kosakata Identitas Dasar",
+        "body": "Kata-kata yang sering dipakai bersama 是:",
+        "examples": [
+          { "en": "学生 (xuésheng)", "id": "Pelajar/Mahasiswa" },
+          { "en": "老师 (lǎoshī)", "id": "Guru" },
+          { "en": "医生 (yīshēng)", "id": "Dokter" },
+          { "en": "中国人 (Zhōngguórén)", "id": "Orang China" },
+          { "en": "印尼人 (Yìnníren)", "id": "Orang Indonesia" }
+        ],
+        "tip": "Pola kewarganegaraan: [nama negara] + 人 = orang [negara tersebut]. 中国人=orang China, 美国人=orang Amerika, 印尼人=orang Indonesia."
+      }
+    ],
+    "practice": [
+      {
+        "id": "zhc2s2_p1", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Bagaimana mengatakan 'Apakah dia guru?'",
+          "options": ["他是老师", "他不是老师", "他是老师吗", "你是老师吗"],
+          "correctAnswer": "他是老师吗",
+          "explanation": "他 (dia) + 是 (adalah) + 老师 (guru) + 吗 (partikel tanya) = 他是老师吗？ Tinggal tambah 吗 di akhir!"
+        }
+      },
+      {
+        "id": "zhc2s2_p2", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "我___ 印尼人 (Saya bukan orang Indonesia)",
+          "options": ["是", "不是", "有", "叫"],
+          "correctAnswer": "不是",
+          "explanation": "不是 (bú shì) = bukan. Untuk kalimat negatif dengan 是, selalu gunakan 不是."
+        }
+      },
+      {
+        "id": "zhc2s2_p3", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan pola kalimat dengan artinya!",
+          "pairs": [
+            { "word": "我是学生", "meaning": "Saya adalah pelajar" },
+            { "word": "我不是老师", "meaning": "Saya bukan guru" },
+            { "word": "你是学生吗？", "meaning": "Apakah kamu pelajar?" },
+            { "word": "他是医生", "meaning": "Dia adalah dokter" }
+          ],
+          "shuffledMeanings": ["Apakah kamu pelajar?", "Dia adalah dokter", "Saya adalah pelajar", "Saya bukan guru"],
+          "explanation": "是=adalah, 不是=bukan, +吗=tanya. Tiga pola fundamental Mandarin!"
+        }
+      }
+    ]
+  },
+
+  "zhc2s3": {
+    "title": "Anggota Keluarga",
+    "intro": "Keluarga (家庭, jiātíng) adalah topik yang selalu muncul dalam percakapan Mandarin. Yang menarik: Mandarin sangat spesifik dalam menyebut anggota keluarga — ada kata berbeda untuk kakak laki vs perempuan, bahkan untuk kakek dari pihak ayah vs ibu!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Anggota Keluarga Inti",
+        "body": "Kata-kata keluarga yang paling sering dipakai dalam percakapan sehari-hari:",
+        "examples": [
+          { "en": "爸爸 (bàba)", "id": "Ayah — panggilan kasual" },
+          { "en": "妈妈 (māma)", "id": "Ibu — panggilan kasual" },
+          { "en": "哥哥 (gēge)", "id": "Kakak laki-laki" },
+          { "en": "姐姐 (jiějie)", "id": "Kakak perempuan" },
+          { "en": "弟弟 (dìdi)", "id": "Adik laki-laki" },
+          { "en": "妹妹 (mèimei)", "id": "Adik perempuan" }
+        ],
+        "tip": "Mandarin membedakan kakak/adik berdasarkan jenis kelamin. 哥哥/弟弟 untuk laki-laki, 姐姐/妹妹 untuk perempuan. Tidak ada kata 'saudara' yang netral!"
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Keluarga Besar",
+        "body": "Beberapa kata keluarga besar yang paling umum dipakai:",
+        "examples": [
+          { "en": "爷爷 (yéye)", "id": "Kakek (dari ayah)" },
+          { "en": "奶奶 (nǎinai)", "id": "Nenek (dari ayah)" },
+          { "en": "外公 (wàigōng)", "id": "Kakek (dari ibu)" },
+          { "en": "外婆 (wàipó)", "id": "Nenek (dari ibu)" },
+          { "en": "儿子 (érzi)", "id": "Anak laki-laki" },
+          { "en": "女儿 (nǚér)", "id": "Anak perempuan" }
+        ],
+        "tip": "Mandarin membedakan kakek-nenek dari pihak ayah (爷爷/奶奶) dan dari pihak ibu (外公/外婆). Ini mencerminkan pentingnya garis keturunan dalam budaya China."
+      },
+      {
+        "type": "grammar",
+        "heading": "Membicarakan Keluarga: Pola 有 (yǒu) = Punya",
+        "body": "有 (yǒu, nada 3) = punya/ada. Digunakan untuk menyatakan kepemilikan atau keberadaan:",
+        "examples": [
+          { "en": "我有一个哥哥 (wǒ yǒu yīge gēge)", "id": "Saya punya seorang kakak laki-laki" },
+          { "en": "我没有弟弟 (wǒ méiyǒu dìdi)", "id": "Saya tidak punya adik laki-laki" },
+          { "en": "你有兄弟姐妹吗？(nǐ yǒu xiōngdì jiěmèi ma?)", "id": "Apakah kamu punya saudara?" },
+          { "en": "一个 (yīge)", "id": "Satu orang — 一=satu, 个=satuan untuk orang" }
+        ],
+        "tip": "Negatif dari 有 adalah 没有 (méiyǒu), BUKAN 不有! 没有 = tidak punya/tidak ada. Ini pengecualian dari aturan 不 biasa."
+      },
+      {
+        "type": "culture",
+        "heading": "Budaya Keluarga China",
+        "body": "Keluarga memiliki tempat yang sangat sentral dalam budaya China:",
+        "examples": [
+          { "en": "Anak tunggal", "id": "Kebijakan satu anak (1980-2015) membuat banyak generasi milenial China tidak punya saudara. Mereka sering disebut 独生子女 (dúshēng zǐnǚ)" },
+          { "en": "Meja makan = pusat keluarga", "id": "Makan bersama keluarga adalah ritual terpenting. 回家吃饭 (pulang untuk makan) adalah ungkapan kasih sayang orang tua" },
+          { "en": "Pertanyaan personal biasa", "id": "Orang China sering bertanya umur, status pernikahan, dan gaji — ini dianggap perhatian, bukan tidak sopan!" }
+        ],
+        "tip": "Jika orang China bertanya 你结婚了吗？(apakah kamu sudah menikah?) atau 工资多少？(berapa gajimu?), itu tanda mereka menganggapmu cukup dekat untuk ditanya!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "zhc2s3_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan anggota keluarga!",
+          "pairs": [
+            { "word": "爸爸 (bàba)", "meaning": "Ayah" },
+            { "word": "妈妈 (māma)", "meaning": "Ibu" },
+            { "word": "哥哥 (gēge)", "meaning": "Kakak laki-laki" },
+            { "word": "妹妹 (mèimei)", "meaning": "Adik perempuan" },
+            { "word": "儿子 (érzi)", "meaning": "Anak laki-laki" }
+          ],
+          "shuffledMeanings": ["Ibu", "Kakak laki-laki", "Anak laki-laki", "Ayah", "Adik perempuan"],
+          "explanation": "Keluarga inti: 爸爸=ayah, 妈妈=ibu, 哥哥=kakak laki, 姐姐=kakak perempuan, 弟弟=adik laki, 妹妹=adik perempuan."
+        }
+      },
+      {
+        "id": "zhc2s3_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Bentuk negatif yang benar dari 我有哥哥 (saya punya kakak) adalah...",
+          "options": ["我不有哥哥", "我没有哥哥", "我有不哥哥", "我不哥哥"],
+          "correctAnswer": "我没有哥哥",
+          "explanation": "Negatif dari 有 (punya) adalah 没有 (méiyǒu), bukan 不有! 我没有哥哥 = saya tidak punya kakak laki-laki."
+        }
+      },
+      {
+        "id": "zhc2s3_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "我___ 一个妹妹 (Saya punya seorang adik perempuan)",
+          "options": ["是", "有", "叫", "在"],
+          "correctAnswer": "有",
+          "explanation": "有 (yǒu) = punya/ada. 我有一个妹妹 = saya punya satu adik perempuan. 一个 = satu orang/satuan."
+        }
+      }
+    ]
+  },
+
+  "zhc2s4": {
+    "title": "Kalimat Perkenalan Lengkap",
+    "intro": "Saatnya menggabungkan semua yang sudah dipelajari menjadi perkenalan diri yang lengkap! Dengan pola yang akan dipelajari di sini, kamu bisa memperkenalkan diri kepada siapa pun dalam Mandarin — dari situasi kasual hingga formal.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Pola Perkenalan Standar",
+        "body": "Urutan perkenalan yang natural dan diterima secara universal dalam budaya China:",
+        "examples": [
+          { "en": "① 你好！(nǐ hǎo!)", "id": "Mulai dengan sapaan" },
+          { "en": "② 我叫___ (wǒ jiào ___)", "id": "Sebutkan nama: 'Saya bernama...'" },
+          { "en": "③ 我是印尼人 (wǒ shì Yìnní rén)", "id": "Sebutkan kebangsaan: 'Saya orang Indonesia'" },
+          { "en": "④ 我是学生 (wǒ shì xuésheng)", "id": "Sebutkan profesi/status (opsional)" },
+          { "en": "⑤ 很高兴认识你！(hěn gāoxìng rènshi nǐ!)", "id": "Tutup: 'Senang berkenalan denganmu!'" }
+        ],
+        "tip": "很高兴认识你 (hěn gāoxìng rènshi nǐ) = senang berkenalan denganmu. Ini setara dengan 'nice to meet you' dalam bahasa Inggris — wajib hafal!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Cara Bertanya Nama",
+        "body": "Dua cara paling umum menanyakan nama seseorang:",
+        "examples": [
+          { "en": "你叫什么名字？(nǐ jiào shénme míngzi?)", "id": "Siapa namamu? (harfiah: kamu dipanggil nama apa?)" },
+          { "en": "你叫什么？(nǐ jiào shénme?)", "id": "Kamu bernama apa? (versi lebih singkat)" },
+          { "en": "您贵姓？(nín guì xìng?)", "id": "Nama fam/keluarga Anda apa? (SANGAT FORMAL — ke orang yang jauh lebih tua/terhormat)" },
+          { "en": "什么 (shénme)", "id": "= apa (kata tanya)" }
+        ],
+        "tip": "什么 (shénme) = apa. Ini kata tanya paling sering dipakai! 什么意思？= apa artinya?, 什么时候？= kapan?, 什么地方？= di mana?"
+      },
+      {
+        "type": "grammar",
+        "heading": "Menanyakan & Menyebut Asal",
+        "body": "Percakapan tentang asal usul sangat umum saat berkenalan dengan orang China:",
+        "examples": [
+          { "en": "你是哪国人？(nǐ shì nǎ guó rén?)", "id": "Kamu orang dari negara mana?" },
+          { "en": "你是哪里人？(nǐ shì nǎlǐ rén?)", "id": "Kamu orang dari mana? (bisa untuk kota)" },
+          { "en": "我是印尼人 (wǒ shì Yìnní rén)", "id": "Saya orang Indonesia" },
+          { "en": "我来自雅加达 (wǒ láizì Yǎjiādá)", "id": "Saya berasal dari Jakarta" }
+        ],
+        "tip": "哪 (nǎ) = yang mana. 哪国 = negara mana, 哪里 = di mana. Hafalkan 哪 untuk banyak pertanyaan lokasi."
+      },
+      {
+        "type": "conversation",
+        "heading": "Contoh Percakapan Perkenalan",
+        "body": "Percakapan lengkap yang bisa langsung dipraktikkan:",
+        "examples": [
+          { "en": "A: 你好！我叫小明。(Halo! Saya Xiao Ming.)", "id": "A memulai dengan sapaan + nama" },
+          { "en": "B: 你好！我叫Sari，我是印尼人。(Halo! Saya Sari, saya orang Indonesia.)", "id": "B membalas dengan nama + kebangsaan" },
+          { "en": "A: 很高兴认识你！你是学生吗？(Senang berkenalan! Apakah kamu pelajar?)", "id": "A menambahkan pertanyaan" },
+          { "en": "B: 是的，我是学生。你呢？(Ya, saya pelajar. Kalau kamu?)", "id": "B menjawab + balik bertanya dengan 你呢" }
+        ]
+      }
+    ],
+    "practice": [
+      {
+        "id": "zhc2s4_p1", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "很高兴认识你 (hěn gāoxìng rènshi nǐ) artinya...",
+          "options": ["Halo, apa kabar?", "Sampai jumpa lagi", "Senang berkenalan denganmu", "Terima kasih banyak"],
+          "correctAnswer": "Senang berkenalan denganmu",
+          "explanation": "很 (hěn) = sangat, 高兴 (gāoxìng) = senang/gembira, 认识 (rènshi) = mengenal/berkenalan, 你 (nǐ) = kamu. = 'Sangat senang berkenalan denganmu'!"
+        }
+      },
+      {
+        "id": "zhc2s4_p2", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "你叫___名字？(Siapa namamu?)",
+          "options": ["哪 (nǎ)", "什么 (shénme)", "哪里 (nǎlǐ)", "几 (jǐ)"],
+          "correctAnswer": "什么 (shénme)",
+          "explanation": "你叫什么名字？= siapa namamu? 什么 = apa. Kalimat harfiah: kamu dipanggil nama apa?"
+        }
+      },
+      {
+        "id": "zhc2s4_p3", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Susun percakapan perkenalan yang tepat!",
+          "pairs": [
+            { "word": "Langkah 1", "meaning": "你好！(Halo!)" },
+            { "word": "Langkah 2", "meaning": "我叫___ (Saya bernama...)" },
+            { "word": "Langkah 3", "meaning": "我是印尼人 (Saya orang Indonesia)" },
+            { "word": "Langkah 4", "meaning": "很高兴认识你！(Senang berkenalan!)" }
+          ],
+          "shuffledMeanings": ["很高兴认识你！(Senang berkenalan!)", "你好！(Halo!)", "我是印尼人 (Saya orang Indonesia)", "我叫___ (Saya bernama...)"],
+          "explanation": "Urutan perkenalan: sapaan → nama → asal/identitas → ungkapan senang berkenalan."
+        }
+      }
+    ]
+  },
+
+  "zhc2s5": {
+    "title": "Review Chapter 2",
+    "intro": "Chapter 2 selesai! Kamu sudah bisa menyebutkan kata ganti, membuat kalimat dengan 是, mengenal anggota keluarga, dan memperkenalkan diri lengkap. Ini fondasi percakapan Mandarin yang sesungguhnya!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Ringkasan Chapter 2",
+        "body": "Semua yang sudah dipelajari:",
+        "examples": [
+          { "en": "Kata ganti: 我你他她我们你们他们", "id": "Saya, kamu, dia (L/P), kami, kalian, mereka" },
+          { "en": "是 / 不是 / +吗", "id": "Adalah / Bukan / Kalimat tanya" },
+          { "en": "Keluarga: 爸妈哥姐弟妹", "id": "Ayah, ibu, kakak L, kakak P, adik L, adik P" },
+          { "en": "Perkenalan: 我叫... 我是...人 很高兴认识你", "id": "Nama, kebangsaan, senang berkenalan" }
+        ],
+        "tip": "Coba tulis perkenalan lengkapmu dalam Mandarin: 你好！我叫___。我是印尼人。我是___（profesi）。很高兴认识你！"
+      }
+    ],
+    "practice": [
+      {
+        "id": "zhc2s5_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Review Chapter 2 — cocokkan semua!",
+          "pairs": [
+            { "word": "我 (wǒ)", "meaning": "Saya" },
+            { "word": "是 (shì)", "meaning": "Adalah" },
+            { "word": "有 (yǒu)", "meaning": "Punya/Ada" },
+            { "word": "叫 (jiào)", "meaning": "Bernama" }
+          ],
+          "shuffledMeanings": ["Bernama", "Punya/Ada", "Saya", "Adalah"],
+          "explanation": "4 kata kerja paling fundamental Chapter 2: 是=adalah, 不是=bukan, 有=punya, 叫=bernama."
+        }
+      },
+      {
+        "id": "zhc2s5_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Kalimat perkenalan lengkap yang benar adalah...",
+          "options": [
+            "你好！我叫Sari。我是印尼人。很高兴认识你！",
+            "你好！我是Sari。我叫印尼人。认识高兴你！",
+            "好你！叫我Sari。人印尼我是。你认识高兴！",
+            "Sari叫我。你好！印尼人我。"
+          ],
+          "correctAnswer": "你好！我叫Sari。我是印尼人。很高兴认识你！",
+          "explanation": "Urutan benar: 你好 (sapaan) → 我叫Sari (nama) → 我是印尼人 (kebangsaan) → 很高兴认识你 (penutup). Inilah pola standar perkenalan Mandarin!"
+        }
+      },
+      {
+        "id": "zhc2s5_p3", "type": "speaking_test", "xpReward": 20,
+        "content": {
+          "phrase": "nǐ hǎo wǒ jiào wǒ shì Yìnní rén",
+          "hint": "Perkenalkan dirimu: 你好！我叫___。我是印尼人。",
+          "translation": "Halo! Saya bernama ___. Saya orang Indonesia."
+        }
+      }
+    ]
+  },
+
+  "zhc3s1": {
+    "title": "Angka 0–10 dan Sistem Angka",
+    "intro": "Angka Mandarin adalah salah satu bagian paling mudah dan langsung berguna! Cukup hafal 10 karakter, dan kamu sudah bisa menyebut angka hingga ribuan. Sistemnya sangat logis — jauh lebih mudah dari bahasa Inggris!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Angka 0–10",
+        "body": "Sepuluh angka dasar yang menjadi fondasi semua perhitungan Mandarin:",
+        "examples": [
+          { "en": "零 (líng) = 0", "id": "Nol — dipakai juga untuk angka '0' di nomor telepon/HP" },
+          { "en": "一 (yī) = 1", "id": "Satu — nada 1 (datar tinggi)" },
+          { "en": "二 (èr) = 2", "id": "Dua — nada 4" },
+          { "en": "三 (sān) = 3", "id": "Tiga — nada 1" },
+          { "en": "四 (sì) = 4", "id": "Empat — nada 4 (angka 'sial' karena mirip 死/mati)" },
+          { "en": "五 (wǔ) = 5", "id": "Lima — nada 3" },
+          { "en": "六 (liù) = 6", "id": "Enam — nada 4" },
+          { "en": "七 (qī) = 7", "id": "Tujuh — nada 1" },
+          { "en": "八 (bā) = 8", "id": "Delapan — nada 1 (angka paling beruntung!)" },
+          { "en": "九 (jiǔ) = 9", "id": "Sembilan — nada 3 (juga angka beruntung, mirip 久/lama)" },
+          { "en": "十 (shí) = 10", "id": "Sepuluh — nada 2" }
+        ],
+        "tip": "Lagu anak: 一二三四五，上山打老虎 (yī èr sān sì wǔ, shàng shān dǎ lǎohǔ) = 1,2,3,4,5, naik gunung mengejar harimau!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Sistem Angka Mandarin yang Super Logis",
+        "body": "Setelah hafal 1-10, kamu otomatis bisa menyebut angka yang jauh lebih besar karena sistemnya sangat konsisten:",
+        "examples": [
+          { "en": "11 = 十一 (shíyī)", "id": "10 + 1 = sebelas (bukan 'eleven'!)" },
+          { "en": "15 = 十五 (shíwǔ)", "id": "10 + 5 = lima belas" },
+          { "en": "20 = 二十 (èrshí)", "id": "2 × 10 = dua puluh" },
+          { "en": "35 = 三十五 (sānshíwǔ)", "id": "3 × 10 + 5 = tiga puluh lima" },
+          { "en": "100 = 一百 (yībǎi)", "id": "Seratus — 百 (bǎi) = ratus" }
+        ],
+        "tip": "Bandingkan: 14 Inggris = 'fourteen' (tidak logis). 14 Mandarin = 十四 (shísì) = 10+4. Sangat matematis!"
+      },
+      {
+        "type": "culture",
+        "heading": "Angka & Budaya China",
+        "body": "Angka memiliki makna budaya yang sangat kuat dalam masyarakat China:",
+        "examples": [
+          { "en": "8 (八, bā) = PALING BERUNTUNG", "id": "Bunyi 'bā' mirip 发 (fā) = berkembang/makmur. Nomor plat '8888' bisa dijual seharga ratusan juta!" },
+          { "en": "4 (四, sì) = PALING SIAL", "id": "Bunyi 'sì' mirip 死 (sǐ) = mati. Banyak gedung di China tidak punya lantai 4, 14, 24, dll." },
+          { "en": "6 (六, liù) = Beruntung", "id": "Melambangkan kelancaran — 六六大顺 (liùliù dàshùn) = semoga segalanya berjalan lancar" },
+          { "en": "9 (九, jiǔ) = Beruntung", "id": "Bunyi mirip 久 (jiǔ) = lama/abadi. Dipakai dalam konteks cinta (9 bunga = cinta abadi)" }
+        ],
+        "tip": "Tanggal 8 Agustus 2008 dipilih sebagai pembukaan Olimpiade Beijing karena: 08/08/08 = tiga angka 8 = sangat beruntung!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "zhc3s1_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan angka Mandarin!",
+          "pairs": [
+            { "word": "二 (èr)", "meaning": "2" },
+            { "word": "五 (wǔ)", "meaning": "5" },
+            { "word": "八 (bā)", "meaning": "8" },
+            { "word": "十 (shí)", "meaning": "10" },
+            { "word": "零 (líng)", "meaning": "0" }
+          ],
+          "shuffledMeanings": ["10", "2", "0", "5", "8"],
+          "explanation": "零=0, 一=1, 二=2, 三=3, 四=4, 五=5, 六=6, 七=7, 八=8, 九=9, 十=10."
+        }
+      },
+      {
+        "id": "zhc3s1_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "三十八 (sānshíbā) sama dengan angka berapa?",
+          "options": ["28", "38", "83", "318"],
+          "correctAnswer": "38",
+          "explanation": "三十八 = 三(3) × 十(10) + 八(8) = 30 + 8 = 38. Sistem angka Mandarin sangat logis dan matematis!"
+        }
+      },
+      {
+        "id": "zhc3s1_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Angka 8 (八) sangat disukai karena bunyinya mirip ___ yang artinya berkembang/makmur",
+          "options": ["死 (sǐ)", "发 (fā)", "爱 (ài)", "好 (hǎo)"],
+          "correctAnswer": "发 (fā)",
+          "explanation": "八 (bā) ≈ 发 (fā) = berkembang/makmur. Inilah mengapa 8 sangat beruntung dalam budaya China!"
+        }
+      }
+    ]
+  },
+
+  "zhc3s2": {
+    "title": "Hari, Minggu & Tanggal",
+    "intro": "Dengan angka yang sudah dikuasai, belajar hari dan tanggal Mandarin menjadi sangat mudah! Sistemnya penuh logika — hari dalam seminggu hanya butuh angka 1-7 ditambah kata 星期.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Hari dalam Seminggu",
+        "body": "Cara paling logis di dunia untuk menyebut hari: 星期 (xīngqī = minggu) + angka!",
+        "examples": [
+          { "en": "星期一 (xīngqī yī) = Senin", "id": "Hari ke-1 dalam minggu (一=1)" },
+          { "en": "星期二 (xīngqī èr) = Selasa", "id": "Hari ke-2 (二=2)" },
+          { "en": "星期三 (xīngqī sān) = Rabu", "id": "Hari ke-3 (三=3)" },
+          { "en": "星期四 (xīngqī sì) = Kamis", "id": "Hari ke-4 (四=4)" },
+          { "en": "星期五 (xīngqī wǔ) = Jumat", "id": "Hari ke-5 (五=5)" },
+          { "en": "星期六 (xīngqī liù) = Sabtu", "id": "Hari ke-6 (六=6)" },
+          { "en": "星期日/天 (xīngqī rì/tiān) = Minggu", "id": "Hari ke-7 — pakai 日 atau 天, tidak pakai angka 7" }
+        ],
+        "tip": "Catatan: hari Minggu tidak pakai 七 (7) melainkan 日 (rì=matahari/hari) atau 天 (tiān=langit/hari). Ini satu-satunya pengecualian!"
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Kata-kata Waktu Penting",
+        "body": "Kosakata waktu yang paling sering dipakai:",
+        "examples": [
+          { "en": "今天 (jīntiān) = hari ini", "id": "今 = sekarang, 天 = hari" },
+          { "en": "明天 (míngtiān) = besok", "id": "明 = cerah/berikutnya" },
+          { "en": "后天 (hòutiān) = lusa", "id": "后 = belakang/setelah" },
+          { "en": "昨天 (zuótiān) = kemarin", "id": "昨 = kemarin" },
+          { "en": "前天 (qiántiān) = dua hari lalu", "id": "前 = depan/sebelum (dalam konteks waktu = sebelumnya)" }
+        ],
+        "tip": "Perhatikan: 前 (qián) biasanya = depan dalam ruang, tapi = sebelumnya dalam waktu. Mandarin menggunakan metafora waktu yang menarik!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Bertanya & Menyebutkan Tanggal",
+        "body": "Cara bertanya dan menjawab tentang tanggal:",
+        "examples": [
+          { "en": "今天几月几号？(jīntiān jǐ yuè jǐ hào?)", "id": "Hari ini tanggal berapa bulan berapa?" },
+          { "en": "今天是三月十五号 (jīntiān shì sān yuè shíwǔ hào)", "id": "Hari ini tanggal 15 Maret" },
+          { "en": "今天星期几？(jīntiān xīngqī jǐ?)", "id": "Hari ini hari apa?" },
+          { "en": "月 (yuè) = bulan, 号 (hào) = tanggal, 年 (nián) = tahun", "id": "Tiga unit waktu terpenting" }
+        ],
+        "tip": "Urutan tanggal Mandarin: Tahun → Bulan → Tanggal → Hari. Contoh: 2024年3月15号星期五 = Jumat, 15 Maret 2024."
+      },
+      {
+        "type": "culture",
+        "heading": "Kalender & Perayaan China",
+        "body": "China menggunakan dua kalender secara bersamaan:",
+        "examples": [
+          { "en": "Kalender Gregorian (公历)", "id": "Untuk kehidupan sehari-hari, bisnis, sekolah" },
+          { "en": "Kalender Lunar (农历)", "id": "Untuk perayaan tradisional seperti Imlek, Festival Pertengahan Musim Gugur" },
+          { "en": "春节 (Chūnjié) = Imlek/Tahun Baru China", "id": "Perayaan terbesar — tanggalnya berubah setiap tahun mengikuti kalender lunar" },
+          { "en": "中秋节 (Zhōngqiūjié)", "id": "Festival Pertengahan Musim Gugur — makan mooncake (月饼, yuèbing)" }
+        ],
+        "tip": "Saat bertemu orang China di hari Imlek, ucapkan: 新年快乐！(xīnnián kuàilè!) = Selamat Tahun Baru!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "zhc3s2_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan hari dengan nama Mandarin-nya!",
+          "pairs": [
+            { "word": "星期一 (xīngqī yī)", "meaning": "Senin" },
+            { "word": "星期三 (xīngqī sān)", "meaning": "Rabu" },
+            { "word": "星期五 (xīngqī wǔ)", "meaning": "Jumat" },
+            { "word": "星期日 (xīngqī rì)", "meaning": "Minggu" }
+          ],
+          "shuffledMeanings": ["Rabu", "Minggu", "Senin", "Jumat"],
+          "explanation": "Senin=星期一(1), Selasa=星期二(2), Rabu=星期三(3), Kamis=星期四(4), Jumat=星期五(5), Sabtu=星期六(6), Minggu=星期日."
+        }
+      },
+      {
+        "id": "zhc3s2_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "后天 (hòutiān) artinya...",
+          "options": ["Kemarin", "Hari ini", "Besok", "Lusa"],
+          "correctAnswer": "Lusa",
+          "explanation": "后天 (hòutiān) = lusa (dua hari lagi). 今天=hari ini, 明天=besok, 后天=lusa. 后=setelah/belakang."
+        }
+      },
+      {
+        "id": "zhc3s2_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "今天星期___ (Hari ini hari Rabu)",
+          "options": ["二 (èr)", "三 (sān)", "四 (sì)", "五 (wǔ)"],
+          "correctAnswer": "三 (sān)",
+          "explanation": "星期三 (xīngqī sān) = Rabu. 三=3, hari ke-3. Senin=一, Selasa=二, Rabu=三."
+        }
+      }
+    ]
+  },
+
+  "zhc3s3": {
+    "title": "Makanan & Minuman",
+    "intro": "Makanan adalah jantung budaya China! Kata 吃了吗 (sudah makan?) bahkan dipakai sebagai sapaan. Pelajari kosakata makanan dan minuman dasar, dan kamu sudah siap memesan makanan di restoran China mana pun.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Makanan Pokok & Umum",
+        "body": "Kosakata makanan yang paling sering muncul dalam percakapan:",
+        "examples": [
+          { "en": "米饭 (mǐfàn) = nasi", "id": "Makanan pokok utama China — 米=beras, 饭=nasi/makanan" },
+          { "en": "面条 (miàntiáo) = mie", "id": "Makanan pokok kedua — 面=tepung/mie, 条=potongan panjang" },
+          { "en": "包子 (bāozi) = bakpao", "id": "Roti isi kukus — sangat populer sebagai sarapan" },
+          { "en": "饺子 (jiǎozi) = pangsit/dumpling", "id": "Makanan wajib Tahun Baru Imlek di utara China" },
+          { "en": "汤 (tāng) = sup/kuah", "id": "Hampir setiap makan di China ada sup" }
+        ],
+        "tip": "饭 (fàn) bisa berarti 'nasi' atau 'makan/makanan'. 吃饭 = makan (secara umum), 米饭 = nasi putih secara spesifik."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Minuman Populer",
+        "body": "Minuman yang paling sering dipesan dan disebutkan:",
+        "examples": [
+          { "en": "水 (shuǐ) = air", "id": "Air putih — paling dasar" },
+          { "en": "热水 (rèshuǐ) = air panas", "id": "China terkenal suka minum air panas! 热=panas" },
+          { "en": "茶 (chá) = teh", "id": "Minuman nasional China — ada ribuan jenis teh" },
+          { "en": "咖啡 (kāfēi) = kopi", "id": "Serapan dari 'coffee' — sangat populer sekarang" },
+          { "en": "果汁 (guǒzhī) = jus buah", "id": "果=buah, 汁=sari/jus" }
+        ],
+        "tip": "Di restoran China, seringkali kamu akan diberi teh secara otomatis — ini bagian dari keramahan host. Tidak perlu membayar extra!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Memesan Makanan: Kata 要 dan 想",
+        "body": "Dua kata kunci untuk memesan atau mengungkapkan keinginan:",
+        "examples": [
+          { "en": "我要一碗米饭 (wǒ yào yī wǎn mǐfàn)", "id": "Saya mau semangkuk nasi (sudah pasti pesan)" },
+          { "en": "我想喝茶 (wǒ xiǎng hē chá)", "id": "Saya ingin minum teh (masih mempertimbangkan)" },
+          { "en": "一碗 (yī wǎn) = semangkuk", "id": "碗=mangkuk — satuan untuk sup dan nasi" },
+          { "en": "一杯 (yī bēi) = segelas/secangkir", "id": "杯=gelas/cangkir — satuan untuk minuman" }
+        ],
+        "tip": "要 (yào) = mau (lebih tegas, cocok saat memesan di restoran). 想 (xiǎng) = ingin/mau (masih memikirkan). Di restoran, pakai 要 agar lebih jelas."
+      },
+      {
+        "type": "culture",
+        "heading": "Budaya Makan China",
+        "body": "Beberapa hal penting tentang budaya makan di China:",
+        "examples": [
+          { "en": "请客 (qǐngkè) = mentraktir", "id": "Budaya traktir sangat kuat — biasanya yang mengundang yang bayar, dan akan berdebat rebutan bayar!" },
+          { "en": "干杯 (gānbēi) = bersulang", "id": "'Habiskan gelasmu!' — budaya minum bersama yang sangat umum di makan malam bisnis" },
+          { "en": "吃吧！(chī ba)", "id": "'Makanlah!' — kata host ke tamu, artinya 'silakan mulai makan'" },
+          { "en": "多吃点！(duō chī diǎn)", "id": "'Makan lebih banyak!' — cara orang China menunjukkan kepedulian" }
+        ],
+        "tip": "Jika diundang makan oleh keluarga China, siap-siap untuk terus-menerus ditawari makanan lebih. Menolak sekali itu sopan, tapi akhirnya ambi sajalah!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "zhc3s3_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan makanan & minuman!",
+          "pairs": [
+            { "word": "米饭 (mǐfàn)", "meaning": "Nasi" },
+            { "word": "面条 (miàntiáo)", "meaning": "Mie" },
+            { "word": "茶 (chá)", "meaning": "Teh" },
+            { "word": "咖啡 (kāfēi)", "meaning": "Kopi" },
+            { "word": "汤 (tāng)", "meaning": "Sup" }
+          ],
+          "shuffledMeanings": ["Kopi", "Nasi", "Sup", "Teh", "Mie"],
+          "explanation": "米饭=nasi, 面条=mie, 包子=bakpao, 茶=teh, 咖啡=kopi, 水=air, 汤=sup."
+        }
+      },
+      {
+        "id": "zhc3s3_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Bagaimana memesan 'satu cangkir kopi' di restoran?",
+          "options": ["我要一碗咖啡", "我要一杯咖啡", "我有一杯咖啡", "我是一杯咖啡"],
+          "correctAnswer": "我要一杯咖啡",
+          "explanation": "我要 (saya mau) + 一杯 (satu gelas/cangkir) + 咖啡 (kopi) = 我要一杯咖啡. Satuan untuk minuman adalah 杯 (bēi = gelas/cangkir)."
+        }
+      },
+      {
+        "id": "zhc3s3_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "这个很好___ ！(Ini sangat enak! — untuk makanan padat)",
+          "options": ["喝 (hē)", "吃 (chī)", "看 (kàn)", "听 (tīng)"],
+          "correctAnswer": "吃 (chī)",
+          "explanation": "好吃 (hǎochī) = enak untuk makanan. 好喝 = enak untuk minuman. 吃=makan (padat), 喝=minum (cair)."
+        }
+      }
+    ]
+  },
+
+  "zhc3s4": {
+    "title": "Warna & Kata Sifat Dasar",
+    "intro": "Warna dan kata sifat membuat bahasa jadi hidup! Dalam Mandarin, sistem warna sangat sederhana — dan kata sifat bisa langsung diletakkan sebelum kata benda. Dengan beberapa kata sifat, kamu sudah bisa mendeskripsikan banyak hal!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Warna Dasar",
+        "body": "Delapan warna yang paling sering dibutuhkan dalam percakapan:",
+        "examples": [
+          { "en": "红 (hóng) = merah", "id": "Warna paling beruntung di China! Baju pernikahan tradisional selalu merah" },
+          { "en": "蓝 (lán) = biru", "id": "Langit 蓝天 (lán tiān) = langit biru" },
+          { "en": "绿 (lǜ) = hijau", "id": "Teh hijau 绿茶 (lǜchá) — minuman paling sehat" },
+          { "en": "黄 (huáng) = kuning", "id": "Warna kekaisaran — kaisar China selalu pakai kuning" },
+          { "en": "白 (bái) = putih", "id": "HATI-HATI: putih adalah warna duka di China, bukan hitam!" },
+          { "en": "黑 (hēi) = hitam", "id": "Pakaian formal/sehari-hari" },
+          { "en": "橙 (chéng) = oranye", "id": "Warna buah jeruk" },
+          { "en": "粉 (fěn) = merah muda/pink", "id": "粉色 (fěnsè) = warna pink" }
+        ],
+        "tip": "Untuk mengatakan 'warna [X]': tambahkan 色 (sè) di belakang. Merah=红色 (hóngsè), Biru=蓝色 (lánsè). Kadang 色 dihilangkan dalam percakapan kasual."
+      },
+      {
+        "type": "grammar",
+        "heading": "Kata Sifat dalam Kalimat Mandarin",
+        "body": "Cara menggunakan kata sifat dalam Mandarin — posisi sama seperti bahasa Indonesia (sebelum kata benda), tapi ada sedikit aturan tambahan:",
+        "examples": [
+          { "en": "红色的书 (hóngsè de shū) = buku merah", "id": "Warna + 的 + kata benda (的=penghubung)" },
+          { "en": "大的房子 (dà de fángzi) = rumah besar", "id": "Kata sifat + 的 + kata benda" },
+          { "en": "很 (hěn) = sangat", "id": "我很高兴 (wǒ hěn gāoxìng) = saya sangat senang" },
+          { "en": "太___了 (tài...le) = terlalu", "id": "太贵了 (tài guì le) = terlalu mahal, 太好了 (tài hǎo le) = luar biasa!" }
+        ],
+        "tip": "太好了！(tài hǎo le) = Luar biasa!/Mantap! — ekspresi positif yang sangat sering dipakai dalam percakapan."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Kata Sifat Berlawanan",
+        "body": "Pasangan kata sifat yang paling sering dipakai:",
+        "examples": [
+          { "en": "大 (dà) ↔ 小 (xiǎo)", "id": "Besar ↔ Kecil" },
+          { "en": "多 (duō) ↔ 少 (shǎo)", "id": "Banyak ↔ Sedikit" },
+          { "en": "贵 (guì) ↔ 便宜 (piányí)", "id": "Mahal ↔ Murah" },
+          { "en": "好 (hǎo) ↔ 坏 (huài)", "id": "Baik/Bagus ↔ Buruk/Jelek" },
+          { "en": "快 (kuài) ↔ 慢 (màn)", "id": "Cepat ↔ Lambat" },
+          { "en": "冷 (lěng) ↔ 热 (rè)", "id": "Dingin ↔ Panas" }
+        ],
+        "tip": "便宜 (piányí) = murah. Kata yang sangat berguna saat belanja! 这个便宜吗？(zhège piányí ma?) = Apakah ini murah?"
+      },
+      {
+        "type": "culture",
+        "heading": "Warna dalam Budaya China",
+        "body": "Warna memiliki makna simbolis yang sangat kuat dalam budaya China:",
+        "examples": [
+          { "en": "红 (merah) = keberuntungan, kebahagiaan", "id": "Amplop merah (红包, hóngbāo) = hadiah uang di Tahun Baru" },
+          { "en": "白 (putih) = duka, kematian", "id": "Jangan beri bunga putih ke rumah sakit atau acara bahagia!" },
+          { "en": "黄 (kuning) = kerajaan, kemewahan", "id": "Hanya kaisar yang boleh memakai kuning di zaman dulu" },
+          { "en": "红包数字", "id": "Di aplikasi WeChat, mengirim 红包 (amplop digital) sebesar 8.88 yuan sangat populer karena angka beruntung!" }
+        ],
+        "tip": "红包 (hóngbāo) sekarang bisa dikirim secara digital via WeChat! Di hari raya China, sangat umum saling kirim 红包 digital."
+      }
+    ],
+    "practice": [
+      {
+        "id": "zhc3s4_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan warna dengan artinya!",
+          "pairs": [
+            { "word": "红 (hóng)", "meaning": "Merah" },
+            { "word": "蓝 (lán)", "meaning": "Biru" },
+            { "word": "黄 (huáng)", "meaning": "Kuning" },
+            { "word": "白 (bái)", "meaning": "Putih" },
+            { "word": "黑 (hēi)", "meaning": "Hitam" }
+          ],
+          "shuffledMeanings": ["Kuning", "Merah", "Hitam", "Biru", "Putih"],
+          "explanation": "红=merah, 蓝=biru, 绿=hijau, 黄=kuning, 白=putih, 黑=hitam."
+        }
+      },
+      {
+        "id": "zhc3s4_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "太好了 (tài hǎo le) artinya...",
+          "options": ["Tidak bagus", "Bagus sekali / Luar biasa!", "Terlalu mahal", "Sangat panas"],
+          "correctAnswer": "Bagus sekali / Luar biasa!",
+          "explanation": "太好了！= luar biasa/mantap! 太___了 = terlalu/sangat. Dalam konteks positif, 太好了 = sangat bagus/luar biasa!"
+        }
+      },
+      {
+        "id": "zhc3s4_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "这个___ (太贵了/太便宜了)？— Ini terlalu mahal!",
+          "options": ["太贵了 (tài guì le)", "太便宜了 (tài piányí le)", "太大了 (tài dà le)", "太小了 (tài xiǎo le)"],
+          "correctAnswer": "太贵了 (tài guì le)",
+          "explanation": "太贵了 = terlalu mahal. 贵 (guì) = mahal, 便宜 (piányí) = murah. Frasa berguna saat berbelanja!"
+        }
+      }
+    ]
+  },
+
+  "zhc3s5": {
+    "title": "Review Chapter 3 & Perayaan!",
+    "intro": "恭喜！(Gōngxǐ = Selamat!) Kamu telah menyelesaikan 3 chapter pertama Mandarin! Angka, tanggal, makanan, warna — semuanya sudah ada di genggamanmu. Ini bukan akhir, ini awal perjalanan luar biasa menuju Mandarin yang sesungguhnya!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Pencapaian 3 Chapter",
+        "body": "Ringkasan semua yang sudah dipelajari:",
+        "examples": [
+          { "en": "Chapter 1: Pinyin, 4 Nada, Sapaan, Sopan Santun", "id": "你好, 谢谢, 对不起, 4 nada ā á ǎ à" },
+          { "en": "Chapter 2: Kata Ganti, 是, Keluarga, Perkenalan", "id": "我你他, 是/不是, 爸妈哥姐, 我叫...我是...人" },
+          { "en": "Chapter 3: Angka, Hari/Tanggal, Makanan, Warna", "id": "一到十, 星期一～日, 米饭茶, 红蓝黄白黑" }
+        ],
+        "tip": "加油！(jiāyóu) = Semangat! Langkah selanjutnya: HSK 1 (level terendah ujian Mandarin resmi) — dengan fondasi ini, kamu sudah hampir siap!"
+      },
+      {
+        "type": "culture",
+        "heading": "Langkah Selanjutnya Belajar Mandarin",
+        "body": "Rekomendasi untuk melanjutkan belajar setelah menyelesaikan dasar ini:",
+        "examples": [
+          { "en": "HSK 1 (汉语水平考试)", "id": "Ujian Mandarin resmi level 1 — 150 kata, sangat terjangkau dan berguna untuk CV" },
+          { "en": "Hanzi (汉字)", "id": "Mulai hafal karakter dasar: 人(rén=orang), 大(dà=besar), 中(zhōng=tengah/China), 国(guó=negara)" },
+          { "en": "Pinyin typing", "id": "Install keyboard Mandarin di HP — latihan ketik dengan Pinyin akan memperkuat hafalan" },
+          { "en": "Drama/film China", "id": "Mulai dengan subtitle, lama-lama tangkap kata yang sudah dipelajari" }
+        ],
+        "tip": "目标明确，行动坚持！(mùbiāo míngquè, xíngdòng jiānchí!) = Tujuan jelas, tindakan konsisten! Ini kunci sukses belajar bahasa apapun."
+      }
+    ],
+    "practice": [
+      {
+        "id": "zhc3s5_p1", "type": "matching_word", "xpReward": 20,
+        "content": {
+          "instruction": "Grand Final Review — cocokkan semua!",
+          "pairs": [
+            { "word": "八 (bā)", "meaning": "8 (angka beruntung)" },
+            { "word": "星期五 (xīngqī wǔ)", "meaning": "Jumat" },
+            { "word": "米饭 (mǐfàn)", "meaning": "Nasi" },
+            { "word": "红 (hóng)", "meaning": "Merah" },
+            { "word": "谢谢 (xièxie)", "meaning": "Terima kasih" }
+          ],
+          "shuffledMeanings": ["Terima kasih", "Nasi", "Jumat", "Merah", "8 (angka beruntung)"],
+          "explanation": "恭喜！(Gōngxǐ = Selamat!) Kamu telah menyelesaikan dasar-dasar Mandarin!"
+        }
+      },
+      {
+        "id": "zhc3s5_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Kalimat perkenalan lengkap yang PALING baik adalah...",
+          "options": [
+            "你好！我叫Sari。我是印尼人。很高兴认识你！",
+            "谢谢！我叫Sari。再见！",
+            "不客气！我是学生。对不起！",
+            "大家好！米饭很好吃！"
+          ],
+          "correctAnswer": "你好！我叫Sari。我是印尼人。很高兴认识你！",
+          "explanation": "Perkenalan standar: sapaan (你好) + nama (我叫) + kebangsaan (我是...人) + penutup (很高兴认识你). Ini pola universal yang selalu bekerja!"
+        }
+      },
+      {
+        "id": "zhc3s5_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "三十五 (sānshíwǔ) = ___",
+          "options": ["25", "35", "53", "305"],
+          "correctAnswer": "35",
+          "explanation": "三(3) × 十(10) + 五(5) = 30 + 5 = 35. Sistem angka Mandarin: sangat matematis dan logis!"
+        }
+      },
+      {
+        "id": "zhc3s5_p4", "type": "listening_quiz", "xpReward": 15,
+        "content": {
+          "audioText": "你好！我叫小明，我是中国人。我喜欢吃米饭和饺子。",
+          "question": "Dari percakapan ini, mana pernyataan yang BENAR?",
+          "options": [
+            "Xiao Ming orang Indonesia yang suka mie",
+            "Xiao Ming orang China yang suka nasi dan pangsit",
+            "Xiao Ming orang China yang suka kopi",
+            "Nama orang ini bukan Xiao Ming"
+          ],
+          "correctAnswer": "Xiao Ming orang China yang suka nasi dan pangsit",
+          "explanation": "我叫小明=saya Xiao Ming, 我是中国人=saya orang China, 我喜欢=saya suka, 吃米饭和饺子=makan nasi dan pangsit (饺子=pangsit/dumpling)."
+        }
+      },
+      {
+        "id": "zhc3s5_p5", "type": "speaking_test", "xpReward": 20,
+        "content": {
+          "phrase": "nǐ hǎo wǒ jiào wǒ shì Yìnní rén hěn gāoxìng rènshi nǐ",
+          "hint": "Perkenalan lengkap: 你好！我叫___。我是印尼人。很高兴认识你！",
+          "translation": "Halo! Saya bernama ___. Saya orang Indonesia. Senang berkenalan denganmu!"
+        }
+      }
+    ]
+  }
+}

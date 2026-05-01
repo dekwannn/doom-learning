@@ -1,0 +1,2697 @@
+{
+  "c1s1": {
+    "title": "Basic Greetings",
+    "intro": "Greetings are the first thing you say when you meet someone. In English, the greeting you use depends on the time of day and how well you know the person.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Essential Greetings",
+        "body": "These are the most common English greetings. Use them when you first see or meet someone.",
+        "examples": [
+          {
+            "en": "Hello!",
+            "id": "Halo!"
+          },
+          {
+            "en": "Hi!",
+            "id": "Hai!"
+          },
+          {
+            "en": "Good morning!",
+            "id": "Selamat pagi! (used before noon)"
+          },
+          {
+            "en": "Good afternoon!",
+            "id": "Selamat siang! (noon–5 PM)"
+          },
+          {
+            "en": "Good evening!",
+            "id": "Selamat sore/malam! (after 5 PM)"
+          },
+          {
+            "en": "Goodbye!",
+            "id": "Selamat tinggal!"
+          },
+          {
+            "en": "Good night!",
+            "id": "Selamat malam! (when parting at night)"
+          }
+        ],
+        "tip": "\"Good night\" is only used when saying goodbye late at night, not as a greeting."
+      },
+      {
+        "type": "grammar",
+        "heading": "Time-based Greetings",
+        "body": "English greetings change depending on the time of day. Memorise this simple pattern:",
+        "examples": [
+          {
+            "en": "Morning (before 12 PM) → Good morning",
+            "id": "Pagi hari → Selamat pagi"
+          },
+          {
+            "en": "Afternoon (12–5 PM)   → Good afternoon",
+            "id": "Siang hari → Selamat siang"
+          },
+          {
+            "en": "Evening (after 5 PM)  → Good evening",
+            "id": "Malam hari → Selamat malam"
+          }
+        ],
+        "tip": "When in doubt, \"Hello\" or \"Hi\" works at ANY time of day."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "How to Pronounce",
+        "body": "Listen carefully to the stress in each greeting. The stressed syllable is shown in CAPS.",
+        "examples": [
+          {
+            "en": "hel-LO",
+            "id": "/həˈloʊ/"
+          },
+          {
+            "en": "good MOR-ning",
+            "id": "/ɡʊd ˈmɔːrnɪŋ/"
+          },
+          {
+            "en": "GOOD-bye",
+            "id": "/ˌɡʊdˈbaɪ/"
+          }
+        ],
+        "tip": "Smile when you say hello — it makes your English sound more natural and friendly!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c1s1_p1",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa artinya 'Good afternoon'?",
+          "options": [
+            "Selamat pagi",
+            "Selamat siang",
+            "Selamat malam",
+            "Sampai jumpa"
+          ],
+          "correctAnswer": "Selamat siang",
+          "explanation": "\"Good afternoon\" = Selamat siang, used between noon and 5 PM."
+        }
+      },
+      {
+        "id": "study_c1s1_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "Good morning!",
+          "hint": "Say: Good morning!",
+          "translation": "Selamat pagi!"
+        }
+      }
+    ]
+  },
+  "c1s2": {
+    "title": "Polite Expressions",
+    "intro": "Polite expressions are the foundation of good English manners. Using words like 'please', 'thank you', and 'sorry' will make you sound natural and respectful in any situation.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Key Polite Words",
+        "body": "These four expressions are used every day in English. Learn them well!",
+        "examples": [
+          {
+            "en": "Please",
+            "id": "Tolong / Mohon"
+          },
+          {
+            "en": "Thank you",
+            "id": "Terima kasih"
+          },
+          {
+            "en": "You're welcome",
+            "id": "Sama-sama"
+          },
+          {
+            "en": "Sorry / I'm sorry",
+            "id": "Maaf"
+          },
+          {
+            "en": "Excuse me",
+            "id": "Permisi"
+          }
+        ],
+        "tip": "Always say 'please' at the end of a request: \"Can you help me, please?\""
+      },
+      {
+        "type": "grammar",
+        "heading": "How to Use Them",
+        "body": "Here are common sentence patterns using polite expressions:",
+        "examples": [
+          {
+            "en": "Can you help me, please?",
+            "id": "Bisakah kamu membantuku, tolong?"
+          },
+          {
+            "en": "Thank you very much!",
+            "id": "Terima kasih banyak!"
+          },
+          {
+            "en": "You're welcome.",
+            "id": "Sama-sama."
+          },
+          {
+            "en": "I'm sorry I'm late.",
+            "id": "Maaf saya terlambat."
+          },
+          {
+            "en": "Excuse me, where is the bathroom?",
+            "id": "Permisi, di mana kamar mandinya?"
+          }
+        ],
+        "tip": "\"Excuse me\" is for getting someone's attention or getting past them. \"Sorry\" is for apologising."
+      },
+      {
+        "type": "conversation",
+        "heading": "Quick Dialogue",
+        "body": "See how polite expressions flow naturally in conversation:",
+        "examples": [
+          {
+            "en": "A: Excuse me, can you help me please?",
+            "id": "A: Permisi, bisakah kamu membantuku?"
+          },
+          {
+            "en": "B: Of course! What do you need?",
+            "id": "B: Tentu! Apa yang kamu butuhkan?"
+          },
+          {
+            "en": "A: Thank you so much!",
+            "id": "A: Terima kasih banyak!"
+          },
+          {
+            "en": "B: You're welcome!",
+            "id": "B: Sama-sama!"
+          }
+        ]
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c1s2_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "___ me, where is the bathroom?",
+          "options": [
+            "Sorry",
+            "Please",
+            "Excuse",
+            "Thank"
+          ],
+          "correctAnswer": "Excuse",
+          "explanation": "\"Excuse me\" is used to politely get someone's attention or to ask for help."
+        }
+      },
+      {
+        "id": "study_c1s2_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "Thank you very much!",
+          "hint": "Say: Thank you very much!",
+          "translation": "Terima kasih banyak!"
+        }
+      }
+    ]
+  },
+  "c1s3": {
+    "title": "Introducing Yourself",
+    "intro": "The first thing you tell a new person is your name. English has simple, friendly phrases for introducing yourself. Mastering these will help you start any conversation confidently.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Introduction Phrases",
+        "body": "Use these phrases when you meet someone for the first time:",
+        "examples": [
+          {
+            "en": "My name is …",
+            "id": "Nama saya adalah …"
+          },
+          {
+            "en": "I am …",
+            "id": "Saya adalah …"
+          },
+          {
+            "en": "Nice to meet you!",
+            "id": "Senang bertemu denganmu!"
+          },
+          {
+            "en": "What is your name?",
+            "id": "Siapa namamu?"
+          },
+          {
+            "en": "Where are you from?",
+            "id": "Kamu dari mana?"
+          }
+        ],
+        "tip": "\"Nice to meet you\" is the polite response when someone introduces themselves to you."
+      },
+      {
+        "type": "grammar",
+        "heading": "Name Introduction Pattern",
+        "body": "There are two common ways to introduce your name in English:",
+        "examples": [
+          {
+            "en": "My name is Budi.",
+            "id": "Nama saya Budi."
+          },
+          {
+            "en": "I am Sari.",
+            "id": "Saya Sari."
+          },
+          {
+            "en": "Hi! I'm Dian. Nice to meet you!",
+            "id": "Hai! Saya Dian. Senang bertemu denganmu!"
+          }
+        ],
+        "tip": "\"I'm\" is the contracted form of \"I am\" — used in casual speech."
+      },
+      {
+        "type": "conversation",
+        "heading": "First Meeting Dialogue",
+        "body": "A natural introduction sounds like this:",
+        "examples": [
+          {
+            "en": "A: Hi! My name is Sari.",
+            "id": "A: Hai! Nama saya Sari."
+          },
+          {
+            "en": "B: Hello Sari! I am Budi.",
+            "id": "B: Halo Sari! Saya Budi."
+          },
+          {
+            "en": "A: Nice to meet you, Budi!",
+            "id": "A: Senang bertemu denganmu, Budi!"
+          },
+          {
+            "en": "B: Nice to meet you too!",
+            "id": "B: Senang bertemu denganmu juga!"
+          }
+        ]
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c1s3_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "___ name is Sari. I am from Bali.",
+          "options": [
+            "Your",
+            "His",
+            "My",
+            "Her"
+          ],
+          "correctAnswer": "My",
+          "explanation": "\"My\" menunjukkan kepemilikan — \"My name is\" = nama saya adalah."
+        }
+      },
+      {
+        "id": "study_c1s3_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "Nice to meet you!",
+          "hint": "Say: Nice to meet you!",
+          "translation": "Senang bertemu denganmu!"
+        }
+      }
+    ]
+  },
+  "c1s4": {
+    "title": "Basic Pronouns",
+    "intro": "Pronouns replace nouns so we don't have to repeat names. English has clear, simple pronouns for every person. Knowing them is essential for building any sentence.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Subject Pronouns",
+        "body": "Subject pronouns tell us WHO does the action in a sentence.",
+        "examples": [
+          {
+            "en": "I",
+            "id": "Saya / Aku"
+          },
+          {
+            "en": "You",
+            "id": "Kamu / Anda"
+          },
+          {
+            "en": "He",
+            "id": "Dia (laki-laki)"
+          },
+          {
+            "en": "She",
+            "id": "Dia (perempuan)"
+          },
+          {
+            "en": "It",
+            "id": "Itu / Dia (benda/hewan)"
+          },
+          {
+            "en": "We",
+            "id": "Kami / Kita"
+          },
+          {
+            "en": "They",
+            "id": "Mereka"
+          }
+        ],
+        "tip": "\"It\" is for animals and things. \"He\" and \"She\" are only for people."
+      },
+      {
+        "type": "grammar",
+        "heading": "Pronouns in Sentences",
+        "body": "Replace the noun with the correct pronoun:",
+        "examples": [
+          {
+            "en": "Budi is a student → He is a student.",
+            "id": "Budi adalah pelajar → Dia adalah pelajar."
+          },
+          {
+            "en": "Sari is my friend → She is my friend.",
+            "id": "Sari adalah temanku → Dia adalah temanku."
+          },
+          {
+            "en": "Budi and I study → We study.",
+            "id": "Budi dan saya belajar → Kami belajar."
+          },
+          {
+            "en": "Budi and Sari → They",
+            "id": "Budi dan Sari → Mereka"
+          }
+        ],
+        "tip": "Use \"They\" for a group of people, regardless of gender."
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c1s4_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "___ is my teacher. His name is Mr. Budi.",
+          "options": [
+            "I",
+            "She",
+            "He",
+            "They"
+          ],
+          "correctAnswer": "He",
+          "explanation": "\"His name\" shows the teacher is male, so we use \"He\"."
+        }
+      },
+      {
+        "id": "study_c1s4_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "I am a student.",
+          "hint": "Say: I am a student.",
+          "translation": "Saya adalah seorang pelajar."
+        }
+      }
+    ]
+  },
+  "c1s5": {
+    "title": "Simple Sentences with Am / Is",
+    "intro": "The verb 'to be' (am, is, are) is the most important verb in English. It connects a subject to a description. Let's master 'am' and 'is' first.",
+    "sections": [
+      {
+        "type": "grammar",
+        "heading": "When to Use Am vs Is",
+        "body": "The verb 'to be' changes depending on the subject. Study this pattern carefully:",
+        "examples": [
+          {
+            "en": "I am …",
+            "id": "Saya adalah …"
+          },
+          {
+            "en": "He is …",
+            "id": "Dia (laki-laki) adalah …"
+          },
+          {
+            "en": "She is …",
+            "id": "Dia (perempuan) adalah …"
+          },
+          {
+            "en": "It is …",
+            "id": "Itu adalah …"
+          }
+        ],
+        "tip": "ONLY use 'am' with 'I'. Use 'is' with he, she, and it."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Simple Descriptions",
+        "body": "Use am / is + adjective to describe yourself or someone else:",
+        "examples": [
+          {
+            "en": "I am happy.",
+            "id": "Saya bahagia."
+          },
+          {
+            "en": "I am tired.",
+            "id": "Saya lelah."
+          },
+          {
+            "en": "She is my friend.",
+            "id": "Dia adalah temanku."
+          },
+          {
+            "en": "He is a teacher.",
+            "id": "Dia adalah seorang guru."
+          },
+          {
+            "en": "It is a book.",
+            "id": "Itu adalah sebuah buku."
+          }
+        ],
+        "tip": "The structure is: Subject + am/is + [adjective or noun]."
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c1s5_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "I ___ a student.",
+          "options": [
+            "are",
+            "is",
+            "am",
+            "be"
+          ],
+          "correctAnswer": "am",
+          "explanation": "\"Am\" is only used with \"I\". Never say \"I is\" or \"I are\"."
+        }
+      },
+      {
+        "id": "study_c1s5_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "I am happy.",
+          "hint": "Say: I am happy.",
+          "translation": "Saya bahagia."
+        }
+      }
+    ]
+  },
+  "c1s6": {
+    "title": "Chapter 1 Review — Putting It Together",
+    "intro": "You've learned greetings, polite words, introductions, pronouns, and am/is. Now let's see how they work together in real conversation.",
+    "sections": [
+      {
+        "type": "conversation",
+        "heading": "Full Introduction Dialogue",
+        "body": "Read this conversation and notice how everything from Chapter 1 comes together:",
+        "examples": [
+          {
+            "en": "A: Good morning! My name is Rina.",
+            "id": "A: Selamat pagi! Nama saya Rina."
+          },
+          {
+            "en": "B: Hello Rina! I am Budi. Nice to meet you!",
+            "id": "B: Halo Rina! Saya Budi. Senang bertemu denganmu!"
+          },
+          {
+            "en": "A: Nice to meet you too, Budi!",
+            "id": "A: Senang bertemu denganmu juga, Budi!"
+          },
+          {
+            "en": "B: I am a student. Are you a student too?",
+            "id": "B: Saya adalah pelajar. Apakah kamu juga pelajar?"
+          },
+          {
+            "en": "A: Yes, I am! Goodbye, Budi!",
+            "id": "A: Ya, saya! Sampai jumpa, Budi!"
+          },
+          {
+            "en": "B: Goodbye, Rina!",
+            "id": "B: Sampai jumpa, Rina!"
+          }
+        ]
+      },
+      {
+        "type": "grammar",
+        "heading": "Chapter 1 Quick Review",
+        "body": "Key patterns from this chapter:",
+        "examples": [
+          {
+            "en": "Greeting: Good morning / Hello / Hi",
+            "id": "Sapaan: Selamat pagi / Halo / Hai"
+          },
+          {
+            "en": "Polite: Please / Thank you / Sorry / Excuse me",
+            "id": "Sopan: Tolong / Terima kasih / Maaf / Permisi"
+          },
+          {
+            "en": "Introduce: My name is … / Nice to meet you",
+            "id": "Perkenalan: Nama saya … / Senang bertemu"
+          },
+          {
+            "en": "Pronouns: I / You / He / She / We / They",
+            "id": "Kata ganti: Saya / Kamu / Dia / Kami / Mereka"
+          },
+          {
+            "en": "To be: I am … / He is … / She is …",
+            "id": "Kata kerja: Saya adalah … / Dia adalah …"
+          }
+        ],
+        "tip": "Practice saying a full introduction out loud every day — it will become natural very quickly!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c1s6_p1",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Lengkapi: 'Thank you!' — '___!'",
+          "options": [
+            "Sorry",
+            "Please",
+            "You're welcome",
+            "Excuse me"
+          ],
+          "correctAnswer": "You're welcome",
+          "explanation": "The correct response to 'Thank you' is 'You're welcome' (Sama-sama)."
+        }
+      },
+      {
+        "id": "study_c1s6_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "My name is Rina. Nice to meet you!",
+          "hint": "Say: My name is [your name]. Nice to meet you!",
+          "translation": "Nama saya Rina. Senang bertemu denganmu!"
+        }
+      }
+    ]
+  },
+  "c2s1": {
+    "title": "Objects Around Us",
+    "intro": "Knowing the names of everyday objects is one of the fastest ways to grow your vocabulary. In this stage, we focus on things you see at school and home every day.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Classroom & Home Objects",
+        "body": "These are common objects you'll find at school and at home:",
+        "examples": [
+          {
+            "en": "Book — Buku",
+            "id": "I use a book to study."
+          },
+          {
+            "en": "Table — Meja",
+            "id": "The book is on the table."
+          },
+          {
+            "en": "Chair — Kursi",
+            "id": "I sit on a chair."
+          },
+          {
+            "en": "Pen — Pena",
+            "id": "I use a pen to write."
+          },
+          {
+            "en": "Bag — Tas",
+            "id": "I carry my books in my bag."
+          },
+          {
+            "en": "Phone — Telepon / HP",
+            "id": "She puts her phone in her bag."
+          },
+          {
+            "en": "Window — Jendela",
+            "id": "The window is open."
+          },
+          {
+            "en": "Door — Pintu",
+            "id": "Please close the door."
+          }
+        ],
+        "tip": "When learning object names, point to the real object and say the English word out loud."
+      },
+      {
+        "type": "grammar",
+        "heading": "Using 'The' and 'A'",
+        "body": "English uses articles before nouns. 'A' = one unspecified thing. 'The' = a specific thing.",
+        "examples": [
+          {
+            "en": "I have a book. (any book)",
+            "id": "Saya punya sebuah buku."
+          },
+          {
+            "en": "The book is on the table. (specific book)",
+            "id": "Buku itu ada di atas meja."
+          },
+          {
+            "en": "She has a bag. → The bag is blue.",
+            "id": "Dia punya tas. → Tas itu biru."
+          }
+        ],
+        "tip": "Use 'a' the first time you mention something. Use 'the' after that, when it's clear which one you mean."
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c2s1_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "I use a ___ to write.",
+          "options": [
+            "book",
+            "chair",
+            "pen",
+            "bag"
+          ],
+          "correctAnswer": "pen",
+          "explanation": "A pen is used for writing. A book is for reading, a chair is for sitting."
+        }
+      },
+      {
+        "id": "study_c2s1_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "The book is on the table.",
+          "hint": "Say: The book is on the table.",
+          "translation": "Buku itu ada di atas meja."
+        }
+      }
+    ]
+  },
+  "c2s2": {
+    "title": "Food & Drink",
+    "intro": "Food and drink vocabulary is incredibly useful for daily conversation — whether you're at a restaurant, a canteen, or just talking about your day.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Common Food & Drink Words",
+        "body": "Memorise these essential food and drink words:",
+        "examples": [
+          {
+            "en": "Rice — Nasi",
+            "id": "I eat rice every day."
+          },
+          {
+            "en": "Bread — Roti",
+            "id": "I have bread for breakfast."
+          },
+          {
+            "en": "Water — Air",
+            "id": "Can I have a glass of water?"
+          },
+          {
+            "en": "Milk — Susu",
+            "id": "I drink milk every morning."
+          },
+          {
+            "en": "Coffee — Kopi",
+            "id": "I like coffee in the morning."
+          },
+          {
+            "en": "Apple — Apel",
+            "id": "She eats an apple after school."
+          },
+          {
+            "en": "Egg — Telur",
+            "id": "I eat an egg for breakfast."
+          }
+        ],
+        "tip": "Practice ordering food by saying: \"Can I have [food], please?\""
+      },
+      {
+        "type": "grammar",
+        "heading": "Talking About Meals",
+        "body": "Use these patterns to talk about what you eat and drink:",
+        "examples": [
+          {
+            "en": "I eat rice for lunch.",
+            "id": "Saya makan nasi untuk makan siang."
+          },
+          {
+            "en": "I drink water every day.",
+            "id": "Saya minum air setiap hari."
+          },
+          {
+            "en": "I like bread and milk.",
+            "id": "Saya suka roti dan susu."
+          },
+          {
+            "en": "Can I have a glass of water?",
+            "id": "Boleh saya minta segelas air?"
+          }
+        ],
+        "tip": "\"Eat\" is for solid food. \"Drink\" is for liquids. Don't mix them up!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c2s2_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "I drink ___ every morning for breakfast.",
+          "options": [
+            "rice",
+            "milk",
+            "bread",
+            "apple"
+          ],
+          "correctAnswer": "milk",
+          "explanation": "\"Drink\" is used with liquids. Milk (susu) is a common breakfast drink."
+        }
+      },
+      {
+        "id": "study_c2s2_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "I eat rice every day.",
+          "hint": "Say: I eat rice every day.",
+          "translation": "Saya makan nasi setiap hari."
+        }
+      }
+    ]
+  },
+  "c2s3": {
+    "title": "Colors",
+    "intro": "Colors are some of the most useful adjectives in English. They let you describe objects, clothing, and your surroundings. Colors come BEFORE the noun they describe.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Basic Colors",
+        "body": "Learn all the basic English colors and their Indonesian equivalents:",
+        "examples": [
+          {
+            "en": "Red — Merah",
+            "id": "The apple is red."
+          },
+          {
+            "en": "Blue — Biru",
+            "id": "The sky is blue."
+          },
+          {
+            "en": "Green — Hijau",
+            "id": "The grass is green."
+          },
+          {
+            "en": "Yellow — Kuning",
+            "id": "The sun is yellow."
+          },
+          {
+            "en": "White — Putih",
+            "id": "She has a white bag."
+          },
+          {
+            "en": "Black — Hitam",
+            "id": "He has black shoes."
+          },
+          {
+            "en": "Orange — Oranye",
+            "id": "I like orange juice."
+          },
+          {
+            "en": "Purple — Ungu",
+            "id": "She likes purple flowers."
+          }
+        ],
+        "tip": "The Indonesian flag is red (merah) and white (putih) — Merah Putih!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Color + Noun Pattern",
+        "body": "In English, the color always comes BEFORE the noun (opposite to Indonesian):",
+        "examples": [
+          {
+            "en": "a red bag (bukan 'a bag red')",
+            "id": "tas merah → a red bag"
+          },
+          {
+            "en": "a blue pen",
+            "id": "pena biru → a blue pen"
+          },
+          {
+            "en": "the green grass",
+            "id": "rumput hijau → the green grass"
+          },
+          {
+            "en": "my yellow pencil",
+            "id": "pensil kuning saya → my yellow pencil"
+          }
+        ],
+        "tip": "Remember: English word order for adjectives is reversed compared to Indonesian!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c2s3_p1",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa bahasa Inggrisnya 'Hitam'?",
+          "options": [
+            "Blue",
+            "White",
+            "Black",
+            "Green"
+          ],
+          "correctAnswer": "Black",
+          "explanation": "Black = Hitam. White = Putih. Blue = Biru. Green = Hijau."
+        }
+      },
+      {
+        "id": "study_c2s3_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "I have a red bag.",
+          "hint": "Say: I have a red bag.",
+          "translation": "Saya punya tas merah."
+        }
+      }
+    ]
+  },
+  "c2s4": {
+    "title": "Numbers 1–10",
+    "intro": "Numbers are essential for everyday communication — telling the time, shopping, and giving your age. Let's master the numbers from one to ten.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Numbers 1–10",
+        "body": "Memorise these numbers and how to pronounce them:",
+        "examples": [
+          {
+            "en": "One — Satu",
+            "id": "I have one book."
+          },
+          {
+            "en": "Two — Dua",
+            "id": "She has two sisters."
+          },
+          {
+            "en": "Three — Tiga",
+            "id": "I have three cats."
+          },
+          {
+            "en": "Four — Empat",
+            "id": "There are four chairs."
+          },
+          {
+            "en": "Five — Lima",
+            "id": "I have five fingers."
+          },
+          {
+            "en": "Six — Enam",
+            "id": "I wake up at six."
+          },
+          {
+            "en": "Seven — Tujuh",
+            "id": "There are seven days in a week."
+          },
+          {
+            "en": "Eight — Delapan",
+            "id": "I eat breakfast at eight."
+          },
+          {
+            "en": "Nine — Sembilan",
+            "id": "There are nine students."
+          },
+          {
+            "en": "Ten — Sepuluh",
+            "id": "I have ten fingers."
+          }
+        ],
+        "tip": "To say your age: I am [number] years old. — \"I am fifteen years old.\""
+      },
+      {
+        "type": "grammar",
+        "heading": "Numbers in Sentences",
+        "body": "Use numbers directly before the noun they count:",
+        "examples": [
+          {
+            "en": "I have two brothers.",
+            "id": "Saya punya dua saudara laki-laki."
+          },
+          {
+            "en": "There are five students.",
+            "id": "Ada lima pelajar."
+          },
+          {
+            "en": "She has one sister.",
+            "id": "Dia punya satu saudara perempuan."
+          }
+        ],
+        "tip": "After a number, the noun is usually plural (add -s): one cat → two cats."
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c2s4_p1",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa bahasa Inggrisnya angka 4?",
+          "options": [
+            "Three",
+            "Four",
+            "Five",
+            "Six"
+          ],
+          "correctAnswer": "Four",
+          "explanation": "Four = 4 (Empat). Three = 3, Five = 5, Six = 6."
+        }
+      },
+      {
+        "id": "study_c2s4_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "I have three cats.",
+          "hint": "Say: I have three cats.",
+          "translation": "Saya punya tiga kucing."
+        }
+      }
+    ]
+  },
+  "c2s5": {
+    "title": "This is / That is",
+    "intro": "\"This\" and \"That\" are demonstrative pronouns — they point to things. \"This\" points to something NEAR you, \"That\" points to something FAR away.",
+    "sections": [
+      {
+        "type": "grammar",
+        "heading": "This vs That",
+        "body": "The difference is simple — it's all about distance:",
+        "examples": [
+          {
+            "en": "This is my phone. (near me)",
+            "id": "Ini adalah HP saya. (dekat)"
+          },
+          {
+            "en": "That is a big mountain. (far away)",
+            "id": "Itu adalah gunung besar. (jauh)"
+          },
+          {
+            "en": "This is my friend Budi.",
+            "id": "Ini adalah temanku Budi."
+          },
+          {
+            "en": "What is that? (pointing far)",
+            "id": "Apa itu? (menunjuk ke kejauhan)"
+          }
+        ],
+        "tip": "Simple rule: THIS = near (ini), THAT = far (itu)."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Describing with This/That",
+        "body": "Combine 'this/that' with a color and noun for fuller descriptions:",
+        "examples": [
+          {
+            "en": "This is a red apple.",
+            "id": "Ini adalah apel merah."
+          },
+          {
+            "en": "That is a blue car.",
+            "id": "Itu adalah mobil biru."
+          },
+          {
+            "en": "This is my green bag.",
+            "id": "Ini adalah tas hijau saya."
+          },
+          {
+            "en": "That is a big white house.",
+            "id": "Itu adalah rumah putih besar."
+          }
+        ],
+        "tip": "Pattern: This/That + is + a/an + [color] + [noun]"
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c2s5_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "___ is a big mountain far away.",
+          "options": [
+            "This",
+            "That",
+            "It",
+            "Here"
+          ],
+          "correctAnswer": "That",
+          "explanation": "\"That\" points to something far away. \"This\" is for things nearby."
+        }
+      },
+      {
+        "id": "study_c2s5_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "This is a red apple.",
+          "hint": "Say: This is a red apple.",
+          "translation": "Ini adalah apel merah."
+        }
+      }
+    ]
+  },
+  "c2s6": {
+    "title": "Chapter 2 Review — Objects, Colors & Numbers",
+    "intro": "Time to review everything from Chapter 2! You've learned objects, food, colors, numbers, and how to use 'this/that'. Let's combine them into rich descriptions.",
+    "sections": [
+      {
+        "type": "grammar",
+        "heading": "Building Rich Descriptions",
+        "body": "Combine numbers, colors, and objects to make detailed sentences:",
+        "examples": [
+          {
+            "en": "This is a green bag.",
+            "id": "Ini adalah tas hijau."
+          },
+          {
+            "en": "I have two black phones.",
+            "id": "Saya punya dua HP hitam."
+          },
+          {
+            "en": "There are six red chairs.",
+            "id": "Ada enam kursi merah."
+          },
+          {
+            "en": "She has three blue pens.",
+            "id": "Dia punya tiga pena biru."
+          }
+        ],
+        "tip": "Pattern: number + color + noun (e.g. three blue pens)"
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Chapter 2 Word List",
+        "body": "Key vocabulary from this chapter:",
+        "examples": [
+          {
+            "en": "Objects: book, chair, table, pen, bag, phone",
+            "id": "Buku, kursi, meja, pena, tas, HP"
+          },
+          {
+            "en": "Food: rice, bread, water, milk, coffee, apple",
+            "id": "Nasi, roti, air, susu, kopi, apel"
+          },
+          {
+            "en": "Colors: red, blue, green, yellow, white, black",
+            "id": "Merah, biru, hijau, kuning, putih, hitam"
+          },
+          {
+            "en": "Numbers: one, two, three, four, five … ten",
+            "id": "Satu, dua, tiga, empat, lima … sepuluh"
+          },
+          {
+            "en": "Pointers: This is … / That is …",
+            "id": "Ini adalah … / Itu adalah …"
+          }
+        ]
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c2s6_p1",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Terjemahkan: 'Ini adalah apel merah.'",
+          "options": [
+            "That is a red apple.",
+            "This is a red apple.",
+            "This is a green apple.",
+            "That is a green apple."
+          ],
+          "correctAnswer": "This is a red apple.",
+          "explanation": "\"Ini\" = This (nearby), \"apel merah\" = red apple. Correct: This is a red apple."
+        }
+      },
+      {
+        "id": "study_c2s6_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "This is a green bag.",
+          "hint": "Say: This is a green bag.",
+          "translation": "Ini adalah tas hijau."
+        }
+      }
+    ]
+  },
+  "c3s1": {
+    "title": "Common Action Verbs",
+    "intro": "Verbs are the heart of every sentence — they express actions. Knowing the most common English action verbs lets you describe almost anything you do in a day.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Top Action Verbs",
+        "body": "These are the most frequently used action verbs in everyday English:",
+        "examples": [
+          {
+            "en": "Eat — Makan",
+            "id": "I eat rice for lunch."
+          },
+          {
+            "en": "Drink — Minum",
+            "id": "She drinks milk every morning."
+          },
+          {
+            "en": "Go — Pergi",
+            "id": "I go to school every day."
+          },
+          {
+            "en": "See / Watch — Melihat / Menonton",
+            "id": "He watches a movie on Saturday."
+          },
+          {
+            "en": "Like — Menyukai",
+            "id": "I like English."
+          },
+          {
+            "en": "Study — Belajar",
+            "id": "We study at school."
+          },
+          {
+            "en": "Sleep — Tidur",
+            "id": "I sleep at 10 PM."
+          },
+          {
+            "en": "Make — Membuat",
+            "id": "She makes breakfast."
+          }
+        ],
+        "tip": "For he/she/it, add -s to the verb: I eat → He eats. I go → She goes."
+      },
+      {
+        "type": "grammar",
+        "heading": "Subject + Verb Sentences",
+        "body": "Use subject + verb to build simple action sentences:",
+        "examples": [
+          {
+            "en": "I go to school every day.",
+            "id": "Saya pergi ke sekolah setiap hari."
+          },
+          {
+            "en": "She sees a movie every Saturday.",
+            "id": "Dia menonton film setiap Sabtu."
+          },
+          {
+            "en": "We study English at school.",
+            "id": "Kami belajar bahasa Inggris di sekolah."
+          },
+          {
+            "en": "He sleeps at 10 PM.",
+            "id": "Dia tidur pukul 10 malam."
+          }
+        ],
+        "tip": "\"Every day\" means habitual action. Put it at the end of the sentence."
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c3s1_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "I ___ to school by bus every morning.",
+          "options": [
+            "eat",
+            "see",
+            "go",
+            "make"
+          ],
+          "correctAnswer": "go",
+          "explanation": "\"Go to school\" is the correct phrase. \"Eat to school\" doesn't make sense."
+        }
+      },
+      {
+        "id": "study_c3s1_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "I go to school every day.",
+          "hint": "Say: I go to school every day.",
+          "translation": "Saya pergi ke sekolah setiap hari."
+        }
+      }
+    ]
+  },
+  "c3s2": {
+    "title": "Daily Activities & Routines",
+    "intro": "Talking about your daily routine is one of the most common topics in English conversation. Let's learn how to describe what you do from morning to night.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Morning Routine Verbs",
+        "body": "These verbs describe what most people do in the morning:",
+        "examples": [
+          {
+            "en": "Wake up — Bangun tidur",
+            "id": "I wake up at 5 AM."
+          },
+          {
+            "en": "Eat breakfast — Sarapan",
+            "id": "I eat breakfast at 6."
+          },
+          {
+            "en": "Go to school — Pergi ke sekolah",
+            "id": "I go to school at 7."
+          },
+          {
+            "en": "Study — Belajar",
+            "id": "I study in the morning."
+          },
+          {
+            "en": "Go home — Pulang ke rumah",
+            "id": "I go home after school."
+          },
+          {
+            "en": "Sleep — Tidur",
+            "id": "I sleep at 10 PM."
+          }
+        ],
+        "tip": "Use \"at\" before clock times: wake up AT six, sleep AT ten."
+      },
+      {
+        "type": "grammar",
+        "heading": "Routine Sentence Pattern",
+        "body": "To describe a routine, use: subject + verb + time/frequency:",
+        "examples": [
+          {
+            "en": "I wake up at five every morning.",
+            "id": "Saya bangun jam lima setiap pagi."
+          },
+          {
+            "en": "She eats breakfast at seven.",
+            "id": "Dia sarapan jam tujuh."
+          },
+          {
+            "en": "He goes to school at half past eight.",
+            "id": "Dia pergi ke sekolah jam delapan setengah."
+          },
+          {
+            "en": "After school, I study.",
+            "id": "Setelah sekolah, saya belajar."
+          }
+        ],
+        "tip": "\"After school\" and \"before school\" are very useful phrases for describing your day."
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c3s2_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "I ___ at 10 PM and wake up at 5 AM.",
+          "options": [
+            "eat",
+            "go",
+            "sleep",
+            "study"
+          ],
+          "correctAnswer": "sleep",
+          "explanation": "\"Sleep at 10 PM\" means you go to bed at 10. \"Wake up at 5 AM\" is the opposite."
+        }
+      },
+      {
+        "id": "study_c3s2_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "I wake up at six.",
+          "hint": "Say: I wake up at six.",
+          "translation": "Saya bangun jam enam."
+        }
+      }
+    ]
+  },
+  "c3s3": {
+    "title": "Time Expressions",
+    "intro": "To talk about WHEN things happen, you need time expressions. These small words and phrases — morning, afternoon, today, tomorrow — anchor your sentences in time.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Time of Day",
+        "body": "These words describe different parts of the day:",
+        "examples": [
+          {
+            "en": "Morning — Pagi",
+            "id": "Good morning! I exercise every morning."
+          },
+          {
+            "en": "Afternoon — Siang",
+            "id": "I eat lunch in the afternoon."
+          },
+          {
+            "en": "Evening — Sore / Petang",
+            "id": "Good evening! We study in the evening."
+          },
+          {
+            "en": "Night — Malam",
+            "id": "I sleep at night."
+          }
+        ],
+        "tip": "Use \"in the\" before morning/afternoon/evening: IN the morning, IN the afternoon."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Day Words",
+        "body": "These words tell you WHEN something happens relative to today:",
+        "examples": [
+          {
+            "en": "Today — Hari ini",
+            "id": "Today is Monday."
+          },
+          {
+            "en": "Tomorrow — Besok",
+            "id": "See you tomorrow!"
+          },
+          {
+            "en": "Yesterday — Kemarin",
+            "id": "I was sick yesterday."
+          },
+          {
+            "en": "Now — Sekarang",
+            "id": "I am studying now."
+          }
+        ],
+        "tip": "\"See you tomorrow!\" = Sampai jumpa besok! — a very common farewell."
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c3s3_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "I have a test ___. I need to study tonight.",
+          "options": [
+            "yesterday",
+            "now",
+            "tomorrow",
+            "morning"
+          ],
+          "correctAnswer": "tomorrow",
+          "explanation": "\"Tomorrow\" = besok. If you need to study tonight, the test is tomorrow."
+        }
+      },
+      {
+        "id": "study_c3s3_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "See you tomorrow!",
+          "hint": "Say: See you tomorrow!",
+          "translation": "Sampai jumpa besok!"
+        }
+      }
+    ]
+  },
+  "c3s4": {
+    "title": "Talking About Your Routine",
+    "intro": "Now we combine verbs, time expressions, and clock times to describe a full daily routine. This is one of the most common conversation topics in English.",
+    "sections": [
+      {
+        "type": "grammar",
+        "heading": "Clock Time Patterns",
+        "body": "Here's how to say what you do at specific times:",
+        "examples": [
+          {
+            "en": "I wake up at seven.",
+            "id": "Saya bangun jam tujuh."
+          },
+          {
+            "en": "I eat breakfast at eight.",
+            "id": "Saya sarapan jam delapan."
+          },
+          {
+            "en": "I study in the evening.",
+            "id": "Saya belajar di malam hari."
+          },
+          {
+            "en": "I sleep at ten.",
+            "id": "Saya tidur jam sepuluh."
+          }
+        ],
+        "tip": "Use AT + clock time. Use IN THE + morning / afternoon / evening."
+      },
+      {
+        "type": "conversation",
+        "heading": "Sharing Your Routine",
+        "body": "Here's how a routine conversation sounds:",
+        "examples": [
+          {
+            "en": "A: When do you wake up?",
+            "id": "A: Jam berapa kamu bangun?"
+          },
+          {
+            "en": "B: I wake up at six every morning.",
+            "id": "B: Saya bangun jam enam setiap pagi."
+          },
+          {
+            "en": "A: What do you do after school?",
+            "id": "A: Apa yang kamu lakukan setelah sekolah?"
+          },
+          {
+            "en": "B: I go home and study.",
+            "id": "B: Saya pulang dan belajar."
+          },
+          {
+            "en": "A: What time do you sleep?",
+            "id": "A: Jam berapa kamu tidur?"
+          },
+          {
+            "en": "B: I sleep at ten at night.",
+            "id": "B: Saya tidur jam sepuluh malam."
+          }
+        ]
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c3s4_p1",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Terjemahkan: 'Saya makan malam pukul 7.'",
+          "options": [
+            "I eat lunch at seven.",
+            "I eat dinner at seven.",
+            "I eat breakfast at seven.",
+            "I wake up at seven."
+          ],
+          "correctAnswer": "I eat dinner at seven.",
+          "explanation": "Makan malam = dinner. Pukul 7 = at seven. So: I eat dinner at seven."
+        }
+      },
+      {
+        "id": "study_c3s4_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "I eat breakfast at eight.",
+          "hint": "Say: I eat breakfast at eight.",
+          "translation": "Saya sarapan jam delapan."
+        }
+      }
+    ]
+  },
+  "c3s5": {
+    "title": "Asking Simple Questions",
+    "intro": "Question words (who, what, where, when) are the key to asking about anything. With just these four words, you can start almost any conversation in English.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "The 4 Core Question Words",
+        "body": "Memorise these four and you can ask about almost anything:",
+        "examples": [
+          {
+            "en": "What — Apa / Apakah",
+            "id": "What is this? / What do you eat?"
+          },
+          {
+            "en": "Where — Di mana",
+            "id": "Where do you live? / Where is the school?"
+          },
+          {
+            "en": "When — Kapan",
+            "id": "When do you sleep? / When is the test?"
+          },
+          {
+            "en": "Who — Siapa",
+            "id": "Who is your teacher? / Who is that?"
+          }
+        ],
+        "tip": "Question word + do/does + subject + verb: What do you eat for breakfast?"
+      },
+      {
+        "type": "grammar",
+        "heading": "Question Structure",
+        "body": "Basic pattern: Question word + do/does + subject + verb",
+        "examples": [
+          {
+            "en": "What do you eat for breakfast?",
+            "id": "Apa yang kamu makan untuk sarapan?"
+          },
+          {
+            "en": "Where do you go after school?",
+            "id": "Ke mana kamu pergi setelah sekolah?"
+          },
+          {
+            "en": "When do you wake up?",
+            "id": "Kapan kamu bangun?"
+          },
+          {
+            "en": "Who is your best friend?",
+            "id": "Siapa teman terbaikmu?"
+          }
+        ],
+        "tip": "\"Do\" is used with I/you/we/they. \"Does\" is used with he/she/it."
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c3s5_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "___ is your favorite subject at school?",
+          "options": [
+            "Where",
+            "Who",
+            "When",
+            "What"
+          ],
+          "correctAnswer": "What",
+          "explanation": "\"What\" asks about things. \"What is your favorite subject?\" = Apa mata pelajaran favoritmu?"
+        }
+      },
+      {
+        "id": "study_c3s5_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "What do you eat for breakfast?",
+          "hint": "Say: What do you eat for breakfast?",
+          "translation": "Apa yang kamu makan untuk sarapan?"
+        }
+      }
+    ]
+  },
+  "c3s6": {
+    "title": "Chapter 3 Review — Daily Activities",
+    "intro": "You've covered verbs, daily routines, time expressions, and question words. Now combine them to describe your full day and ask questions about others' routines.",
+    "sections": [
+      {
+        "type": "conversation",
+        "heading": "Full Routine Conversation",
+        "body": "Read this dialogue using everything from Chapter 3:",
+        "examples": [
+          {
+            "en": "A: When do you wake up every day?",
+            "id": "A: Jam berapa kamu bangun setiap hari?"
+          },
+          {
+            "en": "B: I wake up at six. Then I eat breakfast.",
+            "id": "B: Saya bangun jam enam. Lalu saya sarapan."
+          },
+          {
+            "en": "A: What do you do after school?",
+            "id": "A: Apa yang kamu lakukan setelah sekolah?"
+          },
+          {
+            "en": "B: I go home and study every night.",
+            "id": "B: Saya pulang dan belajar setiap malam."
+          },
+          {
+            "en": "A: What time do you sleep?",
+            "id": "A: Jam berapa kamu tidur?"
+          },
+          {
+            "en": "B: I sleep at ten. See you tomorrow!",
+            "id": "B: Saya tidur jam sepuluh. Sampai jumpa besok!"
+          }
+        ]
+      },
+      {
+        "type": "grammar",
+        "heading": "Chapter 3 Patterns Summary",
+        "body": "Key grammar from this chapter:",
+        "examples": [
+          {
+            "en": "Routine: I [verb] at [time].",
+            "id": "Rutin: Saya [kata kerja] jam [waktu]."
+          },
+          {
+            "en": "Frequency: I [verb] every day/morning/night.",
+            "id": "Frekuensi: Saya [kata kerja] setiap hari/pagi/malam."
+          },
+          {
+            "en": "Question: When/What/Where do you [verb]?",
+            "id": "Pertanyaan: Kapan/Apa/Di mana kamu [kata kerja]?"
+          }
+        ],
+        "tip": "To sound fluent, chain activities: \"I wake up, eat breakfast, then go to school.\""
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c3s6_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "___ do you wake up every day?",
+          "options": [
+            "What",
+            "Who",
+            "When",
+            "Where"
+          ],
+          "correctAnswer": "When",
+          "explanation": "\"When\" asks about time. \"When do you wake up?\" = Kapan/jam berapa kamu bangun?"
+        }
+      },
+      {
+        "id": "study_c3s6_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "I study every night.",
+          "hint": "Say: I study every night.",
+          "translation": "Saya belajar setiap malam."
+        }
+      }
+    ]
+  },
+  "c4s1": {
+    "title": "Basic Adjectives",
+    "intro": "Adjectives describe people, places, and things. They make your English more expressive and detailed. The most useful adjectives come in opposite pairs.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Core Adjective Pairs",
+        "body": "Learn adjectives in pairs — it doubles your vocabulary instantly:",
+        "examples": [
+          {
+            "en": "Big ↔ Small — Besar ↔ Kecil",
+            "id": "This is a big dog. That is a small cat."
+          },
+          {
+            "en": "Good ↔ Bad — Baik ↔ Buruk",
+            "id": "She is a good student. The weather is bad."
+          },
+          {
+            "en": "Happy ↔ Sad — Bahagia ↔ Sedih",
+            "id": "I am very happy today. She looks sad."
+          },
+          {
+            "en": "Hot ↔ Cold — Panas ↔ Dingin",
+            "id": "The coffee is hot. The water is cold."
+          },
+          {
+            "en": "Fast ↔ Slow — Cepat ↔ Lambat",
+            "id": "He runs fast. The bus is slow."
+          }
+        ],
+        "tip": "Add \"very\" before an adjective to make it stronger: very big, very happy."
+      },
+      {
+        "type": "grammar",
+        "heading": "Adjective Position",
+        "body": "In English, adjectives go BEFORE the noun OR after 'to be':",
+        "examples": [
+          {
+            "en": "Before noun: a big dog, a happy student",
+            "id": "seekor anjing besar, seorang pelajar yang bahagia"
+          },
+          {
+            "en": "After 'to be': The dog is big. She is happy.",
+            "id": "Anjing itu besar. Dia bahagia."
+          },
+          {
+            "en": "With 'very': I am very happy today.",
+            "id": "Saya sangat bahagia hari ini."
+          }
+        ],
+        "tip": "Both positions are correct. \"A big house\" and \"The house is big\" are both fine."
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c4s1_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "This is a ___ dog. It is not small at all.",
+          "options": [
+            "bad",
+            "cold",
+            "big",
+            "sad"
+          ],
+          "correctAnswer": "big",
+          "explanation": "\"Not small\" means the dog is big. Big is the antonym of small."
+        }
+      },
+      {
+        "id": "study_c4s1_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "I am very happy today.",
+          "hint": "Say: I am very happy today.",
+          "translation": "Saya sangat bahagia hari ini."
+        }
+      }
+    ]
+  },
+  "c4s2": {
+    "title": "Physical Descriptions",
+    "intro": "Describing physical appearance is a key conversation skill. In English, you can describe height, age, and build using simple adjectives with 'to be'.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Physical Adjectives",
+        "body": "These adjectives describe how people look:",
+        "examples": [
+          {
+            "en": "Tall ↔ Short — Tinggi ↔ Pendek",
+            "id": "My brother is very tall. My sister is short."
+          },
+          {
+            "en": "Young ↔ Old — Muda ↔ Tua",
+            "id": "She is young. My grandmother is old."
+          },
+          {
+            "en": "Strong — Kuat",
+            "id": "He is tall and strong."
+          },
+          {
+            "en": "Cute — Lucu / Imut",
+            "id": "The baby is small and cute."
+          },
+          {
+            "en": "Handsome / Pretty — Tampan / Cantik",
+            "id": "He is handsome. She is pretty."
+          }
+        ],
+        "tip": "\"Handsome\" is usually for men. \"Pretty\" or \"beautiful\" is usually for women."
+      },
+      {
+        "type": "grammar",
+        "heading": "Describing with Multiple Adjectives",
+        "body": "Use 'and' to connect two or more adjectives:",
+        "examples": [
+          {
+            "en": "She is tall and young.",
+            "id": "Dia tinggi dan muda."
+          },
+          {
+            "en": "He is tall, strong, and handsome.",
+            "id": "Dia tinggi, kuat, dan tampan."
+          },
+          {
+            "en": "My grandmother is old but very wise.",
+            "id": "Nenekku sudah tua tapi sangat bijaksana."
+          }
+        ],
+        "tip": "Use commas when listing three or more adjectives: tall, strong, and handsome."
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c4s2_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "He is very ___ — almost two meters!",
+          "options": [
+            "short",
+            "young",
+            "tall",
+            "old"
+          ],
+          "correctAnswer": "tall",
+          "explanation": "Two meters is very tall! \"Almost two meters\" = sangat tinggi."
+        }
+      },
+      {
+        "id": "study_c4s2_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "She is tall and young.",
+          "hint": "Say: She is tall and young.",
+          "translation": "Dia tinggi dan muda."
+        }
+      }
+    ]
+  },
+  "c4s3": {
+    "title": "Describing Objects",
+    "intro": "You can combine size, color, and adjectives to build detailed descriptions of any object. This is the foundation of descriptive English.",
+    "sections": [
+      {
+        "type": "grammar",
+        "heading": "Adjective Order Rule",
+        "body": "When using multiple adjectives, English has a specific order: size → color → noun",
+        "examples": [
+          {
+            "en": "a small white cat (size + color + noun)",
+            "id": "seekor kucing putih kecil"
+          },
+          {
+            "en": "a big red house",
+            "id": "sebuah rumah merah besar"
+          },
+          {
+            "en": "a beautiful yellow flower",
+            "id": "bunga kuning yang indah"
+          },
+          {
+            "en": "a long blue dress",
+            "id": "gaun biru panjang"
+          }
+        ],
+        "tip": "General rule: Opinion → Size → Color → Noun. (e.g. a beautiful small white cat)"
+      },
+      {
+        "type": "vocabulary",
+        "heading": "More Useful Adjectives",
+        "body": "Expand your description vocabulary with these words:",
+        "examples": [
+          {
+            "en": "Beautiful / Ugly — Indah / Jelek",
+            "id": "This is a beautiful flower."
+          },
+          {
+            "en": "Expensive / Cheap — Mahal / Murah",
+            "id": "That car is very expensive."
+          },
+          {
+            "en": "Heavy / Light — Berat / Ringan",
+            "id": "The bag is heavy."
+          },
+          {
+            "en": "Clean / Dirty — Bersih / Kotor",
+            "id": "The room is clean."
+          },
+          {
+            "en": "New / Old — Baru / Lama",
+            "id": "She has a new phone."
+          }
+        ]
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c4s3_p1",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Terjemahkan: 'Ini adalah tas hitam.'",
+          "options": [
+            "This is a black bag.",
+            "That is a black bag.",
+            "This is a red bag.",
+            "That is a white bag."
+          ],
+          "correctAnswer": "This is a black bag.",
+          "explanation": "Ini = This (nearby). Tas hitam = black bag. So: This is a black bag."
+        }
+      },
+      {
+        "id": "study_c4s3_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "I have a small white cat.",
+          "hint": "Say: I have a small white cat.",
+          "translation": "Saya punya kucing putih kecil."
+        }
+      }
+    ]
+  },
+  "c4s4": {
+    "title": "Using Is / Are",
+    "intro": "You've mastered 'am' and 'is'. Now we add 'are' — used for plural subjects and for 'you'. Together, am/is/are form the complete 'to be' verb.",
+    "sections": [
+      {
+        "type": "grammar",
+        "heading": "Complete To Be Chart",
+        "body": "Memorise this complete pattern:",
+        "examples": [
+          {
+            "en": "I am …",
+            "id": "Saya adalah …"
+          },
+          {
+            "en": "You are …",
+            "id": "Kamu adalah …"
+          },
+          {
+            "en": "He / She / It is …",
+            "id": "Dia adalah …"
+          },
+          {
+            "en": "We are …",
+            "id": "Kami / Kita adalah …"
+          },
+          {
+            "en": "They are …",
+            "id": "Mereka adalah …"
+          }
+        ],
+        "tip": "Quick rule: IS for one person/thing (he, she, it). ARE for more than one OR 'you'."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Is vs Are in Sentences",
+        "body": "See the difference in context:",
+        "examples": [
+          {
+            "en": "This book is thick. (one thing → is)",
+            "id": "Buku ini tebal."
+          },
+          {
+            "en": "These books are thick. (many → are)",
+            "id": "Buku-buku ini tebal."
+          },
+          {
+            "en": "My friend is kind. (one person → is)",
+            "id": "Temanku baik."
+          },
+          {
+            "en": "My friends are kind. (many → are)",
+            "id": "Teman-temanku baik."
+          },
+          {
+            "en": "They are my best friends.",
+            "id": "Mereka adalah teman terbaik saya."
+          }
+        ],
+        "tip": "When the subject ends in -s (friends, students, parents), use ARE."
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c4s4_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "My parents ___ very kind and loving.",
+          "options": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "are",
+          "explanation": "\"My parents\" = two people = plural → use \"are\". (My mother IS, but my parents ARE.)"
+        }
+      },
+      {
+        "id": "study_c4s4_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "They are my best friends.",
+          "hint": "Say: They are my best friends.",
+          "translation": "Mereka adalah teman terbaik saya."
+        }
+      }
+    ]
+  },
+  "c4s5": {
+    "title": "Simple Descriptions",
+    "intro": "Now we bring it all together — subjects, to be, and adjectives — to write clear, complete sentences that describe people, animals, and things.",
+    "sections": [
+      {
+        "type": "grammar",
+        "heading": "Description Sentence Pattern",
+        "body": "The core pattern: Subject + is/are + adjective(s)",
+        "examples": [
+          {
+            "en": "The apple is red.",
+            "id": "Apel itu berwarna merah."
+          },
+          {
+            "en": "The sky is blue and clear.",
+            "id": "Langit itu biru dan jernih."
+          },
+          {
+            "en": "My teacher is very kind.",
+            "id": "Guruku sangat baik."
+          },
+          {
+            "en": "The water is cold and clean.",
+            "id": "Airnya dingin dan bersih."
+          },
+          {
+            "en": "The students are smart and hardworking.",
+            "id": "Para pelajar itu pintar dan rajin."
+          }
+        ],
+        "tip": "You can stack adjectives: The apple is red AND sweet AND delicious."
+      },
+      {
+        "type": "conversation",
+        "heading": "Describing Things Around You",
+        "body": "Practice describing things you see every day:",
+        "examples": [
+          {
+            "en": "A: What is the weather like today?",
+            "id": "A: Bagaimana cuaca hari ini?"
+          },
+          {
+            "en": "B: It is hot and sunny.",
+            "id": "B: Panas dan cerah."
+          },
+          {
+            "en": "A: What is your classroom like?",
+            "id": "A: Bagaimana kelasmu?"
+          },
+          {
+            "en": "B: It is big, clean, and very bright.",
+            "id": "B: Besar, bersih, dan sangat terang."
+          }
+        ]
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c4s5_p1",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Terjemahkan: 'Hari ini cuacanya panas dan cerah.'",
+          "options": [
+            "Today the weather is cold and rainy.",
+            "Today the weather is hot and sunny.",
+            "Today is hot and clean.",
+            "The weather is good and big."
+          ],
+          "correctAnswer": "Today the weather is hot and sunny.",
+          "explanation": "Panas = hot, cerah = sunny. \"Today the weather is hot and sunny.\" is correct."
+        }
+      },
+      {
+        "id": "study_c4s5_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "The apple is red.",
+          "hint": "Say: The apple is red.",
+          "translation": "Apel itu berwarna merah."
+        }
+      }
+    ]
+  },
+  "c4s6": {
+    "title": "Chapter 4 Review — Describing People & Things",
+    "intro": "You've mastered adjectives, physical descriptions, adjective order, and the full 'to be' verb. Now write rich, complete descriptions of anything!",
+    "sections": [
+      {
+        "type": "grammar",
+        "heading": "Full Description Formula",
+        "body": "Combine everything for a powerful description:",
+        "examples": [
+          {
+            "en": "The garden is beautiful and green.",
+            "id": "Tamannya indah dan hijau."
+          },
+          {
+            "en": "My friend is short and funny.",
+            "id": "Temanku pendek dan lucu."
+          },
+          {
+            "en": "She is young, tall, and cheerful.",
+            "id": "Dia muda, tinggi, dan ceria."
+          },
+          {
+            "en": "The students are smart and hardworking.",
+            "id": "Para pelajar itu pintar dan rajin."
+          }
+        ],
+        "tip": "Great description = subject + is/are + [size] + [appearance] + [personality]"
+      },
+      {
+        "type": "conversation",
+        "heading": "Describing a Friend",
+        "body": "Practice describing someone you know:",
+        "examples": [
+          {
+            "en": "A: Tell me about your best friend!",
+            "id": "A: Ceritakan tentang teman terbaikmu!"
+          },
+          {
+            "en": "B: My friend is tall and funny.",
+            "id": "B: Temanku tinggi dan lucu."
+          },
+          {
+            "en": "A: What does she look like?",
+            "id": "A: Bagaimana penampilannya?"
+          },
+          {
+            "en": "B: She is young, and she has a big, beautiful smile.",
+            "id": "B: Dia muda dan punya senyum besar yang indah."
+          }
+        ]
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c4s6_p1",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Terjemahkan: 'Temanku pendek dan lucu.'",
+          "options": [
+            "My friend is tall and funny.",
+            "My friend is short and funny.",
+            "My friend is short and sad.",
+            "My friend is young and small."
+          ],
+          "correctAnswer": "My friend is short and funny.",
+          "explanation": "Pendek = short, lucu = funny. \"My friend is short and funny.\""
+        }
+      },
+      {
+        "id": "study_c4s6_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "My friend is short and funny.",
+          "hint": "Say: My friend is short and funny.",
+          "translation": "Temanku pendek dan lucu."
+        }
+      }
+    ]
+  },
+  "c5s1": {
+    "title": "Personal Questions",
+    "intro": "When you meet someone new, the conversation almost always includes personal questions about name, origin, and age. Let's master how to ask AND answer these questions confidently.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Key Personal Questions",
+        "body": "These are the most common questions people ask when getting to know someone:",
+        "examples": [
+          {
+            "en": "What is your name?",
+            "id": "Siapa namamu?"
+          },
+          {
+            "en": "Where are you from?",
+            "id": "Kamu dari mana?"
+          },
+          {
+            "en": "How are you?",
+            "id": "Apa kabar?"
+          },
+          {
+            "en": "How old are you?",
+            "id": "Berapa umurmu?"
+          },
+          {
+            "en": "Are you a student?",
+            "id": "Apakah kamu seorang pelajar?"
+          }
+        ],
+        "tip": "The most common response to \"How are you?\" is \"I'm fine, thank you!\" or \"I'm good, thanks!\""
+      },
+      {
+        "type": "grammar",
+        "heading": "Answering Personal Questions",
+        "body": "Pattern for answering personal questions:",
+        "examples": [
+          {
+            "en": "Q: What is your name? → A: My name is Budi.",
+            "id": "Siapa namamu? → Nama saya Budi."
+          },
+          {
+            "en": "Q: Where are you from? → A: I am from Bali.",
+            "id": "Dari mana? → Saya dari Bali."
+          },
+          {
+            "en": "Q: How old are you? → A: I am fifteen years old.",
+            "id": "Berapa umurmu? → Saya 15 tahun."
+          },
+          {
+            "en": "Q: How are you? → A: I am fine, thank you!",
+            "id": "Apa kabar? → Saya baik, terima kasih!"
+          }
+        ],
+        "tip": "Always answer in full sentences — it sounds more natural and shows confidence."
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c5s1_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "How ___ you? — I am fine, thank you!",
+          "options": [
+            "is",
+            "am",
+            "are",
+            "do"
+          ],
+          "correctAnswer": "are",
+          "explanation": "\"How are you?\" is the standard greeting question. Answer: I am fine, thank you!"
+        }
+      },
+      {
+        "id": "study_c5s1_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "Where are you from?",
+          "hint": "Say: Where are you from?",
+          "translation": "Kamu berasal dari mana?"
+        }
+      }
+    ]
+  },
+  "c5s2": {
+    "title": "Answering About Yourself",
+    "intro": "The ability to introduce yourself fully — name, origin, and age — is the foundation of all social English. Let's build a complete self-introduction.",
+    "sections": [
+      {
+        "type": "conversation",
+        "heading": "Full Self-Introduction",
+        "body": "Here's a complete introduction you can use immediately:",
+        "examples": [
+          {
+            "en": "Hello! My name is Reza.",
+            "id": "Halo! Nama saya Reza."
+          },
+          {
+            "en": "I am from Jakarta.",
+            "id": "Saya dari Jakarta."
+          },
+          {
+            "en": "I am thirteen years old.",
+            "id": "Saya berumur tiga belas tahun."
+          },
+          {
+            "en": "I am a student at SMP 5.",
+            "id": "Saya pelajar di SMP 5."
+          },
+          {
+            "en": "Nice to meet you!",
+            "id": "Senang bertemu denganmu!"
+          }
+        ],
+        "tip": "For age: I am [number] years old. — \"I am fifteen years old.\""
+      },
+      {
+        "type": "grammar",
+        "heading": "Yes/No Questions with Is/Are",
+        "body": "Yes/No questions flip the subject and to be verb:",
+        "examples": [
+          {
+            "en": "Are you a student? → Yes, I am. / No, I'm not.",
+            "id": "Apakah kamu pelajar? → Ya. / Tidak."
+          },
+          {
+            "en": "Is she your sister? → Yes, she is. / No, she isn't.",
+            "id": "Apakah dia saudaramu? → Ya. / Tidak."
+          },
+          {
+            "en": "Are they your friends? → Yes, they are.",
+            "id": "Apakah mereka temanmu? → Ya, mereka."
+          }
+        ],
+        "tip": "Short answers: Yes, I am. / No, I'm not. Don't just say \"Yes\" or \"No\" — add the pronoun and verb."
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c5s2_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "My name ___ Sari and I ___ from Yogyakarta.",
+          "options": [
+            "am / is",
+            "is / am",
+            "are / is",
+            "is / are"
+          ],
+          "correctAnswer": "is / am",
+          "explanation": "My name IS (3rd person singular) + I AM (1st person). Pattern: is / am."
+        }
+      },
+      {
+        "id": "study_c5s2_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "My name is Reza. I am from Jakarta.",
+          "hint": "Say: My name is [name]. I am from [city].",
+          "translation": "Nama saya Reza. Saya dari Jakarta."
+        }
+      }
+    ]
+  },
+  "c5s3": {
+    "title": "Asking About Things",
+    "intro": "\"What is this?\" and \"What is that?\" are two of the most useful questions in English. You can use them to learn the name of anything you see.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Questions About Objects",
+        "body": "Use these questions to ask about things around you:",
+        "examples": [
+          {
+            "en": "What is this? — Apa ini?",
+            "id": "Use for something NEAR you."
+          },
+          {
+            "en": "What is that? — Apa itu?",
+            "id": "Use for something FAR from you."
+          },
+          {
+            "en": "Whose is this? — Ini milik siapa?",
+            "id": "Ask about ownership."
+          },
+          {
+            "en": "Is this yours? — Apakah ini milikmu?",
+            "id": "Confirm ownership."
+          }
+        ],
+        "tip": "If you don't know the English name for something, just point and say \"What is this?\""
+      },
+      {
+        "type": "conversation",
+        "heading": "Asking & Answering",
+        "body": "Natural conversations about objects:",
+        "examples": [
+          {
+            "en": "A: What is this? — It is a dictionary.",
+            "id": "A: Apa ini? — Ini kamus."
+          },
+          {
+            "en": "A: What is that? — That is a new smartphone.",
+            "id": "A: Apa itu? — Itu HP baru."
+          },
+          {
+            "en": "A: Is this your bag? — Yes, it is!",
+            "id": "A: Apakah ini tasmu? — Ya!"
+          },
+          {
+            "en": "A: Whose pen is this? — It is mine.",
+            "id": "A: Pena siapa ini? — Punyaku."
+          }
+        ]
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c5s3_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "— ___ is this? — It is a dictionary.",
+          "options": [
+            "Where",
+            "When",
+            "What",
+            "Who"
+          ],
+          "correctAnswer": "What",
+          "explanation": "\"What\" asks about things. \"What is this?\" = Apa ini? The answer is the name of the object."
+        }
+      },
+      {
+        "id": "study_c5s3_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "What is this?",
+          "hint": "Say: What is this?",
+          "translation": "Apa ini?"
+        }
+      }
+    ]
+  },
+  "c5s4": {
+    "title": "Asking About Preferences",
+    "intro": "\"Do you like…?\" is one of the most common ways to start a conversation and find common interests. Master this pattern and you'll never run out of things to talk about.",
+    "sections": [
+      {
+        "type": "grammar",
+        "heading": "Do You Like… Pattern",
+        "body": "Use DO (for I/you/we/they) and DOES (for he/she/it) to ask about preferences:",
+        "examples": [
+          {
+            "en": "Do you like music? — Yes, I do! / No, I don't.",
+            "id": "Apakah kamu suka musik? — Ya! / Tidak."
+          },
+          {
+            "en": "Do you like football? — Yes, I do!",
+            "id": "Apakah kamu suka sepak bola? — Ya!"
+          },
+          {
+            "en": "Does she like cooking? — Yes, she does.",
+            "id": "Apakah dia suka memasak? — Ya."
+          },
+          {
+            "en": "Does he like sports? — No, he doesn't.",
+            "id": "Apakah dia suka olahraga? — Tidak."
+          }
+        ],
+        "tip": "Short answers: Yes, I do. / No, I don't. (NOT \"Yes, I like\" or \"No, I not like\")"
+      },
+      {
+        "type": "conversation",
+        "heading": "Preference Conversation",
+        "body": "How to talk about likes naturally:",
+        "examples": [
+          {
+            "en": "A: Do you like reading?",
+            "id": "A: Apakah kamu suka membaca?"
+          },
+          {
+            "en": "B: No, I don't. But I like music!",
+            "id": "B: Tidak. Tapi saya suka musik!"
+          },
+          {
+            "en": "A: Does your friend like sports?",
+            "id": "A: Apakah temanmu suka olahraga?"
+          },
+          {
+            "en": "B: Yes, she does! She loves football.",
+            "id": "B: Ya! Dia sangat suka sepak bola."
+          }
+        ]
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c5s4_p1",
+        "type": "fill_in_blank",
+        "xpReward": 10,
+        "content": {
+          "sentence": "— Do you like reading? — No, I ___.",
+          "options": [
+            "doesn't",
+            "don't",
+            "am not",
+            "isn't"
+          ],
+          "correctAnswer": "don't",
+          "explanation": "Negative of \"do\" = don't (do not). \"No, I don't.\" is the correct short answer."
+        }
+      },
+      {
+        "id": "study_c5s4_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "Do you like football?",
+          "hint": "Say: Do you like football?",
+          "translation": "Apakah kamu suka sepak bola?"
+        }
+      }
+    ]
+  },
+  "c5s5": {
+    "title": "Short Conversations",
+    "intro": "Now we put everything together into real short conversations. A conversation has flow — greeting, question, answer, follow-up. Let's practise the complete pattern.",
+    "sections": [
+      {
+        "type": "conversation",
+        "heading": "Meeting a Friend",
+        "body": "A typical short conversation between two people who know each other:",
+        "examples": [
+          {
+            "en": "A: Hi! How are you?",
+            "id": "A: Hai! Apa kabar?"
+          },
+          {
+            "en": "B: I am fine, thank you! And you?",
+            "id": "B: Saya baik, terima kasih! Dan kamu?"
+          },
+          {
+            "en": "A: I am great, thanks!",
+            "id": "A: Saya sangat baik, terima kasih!"
+          },
+          {
+            "en": "B: See you tomorrow!",
+            "id": "B: Sampai jumpa besok!"
+          },
+          {
+            "en": "A: Bye!",
+            "id": "A: Selamat tinggal!"
+          }
+        ],
+        "tip": "Always return the question! When someone asks \"How are you?\", ask \"And you?\" back."
+      },
+      {
+        "type": "grammar",
+        "heading": "Conversation Starters & Closers",
+        "body": "Phrases to open and close any English conversation:",
+        "examples": [
+          {
+            "en": "Openers: Hi! / Hello! / Good morning!",
+            "id": "Pembuka: Hai! / Halo! / Selamat pagi!"
+          },
+          {
+            "en": "Question: How are you? / What's up?",
+            "id": "Pertanyaan: Apa kabar?"
+          },
+          {
+            "en": "Closers: Goodbye! / See you! / Bye!",
+            "id": "Penutup: Selamat tinggal! / Sampai jumpa!"
+          },
+          {
+            "en": "See you + time: See you tomorrow! / See you later!",
+            "id": "Sampai jumpa besok! / Sampai nanti!"
+          }
+        ]
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c5s5_p1",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Bagaimana mengatakan 'Aku baik-baik saja' dalam bahasa Inggris?",
+          "options": [
+            "I am sad.",
+            "I am fine.",
+            "I am tired.",
+            "I am busy."
+          ],
+          "correctAnswer": "I am fine.",
+          "explanation": "\"I am fine.\" = Saya baik-baik saja. It is the most common response to \"How are you?\""
+        }
+      },
+      {
+        "id": "study_c5s5_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "How are you? I am fine, thank you!",
+          "hint": "Say: How are you? I am fine, thank you!",
+          "translation": "Apa kabar? Saya baik-baik saja, terima kasih!"
+        }
+      }
+    ]
+  },
+  "c5s6": {
+    "title": "Final Challenge — Full Conversations",
+    "intro": "This is the final stage! Bring together everything from all 5 chapters: greetings, polite words, introductions, vocabulary, grammar, and full conversations.",
+    "sections": [
+      {
+        "type": "conversation",
+        "heading": "The Complete English Conversation",
+        "body": "Here is a model conversation using everything you have learned:",
+        "examples": [
+          {
+            "en": "A: Good morning! My name is Rina. Nice to meet you!",
+            "id": "A: Selamat pagi! Nama saya Rina. Senang bertemu denganmu!"
+          },
+          {
+            "en": "B: Good morning Rina! I am from Bali. Where are you from?",
+            "id": "B: Selamat pagi Rina! Saya dari Bali. Kamu dari mana?"
+          },
+          {
+            "en": "A: I am from Jakarta. I am thirteen years old. Are you a student?",
+            "id": "A: Saya dari Jakarta. Saya 13 tahun. Apakah kamu pelajar?"
+          },
+          {
+            "en": "B: Yes, I am! Do you like sports?",
+            "id": "B: Ya! Apakah kamu suka olahraga?"
+          },
+          {
+            "en": "A: Yes, I do! I like football. Goodbye, and nice to meet you!",
+            "id": "A: Ya! Saya suka sepak bola. Selamat tinggal dan senang bertemu denganmu!"
+          },
+          {
+            "en": "B: Goodbye! See you tomorrow!",
+            "id": "B: Selamat tinggal! Sampai jumpa besok!"
+          }
+        ]
+      },
+      {
+        "type": "grammar",
+        "heading": "Everything You Have Learned",
+        "body": "Congratulations! Here is a summary of all key patterns from all 5 chapters:",
+        "examples": [
+          {
+            "en": "Ch.1: Hello / Thank you / My name is / I am",
+            "id": "Sapa, berterima kasih, perkenalan"
+          },
+          {
+            "en": "Ch.2: This is a red book / I have two cats",
+            "id": "Benda, warna, angka, ini/itu"
+          },
+          {
+            "en": "Ch.3: I go to school / What do you eat?",
+            "id": "Aktivitas, waktu, pertanyaan"
+          },
+          {
+            "en": "Ch.4: She is tall and young / They are kind",
+            "id": "Deskripsi orang dan benda"
+          },
+          {
+            "en": "Ch.5: Where are you from? / Do you like music?",
+            "id": "Percakapan nyata tentang diri sendiri"
+          }
+        ],
+        "tip": "Practice every day! Even one sentence a day will make a huge difference over time."
+      }
+    ],
+    "practice": [
+      {
+        "id": "study_c5s6_p1",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Terjemahkan percakapan singkat: 'Halo! Apa kabar? — Baik, terima kasih!'",
+          "options": [
+            "Hello! How are you? — Fine, thank you!",
+            "Hi! Good morning! — Thank you!",
+            "Hello! What is your name? — I am fine!",
+            "Good morning! Where are you from? — I am good!"
+          ],
+          "correctAnswer": "Hello! How are you? — Fine, thank you!",
+          "explanation": "Halo = Hello, Apa kabar = How are you, Baik = Fine/Good, Terima kasih = thank you."
+        }
+      },
+      {
+        "id": "study_c5s6_p2",
+        "type": "speaking_test",
+        "xpReward": 15,
+        "content": {
+          "phrase": "Good morning! My name is Rina. Nice to meet you!",
+          "hint": "Say a full greeting + introduction. You can use your real name.",
+          "translation": "Selamat pagi! Nama saya Rina. Senang bertemu denganmu!"
+        }
+      }
+    ]
+  }
+}

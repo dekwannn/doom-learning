@@ -1,0 +1,2765 @@
+{
+  "jac1s1": {
+    "title": "Huruf Vokal Dasar あいうえお",
+    "intro": "Mulai dari NOL! Lima huruf vokal hiragana adalah fondasi dari SEMUA huruf Jepang. Tidak ada satu pun huruf konsonan yang bisa dibaca tanpa vokal ini. Kuasai 5 huruf ini dulu sebelum melangkah ke mana pun.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "5 Vokal Dasar — Kartu Hafalan",
+        "body": "Urutan vokal Jepang selalu TETAP: A-I-U-E-O. Berbeda dengan bahasa Indonesia yang A-I-U-E-O juga, tapi pengucapannya sedikit berbeda.",
+        "examples": [
+          { "en": "あ (a)", "id": "Persis seperti 'a' dalam 'anak' atau 'ayah'. Mulut terbuka lebar." },
+          { "en": "い (i)", "id": "Persis seperti 'i' dalam 'ibu'. Bibir sedikit melebar ke samping." },
+          { "en": "う (u)", "id": "Seperti 'u' tapi BIBIR TIDAK MAJU ke depan. Bedanya dengan bahasa Indonesia: u Jepang lebih datar." },
+          { "en": "え (e)", "id": "Persis seperti 'e' dalam 'enak' atau 'ember'. Bukan seperti 'e' dalam 'sate'." },
+          { "en": "お (o)", "id": "Persis seperti 'o' dalam 'obat'. Mulut membulat tapi tidak semenjorok bahasa Indonesia." }
+        ],
+        "tip": "Cara termudah hafal: tulis setiap huruf 10 kali sambil ucapkan keras-keras. Otot tangan + suara = hafalan lebih kuat."
+      },
+      {
+        "type": "grammar",
+        "heading": "Cara Menulis — Urutan Goresan (Stroke Order)",
+        "body": "Di Jepang, urutan goresan menulis huruf sangat penting, terutama nanti saat belajar kanji. Biasakan dari sekarang.",
+        "examples": [
+          { "en": "あ — 3 goresan", "id": "① Garis horizontal → ② Garis vertikal melengkung → ③ Lingkaran kecil di kanan bawah" },
+          { "en": "い — 2 goresan", "id": "① Garis miring kiri turun → ② Garis melengkung kanan turun" },
+          { "en": "う — 2 goresan", "id": "① Titik kecil di atas → ② Lengkungan utama ke bawah" },
+          { "en": "え — 4 goresan", "id": "① Garis horizontal → ② Vertikal → ③ Lengkung kiri → ④ Kait kanan bawah" },
+          { "en": "お — 3 goresan", "id": "① Garis horizontal → ② Vertikal melengkung → ③ Lengkungan terakhir menyilang" }
+        ],
+        "tip": "Cari 'hiragana stroke order' di YouTube untuk melihat animasi cara menulis yang benar."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Perbedaan Penting dengan Bahasa Indonesia",
+        "body": "Vokal Jepang terdengar 'pendek dan bersih' — tidak ada nada naik-turun seperti dalam bahasa Indonesia. Setiap vokal punya panjang yang sama.",
+        "examples": [
+          { "en": "あ vs 'a' Indonesia", "id": "Sama persis — ini yang paling mudah!" },
+          { "en": "い vs 'i' Indonesia", "id": "Sangat mirip, hanya sedikit lebih singkat di Jepang" },
+          { "en": "う — HATI-HATI", "id": "Orang Indonesia sering memajukan bibir saat bilang 'u'. Di Jepang, bibir datar. Coba bilang 'u' sambil senyum tipis." },
+          { "en": "え vs 'e' Indonesia", "id": "Gunakan 'e' seperti dalam 'ember', BUKAN 'e' lemah seperti dalam 'meja'" },
+          { "en": "お vs 'o' Indonesia", "id": "Sangat mirip — keduanya bulat dan jelas" }
+        ],
+        "tip": "Rekam suaramu dan bandingkan dengan audio native speaker Jepang. Aplikasi seperti Forvo berguna untuk ini."
+      },
+      {
+        "type": "culture",
+        "heading": "Kenapa Hiragana Itu Penting?",
+        "body": "Hiragana adalah sistem tulisan yang PERTAMA kali harus dikuasai. Semua buku anak-anak Jepang ditulis dalam hiragana. Bahkan manga (komik) menggunakan hiragana sebagai 'furigana' (panduan baca) di atas kanji yang sulit.",
+        "examples": [
+          { "en": "46 huruf dasar hiragana", "id": "Semua bisa dibaca hanya dalam 2-4 minggu jika latihan rutin" },
+          { "en": "Hiragana = fondasi", "id": "Tanpa hiragana, kamu tidak bisa baca katakana, dan tidak bisa mulai kanji" },
+          { "en": "Digunakan setiap hari", "id": "Partikel, akhiran kata kerja, kata sifat — semua pakai hiragana" }
+        ],
+        "tip": "Target realistis: hafal 5 huruf per hari = 46 huruf selesai dalam 10 hari!"
+      }
+    ],
+    "practice": [
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Huruf mana yang dibaca 'u' dengan bibir TIDAK dimajukan?",
+          "options": ["あ", "い", "う", "え"],
+          "correctAnswer": "う",
+          "explanation": "う = u. Ciri khas: bibir tidak maju ke depan seperti 'u' Indonesia. Urutan: A-I-U-E-O."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Huruf お dibaca...",
+          "options": ["a", "i", "u", "o"],
+          "correctAnswer": "o",
+          "explanation": "お = o. Ini vokal kelima dan terakhir dalam urutan A-I-U-E-O."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan huruf hiragana dengan bunyinya!",
+          "pairs": [
+            { "word": "あ", "meaning": "a" },
+            { "word": "い", "meaning": "i" },
+            { "word": "う", "meaning": "u" },
+            { "word": "え", "meaning": "e" },
+            { "word": "お", "meaning": "o" }
+          ],
+          "shuffledMeanings": ["o", "u", "a", "e", "i"],
+          "explanation": "あ=a, い=i, う=u, え=e, お=o. Hafalkan urutan ini seumur hidup!"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Vokal mana yang penulisannya paling MIRIP dengan huruf romaji-nya?",
+          "options": ["あ", "え", "お", "い"],
+          "correctAnswer": "い",
+          "explanation": "い (i) terdiri dari dua garis vertikal — mirip angka 'ii' atau dua batang yang berdampingan. Paling mudah diingat!"
+        }
+      },
+      {
+        "type": "listening_quiz", "xpReward": 15,
+        "content": {
+          "audioText": "a, i, u, e, o",
+          "question": "Urutan vokal Jepang yang BENAR adalah...",
+          "options": ["a-i-u-e-o", "a-e-i-o-u", "a-u-i-e-o", "i-a-u-e-o"],
+          "correctAnswer": "a-i-u-e-o",
+          "explanation": "Urutan Jepang: A-I-U-E-O. Berbeda dengan bahasa Inggris yang A-E-I-O-U. Urutan ini TIDAK PERNAH berubah dalam bahasa Jepang."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Vokal Jepang berjumlah ___ huruf",
+          "options": ["3", "4", "5", "6"],
+          "correctAnswer": "5",
+          "explanation": "Tepat 5 vokal: あ い う え お. Semua huruf konsonan dalam hiragana dibentuk dari kombinasi dengan ke-5 vokal ini."
+        }
+      }
+    ]
+  },
+
+  "jac1s2": {
+    "title": "Kata Sederhana dari Vokal",
+    "intro": "Sekarang saatnya membaca kata nyata! Meski baru tahu 5 vokal, kamu sudah bisa membaca beberapa kata bahasa Jepang yang asli dipakai sehari-hari. Ini bukti bahwa belajar hiragana langsung bermanfaat.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Kata-Kata dari Vokal Murni",
+        "body": "Kata-kata berikut hanya terdiri dari vokal hiragana — tidak ada konsonan sama sekali. Ini adalah kata nyata yang digunakan orang Jepang setiap hari!",
+        "examples": [
+          { "en": "あお (ao)", "id": "Biru — Contoh: あおいそら (langit biru)" },
+          { "en": "いえ (ie)", "id": "Rumah — Ini kata asli Jepang untuk 'rumah'" },
+          { "en": "うえ (ue)", "id": "Di atas / atas — Lawan kata: した (shita) = di bawah" },
+          { "en": "おい (oi)", "id": "Hei! (panggilan kasual ke teman laki-laki, agak kasar jika ke orang lebih tua)" },
+          { "en": "いいえ (iie)", "id": "Tidak / Bukan — Kata resmi untuk menyangkal, lebih sopan dari えー" }
+        ],
+        "tip": "Perhatikan: あお (biru) bukan あか (merah). Jangan tertukar! あか akan dipelajari nanti di baris Ka."
+      },
+      {
+        "type": "grammar",
+        "heading": "Cara Baca Kata Jepang — Setiap Huruf Sama Panjangnya",
+        "body": "Berbeda dengan bahasa Indonesia yang ada suku kata lebih 'berat', di Jepang SETIAP huruf hiragana dibaca dengan durasi yang sama. Ini disebut 'mora'.",
+        "examples": [
+          { "en": "あお = 2 mora", "id": "Baca: 'a' (1 ketukan) + 'o' (1 ketukan) — bukan 'AOO' atau 'Ao'" },
+          { "en": "いえ = 2 mora", "id": "Baca: 'i' (1 ketukan) + 'e' (1 ketukan) — bukan 'yeh' atau 'iye'" },
+          { "en": "いいえ = 3 mora", "id": "Baca: 'i' + 'i' + 'e' — 'i' pertama dan kedua dibaca TERPISAH, bukan memanjang" }
+        ],
+        "tip": "Coba ketuk meja sambil membaca: satu ketukan = satu huruf hiragana. Ini ritme dasar bahasa Jepang!"
+      },
+      {
+        "type": "culture",
+        "heading": "Kosakata Jepang Asli vs Kata Serapan",
+        "body": "Bahasa Jepang memiliki dua lapisan kosakata: kata asli Jepang (和語/wago) dan kata serapan dari Cina/Barat. Kata dari vokal murni biasanya adalah kata asli Jepang yang sangat tua.",
+        "examples": [
+          { "en": "いえ (ie) = rumah", "id": "Kata asli Jepang — sudah ada ribuan tahun" },
+          { "en": "うえ (ue) = atas", "id": "Kata asli Jepang — dipakai dalam ekspresi seperti うえに (di atas)" },
+          { "en": "あお (ao) = biru/hijau", "id": "Menarik: dulu ao mencakup biru DAN hijau. Lampu lalu lintas 'hijau' masih disebut あお sampai sekarang!" }
+        ],
+        "tip": "Fakta budaya: orang Jepang masih menyebut lampu hijau sebagai あおしんごう (lampu biru) — warisan zaman dulu!"
+      }
+    ],
+    "practice": [
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "あお artinya...",
+          "options": ["Merah", "Biru", "Hijau", "Putih"],
+          "correctAnswer": "Biru",
+          "explanation": "あお = biru (ao). Uniknya, dulu kata ini juga mencakup warna hijau. Sampai kini lampu hijau di Jepang tetap disebut 'aoshingou'."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Kata Jepang untuk 'rumah' (hanya vokal) adalah...",
+          "options": ["あお", "いえ", "うえ", "おい"],
+          "correctAnswer": "いえ",
+          "explanation": "いえ = rumah (ie). Terdiri dari vokal い (i) + え (e). Kata asli Jepang yang sangat umum dipakai."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "うえ artinya ___ (kebalikannya adalah 'di bawah')",
+          "options": ["Di atas", "Di bawah", "Di dalam", "Di luar"],
+          "correctAnswer": "Di atas",
+          "explanation": "うえ (ue) = di atas / atas. Lawan katanya adalah した (shita) = di bawah, yang akan dipelajari nanti."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata dengan artinya!",
+          "pairs": [
+            { "word": "あお", "meaning": "Biru" },
+            { "word": "いえ", "meaning": "Rumah" },
+            { "word": "うえ", "meaning": "Di atas" },
+            { "word": "いいえ", "meaning": "Tidak" }
+          ],
+          "shuffledMeanings": ["Tidak", "Biru", "Di atas", "Rumah"],
+          "explanation": "あお=biru, いえ=rumah, うえ=di atas, いいえ=tidak/bukan"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "いいえ artinya...",
+          "options": ["Ya", "Tidak", "Mungkin", "Halo"],
+          "correctAnswer": "Tidak",
+          "explanation": "いいえ (iie) = tidak / bukan. Ini kata formal untuk menyangkal. Perhatikan ada DUA い berurutan, dibaca 'i-i-e' (3 ketukan)."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Kata ___ terdiri dari 3 mora: い + い + え",
+          "options": ["あお", "いえ", "いいえ", "うえ"],
+          "correctAnswer": "いいえ",
+          "explanation": "いいえ = i-i-e = 3 mora. Setiap huruf hiragana = 1 mora (1 ketukan waktu yang sama)."
+        }
+      }
+    ]
+  },
+
+  "jac1s3": {
+    "title": "Quiz Vokal Dasar",
+    "intro": "Saatnya tes! Sebelum lanjut ke konsonan, pastikan 5 vokal sudah benar-benar masuk. Quiz ini mencakup pengucapan, penulisan, dan kosakata vokal.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Ringkasan 5 Vokal + Kata Contoh",
+        "body": "Review cepat sebelum quiz. Pastikan kamu bisa baca semua ini tanpa ragu:",
+        "examples": [
+          { "en": "あ (a) → あお (biru)", "id": "Mulut terbuka lebar" },
+          { "en": "い (i) → いえ (rumah)", "id": "Bibir melebar ke samping" },
+          { "en": "う (u) → うえ (atas)", "id": "Bibir DATAR, tidak maju" },
+          { "en": "え (e) → えき (stasiun)*", "id": "Seperti 'e' dalam 'ember'" },
+          { "en": "お (o) → おい (hei!)", "id": "Mulut membulat natural" }
+        ],
+        "tip": "*えき akan bisa dibaca penuh setelah belajar baris Ka. Sekarang fokus pada え dulu."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "5 Kesalahan Umum Pemula Indonesia",
+        "body": "Hindari jebakan-jebakan ini yang sering dilakukan orang Indonesia saat belajar vokal Jepang:",
+        "examples": [
+          { "en": "Kesalahan 1: Bilang 'oo' untuk お", "id": "Benar: お dibaca singkat 'o', bukan 'oo' memanjang kecuali ada おお" },
+          { "en": "Kesalahan 2: Bibir maju untuk う", "id": "Benar: bibir lurus/datar saat bilang う" },
+          { "en": "Kesalahan 3: Baca え seperti 'e' lemah", "id": "Benar: え selalu 'e' jelas seperti dalam 'ember'" },
+          { "en": "Kesalahan 4: Terburu-buru baca いいえ", "id": "Benar: い-い-え = 3 ketukan terpisah, bukan 'iye'" },
+          { "en": "Kesalahan 5: Lupa urutan A-I-U-E-O", "id": "Benar: urutan ini WAJIB hafal, dipakai terus sampai level mahir" }
+        ],
+        "tip": "Rekam dirimu membaca あいうえお dan dengarkan ulang. Apakah bunyinya sudah bersih dan sama panjang?"
+      }
+    ],
+    "practice": [
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "え dibaca seperti...",
+          "options": ["'e' dalam 'meja' (lemah)", "'e' dalam 'ember' (jelas)", "'e' dalam 'sate' (panjang)", "Tidak ada padanannya"],
+          "correctAnswer": "'e' dalam 'ember' (jelas)",
+          "explanation": "え = 'e' yang jelas dan kuat, seperti dalam 'ember' atau 'enak'. Bukan 'e' lemah/pepet seperti dalam 'meja'."
+        }
+      },
+      {
+        "type": "listening_quiz", "xpReward": 15,
+        "content": {
+          "audioText": "a i u e o",
+          "question": "Berapa huruf vokal yang didengar?",
+          "options": ["3", "4", "5", "6"],
+          "correctAnswer": "5",
+          "explanation": "5 vokal dasar: あ い う え お. Tepat 5 — tidak kurang, tidak lebih."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Urutan vokal Jepang: あ → い → う → ___ → お",
+          "options": ["あ", "え", "お", "う"],
+          "correctAnswer": "え",
+          "explanation": "え (e) ada di posisi keempat. Urutan: A-I-U-E-O — sama seperti abjad Jepang yang tidak pernah berubah."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Kata あお terdiri dari berapa mora (ketukan)?",
+          "options": ["1 mora", "2 mora", "3 mora", "4 mora"],
+          "correctAnswer": "2 mora",
+          "explanation": "あ (1) + お (1) = 2 mora. Setiap huruf hiragana selalu = 1 mora."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Review akhir — cocokkan semua vokal!",
+          "pairs": [
+            { "word": "あ", "meaning": "a" },
+            { "word": "い", "meaning": "i" },
+            { "word": "う", "meaning": "u" },
+            { "word": "え", "meaning": "e" },
+            { "word": "お", "meaning": "o" }
+          ],
+          "shuffledMeanings": ["e", "a", "o", "u", "i"],
+          "explanation": "Selamat! Kamu sudah hafal semua vokal dasar. Ini fondasi seluruh hiragana."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "いいえ artinya ___ dalam bahasa Indonesia",
+          "options": ["Ya", "Tidak", "Halo", "Selamat tinggal"],
+          "correctAnswer": "Tidak",
+          "explanation": "いいえ (iie) = tidak / bukan. Kata formal untuk menolak atau menyangkal sesuatu."
+        }
+      }
+    ]
+  },
+
+  "jac1s4": {
+    "title": "Sapaan Pagi & Siang",
+    "intro": "Orang Jepang sangat memperhatikan sapaan yang sesuai waktu. Sapaan yang benar menunjukkan kesopanan dan rasa hormat. Yuk pelajari sapaan pertama yang paling sering dipakai!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Sapaan Berdasarkan Waktu",
+        "body": "Di Jepang, sapaan berubah sesuai waktu hari. Ini BERBEDA dengan 'こんにちは' yang bisa dipakai agak luas:",
+        "examples": [
+          { "en": "おはよう (ohayou)", "id": "Selamat pagi — kasual, ke teman/keluarga (sebelum ~10 pagi)" },
+          { "en": "おはようございます (ohayou gozaimasu)", "id": "Selamat pagi — FORMAL, ke guru/atasan/orang lebih tua" },
+          { "en": "こんにちは (konnichiwa)", "id": "Halo / Selamat siang — netral, bisa formal maupun kasual (10 pagi - 5 sore)" },
+          { "en": "こんばんは (konbanwa)", "id": "Selamat malam — untuk bertemu orang di malam hari (setelah ~5 sore)" },
+          { "en": "おやすみ (oyasumi)", "id": "Selamat malam — kasual, saat mau tidur/pamit malam ke keluarga" },
+          { "en": "おやすみなさい (oyasuminasai)", "id": "Selamat malam — formal, saat mau tidur ke orang yang lebih tua" }
+        ],
+        "tip": "Aturan sederhana: kata dasar + ございます/なさい = bentuk formal/sopan. Ini pola yang akan terus kamu temukan!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Kapan Pakai Kasual vs Formal?",
+        "body": "Jepang sangat memperhatikan tingkat kesopanan (keigo). Pemilihan kata yang salah bisa dianggap tidak sopan.",
+        "examples": [
+          { "en": "Ke teman sebaya / adik / anak kecil", "id": "→ Gunakan bentuk kasual: おはよう, おやすみ" },
+          { "en": "Ke guru, dosen, atasan, pelanggan", "id": "→ Gunakan bentuk formal: おはようございます, おやすみなさい" },
+          { "en": "Ke orang yang baru dikenal", "id": "→ Lebih aman pakai formal dulu, baru kasual kalau sudah akrab" },
+          { "en": "Di toko, restoran, kantor", "id": "→ Selalu formal — ini lingkungan publik dan profesional" }
+        ],
+        "tip": "Strategi aman: selalu mulai dengan bentuk formal. Orang Jepang akan menghargainya, dan kamu tidak akan menyinggung siapapun."
+      },
+      {
+        "type": "culture",
+        "heading": "Budaya Sapaan di Jepang",
+        "body": "Di Jepang, sapaan sering disertai おじぎ (ojigi) = membungkuk. Ini bentuk rasa hormat yang sangat penting:",
+        "examples": [
+          { "en": "Membungkuk 15°", "id": "Sapaan kasual sehari-hari — ke teman atau kenalan" },
+          { "en": "Membungkuk 30°", "id": "Sapaan formal standar — ke guru, atasan, pelanggan" },
+          { "en": "Membungkuk 45°", "id": "Rasa hormat sangat tinggi atau permohonan maaf mendalam" },
+          { "en": "こんにちは sambil membungkuk", "id": "Kombinasi kata + gerakan = kesan pertama yang SANGAT baik" }
+        ],
+        "tip": "Di anime/drama Jepang, perhatikan sudut membungkuk karakter — ini cerminan hubungan sosial mereka!"
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Pengucapan yang Benar",
+        "body": "Beberapa sapaan memiliki pengucapan yang berbeda dari cara menulisnya (romaji). Ini hal yang normal dalam bahasa Jepang.",
+        "examples": [
+          { "en": "こんにちは → dibaca 'konnichiwa'", "id": "Meski ditulis は (ha), dibaca 'wa' karena posisinya sebagai partikel. Ini pengecualian klasik!" },
+          { "en": "こんばんは → dibaca 'konbanwa'", "id": "Sama — は di akhir sapaan selalu dibaca 'wa'" },
+          { "en": "おはよう → tekanan sama di semua suku kata", "id": "o-ha-yo-u — empat mora, masing-masing sama panjang" }
+        ],
+        "tip": "Jangan panik dengan pengecualian は → wa. Ini dua kata yang paling sering kamu pakai, jadi akan cepat hafal sendiri."
+      }
+    ],
+    "practice": [
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Kamu bertemu guru di pagi hari. Sapaan yang PALING tepat adalah...",
+          "options": ["おはよう", "おはようございます", "こんにちは", "おやすみ"],
+          "correctAnswer": "おはようございます",
+          "explanation": "Ke guru wajib pakai bentuk formal: おはようございます. Menggunakan おはよう (kasual) ke guru dianggap kurang sopan di Jepang."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "こんにちは biasanya digunakan pada...",
+          "options": ["Pagi hari sebelum jam 10", "Siang hingga sore hari", "Malam hari saat mau tidur", "Kapan saja tanpa batasan waktu"],
+          "correctAnswer": "Siang hingga sore hari",
+          "explanation": "こんにちは (konnichiwa) digunakan sekitar jam 10 pagi hingga 5 sore. Untuk pagi, pakai おはよう. Untuk malam, pakai こんばんは."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Saat pamit malam ke orang tua (formal): ___",
+          "options": ["おやすみ", "おやすみなさい", "こんばんは", "さようなら"],
+          "correctAnswer": "おやすみなさい",
+          "explanation": "おやすみなさい = bentuk formal/sopan dari おやすみ. Digunakan ke orang yang lebih tua atau dihormati saat mau tidur/pamit malam."
+        }
+      },
+      {
+        "type": "listening_quiz", "xpReward": 15,
+        "content": {
+          "audioText": "おはよう",
+          "question": "Sapaan apa yang didengar, dan kapan digunakan?",
+          "options": ["Selamat pagi (kasual)", "Selamat pagi (formal)", "Selamat malam (kasual)", "Halo siang"],
+          "correctAnswer": "Selamat pagi (kasual)",
+          "explanation": "おはよう = selamat pagi dalam bentuk kasual. Digunakan ke teman, saudara, atau orang yang sudah akrab."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan sapaan dengan artinya!",
+          "pairs": [
+            { "word": "おはようございます", "meaning": "Selamat pagi (formal)" },
+            { "word": "こんにちは", "meaning": "Halo/Selamat siang" },
+            { "word": "こんばんは", "meaning": "Selamat malam (bertemu)" },
+            { "word": "おやすみなさい", "meaning": "Selamat malam (tidur)" }
+          ],
+          "shuffledMeanings": ["Selamat malam (tidur)", "Selamat pagi (formal)", "Selamat malam (bertemu)", "Halo/Selamat siang"],
+          "explanation": "Keempat sapaan ini adalah yang paling sering dipakai dalam kehidupan sehari-hari di Jepang."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Mengapa こんにちは dibaca 'konnichiwa' padahal ditulis は?",
+          "options": ["Salah ketik yang sudah terlanjur jadi kebiasaan", "は dibaca 'wa' saat berfungsi sebagai partikel di akhir ekspresi", "Orang Jepang malas mengucapkan 'ha'", "Hanya berlaku untuk kata sapaan"],
+          "correctAnswer": "は dibaca 'wa' saat berfungsi sebagai partikel di akhir ekspresi",
+          "explanation": "Ini aturan penting: は dalam posisi sebagai partikel kalimat selalu dibaca 'wa'. Ini BUKAN pengecualian aneh, tapi aturan gramatikal yang konsisten."
+        }
+      }
+    ]
+  },
+
+  "jac1s5": {
+    "title": "Review Chapter 1",
+    "intro": "Chapter 1 selesai! Kamu sudah menguasai 5 vokal dasar, kata-kata dari vokal, dan sapaan penting. Sebelum masuk ke Chapter 2 yang lebih kompleks, pastikan semua ini sudah solid.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Semua yang Sudah Dipelajari di Chapter 1",
+        "body": "Ini adalah ringkasan lengkap Chapter 1. Uji dirimu: bisakah kamu baca semua ini dengan lancar?",
+        "examples": [
+          { "en": "5 Vokal: あ い う え お", "id": "a - i - u - e - o" },
+          { "en": "Kata vokal: あお いえ うえ いいえ", "id": "biru - rumah - di atas - tidak" },
+          { "en": "Sapaan pagi: おはよう / おはようございます", "id": "kasual / formal" },
+          { "en": "Sapaan siang: こんにちは", "id": "halo/selamat siang" },
+          { "en": "Sapaan malam (bertemu): こんばんは", "id": "selamat malam" },
+          { "en": "Sapaan malam (tidur): おやすみ / おやすみなさい", "id": "kasual / formal" }
+        ],
+        "tip": "Sebelum lanjut, pastikan kamu bisa: (1) tulis 5 vokal dari ingatan, (2) ucapkan semua sapaan dengan waktu yang tepat."
+      },
+      {
+        "type": "grammar",
+        "heading": "Konsep Kunci yang Harus Diingat",
+        "body": "Dua konsep penting dari Chapter 1 yang akan terus relevan di level berikutnya:",
+        "examples": [
+          { "en": "Konsep 1: Mora", "id": "Setiap huruf hiragana = 1 ketukan waktu yang sama. Ini ritme dasar bahasa Jepang." },
+          { "en": "Konsep 2: Kasual vs Formal", "id": "Bahasa Jepang punya dua mode berbicara. Pilih berdasarkan siapa lawan bicaramu." },
+          { "en": "Konsep 3: は → wa", "id": "Huruf は dibaca 'ha' sebagai huruf biasa, tapi 'wa' saat jadi partikel. Akan sering muncul!" },
+          { "en": "Konsep 4: Vokal う", "id": "Satu-satunya vokal yang punya perbedaan signifikan dari Indonesia: bibir TIDAK maju." }
+        ],
+        "tip": "Konsep-konsep ini adalah fondasi — bukan detail kecil. Mereka akan muncul lagi dan lagi di setiap chapter."
+      }
+    ],
+    "practice": [
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Review final Chapter 1 — cocokkan semuanya!",
+          "pairs": [
+            { "word": "あ", "meaning": "a" },
+            { "word": "おはようございます", "meaning": "Selamat pagi (formal)" },
+            { "word": "いいえ", "meaning": "Tidak" },
+            { "word": "こんにちは", "meaning": "Halo/Siang" },
+            { "word": "いえ", "meaning": "Rumah" }
+          ],
+          "shuffledMeanings": ["Rumah", "a", "Tidak", "Selamat pagi (formal)", "Halo/Siang"],
+          "explanation": "Hebat! Semua materi Chapter 1 sudah kamu kuasai."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Kamu masuk ke kantor jam 8 pagi dan bertemu atasan. Apa yang kamu ucapkan?",
+          "options": ["おはよう", "おはようございます", "こんにちは", "こんばんは"],
+          "correctAnswer": "おはようございます",
+          "explanation": "Situasi: pagi + formal (atasan) = おはようございます. Jangan pernah pakai bentuk kasual ke atasan di Jepang!"
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "あお = ___, いえ = ___, うえ = ___",
+          "options": ["biru/rumah/atas", "merah/gedung/bawah", "hijau/kantor/dalam", "putih/sekolah/luar"],
+          "correctAnswer": "biru/rumah/atas",
+          "explanation": "あお=biru, いえ=rumah, うえ=di atas. Tiga kata vokal paling penting dari Chapter 1."
+        }
+      },
+      {
+        "type": "listening_quiz", "xpReward": 15,
+        "content": {
+          "audioText": "a i u e o, ohayou, konnichiwa",
+          "question": "Berapa total kata/ekspresi yang didengar?",
+          "options": ["5", "6", "7", "8"],
+          "correctAnswer": "7",
+          "explanation": "5 vokal (a, i, u, e, o) + おはよう + こんにちは = 7 total. Semua sudah dipelajari di Chapter 1!"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Perbedaan おやすみ dan こんばんは adalah...",
+          "options": [
+            "Tidak ada bedanya, sama saja",
+            "おやすみ saat mau tidur/pamit malam, こんばんは saat baru bertemu di malam hari",
+            "おやすみ lebih formal dari こんばんは",
+            "こんばんは hanya untuk wanita, おやすみ untuk pria"
+          ],
+          "correctAnswer": "おやすみ saat mau tidur/pamit malam, こんばんは saat baru bertemu di malam hari",
+          "explanation": "こんばんは = sapaan saat BERTEMU di malam hari ('good evening'). おやすみ = saat BERPISAH di malam hari atau mau tidur ('good night'). Perbedaan konteks yang penting!"
+        }
+      }
+    ]
+  },
+
+  "jac2s1": {
+    "title": "Baris Ka (かきくけこ)",
+    "intro": "Selamat datang di Chapter 2! Sekarang kita mulai konsonan. Baris Ka adalah konsonan pertama dan paling mudah — bunyi K yang kita kenal + 5 vokal yang sudah kamu kuasai. Ini akan terasa lebih mudah dari yang kamu bayangkan!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "5 Huruf Baris Ka — Kartu Hafalan",
+        "body": "Semua huruf baris Ka = konsonan K + vokal A-I-U-E-O. Polanya SELALU konsisten seperti ini untuk semua baris konsonan!",
+        "examples": [
+          { "en": "か (ka)", "id": "ka — seperti 'ka' dalam 'kapal'. Contoh kata: かさ (kasa) = payung" },
+          { "en": "き (ki)", "id": "ki — seperti 'ki' dalam 'kiri'. Contoh kata: き (ki) = pohon" },
+          { "en": "く (ku)", "id": "ku — seperti 'ku' dalam 'kuda'. Contoh kata: くに (kuni) = negara" },
+          { "en": "け (ke)", "id": "ke — seperti 'ke' dalam 'kerja'. Contoh kata: けいたい (keitai) = HP" },
+          { "en": "こ (ko)", "id": "ko — seperti 'ko' dalam 'kopi'. Contoh kata: こえ (koe) = suara" }
+        ],
+        "tip": "Perhatikan pola visual: か き く け こ — meski bentuknya berbeda-beda, semua punya 'goresan khas' baris K. Cari pola ini!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Sistem Baris (行/ぎょう) dalam Hiragana",
+        "body": "Hiragana diorganisir dalam BARIS berdasarkan konsonan. Memahami sistem ini membuat hafalan jauh lebih mudah dan terstruktur.",
+        "examples": [
+          { "en": "あ行 (a-gyou) = baris A", "id": "あいうえお — sudah selesai di Chapter 1!" },
+          { "en": "か行 (ka-gyou) = baris Ka", "id": "かきくけこ — kita pelajari sekarang" },
+          { "en": "さ行 (sa-gyou) = baris Sa", "id": "さしすせそ — Chapter 2 stage 2" },
+          { "en": "Total: 10 baris utama", "id": "あかさたなはまやらわ + baris tambahan" }
+        ],
+        "tip": "Hafal urutan baris: あかさたなはまやらわ. Ini seperti 'alfabet' bahasa Jepang — sangat berguna untuk mencari kata di kamus!"
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Kata Nyata Baris Ka",
+        "body": "Kamu sudah bisa baca kata-kata Jepang berikut menggunakan baris Ka + vokal yang sudah dipelajari!",
+        "examples": [
+          { "en": "かお (kao)", "id": "Wajah — か + お" },
+          { "en": "いか (ika)", "id": "Cumi-cumi — い + か (kata yang sering ada di menu restoran!)" },
+          { "en": "かいけい (kaikei)", "id": "Bon/tagihan — sering dipakai di restoran Jepang" },
+          { "en": "うえき (ueki)", "id": "Tanaman pot — う + え + き" },
+          { "en": "おかえり (okaeri)", "id": "Selamat datang pulang — sapaan khas Jepang saat anggota keluarga pulang" }
+        ],
+        "tip": "Coba baca kata-kata ini keras-keras: か-お, い-か, お-か-え-り. Satu ketukan per huruf!"
+      },
+      {
+        "type": "culture",
+        "heading": "おかえり — Sapaan Khas Budaya Jepang",
+        "body": "Salah satu hal paling unik dalam budaya Jepang adalah sapaan saat pulang ke rumah. Ini ekspresi yang tidak ada padanannya di Indonesia:",
+        "examples": [
+          { "en": "おかえり / おかえりなさい", "id": "Diucapkan oleh orang yang di rumah kepada yang baru pulang" },
+          { "en": "ただいま (tadaima)", "id": "Diucapkan oleh orang yang baru pulang = 'Aku sudah pulang!'" },
+          { "en": "Pasangan wajib", "id": "ただいま! → おかえり! Selalu berpasangan seperti tanya-jawab" }
+        ],
+        "tip": "Di Jepang, ekspresi ini diucapkan setiap hari tanpa terkecuali — bahkan ke anggota keluarga yang sudah sangat dekat. Ini bentuk kehangatan keluarga Jepang."
+      }
+    ],
+    "practice": [
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "く dibaca...",
+          "options": ["ka", "ki", "ku", "ke"],
+          "correctAnswer": "ku",
+          "explanation": "く = ku. Ingat: baris Ka = K + vokal. か=ka, き=ki, く=ku, け=ke, こ=ko."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "かお artinya...",
+          "options": ["Tangan", "Wajah", "Kaki", "Hidung"],
+          "correctAnswer": "Wajah",
+          "explanation": "かお (kao) = wajah. Kata yang sangat umum dipakai dalam percakapan sehari-hari."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan huruf baris Ka dengan bunyinya!",
+          "pairs": [
+            { "word": "か", "meaning": "ka" },
+            { "word": "き", "meaning": "ki" },
+            { "word": "く", "meaning": "ku" },
+            { "word": "け", "meaning": "ke" },
+            { "word": "こ", "meaning": "ko" }
+          ],
+          "shuffledMeanings": ["ko", "ki", "ka", "ke", "ku"],
+          "explanation": "Baris Ka lengkap! か=ka, き=ki, く=ku, け=ke, こ=ko."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "い + か = ___ (artinya: cumi-cumi)",
+          "options": ["いか", "かい", "いき", "きい"],
+          "correctAnswer": "いか",
+          "explanation": "い (i) + か (ka) = いか (ika) = cumi-cumi. Baca dari kiri ke kanan, satu ketukan per huruf."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Respon yang benar untuk ただいま (tadaima) adalah...",
+          "options": ["おはよう", "おかえり", "こんにちは", "さようなら"],
+          "correctAnswer": "おかえり",
+          "explanation": "ただいま (saya sudah pulang!) → おかえり / おかえりなさい (selamat datang pulang!). Pasangan sapaan khas keluarga Jepang."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Baris Ka terdiri dari: か → き → く → け → ___",
+          "options": ["か", "き", "こ", "か"],
+          "correctAnswer": "こ",
+          "explanation": "こ (ko) adalah huruf terakhir baris Ka. Urutan: か-き-く-け-こ, mengikuti pola vokal A-I-U-E-O."
+        }
+      }
+    ]
+  },
+
+  "jac2s2": {
+    "title": "Baris Sa (さしすせそ)",
+    "intro": "Baris Sa adalah baris konsonan kedua. Ada SATU pengecualian penting di sini yang wajib dihafal: し tidak dibaca 'si' tapi 'shi'. Ini bukan kesalahan — ini memang aturan fonetik Jepang yang berbeda dari sistem romaji biasa.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "5 Huruf Baris Sa",
+        "body": "Baris Sa = konsonan S + vokal, KECUALI satu pengecualian penting:",
+        "examples": [
+          { "en": "さ (sa)", "id": "sa — seperti 'sa' dalam 'sapu'. Contoh: さかな (sakana) = ikan" },
+          { "en": "し (shi) ← PENGECUALIAN!", "id": "'shi' bukan 'si'. Seperti 'shi' dalam nama 'Shinta'. Contoh: しお (shio) = garam" },
+          { "en": "す (su)", "id": "su — seperti 'su' dalam 'suara'. Contoh: すし (sushi) = sushi!" },
+          { "en": "せ (se)", "id": "se — seperti 'se' dalam 'semua'. Contoh: せんせい (sensei) = guru" },
+          { "en": "そ (so)", "id": "so — seperti 'so' dalam 'sopan'. Contoh: そら (sora) = langit" }
+        ],
+        "tip": "WAJIB HAFAL: し = 'shi' selamanya. Tidak pernah 'si'. Ini bukan pilihan — ini fonetik Jepang!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Kenapa し = 'shi' dan Bukan 'si'?",
+        "body": "Ini bukan kesalahan atau keanehan — ini cara lidah Jepang bekerja secara fonetik. Ada beberapa bunyi dalam bahasa Jepang yang tidak mengikuti pola konsonan + vokal secara sempurna:",
+        "examples": [
+          { "en": "し (shi) → tidak bisa dibaca 'si'", "id": "Bunyi 's' sebelum 'i' di Jepang secara alami berubah menjadi 'sh'" },
+          { "en": "Analogi bahasa Indonesia", "id": "Seperti 'ny' dalam 'nyamuk' — konsonan berubah sesuai vokal setelahnya" },
+          { "en": "Pengecualian serupa akan datang", "id": "ち = 'chi' (bukan 'ti'), つ = 'tsu' (bukan 'tu') — pola yang sama di baris berikutnya" }
+        ],
+        "tip": "Hafal tiga pengecualian besar sekarang: し=shi, ち=chi, つ=tsu. Ketiganya akan keluar di ulangan!"
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Kata Nyata Baris Sa — yang Terkenal di Seluruh Dunia!",
+        "body": "Baris Sa mengandung salah satu kata Jepang paling terkenal di dunia:",
+        "examples": [
+          { "en": "すし (sushi)", "id": "Makanan Jepang paling terkenal — す + し" },
+          { "en": "さくら (sakura)", "id": "Bunga sakura — さ + く + ら (ra dari baris Ra)" },
+          { "en": "せんせい (sensei)", "id": "Guru — kata yang sudah masuk ke banyak bahasa lain!" },
+          { "en": "そら (sora)", "id": "Langit — そ + ら" },
+          { "en": "さむい (samui)", "id": "Dingin (cuaca) — sa + mu + i" }
+        ],
+        "tip": "Kamu sudah bisa baca すし (sushi)! Selamat — ini pencapaian kecil yang menyenangkan."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Latihan Pengucapan し",
+        "body": "Karena し adalah pengecualian pertama yang sering bikin pemula bingung, mari latihan lebih detail:",
+        "examples": [
+          { "en": "SALAH: 'si-o' untuk しお", "id": "Jangan: 'sioh'" },
+          { "en": "BENAR: 'shi-o' untuk しお", "id": "Benar: 'shio' (garam) — sh seperti dalam 'shop'" },
+          { "en": "SALAH: 'su-si' untuk すし", "id": "Jangan: 'susi'" },
+          { "en": "BENAR: 'su-shi' untuk すし", "id": "Benar: 'sushi' — ini yang selama ini kamu ucapkan dengan benar!" }
+        ],
+        "tip": "Kabar baik: kamu sudah sering mengucapkan 'sushi' dengan benar! Tinggal terapkan pola 'shi' ke semua situasi dengan huruf し."
+      }
+    ],
+    "practice": [
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "し dibaca...",
+          "options": ["si", "shi", "si'", "sy"],
+          "correctAnswer": "shi",
+          "explanation": "し selalu dibaca 'shi' — ini pengecualian fonetik Jepang yang wajib dihafal. Bukan 'si', bukan 'sy', hanya 'shi'."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "すし (sushi) artinya...",
+          "options": ["Ramen", "Sushi", "Tempura", "Miso"],
+          "correctAnswer": "Sushi",
+          "explanation": "すし = sushi! す=su + し=shi = sushi. Kata Jepang ini sudah masuk ke kamus dunia!"
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "さ → し → ___ → せ → そ",
+          "options": ["さ", "し", "す", "そ"],
+          "correctAnswer": "す",
+          "explanation": "す (su) ada di posisi ketiga baris Sa. Urutan lengkap: さ-し-す-せ-そ (sa-shi-su-se-so)."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan huruf baris Sa!",
+          "pairs": [
+            { "word": "さ", "meaning": "sa" },
+            { "word": "し", "meaning": "shi" },
+            { "word": "す", "meaning": "su" },
+            { "word": "せ", "meaning": "se" },
+            { "word": "そ", "meaning": "so" }
+          ],
+          "shuffledMeanings": ["so", "sa", "shi", "su", "se"],
+          "explanation": "Baris Sa lengkap! Ingat: し=shi, bukan si."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "せんせい artinya...",
+          "options": ["Murid", "Guru", "Sekolah", "Buku"],
+          "correctAnswer": "Guru",
+          "explanation": "せんせい (sensei) = guru. Kata ini sudah dikenal di banyak budaya pop dunia melalui anime dan manga!"
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "さかな (sakana) artinya ___ dalam bahasa Indonesia",
+          "options": ["Daging", "Ikan", "Sayur", "Buah"],
+          "correctAnswer": "Ikan",
+          "explanation": "さかな (sakana) = ikan. さ(sa) + か(ka) + な(na). な berasal dari baris Na yang akan dipelajari di Chapter 3."
+        }
+      }
+    ]
+  },
+
+  "jac2s3": {
+    "title": "Baris Ta (たちつてと)",
+    "intro": "Baris Ta punya DUA pengecualian sekaligus: ち dibaca 'chi' (bukan 'ti') dan つ dibaca 'tsu' (bukan 'tu'). Setelah ini, tidak ada lagi pengecualian besar sampai baris Ha. Hadapi dua ini sekarang dan kamu lebih dari separuh jalan!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "5 Huruf Baris Ta",
+        "body": "Baris Ta = konsonan T + vokal, dengan DUA pengecualian fonetik:",
+        "examples": [
+          { "en": "た (ta)", "id": "ta — seperti 'ta' dalam 'tahu'. Contoh: たべる (taberu) = makan" },
+          { "en": "ち (chi) ← PENGECUALIAN 1!", "id": "'chi' bukan 'ti'. Seperti 'chi' dalam 'China'. Contoh: ちち (chichi) = ayah (kata resmi)" },
+          { "en": "つ (tsu) ← PENGECUALIAN 2!", "id": "'tsu' bukan 'tu'. Seperti 'tsu' dalam nama 'Tsunami'. Contoh: つき (tsuki) = bulan" },
+          { "en": "て (te)", "id": "te — seperti 'te' dalam 'teman'. Contoh: てがみ (tegami) = surat" },
+          { "en": "と (to)", "id": "to — seperti 'to' dalam 'tolong'. Contoh: とり (tori) = burung" }
+        ],
+        "tip": "Ingat kata 'Tsunami'? Itu dari bahasa Jepang: つなみ (tsunami)! Kamu sudah familiar dengan bunyi つ."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Melatih Bunyi つ (tsu)",
+        "body": "つ adalah bunyi yang tidak ada dalam bahasa Indonesia, tapi sebenarnya tidak sulit:",
+        "examples": [
+          { "en": "Cara buat bunyi 'tsu':", "id": "Posisikan lidah seperti mau bilang 't', lalu tambahkan 's' sebelum 'u'. Seperti kucing mendesis: t-sss-u" },
+          { "en": "Latihan bertahap:", "id": "① 'ts' dulu tanpa vokal → ② tambahkan 'u' di belakang → ③ 'tsu' penuh" },
+          { "en": "Kata latihan:", "id": "つなみ (tsunami), つき (bulan), つくえ (meja belajar)" }
+        ],
+        "tip": "Tsunami = つなみ. Kata ini sudah masuk bahasa Indonesia! Sekarang kamu tahu cara tulisnya dalam hiragana."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Kata Nyata Baris Ta",
+        "body": "Setelah tahu baris Ta, kamu bisa baca beberapa kata penting berikut:",
+        "examples": [
+          { "en": "てがみ (tegami)", "id": "Surat (tulisan tangan) — て + が + み" },
+          { "en": "とけい (tokei)", "id": "Jam/arloji — と + け + い" },
+          { "en": "つき (tsuki)", "id": "Bulan (benda langit) — つ + き" },
+          { "en": "たこ (tako)", "id": "Gurita — た + こ (juga nama makanan: たこやき = takoyaki!)" },
+          { "en": "ちかてつ (chikatetsu)", "id": "Kereta bawah tanah / MRT — ち + か + て + つ" }
+        ],
+        "tip": "ちかてつ (chikatetsu) = MRT/subway. Kata yang sangat berguna kalau kamu pergi ke Jepang!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Tiga Pengecualian Besar Hiragana — Ringkasan",
+        "body": "Setelah baris Ta, kamu sudah tahu SEMUA pengecualian utama hiragana. Ringkasan untuk hafalan:",
+        "examples": [
+          { "en": "し (shi) — baris Sa", "id": "Bukan 'si'. Ingat: sushi, sensei" },
+          { "en": "ち (chi) — baris Ta", "id": "Bukan 'ti'. Ingat: chikatetsu (MRT), chichi (ayah)" },
+          { "en": "つ (tsu) — baris Ta", "id": "Bukan 'tu'. Ingat: tsunami, tsuki (bulan)" }
+        ],
+        "tip": "Hafalkan kalimat ini: 'SHI-CHI-TSU' — tiga pengecualian hiragana. Kalau kamu hafal ini, kamu hafal semua!"
+      }
+    ],
+    "practice": [
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "ち dibaca...",
+          "options": ["ti", "ci", "chi", "tsi"],
+          "correctAnswer": "chi",
+          "explanation": "ち = chi. Sama seperti bunyi 'ch' dalam 'China' atau 'chip'. Ini pengecualian kedua baris Ta setelah つ=tsu."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Kata つなみ (tsunami) artinya...",
+          "options": ["Angin topan", "Gempa bumi", "Gelombang laut raksasa", "Banjir"],
+          "correctAnswer": "Gelombang laut raksasa",
+          "explanation": "つなみ = tsunami = gelombang laut raksasa. Kata ini berasal dari bahasa Jepang dan sudah diadopsi seluruh dunia. Sekarang kamu bisa tulisnya dalam hiragana!"
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "た → ち → ___ → て → と",
+          "options": ["た", "ち", "つ", "と"],
+          "correctAnswer": "つ",
+          "explanation": "つ (tsu) ada di posisi ketiga baris Ta. Urutan: た-ち-つ-て-と (ta-chi-tsu-te-to)."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan huruf baris Ta!",
+          "pairs": [
+            { "word": "た", "meaning": "ta" },
+            { "word": "ち", "meaning": "chi" },
+            { "word": "つ", "meaning": "tsu" },
+            { "word": "て", "meaning": "te" },
+            { "word": "と", "meaning": "to" }
+          ],
+          "shuffledMeanings": ["to", "ta", "tsu", "te", "chi"],
+          "explanation": "Baris Ta lengkap! た=ta, ち=chi, つ=tsu, て=te, と=to."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Tiga pengecualian utama hiragana adalah...",
+          "options": [
+            "か=ka, さ=sa, た=ta",
+            "し=shi, ち=chi, つ=tsu",
+            "く=ku, す=su, つ=tsu",
+            "き=ki, し=shi, て=te"
+          ],
+          "correctAnswer": "し=shi, ち=chi, つ=tsu",
+          "explanation": "Tiga serangkai yang wajib hafal: shi-chi-tsu (SHI-CHI-TSU). Ini semua pengecualian fonetik utama hiragana dasar."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "たこやき (takoyaki) adalah makanan Jepang yang terbuat dari...",
+          "options": ["Nasi", "Mie", "Gurita", "Ikan"],
+          "correctAnswer": "Gurita",
+          "explanation": "たこ (tako) = gurita, やき (yaki) = dipanggang/dimasak. Takoyaki = bola-bola gurita panggang. Kamu sudah bisa baca nama makanannya!"
+        }
+      }
+    ]
+  },
+
+  "jac2s4": {
+    "title": "Quiz Campur Ka-Sa-Ta",
+    "intro": "Tiga baris sekaligus dalam satu ujian! Ini latihan penting untuk memastikan kamu tidak mencampuradukkan huruf dari baris yang berbeda. Fokus pada tiga pengecualian: し=shi, ち=chi, つ=tsu.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Rekap Cepat 3 Baris",
+        "body": "Sebelum quiz, lihat lagi semua 15 huruf dari tiga baris:",
+        "examples": [
+          { "en": "か行: か き く け こ", "id": "ka - ki - ku - ke - ko" },
+          { "en": "さ行: さ し す せ そ", "id": "sa - SHI - su - se - so" },
+          { "en": "た行: た ち つ て と", "id": "ta - CHI - TSU - te - to" }
+        ],
+        "tip": "Huruf besar = pengecualian. Pastikan tiga ini sudah melekat: し=SHI, ち=CHI, つ=TSU."
+      },
+      {
+        "type": "grammar",
+        "heading": "Kata-Kata Campur 3 Baris",
+        "body": "Kamu sekarang sudah bisa baca kata-kata berikut menggunakan huruf dari ke-3 baris!",
+        "examples": [
+          { "en": "かさ (kasa)", "id": "Payung — か + さ (Ka + Sa)" },
+          { "en": "さかな (sakana)", "id": "Ikan — さ + か + な (Sa + Ka + Na*)" },
+          { "en": "ちかてつ (chikatetsu)", "id": "MRT/Subway — ち + か + て + つ (Ta + Ka + Ta + Ta)" },
+          { "en": "こたつ (kotatsu)", "id": "Meja pemanas khas Jepang — こ + た + つ (Ka + Ta + Ta)" },
+          { "en": "すきやき (sukiyaki)", "id": "Makanan Jepang terkenal — す + き + や + き" }
+        ],
+        "tip": "*な berasal dari baris Na (Chapter 3). Untuk sekarang, cukup ingat bentuk dan bunyinya saja."
+      }
+    ],
+    "practice": [
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Dari pilihan berikut, mana yang SALAH?",
+          "options": ["か=ka", "し=si", "く=ku", "て=te"],
+          "correctAnswer": "し=si",
+          "explanation": "し=SI itu SALAH! し harus dibaca 'shi'. Ini adalah pengecualian terpenting yang paling sering dilupakan pemula."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan huruf campur Ka-Sa-Ta!",
+          "pairs": [
+            { "word": "き", "meaning": "ki" },
+            { "word": "し", "meaning": "shi" },
+            { "word": "ち", "meaning": "chi" },
+            { "word": "つ", "meaning": "tsu" },
+            { "word": "こ", "meaning": "ko" }
+          ],
+          "shuffledMeanings": ["tsu", "ki", "ko", "chi", "shi"],
+          "explanation": "Campur 3 baris sekaligus. Kunci: し=shi (bukan si), ち=chi (bukan ti), つ=tsu (bukan tu)."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "すし (sushi) = ___ + ___",
+          "options": ["su + shi", "su + si", "su + chi", "sa + shi"],
+          "correctAnswer": "su + shi",
+          "explanation": "すし = su (す) + shi (し) = sushi. Dua huruf dari dua baris berbeda: す dari baris Sa, し juga dari baris Sa!"
+        }
+      },
+      {
+        "type": "listening_quiz", "xpReward": 15,
+        "content": {
+          "audioText": "ka ki ku ke ko, sa shi su se so, ta chi tsu te to",
+          "question": "Berapa total huruf yang didengar dari 3 baris?",
+          "options": ["10", "12", "15", "20"],
+          "correctAnswer": "15",
+          "explanation": "5 huruf × 3 baris = 15 huruf. Kamu sudah menguasai 15 dari 46 huruf hiragana dasar — lebih dari sepertiga!"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "ちかてつ artinya...",
+          "options": ["Bis kota", "Kereta bawah tanah", "Taksi", "Sepeda"],
+          "correctAnswer": "Kereta bawah tanah",
+          "explanation": "ちかてつ (chikatetsu) = kereta bawah tanah / subway / MRT. Kata yang sangat berguna saat berkunjung ke kota-kota besar Jepang!"
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "こたつ = ___ (peralatan rumah tangga khas Jepang)",
+          "options": ["Kulkas", "Meja pemanas", "AC", "Kompor"],
+          "correctAnswer": "Meja pemanas",
+          "explanation": "こたつ (kotatsu) = meja rendah dengan pemanas di bawahnya, khas musim dingin Jepang. こ(ko)+た(ta)+つ(tsu)."
+        }
+      }
+    ]
+  },
+
+  "jac2s5": {
+    "title": "Review Chapter 2",
+    "intro": "Chapter 2 selesai! Kamu sudah menguasai 15 huruf baru (baris Ka, Sa, Ta) plus memahami tiga pengecualian terpenting hiragana. Total hiragana yang kamu kuasai sekarang: 20 huruf (5 vokal + 15 konsonan pertama)!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Pencapaian Chapter 2",
+        "body": "Ini yang sudah kamu kuasai setelah Chapter 2:",
+        "examples": [
+          { "en": "か行 (5 huruf): か き く け こ", "id": "ka ki ku ke ko — semua reguler" },
+          { "en": "さ行 (5 huruf): さ し す せ そ", "id": "sa SHI su se so — ingat shi!" },
+          { "en": "た行 (5 huruf): た ち つ て と", "id": "ta CHI TSU te to — ingat chi dan tsu!" },
+          { "en": "3 pengecualian: shi-chi-tsu", "id": "Ini kunci sukses membaca hiragana dengan benar" }
+        ],
+        "tip": "20 dari 46 huruf sudah dikuasai = hampir separuh hiragana dasar selesai!"
+      }
+    ],
+    "practice": [
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Review total Chapter 2!",
+          "pairs": [
+            { "word": "か", "meaning": "ka" },
+            { "word": "し", "meaning": "shi" },
+            { "word": "つ", "meaning": "tsu" },
+            { "word": "せんせい", "meaning": "Guru" },
+            { "word": "すし", "meaning": "Sushi" }
+          ],
+          "shuffledMeanings": ["Sushi", "tsu", "Guru", "ka", "shi"],
+          "explanation": "Chapter 2 selesai! Baris Ka, Sa, Ta sudah dikuasai."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "さかな artinya...",
+          "options": ["Sayuran", "Ikan", "Daging", "Buah"],
+          "correctAnswer": "Ikan",
+          "explanation": "さかな (sakana) = ikan. Kata ini sangat sering muncul di menu restoran Jepang."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Tiga pengecualian hiragana yang wajib dihafal: ___ = shi, ___ = chi, ___ = tsu",
+          "options": ["し/ち/つ", "さ/た/と", "す/て/か", "き/く/こ"],
+          "correctAnswer": "し/ち/つ",
+          "explanation": "し(shi), ち(chi), つ(tsu) — tiga serangkai pengecualian fonetik hiragana. Hafal ini = kuasai pondasi bacaan Jepang."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Berapa huruf hiragana yang sudah dikuasai setelah Chapter 2?",
+          "options": ["10 huruf", "15 huruf", "20 huruf", "25 huruf"],
+          "correctAnswer": "20 huruf",
+          "explanation": "5 vokal (Chapter 1) + 5 baris Ka + 5 baris Sa + 5 baris Ta = 20 huruf. Hampir separuh dari 46 hiragana dasar!"
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Baca kata-kata menggunakan huruf baris Ka-Sa-Ta!",
+          "pairs": [
+            { "word": "かさ", "meaning": "Payung" },
+            { "word": "ちかてつ", "meaning": "Kereta bawah tanah" },
+            { "word": "こたつ", "meaning": "Meja pemanas" }
+          ],
+          "shuffledMeanings": ["Meja pemanas", "Payung", "Kereta bawah tanah"],
+          "explanation": "Hebat! Kamu sudah bisa baca kata nyata menggunakan hiragana."
+        }
+      }
+    ]
+  },
+
+  "jac3s1": {
+    "title": "Baris Na (なにぬねの)",
+    "intro": "Baris Na adalah salah satu baris paling REGULER dan mudah di hiragana — tidak ada pengecualian sama sekali! Selain itu, の (no) adalah partikel yang paling sering kamu temukan di tulisan Jepang. Pelajari baris ini dengan santai!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "5 Huruf Baris Na",
+        "body": "Baris Na = N + vokal. Semuanya reguler, tidak ada pengecualian!",
+        "examples": [
+          { "en": "な (na)", "id": "na — Contoh: なに (nani) = apa" },
+          { "en": "に (ni)", "id": "ni — Contoh: にほん (nihon) = Jepang" },
+          { "en": "ぬ (nu)", "id": "nu — Contoh: ぬこ (nuko) = kucing (bahasa slang/lucu)" },
+          { "en": "ね (ne)", "id": "ne — Contoh: ねこ (neko) = kucing (resmi)" },
+          { "en": "の (no)", "id": "no — PARTIKEL TERPENTING! Artinya: 'kepunyaan/dari'" }
+        ],
+        "tip": "の (no) adalah partikel yang akan kamu lihat di MANA-MANA dalam tulisan Jepang. Prioritaskan hafalan ini!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Partikel の — Kepunyaan dan Penghubung",
+        "body": "の adalah partikel yang menghubungkan dua kata benda, mirip dengan 'of' dalam bahasa Inggris atau '-nya' dalam bahasa Indonesia:",
+        "examples": [
+          { "en": "わたしの (watashi no)", "id": "Punyaku / milik saya — わたし (saya) + の" },
+          { "en": "にほんのくるま", "id": "Mobil Jepang = Jepang + の + mobil" },
+          { "en": "ねこのなまえ", "id": "Nama kucing = kucing + の + nama" },
+          { "en": "Pola: A の B", "id": "= B yang dimiliki/berasal dari A" }
+        ],
+        "tip": "Pola A の B sangat produktif. Setelah hafal の, kamu bisa buat ratusan frasa baru dengan menggabungkan kata benda!"
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Kata Nyata Baris Na",
+        "body": "Berikut kata-kata yang bisa kamu baca setelah menguasai baris Na:",
+        "examples": [
+          { "en": "なに (nani)", "id": "Apa — kata tanya paling dasar!" },
+          { "en": "にほん (nihon)", "id": "Jepang — に + ほ + ん (ほ dari baris Ha, ん khusus)" },
+          { "en": "ねこ (neko)", "id": "Kucing — ね + こ" },
+          { "en": "いぬ (inu)", "id": "Anjing — い + ぬ" },
+          { "en": "にく (niku)", "id": "Daging — に + く" }
+        ],
+        "tip": "ねこ (neko) dan いぬ (inu) adalah kata pertama yang dipelajari hampir semua pelajar Jepang. Selamat berkenalan!"
+      },
+      {
+        "type": "culture",
+        "heading": "ねこ vs いぬ — Budaya Hewan Peliharaan di Jepang",
+        "body": "Jepang terkenal dengan kecintaan pada kucing (ねこ). Ada banyak 'nekocafe' (kafe kucing) dan bahkan pulau kucing!",
+        "examples": [
+          { "en": "ねこカフェ (neko cafe)", "id": "Kafe kucing — tempat ngopi sambil bermain dengan kucing. Sangat populer di Jepang!" },
+          { "en": "猫島 (neko shima)", "id": "Pulau kucing — ada pulau di Jepang yang penduduknya lebih banyak kucing dari manusia" },
+          { "en": "なでなで (nade nade)", "id": "Mengelus-elus — kata onomatope imut untuk membelai hewan" }
+        ],
+        "tip": "Fakta: Jepang punya 'Hari Kucing Nasional' pada tanggal 22 Februari (2/22) karena 2/22 dibaca ni-ni-ni yang mirip bunyi 'nyan nyan nyan' (meong meong meong)!"
+      }
+    ],
+    "practice": [
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "の dalam kalimat 'わたしのねこ' berfungsi sebagai...",
+          "options": ["Kata kerja", "Partikel kepunyaan", "Kata tanya", "Kata bilangan"],
+          "correctAnswer": "Partikel kepunyaan",
+          "explanation": "わたしのねこ = kucingku (kucing milik saya). の = partikel kepunyaan yang menghubungkan pemilik + barang yang dimiliki."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "ねこ artinya...",
+          "options": ["Anjing", "Kucing", "Ikan", "Burung"],
+          "correctAnswer": "Kucing",
+          "explanation": "ねこ (neko) = kucing. Salah satu kata Jepang paling pertama yang dipelajari karena Jepang sangat terkenal dengan budaya kucingnya!"
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan huruf baris Na!",
+          "pairs": [
+            { "word": "な", "meaning": "na" },
+            { "word": "に", "meaning": "ni" },
+            { "word": "ぬ", "meaning": "nu" },
+            { "word": "ね", "meaning": "ne" },
+            { "word": "の", "meaning": "no" }
+          ],
+          "shuffledMeanings": ["no", "na", "ni", "ne", "nu"],
+          "explanation": "Baris Na lengkap — semuanya reguler! Tidak ada pengecualian di baris ini."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "わたし___ ねこ = 'kucingku' (kucing milik saya)",
+          "options": ["は", "の", "を", "に"],
+          "correctAnswer": "の",
+          "explanation": "わたし の ねこ = kucingku. Pola: [pemilik] の [yang dimiliki]. の = partikel kepunyaan."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "なに (nani) artinya...",
+          "options": ["Di mana", "Siapa", "Apa", "Kapan"],
+          "correctAnswer": "Apa",
+          "explanation": "なに (nani) = apa. Ini kata tanya yang paling dasar dalam bahasa Jepang. Akan sangat sering kamu pakai!"
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "にほん artinya ___",
+          "options": ["Korea", "Cina", "Jepang", "Indonesia"],
+          "correctAnswer": "Jepang",
+          "explanation": "にほん (nihon) atau にっぽん (nippon) = Jepang. Ini nama resmi negara Jepang dalam bahasa Jepang sendiri!"
+        }
+      }
+    ]
+  },
+
+  "jac3s2": {
+    "title": "Baris Ha (はひふへほ)",
+    "intro": "Baris Ha punya pengecualian menarik: ふ dibaca 'fu' (bukan 'hu'), dan yang lebih penting — は bisa dibaca 'wa' ketika berfungsi sebagai partikel kalimat! Kamu sudah lihat ini di こんにちは. Sekarang saatnya memahami aturannya secara penuh.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "5 Huruf Baris Ha",
+        "body": "Baris Ha = H + vokal, dengan satu pengecualian fonetik dan satu aturan partikel:",
+        "examples": [
+          { "en": "は (ha/wa)", "id": "ha — sebagai huruf biasa. Tapi dibaca 'WA' sebagai partikel kalimat!" },
+          { "en": "ひ (hi)", "id": "hi — seperti 'hi' dalam 'hina'. Contoh: ひと (hito) = orang" },
+          { "en": "ふ (fu) ← PENGECUALIAN!", "id": "'fu' bukan 'hu'. Tiupkan udara lembut dari bibir bawah ke atas. Contoh: ふじさん (Fujisan) = Gunung Fuji" },
+          { "en": "へ (he/e)", "id": "he — sebagai huruf biasa. Dibaca 'E' sebagai partikel arah!" },
+          { "en": "ほ (ho)", "id": "ho — seperti 'ho' dalam 'hobby'. Contoh: ほん (hon) = buku" }
+        ],
+        "tip": "Dua partikel penting hari ini: は (wa) = partikel topik kalimat, へ (e) = partikel arah/menuju."
+      },
+      {
+        "type": "grammar",
+        "heading": "Partikel は (wa) — Topik Kalimat",
+        "body": "は adalah partikel paling fundamental dalam tata bahasa Jepang. Ini menandai TOPIK dari kalimat:",
+        "examples": [
+          { "en": "わたし は がくせい です", "id": "Saya adalah pelajar. (watashi=saya, wa=topik, gakusei=pelajar, desu=adalah)" },
+          { "en": "これ は ほん です", "id": "Ini adalah buku. (kore=ini, wa=topik, hon=buku, desu=adalah)" },
+          { "en": "Pola dasar:", "id": "[topik] は [keterangan] です = [topik] adalah [keterangan]" }
+        ],
+        "tip": "Pola 〜は〜です adalah kalimat Jepang paling dasar. Hafalkan ini — ini fondasi semua percakapan!"
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan ふ (fu)",
+        "body": "ふ adalah bunyi yang tidak ada dalam bahasa Indonesia. Mirip 'f' tapi lebih lembut:",
+        "examples": [
+          { "en": "Bukan 'h' seperti dalam 'hujan'", "id": "Kalau pakai 'h', yang keluar adalah huruf は (ha), bukan ふ (fu)" },
+          { "en": "Tiup udara lembut dari bibir bawah ke atas", "id": "Mirip bunyi 'f' dalam 'film', tapi lebih lembut — hampir seperti meniup lilin dari jarak jauh" },
+          { "en": "Latihan kata:", "id": "ふじさん (Fujisan), ふとん (futon=kasur tipis Jepang), ふたり (futari=dua orang)" }
+        ],
+        "tip": "Kata 'futon' (ふとん) sudah masuk kamus internasional! Kamu sudah familiar dengan bunyi ふ tanpa sadar."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Kata Nyata Baris Ha",
+        "body": "Beberapa kata penting menggunakan huruf baris Ha:",
+        "examples": [
+          { "en": "ほん (hon)", "id": "Buku — ほ + ん" },
+          { "en": "はな (hana)", "id": "Bunga / Hidung — は + な (konteks menentukan arti!)" },
+          { "en": "ひと (hito)", "id": "Orang — ひ + と" },
+          { "en": "はし (hashi)", "id": "Sumpit / Jembatan — は + し (lagi-lagi konteks!)" },
+          { "en": "ふじさん (fujisan)", "id": "Gunung Fuji — ふ + じ + さ + ん" }
+        ],
+        "tip": "Perhatikan: はな bisa 'bunga' atau 'hidung', はし bisa 'sumpit' atau 'jembatan'. Konteks dan intonasi menentukan arti!"
+      }
+    ],
+    "practice": [
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "ふ dibaca...",
+          "options": ["hu", "fu", "pu", "bu"],
+          "correctAnswer": "fu",
+          "explanation": "ふ = fu, bukan 'hu'. Bunyi 'f' lembut dari bibir bawah ke atas. Ingat kata 'futon' dan 'Fujisan'!"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Dalam kalimat 'わたしは がくせい です', は dibaca...",
+          "options": ["ha", "wa", "ba", "fa"],
+          "correctAnswer": "wa",
+          "explanation": "は sebagai partikel kalimat selalu dibaca 'wa'. Dalam kalimat ini, は menandai 'わたし (saya)' sebagai topik pembicaraan."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan huruf baris Ha!",
+          "pairs": [
+            { "word": "は", "meaning": "ha (wa sbg partikel)" },
+            { "word": "ひ", "meaning": "hi" },
+            { "word": "ふ", "meaning": "fu" },
+            { "word": "へ", "meaning": "he (e sbg partikel)" },
+            { "word": "ほ", "meaning": "ho" }
+          ],
+          "shuffledMeanings": ["he (e sbg partikel)", "fu", "ha (wa sbg partikel)", "ho", "hi"],
+          "explanation": "Baris Ha: は=ha/wa, ひ=hi, ふ=fu, へ=he/e, ほ=ho."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "わたし ___ がくせい です (Saya adalah pelajar)",
+          "options": ["の", "は", "を", "に"],
+          "correctAnswer": "は",
+          "explanation": "わたし は がくせい です. は = partikel topik yang menandai 'watashi' sebagai topik. Dibaca 'wa' di sini."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "ほん artinya...",
+          "options": ["Pensil", "Buku", "Tas", "Meja"],
+          "correctAnswer": "Buku",
+          "explanation": "ほん (hon) = buku. Kata sederhana dan sangat sering dipakai. Kombinasi ほ (ho) + ん (n khusus)."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "ふじさん dalam bahasa Indonesia artinya...",
+          "options": ["Gunung Fuji", "Kota Fuji", "Danau Fuji", "Pantai Fuji"],
+          "correctAnswer": "Gunung Fuji",
+          "explanation": "ふじさん = Fuji + san (さん = gunung dalam nama gunung). Gunung Fuji adalah gunung tertinggi di Jepang dan ikon negara tersebut."
+        }
+      }
+    ]
+  },
+
+  "jac3s3": {
+    "title": "Baris Ma & Ya",
+    "intro": "Dua baris sekaligus! Baris Ma reguler dan mudah. Baris Ya unik karena hanya punya 3 huruf (bukan 5) — bunyi 'yi' dan 'ye' tidak ada dalam fonetik Jepang. Ini bukan kekurangan, ini memang sistem fonetiknya!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Baris Ma (まみむめも) — 5 Huruf Reguler",
+        "body": "Baris Ma = M + vokal. Semuanya reguler, tidak ada pengecualian!",
+        "examples": [
+          { "en": "ま (ma)", "id": "ma — Contoh: まいにち (mainichi) = setiap hari" },
+          { "en": "み (mi)", "id": "mi — Contoh: みず (mizu) = air" },
+          { "en": "む (mu)", "id": "mu — Contoh: むし (mushi) = serangga/insekt" },
+          { "en": "め (me)", "id": "me — Contoh: め (me) = mata" },
+          { "en": "も (mo)", "id": "mo — Partikel 'juga'! Contoh: わたしも (watashi mo) = saya juga" }
+        ],
+        "tip": "も (mo) adalah partikel penting yang berarti 'juga'. Sangat sering dipakai dalam percakapan!"
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Baris Ya (やゆよ) — Hanya 3 Huruf",
+        "body": "Baris Ya istimewa: hanya ada 3 huruf karena 'yi' dan 'ye' tidak ada dalam fonetik Jepang kuno:",
+        "examples": [
+          { "en": "や (ya)", "id": "ya — Contoh: やま (yama) = gunung" },
+          { "en": "ゆ (yu)", "id": "yu — Contoh: ゆき (yuki) = salju" },
+          { "en": "よ (yo)", "id": "yo — Contoh: よる (yoru) = malam" },
+          { "en": "(yi = tidak ada)", "id": "Bunyi 'yi' tidak ada dalam sistem fonetik Jepang" },
+          { "en": "(ye = tidak ada)", "id": "Bunyi 'ye' juga tidak ada" }
+        ],
+        "tip": "Baris Ya sangat penting karena huruf-hurufnya juga digunakan dalam 'kombinasi huruf kecil' (yōon) nanti — ky, sh, ch, dll."
+      },
+      {
+        "type": "grammar",
+        "heading": "Partikel も (mo) — Juga/Pun",
+        "body": "も adalah partikel yang menggantikan は untuk menunjukkan 'juga' atau 'pun':",
+        "examples": [
+          { "en": "わたしは がくせい です", "id": "Saya adalah pelajar." },
+          { "en": "あなた も がくせい です か?", "id": "Apakah kamu JUGA pelajar? (anata=kamu, mo=juga, ka=tanda tanya)" },
+          { "en": "わたし も すし が すき です", "id": "Saya JUGA suka sushi." }
+        ],
+        "tip": "も menggantikan は (bukan ditambahkan setelahnya). Salah: わたしはも. Benar: わたしも."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Kata Nyata Baris Ma & Ya",
+        "body": "Kamu sudah bisa baca kata-kata berikut dengan baris Ma dan Ya:",
+        "examples": [
+          { "en": "やま (yama)", "id": "Gunung — yang sering muncul dalam nama tempat di Jepang" },
+          { "en": "ゆき (yuki)", "id": "Salju — juga nama orang perempuan yang populer!" },
+          { "en": "みず (mizu)", "id": "Air — kata penting sehari-hari" },
+          { "en": "まいにち (mainichi)", "id": "Setiap hari — ま + い + に + ち" },
+          { "en": "よる (yoru)", "id": "Malam — digunakan dalam sapaan よるごはん (yoru gohan) = makan malam" }
+        ],
+        "tip": "やま muncul di banyak nama tempat: Yamagata, Yamamoto, Yamashita. Kamu sekarang bisa baca semua nama itu!"
+      }
+    ],
+    "practice": [
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Baris Ya hanya punya 3 huruf karena...",
+          "options": [
+            "Ada huruf yang dilupakan saat membuat hiragana",
+            "Bunyi 'yi' dan 'ye' tidak ada dalam fonetik Jepang",
+            "Terlalu sulit untuk ditulis",
+            "Baris Ya sebenarnya punya 5 huruf"
+          ],
+          "correctAnswer": "Bunyi 'yi' dan 'ye' tidak ada dalam fonetik Jepang",
+          "explanation": "Baris Ya = ya, yu, yo. Bunyi 'yi' dan 'ye' memang tidak ada dalam sistem fonetik bahasa Jepang, sehingga hurufnya pun tidak ada."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan baris Ma!",
+          "pairs": [
+            { "word": "ま", "meaning": "ma" },
+            { "word": "み", "meaning": "mi" },
+            { "word": "む", "meaning": "mu" },
+            { "word": "め", "meaning": "me" },
+            { "word": "も", "meaning": "mo (juga)" }
+          ],
+          "shuffledMeanings": ["me", "ma", "mo (juga)", "mu", "mi"],
+          "explanation": "Baris Ma lengkap! Ingat: も bisa jadi partikel 'juga'."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan baris Ya (3 huruf)!",
+          "pairs": [
+            { "word": "や", "meaning": "ya" },
+            { "word": "ゆ", "meaning": "yu" },
+            { "word": "よ", "meaning": "yo" }
+          ],
+          "shuffledMeanings": ["yo", "ya", "yu"],
+          "explanation": "Baris Ya = ya, yu, yo. Hanya 3 huruf!"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "やま artinya...",
+          "options": ["Laut", "Sungai", "Gunung", "Danau"],
+          "correctAnswer": "Gunung",
+          "explanation": "やま (yama) = gunung. Sangat sering muncul dalam nama tempat dan nama orang di Jepang."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "わたし___ すし が すき です (Saya JUGA suka sushi)",
+          "options": ["は", "の", "も", "を"],
+          "correctAnswer": "も",
+          "explanation": "も (mo) = juga/pun. Partikel yang digunakan saat ingin menyatakan hal yang sama berlaku juga untuk subjek baru."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "ゆき bisa berarti...",
+          "options": ["Panas dan nama buah", "Salju dan nama orang perempuan", "Hujan dan nama kota", "Angin dan nama gunung"],
+          "correctAnswer": "Salju dan nama orang perempuan",
+          "explanation": "ゆき (yuki) = salju, dan juga nama perempuan Jepang yang populer. Banyak kata Jepang memiliki makna ganda!"
+        }
+      }
+    ]
+  },
+
+  "jac3s4": {
+    "title": "Kata Sederhana Hiragana",
+    "intro": "Saatnya membaca kata-kata nyata menggunakan semua hiragana yang sudah dipelajari! Di tahap ini kamu sudah menguasai lebih dari 30 huruf — cukup untuk membaca banyak kata sehari-hari. Mari praktikkan!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Kosakata Sehari-hari",
+        "body": "Kata-kata berikut semua bisa dibaca dengan hiragana yang sudah kamu kuasai:",
+        "examples": [
+          { "en": "やま (yama)", "id": "Gunung" },
+          { "en": "かわ (kawa)", "id": "Sungai" },
+          { "en": "うみ (umi)", "id": "Laut" },
+          { "en": "はな (hana)", "id": "Bunga" },
+          { "en": "きのこ (kinoko)", "id": "Jamur" },
+          { "en": "さかな (sakana)", "id": "Ikan" },
+          { "en": "ねこ (neko)", "id": "Kucing" },
+          { "en": "いぬ (inu)", "id": "Anjing" }
+        ],
+        "tip": "Coba tempel sticky note di benda-benda di sekitar rumah dengan nama hiragana-nya! Cara belajar yang sangat efektif."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Kosakata Makanan",
+        "body": "Makanan Jepang yang namanya bisa kamu baca sekarang:",
+        "examples": [
+          { "en": "すし (sushi)", "id": "Sushi" },
+          { "en": "うめ (ume)", "id": "Plum asam Jepang" },
+          { "en": "みそ (miso)", "id": "Miso — pasta fermentasi kedelai" },
+          { "en": "もも (momo)", "id": "Persik" },
+          { "en": "なす (nasu)", "id": "Terong" }
+        ],
+        "tip": "Banyak nama makanan Jepang ditulis dalam hiragana atau katakana. Dengan hiragana, kamu sudah bisa baca menu tradisional!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Kalimat Pertama: Pola A は B です",
+        "body": "Mari gunakan kosakata baru dalam kalimat nyata menggunakan pola dasar yang sudah dipelajari:",
+        "examples": [
+          { "en": "これは ねこ です", "id": "Ini adalah kucing. (kore=ini, wa, neko=kucing, desu=adalah)" },
+          { "en": "あれは やま です", "id": "Itu adalah gunung. (are=itu, wa, yama=gunung, desu)" },
+          { "en": "わたしは にほんじん では ありません", "id": "Saya bukan orang Jepang. (bentuk negatif — untuk referensi)" }
+        ],
+        "tip": "Kamu sudah bisa buat kalimat nyata bahasa Jepang! Coba ganti kata benda dengan kosakata yang sudah dipelajari."
+      }
+    ],
+    "practice": [
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata dengan artinya!",
+          "pairs": [
+            { "word": "やま", "meaning": "Gunung" },
+            { "word": "うみ", "meaning": "Laut" },
+            { "word": "はな", "meaning": "Bunga" },
+            { "word": "かわ", "meaning": "Sungai" },
+            { "word": "きのこ", "meaning": "Jamur" }
+          ],
+          "shuffledMeanings": ["Sungai", "Gunung", "Jamur", "Bunga", "Laut"],
+          "explanation": "Kosakata alam dalam bahasa Jepang. Semua bisa dibaca dengan hiragana!"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "みそ adalah...",
+          "options": ["Jenis ikan", "Pasta fermentasi kedelai Jepang", "Jenis nasi", "Nama sayuran"],
+          "correctAnswer": "Pasta fermentasi kedelai Jepang",
+          "explanation": "みそ (miso) = pasta fermentasi kedelai, bahan dasar みそしる (misoshiru) = sup miso yang dimakan setiap hari di Jepang."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "これは ___ です (Ini adalah kucing)",
+          "options": ["いぬ", "ねこ", "さかな", "はな"],
+          "correctAnswer": "ねこ",
+          "explanation": "ねこ (neko) = kucing. Kalimat lengkap: これは ねこ です = Ini adalah kucing."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Kalimat 'あれは やま です' artinya...",
+          "options": [
+            "Ini adalah sungai",
+            "Itu adalah gunung",
+            "Ini adalah laut",
+            "Itu adalah hutan"
+          ],
+          "correctAnswer": "Itu adalah gunung",
+          "explanation": "あれ = itu (jauh), は = partikel topik, やま = gunung, です = adalah. = 'Itu adalah gunung'."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "もも artinya ___ dalam bahasa Indonesia",
+          "options": ["Apel", "Jeruk", "Persik", "Pisang"],
+          "correctAnswer": "Persik",
+          "explanation": "もも (momo) = persik/peach. Buah yang sangat populer di Jepang, terutama dari Yamanashi."
+        }
+      }
+    ]
+  },
+
+  "jac3s5": {
+    "title": "Review Chapter 3",
+    "intro": "Chapter 3 selesai! Kamu sudah menambah 13 huruf baru (Na, Ha, Ma, Ya) plus mulai belajar partikel penting seperti は, の, dan も. Total hiragana sekarang: 33 huruf!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Pencapaian Chapter 3",
+        "body": "Review semua yang sudah dipelajari:",
+        "examples": [
+          { "en": "な行: な に ぬ ね の", "id": "na ni nu ne no — reguler + の sebagai partikel kepunyaan" },
+          { "en": "は行: は ひ ふ へ ほ", "id": "ha hi FU he ho — ふ=fu, は=wa sbg partikel" },
+          { "en": "ま行: ま み む め も", "id": "ma mi mu me mo — も sebagai partikel 'juga'" },
+          { "en": "や行: や ゆ よ", "id": "ya yu yo — hanya 3 huruf!" }
+        ],
+        "tip": "33 dari 46 huruf dasar = 72%! Kamu hampir menyelesaikan semua hiragana."
+      }
+    ],
+    "practice": [
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Review Chapter 3 — cocokkan semuanya!",
+          "pairs": [
+            { "word": "ねこ", "meaning": "Kucing" },
+            { "word": "やま", "meaning": "Gunung" },
+            { "word": "みず", "meaning": "Air" },
+            { "word": "ほん", "meaning": "Buku" },
+            { "word": "ゆき", "meaning": "Salju" }
+          ],
+          "shuffledMeanings": ["Air", "Buku", "Gunung", "Salju", "Kucing"],
+          "explanation": "Kosakata penting dari Chapter 3. Semua kata nyata yang dipakai sehari-hari!"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Partikel の digunakan untuk menunjukkan...",
+          "options": ["Kata tanya", "Kepunyaan/penghubung", "Kata perintah", "Angka"],
+          "correctAnswer": "Kepunyaan/penghubung",
+          "explanation": "の = partikel kepunyaan. Pola: [pemilik] の [dimiliki]. Contoh: わたしの ねこ = kucingku."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "いぬ = ___, ねこ = ___",
+          "options": ["Anjing / Kucing", "Kucing / Anjing", "Ikan / Burung", "Sapi / Kuda"],
+          "correctAnswer": "Anjing / Kucing",
+          "explanation": "いぬ (inu) = anjing, ねこ (neko) = kucing. Dua hewan peliharaan paling populer di Jepang!"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Berapa huruf yang ada di baris Ya?",
+          "options": ["2", "3", "4", "5"],
+          "correctAnswer": "3",
+          "explanation": "Baris Ya hanya punya 3 huruf: や ゆ よ. Bunyi 'yi' dan 'ye' tidak ada dalam fonetik Jepang."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan partikel dengan fungsinya!",
+          "pairs": [
+            { "word": "は (wa)", "meaning": "Penanda topik kalimat" },
+            { "word": "の", "meaning": "Kepunyaan / penghubung" },
+            { "word": "も", "meaning": "Juga / pun" }
+          ],
+          "shuffledMeanings": ["Kepunyaan / penghubung", "Penanda topik kalimat", "Juga / pun"],
+          "explanation": "Tiga partikel penting yang sudah dipelajari. Ini fondasi tata bahasa Jepang!"
+        }
+      }
+    ]
+  },
+
+  "jac4s1": {
+    "title": "Baris Ra (らりるれろ)",
+    "intro": "Baris Ra adalah salah satu yang paling sering membuat orang non-Jepang bingung. Bunyi 'r' Jepang bukan 'r' Indonesia yang bergetar, dan bukan 'l' — tapi di antaranya! Dengan latihan sedikit, kamu pasti bisa.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "5 Huruf Baris Ra",
+        "body": "Baris Ra = R (Jepang) + vokal. Semuanya reguler, tidak ada pengecualian bunyi:",
+        "examples": [
+          { "en": "ら (ra)", "id": "ra — seperti 'r' dalam 'radio' tapi lebih lembut. Contoh: らーめん (ramen)" },
+          { "en": "り (ri)", "id": "ri — Contoh: りんご (ringo) = apel" },
+          { "en": "る (ru)", "id": "ru — Contoh: きる (kiru) = memotong" },
+          { "en": "れ (re)", "id": "re — Contoh: れんしゅう (renshuu) = latihan" },
+          { "en": "ろ (ro)", "id": "ro — Contoh: ろく (roku) = 6" }
+        ],
+        "tip": "R Jepang: ketuk ujung lidah sekali ke langit-langit mulut bagian depan — seperti 'd' yang sangat cepat. Bukan 'r' getar, bukan 'l'!"
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan R Jepang dengan Benar",
+        "body": "Ini adalah bunyi yang unik dan perlu latihan khusus:",
+        "examples": [
+          { "en": "SALAH: r Indonesia", "id": "Jangan getar ujung lidah seperti 'r' dalam 'rumah'" },
+          { "en": "SALAH: l Inggris", "id": "Jangan sentuh langit mulut bagian belakang seperti 'l' dalam 'love'" },
+          { "en": "BENAR: sentuhan cepat", "id": "Sentuh ujung lidah ke langit mulut BAGIAN DEPAN (di belakang gigi atas) sekali, sangat cepat" },
+          { "en": "Mirip huruf 'd' sangat cepat", "id": "Coba ucapkan 'ada' sangat cepat — 'd' tengah itu mirip 'r' Jepang!" }
+        ],
+        "tip": "Orang Jepang sendiri bilang mereka mendengar 'r' Jepang di antara 'r', 'l', dan 'd'. Ini benar-benar bunyi unik yang tidak ada padanannya di Indonesia."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Kata Nyata Baris Ra",
+        "body": "Beberapa kata terkenal menggunakan huruf baris Ra:",
+        "examples": [
+          { "en": "らーめん (ramen)", "id": "Ramen — makanan Jepang paling terkenal kedua setelah sushi!" },
+          { "en": "りんご (ringo)", "id": "Apel — salah satu buah paling populer di Jepang" },
+          { "en": "さくら (sakura)", "id": "Bunga sakura — さ + く + ら" },
+          { "en": "ふじさん (fujisan)", "id": "Gunung Fuji — sudah dipelajari, sekarang tambahkan pemahaman ら" },
+          { "en": "てら (tera)", "id": "Kuil/Pura — て + ら" }
+        ],
+        "tip": "さくら (sakura)! Kamu sudah bisa baca nama bunga paling ikonik Jepang dalam hiragana."
+      }
+    ],
+    "practice": [
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "R Jepang paling tepat digambarkan sebagai...",
+          "options": [
+            "R getar seperti bahasa Indonesia",
+            "L seperti bahasa Inggris",
+            "Sentuhan lidah cepat di langit mulut depan",
+            "Persis sama dengan R bahasa Indonesia"
+          ],
+          "correctAnswer": "Sentuhan lidah cepat di langit mulut depan",
+          "explanation": "R Jepang (flap R) adalah bunyi unik — sentuhan cepat lidah ke langit mulut depan. Mirip 'd' yang sangat cepat, di antara 'r' dan 'l'."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan huruf baris Ra!",
+          "pairs": [
+            { "word": "ら", "meaning": "ra" },
+            { "word": "り", "meaning": "ri" },
+            { "word": "る", "meaning": "ru" },
+            { "word": "れ", "meaning": "re" },
+            { "word": "ろ", "meaning": "ro" }
+          ],
+          "shuffledMeanings": ["ro", "ra", "ri", "re", "ru"],
+          "explanation": "Baris Ra lengkap! Ingat: bunyi 'r' Jepang berbeda dari 'r' Indonesia."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "りんご artinya...",
+          "options": ["Jeruk", "Apel", "Pisang", "Anggur"],
+          "correctAnswer": "Apel",
+          "explanation": "りんご (ringo) = apel. Jepang sangat terkenal dengan kualitas apelnya, terutama dari Aomori!"
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "さくら (sakura) = さ + く + ___",
+          "options": ["ら", "り", "る", "れ"],
+          "correctAnswer": "ら",
+          "explanation": "さくら = sa + ku + ra. ら (ra) adalah huruf terakhir dari kata 'sakura' — bunga nasional Jepang!"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "らーめん adalah...",
+          "options": ["Nama kota di Jepang", "Makanan mie kuah Jepang", "Alat musik Jepang", "Upacara teh Jepang"],
+          "correctAnswer": "Makanan mie kuah Jepang",
+          "explanation": "らーめん (ramen) = mie kuah Jepang. Tanda ー panjang artinya vokal 'a' diperpanjang: ra-a-men. Ini tanda pemanjang vokal dalam hiragana/katakana!"
+        }
+      }
+    ]
+  },
+
+  "jac4s2": {
+    "title": "Baris Wa & ん",
+    "intro": "Hampir selesai! Baris Wa adalah baris terakhir sebelum huruf spesial ん. Baris Wa hanya punya 2 huruf aktif (わ dan を), dan を hampir selalu hanya digunakan sebagai partikel. Kemudian ん — huruf tunggal yang tidak bisa berdiri di awal kata!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Baris Wa: わ と を",
+        "body": "Baris Wa aslinya 5 huruf, tapi 3 di antaranya sudah tidak digunakan dalam bahasa Jepang modern:",
+        "examples": [
+          { "en": "わ (wa)", "id": "wa — bunyi biasa. Contoh: わたし (watashi) = saya" },
+          { "en": "を (wo/o)", "id": "Dibaca 'o' dalam praktiknya. SELALU partikel objek langsung. Tidak pernah dipakai untuk kata biasa" },
+          { "en": "(wi, we, wu = tidak aktif)", "id": "Tiga huruf ini ada dalam hiragana kuno tapi tidak digunakan dalam bahasa Jepang modern" }
+        ],
+        "tip": "を hampir TIDAK PERNAH dipakai sebagai kata biasa — 99.9% kemunculannya sebagai partikel objek langsung."
+      },
+      {
+        "type": "grammar",
+        "heading": "Partikel を — Objek Langsung",
+        "body": "を menandai objek langsung dari kata kerja (apa yang dikenai tindakan):",
+        "examples": [
+          { "en": "わたしは すし を たべます", "id": "Saya makan sushi. (を = penanda bahwa sushi adalah yang 'dimakan')" },
+          { "en": "ほん を よみます", "id": "Membaca buku. (を = buku adalah yang 'dibaca')" },
+          { "en": "Pola: [subjek] は [objek] を [kata kerja]", "id": "Ini struktur kalimat dasar bahasa Jepang!" }
+        ],
+        "tip": "Urutan kata Jepang: Subjek - Objek - Kata Kerja (SOV). Berbeda dengan Indonesia: Subjek - Kata Kerja - Objek (SVO). Kata kerja SELALU di akhir kalimat!"
+      },
+      {
+        "type": "vocabulary",
+        "heading": "ん — Huruf Spesial",
+        "body": "ん adalah satu-satunya huruf hiragana yang TIDAK memiliki vokal. Ini adalah 'n' murni yang berdiri sendiri:",
+        "examples": [
+          { "en": "ん (n)", "id": "n — tidak pernah di awal kata. Selalu di tengah atau akhir." },
+          { "en": "にほん (nihon)", "id": "Jepang — ん ada di akhir: ni-ho-N" },
+          { "en": "ごはん (gohan)", "id": "Nasi/makan — ん di akhir: go-ha-N" },
+          { "en": "さんぽ (sanpo)", "id": "Jalan-jalan — ん di tengah: sa-N-po" },
+          { "en": "こんにちは (konnichiwa)", "id": "Halo — ん di tengah: ko-N-ni-chi-wa" }
+        ],
+        "tip": "ん bisa terdengar berbeda tergantung huruf sesudahnya: seperti 'n', 'ng', 'm', atau 'nn'. Tapi cara tulisnya selalu sama: ん."
+      },
+      {
+        "type": "grammar",
+        "heading": "Struktur Kalimat Dasar Bahasa Jepang",
+        "body": "Dengan semua partikel yang sudah dipelajari, mari lihat struktur kalimat lengkap:",
+        "examples": [
+          { "en": "わたし は ほん を よみます", "id": "Saya membaca buku. [Saya]-[topik]-[buku]-[objek]-[membaca]" },
+          { "en": "ねこ は さかな を たべます", "id": "Kucing makan ikan. [Kucing]-[topik]-[ikan]-[objek]-[makan]" },
+          { "en": "Ingat: kata kerja selalu di AKHIR!", "id": "Ini aturan fundamental bahasa Jepang yang tidak pernah berubah" }
+        ],
+        "tip": "Banyak orang Indonesia awalnya kesulitan dengan kata kerja di akhir. Tapi setelah terbiasa, ini justru membuat bahasa Jepang terasa sangat 'rapi'!"
+      }
+    ],
+    "practice": [
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "を digunakan untuk menandai...",
+          "options": ["Subjek kalimat", "Objek langsung kata kerja", "Tempat/lokasi", "Waktu"],
+          "correctAnswer": "Objek langsung kata kerja",
+          "explanation": "を = partikel objek langsung. Menandai benda yang dikenai tindakan kata kerja. Contoh: ほんをよむ (membaca buku) — ほん = buku adalah objek dari 'membaca'."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "ん TIDAK PERNAH muncul di...",
+          "options": ["Tengah kata", "Akhir kata", "Awal kata", "Setelah huruf vokal"],
+          "correctAnswer": "Awal kata",
+          "explanation": "ん tidak pernah ada di awal kata dalam bahasa Jepang. Selalu di tengah atau akhir. Contoh: にほん (ni-ho-N), さんぽ (sa-N-po)."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "にほ___ = Jepang (ん melengkapi kata ini)",
+          "options": ["ん", "の", "な", "ぬ"],
+          "correctAnswer": "ん",
+          "explanation": "にほん (nihon) = Jepang. ん di akhir sebagai 'n' penutup. ni-ho-n."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan partikel dengan fungsinya!",
+          "pairs": [
+            { "word": "は (wa)", "meaning": "Penanda topik" },
+            { "word": "の", "meaning": "Kepunyaan" },
+            { "word": "を", "meaning": "Penanda objek langsung" },
+            { "word": "も", "meaning": "Juga / pun" }
+          ],
+          "shuffledMeanings": ["Kepunyaan", "Penanda topik", "Juga / pun", "Penanda objek langsung"],
+          "explanation": "Empat partikel penting yang sudah dipelajari. Ini fondasi tata bahasa Jepang!"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Urutan kata dalam kalimat Jepang adalah...",
+          "options": [
+            "Subjek - Kata Kerja - Objek (seperti Indonesia)",
+            "Kata Kerja - Subjek - Objek",
+            "Subjek - Objek - Kata Kerja",
+            "Tidak ada aturan yang pasti"
+          ],
+          "correctAnswer": "Subjek - Objek - Kata Kerja",
+          "explanation": "Bahasa Jepang = SOV (Subject-Object-Verb). Kata kerja selalu di AKHIR kalimat. Ini berbeda dari Indonesia (SVO) dan fundamental untuk memahami Jepang."
+        }
+      }
+    ]
+  },
+
+  "jac4s3": {
+    "title": "Kata Kerja Masu Dasar",
+    "intro": "Sekarang saatnya belajar KATA KERJA! Dalam bahasa Jepang formal, semua kata kerja diakhiri ます (masu). Pola ini konsisten dan membuat bahasa Jepang sebenarnya lebih mudah dari yang terlihat — satu akhiran untuk semua orang dan semua situasi!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Kata Kerja Masu Dasar",
+        "body": "Lima kata kerja pertama yang paling sering dipakai dalam percakapan sehari-hari:",
+        "examples": [
+          { "en": "たべます (tabemasu)", "id": "Makan — た + べ + ま + す. Contoh: ごはんをたべます = makan nasi" },
+          { "en": "のみます (nomimasu)", "id": "Minum — の + み + ま + す. Contoh: みずをのみます = minum air" },
+          { "en": "いきます (ikimasu)", "id": "Pergi — い + き + ま + す. Contoh: がっこうにいきます = pergi ke sekolah" },
+          { "en": "みます (mimasu)", "id": "Melihat/menonton — み + ま + す. Contoh: えいがをみます = menonton film" },
+          { "en": "かいます (kaimasu)", "id": "Membeli — か + い + ま + す. Contoh: ほんをかいます = membeli buku" }
+        ],
+        "tip": "Semua kata kerja formal berakhiran ます. Tidak ada konjugasi berdasarkan subjek (tidak ada 'I eat' vs 'he eats')!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Keistimewaan Kata Kerja Bahasa Jepang",
+        "body": "Dibandingkan banyak bahasa lain, kata kerja Jepang punya keistimewaan yang sangat memudahkan:",
+        "examples": [
+          { "en": "わたしは たべます", "id": "Saya makan" },
+          { "en": "あなたは たべます", "id": "Kamu makan" },
+          { "en": "かれは たべます", "id": "Dia (laki-laki) makan" },
+          { "en": "Semua pakai たべます yang sama!", "id": "Tidak ada perubahan kata kerja berdasarkan subjek — berbeda dengan bahasa Inggris (I eat vs he eats)" }
+        ],
+        "tip": "Ini berita BAGUS! Tidak perlu hafal 'konjugasi' seperti bahasa Inggris atau Spanyol. Satu kata kerja untuk semua orang!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Bentuk Negatif: ません (masen)",
+        "body": "Untuk menyatakan TIDAK melakukan sesuatu, ganti ます dengan ません:",
+        "examples": [
+          { "en": "たべます → たべません", "id": "Makan → Tidak makan" },
+          { "en": "のみます → のみません", "id": "Minum → Tidak minum" },
+          { "en": "いきます → いきません", "id": "Pergi → Tidak pergi" },
+          { "en": "Pola: [kata kerja dasar] + ません", "id": "Gampang! Hanya ganti ます menjadi ません" }
+        ],
+        "tip": "Mau tanya? Tambahkan か di akhir: たべますか？ = Apakah (kamu) makan? Jawab: はい、たべます / いいえ、たべません."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Ekspresi Makan dan Minum Penting",
+        "body": "Sebelum dan sesudah makan di Jepang ada ekspresi wajib yang sangat penting secara budaya:",
+        "examples": [
+          { "en": "いただきます (itadakimasu)", "id": "Ucapan SEBELUM makan — ekspresi rasa syukur atas makanan" },
+          { "en": "ごちそうさまでした (gochisousamadeshita)", "id": "Ucapan SESUDAH makan — terima kasih atas makanan yang lezat" },
+          { "en": "Wajib?", "id": "Di keluarga Jepang, ini WAJIB diucapkan. Tidak mengucapkan dianggap tidak sopan" }
+        ],
+        "tip": "いただきます juga dipakai saat menerima hadiah atau sesuatu dari orang lain — bukan hanya saat makan!"
+      }
+    ],
+    "practice": [
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Semua kata kerja formal dalam bahasa Jepang diakhiri dengan...",
+          "options": ["です", "ます", "ません", "ですか"],
+          "correctAnswer": "ます",
+          "explanation": "Kata kerja formal = ます form. たべます, のみます, いきます — semua berakhir ます. Ini adalah bentuk yang paling sering dipakai dalam percakapan sopan."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata kerja dengan artinya!",
+          "pairs": [
+            { "word": "たべます", "meaning": "Makan" },
+            { "word": "のみます", "meaning": "Minum" },
+            { "word": "いきます", "meaning": "Pergi" },
+            { "word": "みます", "meaning": "Melihat/Menonton" },
+            { "word": "かいます", "meaning": "Membeli" }
+          ],
+          "shuffledMeanings": ["Minum", "Membeli", "Makan", "Pergi", "Melihat/Menonton"],
+          "explanation": "Lima kata kerja dasar yang paling sering dipakai sehari-hari."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Bentuk negatif dari たべます adalah ___",
+          "options": ["たべません", "たべですか", "たべない", "たべます"],
+          "correctAnswer": "たべません",
+          "explanation": "Negatif = ganti ます dengan ません. たべます (makan) → たべません (tidak makan). Mudah dan konsisten!"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "いただきます diucapkan...",
+          "options": ["Saat kenyang setelah makan", "Sebelum mulai makan", "Saat memasak", "Saat berbelanja makanan"],
+          "correctAnswer": "Sebelum mulai makan",
+          "explanation": "いただきます diucapkan SEBELUM makan sebagai ekspresi rasa syukur. Pasangannya adalah ごちそうさまでした yang diucapkan SETELAH makan."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "わたしは みず を ___。(Saya minum air)",
+          "options": ["たべます", "のみます", "いきます", "みます"],
+          "correctAnswer": "のみます",
+          "explanation": "のみます (nomimasu) = minum. みず = air, を = partikel objek. Kalimat lengkap: わたしは みずを のみます."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Cara bertanya 'Apakah kamu makan?' dalam bahasa Jepang adalah...",
+          "options": [
+            "たべますか？",
+            "たべません？",
+            "たべますよ？",
+            "たべですか？"
+          ],
+          "correctAnswer": "たべますか？",
+          "explanation": "Untuk bertanya, tambahkan か di akhir kata kerja: たべますか？ = Apakah [kamu] makan? か adalah partikel tanya — tidak ada 'apakah' terpisah seperti di Indonesia!"
+        }
+      }
+    ]
+  },
+
+  "jac4s4": {
+    "title": "Kalimat Dasar Bahasa Jepang",
+    "intro": "Ini adalah puncak dari semua yang telah dipelajari! Sekarang kamu akan menggabungkan hiragana, partikel, dan kata kerja menjadi kalimat nyata yang bisa digunakan dalam percakapan. Ini momen yang sudah ditunggu-tunggu!",
+    "sections": [
+      {
+        "type": "grammar",
+        "heading": "Tiga Pola Kalimat Dasar",
+        "body": "Dengan tiga pola ini, kamu bisa membuat ratusan kalimat berbeda:",
+        "examples": [
+          { "en": "Pola 1: A は B です", "id": "A adalah B. Contoh: わたしは がくせい です (Saya adalah pelajar)" },
+          { "en": "Pola 2: A は B を [kata kerja]", "id": "A melakukan [kata kerja] terhadap B. Contoh: わたしは すし を たべます (Saya makan sushi)" },
+          { "en": "Pola 3: A は B に いきます", "id": "A pergi ke B. Contoh: わたしは がっこう に いきます (Saya pergi ke sekolah)" }
+        ],
+        "tip": "Partikel に (ni) = menuju/di. Ini partikel tempat yang sangat penting — menunjukkan arah atau lokasi."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Kata Tanya Dasar",
+        "body": "Dengan kata tanya ini, kamu sudah bisa mulai bertanya dalam bahasa Jepang:",
+        "examples": [
+          { "en": "なに/なん (nani/nan)", "id": "Apa — なにをたべますか？ = Makan apa?" },
+          { "en": "どこ (doko)", "id": "Di mana — どこにいきますか？ = Pergi ke mana?" },
+          { "en": "いつ (itsu)", "id": "Kapan — いつたべますか？ = Kapan makan?" },
+          { "en": "だれ (dare)", "id": "Siapa — だれがいきますか？ = Siapa yang pergi?" }
+        ],
+        "tip": "Kata tanya dalam bahasa Jepang diletakkan di posisi yang SAMA dengan informasinya — bukan dipindah ke awal kalimat seperti bahasa Indonesia."
+      }
+    ],
+    "practice": [
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "わたしは ごはんを たべます artinya...",
+          "options": [
+            "Saya minum air",
+            "Saya makan nasi",
+            "Saya pergi ke sekolah",
+            "Saya membeli buku"
+          ],
+          "correctAnswer": "Saya makan nasi",
+          "explanation": "わたし=saya, は=partikel topik, ごはん=nasi, を=partikel objek, たべます=makan. = 'Saya makan nasi'."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "かれは がっこう ___ いきます (Dia pergi ke sekolah)",
+          "options": ["は", "の", "を", "に"],
+          "correctAnswer": "に",
+          "explanation": "に (ni) = partikel yang menunjukkan arah/tujuan. がっこう に いきます = pergi ke sekolah. に seperti 'ke' dalam bahasa Indonesia."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "どこ artinya...",
+          "options": ["Siapa", "Apa", "Di mana", "Kapan"],
+          "correctAnswer": "Di mana",
+          "explanation": "どこ (doko) = di mana. Kata tanya tempat. Contoh: がっこうは どこですか？ = Sekolah ada di mana?"
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "わたしは みず を ___ません (Saya tidak minum air)",
+          "options": ["たべ", "のみ", "いき", "み"],
+          "correctAnswer": "のみ",
+          "explanation": "のみません = tidak minum (bentuk negatif dari のみます). みず を のみません = tidak minum air."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kalimat dengan terjemahannya!",
+          "pairs": [
+            { "word": "ほんをかいます", "meaning": "Membeli buku" },
+            { "word": "えいがをみます", "meaning": "Menonton film" },
+            { "word": "がっこうにいきます", "meaning": "Pergi ke sekolah" }
+          ],
+          "shuffledMeanings": ["Menonton film", "Pergi ke sekolah", "Membeli buku"],
+          "explanation": "Tiga kalimat nyata menggunakan pola dasar bahasa Jepang!"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Cara bertanya 'Kamu makan apa?' dalam bahasa Jepang adalah...",
+          "options": [
+            "なにをたべますか？",
+            "たべますなにか？",
+            "なにたべますか？",
+            "たべますか？なに？"
+          ],
+          "correctAnswer": "なにをたべますか？",
+          "explanation": "なに (apa) + を (partikel objek) + たべます (makan) + か (tanda tanya) = 'Makan apa?' Kata tanya tetap di posisinya, tidak dipindah ke depan!"
+        }
+      }
+    ]
+  },
+
+  "jac4s5": {
+    "title": "Review Chapter 4 & Hiragana Lengkap",
+    "intro": "SELAMAT! Kamu telah menyelesaikan semua hiragana dasar! Chapter 4 melengkapi perjalanan hiragana dengan baris Ra, Wa, ん, plus kata kerja dan kalimat dasar. Ini adalah pencapaian yang luar biasa!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "46 Huruf Hiragana — SELESAI!",
+        "body": "Kamu sudah menguasai semua baris hiragana dasar:",
+        "examples": [
+          { "en": "あ行: あいうえお", "id": "5 vokal" },
+          { "en": "か行: かきくけこ", "id": "5 huruf" },
+          { "en": "さ行: さしすせそ", "id": "5 huruf (shi!)" },
+          { "en": "た行: たちつてと", "id": "5 huruf (chi! tsu!)" },
+          { "en": "な行: なにぬねの", "id": "5 huruf" },
+          { "en": "は行: はひふへほ", "id": "5 huruf (fu!)" },
+          { "en": "ま行: まみむめも", "id": "5 huruf" },
+          { "en": "や行: やゆよ", "id": "3 huruf" },
+          { "en": "ら行: らりるれろ", "id": "5 huruf (r Jepang!)" },
+          { "en": "わ行 + ん: わをん", "id": "3 huruf" }
+        ],
+        "tip": "Total: 46 huruf dasar hiragana. Langkah selanjutnya: katakana (46 huruf serupa) dan kanji (ribuan — tapi santai, dipelajari bertahap)!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Recap Partikel — Senjata Tata Bahasa Jepang",
+        "body": "Lima partikel yang sudah dipelajari adalah pondasi tata bahasa Jepang:",
+        "examples": [
+          { "en": "は (wa) — topik", "id": "わたしは = [saya] sebagai topik" },
+          { "en": "の — kepunyaan", "id": "わたしのねこ = kucingku" },
+          { "en": "を — objek langsung", "id": "すしをたべる = makan sushi" },
+          { "en": "に — arah/lokasi", "id": "がっこうにいく = pergi ke sekolah" },
+          { "en": "も — juga", "id": "わたしも = saya juga" }
+        ],
+        "tip": "Menguasai partikel = kunci membuat kalimat Jepang yang benar. Ini lebih penting dari hafalan kosakata banyak-banyak!"
+      }
+    ],
+    "practice": [
+      {
+        "type": "matching_word", "xpReward": 20,
+        "content": {
+          "instruction": "Review Chapter 4 — cocokkan semuanya!",
+          "pairs": [
+            { "word": "ら", "meaning": "ra" },
+            { "word": "たべます", "meaning": "Makan" },
+            { "word": "のみます", "meaning": "Minum" },
+            { "word": "ん", "meaning": "n (tidak di awal kata)" },
+            { "word": "を", "meaning": "Partikel objek langsung" }
+          ],
+          "shuffledMeanings": ["Minum", "ra", "Partikel objek langsung", "n (tidak di awal kata)", "Makan"],
+          "explanation": "Review Chapter 4 selesai! Hiragana lengkap + kata kerja dasar sudah dikuasai."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Kalimat 'ねこは さかなを たべます' artinya...",
+          "options": [
+            "Ikan makan kucing",
+            "Kucing minum air",
+            "Kucing makan ikan",
+            "Ikan minum susu"
+          ],
+          "correctAnswer": "Kucing makan ikan",
+          "explanation": "ねこ=kucing, は=topik, さかな=ikan, を=objek, たべます=makan. = 'Kucing makan ikan'. Perhatikan urutan SOV!"
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "わたしは がっこう ___ いきます",
+          "options": ["は", "の", "を", "に"],
+          "correctAnswer": "に",
+          "explanation": "に = partikel arah/tujuan. がっこうに = ke sekolah. Lengkap: Saya pergi ke sekolah."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Berapa total huruf hiragana dasar yang sudah dikuasai?",
+          "options": ["36", "40", "46", "52"],
+          "correctAnswer": "46",
+          "explanation": "46 huruf hiragana dasar: 5 vokal + 40 konsonan (termasuk 3 baris tidak lengkap: ya=3, wa=2) + 1 huruf khusus ん = total 46!"
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Ucapan SEBELUM makan = ___, ucapan SESUDAH makan = ___",
+          "options": [
+            "いただきます / ごちそうさまでした",
+            "おはよう / こんにちは",
+            "ただいま / おかえり",
+            "すみません / ありがとう"
+          ],
+          "correctAnswer": "いただきます / ごちそうさまでした",
+          "explanation": "いただきます = sebelum makan, ごちそうさまでした = sesudah makan. Dua ekspresi wajib dalam budaya makan Jepang!"
+        }
+      }
+    ]
+  },
+
+  "jac5s1": {
+    "title": "Kanji Angka 1-10",
+    "intro": "Selamat datang di Chapter 5 — Kanji! Kanji adalah sistem tulisan yang berasal dari Cina dan menjadi bagian tak terpisahkan dari bahasa Jepang. Kanji angka adalah yang PALING mudah dimulai karena polanya visual dan logis. Siap?",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Kanji Angka 1-10 — Visual dan Logis!",
+        "body": "Kanji angka 1-3 sangat intuitif! Lihat pola visualnya:",
+        "examples": [
+          { "en": "一 (ichi) = 1", "id": "Satu garis horizontal → mudah diingat!" },
+          { "en": "二 (ni) = 2", "id": "Dua garis horizontal → dua garis = dua!" },
+          { "en": "三 (san) = 3", "id": "Tiga garis horizontal → tiga garis = tiga!" },
+          { "en": "四 (shi/yon) = 4", "id": "Lebih kompleks. Dibaca SHI atau YON (yon lebih umum sekarang)" },
+          { "en": "五 (go) = 5", "id": "Bentuk seperti 'E' terbalik. Ingat: GO = 5" },
+          { "en": "六 (roku) = 6", "id": "ROKU = 6. Ingat: six-roku" },
+          { "en": "七 (shichi/nana) = 7", "id": "Dibaca SHICHI atau NANA. Nana lebih umum dalam percakapan" },
+          { "en": "八 (hachi) = 8", "id": "Bentuk seperti 'V' melebar. HACHI = 8" },
+          { "en": "九 (ku/kyuu) = 9", "id": "KU atau KYUU = 9" },
+          { "en": "十 (juu) = 10", "id": "Tanda + (plus) → JUU = 10. Sangat mudah diingat!" }
+        ],
+        "tip": "一二三 sangat mudah — 1 garis, 2 garis, 3 garis. Sayangnya 4 ke atas tidak sesederhana itu, tapi tetap bisa dihafal dengan mnemonic!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Cara Membaca Angka di Atas 10",
+        "body": "Dengan 10 kanji dasar ini, kamu sudah bisa baca angka jauh lebih besar!",
+        "examples": [
+          { "en": "十一 (juuichi) = 11", "id": "10 + 1 = sebelas. Sangat logis!" },
+          { "en": "二十 (nijuu) = 20", "id": "2 × 10 = dua puluh" },
+          { "en": "三十五 (sanjuugo) = 35", "id": "3×10 + 5 = tiga puluh lima" },
+          { "en": "百 (hyaku) = 100", "id": "Satu ratus — kanji baru yang perlu dihafal" }
+        ],
+        "tip": "Sistem angka Jepang sangat LOGIS dan konsisten — jauh lebih mudah dari bahasa Inggris yang punya 'eleven, twelve, thirteen...'!"
+      },
+      {
+        "type": "culture",
+        "heading": "Angka Sial dan Angka Beruntung di Jepang",
+        "body": "Seperti banyak budaya Asia, Jepang punya angka yang dianggap sial dan beruntung:",
+        "examples": [
+          { "en": "四 (shi) = 4 — SIAL!", "id": "Shi juga berarti 'mati' (死). Banyak gedung di Jepang tidak punya lantai 4!" },
+          { "en": "九 (ku) = 9 — AGAK SIAL", "id": "Ku juga bisa berarti 'penderitaan' (苦). Kadang dihindari" },
+          { "en": "八 (hachi) = 8 — BERUNTUNG!", "id": "Bentuk 八 yang melebar ke bawah dianggap simbol kemakmuran" },
+          { "en": "Solusi: pakai alternatif", "id": "4 = YON (bukan shi), 7 = NANA (bukan shichi) — menghindari bunyi sial" }
+        ],
+        "tip": "Itulah mengapa angka 4 dan 9 sering punya bacaan alternatif (yon/nana) dalam percakapan sehari-hari!"
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Angka dalam Kehidupan Sehari-hari",
+        "body": "Angka kanji sering muncul dalam konteks ini:",
+        "examples": [
+          { "en": "Jam: 三時 (sanji)", "id": "Jam 3 — 三(3) + 時(ji=jam)" },
+          { "en": "Tanggal: 五日 (itsuka)", "id": "Tanggal 5 — punya bacaan khusus" },
+          { "en": "Harga: 二百円 (nihyaku en)", "id": "200 yen — di toko, kafe, dll" },
+          { "en": "Lantai: 三階 (sankai)", "id": "Lantai 3 — di mall, hotel" }
+        ],
+        "tip": "Segera setelah hafal angka 1-10, kamu sudah bisa baca harga, nomor lantai, dan nomor kamar di Jepang!"
+      }
+    ],
+    "practice": [
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Kanji 三 artinya...",
+          "options": ["1", "2", "3", "4"],
+          "correctAnswer": "3",
+          "explanation": "三 = san = 3. Tiga garis horizontal = tiga. Pola visual paling mudah diingat bersama 一(1) dan 二(2)."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kanji angka dengan nilainya!",
+          "pairs": [
+            { "word": "一", "meaning": "1 (ichi)" },
+            { "word": "五", "meaning": "5 (go)" },
+            { "word": "八", "meaning": "8 (hachi)" },
+            { "word": "十", "meaning": "10 (juu)" },
+            { "word": "三", "meaning": "3 (san)" }
+          ],
+          "shuffledMeanings": ["10 (juu)", "3 (san)", "1 (ichi)", "8 (hachi)", "5 (go)"],
+          "explanation": "Kanji angka 1-10. 一二三 paling mudah secara visual!"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Mengapa angka 4 sering dibaca 'yon' dan bukan 'shi' di Jepang?",
+          "options": [
+            "Karena 'yon' lebih mudah diucapkan",
+            "Karena 'shi' terdengar sama dengan kata 'mati' (死)",
+            "Karena 'shi' adalah bacaan bahasa Cina, bukan Jepang",
+            "Tidak ada alasan khusus"
+          ],
+          "correctAnswer": "Karena 'shi' terdengar sama dengan kata 'mati' (死)",
+          "explanation": "四(4) dibaca 'shi' yang sama bunyinya dengan 死 (mati). Karena dianggap sial, dalam percakapan sehari-hari lebih sering dipakai 'yon'. Sama untuk 9: 'ku' mirip 苦 (penderitaan), jadi lebih sering 'kyuu'."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "十一 (juuichi) = ___",
+          "options": ["10", "11", "12", "21"],
+          "correctAnswer": "11",
+          "explanation": "十(10) + 一(1) = 11 (juuichi). Sistem angka Jepang sangat logis: tinggal tambahkan!"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Kanji 八 (hachi) dianggap beruntung di Jepang karena...",
+          "options": [
+            "Bentuknya seperti bintang",
+            "Bentuknya melebar ke bawah = simbol kemakmuran",
+            "Angka 8 adalah angka suci di Jepang",
+            "Karena 8 = bachi yang berarti 'rezeki'"
+          ],
+          "correctAnswer": "Bentuknya melebar ke bawah = simbol kemakmuran",
+          "explanation": "八 bentuknya melebar ke bawah, dianggap simbol kemakmuran yang terus berkembang. Ini keyakinan budaya yang dibagi juga dengan beberapa budaya Tionghoa."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan semua kanji angka 1-10!",
+          "pairs": [
+            { "word": "二", "meaning": "2 (ni)" },
+            { "word": "四", "meaning": "4 (yon/shi)" },
+            { "word": "六", "meaning": "6 (roku)" },
+            { "word": "七", "meaning": "7 (nana/shichi)" },
+            { "word": "九", "meaning": "9 (ku/kyuu)" }
+          ],
+          "shuffledMeanings": ["7 (nana/shichi)", "4 (yon/shi)", "9 (ku/kyuu)", "2 (ni)", "6 (roku)"],
+          "explanation": "Kanji angka lengkap! Perhatikan angka 4 dan 7 dan 9 punya dua cara baca."
+        }
+      }
+    ]
+  },
+
+  "jac5s2": {
+    "title": "Kanji Hari dalam Seminggu",
+    "intro": "7 kanji hari dalam seminggu adalah kanji yang paling PRAKTIS untuk dipelajari — kamu akan butuhkan ini setiap minggu! Yang menarik, setiap hari dikaitkan dengan unsur alam. Ini membuat hafalannya jadi cerita yang logis.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "7 Hari × 7 Unsur Alam",
+        "body": "Setiap hari dalam seminggu menggunakan kanji unsur alam yang berbeda. Ini pola yang sangat membantu hafalan:",
+        "examples": [
+          { "en": "日曜日 (nichiyoubi) = Minggu", "id": "日 = Matahari/Hari → Hari Matahari" },
+          { "en": "月曜日 (getsuyoubi) = Senin", "id": "月 = Bulan → Hari Bulan" },
+          { "en": "火曜日 (kayoubi) = Selasa", "id": "火 = Api → Hari Api" },
+          { "en": "水曜日 (suiyoubi) = Rabu", "id": "水 = Air → Hari Air" },
+          { "en": "木曜日 (mokuyoubi) = Kamis", "id": "木 = Kayu/Pohon → Hari Kayu" },
+          { "en": "金曜日 (kinyoubi) = Jumat", "id": "金 = Emas/Logam → Hari Emas" },
+          { "en": "土曜日 (doyoubi) = Sabtu", "id": "土 = Tanah → Hari Tanah" }
+        ],
+        "tip": "Urutan unsur: Matahari-Bulan-Api-Air-Kayu-Emas-Tanah. Coba buat cerita: Matahari bersinar → Bulan muncul → Api unggun → Air untuk memadamkan → Kayu di hutan → Emas di tanah → Tanah subur!"
+      },
+      {
+        "type": "grammar",
+        "heading": "曜日 (youbi) — Kata Kunci Hari",
+        "body": "Semua nama hari berakhiran 曜日 (youbi). Kamu hanya perlu hafal 7 kanji unsur di depannya:",
+        "examples": [
+          { "en": "曜日 (youbi) = hari dalam seminggu", "id": "Kata ini selalu ada di belakang setiap nama hari" },
+          { "en": "今日 (kyou) = hari ini", "id": "Berbeda dari 曜日 — ini kata tersendiri" },
+          { "en": "今週 (konshuu) = minggu ini", "id": "今 = sekarang/ini" },
+          { "en": "来週 (raishuu) = minggu depan", "id": "来 = datang/berikutnya" }
+        ],
+        "tip": "Untuk singkat, orang Jepang sering bilang hanya kanji unsurnya: 月 (Senin), 金 (Jumat) — tanpa 曜日."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Kalimat Menggunakan Hari",
+        "body": "Contoh penggunaan nama hari dalam kalimat nyata:",
+        "examples": [
+          { "en": "きょうは なんようびですか？", "id": "Hari ini hari apa? (kyou=hari ini, wa=partikel, nanyoubi=hari apa, desuka=?)" },
+          { "en": "きょうは もくようびです", "id": "Hari ini Kamis. (kyou=hari ini, wa, mokuyoubi=Kamis, desu)" },
+          { "en": "かようびに がっこうがあります", "id": "Hari Selasa ada sekolah. (kayoubi=Selasa, ni=pada, gakkou=sekolah, ga arimasu=ada)" }
+        ],
+        "tip": "Hafal cara tanya 'hari apa sekarang': きょうは なんようびですか？ — kalimat yang sangat sering dipakai!"
+      },
+      {
+        "type": "culture",
+        "heading": "Hari Kerja dan Hari Libur di Jepang",
+        "body": "Budaya kerja Jepang sangat berbeda dari Indonesia. Pengetahuan ini berguna saat berinteraksi dengan orang Jepang:",
+        "examples": [
+          { "en": "月〜金 (Senin-Jumat)", "id": "Hari kerja standar — しごと (shigoto) = kerja" },
+          { "en": "土日 (Sabtu-Minggu)", "id": "Akhir pekan — しゅうまつ (shuumatsu) = weekend" },
+          { "en": "祝日 (shukujitsu)", "id": "Hari libur nasional — Jepang punya 16 hari libur nasional per tahun!" },
+          { "en": "ゴールデンウィーク", "id": "Golden Week — pekan akhir April sampai awal Mei, libur panjang terbesar di Jepang" }
+        ],
+        "tip": "Jumat malam disebut 花金 (hanakane/hanakin) = 'Jumat berbunga' karena orang Jepang merayakan akhir pekan kerja!"
+      }
+    ],
+    "practice": [
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan hari dengan unsur alamnya!",
+          "pairs": [
+            { "word": "日曜日", "meaning": "Minggu (Matahari)" },
+            { "word": "月曜日", "meaning": "Senin (Bulan)" },
+            { "word": "水曜日", "meaning": "Rabu (Air)" },
+            { "word": "金曜日", "meaning": "Jumat (Emas)" },
+            { "word": "土曜日", "meaning": "Sabtu (Tanah)" }
+          ],
+          "shuffledMeanings": ["Jumat (Emas)", "Minggu (Matahari)", "Sabtu (Tanah)", "Senin (Bulan)", "Rabu (Air)"],
+          "explanation": "Tujuh hari seminggu dengan unsur alamnya. Matahari→Bulan→Api→Air→Kayu→Emas→Tanah."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "火曜日 (kayoubi) adalah hari...",
+          "options": ["Senin", "Selasa", "Rabu", "Kamis"],
+          "correctAnswer": "Selasa",
+          "explanation": "火曜日 = kayoubi = Selasa. 火 = api. Urutan: Minggu(日)-Senin(月)-SELASA(火)-Rabu(水)-Kamis(木)-Jumat(金)-Sabtu(土)."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "木曜日 menggunakan unsur ___ yang dalam bahasa Jepang berarti pohon/kayu",
+          "options": ["Api", "Air", "Kayu", "Emas"],
+          "correctAnswer": "Kayu",
+          "explanation": "木 (ki/moku) = pohon/kayu. 木曜日 = Hari Kayu = Kamis. 木 adalah kanji yang juga bisa dibaca 'ki' seperti dalam き (pohon) yang sudah dipelajari!"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "きょうは なんようびですか？ artinya...",
+          "options": [
+            "Jam berapa sekarang?",
+            "Hari ini tanggal berapa?",
+            "Hari ini hari apa?",
+            "Kapan kamu pergi?"
+          ],
+          "correctAnswer": "Hari ini hari apa?",
+          "explanation": "きょう (kyou) = hari ini, は = partikel topik, なんようび (nan youbi) = hari apa?, ですか = kalimat tanya. = 'Hari ini hari apa?'"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "しゅうまつ (shuumatsu) artinya...",
+          "options": ["Hari kerja", "Akhir pekan", "Hari libur nasional", "Liburan panjang"],
+          "correctAnswer": "Akhir pekan",
+          "explanation": "しゅうまつ = shuumatsu = akhir pekan (weekend). 土日 (Sabtu-Minggu) = akhir pekan standar di Jepang."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan sisa hari seminggu!",
+          "pairs": [
+            { "word": "火曜日", "meaning": "Selasa (Api)" },
+            { "word": "木曜日", "meaning": "Kamis (Kayu)" }
+          ],
+          "shuffledMeanings": ["Kamis (Kayu)", "Selasa (Api)"],
+          "explanation": "Lengkapi semua 7 hari! Minggu=日, Senin=月, Selasa=火, Rabu=水, Kamis=木, Jumat=金, Sabtu=土."
+        }
+      }
+    ]
+  },
+
+  "jac5s3": {
+    "title": "Sapaan Lengkap",
+    "intro": "Kamu sudah belajar sapaan dasar di Chapter 1. Sekarang di Chapter 5, mari lengkapi dengan SEMUA sapaan penting yang dibutuhkan dalam berbagai situasi kehidupan nyata di Jepang.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Sapaan Situasional — Lengkap",
+        "body": "Semua sapaan yang perlu kamu ketahui untuk berbagai situasi di Jepang:",
+        "examples": [
+          { "en": "おはようございます / おはよう", "id": "Selamat pagi (formal/kasual)" },
+          { "en": "こんにちは", "id": "Halo/Selamat siang" },
+          { "en": "こんばんは", "id": "Selamat malam (bertemu)" },
+          { "en": "おやすみなさい / おやすみ", "id": "Selamat malam (tidur)" },
+          { "en": "さようなら (sayounara)", "id": "Selamat tinggal (perpisahan resmi/jangka panjang)" },
+          { "en": "じゃあね / またね (jaane / matane)", "id": "Sampai jumpa lagi (kasual)" },
+          { "en": "またあした (mata ashita)", "id": "Sampai jumpa besok" },
+          { "en": "いってきます / いってらっしゃい", "id": "Saat pergi dari rumah / respon dari yang di rumah" }
+        ],
+        "tip": "さようなら memiliki nuansa perpisahan yang agak dramatis/jangka panjang. Untuk 'dah' sehari-hari, orang Jepang lebih suka じゃあね atau またね!"
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Sapaan Saat Masuk dan Keluar",
+        "body": "Bahasa Jepang punya sapaan khusus saat masuk/keluar tempat yang tidak ada padanannya di Indonesia:",
+        "examples": [
+          { "en": "いらっしゃいませ (irasshaimase)", "id": "Selamat datang! — diucapkan staf toko/restoran saat pelanggan masuk. Tidak perlu dibalas!" },
+          { "en": "すみません (sumimasen)", "id": "Permisi / Maaf / Excusez-moi — kata serbaguna untuk memanggil perhatian atau meminta maaf ringan" },
+          { "en": "しつれいします (shitsurei shimasu)", "id": "Permisi (formal) — saat masuk ruangan, memotong pembicaraan, atau meninggalkan situasi formal" },
+          { "en": "おじゃまします (ojama shimasu)", "id": "Permisi, saya masuk — wajib diucapkan saat memasuki rumah orang lain!" }
+        ],
+        "tip": "おじゃまします SANGAT penting! Jika kamu diundang ke rumah orang Jepang, ucapkan ini saat melewati pintu masuk."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Ungkapan Terima Kasih dan Maaf",
+        "body": "Dua ekspresi yang paling sering dibutuhkan dalam pergaulan di Jepang:",
+        "examples": [
+          { "en": "ありがとう (arigatou)", "id": "Terima kasih (kasual)" },
+          { "en": "ありがとうございます (arigatou gozaimasu)", "id": "Terima kasih (formal)" },
+          { "en": "どういたしまして (dou itashimashite)", "id": "Sama-sama/Terima kasih kembali (formal)" },
+          { "en": "すみません (sumimasen)", "id": "Maaf/Permisi (ringan) — dipakai jauh lebih sering dari ごめんなさい" },
+          { "en": "ごめんなさい (gomennasai)", "id": "Maaf sungguh-sungguh (meminta maaf dengan tulus atas kesalahan)" }
+        ],
+        "tip": "ありがとうございます vs すみません untuk 'terima kasih': kadang orang Jepang mengucapkan すみません sebagai terima kasih untuk menunjukkan rasa tidak enak hati menerima kebaikan!"
+      },
+      {
+        "type": "culture",
+        "heading": "Budaya Sapaan — Mengapa Ini Penting?",
+        "body": "Sapaan di Jepang bukan sekadar basa-basi — ini ekspresi nilai budaya yang mendalam:",
+        "examples": [
+          { "en": "Konsistensi", "id": "Orang Jepang mengucapkan sapaan yang sama setiap hari tanpa jenuh. Ini menunjukkan rasa hormat yang konsisten" },
+          { "en": "Konteks sosial", "id": "Pilihan kata sapaan mencerminkan hubungan sosialmu dengan lawan bicara" },
+          { "en": "Tidak boleh dilewat", "id": "Melewatkan sapaan dianggap tidak sopan — terutama おはようございます saat masuk kantor/sekolah" }
+        ],
+        "tip": "Orang asing yang mengucapkan sapaan Jepang dengan benar (termasuk membungkuk) akan mendapat respons yang sangat positif dari orang Jepang!"
+      }
+    ],
+    "practice": [
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan sapaan dengan situasinya!",
+          "pairs": [
+            { "word": "いらっしゃいませ", "meaning": "Selamat datang (di toko)" },
+            { "word": "おじゃまします", "meaning": "Permisi masuk rumah orang" },
+            { "word": "いってきます", "meaning": "Pamit keluar rumah" },
+            { "word": "ごめんなさい", "meaning": "Maaf sungguh-sungguh" },
+            { "word": "ありがとうございます", "meaning": "Terima kasih (formal)" }
+          ],
+          "shuffledMeanings": ["Pamit keluar rumah", "Maaf sungguh-sungguh", "Permisi masuk rumah orang", "Terima kasih (formal)", "Selamat datang (di toko)"],
+          "explanation": "Sapaan situasional yang sangat berguna dalam kehidupan di Jepang."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "さようなら berbeda dari じゃあね karena...",
+          "options": [
+            "さようなら lebih kasual",
+            "さようなら punya nuansa perpisahan jangka panjang/lebih resmi",
+            "じゃあね hanya dipakai pagi hari",
+            "Keduanya sama saja"
+          ],
+          "correctAnswer": "さようなら punya nuansa perpisahan jangka panjang/lebih resmi",
+          "explanation": "さようなら terasa lebih 'dramatis' — seperti perpisahan yang tidak akan ketemu lagi dalam waktu lama. Untuk sehari-hari, じゃあね atau またね lebih natural."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Saat diundang ke rumah teman Jepang dan memasuki rumah, kamu harus mengucapkan ___",
+          "options": ["こんにちは", "おじゃまします", "いらっしゃいませ", "ありがとう"],
+          "correctAnswer": "おじゃまします",
+          "explanation": "おじゃまします (ojama shimasu) = 'Maaf mengganggu / Permisi saya masuk'. Wajib diucapkan saat memasuki rumah orang Jepang — ini etiket yang sangat dihargai."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "すみません dapat digunakan untuk...",
+          "options": [
+            "Hanya untuk meminta maaf",
+            "Hanya untuk memanggil pelayan",
+            "Meminta maaf, memanggil perhatian, dan bahkan mengucapkan terima kasih",
+            "Hanya dipakai di situasi formal"
+          ],
+          "correctAnswer": "Meminta maaf, memanggil perhatian, dan bahkan mengucapkan terima kasih",
+          "explanation": "すみません adalah kata serbaguna: (1) maaf ringan, (2) permisi/panggil perhatian (di restoran dll), (3) terima kasih yang disertai rasa tidak enak hati. Kata yang sangat frekuensi tinggi!"
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Saat staf toko mengucapkan いらっしゃいませ, kamu harus...",
+          "options": [
+            "Menjawab 'ありがとう'",
+            "Menjawab 'こんにちは'",
+            "Mengangguk atau tidak perlu membalas",
+            "Mengucapkan 'いらっしゃいませ' kembali"
+          ],
+          "correctAnswer": "Mengangguk atau tidak perlu membalas",
+          "explanation": "いらっしゃいませ tidak perlu dibalas dengan kata-kata. Cukup angguk atau langsung masuk berbelanja. Ini ekspresi formal satu arah dari staf ke pelanggan."
+        }
+      }
+    ]
+  },
+
+  "jac5s4": {
+    "title": "Perkenalan Diri Lengkap",
+    "intro": "Ini adalah skill yang PALING langsung berguna — kemampuan memperkenalkan diri dalam bahasa Jepang! Dengan pola yang akan dipelajari di sini, kamu bisa memperkenalkan diri di mana pun: di kelas, di kantor, di event internasional. Latihan keras di sini akan langsung terbayar!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Struktur Perkenalan Diri Jepang",
+        "body": "Perkenalan diri formal di Jepang punya URUTAN yang spesifik. Deviasi dari urutan ini terasa aneh bagi orang Jepang:",
+        "examples": [
+          { "en": "① はじめまして (hajimemashite)", "id": "'Salam kenal' — SELALU pembuka perkenalan pertama kali" },
+          { "en": "② わたしは〜です (watashi wa ~ desu)", "id": "'Saya adalah ~' — sebutkan nama atau identitas utama" },
+          { "en": "③ 〜から きました (~ kara kimashita)", "id": "'Saya berasal dari ~' — opsional tapi sering ditambahkan" },
+          { "en": "④ よろしく おねがいします (yoroshiku onegaishimasu)", "id": "'Mohon bimbingannya / Senang berkenalan' — SELALU penutup perkenalan" }
+        ],
+        "tip": "Urutan ①②③④ ini SANGAT standar. Orang Jepang hafal pola ini dan menggunakannya sepanjang hidup."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Contoh Perkenalan Lengkap",
+        "body": "Berikut dua contoh perkenalan — kasual dan formal:",
+        "examples": [
+          { "en": "KASUAL (ke teman/anak muda):", "id": "はじめまして！わたしは〔nama〕です。よろしく！" },
+          { "en": "FORMAL (ke guru/atasan/kenalan baru):", "id": "はじめまして。わたしは〔nama〕ともうします。インドネシアから きました。どうぞ よろしく おねがいします。" },
+          { "en": "〔nama〕ともうします", "id": "'Nama saya adalah ~' — lebih formal dari 〔nama〕です. もうします = berkata/bernama (bentuk rendah hati)" },
+          { "en": "どうぞ よろしく おねがいします", "id": "Versi paling formal — 'Mohon bimbingan dan kerjasamanya'" }
+        ],
+        "tip": "よろしく saja (kasual) vs よろしくおねがいします (sopan) vs どうぞよろしくおねがいします (sangat formal). Pilih sesuai konteks!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Informasi yang Bisa Ditambahkan",
+        "body": "Setelah pola dasar, kamu bisa menambahkan informasi lain:",
+        "examples": [
+          { "en": "〜ごさいです (~ gosai desu)", "id": "'Saya berumur ~' — 二十ごさいです = saya 20 tahun" },
+          { "en": "〜がすきです (~ ga suki desu)", "id": "'Saya suka ~' — にほんごがすきです = saya suka bahasa Jepang" },
+          { "en": "〜をべんきょうしています", "id": "'Saya sedang mempelajari ~' — にほんごをべんきょうしています = saya belajar bahasa Jepang" },
+          { "en": "どうぞ よろしく おねがいします", "id": "Tetap akhiri dengan ini — tutup perkenalan dengan sopan" }
+        ],
+        "tip": "Tip pro: jika kamu bilang 'にほんごをべんきょうしています' (saya belajar bahasa Jepang), orang Jepang akan sangat terkesan dan senang!"
+      },
+      {
+        "type": "culture",
+        "heading": "はじめまして vs こんにちは — Kapan Pakai Yang Mana?",
+        "body": "Kesalahan umum: menggunakan こんにちは saat pertama kali bertemu seseorang yang perlu perkenalan formal:",
+        "examples": [
+          { "en": "はじめまして", "id": "PERTAMA KALI bertemu, diikuti perkenalan nama. Ini WAJIB jika kamu memperkenalkan diri." },
+          { "en": "こんにちは", "id": "Sapaan umum — bisa ke orang yang sudah dikenal ATAU sebagai pembuka percakapan santai" },
+          { "en": "Kombinasi yang umum:", "id": "こんにちは！はじめまして！わたしは〜 — bisa dipakai bersama untuk situasi semi-formal" }
+        ],
+        "tip": "Jika ragu, selalu mulai dengan はじめまして saat pertama kali berkenalan. Tidak pernah salah!"
+      }
+    ],
+    "practice": [
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Ekspresi PEMBUKA perkenalan diri yang wajib diucapkan adalah...",
+          "options": ["よろしくおねがいします", "こんにちは", "はじめまして", "さようなら"],
+          "correctAnswer": "はじめまして",
+          "explanation": "はじめまして (hajimemashite) SELALU menjadi pembuka perkenalan diri pertama kali. Setelah ini baru sebutkan nama dan informasi lain, lalu tutup dengan よろしくおねがいします."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Urutan perkenalan: はじめまして → わたしは〜です → ___ → よろしくおねがいします",
+          "options": [
+            "さようなら",
+            "〜からきました (asal negara/kota)",
+            "こんにちは",
+            "おやすみなさい"
+          ],
+          "correctAnswer": "〜からきました (asal negara/kota)",
+          "explanation": "〜からきました (kara kimashita) = berasal dari ~. Ini bagian ketiga perkenalan standar. Contoh: インドネシアから きました = Saya berasal dari Indonesia."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "よろしくおねがいします memiliki arti yang paling tepat...",
+          "options": [
+            "Terima kasih banyak",
+            "Senang bertemu / Mohon bimbingannya",
+            "Selamat tinggal",
+            "Sampai jumpa lagi"
+          ],
+          "correctAnswer": "Senang bertemu / Mohon bimbingannya",
+          "explanation": "よろしくおねがいします sulit diterjemahkan langsung — artinya sekitar 'mohon bimbingannya', 'tolong bantu saya', 'senang berkenalan'. Selalu menjadi penutup perkenalan Jepang."
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "はじめまして。わたしは [nama] ___。インドネシアから きました。よろしくおねがいします。",
+          "options": ["です", "ます", "でした", "ません"],
+          "correctAnswer": "です",
+          "explanation": "わたしは [nama] です = Saya adalah [nama]. です adalah 'to be' dalam bahasa Jepang — dipakai untuk kalimat identitas/deskripsi."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Apa perbedaan よろしく dan よろしくおねがいします?",
+          "options": [
+            "Tidak ada bedanya",
+            "よろしく kasual, よろしくおねがいします lebih formal/sopan",
+            "よろしく untuk wanita, よろしくおねがいします untuk pria",
+            "よろしくおねがいします hanya di penutup surat"
+          ],
+          "correctAnswer": "よろしく kasual, よろしくおねがいします lebih formal/sopan",
+          "explanation": "よろしく = kasual (ke teman). よろしくおねがいします = sopan/formal. どうぞよろしくおねがいします = sangat formal. Pilih sesuai situasi dan hubungan dengan lawan bicara."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "にほんごをべんきょうしています artinya...",
+          "options": [
+            "Saya suka Jepang",
+            "Saya sedang belajar bahasa Jepang",
+            "Saya pergi ke Jepang",
+            "Saya dari Jepang"
+          ],
+          "correctAnswer": "Saya sedang belajar bahasa Jepang",
+          "explanation": "にほんご = bahasa Jepang, を = partikel objek, べんきょうしています = sedang belajar/mempelajari. Kalimat yang sangat berguna dan membuat orang Jepang terkesan!"
+        }
+      }
+    ]
+  },
+
+  "jac5s5": {
+    "title": "Review Chapter 5 & Perayaan!",
+    "intro": "SELAMAT BESAR!!! Kamu telah menyelesaikan 5 Chapter pertama! Ini bukan akhir — ini baru permulaan perjalananmu dalam bahasa Jepang. Tapi pencapaian ini patut dirayakan: 46 hiragana, kanji dasar, partikel, kata kerja, sapaan, dan perkenalan diri — semuanya ada di genggamanmu!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Semua yang Telah Dicapai",
+        "body": "Mari hitung bersama apa yang sudah kamu pelajari:",
+        "examples": [
+          { "en": "Chapter 1: 5 vokal, kata vokal, sapaan pagi", "id": "あいうえお + おはよう + こんにちは + dll" },
+          { "en": "Chapter 2: 15 huruf konsonan + 3 pengecualian", "id": "かさた行 + shi, chi, tsu" },
+          { "en": "Chapter 3: 13 huruf + partikel は の も", "id": "なはまや行 + kosakata alam & makanan" },
+          { "en": "Chapter 4: 10 huruf + kata kerja + kalimat", "id": "らわ行 + ん + たべます + kalimat SOV" },
+          { "en": "Chapter 5: Kanji angka & hari + perkenalan", "id": "一〜十 + 日〜土 + はじめまして + よろしく" }
+        ],
+        "tip": "Angka resmi: 46 hiragana + 17 kanji (1-10 + 7 hari) + 5+ partikel + 5+ kata kerja + puluhan kosakata. Luar biasa!"
+      },
+      {
+        "type": "culture",
+        "heading": "Langkah Selanjutnya dalam Belajar Bahasa Jepang",
+        "body": "Setelah menyelesaikan fondasi ini, inilah roadmap yang disarankan:",
+        "examples": [
+          { "en": "Katakana (46 huruf)", "id": "Sistem tulisan untuk kata serapan asing. Bisa dipelajari dalam 1-2 minggu!" },
+          { "en": "Kanji dasar JLPT N5", "id": "80 kanji paling dasar. Target realastis: 3-6 bulan latihan rutin." },
+          { "en": "Grammar N5", "id": "Pola kalimat dasar untuk percakapan sederhana." },
+          { "en": "Kosakata N5 (800 kata)", "id": "Dengan 800 kata, kamu bisa bertahan dalam percakapan dasar." },
+          { "en": "JLPT N5 Test", "id": "Ujian resmi level pemula. Sangat berguna untuk motivasi dan pengakuan!" }
+        ],
+        "tip": "おめでとうございます (omedetou gozaimasu) = Selamat! Kamu layak mendapat ucapan selamat ini. Teruslah belajar!"
+      }
+    ],
+    "practice": [
+      {
+        "type": "matching_word", "xpReward": 20,
+        "content": {
+          "instruction": "Review GRAND FINAL — cocokkan semua!",
+          "pairs": [
+            { "word": "一", "meaning": "1 (ichi)" },
+            { "word": "日曜日", "meaning": "Minggu" },
+            { "word": "はじめまして", "meaning": "Salam kenal" },
+            { "word": "よろしくおねがいします", "meaning": "Senang berkenalan" },
+            { "word": "ありがとうございます", "meaning": "Terima kasih (formal)" }
+          ],
+          "shuffledMeanings": ["Senang berkenalan", "1 (ichi)", "Terima kasih (formal)", "Salam kenal", "Minggu"],
+          "explanation": "Grand Final Review! Kamu sudah menguasai pondasi bahasa Jepang."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "日本人 (nihonjin) artinya...",
+          "options": ["Bahasa Jepang", "Orang Jepang", "Makanan Jepang", "Negara Jepang"],
+          "correctAnswer": "Orang Jepang",
+          "explanation": "日本 (nihon) = Jepang + 人 (jin) = orang = Orang Jepang. 人 (jin/hito) adalah kanji untuk 'orang' — sangat sering muncul!"
+        }
+      },
+      {
+        "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Urutan perkenalan diri: ___ → わたしは〜です → 〜からきました → よろしくおねがいします",
+          "options": ["こんにちは", "さようなら", "はじめまして", "おはようございます"],
+          "correctAnswer": "はじめまして",
+          "explanation": "はじめまして SELALU pembuka perkenalan. Urutan ini adalah standar Jepang yang dipakai sepanjang hidup."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "おめでとうございます artinya...",
+          "options": ["Selamat tinggal", "Selamat / Congratulations", "Terima kasih", "Mohon maaf"],
+          "correctAnswer": "Selamat / Congratulations",
+          "explanation": "おめでとうございます (omedetou gozaimasu) = Selamat! Dipakai untuk ulang tahun, lulus ujian, pencapaian, dll. Versi kasualnya: おめでとう."
+        }
+      },
+      {
+        "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Review kanji hari seminggu!",
+          "pairs": [
+            { "word": "月曜日", "meaning": "Senin" },
+            { "word": "水曜日", "meaning": "Rabu" },
+            { "word": "金曜日", "meaning": "Jumat" }
+          ],
+          "shuffledMeanings": ["Rabu", "Jumat", "Senin"],
+          "explanation": "Hari seminggu: 日(Minggu)月(Senin)火(Selasa)水(Rabu)木(Kamis)金(Jumat)土(Sabtu)."
+        }
+      },
+      {
+        "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Setelah menyelesaikan 5 chapter ini, langkah PALING LOGIS berikutnya adalah...",
+          "options": [
+            "Langsung belajar kanji tingkat lanjut",
+            "Belajar katakana (46 huruf serupa dengan hiragana)",
+            "Berhenti karena sudah cukup",
+            "Mengulang semua dari Chapter 1"
+          ],
+          "correctAnswer": "Belajar katakana (46 huruf serupa dengan hiragana)",
+          "explanation": "Setelah hiragana, katakana adalah langkah berikutnya yang logis. Katakana punya 46 huruf dengan bunyi SAMA dengan hiragana — hanya bentuknya berbeda. Dipelajari dalam 1-2 minggu jika sudah fasih hiragana!"
+        }
+      }
+    ]
+  }
+}

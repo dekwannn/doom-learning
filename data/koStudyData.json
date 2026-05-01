@@ -1,0 +1,1321 @@
+{
+  "koc1s1": {
+    "title": "Apa itu Hangul?",
+    "intro": "Kabar baik: Hangul adalah salah satu alfabet paling mudah dipelajari di dunia! Diciptakan secara ilmiah pada tahun 1443, Hangul bisa dikuasai dalam 1-2 minggu oleh pemula. Tidak seperti Mandarin yang harus hafal ribuan karakter, Hangul hanya punya 24 huruf dasar.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Apa itu Hangul (한글)?",
+        "body": "Hangul (한글) adalah sistem tulisan Korea yang diciptakan oleh Raja Sejong (세종대왕) pada tahun 1443. Sebelum Hangul, orang Korea menulis menggunakan Hanja (karakter China) yang sangat sulit. Raja Sejong ingin rakyatnya bisa membaca dan menulis — maka diciptakanlah Hangul.",
+        "examples": [
+          { "en": "한글 (Hangeul)", "id": "Alfabet Korea — nama resmi sistem tulisan" },
+          { "en": "자음 (jaeum)", "id": "Konsonan — 14 huruf konsonan dasar" },
+          { "en": "모음 (moeum)", "id": "Vokal — 10 huruf vokal dasar" },
+          { "en": "받침 (batchim)", "id": "Konsonan akhir — konsonan di bawah suku kata" }
+        ],
+        "tip": "Hangul diakui UNESCO sebagai salah satu sistem tulisan paling ilmiah di dunia. Setiap huruf dirancang berdasarkan bentuk mulut dan lidah saat mengucapkannya!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Struktur Suku Kata Hangul",
+        "body": "Berbeda dari alfabet Latin yang ditulis berurutan, Hangul disusun dalam blok suku kata. Setiap blok = 1 suku kata, terdiri dari konsonan awal + vokal + konsonan akhir (opsional).",
+        "examples": [
+          { "en": "한 = ㅎ + ㅏ + ㄴ", "id": "han = konsonan ㅎ(h) + vokal ㅏ(a) + konsonan akhir ㄴ(n)" },
+          { "en": "글 = ㄱ + ㅡ + ㄹ", "id": "geul = konsonan ㄱ(g) + vokal ㅡ(eu) + konsonan akhir ㄹ(l)" },
+          { "en": "안녕 = 안(an) + 녕(nyeong)", "id": "dua blok suku kata = dua bunyi" },
+          { "en": "Tanpa konsonan akhir:", "id": "나(na) = ㄴ(n) + ㅏ(a) — hanya 2 komponen" }
+        ],
+        "tip": "Cara baca Hangul: dari kiri ke kanan, atas ke bawah dalam setiap blok. Sama dengan cara baca Indonesia!"
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Bunyi Unik dalam Bahasa Korea",
+        "body": "Beberapa bunyi dalam bahasa Korea tidak ada padanannya dalam bahasa Indonesia. Yang paling penting untuk diketahui:",
+        "examples": [
+          { "en": "ㅡ (eu) — vokal netral", "id": "Seperti 'e' tapi diucapkan di tengah mulut, lidah tidak menyentuh gigi. Contoh: 으 dalam 으뜸 (euddeum = terbaik)" },
+          { "en": "ㅓ (eo) — vokal belakang", "id": "Antara 'o' dan 'e'. Contoh: 어 dalam 어머니 (eomeoni = ibu)" },
+          { "en": "ㄹ — antara R dan L", "id": "Di awal suku kata = agak seperti 'r', di akhir = seperti 'l'. Contoh: 라면 (ramyeon)" },
+          { "en": "Konsonan tegang (ㄲ ㄸ ㅃ ㅆ ㅉ)", "id": "Konsonan 'dobel' yang diucapkan dengan lebih tegang/keras. Contoh: 빠빠 lebih tegas dari 바바" }
+        ],
+        "tip": "Jangan khawatir dengan bunyi sulit sekarang. Fokus dulu pada vokal dan konsonan dasar. Bunyi khusus akan terasa alami setelah banyak mendengarkan."
+      },
+      {
+        "type": "culture",
+        "heading": "Sejarah & Keistimewaan Hangul",
+        "body": "Hangul bukan hanya alfabet biasa — ini adalah warisan budaya Korea yang luar biasa:",
+        "examples": [
+          { "en": "Tanggal 9 Oktober = Hari Hangul (한글날)", "id": "Hari nasional Korea untuk merayakan penciptaan Hangul" },
+          { "en": "Diciptakan untuk rakyat jelata", "id": "Raja Sejong menciptakan Hangul agar semua orang Korea — termasuk perempuan dan petani — bisa membaca" },
+          { "en": "Diakui UNESCO", "id": "UNESCO menyimpan replika 훈민정음 (Hunminjeongeum = dokumen Hangul asli) sebagai warisan dunia" },
+          { "en": "Tingkat melek huruf Korea: 99%+", "id": "Berkat Hangul yang mudah dipelajari, Korea punya salah satu tingkat literasi tertinggi di dunia" }
+        ],
+        "tip": "세종대왕 (Raja Sejong) dianggap pahlawan nasional terbesar Korea. Potretnya ada di uang kertas 10.000 won!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "koc1s1_p1", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Hangul (한글) diciptakan pada tahun berapa oleh siapa?",
+          "options": ["1392 oleh Raja Taejo", "1443 oleh Raja Sejong", "1919 oleh aktivis kemerdekaan", "1945 setelah kemerdekaan Korea"],
+          "correctAnswer": "1443 oleh Raja Sejong",
+          "explanation": "Hangul diciptakan tahun 1443 oleh Raja Sejong (세종대왕) dari Dinasti Joseon. Dokumen aslinya disebut 훈민정음 (Hunminjeongeum)."
+        }
+      },
+      {
+        "id": "koc1s1_p2", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Setiap blok Hangul = satu ___ kata",
+          "options": ["Huruf", "Suku", "Kalimat", "Kata"],
+          "correctAnswer": "Suku",
+          "explanation": "Hangul ditulis dalam blok suku kata. 한글 = 2 blok = 2 suku kata (han + geul)."
+        }
+      },
+      {
+        "id": "koc1s1_p3", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Hangul terdiri dari berapa huruf dasar?",
+          "options": ["14 huruf saja", "24 huruf (14 konsonan + 10 vokal)", "26 huruf seperti alfabet Latin", "40 huruf"],
+          "correctAnswer": "24 huruf (14 konsonan + 10 vokal)",
+          "explanation": "14 자음 (konsonan) + 10 모음 (vokal) = 24 huruf dasar Hangul. Dari kombinasinya terbentuk semua suku kata bahasa Korea!"
+        }
+      }
+    ]
+  },
+
+  "koc1s2": {
+    "title": "Vokal Dasar Hangul (모음)",
+    "intro": "Vokal adalah fondasi Hangul. Ada 10 vokal dasar, dan dari kombinasinya terbentuk 11 vokal gabungan. Kabar baiknya: setelah hafal vokal, kamu langsung bisa membaca beberapa kata Korea nyata!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "10 Vokal Dasar",
+        "body": "Vokal Hangul dibagi dua kelompok: vokal vertikal (ditulis tegak) dan vokal horizontal (ditulis mendatar). Semua vokal selalu muncul berpasangan dengan konsonan.",
+        "examples": [
+          { "en": "ㅏ = a", "id": "Paling mudah — sama persis dengan 'a' Indonesia. 아(a)" },
+          { "en": "ㅑ = ya", "id": "Seperti 'ya'. 야(ya)" },
+          { "en": "ㅓ = eo", "id": "Antara 'o' dan 'e'. 어(eo) — dalam 어머니 (ibu)" },
+          { "en": "ㅕ = yeo", "id": "Seperti 'yeo'. 여(yeo)" },
+          { "en": "ㅗ = o", "id": "Seperti 'o' dalam 'obat'. 오(o)" },
+          { "en": "ㅛ = yo", "id": "Seperti 'yo'. 요(yo) — dalam 안녕하세요" },
+          { "en": "ㅜ = u", "id": "Seperti 'u' tapi bibir lebih maju. 우(u)" },
+          { "en": "ㅠ = yu", "id": "Seperti 'yu'. 유(yu) — dalam 우유(susu)" },
+          { "en": "ㅡ = eu", "id": "UNIK: vokal netral di tengah mulut. 으(eu)" },
+          { "en": "ㅣ = i", "id": "Seperti 'i'. 이(i)" }
+        ],
+        "tip": "Cara cepat hafal: ㅏ ㅑ ㅓ ㅕ baris kanan, ㅗ ㅛ ㅜ ㅠ baris bawah, ㅡ ㅣ baris tengah. Cari pola visual garis!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Cara Menulis Blok Suku Kata dengan Vokal",
+        "body": "Karena vokal tidak bisa berdiri sendiri, selalu dipasangkan dengan ㅇ (diam) di posisi awal:",
+        "examples": [
+          { "en": "ㅏ sendiri → tidak valid", "id": "Harus jadi: ㅇ + ㅏ = 아 (a)" },
+          { "en": "ㅣ sendiri → tidak valid", "id": "Harus jadi: ㅇ + ㅣ = 이 (i)" },
+          { "en": "우유 (u-yu) = susu", "id": "ㅇ+ㅜ + ㅇ+ㅠ = 우 + 유 = 우유" },
+          { "en": "아이 (a-i) = anak kecil", "id": "ㅇ+ㅏ + ㅇ+ㅣ = 아 + 이 = 아이" }
+        ],
+        "tip": "ㅇ di awal suku kata = diam (placeholder). Jadi 아 dibaca hanya 'a', bukan 'nga'. ㅇ hanya berbunyi 'ng' kalau di posisi konsonan AKHIR."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Vokal yang Perlu Perhatian Ekstra",
+        "body": "Tiga vokal ini paling sering membingungkan pemula Indonesia:",
+        "examples": [
+          { "en": "ㅓ (eo) — BUKAN 'o' biasa", "id": "Mulut lebih terbuka dari 'o', lidah di tengah. Contoh: 어(eo), 버스(beoseu=bus), 서울(Seoul)" },
+          { "en": "ㅡ (eu) — TIDAK ADA di Indonesia", "id": "Lidah datar di tengah mulut, bibir tidak maju/mundur. Contoh: 으(eu), 음식(eumsik=makanan), 은행(bank)" },
+          { "en": "ㅔ (e) vs ㅐ (ae) — hampir sama", "id": "Saat ini pengucapannya hampir identik di Korea modern. Keduanya seperti 'e' dalam 'ember'" }
+        ],
+        "tip": "ㅓ dan ㅡ akan terasa alami setelah banyak mendengarkan drama Korea atau K-pop. Pengulangannya yang paling efektif!"
+      },
+      {
+        "type": "culture",
+        "heading": "Kata-kata yang Bisa Langsung Dibaca!",
+        "body": "Setelah hafal vokal dasar, kamu bisa baca beberapa kata Korea nyata:",
+        "examples": [
+          { "en": "아이 (a-i) = anak kecil", "id": "Hanya dua vokal!" },
+          { "en": "우유 (u-yu) = susu", "id": "Dua vokal!" },
+          { "en": "오이 (o-i) = mentimun", "id": "Dua vokal!" },
+          { "en": "이유 (i-yu) = alasan", "id": "Dua vokal!" }
+        ],
+        "tip": "Keempat kata ini = hanya vokal! Tidak ada konsonan nyata (ㅇ diam). Ini bukti bahwa belajar Hangul langsung terasa berguna."
+      }
+    ],
+    "practice": [
+      {
+        "id": "koc1s2_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan vokal Hangul dengan bunyinya!",
+          "pairs": [
+            { "word": "ㅏ", "meaning": "a" },
+            { "word": "ㅗ", "meaning": "o" },
+            { "word": "ㅜ", "meaning": "u" },
+            { "word": "ㅣ", "meaning": "i" },
+            { "word": "ㅡ", "meaning": "eu" }
+          ],
+          "shuffledMeanings": ["i", "a", "eu", "u", "o"],
+          "explanation": "Lima vokal paling dasar: ㅏ=a, ㅗ=o, ㅜ=u, ㅣ=i, ㅡ=eu."
+        }
+      },
+      {
+        "id": "koc1s2_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "우유 (u-yu) artinya...",
+          "options": ["Air", "Jus", "Susu", "Teh"],
+          "correctAnswer": "Susu",
+          "explanation": "우유 = susu! 우(u) + 유(yu). Kata pertama yang bisa dibaca hanya dengan vokal dasar."
+        }
+      },
+      {
+        "id": "koc1s2_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Vokal ㅡ (eu) adalah vokal yang ___ di Indonesia",
+          "options": ["Ada padanannya", "Tidak ada padanannya", "Sama dengan 'e'", "Sama dengan 'o'"],
+          "correctAnswer": "Tidak ada padanannya",
+          "explanation": "ㅡ (eu) adalah vokal netral yang diucapkan di tengah mulut — tidak ada padanannya dalam bahasa Indonesia. Perlu latihan khusus!"
+        }
+      }
+    ]
+  },
+
+  "koc1s3": {
+    "title": "Konsonan Dasar Hangul (자음)",
+    "intro": "Ada 14 konsonan dasar Hangul. Kabar baik: sebagian besar bunyinya ada padanannya dalam bahasa Indonesia! Yang unik adalah beberapa konsonan punya dua bunyi tergantung posisinya dalam suku kata.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "14 Konsonan Dasar",
+        "body": "Urutan konsonan Korea: 가나다라마바사아자차카타파하 (ga-na-da-ra-ma-ba-sa-a-ja-cha-ka-ta-pa-ha)",
+        "examples": [
+          { "en": "ㄱ (g/k)", "id": "Di awal kata = g lembut, di akhir = k. 가(ga), 각(gak)" },
+          { "en": "ㄴ (n)", "id": "Selalu n. 나(na), 안(an)" },
+          { "en": "ㄷ (d/t)", "id": "Di awal = d, di akhir = t. 다(da), 닫(dat)" },
+          { "en": "ㄹ (r/l)", "id": "Di awal = r, di akhir = l. 라(ra), 말(mal=kuda)" },
+          { "en": "ㅁ (m)", "id": "Selalu m. 마(ma), 음(eum)" },
+          { "en": "ㅂ (b/p)", "id": "Di awal = b, di akhir = p. 바(ba), 밥(bap=nasi)" },
+          { "en": "ㅅ (s/t)", "id": "Di awal = s, di akhir = t. 사(sa), 옷(ot=baju)" },
+          { "en": "ㅇ (ng/diam)", "id": "Di awal = diam, di akhir = ng. 아(a), 강(gang=sungai)" },
+          { "en": "ㅈ (j)", "id": "Seperti j. 자(ja), 짜장(jjajang)" },
+          { "en": "ㅊ (ch)", "id": "Seperti ch. 차(cha=teh/mobil)" },
+          { "en": "ㅋ (k aspirasi)", "id": "K dengan hembusan udara. 카(ka)" },
+          { "en": "ㅌ (t aspirasi)", "id": "T dengan hembusan udara. 타(ta)" },
+          { "en": "ㅍ (p aspirasi)", "id": "P dengan hembusan udara. 파(pa=daun bawang)" },
+          { "en": "ㅎ (h)", "id": "Seperti h. 하(ha), 안녕하세요" }
+        ],
+        "tip": "Konsonan ㄱㄷㅂ punya bunyi ganda (g/k, d/t, b/p). Di awal suku kata = bunyi bersuara (g,d,b), di akhir atau di tengah tertentu = bunyi tidak bersuara (k,t,p)."
+      },
+      {
+        "type": "grammar",
+        "heading": "Konsonan Aspirasi vs Biasa vs Tegang",
+        "body": "Korea punya tiga jenis konsonan berdasarkan cara udara keluar — ini perbedaan yang membuat kata berbeda artinya!",
+        "examples": [
+          { "en": "Biasa: ㄱ ㄷ ㅂ ㅈ ㅅ", "id": "Konsonan normal: 가(ga), 다(da), 바(ba)" },
+          { "en": "Aspirasi: ㅋ ㅌ ㅍ ㅊ ㅎ", "id": "Dengan hembusan udara: 카(ka), 타(ta), 파(pa)" },
+          { "en": "Tegang: ㄲ ㄸ ㅃ ㅉ ㅆ", "id": "Diucapkan tegang tanpa udara: 까(kka), 따(tta), 빠(ppa)" },
+          { "en": "Contoh beda arti:", "id": "달(dal=bulan) vs 탈(tal=topeng) vs 딸(ttal=putri)" }
+        ],
+        "tip": "Untuk pemula, fokus dulu pada konsonan biasa. Konsonan tegang (dobel) akan dipelajari lebih lanjut — tapi penting tahu bahwa keduanya ada!"
+      },
+      {
+        "type": "pronunciation",
+        "heading": "받침 — Konsonan Akhir",
+        "body": "받침 (batchim) adalah konsonan yang berada di bawah/akhir blok suku kata. Ini mengubah cara membaca!",
+        "examples": [
+          { "en": "밥 (bap) = nasi", "id": "받침 ㅂ di bawah: ba + p = bap" },
+          { "en": "밥 = ㅂ + ㅏ + ㅂ", "id": "Konsonan awal ㅂ(b) + vokal ㅏ(a) + konsonan akhir ㅂ(p)" },
+          { "en": "한국 (Han-guk) = Korea", "id": "한: ㅎ+ㅏ+ㄴ = han / 국: ㄱ+ㅜ+ㄱ = guk" },
+          { "en": "안녕 (an-nyeong)", "id": "안: ㅇ+ㅏ+ㄴ = an / 녕: ㄴ+ㅛ+ㅇ = nyeong" }
+        ],
+        "tip": "받침 hanya 7 bunyi yang dipakai: k, n, t, l, m, p, ng. Meskipun ada banyak konsonan yang bisa jadi 받침, bunyinya dikelompokkan ke 7 bunyi ini."
+      },
+      {
+        "type": "culture",
+        "heading": "Kata-kata Korea yang Bisa Dibaca Sekarang!",
+        "body": "Dengan konsonan dasar, kamu bisa baca kata-kata Korea yang sangat familiar:",
+        "examples": [
+          { "en": "한국 (Han-guk) = Korea", "id": "Nama resmi Korea dalam bahasa Korea!" },
+          { "en": "서울 (Seo-ul) = Seoul", "id": "Ibukota Korea — ㅅ+ㅓ+ㄹ / ㅇ+ㅜ+ㄹ" },
+          { "en": "김치 (Kim-chi) = Kimchi", "id": "Makanan Korea paling terkenal!" },
+          { "en": "라면 (Ra-myeon) = Ramyeon", "id": "Mie instan Korea — ㄹ+ㅏ / ㅁ+ㅕ+ㄴ" }
+        ],
+        "tip": "Coba baca: 안녕하세요 = 안(an) + 녕(nyeong) + 하(ha) + 세(se) + 요(yo) = annyeonghaseyo. Kamu bisa baca Hangul!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "koc1s3_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan konsonan Hangul!",
+          "pairs": [
+            { "word": "ㄱ", "meaning": "g/k" },
+            { "word": "ㄴ", "meaning": "n" },
+            { "word": "ㅁ", "meaning": "m" },
+            { "word": "ㅅ", "meaning": "s" },
+            { "word": "ㅎ", "meaning": "h" }
+          ],
+          "shuffledMeanings": ["h", "g/k", "s", "m", "n"],
+          "explanation": "ㄱ=g/k, ㄴ=n, ㄷ=d/t, ㄹ=r/l, ㅁ=m, ㅂ=b/p, ㅅ=s, ㅇ=ng/diam, ㅈ=j, ㅎ=h."
+        }
+      },
+      {
+        "id": "koc1s3_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "밥 (bap) artinya...",
+          "options": ["Minum", "Nasi/Makanan", "Tidur", "Jalan"],
+          "correctAnswer": "Nasi/Makanan",
+          "explanation": "밥 (bap) = nasi atau makan secara umum. ㅂ(b)+ㅏ(a)+ㅂ(p) = bap. 밥 먹었어요? (sudah makan?) adalah sapaan umum Korea!"
+        }
+      },
+      {
+        "id": "koc1s3_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "ㅇ di AKHIR suku kata berbunyi ___ (contoh: 강=sungai)",
+          "options": ["Diam", "ng", "k", "n"],
+          "correctAnswer": "ng",
+          "explanation": "ㅇ di akhir suku kata = ng. 강(gang=sungai), 방(bang=kamar), 영(yeong=nama). Di awal suku kata ㅇ = diam."
+        }
+      }
+    ]
+  },
+
+  "koc1s4": {
+    "title": "Sapaan & Ungkapan Sopan",
+    "intro": "Korea adalah masyarakat yang sangat memperhatikan tingkat sopan santun dalam bahasa. Pilihan kata yang berbeda mencerminkan hubungan sosial antara pembicara. Untuk pemula, selalu gunakan bentuk formal/sopan — ini pasti aman di semua situasi!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Sapaan Berdasarkan Formalitas",
+        "body": "Korea membagi bahasa menjadi beberapa tingkat kehormatan. Untuk pemula, ada dua yang paling penting: formal dan kasual.",
+        "examples": [
+          { "en": "안녕하세요 (annyeonghaseyo)", "id": "Halo — FORMAL, aman dipakai kepada siapa saja" },
+          { "en": "안녕 (annyeong)", "id": "Hai — KASUAL, hanya ke teman sebaya atau lebih muda" },
+          { "en": "안녕히 가세요 (annyeonghi gaseyo)", "id": "Selamat jalan — ke orang yang PERGI (gaseyo = pergilah)" },
+          { "en": "안녕히 계세요 (annyeonghi gyeseyo)", "id": "Selamat tinggal — ke orang yang TINGGAL (gyeseyo = tinggallah)" },
+          { "en": "잘 가 (jal ga)", "id": "Dah — KASUAL ke orang yang pergi" }
+        ],
+        "tip": "Strategi aman: gunakan 안녕하세요 dan 감사합니다 untuk semua situasi. Kamu tidak akan pernah menyinggung siapapun dengan kata-kata ini!"
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Terima Kasih & Maaf",
+        "body": "Beberapa cara mengucapkan terima kasih dan maaf yang perlu diketahui:",
+        "examples": [
+          { "en": "감사합니다 (gamsahamnida)", "id": "Terima kasih — PALING FORMAL, dipakai di situasi resmi" },
+          { "en": "고맙습니다 (gomapseumnida)", "id": "Terima kasih — formal, sedikit lebih hangat dari 감사합니다" },
+          { "en": "고마워요 (gomawoyo)", "id": "Makasih — semi-formal, cocok untuk orang yang lebih muda/sebaya" },
+          { "en": "죄송합니다 (joesonghamnida)", "id": "Maaf — PALING FORMAL, untuk kesalahan serius" },
+          { "en": "미안해요 (mianhaeyo)", "id": "Maaf — semi-formal, untuk situasi ringan" },
+          { "en": "미안 (mian)", "id": "Sorry — KASUAL, hanya ke teman" }
+        ],
+        "tip": "Perbedaan 죄송 vs 미안: 죄송합니다 lebih dalam dan formal (seperti memohon maaf dengan tulus), 미안해요 lebih ringan untuk kesalahan kecil sehari-hari."
+      },
+      {
+        "type": "grammar",
+        "heading": "Sistem Tingkat Kehormatan Korea (존댓말)",
+        "body": "존댓말 (jondaemal) = bahasa hormat. Ini bukan pilihan, ini wajib dalam budaya Korea. Menggunakan bahasa yang salah bisa dianggap tidak sopan.",
+        "examples": [
+          { "en": "Formal (-ㅂ니다/-습니다)", "id": "Dipakai ke orang lebih tua, atasan, orang asing. Contoh: 감사합니다, 안녕하세요" },
+          { "en": "Semi-formal (-아요/-어요)", "id": "Dipakai sehari-hari ke orang yang tidak terlalu akrab. Ini yang paling sering dipakai!" },
+          { "en": "Kasual (반말, banmal)", "id": "Dipakai ke teman dekat, orang lebih muda, atau yang sudah sangat akrab" },
+          { "en": "Pemula: pakai semi-formal", "id": "끝에 -아요/-어요 = sopan tapi natural. 이에요, 있어요, 먹어요..." }
+        ],
+        "tip": "Sebagai orang asing yang belajar Korea, orang Korea akan sangat menghargai usahamu menggunakan 존댓말 (bahasa hormat) meskipun tidak sempurna!"
+      },
+      {
+        "type": "culture",
+        "heading": "Budaya Membungkuk (인사) di Korea",
+        "body": "Seperti Jepang, Korea juga memiliki tradisi membungkuk saat menyapa, tapi dengan aturan yang sedikit berbeda:",
+        "examples": [
+          { "en": "인사 (insa) = memberi salam/membungkuk", "id": "Tradisi membungkuk sangat penting dalam budaya Korea" },
+          { "en": "15° = sapaan kasual sehari-hari", "id": "Ke kenalan, rekan kerja, tetangga" },
+          { "en": "30° = sapaan formal standar", "id": "Ke atasan, guru, orang yang lebih tua" },
+          { "en": "90° = penghormatan mendalam", "id": "Saat meminta maaf serius atau ke tokoh sangat penting" }
+        ],
+        "tip": "Anak-anak Korea diajarkan membungkuk dari kecil. Saat bertemu orang Korea, sedikit mengangguk sudah diapresiasi!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "koc1s4_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan sapaan dengan situasinya!",
+          "pairs": [
+            { "word": "안녕하세요", "meaning": "Halo (aman di semua situasi)" },
+            { "word": "안녕히 가세요", "meaning": "Selamat jalan (ke yang pergi)" },
+            { "word": "안녕히 계세요", "meaning": "Selamat tinggal (ke yang tinggal)" },
+            { "word": "감사합니다", "meaning": "Terima kasih (formal)" }
+          ],
+          "shuffledMeanings": ["Terima kasih (formal)", "Selamat tinggal (ke yang tinggal)", "Halo (aman di semua situasi)", "Selamat jalan (ke yang pergi)"],
+          "explanation": "Korea punya 2 ucapan perpisahan! 안녕히 가세요 ke yang pergi, 안녕히 계세요 ke yang tinggal."
+        }
+      },
+      {
+        "id": "koc1s4_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Untuk pemula, tingkat bahasa yang paling aman dipakai adalah...",
+          "options": ["반말 (banmal) — kasual", "Semi-formal (-아요/-어요)", "Bahasa kuno (고어)", "Bahasa anak-anak"],
+          "correctAnswer": "Semi-formal (-아요/-어요)",
+          "explanation": "Semi-formal (-아요/-어요) adalah tingkat bahasa yang paling aman dan paling sering dipakai sehari-hari. Sopan tapi terdengar natural."
+        }
+      },
+      {
+        "id": "koc1s4_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "죄송합니다 digunakan untuk situasi yang lebih ___ dibanding 미안해요",
+          "options": ["Ringan", "Serius/formal", "Kasual", "Lucu"],
+          "correctAnswer": "Serius/formal",
+          "explanation": "죄송합니다 = maaf yang lebih formal dan mendalam (untuk kesalahan serius). 미안해요 = maaf ringan sehari-hari. Keduanya valid, pilih sesuai situasi."
+        }
+      }
+    ]
+  },
+
+  "koc1s5": {
+    "title": "Review Chapter 1",
+    "intro": "Chapter 1 selesai! Kamu sudah mengenal Hangul, vokal, konsonan dasar, dan sapaan Korea. Ini fondasi yang sangat penting. Mari review sebelum masuk ke kalimat dan tata bahasa!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Ringkasan Chapter 1",
+        "body": "Semua yang sudah dipelajari:",
+        "examples": [
+          { "en": "Hangul: 14 자음 + 10 모음 = 24 huruf", "id": "Diciptakan 1443 oleh Raja Sejong" },
+          { "en": "Vokal: ㅏ(a) ㅓ(eo) ㅗ(o) ㅜ(u) ㅡ(eu) ㅣ(i) + gabungan", "id": "ㅡ(eu) vokal unik yang tidak ada di Indonesia" },
+          { "en": "Konsonan: ㄱ ㄴ ㄷ ㄹ ㅁ ㅂ ㅅ ㅇ ㅈ ㅎ + lebih", "id": "ㅇ diam di awal, ng di akhir" },
+          { "en": "Sapaan: 안녕하세요, 감사합니다, 죄송합니다", "id": "Korea punya 2 ucapan selamat tinggal!" }
+        ],
+        "tip": "Target berikutnya: bisa membaca 안녕하세요 dengan benar tanpa melihat catatan. Kalau sudah bisa, lanjut ke Chapter 2!"
+      },
+      {
+        "type": "culture",
+        "heading": "Tips Belajar Bahasa Korea untuk Pemula",
+        "body": "Strategi terbukti efektif untuk pemula belajar Korea:",
+        "examples": [
+          { "en": "Hafal Hangul dulu — 1-2 minggu", "id": "Jangan skip! Tanpa Hangul, belajar Korea sangat terbatas" },
+          { "en": "Tonton drama/video Korea", "id": "Mulai dengan subtitle Korea — biasakan mata membaca Hangul" },
+          { "en": "Dengarkan K-pop dengan lirik", "id": "Ikuti lirik dalam Hangul — cara menyenangkan melatih membaca" },
+          { "en": "Praktik 15 menit setiap hari", "id": "Konsistensi > intensitas. 15 menit setiap hari > 3 jam sekali seminggu" }
+        ],
+        "tip": "화이팅! (Hwaiting = Fighting! = Semangat!) Ekspresi penyemangat populer Korea yang datang dari kata bahasa Inggris 'fighting'."
+      }
+    ],
+    "practice": [
+      {
+        "id": "koc1s5_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Review Final Chapter 1!",
+          "pairs": [
+            { "word": "안녕하세요", "meaning": "Halo (formal)" },
+            { "word": "감사합니다", "meaning": "Terima kasih" },
+            { "word": "죄송합니다", "meaning": "Maaf (formal)" },
+            { "word": "우유 (u-yu)", "meaning": "Susu" }
+          ],
+          "shuffledMeanings": ["Susu", "Halo (formal)", "Maaf (formal)", "Terima kasih"],
+          "explanation": "Chapter 1 selesai! Fondasi Hangul dan sapaan sudah terbentuk."
+        }
+      },
+      {
+        "id": "koc1s5_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "화이팅 (hwaiting) artinya...",
+          "options": ["Bertarung", "Semangat!/Fighting!", "Selamat datang", "Terima kasih"],
+          "correctAnswer": "Semangat!/Fighting!",
+          "explanation": "화이팅 (hwaiting) = semangat! Kata serapan dari bahasa Inggris 'fighting'. Dipakai untuk menyemangati diri sendiri atau orang lain."
+        }
+      },
+      {
+        "id": "koc1s5_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "안녕히 ___ (ucapan ke orang yang akan PERGI)",
+          "options": ["계세요", "가세요", "주세요", "하세요"],
+          "correctAnswer": "가세요",
+          "explanation": "안녕히 가세요 = selamat jalan (ke yang pergi). 가다 = pergi → 가세요 = pergilah dengan selamat. Lawannya: 안녕히 계세요 (ke yang tinggal)."
+        }
+      },
+      {
+        "id": "koc1s5_p4", "type": "speaking_test", "xpReward": 20,
+        "content": {
+          "phrase": "annyeonghaseyo gamsahamnida joesonghamnida",
+          "hint": "Ucapkan tiga ungkapan: 안녕하세요! 감사합니다! 죄송합니다!",
+          "translation": "Halo! Terima kasih! Maaf!"
+        }
+      }
+    ]
+  },
+
+  "koc2s1": {
+    "title": "Kata Ganti Orang",
+    "intro": "Kata ganti Korea sedikit lebih kompleks dari Mandarin karena mencerminkan tingkat kehormatan. Ada 'saya' yang sopan (저) dan 'saya' yang kasual (나). Pilihan yang salah bisa terasa tidak sopan. Yuk pelajari dengan benar!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Kata Ganti Orang Pertama & Kedua",
+        "body": "Dua kata ganti terpenting yang harus dikuasai:",
+        "examples": [
+          { "en": "나 (na) = saya/aku — KASUAL", "id": "Dipakai ke teman dekat, orang lebih muda, atau dalam pikiran sendiri" },
+          { "en": "저 (jeo) = saya — FORMAL/RENDAH HATI", "id": "Dipakai ke orang yang lebih tua, guru, orang asing, situasi formal. SELALU lebih aman!" },
+          { "en": "너 (neo) = kamu — KASUAL", "id": "HATI-HATI: sangat kasual! Jangan pakai ke orang yang lebih tua. Bisa terdengar kasar." },
+          { "en": "당신 (dangsin) = Anda — FORMAL tapi kaku", "id": "Jarang dipakai dalam percakapan. Lebih sering pakai nama orang atau gelar." }
+        ],
+        "tip": "Tip penting: di Korea, sangat jarang menyebut 'kamu' langsung. Lebih sopan menyebut nama atau gelar orang tersebut: '선생님 (guru), mau ke mana?'"
+      },
+      {
+        "type": "grammar",
+        "heading": "Partikel Topik dan Subjek",
+        "body": "Dalam bahasa Korea, kata ganti hampir selalu diikuti partikel yang menunjukkan perannya dalam kalimat:",
+        "examples": [
+          { "en": "저는 (jeo-neun) = Saya [sebagai topik]", "id": "는/은 = partikel topik. 저는 학생이에요 = Saya (adalah) pelajar." },
+          { "en": "저가 (jeo-ga) → 제가 (je-ga) = Saya [sebagai subjek]", "id": "가/이 = partikel subjek. 제가 했어요 = Saya yang melakukan." },
+          { "en": "나는 (na-neun) = Aku [kasual, topik]", "id": "나는 배고파 = Aku lapar." },
+          { "en": "제 (je) = milik saya [formal]", "id": "제 이름 = nama saya. 저의 yang disingkat jadi 제." }
+        ],
+        "tip": "Partikel 는/은 dan 가/이 bisa tertukar untuk pemula. Yang paling aman untuk latihan: gunakan 는/은 (topik) dulu untuk semua kalimat perkenalan."
+      },
+      {
+        "type": "grammar",
+        "heading": "우리 — Lebih dari Sekadar 'Kami'",
+        "body": "우리 (uri) dalam bahasa Korea punya penggunaan yang unik:",
+        "examples": [
+          { "en": "우리 = kami/kita", "id": "Bentuk jamak standar" },
+          { "en": "우리 엄마 = ibu saya (bukan 'ibu kami'!)", "id": "Orang Korea menyebut ibu/ayah mereka dengan 우리 엄마/아빠 — pakai 'kita' bukan 'saya punya'!" },
+          { "en": "우리나라 = negara kita/Korea", "id": "Orang Korea sering menyebut negaranya dengan 우리나라" },
+          { "en": "우리 집 = rumah saya", "id": "Bukan 'rumah kita' — ini idiom Korea yang unik!" }
+        ],
+        "tip": "Penggunaan 우리 untuk kepemilikan personal (우리 엄마, 우리 집) adalah ciri khas bahasa Korea yang mencerminkan rasa kebersamaan. Sangat berbeda dari Indonesia!"
+      },
+      {
+        "type": "culture",
+        "heading": "Cara Korea Menyebut Orang Lain",
+        "body": "Di Korea, lebih natural menggunakan hubungan/gelar daripada kata ganti 'kamu':",
+        "examples": [
+          { "en": "선생님 (seonsaengnim) = Guru/Pak/Bu", "id": "Dipakai untuk memanggil guru, dokter, atau orang yang dihormati" },
+          { "en": "언니/오빠/누나/형", "id": "Memanggil orang yang sedikit lebih tua seperti kakak, bahkan yang bukan saudara kandung!" },
+          { "en": "이름 (ireum) = nama", "id": "Memanggil nama langsung = casual. 존댓말 = 이름+씨 (ex: 민지씨)" },
+          { "en": "씨 (ssi) = Mr./Ms.", "id": "Sufiks hormat setelah nama: 민지씨, Sari씨. Sopan tapi tidak terlalu formal." }
+        ],
+        "tip": "씨 (ssi) adalah cara paling aman dan netral untuk memanggil seseorang yang sebaya atau tidak terlalu jauh lebih tua: nama + 씨."
+      }
+    ],
+    "practice": [
+      {
+        "id": "koc2s1_p1", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Dalam situasi formal (ke guru, orang tua), saya menggunakan...",
+          "options": ["나 (na)", "저 (jeo)", "너 (neo)", "우리 (uri)"],
+          "correctAnswer": "저 (jeo)",
+          "explanation": "저 (jeo) = saya formal/rendah hati. SELALU gunakan 저 dalam situasi formal atau ke orang yang lebih tua. 나 hanya untuk teman sebaya atau lebih muda."
+        }
+      },
+      {
+        "id": "koc2s1_p2", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata ganti Korea!",
+          "pairs": [
+            { "word": "저 (jeo)", "meaning": "Saya (formal)" },
+            { "word": "나 (na)", "meaning": "Aku (kasual)" },
+            { "word": "우리 (uri)", "meaning": "Kami/Kita" },
+            { "word": "저는 (jeoneun)", "meaning": "Saya [sebagai topik kalimat]" }
+          ],
+          "shuffledMeanings": ["Saya [sebagai topik kalimat]", "Kami/Kita", "Saya (formal)", "Aku (kasual)"],
+          "explanation": "저=saya formal, 나=aku kasual, 우리=kami. Partikel 는 menandai sebagai topik kalimat."
+        }
+      },
+      {
+        "id": "koc2s1_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "우리 엄마 dalam bahasa Korea artinya...",
+          "options": ["Ibu kami semua", "Ibu saya (kepemilikan personal)", "Ibu dan kita", "Ibu dari semua orang"],
+          "correctAnswer": "Ibu saya (kepemilikan personal)",
+          "explanation": "우리 엄마 = 'ibu saya' meskipun pakai kata 우리 (kami). Ini idiom Korea unik — kepemilikan personal pun disebut 우리 sebagai ungkapan kebersamaan."
+        }
+      }
+    ]
+  },
+
+  "koc2s2": {
+    "title": "Kata 이다 — To Be Korea",
+    "intro": "이다 (ida) adalah kata kerja 'adalah' dalam bahasa Korea. Tapi berbeda dari Mandarin atau Inggris, bentuknya berubah tergantung apakah kata sebelumnya diakhiri konsonan atau vokal. Setelah paham aturan ini, kamu bisa membuat kalimat identitas apa saja!",
+    "sections": [
+      {
+        "type": "grammar",
+        "heading": "이에요 vs 예요 — Kapan Pakai Mana?",
+        "body": "Bentuk sopan dari 이다 adalah 이에요/예요. Pilihannya tergantung pada huruf terakhir kata sebelumnya:",
+        "examples": [
+          { "en": "Setelah KONSONAN → 이에요", "id": "학생이에요 (haksaengieyo) = adalah pelajar. 학생 berakhir konsonan ㅇ → pakai 이에요" },
+          { "en": "Setelah VOKAL → 예요", "id": "의사예요 (uisayeyo) = adalah dokter. 의사 berakhir vokal 아 → pakai 예요" },
+          { "en": "이름이에요 = adalah nama", "id": "이름 (nama) berakhir ㅁ (konsonan) → 이에요" },
+          { "en": "친구예요 = adalah teman", "id": "친구 (teman) berakhir 구 (vokal) → 예요" }
+        ],
+        "tip": "Cara mudah ingat: setelah 받침 (konsonan akhir) → 이에요, tanpa 받침 → 예요. Cek huruf terakhir kata di depannya!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Negatif: 아니에요 (anieyo)",
+        "body": "Untuk mengatakan 'bukan', gunakan 아니에요 — bentuknya tidak berubah seperti 이에요/예요:",
+        "examples": [
+          { "en": "저는 학생이에요 → 저는 학생이 아니에요", "id": "Saya pelajar → Saya bukan pelajar" },
+          { "en": "이건 책이에요 → 이건 책이 아니에요", "id": "Ini buku → Ini bukan buku" },
+          { "en": "Pola: [kata benda] + 이/가 + 아니에요", "id": "이/가 = partikel subjek yang muncul sebelum 아니에요" },
+          { "en": "아니요 (aniyo) vs 아니에요", "id": "아니요 = tidak (jawaban singkat), 아니에요 = bukan (dalam kalimat)" }
+        ],
+        "tip": "아니요 (aniyo) = tidak — dipakai sebagai jawaban singkat ya/tidak. 아니에요 = bukan — dipakai dalam kalimat lengkap."
+      },
+      {
+        "type": "grammar",
+        "heading": "Kalimat Tanya: Intonasi + Tanda Tanya",
+        "body": "Cara paling mudah membuat kalimat tanya di Korea: naikkan intonasi di akhir kalimat dan tambahkan tanda tanya!",
+        "examples": [
+          { "en": "학생이에요? (haksaeng-ieyo?)", "id": "Apakah (Anda) pelajar? — intonasi naik + ?" },
+          { "en": "이름이 뭐예요? (ireumi mwoyeyo?)", "id": "Siapa namanya? — pakai kata tanya 뭐(apa)" },
+          { "en": "한국 사람이에요? (Hanguk saramieyo?)", "id": "Apakah (Anda) orang Korea?" },
+          { "en": "Jawab: 네, 학생이에요 / 아니요, 학생이 아니에요", "id": "Ya, saya pelajar / Tidak, saya bukan pelajar" }
+        ],
+        "tip": "네 (ne) = ya, 아니요 (aniyo) = tidak. Dua kata jawaban paling dasar Korea!"
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Kata-kata Identitas Dasar",
+        "body": "Kosakata yang sering dipakai bersama 이에요/예요:",
+        "examples": [
+          { "en": "학생 (haksaeng) = pelajar/mahasiswa", "id": "저는 학생이에요 = Saya pelajar" },
+          { "en": "선생님 (seonsaengnim) = guru", "id": "저는 선생님이에요 = Saya guru" },
+          { "en": "한국 사람 (Hanguk saram) = orang Korea", "id": "저는 한국 사람이에요 = Saya orang Korea" },
+          { "en": "인도네시아 사람 (Indonesia saram) = orang Indonesia", "id": "저는 인도네시아 사람이에요 = Saya orang Indonesia" }
+        ],
+        "tip": "Pola kewarganegaraan: [nama negara] + 사람 (saram=orang) = orang dari negara tersebut. 미국 사람=orang Amerika, 일본 사람=orang Jepang."
+      }
+    ],
+    "practice": [
+      {
+        "id": "koc2s2_p1", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "'저는 학생이에요' menggunakan 이에요 (bukan 예요) karena...",
+          "options": ["Karena 저 berakhir konsonan", "Karena 학생 berakhir konsonan ㅇ", "Karena kalimatnya formal", "Karena ada 저는"],
+          "correctAnswer": "Karena 학생 berakhir konsonan ㅇ",
+          "explanation": "학생 berakhir dengan ㅇ (konsonan) → pakai 이에요. Kalau kata berakhir vokal, pakai 예요. Contoh: 의사예요 (dokter berakhir 아=vokal → 예요)."
+        }
+      },
+      {
+        "id": "koc2s2_p2", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "저는 학생이 ___ (Saya bukan pelajar)",
+          "options": ["이에요", "아니에요", "있어요", "없어요"],
+          "correctAnswer": "아니에요",
+          "explanation": "아니에요 = bukan. Untuk negatif 이에요/예요, gunakan 이 아니에요 / 가 아니에요. 저는 학생이 아니에요 = Saya bukan pelajar."
+        }
+      },
+      {
+        "id": "koc2s2_p3", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan pola kalimat!",
+          "pairs": [
+            { "word": "저는 학생이에요", "meaning": "Saya adalah pelajar" },
+            { "word": "저는 학생이 아니에요", "meaning": "Saya bukan pelajar" },
+            { "word": "학생이에요?", "meaning": "Apakah (kamu) pelajar?" },
+            { "word": "네, 맞아요", "meaning": "Ya, benar" }
+          ],
+          "shuffledMeanings": ["Apakah (kamu) pelajar?", "Ya, benar", "Saya adalah pelajar", "Saya bukan pelajar"],
+          "explanation": "이에요=adalah, 이 아니에요=bukan, intonasi naik=kalimat tanya, 네=ya."
+        }
+      }
+    ]
+  },
+
+  "koc2s3": {
+    "title": "Anggota Keluarga Korea",
+    "intro": "Sistem kekeluargaan Korea sangat kaya dan kompleks — ada kata berbeda untuk setiap hubungan keluarga berdasarkan usia dan jenis kelamin! Yang paling unik: panggilan kakak berbeda tergantung siapa yang memanggil. Ini mencerminkan betapa pentingnya hierarki usia dalam budaya Korea.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Keluarga Inti — Formal",
+        "body": "Kata-kata formal untuk anggota keluarga (dipakai saat membicarakan kepada orang lain):",
+        "examples": [
+          { "en": "아버지 (abeoji) = ayah (formal)", "id": "Dipakai saat membicarakan ayah kepada orang lain" },
+          { "en": "어머니 (eomeoni) = ibu (formal)", "id": "Dipakai saat membicarakan ibu kepada orang lain" },
+          { "en": "형제 (hyeongje) = saudara laki-laki", "id": "Kata umum untuk saudara laki-laki" },
+          { "en": "자매 (jamae) = saudara perempuan", "id": "Kata umum untuk saudara perempuan" }
+        ],
+        "tip": "Di Korea, ada perbedaan antara kata yang dipakai MEMANGGIL langsung (panggilan) dan kata yang dipakai saat MEMBICARAKAN kepada orang lain. Keduanya berbeda!"
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Panggilan Kakak — Yang Paling Unik!",
+        "body": "Ini sistem yang paling berbeda dari bahasa Indonesia. Panggilan kakak bergantung pada jenis kelamin ORANG YANG MEMANGGIL:",
+        "examples": [
+          { "en": "오빠 (oppa) = kakak laki", "id": "Dipakai oleh ADIK PEREMPUAN ke kakak laki-laki. Kata yang sangat populer di K-pop!" },
+          { "en": "형 (hyeong) = kakak laki", "id": "Dipakai oleh ADIK LAKI-LAKI ke kakak laki-laki" },
+          { "en": "언니 (eonni) = kakak perempuan", "id": "Dipakai oleh ADIK PEREMPUAN ke kakak perempuan" },
+          { "en": "누나 (nuna) = kakak perempuan", "id": "Dipakai oleh ADIK LAKI-LAKI ke kakak perempuan" },
+          { "en": "동생 (dongsaeng) = adik", "id": "Tidak dibedakan jenis kelamin! 남동생=adik laki, 여동생=adik perempuan" }
+        ],
+        "tip": "Cara hafal: perempuan memanggil 오빠/언니, laki-laki memanggil 형/누나. Di K-drama, 오빠 sangat sering terdengar!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Menceritakan Keluarga: Pola 있어요/없어요",
+        "body": "있어요 (isseoyo) = ada/punya, 없어요 (eopseoyo) = tidak ada/tidak punya:",
+        "examples": [
+          { "en": "저는 오빠가 있어요 (jeoneun oppaga isseoyo)", "id": "Saya punya kakak laki-laki (kata perempuan)" },
+          { "en": "저는 동생이 없어요 (jeoneun dongsaengi eopseoyo)", "id": "Saya tidak punya adik" },
+          { "en": "형제가 있어요? (hyeongjega isseoyo?)", "id": "Apakah kamu punya saudara?" },
+          { "en": "몇 명이에요? (myeot myeongieyo?)", "id": "Berapa orang? — untuk menanyakan jumlah anggota keluarga" }
+        ],
+        "tip": "있어요 dan 없어요 adalah dua kata kerja paling berguna Korea! Bukan hanya untuk keluarga, tapi untuk semua hal: 시간이 있어요? (ada waktu?)"
+      },
+      {
+        "type": "culture",
+        "heading": "Budaya Hierarki Usia Korea",
+        "body": "Konsep 나이 (nai = usia) sangat penting dalam masyarakat Korea:",
+        "examples": [
+          { "en": "나이가 어떻게 돼요? (berapa umurmu?)", "id": "Pertanyaan umum saat berkenalan — untuk menentukan cara bicara yang tepat" },
+          { "en": "나보다 나이가 많아요 (lebih tua dari saya)", "id": "Usia penting karena menentukan penggunaan bahasa" },
+          { "en": "빠른 년생 vs 늦은 년생", "id": "Sistem tahun lahir Korea membedakan bulan lahir — kompleks tapi penting untuk pergaulan" },
+          { "en": "선배/후배 (sunbae/hubae)", "id": "Senior/junior — konsep penting di sekolah dan dunia kerja Korea" }
+        ],
+        "tip": "Di Korea, usia 1 tahun lebih tua = perbedaan cara bicara yang signifikan. Ini mengapa orang Korea sering bertanya umur saat pertama kali berkenalan!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "koc2s3_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan panggilan keluarga Korea!",
+          "pairs": [
+            { "word": "아빠 (appa)", "meaning": "Ayah (kasual)" },
+            { "word": "엄마 (eomma)", "meaning": "Ibu (kasual)" },
+            { "word": "오빠 (oppa)", "meaning": "Kakak laki (panggilan adik perempuan)" },
+            { "word": "동생 (dongsaeng)", "meaning": "Adik" }
+          ],
+          "shuffledMeanings": ["Adik", "Ibu (kasual)", "Kakak laki (panggilan adik perempuan)", "Ayah (kasual)"],
+          "explanation": "오빠/언니 = panggilan perempuan, 형/누나 = panggilan laki-laki. 동생 = adik (tidak dibedakan jenis kelamin)."
+        }
+      },
+      {
+        "id": "koc2s3_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Seorang adik laki-laki memanggil kakak perempuannya dengan...",
+          "options": ["언니 (eonni)", "오빠 (oppa)", "누나 (nuna)", "형 (hyeong)"],
+          "correctAnswer": "누나 (nuna)",
+          "explanation": "Adik laki-laki ke kakak perempuan = 누나. Adik perempuan ke kakak perempuan = 언니. Sistem panggilan Korea berdasarkan jenis kelamin pemanggil!"
+        }
+      },
+      {
+        "id": "koc2s3_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "저는 동생이 ___ (Saya tidak punya adik)",
+          "options": ["있어요", "없어요", "이에요", "아니에요"],
+          "correctAnswer": "없어요",
+          "explanation": "없어요 (eopseoyo) = tidak ada/tidak punya. Lawannya 있어요 = ada/punya. 저는 동생이 없어요 = Saya tidak punya adik."
+        }
+      }
+    ]
+  },
+
+  "koc2s4": {
+    "title": "Perkenalan Diri Lengkap",
+    "intro": "Saatnya menggabungkan semua yang dipelajari jadi perkenalan diri yang lengkap! Perkenalan diri Korea punya urutan yang natural dan diterima di semua situasi. Setelah latihan ini, kamu siap memperkenalkan diri ke orang Korea mana pun!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Urutan Perkenalan Standar Korea",
+        "body": "Urutan yang natural dan selalu diterima dalam budaya Korea:",
+        "examples": [
+          { "en": "① 안녕하세요! (annyeonghaseyo)", "id": "Mulai dengan sapaan — WAJIB" },
+          { "en": "② 저는 [nama]이에요/예요", "id": "Perkenalkan nama" },
+          { "en": "③ 인도네시아 사람이에요 (Indonesia saramieyo)", "id": "Sebutkan kebangsaan" },
+          { "en": "④ [profesi]이에요 — opsional", "id": "Sebutkan profesi jika relevan" },
+          { "en": "⑤ 반갑습니다! (bangapseumnida)", "id": "Tutup dengan 'senang bertemu' — WAJIB" }
+        ],
+        "tip": "반갑습니다 (bangapseumnida) = senang bertemu. Sangat penting! Selalu akhiri perkenalan dengan kata ini."
+      },
+      {
+        "type": "grammar",
+        "heading": "Bertanya dan Menjawab Nama",
+        "body": "Cara bertanya nama yang natural dalam bahasa Korea:",
+        "examples": [
+          { "en": "이름이 뭐예요? (ireumi mwoyeyo?)", "id": "Siapa nama Anda? (formal sopan)" },
+          { "en": "성함이 어떻게 되세요? (seonghami eotteoke doeseyo?)", "id": "Siapa nama Anda? (SANGAT FORMAL — ke orang yang jauh lebih senior)" },
+          { "en": "제 이름은 [nama]이에요/예요", "id": "Nama saya [nama]" },
+          { "en": "저는 [nama]라고 해요 (rago haeyo)", "id": "Saya dipanggil [nama] — cara yang sangat natural" }
+        ],
+        "tip": "뭐 (mwo) = apa. 뭐예요? = apa ya? Kata tanya yang sangat sering dipakai dalam percakapan sehari-hari."
+      },
+      {
+        "type": "conversation",
+        "heading": "Contoh Percakapan Perkenalan",
+        "body": "Percakapan lengkap yang bisa langsung dipraktikkan:",
+        "examples": [
+          { "en": "A: 안녕하세요! 저는 민지예요. (Halo! Saya Minji.)", "id": "A memulai dengan sapaan + nama" },
+          { "en": "B: 안녕하세요! 저는 Sari예요. 인도네시아 사람이에요. (Halo! Saya Sari. Saya orang Indonesia.)", "id": "B membalas" },
+          { "en": "A: 아, 그래요? 반가워요! (Oh, begitu? Senang bertemu!)", "id": "그래요? = Begitu ya?" },
+          { "en": "B: 저도 반가워요! (Saya juga senang bertemu!)", "id": "저도 = saya juga" }
+        ]
+      },
+      {
+        "type": "culture",
+        "heading": "Nama Korea dan Urutan Nama",
+        "body": "Sistem nama Korea berbeda dari Indonesia:",
+        "examples": [
+          { "en": "Urutan: Nama keluarga + Nama depan", "id": "Kim Minji = Kim (marga) + Minji (nama). Berbeda dari Indonesia yang nama depan dulu!" },
+          { "en": "성 (seong) = marga/nama keluarga", "id": "Kim (김), Lee/Yi (이), Park (박) = tiga marga paling umum di Korea" },
+          { "en": "이름 (ireum) = nama depan", "id": "Biasanya 2 suku kata: Min-ji, Jun-seo, Ji-won" },
+          { "en": "Di lingkungan internasional", "id": "Orang Korea sering membalik urutannya saat berkenalan dengan orang asing: Minji Kim" }
+        ],
+        "tip": "Kim, Lee, Park = tiga marga yang mencakup lebih dari 45% populasi Korea! Kalau orang Korea tidak menyebut marganya, bisa jadi salah satu dari tiga ini."
+      }
+    ],
+    "practice": [
+      {
+        "id": "koc2s4_p1", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "반갑습니다 (bangapseumnida) artinya...",
+          "options": ["Halo", "Terima kasih", "Senang bertemu", "Sampai jumpa"],
+          "correctAnswer": "Senang bertemu",
+          "explanation": "반갑습니다 = senang bertemu! Diucapkan saat berkenalan pertama kali. 반갑다 (bangapta) = senang/gembira. Selalu akhiri perkenalan dengan kata ini!"
+        }
+      },
+      {
+        "id": "koc2s4_p2", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "이름이 ___ ? (Siapa namamu? — formal sopan)",
+          "options": ["어때요", "뭐예요", "어디예요", "언제예요"],
+          "correctAnswer": "뭐예요",
+          "explanation": "이름이 뭐예요? = siapa namamu? 뭐 = apa. Kalimat harfiah: nama adalah apa?"
+        }
+      },
+      {
+        "id": "koc2s4_p3", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Susun perkenalan yang tepat!",
+          "pairs": [
+            { "word": "Langkah 1", "meaning": "안녕하세요! (Halo!)" },
+            { "word": "Langkah 2", "meaning": "저는 [nama]예요 (Saya [nama])" },
+            { "word": "Langkah 3", "meaning": "인도네시아 사람이에요 (Saya orang Indonesia)" },
+            { "word": "Langkah 4", "meaning": "반갑습니다! (Senang bertemu!)" }
+          ],
+          "shuffledMeanings": ["반갑습니다! (Senang bertemu!)", "안녕하세요! (Halo!)", "인도네시아 사람이에요 (Saya orang Indonesia)", "저는 [nama]예요 (Saya [nama])"],
+          "explanation": "Urutan perkenalan: sapaan → nama → kebangsaan/profesi → senang bertemu."
+        }
+      }
+    ]
+  },
+
+  "koc2s5": {
+    "title": "Review Chapter 2",
+    "intro": "Chapter 2 selesai! Kamu sudah bisa menyebut kata ganti, membuat kalimat dengan 이에요, mengenal panggilan keluarga Korea, dan memperkenalkan diri lengkap. 잘 했어요! (jal haesseoyo = kamu hebat!)",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Ringkasan Chapter 2",
+        "body": "Semua yang sudah dipelajari:",
+        "examples": [
+          { "en": "Kata ganti: 저(formal) / 나(kasual) / 우리(kami)", "id": "Selalu pakai 저 di situasi formal" },
+          { "en": "이에요/예요 = adalah, 아니에요 = bukan", "id": "Setelah konsonan→이에요, setelah vokal→예요" },
+          { "en": "Keluarga: 아빠엄마 + 오빠/형/언니/누나 + 동생", "id": "Panggilan kakak berbeda berdasarkan jenis kelamin pemanggil" },
+          { "en": "Perkenalan: 안녕하세요→이름→사람이에요→반갑습니다", "id": "Urutan perkenalan standar Korea" }
+        ],
+        "tip": "잘 했어요! (jal haesseoyo = hebat!) Setelah Chapter 2, kamu sudah bisa percakapan dasar Korea yang nyata!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "koc2s5_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Review Chapter 2!",
+          "pairs": [
+            { "word": "저 (jeo)", "meaning": "Saya (formal)" },
+            { "word": "이에요", "meaning": "Adalah" },
+            { "word": "아니에요", "meaning": "Bukan" },
+            { "word": "반갑습니다", "meaning": "Senang bertemu" }
+          ],
+          "shuffledMeanings": ["Bukan", "Adalah", "Senang bertemu", "Saya (formal)"],
+          "explanation": "Chapter 2 selesai! Kalimat identitas dasar Korea sudah dikuasai."
+        }
+      },
+      {
+        "id": "koc2s5_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Perkenalan yang PALING BENAR secara formal adalah...",
+          "options": [
+            "나는 학생이야. 이름은 Sari.",
+            "안녕하세요! 저는 Sari예요. 인도네시아 사람이에요. 반갑습니다!",
+            "Sari예요. 인도네시아. 안녕!",
+            "안녕! 나 Sari야. 반가워!"
+          ],
+          "correctAnswer": "안녕하세요! 저는 Sari예요. 인도네시아 사람이에요. 반갑습니다!",
+          "explanation": "Perkenalan formal: 안녕하세요(halo) + 저는...예요(saya...) + 사람이에요(orang...) + 반갑습니다(senang bertemu). Urutan lengkap dan sopan!"
+        }
+      },
+      {
+        "id": "koc2s5_p3", "type": "speaking_test", "xpReward": 20,
+        "content": {
+          "phrase": "annyeonghaseyo je ireumеun indonesiya saramieyo bangapseumnida",
+          "hint": "Perkenalkan diri: 안녕하세요! 저는 [nama]예요. 인도네시아 사람이에요. 반갑습니다!",
+          "translation": "Halo! Saya [nama]. Saya orang Indonesia. Senang bertemu!"
+        }
+      }
+    ]
+  },
+
+  "koc3s1": {
+    "title": "Angka Sino-Korea (한자어 숫자)",
+    "intro": "Korea punya DUA sistem angka — ini salah satu hal paling unik dan menantang dalam bahasa Korea! Angka Sino-Korea (dari bahasa China) dan Angka Asli Korea. Masing-masing dipakai untuk konteks yang BERBEDA. Di chapter ini kita mulai dengan Sino-Korea dulu.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Angka Sino-Korea 0-10",
+        "body": "Angka yang berasal dari sistem China, dipakai untuk: tanggal, bulan, menit, harga, nomor telepon:",
+        "examples": [
+          { "en": "영/공 (yeong/gong) = 0", "id": "영 untuk umum, 공 untuk nomor telepon" },
+          { "en": "일 (il) = 1", "id": "일월 = Januari (bulan ke-1)" },
+          { "en": "이 (i) = 2", "id": "이월 = Februari" },
+          { "en": "삼 (sam) = 3", "id": "삼월 = Maret — persis seperti dalam 삼성 (Samsung = tiga bintang)" },
+          { "en": "사 (sa) = 4", "id": "사월 = April" },
+          { "en": "오 (o) = 5", "id": "오월 = Mei" },
+          { "en": "육 (yuk) = 6", "id": "유월 = Juni (육 berubah jadi 유)" },
+          { "en": "칠 (chil) = 7", "id": "칠월 = Juli" },
+          { "en": "팔 (pal) = 8", "id": "팔월 = Agustus" },
+          { "en": "구 (gu) = 9", "id": "구월 = September" },
+          { "en": "십 (sip) = 10", "id": "시월 = Oktober (십 berubah jadi 시)" }
+        ],
+        "tip": "Juni = 유월 (bukan 육월) dan Oktober = 시월 (bukan 십월) — dua pengecualian penting dalam nama bulan Korea!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Kapan Pakai Sino-Korea?",
+        "body": "Panduan praktis kapan menggunakan angka Sino-Korea:",
+        "examples": [
+          { "en": "Bulan (월, wol)", "id": "일월(Jan), 이월(Feb), 삼월(Mar)... → SINO" },
+          { "en": "Tanggal (일, il)", "id": "일일(tgl 1), 이일(tgl 2), 삼일(tgl 3)... → SINO" },
+          { "en": "Menit (분, bun)", "id": "일 분(1 menit), 이 분(2 menit)... → SINO" },
+          { "en": "Harga (원, won)", "id": "천 원(1000 won), 만 원(10,000 won)... → SINO" },
+          { "en": "Nomor telepon, lantai, nomor", "id": "010-팔팔팔-일이삼사 → SINO" }
+        ],
+        "tip": "Cara cepat ingat: angka SINO = untuk hal-hal yang 'diukur' (waktu, uang, nomor). Angka ASLI = untuk hal-hal yang 'dihitung' (benda) dan JAM."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Angka Puluhan dan Ratusan",
+        "body": "Setelah hafal 1-10, angka yang lebih besar mudah dibentuk:",
+        "examples": [
+          { "en": "십일 (sibil) = 11", "id": "십(10) + 일(1) = 11" },
+          { "en": "이십 (isip) = 20", "id": "이(2) × 십(10) = 20" },
+          { "en": "오십오 (osibo) = 55", "id": "오(5)십(10)오(5) = 55" },
+          { "en": "백 (baek) = 100", "id": "백 원 = 100 won" },
+          { "en": "천 (cheon) = 1000", "id": "천 원 = 1000 won" }
+        ],
+        "tip": "천 (1000) sangat penting! Harga di Korea sering dalam ribuan won. 오천 원 = 5000 won, 만 원 (man won) = 10,000 won."
+      },
+      {
+        "type": "culture",
+        "heading": "Tanggal & Hari Besar Korea",
+        "body": "Menggunakan angka Sino-Korea, kamu bisa menyebutkan tanggal penting Korea:",
+        "examples": [
+          { "en": "삼일절 (samiljeol) = 1 Maret", "id": "Hari Gerakan Kemerdekaan 1919 dari Jepang. 삼(3)+일(1)+절(hari raya)" },
+          { "en": "팔일오 (palilo) = 15 Agustus", "id": "Hari Kemerdekaan Korea (1945). 팔(8)+일(1)+오(5)" },
+          { "en": "시월 구일 (siwol guil) = 9 Oktober", "id": "Hari Hangul! 시월(Oktober)+구(9)+일(tanggal)" },
+          { "en": "십이월 이십오일", "id": "25 Desember = Natal (dirayakan di Korea sebagai hari libur nasional)" }
+        ],
+        "tip": "9 Oktober = Hari Hangul (한글날) — hari raya nasional untuk merayakan penciptaan Hangul oleh Raja Sejong!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "koc3s1_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan angka Sino-Korea!",
+          "pairs": [
+            { "word": "일 (il)", "meaning": "1" },
+            { "word": "오 (o)", "meaning": "5" },
+            { "word": "팔 (pal)", "meaning": "8" },
+            { "word": "십 (sip)", "meaning": "10" },
+            { "word": "백 (baek)", "meaning": "100" }
+          ],
+          "shuffledMeanings": ["100", "8", "1", "10", "5"],
+          "explanation": "일(1)이(2)삼(3)사(4)오(5)육(6)칠(7)팔(8)구(9)십(10)백(100)천(1000). Angka Sino-Korea!"
+        }
+      },
+      {
+        "id": "koc3s1_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "삼월 삼십일일 (samwol samsibil-il) = tanggal berapa?",
+          "options": ["31 Januari", "13 Maret", "31 Maret", "3 Maret"],
+          "correctAnswer": "31 Maret",
+          "explanation": "삼월(Maret/bulan ke-3) + 삼십(30) + 일일(tanggal ke-1) = 31 Maret. Cara baca tanggal Korea: [bulan]+월+[tanggal]+일."
+        }
+      },
+      {
+        "id": "koc3s1_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Untuk menyebut HARGA, gunakan angka ___ Korea",
+          "options": ["Asli", "Sino", "Campuran", "Inggris"],
+          "correctAnswer": "Sino",
+          "explanation": "Harga (원) = angka Sino-Korea. 천 원(1000won), 오천 원(5000won), 만 원(10.000won). JAM menggunakan angka ASLI Korea!"
+        }
+      }
+    ]
+  },
+
+  "koc3s2": {
+    "title": "Angka Asli Korea (고유어 숫자)",
+    "intro": "Ini sistem angka asli Korea yang sudah ada jauh sebelum pengaruh China. Terdengar lebih 'Korea' dan dipakai untuk konteks khusus: JAM dan menghitung benda. Meski terdengar lebih sulit, setelah 열(10) tidak perlu hafal karena jarang dipakai!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Angka Asli Korea 1-10",
+        "body": "Sepuluh angka asli Korea yang perlu dihafal:",
+        "examples": [
+          { "en": "하나 (hana) = 1", "id": "Berubah jadi 한 sebelum kata satuan. 한 시 = jam 1" },
+          { "en": "둘 (dul) = 2", "id": "Berubah jadi 두. 두 시 = jam 2" },
+          { "en": "셋 (set) = 3", "id": "Berubah jadi 세. 세 시 = jam 3" },
+          { "en": "넷 (net) = 4", "id": "Berubah jadi 네. 네 시 = jam 4" },
+          { "en": "다섯 (daseot) = 5", "id": "다섯 시 = jam 5" },
+          { "en": "여섯 (yeoseot) = 6", "id": "여섯 시 = jam 6" },
+          { "en": "일곱 (ilgop) = 7", "id": "일곱 시 = jam 7" },
+          { "en": "여덟 (yeodeol) = 8", "id": "여덟 시 = jam 8" },
+          { "en": "아홉 (ahop) = 9", "id": "아홉 시 = jam 9" },
+          { "en": "열 (yeol) = 10", "id": "열 시 = jam 10, 열한 시 = jam 11, 열두 시 = jam 12" }
+        ],
+        "tip": "PENTING: hana/dul/set/net berubah bentuk menjadi 한/두/세/네 saat dipakai sebelum kata satuan (시, 개, 명, dll)!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Menyebutkan Jam",
+        "body": "JAM (시) selalu menggunakan angka asli Korea, MENIT (분) menggunakan angka Sino-Korea:",
+        "examples": [
+          { "en": "지금 몇 시예요? (jigeum myeot sieyо?)", "id": "Sekarang jam berapa?" },
+          { "en": "한 시 (han si) = jam 1", "id": "한 bukan 하나 — bentuk berubah sebelum 시" },
+          { "en": "두 시 삼십 분 (du si samsip bun)", "id": "Jam 2:30 — 두(asli) + 시(jam) + 삼십(sino) + 분(menit)" },
+          { "en": "다섯 시 오 분 (daseot si o bun)", "id": "Jam 5:05" }
+        ],
+        "tip": "Formula waktu: [angka asli] 시 [angka sino] 분. Jam pakai asli, menit pakai sino. Ini aturan yang tidak pernah berubah!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Kata Satuan (단위명사) untuk Menghitung",
+        "body": "Korea menggunakan kata satuan saat menghitung benda — mirip bahasa Indonesia 'dua BUAH apel':",
+        "examples": [
+          { "en": "개 (gae) = buah/biji (untuk benda umum)", "id": "사과 두 개 = dua buah apel (두=asli Korea)" },
+          { "en": "명 (myeong) = orang", "id": "세 명 = tiga orang (세=asli Korea)" },
+          { "en": "권 (gwon) = buku/jilid", "id": "책 한 권 = satu buku (한=asli Korea)" },
+          { "en": "잔 (jan) = gelas/cangkir", "id": "커피 한 잔 = satu cangkir kopi (한=asli Korea)" }
+        ],
+        "tip": "Dengan kata satuan → selalu pakai angka ASLI Korea. 개(buah), 명(orang), 잔(gelas), 마리(hewan) = kata satuan paling umum."
+      },
+      {
+        "type": "culture",
+        "heading": "주세요 — Cara Memesan dan Meminta",
+        "body": "주세요 (juseyo) = tolong berikan. Kata paling berguna saat belanja atau memesan:",
+        "examples": [
+          { "en": "물 한 잔 주세요 (mul han jan juseyo)", "id": "Tolong satu gelas air (한=asli Korea, 잔=gelas)" },
+          { "en": "이거 두 개 주세요 (igeo du gae juseyo)", "id": "Tolong dua buah yang ini (두=asli Korea, 개=buah)" },
+          { "en": "얼마예요? (eolmayeyo?)", "id": "Berapa harganya? — pertanyaan wajib saat belanja!" },
+          { "en": "깎아 주세요 (kkakka juseyo)", "id": "Tolong kurangi harganya/Kasih diskon dong! — berguna di pasar tradisional" }
+        ],
+        "tip": "주세요 = tolong berikan. 해 주세요 = tolong lakukan. Dua ungkapan 'tolong' yang paling sering dipakai di Korea!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "koc3s2_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan angka ASLI Korea!",
+          "pairs": [
+            { "word": "하나 (hana)", "meaning": "1" },
+            { "word": "셋 (set)", "meaning": "3" },
+            { "word": "다섯 (daseot)", "meaning": "5" },
+            { "word": "열 (yeol)", "meaning": "10" }
+          ],
+          "shuffledMeanings": ["3", "10", "5", "1"],
+          "explanation": "하나(1)둘(2)셋(3)넷(4)다섯(5)여섯(6)일곱(7)여덟(8)아홉(9)열(10) — angka asli Korea."
+        }
+      },
+      {
+        "id": "koc3s2_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "'두 시 삼십 분' artinya...",
+          "options": ["Jam 3:20", "Jam 2:30", "Jam 3:02", "Jam 2:13"],
+          "correctAnswer": "Jam 2:30",
+          "explanation": "두(2=asli Korea) + 시(jam) + 삼십(30=Sino-Korea) + 분(menit) = jam 2:30. Jam pakai angka asli, menit pakai angka Sino!"
+        }
+      },
+      {
+        "id": "koc3s2_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "사과 ___ 개 주세요 (Tolong dua buah apel)",
+          "options": ["이 (i)", "둘 (dul)", "두 (du)", "이십 (isip)"],
+          "correctAnswer": "두 (du)",
+          "explanation": "Sebelum kata satuan (개=buah), angka ASLI Korea berubah bentuk: 하나→한, 둘→두, 셋→세, 넷→네. Jadi: 사과 두 개 = dua buah apel."
+        }
+      }
+    ]
+  },
+
+  "koc3s3": {
+    "title": "Makanan & Minuman Korea",
+    "intro": "Makanan adalah jantung budaya Korea! Bahkan sapaan umum Korea adalah '밥 먹었어요?' (sudah makan?). K-food sudah mendunia berkat Korean Wave — sekarang saatnya bisa menyebutnya dalam bahasa Korea yang benar!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Makanan Korea Ikonik",
+        "body": "Makanan Korea yang sudah terkenal di seluruh dunia dan wajib diketahui:",
+        "examples": [
+          { "en": "김치 (kimchi) = kimchi", "id": "Sayuran fermentasi pedas — makanan wajib di setiap meja makan Korea" },
+          { "en": "비빔밥 (bibimbap) = bibimbap", "id": "Nasi campur dengan sayuran, daging, telur dan saus gochujang" },
+          { "en": "불고기 (bulgogi) = bulgogi", "id": "Daging sapi panggang bumbu manis — bul(api) + gogi(daging)" },
+          { "en": "떡볶이 (tteokbokki) = tteokbokki", "id": "Kue beras pedas manis — street food paling populer Korea" },
+          { "en": "삼겹살 (samgyeopsal) = samgyeopsal", "id": "Perut babi panggang — sangat populer untuk makan bersama" },
+          { "en": "라면 (ramyeon) = ramyeon", "id": "Mie instan Korea — berbeda dari ramen Jepang!" }
+        ],
+        "tip": "고기 (gogi) = daging. 소고기 (so=sapi) = daging sapi, 돼지고기 (dwaegi=babi) = daging babi, 닭고기 (dak=ayam) = daging ayam."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Minuman & Istilah Restoran",
+        "body": "Kata-kata yang perlu diketahui saat di restoran Korea:",
+        "examples": [
+          { "en": "물 (mul) = air", "id": "Di restoran Korea, air putih biasanya gratis!" },
+          { "en": "소주 (soju) = soju", "id": "Minuman keras khas Korea — sangat populer" },
+          { "en": "막걸리 (makgeolli) = makgeolli", "id": "Minuman beras fermentasi tradisional Korea" },
+          { "en": "아메리카노 (amerikano) = americano", "id": "Korea adalah negara kopi terbesar! Kafe ada di mana-mana" },
+          { "en": "주문하다 (jumunhada) = memesan", "id": "주문이요! (Jumuniyо!) = Mau pesan! — cara memanggil pelayan" }
+        ],
+        "tip": "여기요! (Yeogiyo!) atau 저기요! (Jeogiyo!) = 'Permisi!' cara memanggil pelayan di restoran Korea. Sangat umum dan tidak dianggap kasar."
+      },
+      {
+        "type": "grammar",
+        "heading": "Ekspresi Makan yang Wajib Diketahui",
+        "body": "Ungkapan penting seputar makan dalam budaya Korea:",
+        "examples": [
+          { "en": "잘 먹겠습니다 (jal meokgesseumnida)", "id": "Saya akan makan dengan baik — ucapkan SEBELUM makan (seperti 'itadakimasu' Jepang)" },
+          { "en": "잘 먹었습니다 (jal meogeosseumnida)", "id": "Saya sudah makan dengan baik — ucapkan SESUDAH makan" },
+          { "en": "맛있어요! (massisseoyo!)", "id": "Enak! — pujian paling menyenangkan bagi yang masak" },
+          { "en": "많이 드세요 (mani deuseyo)", "id": "Silakan makan banyak — diucapkan tuan rumah kepada tamu" }
+        ],
+        "tip": "잘 먹겠습니다 dan 잘 먹었습니다 SANGAT penting dalam budaya Korea. Mengucapkannya menunjukkan rasa syukur dan sopan santun yang dihargai sekali!"
+      },
+      {
+        "type": "culture",
+        "heading": "Budaya Makan Korea (식문화)",
+        "body": "Beberapa hal unik tentang budaya makan Korea:",
+        "examples": [
+          { "en": "Semua makan bersama dari piring bersama", "id": "Di Korea, lauk disajikan di tengah meja untuk dimakan bersama — berbeda dari piring individual" },
+          { "en": "나이가 많은 사람이 먼저 (yang lebih tua makan duluan)", "id": "Menunggu yang tertua mulai makan sebelum yang lain — etika makan Korea" },
+          { "en": "술을 따라주다 (mengisi minuman orang lain)", "id": "Tidak mengisi gelas sendiri — mengisi gelas orang lain adalah tanda menghormati" },
+          { "en": "회식 (hoesik) = makan malam tim/kantor", "id": "Tradisi makan bersama dengan rekan kerja yang sangat kuat di budaya Korea" }
+        ],
+        "tip": "회식 (hoesik) adalah tradisi yang sangat penting di dunia kerja Korea. Menolak ajakan 회식 bisa dianggap tidak sopan!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "koc3s3_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan makanan Korea!",
+          "pairs": [
+            { "word": "김치 (kimchi)", "meaning": "Sayuran fermentasi pedas" },
+            { "word": "비빔밥 (bibimbap)", "meaning": "Nasi campur" },
+            { "word": "떡볶이 (tteokbokki)", "meaning": "Kue beras pedas" },
+            { "word": "물 (mul)", "meaning": "Air" }
+          ],
+          "shuffledMeanings": ["Air", "Nasi campur", "Kue beras pedas", "Sayuran fermentasi pedas"],
+          "explanation": "김치=kimchi, 비빔밥=bibimbap, 불고기=bulgogi, 떡볶이=tteokbokki, 삼겹살=samgyeopsal."
+        }
+      },
+      {
+        "id": "koc3s3_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "잘 먹겠습니다 diucapkan...",
+          "options": ["Sesudah makan", "Sebelum makan", "Saat memasak", "Saat membeli makanan"],
+          "correctAnswer": "Sebelum makan",
+          "explanation": "잘 먹겠습니다 = 'saya akan makan dengan baik' — diucapkan SEBELUM makan. Sesudah makan: 잘 먹었습니다 = 'saya sudah makan dengan baik'."
+        }
+      },
+      {
+        "id": "koc3s3_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "이 음식 정말 ___ ! (Makanan ini benar-benar enak!)",
+          "options": ["맛없어요", "맛있어요", "비싸요", "이상해요"],
+          "correctAnswer": "맛있어요",
+          "explanation": "맛있어요 (massisseoyo) = enak. 정말 = benar-benar/sungguh. 맛없어요 = tidak enak. Ungkapan 맛있어요 akan selalu menyenangkan orang yang memasak!"
+        }
+      }
+    ]
+  },
+
+  "koc3s4": {
+    "title": "Kata Sifat & Warna",
+    "intro": "Kata sifat Korea sedikit berbeda dari bahasa Indonesia — kata sifat berfungsi seperti kata kerja dan bisa langsung dipakai di akhir kalimat! Ini sebenarnya lebih mudah karena tidak perlu kata 'adalah' terpisah.",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Warna dalam Bahasa Korea",
+        "body": "Warna Korea unik karena ada dua cara menyebutnya: kata sifat asli Korea dan kata benda warna:",
+        "examples": [
+          { "en": "빨간색/빨갛다 (ppalgan-saek/ppalgata) = merah", "id": "색(saek)=warna. 빨간 사과=apel merah" },
+          { "en": "파란색/파랗다 (paran-saek/parata) = biru", "id": "파란 하늘=langit biru" },
+          { "en": "노란색/노랗다 (noran-saek/norata) = kuning", "id": "노란 바나나=pisang kuning" },
+          { "en": "초록색/초록하다 (chorok-saek) = hijau", "id": "초록 불=lampu hijau" },
+          { "en": "흰색/하얗다 (huin-saek/hayata) = putih", "id": "흰 쌀=beras putih" },
+          { "en": "검은색/까맣다 (geomun-saek/kkamata) = hitam", "id": "검은 머리카락=rambut hitam" }
+        ],
+        "tip": "Warna dalam bahasa Korea punya bentuk kata sifat (빨갛다=merah) yang berubah tergantung konteks. Untuk pemula, pakai bentuk +색 (빨간색, 파란색) dulu — lebih mudah!"
+      },
+      {
+        "type": "grammar",
+        "heading": "Kata Sifat sebagai Kata Kerja Korea",
+        "body": "Di Korea, kata sifat berperan seperti kata kerja — tidak perlu '이다' (adalah) tambahan:",
+        "examples": [
+          { "en": "크다 (keuda) = besar", "id": "이 가방은 커요 = Tas ini besar (bukan 'tas ini adalah besar')" },
+          { "en": "작다 (jakda) = kecil", "id": "저 가방은 작아요 = Tas itu kecil" },
+          { "en": "비싸다 (bissada) = mahal", "id": "이거 비싸요? = Ini mahal? — 요 di akhir = sopan" },
+          { "en": "싸다 (ssada) = murah", "id": "와, 정말 싸요! = Wah, benar-benar murah!" }
+        ],
+        "tip": "Kata sifat Korea = 형용사 (hyeongyongsa). Berakhiran 다 di bentuk kamus, tapi dalam percakapan sopan berakhiran 아요/어요."
+      },
+      {
+        "type": "vocabulary",
+        "heading": "Kata Sifat Pasangan",
+        "body": "Pasangan kata sifat yang paling berguna:",
+        "examples": [
+          { "en": "크다 ↔ 작다 (besar ↔ kecil)", "id": "이거 크다 = ini besar, 저거 작다 = itu kecil" },
+          { "en": "비싸다 ↔ 싸다 (mahal ↔ murah)", "id": "Paling berguna saat belanja!" },
+          { "en": "맛있다 ↔ 맛없다 (enak ↔ tidak enak)", "id": "Paling berguna saat makan!" },
+          { "en": "예쁘다 ↔ 못생기다 (cantik ↔ jelek)", "id": "예뻐요! = cantik/bagus! — bisa untuk benda maupun orang" },
+          { "en": "좋다 ↔ 나쁘다 (baik/bagus ↔ buruk/jelek)", "id": "좋아요! = bagus/suka! — sangat sering dipakai" }
+        ],
+        "tip": "좋아요! (joayo) = bagus/suka/oke! Kata paling serbaguna dalam bahasa Korea. Bisa berarti setuju, suka sesuatu, atau merespon positif."
+      },
+      {
+        "type": "culture",
+        "heading": "Warna & Makna dalam Budaya Korea",
+        "body": "Warna memiliki makna simbolis dalam budaya tradisional Korea:",
+        "examples": [
+          { "en": "흰색 (putih) = kesucian, duka", "id": "Baju tradisional Korea kuno berwarna putih — Korea dijuluki 'Bangsa Baju Putih'" },
+          { "en": "빨간색 (merah) = energi, keberuntungan", "id": "Tapi juga dipakai untuk menulis nama orang yang sudah meninggal — JANGAN tulis nama orang hidup dengan tinta merah!" },
+          { "en": "파란색 (biru) = ketenangan, kepercayaan", "id": "Warna yang banyak dipakai dalam logo perusahaan Korea" },
+          { "en": "오방색 (lima warna tradisional)", "id": "Merah(남), Biru(동), Kuning(중), Putih(서), Hitam(북) = warna arah mata angin dalam tradisi Korea" }
+        ],
+        "tip": "JANGAN menulis nama orang yang masih hidup dengan tinta/spidol MERAH di Korea — ini dianggap pertanda buruk atau bahkan doa kematian!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "koc3s4_p1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan warna Korea!",
+          "pairs": [
+            { "word": "빨간색 (ppalgan-saek)", "meaning": "Merah" },
+            { "word": "파란색 (paran-saek)", "meaning": "Biru" },
+            { "word": "노란색 (noran-saek)", "meaning": "Kuning" },
+            { "word": "초록색 (chorok-saek)", "meaning": "Hijau" },
+            { "word": "흰색 (huin-saek)", "meaning": "Putih" }
+          ],
+          "shuffledMeanings": ["Putih", "Merah", "Hijau", "Biru", "Kuning"],
+          "explanation": "빨간=merah, 파란=biru, 노란=kuning, 초록=hijau, 흰=putih, 검은=hitam."
+        }
+      },
+      {
+        "id": "koc3s4_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "이거 얼마예요? artinya...",
+          "options": ["Ini enak?", "Ini apa?", "Ini berapa harganya?", "Ini di mana?"],
+          "correctAnswer": "Ini berapa harganya?",
+          "explanation": "이거(ini) + 얼마(berapa harga) + 예요(adalah) = Ini berapa harganya? Kalimat WAJIB saat belanja di Korea!"
+        }
+      },
+      {
+        "id": "koc3s4_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "좋아요 (joayo) paling tepat diartikan sebagai...",
+          "options": ["Tidak suka", "Bagus/Suka/Oke!", "Mahal", "Besar"],
+          "correctAnswer": "Bagus/Suka/Oke!",
+          "explanation": "좋아요! = bagus/suka/oke! Kata paling serbaguna Korea. 좋아 sebagai respon = suka/setuju, 이거 좋아요 = saya suka ini."
+        }
+      }
+    ]
+  },
+
+  "koc3s5": {
+    "title": "Review Chapter 3 & Selamat!",
+    "intro": "축하합니다! (Chukahamnida = Selamat!) Kamu telah menyelesaikan 3 chapter Korea! Dua sistem angka, makanan ikonik Korea, kata sifat dan warna — semuanya sudah dipelajari. Ini fondasi yang solid untuk terus belajar Korea!",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "heading": "Ringkasan 3 Chapter",
+        "body": "Semua yang sudah dipelajari:",
+        "examples": [
+          { "en": "Ch.1: Hangul, Vokal, Konsonan, Sapaan", "id": "안녕하세요, 감사합니다, 죄송합니다" },
+          { "en": "Ch.2: Kata Ganti, 이에요, Keluarga, Perkenalan", "id": "저는, 이에요/아니에요, 오빠/언니, 반갑습니다" },
+          { "en": "Ch.3: Angka Sino+Asli, Makanan, Warna", "id": "일이삼 / 하나둘셋, 김치/비빔밥, 빨간색/파란색" }
+        ],
+        "tip": "한국어 공부 화이팅! (Hangugeo gongbu hwaiting = Semangat belajar bahasa Korea!) Kamu sudah di jalur yang benar!"
+      },
+      {
+        "type": "culture",
+        "heading": "Langkah Selanjutnya Belajar Korea",
+        "body": "Rekomendasi untuk melanjutkan perjalanan belajar Korea:",
+        "examples": [
+          { "en": "TOPIK I (Test of Proficiency in Korean)", "id": "Ujian kemampuan Korea resmi level 1-2. Target yang baik untuk 6-12 bulan belajar" },
+          { "en": "Drama Korea (K-drama)", "id": "Tonton dengan subtitle Korea — cara menyenangkan dan efektif belajar natural speech" },
+          { "en": "K-pop dengan lirik Hangul", "id": "Baca lirik dalam Hangul sambil dengarkan — melatih membaca dan pengucapan sekaligus" },
+          { "en": "Aplikasi: Duolingo, Pimsleur, TTMIK", "id": "Talk To Me In Korean (TTMIK) = sumber belajar Korea terbaik untuk penutur Indonesia" }
+        ],
+        "tip": "TTMIK (talktomeinkorean.com) adalah website dan podcast belajar Korea gratis terbaik — sangat direkomendasikan untuk pemula Indonesia!"
+      }
+    ],
+    "practice": [
+      {
+        "id": "koc3s5_p1", "type": "matching_word", "xpReward": 20,
+        "content": {
+          "instruction": "Grand Final Korea — cocokkan semua!",
+          "pairs": [
+            { "word": "안녕하세요", "meaning": "Halo (formal)" },
+            { "word": "감사합니다", "meaning": "Terima kasih" },
+            { "word": "맛있어요", "meaning": "Enak" },
+            { "word": "얼마예요?", "meaning": "Berapa harganya?" },
+            { "word": "반갑습니다", "meaning": "Senang bertemu" }
+          ],
+          "shuffledMeanings": ["Berapa harganya?", "Halo (formal)", "Enak", "Terima kasih", "Senang bertemu"],
+          "explanation": "축하합니다! (Selamat!) Kamu telah menyelesaikan dasar bahasa Korea!"
+        }
+      },
+      {
+        "id": "koc3s5_p2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Untuk menyebut JAM, Korea menggunakan angka...",
+          "options": ["Sino-Korea (일이삼사...)", "Asli Korea (하나둘셋...)", "Angka Arab (1,2,3...)", "Campuran keduanya"],
+          "correctAnswer": "Asli Korea (하나둘셋...)",
+          "explanation": "JAM = angka asli Korea: 한 시(1), 두 시(2), 세 시(3). MENIT = angka Sino-Korea: 일 분(1), 이 분(2), 삼 분(3). Aturan ini tidak pernah berubah!"
+        }
+      },
+      {
+        "id": "koc3s5_p3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "저는 인도네시아 ___ 이에요 (Saya orang Indonesia)",
+          "options": ["나라 (negara)", "사람 (orang)", "이름 (nama)", "학생 (pelajar)"],
+          "correctAnswer": "사람 (orang)",
+          "explanation": "사람 = orang. 인도네시아 사람이에요 = (saya) orang Indonesia. Pola: [negara] + 사람 + 이에요."
+        }
+      },
+      {
+        "id": "koc3s5_p4", "type": "listening_quiz", "xpReward": 15,
+        "content": {
+          "audioText": "안녕하세요! 저는 학생이에요. 한국어를 배우고 있어요. 반갑습니다!",
+          "question": "Dari percakapan ini, mana yang BENAR?",
+          "options": ["Orang ini adalah guru", "Orang ini adalah pelajar yang belajar bahasa Korea", "Orang ini orang Korea asli", "Orang ini tidak suka Korea"],
+          "correctAnswer": "Orang ini adalah pelajar yang belajar bahasa Korea",
+          "explanation": "저는 학생이에요 = saya pelajar. 한국어를 배우고 있어요 = sedang belajar bahasa Korea. 한국어=bahasa Korea, 배우다=belajar."
+        }
+      },
+      {
+        "id": "koc3s5_p5", "type": "speaking_test", "xpReward": 20,
+        "content": {
+          "phrase": "annyeonghaseyo je ireumеun indonesiya saramieyo bangapseumnida gamsahamnida",
+          "hint": "Perkenalan lengkap: 안녕하세요! 제 이름은... 인도네시아 사람이에요. 반갑습니다! 감사합니다!",
+          "translation": "Halo! Nama saya... Saya orang Indonesia. Senang bertemu! Terima kasih!"
+        }
+      }
+    ]
+  }
+}

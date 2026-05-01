@@ -1,0 +1,1040 @@
+{
+  "chapters": [
+    {
+      "id": 1,
+      "title": "Chapter 1",
+      "subtitle": "Hangul, Vokal & Sapaan Dasar",
+      "xpRequired": 0,
+      "color": "#ef4444",
+      "ring": "#f87171",
+      "stages": [
+        { "id": "ko-1-1", "label": "Apa itu Hangul?",      "type": "vocabulary", "xpReward": 100, "stars": 0, "feedKey": "koc1s1" },
+        { "id": "ko-1-2", "label": "Vokal Dasar (모음)",    "type": "quiz",       "xpReward": 100, "stars": 0, "feedKey": "koc1s2" },
+        { "id": "ko-1-3", "label": "Konsonan Dasar (자음)", "type": "matching",   "xpReward": 100, "stars": 0, "feedKey": "koc1s3" },
+        { "id": "ko-1-4", "label": "Sapaan & Terima Kasih", "type": "quiz",       "xpReward": 100, "stars": 0, "feedKey": "koc1s4" },
+        { "id": "ko-1-5", "label": "Review Chapter 1",      "type": "matching",   "xpReward": 200, "stars": 0, "feedKey": "koc1s5" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Chapter 2",
+      "subtitle": "Kata Ganti, Kalimat Dasar & Keluarga",
+      "xpRequired": 500,
+      "color": "#f59e0b",
+      "ring": "#fcd34d",
+      "stages": [
+        { "id": "ko-2-1", "label": "Kata Ganti Orang",      "type": "vocabulary", "xpReward": 100, "stars": 0, "feedKey": "koc2s1" },
+        { "id": "ko-2-2", "label": "Kata 이다 (adalah)",     "type": "quiz",       "xpReward": 100, "stars": 0, "feedKey": "koc2s2" },
+        { "id": "ko-2-3", "label": "Anggota Keluarga",       "type": "vocabulary", "xpReward": 100, "stars": 0, "feedKey": "koc2s3" },
+        { "id": "ko-2-4", "label": "Perkenalan Diri",        "type": "quiz",       "xpReward": 100, "stars": 0, "feedKey": "koc2s4" },
+        { "id": "ko-2-5", "label": "Review Chapter 2",       "type": "matching",   "xpReward": 200, "stars": 0, "feedKey": "koc2s5" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Chapter 3",
+      "subtitle": "Angka, Makanan & Kehidupan Sehari-hari",
+      "xpRequired": 1500,
+      "color": "#10b981",
+      "ring": "#34d399",
+      "stages": [
+        { "id": "ko-3-1", "label": "Angka Sino-Korea",       "type": "vocabulary", "xpReward": 100, "stars": 0, "feedKey": "koc3s1" },
+        { "id": "ko-3-2", "label": "Angka Asli Korea",       "type": "matching",   "xpReward": 100, "stars": 0, "feedKey": "koc3s2" },
+        { "id": "ko-3-3", "label": "Makanan & Minuman",      "type": "vocabulary", "xpReward": 100, "stars": 0, "feedKey": "koc3s3" },
+        { "id": "ko-3-4", "label": "Kata Sifat & Warna",     "type": "quiz",       "xpReward": 100, "stars": 0, "feedKey": "koc3s4" },
+        { "id": "ko-3-5", "label": "Review Chapter 3",       "type": "matching",   "xpReward": 200, "stars": 0, "feedKey": "koc3s5" }
+      ]
+    }
+  ],
+
+  "feeds": {
+    "koc1s1": [
+      {
+        "id": "koc1s1_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "한글",
+          "phonetic": "Hangeul",
+          "meaning": "Alfabet Korea",
+          "meaningId": "Sistem tulisan resmi Korea",
+          "exampleSentence": "한글은 세종대왕이 만들었어요. (Hangul dibuat oleh Raja Sejong.)",
+          "audioUrl": "tts://한글"
+        }
+      },
+      {
+        "id": "koc1s1_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "자음 / 모음",
+          "phonetic": "jaeum / moeum",
+          "meaning": "Konsonan / Vokal",
+          "meaningId": "Dua komponen penyusun Hangul",
+          "exampleSentence": "한글에는 14개의 자음과 10개의 모음이 있어요.",
+          "audioUrl": "tts://자음모음"
+        }
+      },
+      {
+        "id": "koc1s1_3", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Hangul (한글) adalah...",
+          "options": ["Nama makanan Korea", "Sistem tulisan/alfabet Korea", "Nama bahasa Korea", "Judul drama Korea"],
+          "correctAnswer": "Sistem tulisan/alfabet Korea",
+          "explanation": "한글 (Hangul) = sistem tulisan Korea yang diciptakan oleh Raja Sejong pada tahun 1443. Salah satu alfabet paling ilmiah di dunia!"
+        }
+      },
+      {
+        "id": "koc1s1_4", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Hangul terdiri dari berapa konsonan dan vokal dasar?",
+          "options": ["10 konsonan, 10 vokal", "14 konsonan, 10 vokal", "14 konsonan, 14 vokal", "24 konsonan, 24 vokal"],
+          "correctAnswer": "14 konsonan, 10 vokal",
+          "explanation": "Hangul: 14 자음 (konsonan) + 10 모음 (vokal) = 24 huruf dasar. Dari kombinasinya terbentuk semua suku kata Korea!"
+        }
+      },
+      {
+        "id": "koc1s1_5", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan istilah Hangul dengan artinya!",
+          "pairs": [
+            { "word": "한글 (Hangeul)", "meaning": "Alfabet Korea" },
+            { "word": "자음 (jaeum)", "meaning": "Konsonan" },
+            { "word": "모음 (moeum)", "meaning": "Vokal" }
+          ],
+          "shuffledMeanings": ["Vokal", "Alfabet Korea", "Konsonan"],
+          "explanation": "한글=alfabet Korea, 자음=konsonan, 모음=vokal. Tiga istilah dasar belajar Hangul!"
+        }
+      },
+      {
+        "id": "koc1s1_6", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Hangul diciptakan pada tahun berapa?",
+          "options": ["1443", "1592", "1919", "1945"],
+          "correctAnswer": "1443",
+          "explanation": "Hangul diciptakan tahun 1443 oleh Raja Sejong (세종대왕) dari Dinasti Joseon. Sebelumnya orang Korea menulis menggunakan huruf Hanja (karakter China)."
+        }
+      }
+    ],
+
+    "koc1s2": [
+      {
+        "id": "koc1s2_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "아 / 야",
+          "phonetic": "a / ya",
+          "meaning": "Vokal A / YA",
+          "meaningId": "Dua vokal pertama Hangul",
+          "exampleSentence": "아이 (a-i) = anak kecil",
+          "audioUrl": "tts://아야"
+        }
+      },
+      {
+        "id": "koc1s2_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "오 / 요",
+          "phonetic": "o / yo",
+          "meaning": "Vokal O / YO",
+          "meaningId": "Dua vokal O dalam Hangul",
+          "exampleSentence": "오이 (o-i) = mentimun",
+          "audioUrl": "tts://오요"
+        }
+      },
+      {
+        "id": "koc1s2_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "우 / 유",
+          "phonetic": "u / yu",
+          "meaning": "Vokal U / YU",
+          "meaningId": "Dua vokal U dalam Hangul",
+          "exampleSentence": "우유 (u-yu) = susu",
+          "audioUrl": "tts://우유"
+        }
+      },
+      {
+        "id": "koc1s2_4", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "이 / 에 / 애",
+          "phonetic": "i / e / ae",
+          "meaning": "Vokal I / E / AE",
+          "meaningId": "Vokal depan Hangul",
+          "exampleSentence": "이 (i) = gigi / 에 (e) = di/ke",
+          "audioUrl": "tts://이에"
+        }
+      },
+      {
+        "id": "koc1s2_5", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan vokal Hangul dengan bunyinya!",
+          "pairs": [
+            { "word": "아", "meaning": "a" },
+            { "word": "이", "meaning": "i" },
+            { "word": "우", "meaning": "u" },
+            { "word": "오", "meaning": "o" },
+            { "word": "으", "meaning": "eu (seperti 'e' dalam 'ember' tapi lebih ke belakang)" }
+          ],
+          "shuffledMeanings": ["eu (seperti 'e' dalam 'ember' tapi lebih ke belakang)", "a", "o", "i", "u"],
+          "explanation": "아=a, 이=i, 우=u, 오=o, 으=eu. Lima vokal dasar Hangul!"
+        }
+      },
+      {
+        "id": "koc1s2_6", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "우유 (u-yu) artinya...",
+          "options": ["Air", "Susu", "Jus", "Teh"],
+          "correctAnswer": "Susu",
+          "explanation": "우유 = susu! Ini kata pertama yang bisa dibaca setelah tahu vokal 우 dan 유. Dua vokal digabung jadi kata nyata!"
+        }
+      }
+    ],
+
+    "koc1s3": [
+      {
+        "id": "koc1s3_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "ㄱ / ㄴ / ㄷ",
+          "phonetic": "g/k / n / d/t",
+          "meaning": "Konsonan G-K / N / D-T",
+          "meaningId": "Tiga konsonan pertama Hangul",
+          "exampleSentence": "가나다 = urutan alfabet Korea pertama",
+          "audioUrl": "tts://가나다"
+        }
+      },
+      {
+        "id": "koc1s3_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "ㄹ / ㅁ / ㅂ",
+          "phonetic": "r/l / m / b/p",
+          "meaning": "Konsonan R-L / M / B-P",
+          "meaningId": "Konsonan berikutnya",
+          "exampleSentence": "라면 (ramyeon) = mie instan Korea",
+          "audioUrl": "tts://라면"
+        }
+      },
+      {
+        "id": "koc1s3_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "ㅅ / ㅇ / ㅈ",
+          "phonetic": "s / ng/silent / j",
+          "meaning": "Konsonan S / NG-diam / J",
+          "meaningId": "ㅇ = diam di awal suku kata, ng di akhir",
+          "exampleSentence": "아이오 → ㅇ di awal = diam, jadi dibaca 'a-i-o'",
+          "audioUrl": "tts://사자"
+        }
+      },
+      {
+        "id": "koc1s3_4", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan konsonan Hangul dengan bunyinya!",
+          "pairs": [
+            { "word": "ㄱ", "meaning": "g/k" },
+            { "word": "ㄴ", "meaning": "n" },
+            { "word": "ㄷ", "meaning": "d/t" },
+            { "word": "ㄹ", "meaning": "r/l" },
+            { "word": "ㅁ", "meaning": "m" }
+          ],
+          "shuffledMeanings": ["m", "g/k", "r/l", "n", "d/t"],
+          "explanation": "ㄱ=g/k, ㄴ=n, ㄷ=d/t, ㄹ=r/l, ㅁ=m. Lima konsonan pertama Hangul!"
+        }
+      },
+      {
+        "id": "koc1s3_5", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "ㅇ di posisi AWAL suku kata dibaca...",
+          "options": ["ng", "Diam/tidak berbunyi", "o", "a"],
+          "correctAnswer": "Diam/tidak berbunyi",
+          "explanation": "ㅇ unik: di AWAL suku kata = diam (placeholder vokal), di AKHIR suku kata = bunyi 'ng'. Contoh: 아 = 'a' (ㅇ diam + vokal 아), 강 = 'gang' (ㅇ di akhir = ng)."
+        }
+      },
+      {
+        "id": "koc1s3_6", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "라면 (ramyeon) artinya...",
+          "options": ["Nasi goreng", "Mie instan Korea", "Kimchi", "Bibimbap"],
+          "correctAnswer": "Mie instan Korea",
+          "explanation": "라면 (ramyeon) = mie instan Korea. Salah satu makanan paling populer di Korea dan sudah dikenal di seluruh dunia!"
+        }
+      }
+    ],
+
+    "koc1s4": [
+      {
+        "id": "koc1s4_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "안녕하세요",
+          "phonetic": "annyeonghaseyo",
+          "meaning": "Halo (formal)",
+          "meaningId": "Sapaan paling umum dan sopan",
+          "exampleSentence": "안녕하세요! 반갑습니다. (Halo! Senang bertemu Anda.)",
+          "audioUrl": "tts://안녕하세요"
+        }
+      },
+      {
+        "id": "koc1s4_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "안녕",
+          "phonetic": "annyeong",
+          "meaning": "Hai / Dah (kasual)",
+          "meaningId": "Sapaan kasual ke teman sebaya",
+          "exampleSentence": "안녕! 잘 지냈어? (Hai! Apa kabar?)",
+          "audioUrl": "tts://안녕"
+        }
+      },
+      {
+        "id": "koc1s4_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "감사합니다",
+          "phonetic": "gamsahamnida",
+          "meaning": "Terima kasih (formal)",
+          "meaningId": "Ucapan terima kasih paling sopan",
+          "exampleSentence": "도와주셔서 감사합니다. (Terima kasih sudah membantu.)",
+          "audioUrl": "tts://감사합니다"
+        }
+      },
+      {
+        "id": "koc1s4_4", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "고마워 / 고마워요",
+          "phonetic": "gomawo / gomawoyo",
+          "meaning": "Makasih (kasual / semi-formal)",
+          "meaningId": "Lebih kasual dari 감사합니다",
+          "exampleSentence": "고마워요! (Makasih ya!)",
+          "audioUrl": "tts://고마워요"
+        }
+      },
+      {
+        "id": "koc1s4_5", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "죄송합니다 / 미안해요",
+          "phonetic": "joesonghamnida / mianhaeyo",
+          "meaning": "Maaf (formal / kasual)",
+          "meaningId": "Dua cara meminta maaf",
+          "exampleSentence": "늦어서 죄송합니다. (Maaf karena terlambat.)",
+          "audioUrl": "tts://죄송합니다"
+        }
+      },
+      {
+        "id": "koc1s4_6", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan sapaan Korea dengan artinya!",
+          "pairs": [
+            { "word": "안녕하세요", "meaning": "Halo (formal)" },
+            { "word": "감사합니다", "meaning": "Terima kasih (formal)" },
+            { "word": "죄송합니다", "meaning": "Maaf (formal)" },
+            { "word": "안녕히 가세요", "meaning": "Selamat jalan (ke yang pergi)" }
+          ],
+          "shuffledMeanings": ["Maaf (formal)", "Halo (formal)", "Selamat jalan (ke yang pergi)", "Terima kasih (formal)"],
+          "explanation": "안녕하세요=halo, 감사합니다=terima kasih, 죄송합니다=maaf, 안녕히 가세요=selamat jalan."
+        }
+      },
+      {
+        "id": "koc1s4_7", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Korea memiliki dua ungkapan perpisahan berbeda karena...",
+          "options": [
+            "Tidak ada alasannya",
+            "Dibedakan antara yang PERGI (안녕히 가세요) dan yang TINGGAL (안녕히 계세요)",
+            "Satu formal dan satu kasual saja",
+            "Tergantung waktu siang/malam"
+          ],
+          "correctAnswer": "Dibedakan antara yang PERGI (안녕히 가세요) dan yang TINGGAL (안녕히 계세요)",
+          "explanation": "Unik! Korea punya 2 ucapan selamat tinggal: 안녕히 가세요 (ke yang pergi = 'pergilah dengan selamat') dan 안녕히 계세요 (ke yang tinggal = 'tinggallah dengan selamat')."
+        }
+      }
+    ],
+
+    "koc1s5": [
+      {
+        "id": "koc1s5_1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Review Chapter 1 — cocokkan semua!",
+          "pairs": [
+            { "word": "안녕하세요", "meaning": "Halo (formal)" },
+            { "word": "감사합니다", "meaning": "Terima kasih" },
+            { "word": "죄송합니다", "meaning": "Maaf" },
+            { "word": "한글", "meaning": "Alfabet Korea" }
+          ],
+          "shuffledMeanings": ["Alfabet Korea", "Maaf", "Halo (formal)", "Terima kasih"],
+          "explanation": "Chapter 1 selesai! Kamu sudah kenal Hangul dan sapaan dasar Korea."
+        }
+      },
+      {
+        "id": "koc1s5_2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "우유 (u-yu) dapat dibaca karena menggunakan dua vokal yaitu...",
+          "options": ["아 dan 야", "우 dan 유", "오 dan 요", "이 dan 에"],
+          "correctAnswer": "우 dan 유",
+          "explanation": "우유 = 우(u) + 유(yu) = susu. Setelah hafal vokal 우 dan 유, kamu langsung bisa baca kata nyata!"
+        }
+      },
+      {
+        "id": "koc1s5_3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "ㅇ di AWAL suku kata berbunyi ___, di AKHIR suku kata berbunyi ___",
+          "options": ["diam / ng", "g / k", "n / m", "s / t"],
+          "correctAnswer": "diam / ng",
+          "explanation": "ㅇ = huruf paling unik Hangul: diam di awal (seperti di 안), ng di akhir (seperti di 강=sungai, 강=gang)."
+        }
+      },
+      {
+        "id": "koc1s5_4", "type": "listening_quiz", "xpReward": 15,
+        "content": {
+          "audioText": "안녕하세요",
+          "question": "Sapaan apa yang didengar?",
+          "options": ["감사합니다", "안녕하세요", "죄송합니다", "안녕히 가세요"],
+          "correctAnswer": "안녕하세요",
+          "explanation": "안녕하세요 (annyeonghaseyo) = halo! Sapaan formal paling penting dalam bahasa Korea."
+        }
+      },
+      {
+        "id": "koc1s5_5", "type": "speaking_test", "xpReward": 20,
+        "content": {
+          "phrase": "annyeonghaseyo gamsahamnida",
+          "hint": "Ucapkan: 안녕하세요! 감사합니다!",
+          "translation": "Halo! Terima kasih!"
+        }
+      }
+    ],
+
+    "koc2s1": [
+      {
+        "id": "koc2s1_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "나 / 저",
+          "phonetic": "na / jeo",
+          "meaning": "Saya (kasual / formal-rendah hati)",
+          "meaningId": "저 lebih sopan dari 나",
+          "exampleSentence": "저는 학생이에요. (Saya adalah pelajar.)",
+          "audioUrl": "tts://저는"
+        }
+      },
+      {
+        "id": "koc2s1_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "너 / 당신",
+          "phonetic": "neo / dangsin",
+          "meaning": "Kamu (kasual / formal)",
+          "meaningId": "당신 sangat formal, jarang dipakai dalam percakapan",
+          "exampleSentence": "너 이름이 뭐야? (Siapa namamu? — kasual)",
+          "audioUrl": "tts://너"
+        }
+      },
+      {
+        "id": "koc2s1_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "그 / 그녀",
+          "phonetic": "geu / geunyeo",
+          "meaning": "Dia (L) / Dia (P) — tulisan saja",
+          "meaningId": "Dalam percakapan lisan, orang Korea jarang pakai kata ganti 3 orang",
+          "exampleSentence": "오빠가 왔어요. (Kakak laki-laki datang.) — nama/hubungan lebih umum dari 그",
+          "audioUrl": "tts://그사람"
+        }
+      },
+      {
+        "id": "koc2s1_4", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "우리 / 우리들",
+          "phonetic": "uri / urideul",
+          "meaning": "Kami / Kita",
+          "meaningId": "우리 juga dipakai untuk 'kita' secara umum",
+          "exampleSentence": "우리나라 (uri nara) = negara kita — orang Korea sering pakai 우리 untuk kepemilikan kolektif",
+          "audioUrl": "tts://우리"
+        }
+      },
+      {
+        "id": "koc2s1_5", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata ganti Korea!",
+          "pairs": [
+            { "word": "나 (na)", "meaning": "Saya (kasual)" },
+            { "word": "저 (jeo)", "meaning": "Saya (formal/rendah hati)" },
+            { "word": "너 (neo)", "meaning": "Kamu (kasual)" },
+            { "word": "우리 (uri)", "meaning": "Kami/Kita" }
+          ],
+          "shuffledMeanings": ["Saya (formal/rendah hati)", "Kamu (kasual)", "Kami/Kita", "Saya (kasual)"],
+          "explanation": "나=saya kasual, 저=saya sopan, 너=kamu kasual. Pakai 저 dan hindari 너 jika bicara dengan orang yang lebih tua!"
+        }
+      },
+      {
+        "id": "koc2s1_6", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "우리나라 (uri nara) berarti...",
+          "options": ["Nama seseorang", "Negara kita/Korea", "Kota kami", "Keluarga kami"],
+          "correctAnswer": "Negara kita/Korea",
+          "explanation": "우리 (kami/kita) + 나라 (negara) = 우리나라 = negara kita. Orang Korea sering menyebut Korea sendiri sebagai 우리나라!"
+        }
+      }
+    ],
+
+    "koc2s2": [
+      {
+        "id": "koc2s2_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "이에요 / 이에요",
+          "phonetic": "ieyo / yeyo",
+          "meaning": "Adalah (formal sopan)",
+          "meaningId": "이에요 setelah konsonan, 예요 setelah vokal",
+          "exampleSentence": "학생이에요 (pelajar-adalah) / 의사예요 (dokter-adalah)",
+          "audioUrl": "tts://학생이에요"
+        }
+      },
+      {
+        "id": "koc2s2_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "아니에요",
+          "phonetic": "anieyo",
+          "meaning": "Bukan / Tidak (formal)",
+          "meaningId": "Bentuk negatif dari 이에요/예요",
+          "exampleSentence": "학생이 아니에요. (Bukan pelajar.)",
+          "audioUrl": "tts://아니에요"
+        }
+      },
+      {
+        "id": "koc2s2_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "이다 / 이야",
+          "phonetic": "ida / iya",
+          "meaning": "Adalah (kasual)",
+          "meaningId": "이다/이야 = kasual, 이에요/예요 = sopan",
+          "exampleSentence": "나는 학생이야. (Aku pelajar. — kasual)",
+          "audioUrl": "tts://학생이야"
+        }
+      },
+      {
+        "id": "koc2s2_4", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "'저는 학생이에요' artinya...",
+          "options": ["Kamu adalah pelajar", "Saya adalah pelajar", "Dia adalah pelajar", "Kami adalah pelajar"],
+          "correctAnswer": "Saya adalah pelajar",
+          "explanation": "저(saya formal) + 는(partikel topik) + 학생(pelajar) + 이에요(adalah) = Saya adalah pelajar."
+        }
+      },
+      {
+        "id": "koc2s2_5", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "저는 학생이 ___ (Saya bukan pelajar)",
+          "options": ["이에요", "아니에요", "있어요", "없어요"],
+          "correctAnswer": "아니에요",
+          "explanation": "아니에요 = bukan/tidak. Negatif dari 이에요/예요. 저는 학생이 아니에요 = Saya bukan pelajar."
+        }
+      },
+      {
+        "id": "koc2s2_6", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan pola kalimat Korea!",
+          "pairs": [
+            { "word": "저는 학생이에요", "meaning": "Saya adalah pelajar" },
+            { "word": "저는 학생이 아니에요", "meaning": "Saya bukan pelajar" },
+            { "word": "선생님이에요?", "meaning": "Apakah (Anda) guru?" }
+          ],
+          "shuffledMeanings": ["Apakah (Anda) guru?", "Saya bukan pelajar", "Saya adalah pelajar"],
+          "explanation": "이에요=adalah, 아니에요=bukan. Di Korea, kalimat tanya bisa hanya dengan nada tanya + tanda tanya."
+        }
+      }
+    ],
+
+    "koc2s3": [
+      {
+        "id": "koc2s3_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "아버지 / 아빠",
+          "phonetic": "abeoji / appa",
+          "meaning": "Ayah (formal / kasual)",
+          "meaningId": "아빠 lebih akrab seperti 'papa'",
+          "exampleSentence": "아빠! 밥 먹어요? (Ayah! Sudah makan?)",
+          "audioUrl": "tts://아버지아빠"
+        }
+      },
+      {
+        "id": "koc2s3_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "어머니 / 엄마",
+          "phonetic": "eomeoni / eomma",
+          "meaning": "Ibu (formal / kasual)",
+          "meaningId": "엄마 seperti 'mama'",
+          "exampleSentence": "엄마, 사랑해요! (Mama, aku cinta kamu!)",
+          "audioUrl": "tts://엄마"
+        }
+      },
+      {
+        "id": "koc2s3_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "오빠 / 형",
+          "phonetic": "oppa / hyeong",
+          "meaning": "Kakak laki-laki (panggilan perempuan / laki-laki)",
+          "meaningId": "오빠 = kakak laki dipakai PEREMPUAN, 형 = dipakai LAKI-LAKI",
+          "exampleSentence": "오빠, 어디 가요? (Kak, mau ke mana?)",
+          "audioUrl": "tts://오빠"
+        }
+      },
+      {
+        "id": "koc2s3_4", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "언니 / 누나",
+          "phonetic": "eonni / nuna",
+          "meaning": "Kakak perempuan (panggilan perempuan / laki-laki)",
+          "meaningId": "언니 dipakai PEREMPUAN, 누나 dipakai LAKI-LAKI",
+          "exampleSentence": "언니 예뻐요! (Kakak cantik!)",
+          "audioUrl": "tts://언니누나"
+        }
+      },
+      {
+        "id": "koc2s3_5", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "동생",
+          "phonetic": "dongsaeng",
+          "meaning": "Adik (laki atau perempuan)",
+          "meaningId": "Tidak ada pembedaan jenis kelamin untuk adik",
+          "exampleSentence": "남동생 (nam-dongsaeng) = adik laki / 여동생 (yeo-dongsaeng) = adik perempuan",
+          "audioUrl": "tts://동생"
+        }
+      },
+      {
+        "id": "koc2s3_6", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan panggilan keluarga Korea!",
+          "pairs": [
+            { "word": "아빠 (appa)", "meaning": "Ayah (kasual)" },
+            { "word": "엄마 (eomma)", "meaning": "Ibu (kasual)" },
+            { "word": "오빠 (oppa)", "meaning": "Kakak laki (dipakai adik perempuan)" },
+            { "word": "동생 (dongsaeng)", "meaning": "Adik" }
+          ],
+          "shuffledMeanings": ["Adik", "Kakak laki (dipakai adik perempuan)", "Ibu (kasual)", "Ayah (kasual)"],
+          "explanation": "Korea unik: panggilan kakak berbeda berdasarkan jenis kelamin PEMANGGIL! 오빠=kakak laki (sbg adik perempuan), 형=kakak laki (sbg adik laki)."
+        }
+      }
+    ],
+
+    "koc2s4": [
+      {
+        "id": "koc2s4_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "이름이 뭐예요?",
+          "phonetic": "ireumi mwoyeyo?",
+          "meaning": "Siapa namamu? (formal)",
+          "meaningId": "이름=nama, 뭐=apa, 예요=adalah",
+          "exampleSentence": "이름이 뭐예요? — 제 이름은 Sari예요. (Siapa namamu? — Nama saya Sari.)",
+          "audioUrl": "tts://이름이 뭐예요"
+        }
+      },
+      {
+        "id": "koc2s4_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "어느 나라 사람이에요?",
+          "phonetic": "eoneu nara saramieyo?",
+          "meaning": "Orang dari negara mana?",
+          "meaningId": "어느=mana, 나라=negara, 사람=orang",
+          "exampleSentence": "인도네시아 사람이에요. (Saya orang Indonesia.)",
+          "audioUrl": "tts://어느 나라 사람이에요"
+        }
+      },
+      {
+        "id": "koc2s4_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "반갑습니다",
+          "phonetic": "bangapseumnida",
+          "meaning": "Senang bertemu (formal)",
+          "meaningId": "Diucapkan saat berkenalan pertama kali",
+          "exampleSentence": "처음 뵙겠습니다. 반갑습니다! (Salam kenal. Senang bertemu!)",
+          "audioUrl": "tts://반갑습니다"
+        }
+      },
+      {
+        "id": "koc2s4_4", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "'제 이름은 Sari예요' artinya...",
+          "options": ["Nama kamu Sari", "Nama saya Sari", "Dia bernama Sari", "Kami bernama Sari"],
+          "correctAnswer": "Nama saya Sari",
+          "explanation": "제(saya punya/formal) + 이름(nama) + 은(partikel topik) + Sari + 예요(adalah) = Nama saya adalah Sari."
+        }
+      },
+      {
+        "id": "koc2s4_5", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "저는 인도네시아 ___ 이에요 (Saya orang Indonesia)",
+          "options": ["나라 (nara)", "사람 (saram)", "이름 (ireum)", "학생 (haksaeng)"],
+          "correctAnswer": "사람 (saram)",
+          "explanation": "사람 = orang. 인도네시아 사람이에요 = (saya) orang Indonesia. 사람 adalah kata yang sangat sering dipakai!"
+        }
+      },
+      {
+        "id": "koc2s4_6", "type": "speaking_test", "xpReward": 20,
+        "content": {
+          "phrase": "annyeonghaseyo je ireumеun bangapseumnida",
+          "hint": "Ucapkan perkenalan: 안녕하세요! 제 이름은... 반갑습니다!",
+          "translation": "Halo! Nama saya... Senang bertemu!"
+        }
+      }
+    ],
+
+    "koc2s5": [
+      {
+        "id": "koc2s5_1", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Review Chapter 2 — cocokkan semua!",
+          "pairs": [
+            { "word": "저 (jeo)", "meaning": "Saya (formal)" },
+            { "word": "이에요 (ieyo)", "meaning": "Adalah" },
+            { "word": "아니에요 (anieyo)", "meaning": "Bukan" },
+            { "word": "반갑습니다", "meaning": "Senang bertemu" }
+          ],
+          "shuffledMeanings": ["Bukan", "Adalah", "Senang bertemu", "Saya (formal)"],
+          "explanation": "Chapter 2 selesai! Kamu bisa memperkenalkan diri dalam bahasa Korea."
+        }
+      },
+      {
+        "id": "koc2s5_2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Mengapa Korea punya 오빠 DAN 형 untuk 'kakak laki-laki'?",
+          "options": [
+            "Tidak ada alasannya",
+            "오빠 dipakai oleh adik perempuan, 형 dipakai oleh adik laki-laki",
+            "오빠 lebih formal dari 형",
+            "오빠 untuk kakak kandung, 형 untuk kakak sepupu"
+          ],
+          "correctAnswer": "오빠 dipakai oleh adik perempuan, 형 dipakai oleh adik laki-laki",
+          "explanation": "Korea membedakan panggilan berdasarkan jenis kelamin PEMANGGIL: 오빠/언니 (adik perempuan memanggil), 형/누나 (adik laki-laki memanggil)."
+        }
+      },
+      {
+        "id": "koc2s5_3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "저는 인도네시아 사람이에요 = Saya adalah ___ Indonesia",
+          "options": ["Negara", "Orang", "Pelajar", "Guru"],
+          "correctAnswer": "Orang",
+          "explanation": "사람 (saram) = orang. 인도네시아 사람 = orang Indonesia. 사람이에요 = adalah orang."
+        }
+      },
+      {
+        "id": "koc2s5_4", "type": "speaking_test", "xpReward": 20,
+        "content": {
+          "phrase": "annyeonghaseyo je ireumеun indonesiya saramieyo bangapseumnida",
+          "hint": "Perkenalan: 안녕하세요! 제 이름은... 인도네시아 사람이에요. 반갑습니다!",
+          "translation": "Halo! Nama saya... Saya orang Indonesia. Senang bertemu!"
+        }
+      }
+    ],
+
+    "koc3s1": [
+      {
+        "id": "koc3s1_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "일 이 삼 사 오",
+          "phonetic": "il i sam sa o",
+          "meaning": "1, 2, 3, 4, 5 (Sino-Korea)",
+          "meaningId": "Sistem angka dari bahasa China — untuk tanggal, menit, harga",
+          "exampleSentence": "오늘은 삼월 일일이에요. (Hari ini tanggal 1 Maret.)",
+          "audioUrl": "tts://일이삼사오"
+        }
+      },
+      {
+        "id": "koc3s1_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "육 칠 팔 구 십",
+          "phonetic": "yuk chil pal gu sip",
+          "meaning": "6, 7, 8, 9, 10 (Sino-Korea)",
+          "meaningId": "Lanjutan angka Sino-Korea",
+          "exampleSentence": "전화번호가 뭐예요? 010-칠칠칠-팔팔팔팔 (Nomor HP? 010-777-8888)",
+          "audioUrl": "tts://육칠팔구십"
+        }
+      },
+      {
+        "id": "koc3s1_3", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan angka Sino-Korea!",
+          "pairs": [
+            { "word": "일 (il)", "meaning": "1" },
+            { "word": "삼 (sam)", "meaning": "3" },
+            { "word": "오 (o)", "meaning": "5" },
+            { "word": "칠 (chil)", "meaning": "7" },
+            { "word": "십 (sip)", "meaning": "10" }
+          ],
+          "shuffledMeanings": ["10", "1", "7", "3", "5"],
+          "explanation": "일(1)이(2)삼(3)사(4)오(5)육(6)칠(7)팔(8)구(9)십(10) — angka Sino-Korea. Dipakai untuk: tanggal, bulan, menit, harga, nomor telepon."
+        }
+      },
+      {
+        "id": "koc3s1_4", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "이십오 (i-sip-o) = berapa?",
+          "options": ["15", "20", "25", "52"],
+          "correctAnswer": "25",
+          "explanation": "이(2) + 십(10) + 오(5) = 20+5 = 25. Pola: [puluhan]십[satuan]. 삼십=30, 사십=40, 오십=50."
+        }
+      },
+      {
+        "id": "koc3s1_5", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Angka Sino-Korea digunakan untuk tanggal, harga, dan ___",
+          "options": ["Umur (usia)", "Menghitung benda", "Nomor telepon", "Jam"],
+          "correctAnswer": "Nomor telepon",
+          "explanation": "Angka Sino-Korea (일이삼사오...) dipakai untuk: tanggal (삼월 오일), harga (오천원), menit (오십분), nomor telepon. Sementara JAM menggunakan angka asli Korea!"
+        }
+      },
+      {
+        "id": "koc3s1_6", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Berapa jumlah sistem angka dalam bahasa Korea?",
+          "options": ["1 sistem", "2 sistem", "3 sistem", "4 sistem"],
+          "correctAnswer": "2 sistem",
+          "explanation": "Korea punya 2 sistem angka: Sino-Korea (일이삼...) dan Asli Korea (하나둘셋...). Masing-masing dipakai untuk konteks berbeda!"
+        }
+      }
+    ],
+
+    "koc3s2": [
+      {
+        "id": "koc3s2_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "하나 둘 셋 넷 다섯",
+          "phonetic": "hana dul set net daseot",
+          "meaning": "1, 2, 3, 4, 5 (Asli Korea)",
+          "meaningId": "Dipakai untuk menghitung benda dan JAM",
+          "exampleSentence": "사과 하나 주세요! (Tolong satu apel!) / 지금 두 시예요. (Sekarang jam 2.)",
+          "audioUrl": "tts://하나둘셋넷다섯"
+        }
+      },
+      {
+        "id": "koc3s2_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "여섯 일곱 여덟 아홉 열",
+          "phonetic": "yeoseot ilgop yeodeol ahop yeol",
+          "meaning": "6, 7, 8, 9, 10 (Asli Korea)",
+          "meaningId": "Lanjutan angka asli Korea",
+          "exampleSentence": "지금 열 시예요. (Sekarang jam 10.)",
+          "audioUrl": "tts://여섯일곱여덟아홉열"
+        }
+      },
+      {
+        "id": "koc3s2_3", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan angka ASLI Korea!",
+          "pairs": [
+            { "word": "하나 (hana)", "meaning": "1" },
+            { "word": "둘 (dul)", "meaning": "2" },
+            { "word": "다섯 (daseot)", "meaning": "5" },
+            { "word": "열 (yeol)", "meaning": "10" }
+          ],
+          "shuffledMeanings": ["5", "2", "10", "1"],
+          "explanation": "하나(1)둘(2)셋(3)넷(4)다섯(5)여섯(6)일곱(7)여덟(8)아홉(9)열(10) — angka asli Korea untuk jam dan menghitung benda."
+        }
+      },
+      {
+        "id": "koc3s2_4", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "지금 몇 시예요? — 두 시예요. Artinya...",
+          "options": ["Sekarang jam 2", "Ada dua orang", "Hari ini tanggal 2", "Harganya 2 won"],
+          "correctAnswer": "Sekarang jam 2",
+          "explanation": "몇 시=jam berapa, 두 시=jam 2 (pakai angka asli Korea 두=2). JAM selalu pakai angka asli Korea: 한 시(1), 두 시(2), 세 시(3)..."
+        }
+      },
+      {
+        "id": "koc3s2_5", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "Untuk menyebut JAM, gunakan angka ___ Korea",
+          "options": ["Sino", "Asli", "Campuran", "Inggris"],
+          "correctAnswer": "Asli",
+          "explanation": "JAM (시) = angka asli Korea: 한 시, 두 시, 세 시... MENIT (분) = angka Sino-Korea: 일 분, 이 분, 삼 분... Aturan ini wajib diingat!"
+        }
+      },
+      {
+        "id": "koc3s2_6", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "사과 하나 주세요 artinya...",
+          "options": ["Apel ini berapa?", "Tolong satu apel", "Apel itu enak", "Saya suka apel"],
+          "correctAnswer": "Tolong satu apel",
+          "explanation": "사과(apel) + 하나(satu, angka asli Korea) + 주세요(tolong berikan) = Tolong satu apel! 주세요 adalah cara sopan meminta sesuatu di toko/restoran."
+        }
+      }
+    ],
+
+    "koc3s3": [
+      {
+        "id": "koc3s3_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "밥 / 국수",
+          "phonetic": "bap / guksu",
+          "meaning": "Nasi / Mie",
+          "meaningId": "Dua makanan pokok Korea",
+          "exampleSentence": "밥 먹었어요? (Sudah makan nasi?) — sapaan umum!",
+          "audioUrl": "tts://밥"
+        }
+      },
+      {
+        "id": "koc3s3_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "김치 / 불고기 / 비빔밥",
+          "phonetic": "kimchi / bulgogi / bibimbap",
+          "meaning": "Kimchi / Bulgogi / Bibimbap",
+          "meaningId": "Makanan Korea paling terkenal di dunia",
+          "exampleSentence": "김치는 한국 음식이에요. (Kimchi adalah makanan Korea.)",
+          "audioUrl": "tts://김치"
+        }
+      },
+      {
+        "id": "koc3s3_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "물 / 커피 / 차",
+          "phonetic": "mul / keopi / cha",
+          "meaning": "Air / Kopi / Teh",
+          "meaningId": "Minuman sehari-hari",
+          "exampleSentence": "물 한 잔 주세요. (Tolong satu gelas air.)",
+          "audioUrl": "tts://물커피"
+        }
+      },
+      {
+        "id": "koc3s3_4", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "맛있어요 / 맛없어요",
+          "phonetic": "massisseoyo / maseopseoyo",
+          "meaning": "Enak / Tidak enak",
+          "meaningId": "맛있다 = ada rasa, 맛없다 = tidak ada rasa",
+          "exampleSentence": "이거 정말 맛있어요! (Ini benar-benar enak!)",
+          "audioUrl": "tts://맛있어요"
+        }
+      },
+      {
+        "id": "koc3s3_5", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan makanan Korea!",
+          "pairs": [
+            { "word": "밥 (bap)", "meaning": "Nasi" },
+            { "word": "김치 (kimchi)", "meaning": "Kimchi" },
+            { "word": "물 (mul)", "meaning": "Air" },
+            { "word": "커피 (keopi)", "meaning": "Kopi" }
+          ],
+          "shuffledMeanings": ["Kopi", "Air", "Kimchi", "Nasi"],
+          "explanation": "밥=nasi, 김치=kimchi, 물=air, 커피=kopi, 차=teh. 맛있어요 = enak!"
+        }
+      },
+      {
+        "id": "koc3s3_6", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "'밥 먹었어요?' sering dipakai sebagai...",
+          "options": ["Pesan makanan di restoran", "Sapaan sehari-hari (seperti 'apa kabar')", "Undangan makan", "Pertanyaan tentang menu"],
+          "correctAnswer": "Sapaan sehari-hari (seperti 'apa kabar')",
+          "explanation": "밥 먹었어요? (sudah makan nasi?) = sapaan kasual Korea seperti 'apa kabar?' Cerminan budaya Korea yang sangat menghargai makanan bersama!"
+        }
+      }
+    ],
+
+    "koc3s4": [
+      {
+        "id": "koc3s4_1", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "빨간색 / 파란색 / 노란색",
+          "phonetic": "ppalgan-saek / paran-saek / noran-saek",
+          "meaning": "Merah / Biru / Kuning",
+          "meaningId": "Tiga warna dasar",
+          "exampleSentence": "빨간 사과 (ppalgan sagwa) = apel merah",
+          "audioUrl": "tts://빨간색파란색"
+        }
+      },
+      {
+        "id": "koc3s4_2", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "흰색 / 검은색 / 초록색",
+          "phonetic": "huin-saek / geomun-saek / chorok-saek",
+          "meaning": "Putih / Hitam / Hijau",
+          "meaningId": "Tiga warna lagi",
+          "exampleSentence": "초록 불이에요. (Lampu hijau.)",
+          "audioUrl": "tts://흰색검은색"
+        }
+      },
+      {
+        "id": "koc3s4_3", "type": "vocabulary", "xpReward": 10,
+        "content": {
+          "word": "크다 / 작다",
+          "phonetic": "keuda / jakda",
+          "meaning": "Besar / Kecil",
+          "meaningId": "Pasangan kata sifat paling dasar",
+          "exampleSentence": "이 가방은 커요. (Tas ini besar.) / 저 가방은 작아요. (Tas itu kecil.)",
+          "audioUrl": "tts://크다작다"
+        }
+      },
+      {
+        "id": "koc3s4_4", "type": "matching_word", "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan warna Korea!",
+          "pairs": [
+            { "word": "빨간색 (ppalgan-saek)", "meaning": "Merah" },
+            { "word": "파란색 (paran-saek)", "meaning": "Biru" },
+            { "word": "노란색 (noran-saek)", "meaning": "Kuning" },
+            { "word": "흰색 (huin-saek)", "meaning": "Putih" },
+            { "word": "검은색 (geomun-saek)", "meaning": "Hitam" }
+          ],
+          "shuffledMeanings": ["Putih", "Merah", "Hitam", "Biru", "Kuning"],
+          "explanation": "빨간=merah, 파란=biru, 노란=kuning, 흰=putih, 검은=hitam, 초록=hijau. Tambah 색 = warna."
+        }
+      },
+      {
+        "id": "koc3s4_5", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "이거 얼마예요? artinya...",
+          "options": ["Ini enak?", "Ini berapa harganya?", "Ini apa?", "Ini di mana?"],
+          "correctAnswer": "Ini berapa harganya?",
+          "explanation": "이거(ini) + 얼마(berapa harga) + 예요(adalah) = Ini berapa harganya? Kalimat WAJIB saat belanja di Korea!"
+        }
+      },
+      {
+        "id": "koc3s4_6", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "이 음식은 정말 ___ (Makanan ini benar-benar enak!)",
+          "options": ["맛없어요", "맛있어요", "비싸요", "작아요"],
+          "correctAnswer": "맛있어요",
+          "explanation": "맛있어요 (massisseoyo) = enak! 정말 = benar-benar/sangat. 정말 맛있어요 = benar-benar enak! Ekspresi wajib saat makan di Korea."
+        }
+      }
+    ],
+
+    "koc3s5": [
+      {
+        "id": "koc3s5_1", "type": "matching_word", "xpReward": 20,
+        "content": {
+          "instruction": "Grand Final Korea — cocokkan semua!",
+          "pairs": [
+            { "word": "안녕하세요", "meaning": "Halo (formal)" },
+            { "word": "감사합니다", "meaning": "Terima kasih" },
+            { "word": "맛있어요", "meaning": "Enak" },
+            { "word": "얼마예요?", "meaning": "Berapa harganya?" },
+            { "word": "반갑습니다", "meaning": "Senang bertemu" }
+          ],
+          "shuffledMeanings": ["Senang bertemu", "Terima kasih", "Halo (formal)", "Berapa harganya?", "Enak"],
+          "explanation": "축하합니다! (Chukahamnida = Selamat!) Kamu sudah menyelesaikan 3 chapter Korea!"
+        }
+      },
+      {
+        "id": "koc3s5_2", "type": "translation_quiz", "xpReward": 10,
+        "content": {
+          "question": "Untuk menyebut jam 3, gunakan angka...",
+          "options": ["삼 시 (Sino-Korea)", "셋 시 → 세 시 (Asli Korea)", "세 시 (Asli Korea)", "3 시"],
+          "correctAnswer": "세 시 (Asli Korea)",
+          "explanation": "JAM = angka asli Korea. 한 시(1), 두 시(2), 세 시(3), 네 시(4)... Catatan: 하나→한, 둘→두, 셋→세, 넷→네 saat dipakai sebelum 시."
+        }
+      },
+      {
+        "id": "koc3s5_3", "type": "fill_in_blank", "xpReward": 10,
+        "content": {
+          "sentence": "저는 ___ 사람이에요 (Saya orang Indonesia)",
+          "options": ["일본 (Japan)", "인도네시아 (Indonesia)", "중국 (China)", "미국 (Amerika)"],
+          "correctAnswer": "인도네시아 (Indonesia)",
+          "explanation": "인도네시아 사람이에요 = Saya orang Indonesia. 사람=orang, 이에요=adalah."
+        }
+      },
+      {
+        "id": "koc3s5_4", "type": "listening_quiz", "xpReward": 15,
+        "content": {
+          "audioText": "안녕하세요! 저는 학생이에요. 한국어를 배우고 있어요.",
+          "question": "Orang ini adalah...",
+          "options": ["Guru yang belajar Korea", "Pelajar yang belajar bahasa Korea", "Turis yang berkunjung", "Orang Korea asli"],
+          "correctAnswer": "Pelajar yang belajar bahasa Korea",
+          "explanation": "저는 학생이에요 = saya adalah pelajar. 한국어를 배우고 있어요 = (saya) sedang belajar bahasa Korea. 한국어=bahasa Korea, 배우다=belajar."
+        }
+      },
+      {
+        "id": "koc3s5_5", "type": "speaking_test", "xpReward": 20,
+        "content": {
+          "phrase": "annyeonghaseyo je ireumеun indonesiya saramieyo gamsahamnida",
+          "hint": "Perkenalan lengkap: 안녕하세요! 제 이름은... 인도네시아 사람이에요. 감사합니다!",
+          "translation": "Halo! Nama saya... Saya orang Indonesia. Terima kasih!"
+        }
+      }
+    ]
+  }
+}
