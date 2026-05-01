@@ -2,72 +2,25 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-/* ─── Language Definitions ─────────────────────────────── */
 export interface LanguageDef {
-  code: string;           // 'en' | 'ja'
-  name: string;           // 'English'
-  nameLocal: string;      // 'English' | '日本語'
-  flag: string;           // country code for flag or emoji fallback
-  color: string;          // accent color
+  code: string;
+  name: string;
+  nameLocal: string;
+  flag: string;
+  color: string;
   ring: string;
   available: boolean;
   description: string;
 }
 
 export const LANGUAGES: LanguageDef[] = [
-  {
-    code: 'en',
-    name: 'English',
-    nameLocal: 'English',
-    flag: 'GB',
-    color: '#3b82f6',
-    ring: '#60a5fa',
-    available: true,
-    description: 'Bahasa Inggris — bahasa internasional yang paling banyak digunakan di dunia',
-  },
-  {
-    code: 'ja',
-    name: 'Japanese',
-    nameLocal: '日本語',
-    flag: 'JP',
-    color: '#ef4444',
-    ring: '#f87171',
-    available: true,
-    description: 'Bahasa Jepang — bahasa yang indah dengan tiga sistem tulisan unik',
-  },
-  {
-    code: 'zh',
-    name: 'Mandarin',
-    nameLocal: '普通话',
-    flag: 'CN',
-    description: 'Pinyin, karakter & percakapan',
-    color: '#f59e0b',
-    ring: '#fbbf24',
-    available: true,   // ganti false jika belum siap
-  },
-  {
-    code: 'ko',
-    name: 'Korean',
-    nameLocal: '한국어',
-    flag: 'KR',
-    description: 'Hangul & bahasa sehari-hari',
-    color: '#6366f1',
-    ring: '#818cf8',
-    available: true,
-  },
-  {
-    code: 'fr',
-    name: 'French',
-    nameLocal: 'Français',
-    flag: 'FR',
-    color: '#a855f7',
-    ring: '#c084fc',
-    available: false,
-    description: 'Segera hadir',
-  },
+  { code: 'en', name: 'English', nameLocal: 'English', flag: 'GB', color: '#3b82f6', ring: '#60a5fa', available: true, description: 'Bahasa Inggris — bahasa internasional yang paling banyak digunakan di dunia' },
+  { code: 'ja', name: 'Japanese', nameLocal: '日本語', flag: 'JP', color: '#ef4444', ring: '#f87171', available: true, description: 'Bahasa Jepang — bahasa yang indah dengan tiga sistem tulisan unik' },
+  { code: 'zh', name: 'Mandarin', nameLocal: '普通话', flag: 'CN', description: 'Pinyin, karakter & percakapan', color: '#f59e0b', ring: '#fbbf24', available: true },
+  { code: 'ko', name: 'Korean', nameLocal: '한국어', flag: 'KR', description: 'Hangul & bahasa sehari-hari', color: '#6366f1', ring: '#818cf8', available: true },
+  { code: 'fr', name: 'French', nameLocal: 'Français', flag: 'FR', color: '#a855f7', ring: '#c084fc', available: false, description: 'Segera hadir' },
 ];
 
-/* ─── Per-language progress (mirrors useUserStore shape) ── */
 export interface LangProgress {
   xp: number;
   streak: number;
@@ -78,29 +31,16 @@ export interface LangProgress {
 }
 
 function emptyProgress(): LangProgress {
-  return {
-    xp: 0,
-    streak: 0,
-    combo: 0,
-    stageStars: {},
-    stageUnlocked: {},
-    completedStages: {},
-  };
+  return { xp: 0, streak: 0, combo: 0, stageStars: {}, stageUnlocked: {}, completedStages: {} };
 }
 
-/* ─── Store ─────────────────────────────────────────────── */
 interface LanguageState {
-  /** null = not yet selected (show language picker) */
   selectedLanguage: string | null;
-
-  /** progress keyed by language code */
   progress: Record<string, LangProgress>;
 
-  /* actions */
   selectLanguage: (code: string) => void;
   clearLanguage: () => void;
 
-  /* progress mutators for current language */
   addXp: (amount: number) => void;
   incrementCombo: () => void;
   resetCombo: () => void;
@@ -109,7 +49,6 @@ interface LanguageState {
   setStageStars: (stageId: string, stars: number) => void;
   markStageComplete: (stageId: string) => void;
 
-  /* selectors for current language */
   getXp: () => number;
   getCombo: () => number;
   getStreak: () => number;
@@ -117,6 +56,10 @@ interface LanguageState {
   isStageUnlocked: (stageId: string, xpRequired: number) => boolean;
   isStageCompleted: (stageId: string) => boolean;
   getProgress: () => LangProgress;
+
+  // ── TAMBAHAN untuk AuthProvider ──────────────────────────
+  resetAll: () => void;
+  setXpDirect: (lang: string, xp: number) => void;
 }
 
 export const useLanguageStore = create<LanguageState>()(
@@ -128,7 +71,6 @@ export const useLanguageStore = create<LanguageState>()(
       selectLanguage: (code) => {
         set((s) => ({
           selectedLanguage: code,
-          // init progress for this language if not exists
           progress: s.progress[code]
             ? s.progress
             : { ...s.progress, [code]: emptyProgress() },
@@ -137,29 +79,35 @@ export const useLanguageStore = create<LanguageState>()(
 
       clearLanguage: () => set({ selectedLanguage: null }),
 
-      /* ── Internal helper: update current lang's progress ── */
-      _update: (fn: (p: LangProgress) => Partial<LangProgress>) => {
-        const { selectedLanguage, progress } = get();
-        if (!selectedLanguage) return;
-        const cur = progress[selectedLanguage] ?? emptyProgress();
-        const updated = { ...cur, ...fn(cur) };
-        set({ progress: { ...progress, [selectedLanguage]: updated } });
-      },
+      // ── BARU: reset semua progress semua bahasa ──────────
+      resetAll: () => set({
+        progress: {},
+        // selectedLanguage tetap — user tidak perlu pilih bahasa ulang
+      }),
+
+      // ── BARU: set XP per bahasa langsung dari Supabase ───
+      setXpDirect: (lang, xp) => set((s) => ({
+        progress: {
+          ...s.progress,
+          [lang]: {
+            ...(s.progress[lang] ?? emptyProgress()),
+            xp,
+          },
+        },
+      })),
 
       addXp: (amount) => {
         const { selectedLanguage, progress } = get();
         if (!selectedLanguage) return;
         const cur = progress[selectedLanguage] ?? emptyProgress();
-        const updated = { ...cur, xp: cur.xp + amount };
-        set({ progress: { ...progress, [selectedLanguage]: updated } });
+        set({ progress: { ...progress, [selectedLanguage]: { ...cur, xp: cur.xp + amount } } });
       },
 
       incrementCombo: () => {
         const { selectedLanguage, progress } = get();
         if (!selectedLanguage) return;
         const cur = progress[selectedLanguage] ?? emptyProgress();
-        const updated = { ...cur, combo: cur.combo + 1 };
-        set({ progress: { ...progress, [selectedLanguage]: updated } });
+        set({ progress: { ...progress, [selectedLanguage]: { ...cur, combo: cur.combo + 1 } } });
       },
 
       resetCombo: () => {
@@ -182,10 +130,13 @@ export const useLanguageStore = create<LanguageState>()(
         const cur = progress[selectedLanguage] ?? emptyProgress();
         const newUnlocked = { ...cur.stageUnlocked, [stageId]: true };
 
-        // find next stage in allStages flat array and unlock it
+        // Cari urutan stage yang baru diselesaikan di dalam daftar semua stage (flat array)
         const idx = allStages.findIndex((s: any) => s.id === stageId);
+        
         if (idx !== -1 && idx + 1 < allStages.length) {
-          newUnlocked[allStages[idx + 1].id] = true;
+          // Buka stage persis selanjutnya (entah itu di chapter yang sama atau nyebrang chapter)
+          const nextStageId = allStages[idx + 1].id;
+          newUnlocked[nextStageId] = true;
         }
 
         set({
@@ -202,33 +153,16 @@ export const useLanguageStore = create<LanguageState>()(
         const cur = progress[selectedLanguage] ?? emptyProgress();
         const current = cur.stageStars[stageId] ?? 0;
         if (stars <= current) return;
-        set({
-          progress: {
-            ...progress,
-            [selectedLanguage]: {
-              ...cur,
-              stageStars: { ...cur.stageStars, [stageId]: stars },
-            },
-          },
-        });
+        set({ progress: { ...progress, [selectedLanguage]: { ...cur, stageStars: { ...cur.stageStars, [stageId]: stars } } } });
       },
 
       markStageComplete: (stageId) => {
         const { selectedLanguage, progress } = get();
         if (!selectedLanguage) return;
         const cur = progress[selectedLanguage] ?? emptyProgress();
-        set({
-          progress: {
-            ...progress,
-            [selectedLanguage]: {
-              ...cur,
-              completedStages: { ...cur.completedStages, [stageId]: true },
-            },
-          },
-        });
+        set({ progress: { ...progress, [selectedLanguage]: { ...cur, completedStages: { ...cur.completedStages, [stageId]: true } } } });
       },
 
-      /* ── Selectors ── */
       getProgress: () => {
         const { selectedLanguage, progress } = get();
         if (!selectedLanguage) return emptyProgress();
@@ -246,9 +180,7 @@ export const useLanguageStore = create<LanguageState>()(
         return p.stageUnlocked[stageId] ?? false;
       },
 
-      isStageCompleted: (stageId) => {
-        return get().getProgress().completedStages[stageId] === true;
-      },
+      isStageCompleted: (stageId) => get().getProgress().completedStages[stageId] === true,
     }),
     {
       name: 'lingora-language-store-v5',

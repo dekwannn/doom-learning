@@ -21,9 +21,7 @@ const DATA_MAP: Record<string, any> = {
 
 function getLangData(code: string | null) { return DATA_MAP[code ?? 'en'] ?? dummyData; }
 
-// Fallback stabil — JANGAN tulis `?? {}` di dalam selector Zustand
 const EMPTY_OBJ: Record<string, any> = {};
-
 const LANG_CHOSEN_KEY = 'lingora_lang_chosen';
 
 /* ─── Splash ─────────────────────────────────────────────── */
@@ -165,12 +163,7 @@ function LanguagePill() {
   const selectedLanguage = useLanguageStore(s => s.selectedLanguage);
   const lang = LANGUAGES.find(l => l.code === (selectedLanguage ?? 'en'));
   if (!lang) return null;
-  const flagMap: Record<string, string> = {
-    ja: '🇯🇵',
-    zh: '🇨🇳',
-    ko: '🇰🇷',
-    fr: '🇫🇷',
-  };
+  const flagMap: Record<string, string> = { ja:'🇯🇵', zh:'🇨🇳', ko:'🇰🇷', fr:'🇫🇷' };
   const flag = flagMap[selectedLanguage ?? ''] ?? '🇬🇧';
   return (
     <button
@@ -207,23 +200,16 @@ export default function HomePage() {
 
   const selectedLanguage = useLanguageStore(s => s.selectedLanguage);
   const activeLang       = selectedLanguage ?? 'en';
-
-  // ── FIX: gunakan isEnglish bukan isJapanese ───────────────────────────────
-  // Bug sebelumnya: hanya cek `isJapanese` → bahasa zh/ko tetap pakai data EN
-  // → completedStages dari stars EN bisa > totalStages bahasa lain → angka minus
   const isEnglish = !selectedLanguage || selectedLanguage === 'en';
 
-  // ── English store ──────────────────────────────────────────────────────────
   const enXp            = useUserStore(s => s.xp);
   const enStageUnlocked = useUserStore(s => s.stageUnlocked);
   const enStageStars    = useUserStore(s => s.stageStars);
 
-  // ── Language store — fallback ke EMPTY_OBJ stabil (bukan `?? {}`) ─────────
   const langXp            = useLanguageStore(s => s.progress[activeLang]?.xp ?? 0);
   const langStageUnlocked = useLanguageStore(s => s.progress[activeLang]?.stageUnlocked ?? EMPTY_OBJ);
   const langStageStars    = useLanguageStore(s => s.progress[activeLang]?.stageStars ?? EMPTY_OBJ);
 
-  // ── Active values: EN pakai enStore, semua bahasa lain pakai langStore ─────
   const xp            = isEnglish ? enXp            : langXp;
   const stageUnlocked = isEnglish ? enStageUnlocked : langStageUnlocked;
   const stageStars    = isEnglish ? enStageStars    : langStageStars;
@@ -274,7 +260,6 @@ export default function HomePage() {
         {!splashDone && <SplashScreen onFinish={handleSplashFinish}/>}
         <div style={{ width:'100%',maxWidth:maxW,minHeight:'100vh',background:'linear-gradient(170deg,#0c0c18 0%,#07070f 55%,#0a0710 100%)',borderLeft:'1px solid rgba(255,255,255,0.03)',borderRight:'1px solid rgba(255,255,255,0.03)',position:'relative',overflow:'hidden' }}>
           <BgDecorations/>
-          {/* Header */}
           <div style={{ position:'relative',zIndex:1,borderBottom:'1px solid rgba(255,255,255,0.04)',padding:'20px 32px',display:'flex',alignItems:'center',justifyContent:'space-between' }}>
             <AppLogo sizeWidth={112} sizeHeight={38} radius={0}/>
             <div style={{ display:'flex',alignItems:'center',gap:16 }}>
@@ -359,16 +344,19 @@ export default function HomePage() {
         <BgDecorations/>
         <div className="relative" style={{ zIndex:1 }}>
           <div style={{ padding:'20px 22px 0' }}>
-            <div style={{ display:'flex',alignItems:'flex-start',justifyContent:'space-between',marginBottom:20 }}>
-              <div style={{ display:'flex',flexDirection:'column',gap:8 }}>
-                <AppLogo sizeWidth={112} sizeHeight={36} radius={0}/>
+
+            
+            <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:20 }}>
+              <AppLogo sizeWidth={112} sizeHeight={36} radius={0}/>
+              <div style={{ display:'flex', alignItems:'center', gap:8 }}>
                 <LanguagePill/>
-              </div>
-              <div style={{ background:'rgba(250,204,21,0.08)',border:'1px solid rgba(250,204,21,0.2)',borderRadius:14,padding:'10px 14px',display:'flex',flexDirection:'row',alignItems:'center',gap:5 }}>
-                <span style={{ color:'#facc15',fontSize:16,fontWeight:900,lineHeight:1 }}>{xp}</span>
-                <span style={{ color:'#52525b',fontSize:9,fontWeight:700,letterSpacing:'0.06em',textTransform:'uppercase' }}>XP</span>
+                <div style={{ display:'flex',alignItems:'center',gap:5,background:'rgba(250,204,21,0.08)',border:'1px solid rgba(250,204,21,0.2)',borderRadius:99,padding:'6px 12px' }}>
+                  <span style={{ color:'#facc15',fontSize:14,fontWeight:900,lineHeight:1 }}>{xp}</span>
+                  <span style={{ color:'#52525b',fontSize:9,fontWeight:700,letterSpacing:'0.06em',textTransform:'uppercase' }}>XP</span>
+                </div>
               </div>
             </div>
+
             <XpProgressCard currentChapter={currentChapter} nextChapter={nextChapter} xp={xp} xpPct={xpPct}/>
             <div style={{ marginBottom:24 }}/>
             <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:10,marginBottom:28 }}>

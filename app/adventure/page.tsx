@@ -3,21 +3,26 @@
 import Link from 'next/link';
 import BottomNav from '@/components/Layout/BottomNav';
 import AchievementPopup from '@/components/Achievement/AchievementPopup';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLanguageStore, LANGUAGES } from '@/store/useLanguageStore';
 import { useProgress } from '@/hooks/useProgress';
+import { useAuth } from '@/hooks/useAuth';
 import dummyData from '@/data/dummyData.json';
 import jaData from '@/data/jaData.json';
 import zhData from '@/data/zhData.json';
 import koData from '@/data/koData.json';
+
+// ── IMPORT DRIVER.JS ──
+import { driver } from 'driver.js';
+import 'driver.js/dist/driver.css';
 
 /* ─── Language data resolver ──────────────────────────── */
 const DATA_MAP: Record<string, any> = {
   en: dummyData,
   ja: jaData,
   zh: zhData,
-  ko: koData,   // ← tambah
+  ko: koData,
 };
 
 function getLangData(code: string | null) {
@@ -198,10 +203,11 @@ function ChapterSidePanel({
 }
 
 /* ─── Stage Node ──────────────────────────────────────────── */
-function StageNode({ stage, ch, si, x, y, w, isUnlocked, isCompleted, stageStarCount, isPressed, onPressStart, onPressEnd }: {
+function StageNode({ stage, ch, si, x, y, w, isUnlocked, isCompleted, stageStarCount, isPressed, onPressStart, onPressEnd, isFirstNode }: {
   stage: any; ch: any; si: number; x: number; y: number; w: number;
   isUnlocked: boolean; isCompleted: boolean; stageStarCount: number; isPressed: boolean;
   onPressStart: () => void; onPressEnd: () => void;
+  isFirstNode?: boolean; // ← NEW: tandai node pertama untuk tour
 }) {
   const r = 32, circ = 2 * Math.PI * r;
   const nodeXRatio = x / w;
@@ -210,7 +216,11 @@ function StageNode({ stage, ch, si, x, y, w, isUnlocked, isCompleted, stageStarC
   const labelCenter  = !labelOnRight && !labelOnLeft;
 
   return (
-    <div style={{ position: 'absolute', left: x - NODE_D/2, top: y - NODE_D/2, width: NODE_D, zIndex: 10 }}>
+    // ← id="tour-stage-node" hanya pada node pertama yang unlocked
+    <div
+      id={isFirstNode ? 'tour-stage-node' : undefined}
+      style={{ position: 'absolute', left: x - NODE_D/2, top: y - NODE_D/2, width: NODE_D, zIndex: 10 }}
+    >
       {isUnlocked && (
         <div style={{
           position: 'absolute', inset: -10, borderRadius: '50%',
@@ -262,14 +272,139 @@ function LanguageBadge() {
   const selectedLanguage = useLanguageStore(s => s.selectedLanguage);
   const lang = LANGUAGES.find(l => l.code === (selectedLanguage ?? 'en'));
   if (!lang) return null;
-  const flag = selectedLanguage === 'ja' ? '🇯🇵' : '🇬🇧';
+  const flag = selectedLanguage === 'ja' ? '🇯🇵' : selectedLanguage === 'zh' ? '🇨🇳' : selectedLanguage === 'ko' ? '🇰🇷' : '🇬🇧';
   return (
-    <button onClick={() => router.push('/language-select')} style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '5px 11px', background: `${lang.color}12`, border: `1px solid ${lang.color}28`, borderRadius: 99, cursor: 'pointer' }}>
+    <button id="tour-language" onClick={() => router.push('/language-select')} style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '5px 11px', background: `${lang.color}12`, border: `1px solid ${lang.color}28`, borderRadius: 99, cursor: 'pointer' }}>
       <span style={{ fontSize: 14, lineHeight: 1 }}>{flag}</span>
       <span style={{ color: lang.color, fontSize: 11, fontWeight: 700 }}>{lang.name}</span>
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke={lang.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
     </button>
   );
+}
+
+/* ─── Trophy / Leaderboard Button ─────────────────────────── */
+function LeaderboardButton() {
+  return (
+    <Link id="tour-leaderboard" href="/leaderboard" style={{
+      display: 'flex', alignItems: 'center', gap: 6,
+      background: 'rgba(250,204,21,0.07)',
+      border: '1px solid rgba(250,204,21,0.18)',
+      borderRadius: 99,
+      padding: '6px 12px',
+      textDecoration: 'none',
+      transition: 'all 0.2s',
+      flexShrink: 0,
+    }}>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#facc15" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M6 9H4a2 2 0 0 1-2-2V5h4"/>
+        <path d="M18 9h2a2 2 0 0 0 2-2V5h-4"/>
+        <path d="M6 2h12v7a6 6 0 0 1-12 0V2z"/>
+        <path d="M12 15v6"/>
+        <path d="M8 21h8"/>
+        <path d="M9 15a6 6 0 0 0 6 0"/>
+      </svg>
+      <span style={{ color: '#facc15', fontSize: 11, fontWeight: 800, letterSpacing: '0.02em' }}>Rank</span>
+    </Link>
+  );
+}
+
+/* ─── Help / Replay Tour Button ───────────────────────────── */
+// ← NEW COMPONENT: tombol "?" mengambang di pojok kanan bawah
+function HelpButton({ onStart }: { onStart: () => void }) {
+  return (
+    <button
+      onClick={onStart}
+      title="Show tour guide"
+      style={{
+        position: 'fixed',
+        bottom: 88,          // di atas BottomNav (tinggi ~64px + sedikit margin)
+        right: 20,
+        zIndex: 50,
+        width: 40,
+        height: 40,
+        borderRadius: '50%',
+        background: 'rgba(99,102,241,0.15)',
+        border: '1px solid rgba(99,102,241,0.35)',
+        backdropFilter: 'blur(8px)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        cursor: 'pointer',
+        boxShadow: '0 4px 16px rgba(99,102,241,0.25)',
+        transition: 'all 0.2s',
+      }}
+      onMouseEnter={e => {
+        (e.currentTarget as HTMLButtonElement).style.background = 'rgba(99,102,241,0.28)';
+        (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1.08)';
+      }}
+      onMouseLeave={e => {
+        (e.currentTarget as HTMLButtonElement).style.background = 'rgba(99,102,241,0.15)';
+        (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1)';
+      }}
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#818cf8" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+        <line x1="12" y1="17" x2="12.01" y2="17"/>
+      </svg>
+    </button>
+  );
+}
+
+/* ─── Tour factory ────────────────────────────────────────── */
+// ← NEW: fungsi terpisah agar bisa dipanggil ulang kapanpun
+function createTour(onDone?: () => void) {
+  return driver({
+    showProgress: true,
+    animate: true,
+    smoothScroll: true,
+    overlayColor: 'rgba(0,0,0,0.72)',
+    // ── Custom style via CSS variable override ──
+    // Driver.js memakai CSS variables — kita inject style global sekali
+    popoverClass: 'lingora-tour-popover',
+    steps: [
+      {
+        element: '#tour-stage-node',
+        popover: {
+          title: 'Stage',
+          description: 'Tap stage untuk mulai sesi belajar. Kumpulkan 3 bintang di tiap stage untuk XP maksimal.',
+          side: 'right',
+          align: 'center',
+        },
+      },
+      {
+        element: '#tour-xp',
+        popover: {
+          title: 'XP',
+          description: 'XP terkumpul dari setiap stage. Makin banyak XP, makin banyak chapter terbuka.',
+          side: 'bottom',
+          align: 'end',
+        },
+      },
+      {
+        element: '#tour-language',
+        popover: {
+          title: 'Ganti Bahasa',
+          description: 'Ganti bahasa target kapan saja. Progres tiap bahasa tersimpan terpisah.',
+          side: 'bottom',
+          align: 'center',
+        },
+      },
+      {
+        element: '#tour-leaderboard',
+        popover: {
+          title: 'Peringkat',
+          description: 'Lihat posisimu di antara semua pemain. Update setiap kali kamu selesai stage.',
+          side: 'bottom',
+          align: 'center',
+        },
+      },
+    ],
+    onDestroyed: () => {
+      localStorage.setItem('tour_adventure_done', 'true');
+      onDone?.();
+    },
+  });
 }
 
 /* ─── Main ────────────────────────────────────────────────── */
@@ -278,15 +413,10 @@ export default function Home() {
   const bp = useBreakpoint();
   const isWide    = bp === 'tablet' || bp === 'desktop';
   const isDesktop = bp === 'desktop';
+  const { loading } = useAuth();
 
   const selectedLanguage = useLanguageStore(s => s.selectedLanguage);
-
-  // ── useProgress — destructure primitif, jangan taruh seluruh objek sebagai dep ──
   const { xp, stageStars, stageUnlocked, completedStages } = useProgress();
-
-  useEffect(() => {
-    if (!selectedLanguage) router.replace('/language-select');
-  }, [selectedLanguage, router]);
 
   const [mounted,          setMounted]          = useState(false);
   const [pressed,          setPressed]          = useState<string | null>(null);
@@ -294,6 +424,11 @@ export default function Home() {
   const [activeChapterIdx, setActiveChapterIdx] = useState(0);
 
   useEffect(() => { setMounted(true); }, []);
+
+  useEffect(() => {
+    if (!selectedLanguage) router.replace('/language-select');
+  }, [selectedLanguage, router]);
+
   useEffect(() => {
     const el = document.getElementById('map-container');
     if (!el) return;
@@ -302,8 +437,39 @@ export default function Home() {
     return () => ro.disconnect();
   }, []);
 
-  if (!mounted || !selectedLanguage) return <div style={{ minHeight: '100vh', background: '#08080f' }}/>;
+  // ── startTour: bisa dipanggil dari auto-run ATAU tombol ? ──
+  const startTour = useCallback(() => {
+    const tour = createTour();
+    setTimeout(() => tour.drive(), 300);
+  }, []);
 
+  // ── Auto-run hanya sekali saat first visit ──
+  useEffect(() => {
+    if (!mounted || loading || !selectedLanguage) return;
+    const hasSeenTour = localStorage.getItem('tour_adventure_done');
+    if (!hasSeenTour) {
+      const tour = createTour();
+      setTimeout(() => tour.drive(), 600);
+    }
+  }, [mounted, loading, selectedLanguage]);
+
+  // ── EARLY RETURN: loading screen ──
+  if (!mounted || loading) {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', justifyContent: 'center', alignItems: 'center', background: '#0a0a0d', gap: 16 }}>
+        <div style={{ width: 44, height: 44, borderRadius: '50%', border: '3px solid rgba(99, 102, 241, 0.2)', borderTopColor: '#818cf8', animation: 'spin 0.8s linear infinite' }} />
+        <p style={{ color: '#a1a1aa', fontSize: 13, fontWeight: 600, letterSpacing: '0.05em', animation: 'pulse 1.5s infinite' }}>Menyiapkan petualanganmu...</p>
+        <style>{`
+          @keyframes spin { to { transform: rotate(360deg); } }
+          @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        `}</style>
+      </div>
+    );
+  }
+
+  if (!selectedLanguage) return <div style={{ minHeight: '100vh', background: '#08080f' }}/>;
+
+  // ── Data & layout ──
   const chapters = getLangData(selectedLanguage).chapters as any[];
   const w = containerW;
   const sidebarW = isDesktop ? 280 : 240;
@@ -362,6 +528,9 @@ export default function Home() {
     setActiveChapterIdx(best);
   };
 
+  // ── Track apakah node pertama sudah dirender ──
+  let firstNodeRendered = false;
+
   /* ── Map renderer ── */
   const renderMap = (mapW: number) => (
     <div id="map-container" style={{ position: 'relative', height: totalH, paddingBottom: 40 }}>
@@ -389,14 +558,19 @@ export default function Home() {
       </svg>
 
       {chapterLayouts.map(({ ch, ci, headerY, stagePositions }: any) => {
-        const prevChapter     = ci > 0 ? chapters[ci-1] : null;
-        const prevChapterDone = !prevChapter || prevChapter.stages.every((s: any) => stageUnlocked[s.id] ?? false);
-        const isChUnlocked    = ci === 0 ? xp >= ch.xpRequired : xp >= ch.xpRequired && prevChapterDone;
+        const prevChapter = ci > 0 ? chapters[ci-1] : null;
+
+        // Ambil ID stage terakhir dari chapter sebelumnya
+        const lastStageOfPrevChapter = prevChapter ? prevChapter.stages[prevChapter.stages.length - 1].id : null;
+
+        // Chapter terbuka jika: ini chapter pertama ATAU (XP cukup DAN stage terakhir chapter lalu sudah terbuka)
+        const isChUnlocked = ci === 0 
+          ? xp >= ch.xpRequired 
+          : xp >= ch.xpRequired && (lastStageOfPrevChapter ? stageUnlocked[lastStageOfPrevChapter] : true);
 
         return (
           <div key={ci}>
             <div id={`chapter-anchor-${ci}`} style={{ position: 'absolute', top: headerY, left: 0, height: 1 }}/>
-            {/* Chapter header */}
             <div style={{ position: 'absolute', left: 0, right: 0, top: headerY, height: CHAPTER_HEADER_H, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', zIndex: 5 }}>
               {ci > 0 && <div style={{ width: '60%', height: 1, background: `linear-gradient(90deg,transparent,${ch.color}30,transparent)`, marginBottom: 20 }}/>}
               <p style={{ fontSize: 38, fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, color: isChUnlocked ? ch.color : '#2a2a3a', textShadow: isChUnlocked ? `0 0 40px ${ch.color}44` : 'none', transition: 'color 0.3s' }}>{ch.title}</p>
@@ -405,19 +579,38 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Stage nodes */}
             {ch.stages.map((stage: any, si: number) => {
               const { x, y } = stagePositions[si];
-              const isFirstStage = ci === 0 && si === 0;
-              const isUnlocked   = isChUnlocked && (isFirstStage || (stageUnlocked[stage.id] ?? false));
+              
+              // Syarat 1: Ini stage paling pertama di seluruh aplikasi
+              const isFirstStageOverall = ci === 0 && si === 0;
+              // Syarat 2: Ini stage pertama di dalam chapternya masing-masing
+              const isFirstInChapter = si === 0;
+
+              // Modifikasi: Jika chapter sudah terbuka (XP cukup), maka stage pertamanya otomatis terbuka
+              const isUnlocked = isChUnlocked && (
+                isFirstStageOverall || 
+                isFirstInChapter || 
+                (stageUnlocked[stage.id] ?? false)
+              );
+
               const isCompleted  = completedStages[stage.id] === true;
               const starCount    = stageStars[stage.id] ?? 0;
               const isPressedNode = pressed === stage.id;
 
+              // ← Tandai node pertama yang unlocked sebagai anchor tour
+              const isFirstUnlockedNode = isUnlocked && !firstNodeRendered;
+              if (isFirstUnlockedNode) firstNodeRendered = true;
+
               const nodeEl = (
-                <StageNode stage={stage} ch={ch} si={si} x={x} y={y} w={mapW}
-                  isUnlocked={isUnlocked} isCompleted={isCompleted} stageStarCount={starCount} isPressed={isPressedNode}
-                  onPressStart={() => setPressed(stage.id)} onPressEnd={() => setPressed(null)}/>
+                <StageNode
+                  stage={stage} ch={ch} si={si} x={x} y={y} w={mapW}
+                  isUnlocked={isUnlocked} isCompleted={isCompleted}
+                  stageStarCount={starCount} isPressed={isPressedNode}
+                  onPressStart={() => setPressed(stage.id)}
+                  onPressEnd={() => setPressed(null)}
+                  isFirstNode={isFirstUnlockedNode} // ← pass ke StageNode
+                />
               );
 
               return isUnlocked ? (
@@ -434,7 +627,6 @@ export default function Home() {
         );
       })}
 
-      {/* End marker */}
       <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', top: totalH-68, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
         <div style={{ width: 36, height: 36, borderRadius: '50%', background: '#0e0e18', border: '2px solid #1e1e2e', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="#2d2d3d"/></svg>
@@ -444,13 +636,77 @@ export default function Home() {
     </div>
   );
 
+  // ── CSS custom untuk Driver.js popover ──
+  const tourStyle = `
+    @keyframes haloPulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:.9;transform:scale(1.18)}}
+
+    /* ── Driver.js popover custom theme ── */
+    .lingora-tour-popover.driver-popover {
+      background: #12121e !important;
+      border: 1px solid rgba(99,102,241,0.25) !important;
+      border-radius: 16px !important;
+      padding: 18px 20px !important;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(99,102,241,0.1) !important;
+      max-width: 260px !important;
+      backdrop-filter: blur(12px) !important;
+    }
+    .lingora-tour-popover .driver-popover-title {
+      color: #f4f4f5 !important;
+      font-size: 14px !important;
+      font-weight: 800 !important;
+      margin-bottom: 6px !important;
+      letter-spacing: -0.01em !important;
+    }
+    .lingora-tour-popover .driver-popover-description {
+      color: #71717a !important;
+      font-size: 12px !important;
+      line-height: 1.6 !important;
+    }
+    .lingora-tour-popover .driver-popover-progress-text {
+      color: #3f3f46 !important;
+      font-size: 11px !important;
+    }
+    .lingora-tour-popover .driver-popover-prev-btn,
+    .lingora-tour-popover .driver-popover-next-btn {
+      background: rgba(99,102,241,0.15) !important;
+      border: 1px solid rgba(99,102,241,0.3) !important;
+      color: #818cf8 !important;
+      border-radius: 8px !important;
+      padding: 6px 14px !important;
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      text-shadow: none !important;
+      transition: all 0.15s !important;
+    }
+    .lingora-tour-popover .driver-popover-next-btn {
+      background: rgba(99,102,241,0.25) !important;
+      border-color: rgba(99,102,241,0.5) !important;
+    }
+    .lingora-tour-popover .driver-popover-next-btn:hover {
+      background: rgba(99,102,241,0.4) !important;
+    }
+    .lingora-tour-popover .driver-popover-close-btn {
+      color: #3f3f46 !important;
+      font-size: 16px !important;
+    }
+    .lingora-tour-popover .driver-popover-close-btn:hover {
+      color: #71717a !important;
+    }
+    /* Arrow warna gelap */
+    .driver-popover-arrow-side-top.driver-popover-arrow::before { border-bottom-color: #12121e !important; }
+    .driver-popover-arrow-side-bottom.driver-popover-arrow::before { border-top-color: #12121e !important; }
+    .driver-popover-arrow-side-left.driver-popover-arrow::before { border-right-color: #12121e !important; }
+    .driver-popover-arrow-side-right.driver-popover-arrow::before { border-left-color: #12121e !important; }
+  `;
+
   /* ── TABLET / DESKTOP ── */
   if (isWide) {
     const maxW = isDesktop ? 1100 : 900;
     return (
-      <main style={{ background: '#08080f', minHeight: '100vh', display: 'flex', justifyContent: 'center' }}>
-        <div style={{ width: '100%', maxWidth: maxW, minHeight: '100vh', background: 'linear-gradient(170deg,#0c0c16 0%,#08080f 50%,#0c0a14 100%)', borderLeft: '1px solid rgba(255,255,255,0.03)', borderRight: '1px solid rgba(255,255,255,0.03)', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-          {/* Header */}
+      <main style={{ background: '#08080f', height: '100vh', display: 'flex', justifyContent: 'center', overflow: 'hidden' }}>
+        <div style={{ width: '100%', maxWidth: maxW, height: '100vh', background: 'linear-gradient(170deg,#0c0c16 0%,#08080f 50%,#0c0a14 100%)', borderLeft: '1px solid rgba(255,255,255,0.03)', borderRight: '1px solid rgba(255,255,255,0.03)', display: 'flex', flexDirection: 'column' }}>
+
+          {/* ── Header tablet/desktop ── */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 28px', borderBottom: '1px solid rgba(255,255,255,0.04)', flexShrink: 0, background: 'rgba(12,12,22,0.95)', backdropFilter: 'blur(12px)', position: 'sticky', top: 0, zIndex: 40 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
               <div>
@@ -459,15 +715,21 @@ export default function Home() {
               </div>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 16, flex: 1, maxWidth: 400, margin: '0 32px' }}>
-              <div style={{ flex: 1, height: 4, borderRadius: 99, background: '#1a1a28', overflow: 'hidden' }}>
+              {/* ← id="tour-progress" untuk highlight progress bar */}
+              <div id="tour-progress" style={{ flex: 1, height: 4, borderRadius: 99, background: '#1a1a28', overflow: 'hidden' }}>
                 <div style={{ height: '100%', width: `${Math.min(100,(xp/6000)*100)}%`, background: 'linear-gradient(90deg,#10b981,#3b82f6,#a855f7)', borderRadius: 99, transition: 'width 1s ease', boxShadow: '0 0 10px rgba(99,102,241,0.55)' }}/>
               </div>
               <span style={{ color: '#52525b', fontSize: 11, whiteSpace: 'nowrap' }}>{Math.round(Math.min(100,(xp/6000)*100))}% complete</span>
             </div>
-            <LanguageBadge/>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(250,204,21,0.07)', border: '1px solid rgba(250,204,21,0.16)', borderRadius: 99, padding: '8px 16px' }}>
-              <span style={{ color: '#facc15', fontSize: 11, fontWeight: 500, letterSpacing: '0.04em' }}>XP</span>
-              <span style={{ color: '#facc15', fontSize: 15, fontWeight: 900 }}>{xp}</span>
+            {/* Right group */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+              <LanguageBadge/>
+              <LeaderboardButton/>
+              {/* ← id="tour-xp" pada XP counter */}
+              <div id="tour-xp" style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(250,204,21,0.07)', border: '1px solid rgba(250,204,21,0.16)', borderRadius: 99, padding: '8px 16px' }}>
+                <span style={{ color: '#facc15', fontSize: 11, fontWeight: 500, letterSpacing: '0.04em' }}>XP</span>
+                <span style={{ color: '#facc15', fontSize: 15, fontWeight: 900 }}>{xp}</span>
+              </div>
             </div>
           </div>
 
@@ -483,7 +745,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <style>{`@keyframes haloPulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:.9;transform:scale(1.18)}}`}</style>
+
+        {/* ← Tombol ? replay tour */}
+        <HelpButton onStart={startTour}/>
+        <style>{tourStyle}</style>
         <AchievementPopup/>
         <BottomNav/>
       </main>
@@ -492,32 +757,41 @@ export default function Home() {
 
   /* ── MOBILE ── */
   return (
-    <main className="flex justify-center" style={{ background: '#08080f', minHeight: '100vh' }}>
-      <div className="relative w-full sm:max-w-md min-h-screen overflow-y-auto overflow-x-hidden sm:border-x sm:border-white/4 pb-28"
+    <main className="flex justify-center" style={{ background: '#08080f', height: '100vh', overflow: 'hidden' }}>
+      <div className="relative w-full sm:max-w-md h-full flex flex-col sm:border-x sm:border-white/4"
         style={{ background: 'linear-gradient(170deg,#0c0c16 0%,#08080f 50%,#0c0a14 100%)' }}>
-        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.012) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.012) 1px,transparent 1px)', backgroundSize: '48px 48px', maskImage: 'linear-gradient(to bottom,transparent 0%,black 6%,black 94%,transparent 100%)' }}/>
+        
+        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.012) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.012) 1px,transparent 1px)', backgroundSize: '48px 48px', maskImage: 'linear-gradient(to bottom,transparent 0%,black 6%,black 94%,transparent 100%)', zIndex: 0 }}/>
 
-        <div className="sticky top-0 z-30 px-5 pt-12 pb-4" style={{ background: 'linear-gradient(to bottom,#0c0c16 72%,transparent)' }}>
-          <div className="flex items-center justify-between mb-3">
-            <div>
-              <p style={{ color:'#3f3f46', fontSize:10, fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase' }}>Adventure</p>
-              <h1 style={{ color:'#fff', fontSize:22, fontWeight:900, letterSpacing:'-0.03em', lineHeight:1 }}>Learn with LINGORA</h1>
-            </div>
-            <div style={{ display:'flex', alignItems:'center', gap:8 }}>
+        {/* ── Header mobile (FIXED TOP) ── */}
+        <div style={{ paddingTop: 48, paddingBottom: 16, paddingLeft: 20, paddingRight: 20, background: 'rgba(12,12,22,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(255,255,255,0.06)', zIndex: 40, flexShrink: 0 }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
+            <img src="/logo-home.png" alt="Lingora" style={{ height: 32, width: 'auto', objectFit: 'contain', flexShrink: 0 }} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
               <LanguageBadge/>
-              <div style={{ display:'flex', alignItems:'center', gap:7, background:'rgba(250,204,21,0.07)', border:'1px solid rgba(250,204,21,0.16)', borderRadius:99, padding:'7px 14px' }}>
-                <span style={{ color:'#facc15', fontSize:11, fontWeight:500, letterSpacing:'0.04em' }}>XP</span>
-                <span style={{ color:'#facc15', fontSize:14, fontWeight:900 }}>{xp}</span>
+              <LeaderboardButton/>
+              {/* ← id="tour-xp" pada XP mobile */}
+              <div id="tour-xp" style={{ display:'flex', alignItems:'center', gap:5, background:'rgba(250,204,21,0.07)', border:'1px solid rgba(250,204,21,0.16)', borderRadius:99, padding:'6px 11px' }}>
+                <span style={{ color:'#facc15', fontSize:10, fontWeight:500, letterSpacing:'0.04em' }}>XP</span>
+                <span style={{ color:'#facc15', fontSize:13, fontWeight:900 }}>{xp}</span>
               </div>
             </div>
           </div>
+
+          {/* Progress bar mobile */}
           <div style={{ width:'100%', height:3, borderRadius:99, background:'#1a1a28', overflow:'hidden' }}>
             <div style={{ height:'100%', width:`${Math.min(100,(xp/6000)*100)}%`, background:'linear-gradient(90deg,#10b981,#3b82f6,#a855f7)', borderRadius:99, transition:'width 1s ease', boxShadow:'0 0 10px rgba(99,102,241,0.55)' }}/>
           </div>
         </div>
 
-        {renderMap(w)}
-        <style>{`@keyframes haloPulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:.9;transform:scale(1.18)}}`}</style>
+        {/* ── Map Scroll Area ── */}
+        <div id="map-scroll" onScroll={handleMapScroll} className="flex-1 overflow-y-auto overflow-x-hidden" style={{ scrollbarWidth: 'none', position: 'relative', zIndex: 10, paddingBottom: 112 }}>
+          {renderMap(w)}
+        </div>
+
+        {/* ← Tombol ? replay tour */}
+        <HelpButton onStart={startTour}/>
+        <style>{tourStyle}</style>
         <AchievementPopup/>
         <BottomNav/>
       </div>
