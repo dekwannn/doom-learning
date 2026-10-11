@@ -3,6 +3,9 @@
 import React, { useState, useRef, useEffect, useCallback, JSX } from "react";
 import { useRouter } from "next/navigation";
 import { askLingo } from "@/lib/lingo-ai";
+import { isSpeechSupported, onLingoSpeech, speakSegments, speakText, splitForSpeech, stopLingoSpeech } from "@/lib/lingo-speech";
+import LingoAvatar from "@/components/lingo/LingoAvatar";
+import LingoVoiceMode from "@/components/lingo/LingoVoiceMode";
 
 /* ─── Responsive Hook ──────────────────────────────────── */
 function useBreakpoint() {
@@ -142,6 +145,17 @@ function buildChatPrompt(lang: LangCode) {
 - Hindari penggunaan emoji berlebihan`;
 }
 
+// Voice mode: the answer is read aloud, so it must sound like talking, not like a written chat
+function buildVoicePrompt(lang: LangCode) {
+  return `Kamu adalah Lingo, asisten belajar ${LANG_NAMES[lang]} dari LINGORA. Kamu sedang mengobrol lewat suara: jawabanmu akan dibacakan.
+- Jawab dalam bahasa Indonesia yang ramah dan natural, seperti sedang bicara langsung
+- Maksimal 2-3 kalimat pendek
+- Tanpa markdown, tanpa daftar, tanpa emoji, tanpa simbol
+- Setiap kata atau frasa ${LANG_NAMES[lang]} WAJIB ditulis sebagai [AUDIO:teks:kode_bahasa] agar diucapkan dengan benar
+- Jika pengguna mencoba bicara dalam ${LANG_NAMES[lang]}, koreksi dengan lembut lalu beri contoh yang benar
+- Akhiri dengan pertanyaan singkat atau ajakan mencoba, agar obrolan berlanjut`;
+}
+
 function buildSentencePrompt(lang: LangCode, topic: string, level: string) {
   const topicLabel = TOPICS.find(t => t.id === topic)?.label ?? topic;
   const levelLabel = LEVELS.find(l => l.id === level)?.label ?? level;
@@ -206,16 +220,7 @@ async function callGroq(
 }
 
 /* ─── TTS ──────────────────────────────────────────────── */
-function speakText(text: string, langCode: string) {
-  if (typeof window === "undefined" || !window.speechSynthesis) return;
-  window.speechSynthesis.cancel();
-  const utt = new SpeechSynthesisUtterance(text);
-  utt.lang = langCode; utt.rate = 0.82; utt.pitch = 1;
-  const voices = window.speechSynthesis.getVoices();
-  const match = voices.find(v => v.lang.startsWith(langCode.split("-")[0]));
-  if (match) utt.voice = match;
-  window.speechSynthesis.speak(utt);
-}
+// speakText now comes from lib/lingo-speech, so Lingo's face knows when it is speaking.
 
 /* ─── Spinner ──────────────────────────────────────────── */
 const Spinner = ({ size = 14, color = "rgba(255,255,255,0.3)", top = "#fff" }) => (
@@ -370,6 +375,15 @@ interface SpeakState {
   transcript: string; feedback: string;
 }
 
+/** What Lingo says out loud about the score */
+function lingoReaction(feedback: string) {
+  const score = Number(feedback.match(/SKOR:\s*(\d+)/)?.[1] ?? NaN);
+  if (Number.isNaN(score)) return "Ini hasil penilaian saya.";
+  if (score >= 85) return `Keren! Skormu ${score}. Pengucapanmu sudah bagus sekali.`;
+  if (score >= 60) return `Lumayan, skormu ${score}. Sedikit lagi pasti lebih lancar.`;
+  return `Skormu ${score}. Tidak apa-apa, ayo kita coba lagi pelan-pelan.`;
+}
+
 function SpeakingModal({ lang, onClose, onAddMessages }: {
   lang: LangCode; onClose: () => void;
   onAddMessages: (msgs: Message[]) => void;
@@ -382,6 +396,7 @@ function SpeakingModal({ lang, onClose, onAddMessages }: {
   });
   const [genLoading, setGenLoading] = useState(false);
   const recRef = useRef<any>(null);
+  useEffect(() => () => stopLingoSpeech(), []); // stop talking when the practice closes
   const ttsLang = LANGUAGES.find(l => l.code === lang)?.ttsLang ?? "en-US";
 
   function parseSentence(raw: string) {
@@ -403,6 +418,7 @@ function SpeakingModal({ lang, onClose, onAddMessages }: {
       const { sentence, meaning, tips } = parseSentence(raw);
       setState(s => ({ ...s, targetSentence: sentence, targetMeaning: meaning, targetTips: tips }));
       setStep("ready");
+      speakText(sentence, ttsLang); // Lingo reads the example first
     } catch { /* ignore */ }
     finally { setGenLoading(false); }
   }
@@ -410,6 +426,7 @@ function SpeakingModal({ lang, onClose, onAddMessages }: {
   function startRecording() {
     const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
     if (!SR) return;
+    stopLingoSpeech(); // so the microphone does not hear Lingo
     const rec = new SR();
     rec.lang = ttsLang; rec.continuous = false; rec.interimResults = false;
     recRef.current = rec;
@@ -423,6 +440,7 @@ function SpeakingModal({ lang, onClose, onAddMessages }: {
         const fb = await callGroq([], "Nilai ucapan ini.", lang, buildFeedbackPrompt(lang, state.targetSentence, transcript));
         setState(s => ({ ...s, feedback: fb }));
         setStep("feedback");
+        speakText(lingoReaction(fb), "id-ID");
       } catch {
         setState(s => ({ ...s, feedback: "Gagal menilai. Coba lagi." }));
         setStep("feedback");
@@ -542,7 +560,7 @@ function SpeakingModal({ lang, onClose, onAddMessages }: {
               {/* CTA */}
               <button onClick={handleStart} disabled={!canStart || genLoading}
                 style={{ width: "100%", height: 48, borderRadius: 13, background: canStart && !genLoading ? "linear-gradient(135deg,#7c3aed,#a855f7)" : "rgba(255,255,255,0.04)", border: "none", color: canStart && !genLoading ? "#fff" : "#3f3f46", fontSize: 13.5, fontWeight: 700, cursor: canStart && !genLoading ? "pointer" : "default", display: "flex", alignItems: "center", justifyContent: "center", gap: 8, boxShadow: canStart && !genLoading ? "0 4px 18px rgba(124,58,237,0.38)" : "none", transition: "all 0.2s" }}>
-                {genLoading ? <><Spinner/>Menyiapkan kalimat...</> : "Mulai Latihan"}
+                {genLoading ? <><LingoAvatar size={30} state="thinking" />Lingo menyiapkan kalimat...</> : "Mulai Latihan"}
               </button>
             </div>
           )}
@@ -559,9 +577,7 @@ function SpeakingModal({ lang, onClose, onAddMessages }: {
                   <div style={{ position: "absolute", bottom: -7, left: "90%", transform: "translateX(-50%)", width: 0, height: 0, borderLeft: "7px solid transparent", borderRight: "7px solid transparent", borderTop: "7px solid rgba(168,85,247,0.28)" }} />
                   <div style={{ position: "absolute", bottom: -6, left: "90%", transform: "translateX(-50%)", width: 0, height: 0, borderLeft: "6px solid transparent", borderRight: "6px solid transparent", borderTop: "6px solid #0e0e18" }} />
                 </div>
-                <div style={{ width: 100, height: 100, animation: "float 2.8s ease-in-out infinite" }}>
-                  <img src="/maskot.png" alt="Lingo" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
-                </div>
+                <LingoAvatar size={100} />
               </div>
 
               <div style={{ padding: "16px", borderRadius: 14, background: "rgba(168,85,247,0.06)", border: "1px solid rgba(168,85,247,0.18)" }}>
@@ -609,8 +625,8 @@ function SpeakingModal({ lang, onClose, onAddMessages }: {
                 <div style={{ position: "relative", width: 110, height: 110, display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <div style={{ position: "absolute", width: 110, height: 110, borderRadius: "50%", border: "2px solid rgba(168,85,247,0.25)", animation: "pingRing 1.4s ease-out infinite" }} />
                   <div style={{ position: "absolute", width: 88, height: 88, borderRadius: "50%", border: "2px solid rgba(168,85,247,0.15)", animation: "pingRing 1.4s ease-out infinite", animationDelay: "0.5s" }} />
-                  <div style={{ width: 74, height: 74, borderRadius: "50%", background: "rgba(168,85,247,0.12)", border: "2px solid rgba(168,85,247,0.45)", display: "flex", alignItems: "center", justifyContent: "center", animation: "speakPulse 1s ease-in-out infinite", overflow: "hidden" }}>
-                    <img src="/maskot.png" alt="Lingo" style={{ width: 62, height: 62, objectFit: "contain" }} />
+                  <div style={{ width: 82, height: 82, borderRadius: "50%", background: "rgba(168,85,247,0.12)", border: "2px solid rgba(168,85,247,0.45)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <LingoAvatar size={66} state="listening" />
                   </div>
                 </div>
               </div>
@@ -652,9 +668,7 @@ function SpeakingModal({ lang, onClose, onAddMessages }: {
                   <div style={{ position: "absolute", bottom: -6, left: "50%", transform: "translateX(-50%)", width: 0, height: 0, borderLeft: "6px solid transparent", borderRight: "6px solid transparent", borderTop: "6px solid #0e0e18" }} />
                 </div>
 
-                <div style={{ width: 74, height: 74, borderRadius: "50%", background: "rgba(59,130,246,0.08)", border: "2px solid rgba(59,130,246,0.25)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", animation: "float 2s ease-in-out infinite" }}>
-                  <img src="/maskot.png" alt="Lingo" style={{ width: 60, height: 60, objectFit: "contain" }} />
-                </div>
+                <LingoAvatar size={88} state="thinking" />
               </div>
 
               <div style={{ textAlign: "center" }}>
@@ -667,6 +681,13 @@ function SpeakingModal({ lang, onClose, onAddMessages }: {
           {/* ── FEEDBACK ── */}
           {step === "feedback" && (
             <div style={{ display: "flex", flexDirection: "column", gap: 13 }}>
+              {/* Lingo reacts to the score (and says it out loud) */}
+              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                <LingoAvatar size={64} />
+                <div style={{ flex: 1, padding: "9px 13px", borderRadius: "14px 14px 14px 4px", background: "rgba(168,85,247,0.1)", border: "1px solid rgba(168,85,247,0.25)" }}>
+                  <p style={{ color: "#e2d4ff", fontSize: 13, fontWeight: 600, lineHeight: 1.5, margin: 0 }}>{lingoReaction(state.feedback)}</p>
+                </div>
+              </div>
               {state.transcript && (
                 <div style={{ padding: "9px 13px", borderRadius: 10, background: "rgba(168,85,247,0.06)", border: "1px solid rgba(168,85,247,0.13)" }}>
                   <p style={{ color: "#52525b", fontSize: 10, fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase", margin: "0 0 3px" }}>Ucapan kamu</p>
@@ -716,13 +737,60 @@ function LangSelector({ selected, onChange }: { selected: LangCode; onChange: (l
   );
 }
 
+/* ─── Language dropdown ────────────────────────────────── */
+function LangDropdown({ lang, onChange, up = false, compact = false }: {
+  lang: LangCode; onChange: (l: LangCode) => void;
+  /** open the list upwards (used in the input bar at the bottom) */
+  up?: boolean;
+  compact?: boolean;
+}) {
+  const [open, setOpen] = useState(false);
+  const boxRef = useRef<HTMLDivElement>(null);
+  const sel = LANGUAGES.find(l => l.code === lang) ?? LANGUAGES[0];
+
+  // Close when tapping outside or pressing Escape
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e: PointerEvent) => { if (!boxRef.current?.contains(e.target as Node)) setOpen(false); };
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(false); };
+    document.addEventListener("pointerdown", onDown);
+    document.addEventListener("keydown", onKey);
+    return () => { document.removeEventListener("pointerdown", onDown); document.removeEventListener("keydown", onKey); };
+  }, [open]);
+
+  return (
+    <div ref={boxRef} style={{ position: "relative", display: "inline-block", fontFamily: "system-ui, sans-serif" }}>
+      <button onClick={() => setOpen(o => !o)} aria-haspopup="listbox" aria-expanded={open} aria-label={`Bahasa: ${sel.name}`}
+        style={{ display: "flex", alignItems: "center", gap: 6, padding: compact ? "4px 9px" : "8px 14px", borderRadius: 99, border: `1px solid ${open ? "rgba(59,130,246,0.55)" : "rgba(59,130,246,0.35)"}`, background: "rgba(59,130,246,0.1)", color: "#93c5fd", fontSize: compact ? 11 : 13, fontWeight: 600, cursor: "pointer", fontFamily: "system-ui, sans-serif" }}>
+        <span>{sel.flag}</span><span>{sel.name}</span>
+        <svg width={compact ? 10 : 12} height={compact ? 10 : 12} viewBox="0 0 24 24" fill="none" style={{ transform: open !== up ? "rotate(180deg)" : "none", transition: "transform 0.15s" }}>
+          <path d="M6 9l6 6 6-6" stroke="#93c5fd" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+      {open && (
+        <div role="listbox" style={{ position: "absolute", [up ? "bottom" : "top"]: "calc(100% + 6px)", left: up ? 0 : "50%", transform: up ? "none" : "translateX(-50%)", minWidth: 160, padding: 5, borderRadius: 12, background: "#14141c", border: "1px solid rgba(255,255,255,0.09)", boxShadow: "0 12px 32px rgba(0,0,0,0.55)", zIndex: 30 }}>
+          {LANGUAGES.map(l => (
+            <button key={l.code} role="option" aria-selected={lang === l.code}
+              onClick={() => { onChange(l.code as LangCode); setOpen(false); }}
+              style={{ width: "100%", display: "flex", alignItems: "center", gap: 9, padding: "9px 11px", borderRadius: 8, border: "none", background: lang === l.code ? "rgba(59,130,246,0.14)" : "transparent", color: lang === l.code ? "#93c5fd" : "#d4d4d8", fontSize: 13, fontWeight: 600, cursor: "pointer", textAlign: "left", fontFamily: "system-ui, sans-serif" }}>
+              <span>{l.flag}</span><span style={{ flex: 1 }}>{l.name}</span>
+              {lang === l.code && IC.check("#93c5fd", 13)}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 /* ─── Empty state ──────────────────────────────────────── */
 // Ganti seluruh fungsi EmptyState di page.tsx dengan ini:
 
-function EmptyState({ lang, onLangChange, onOpenSpeak, wide = false }: {
+function EmptyState({ lang, onLangChange, onOpenSpeak, onOpenVoice, wide = false }: {
   lang: LangCode;
   onLangChange: (l: LangCode) => void;
   onOpenSpeak: () => void;
+  onOpenVoice: () => void;
   wide?: boolean;
 }) {
   return (
@@ -734,15 +802,9 @@ function EmptyState({ lang, onLangChange, onOpenSpeak, wide = false }: {
       minHeight: wide ? 500 : 420,
     }}>
 
-      {/* Maskot */}
-      <div style={{
-        width: 82, height: 82, borderRadius: 20, marginBottom: 18, marginTop: 52,
-        background: "rgba(168,85,247,0.1)",
-        border: "1px solid rgba(168,85,247,0.18)",
-        display: "flex", alignItems: "center", justifyContent: "center",
-        animation: "float 3s ease-in-out infinite",
-      }}>
-        <img src="/maskot.png" alt="Lingo" style={{ width: 62, height: 62, objectFit: "contain" }} />
+      {/* Lingo, alive: blinks, floats, and talks when it speaks */}
+      <div style={{ marginTop: 40, marginBottom: 16 }}>
+        <LingoAvatar size={wide ? 132 : 118} />
       </div>
 
       {/* Greeting */}
@@ -756,37 +818,39 @@ function EmptyState({ lang, onLangChange, onOpenSpeak, wide = false }: {
         color: "#52525b", fontSize: 13, lineHeight: 1.6,
         margin: "0 0 28px", maxWidth: 220,
       }}>
-        Pilih bahasa, lalu mulai ngobrol atau latihan speaking.
+        Ajak saya bicara, atau latihan speaking.
       </p>
 
-      {/* Language pills — 2x2 grid */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 7, marginBottom: 18, width: "100%", maxWidth: 260 }}>
-        {LANGUAGES.map(l => (
-          <button
-            key={l.code}
-            onClick={() => onLangChange(l.code as LangCode)}
-            style={{
-              display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
-              padding: "9px 0", borderRadius: 10,
-              border: `1px solid ${lang === l.code ? "rgba(59,130,246,0.5)" : "rgba(255,255,255,0.07)"}`,
-              background: lang === l.code ? "rgba(59,130,246,0.12)" : "rgba(255,255,255,0.03)",
-              color: lang === l.code ? "#93c5fd" : "#71717a",
-              fontSize: 12, fontWeight: 600, cursor: "pointer",
-              fontFamily: "system-ui, sans-serif", transition: "all 0.18s",
-            }}
-          >
-            <span>{l.flag}</span>
-            <span>{l.name}</span>
-          </button>
-        ))}
+      {/* Language: one compact dropdown */}
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 22 }}>
+        <span style={{ color: "#52525b", fontSize: 12.5 }}>Belajar</span>
+        <LangDropdown lang={lang} onChange={onLangChange} />
       </div>
+
+      {/* Talk with Lingo (full-screen voice mode) */}
+      <button
+        onClick={onOpenVoice}
+        style={{
+          display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+          width: "100%", maxWidth: 260, padding: "12px 0", borderRadius: 12, marginBottom: 9,
+          background: "#5cfa2e", border: "1px solid #5cfa2e",
+          color: "#0a0a0d", fontSize: 13.5, fontWeight: 700,
+          cursor: "pointer", fontFamily: "system-ui, sans-serif",
+          boxShadow: "0 6px 20px rgba(92,250,46,0.18)", transition: "all 0.18s",
+        }}
+        onMouseEnter={e => { (e.currentTarget as HTMLElement).style.boxShadow = "0 6px 26px rgba(92,250,46,0.32)"; }}
+        onMouseLeave={e => { (e.currentTarget as HTMLElement).style.boxShadow = "0 6px 20px rgba(92,250,46,0.18)"; }}
+      >
+        {IC.mic("#0a0a0d", 15)}
+        Bicara dengan Lingo
+      </button>
 
       {/* Speaking button */}
       <button
         onClick={onOpenSpeak}
         style={{
-          display: "flex", alignItems: "center", gap: 8,
-          padding: "11px 66px", borderRadius: 12,
+          display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+          width: "100%", maxWidth: 260, padding: "11px 0", borderRadius: 12,
           background: "rgba(124,58,237,0.1)",
           border: "1px solid rgba(168,85,247,0.25)",
           color: "#c084fc", fontSize: 13, fontWeight: 600,
@@ -815,6 +879,39 @@ function EmptyState({ lang, onLangChange, onOpenSpeak, wide = false }: {
   );
 }
 
+/* ─── Lingo stage (during a chat) ──────────────────────── */
+function LingoStage({ loading, voiceOn, onToggleVoice, onOpenVoice, wide = false }: {
+  loading: boolean; voiceOn: boolean; onToggleVoice: () => void; onOpenVoice: () => void; wide?: boolean;
+}) {
+  const [speaking, setSpeaking] = useState(false);
+  useEffect(() => onLingoSpeech(s => setSpeaking(s.speaking)), []);
+  const status = speaking ? "Sedang bicara…" : loading ? "Sedang berpikir…" : "Siap membantu";
+  const canSpeak = isSpeechSupported();
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: 12, padding: wide ? "10px 28px" : "8px 16px", borderBottom: "1px solid rgba(255,255,255,0.05)", flexShrink: 0, fontFamily: "system-ui, sans-serif" }}>
+      <LingoAvatar size={wide ? 64 : 56} state={loading ? "thinking" : "idle"} />
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div style={{ color: "#f4f4f5", fontSize: 14, fontWeight: 700 }}>Lingo</div>
+        <div style={{ color: speaking ? "#5cfa2e" : loading ? "#facc15" : "#71717a", fontSize: 12, fontWeight: 600, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{status}</div>
+      </div>
+      {canSpeak && (
+        <button onClick={onToggleVoice} title={voiceOn ? "Matikan suara Lingo" : "Nyalakan suara Lingo"} aria-label={voiceOn ? "Matikan suara Lingo" : "Nyalakan suara Lingo"} aria-pressed={voiceOn}
+          style={{ display: "flex", alignItems: "center", gap: 6, padding: wide ? "6px 11px" : "7px 9px", borderRadius: 99, border: `1px solid ${voiceOn ? "rgba(92,250,46,0.35)" : "rgba(255,255,255,0.08)"}`, background: voiceOn ? "rgba(92,250,46,0.08)" : "rgba(255,255,255,0.04)", color: voiceOn ? "#86efac" : "#71717a", fontSize: 11.5, fontWeight: 600, cursor: "pointer", fontFamily: "system-ui, sans-serif" }}>
+          {voiceOn
+            ? IC.volume("#86efac", 13)
+            : <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#71717a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="m23 9-6 6M17 9l6 6"/></svg>}
+          {wide && (voiceOn ? "Suara aktif" : "Suara mati")}
+        </button>
+      )}
+      <button onClick={onOpenVoice} title="Bicara dengan Lingo"
+        style={{ display: "flex", alignItems: "center", gap: 6, padding: "6px 12px", borderRadius: 99, border: "1px solid #5cfa2e", background: "#5cfa2e", color: "#0a0a0d", fontSize: 11.5, fontWeight: 700, cursor: "pointer", fontFamily: "system-ui, sans-serif" }}>
+        {IC.mic("#0a0a0d", 13)}
+        Bicara
+      </button>
+    </div>
+  );
+}
+
 /* ─── Input bar ────────────────────────────────────────── */
 function InputBar({ input, setInput, onSend, loading, lang, onLangChange, onOpenSpeak, micSupported }: {
   input: string; setInput: (v: string) => void; onSend: () => void; loading: boolean;
@@ -823,13 +920,8 @@ function InputBar({ input, setInput, onSend, loading, lang, onLangChange, onOpen
   const ref = useRef<HTMLTextAreaElement>(null);
   return (
     <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", background: "rgba(8,8,16,0.96)", backdropFilter: "blur(16px)" }}>
-      <div style={{ padding: "7px 14px 0", display: "flex", gap: 5, flexWrap: "wrap" }}>
-        {LANGUAGES.map(l => (
-          <button key={l.code} onClick={() => onLangChange(l.code as LangCode)}
-            style={{ padding: "3px 9px", borderRadius: 99, border: lang === l.code ? "1px solid rgba(59,130,246,0.45)" : "1px solid rgba(255,255,255,0.07)", background: lang === l.code ? "rgba(59,130,246,0.1)" : "transparent", color: lang === l.code ? "#93c5fd" : "#52525b", fontSize: 11, fontWeight: 600, cursor: "pointer", fontFamily: "system-ui, sans-serif", transition: "all 0.15s" }}>
-            {l.flag} {l.name}
-          </button>
-        ))}
+      <div style={{ padding: "7px 14px 0", display: "flex" }}>
+        <LangDropdown lang={lang} onChange={onLangChange} up compact />
       </div>
       <div style={{ padding: "7px 14px 10px", display: "flex", alignItems: "flex-end", gap: 8 }}>
         {micSupported && (
@@ -870,7 +962,24 @@ export default function AssistantPage() {
   const [lang, setLang]                 = useState<LangCode>("en");
   const [speakOpen, setSpeakOpen]       = useState(false);
   const [micSupported, setMicSupported] = useState(false);
+  const [voiceOn, setVoiceOn]           = useState(true); // Lingo reads its answers aloud
+  const [voiceModeOpen, setVoiceModeOpen] = useState(false); // full-screen "Bicara dengan Lingo"
   const bottomRef  = useRef<HTMLDivElement>(null);
+
+  // Remember the voice toggle on this device
+  useEffect(() => {
+    try { if (localStorage.getItem("lingo-voice") === "off") setVoiceOn(false); } catch {}
+  }, []);
+  const toggleVoice = () => {
+    setVoiceOn(v => {
+      const next = !v;
+      try { localStorage.setItem("lingo-voice", next ? "on" : "off"); } catch {}
+      if (!next) stopLingoSpeech();
+      return next;
+    });
+  };
+  // Stop talking when leaving the page
+  useEffect(() => () => stopLingoSpeech(), []);
   const sendingRef = useRef(false);
 
   useEffect(() => {
@@ -889,16 +998,18 @@ export default function AssistantPage() {
   const sendMessage = useCallback(async (text: string) => {
     if (!text.trim() || sendingRef.current) return;
     sendingRef.current = true; setStarted(true);
+    stopLingoSpeech();
     setMessages(prev => [...prev, { id: crypto.randomUUID(), role: "user", content: text.trim(), ts: Date.now() }]);
     setInput(""); setLoading(true);
     try {
       const reply = await callGroq(chatHistory, text.trim(), lang);
       setChatHistory(prev => [...prev, { role: "user", content: text.trim() }, { role: "assistant", content: reply }]);
       setMessages(prev => [...prev, { id: crypto.randomUUID(), role: "assistant", content: reply, ts: Date.now() }]);
+      if (voiceOn) speakSegments(splitForSpeech(reply));
     } catch {
       setMessages(prev => [...prev, { id: crypto.randomUUID(), role: "assistant", content: "Ada gangguan koneksi. Silakan coba lagi.", ts: Date.now() }]);
     } finally { sendingRef.current = false; setLoading(false); }
-  }, [chatHistory, lang]);
+  }, [chatHistory, lang, voiceOn]);
 
   const handleAddSpeakMessages = useCallback((msgs: Message[]) => {
     setStarted(true);
@@ -906,7 +1017,23 @@ export default function AssistantPage() {
     msgs.forEach(m => setChatHistory(prev => [...prev, { role: m.role, content: m.isSpeak ? `[Speaking] "${m.content}"` : m.content }]));
   }, []);
 
-  const resetChat = () => { setMessages([]); setChatHistory([]); setStarted(false); };
+  // Voice mode: short spoken answers; every turn is also kept in the chat
+  const askVoice = useCallback(
+    (history: { role: "user" | "assistant"; content: string }[], text: string) => callGroq(history, text, lang, buildVoicePrompt(lang)),
+    [lang],
+  );
+  const handleVoiceTurn = useCallback((userText: string, reply: string) => {
+    setStarted(true);
+    setMessages(prev => [...prev,
+      { id: crypto.randomUUID(), role: "user", content: userText, ts: Date.now() },
+      { id: crypto.randomUUID(), role: "assistant", content: reply, ts: Date.now() },
+    ]);
+    setChatHistory(prev => [...prev, { role: "user", content: userText }, { role: "assistant", content: reply }]);
+  }, []);
+  const openVoiceMode = () => { stopLingoSpeech(); setVoiceModeOpen(true); };
+  const closeVoiceMode = useCallback(() => setVoiceModeOpen(false), []);
+
+  const resetChat = () => { stopLingoSpeech(); setMessages([]); setChatHistory([]); setStarted(false); };
   const handleLangChange = (newLang: LangCode) => {
     setLang(newLang);
     if (started) setMessages(prev => [...prev, { id: crypto.randomUUID(), role: "assistant", content: `Bahasa diganti ke **${LANGUAGES.find(l => l.code === newLang)?.name}** ${LANGUAGES.find(l => l.code === newLang)?.flag}. Ayo lanjut belajar!`, ts: Date.now() }]);
@@ -927,9 +1054,17 @@ export default function AssistantPage() {
     </>
   );
 
+  // Back to the previous page inside Lingora; opened directly (no history) → go to home
+  const goBack = () => {
+    stopLingoSpeech();
+    const cameFromLingora = window.history.length > 1 && document.referrer.startsWith(window.location.origin);
+    if (cameFromLingora) router.back();
+    else router.push("/");
+  };
+
   const headerJSX = (wide: boolean) => (
     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: wide ? "18px 28px" : "13px 16px", paddingTop: wide ? "18px" : "calc(env(safe-area-inset-top) + 13px)", borderBottom: "1px solid rgba(255,255,255,0.05)", backdropFilter: "blur(16px)", flexShrink: 0, position: "relative" }}>
-      <button onClick={() => router.back()} style={{ background: "transparent", border: "none", color: "#a1a1aa", cursor: "pointer", display: "flex", alignItems: "center", padding: 0, transition: "color 0.2s", zIndex: 10 }}
+      <button onClick={goBack} aria-label="Kembali" style={{ background: "transparent", border: "none", color: "#a1a1aa", cursor: "pointer", display: "flex", alignItems: "center", padding: 0, transition: "color 0.2s", zIndex: 10 }}
         onMouseEnter={e => (e.currentTarget.style.color = "#f4f4f5")}
         onMouseLeave={e => (e.currentTarget.style.color = "#a1a1aa")}>
         {IC.back()}
@@ -966,14 +1101,24 @@ export default function AssistantPage() {
       `}</style>
 
       {speakOpen && <SpeakingModal lang={lang} onClose={() => setSpeakOpen(false)} onAddMessages={handleAddSpeakMessages} />}
+      {voiceModeOpen && (
+        <LingoVoiceMode
+          target={LANGUAGES.find(l => l.code === lang) ?? LANGUAGES[0]}
+          history={chatHistory}
+          ask={askVoice}
+          onTurn={handleVoiceTurn}
+          onClose={closeVoiceMode}
+        />
+      )}
 
       {isTablet ? (
         <main style={{ background: "#080810", minHeight: "100vh", display: "flex", justifyContent: "center" }}>
           <div style={{ width: "100%", maxWidth: 900, minHeight: "100vh", background: "#0a0a0d", borderLeft: "1px solid rgba(255,255,255,0.04)", borderRight: "1px solid rgba(255,255,255,0.04)", display: "flex", flexDirection: "column" }}>
             {headerJSX(true)}
+            {started && <LingoStage loading={loading} voiceOn={voiceOn} onToggleVoice={toggleVoice} onOpenVoice={openVoiceMode} wide />}
             <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0, overflow: "hidden" }}>
               <div style={{ flex: 1, overflowY: "auto", padding: "20px 24px", scrollbarWidth: "none" }}>
-                {!started ? <EmptyState lang={lang} onLangChange={handleLangChange} onOpenSpeak={() => setSpeakOpen(true)} wide /> : messageAreaJSX}
+                {!started ? <EmptyState lang={lang} onLangChange={handleLangChange} onOpenSpeak={() => setSpeakOpen(true)} onOpenVoice={openVoiceMode} wide /> : messageAreaJSX}
               </div>
               <InputBar {...inputProps} /><div style={{ height: 40 }} />
             </div>
@@ -983,8 +1128,9 @@ export default function AssistantPage() {
         <main style={{ background: "#080810", minHeight: "100vh", display: "flex", justifyContent: "center" }}>
           <div style={{ width: "100%", maxWidth: 448, height: "100vh", background: "#0a0a0d", borderLeft: "1px solid rgba(255,255,255,0.04)", borderRight: "1px solid rgba(255,255,255,0.04)", display: "flex", flexDirection: "column", overflow: "hidden" }}>
             {headerJSX(false)}
+            {started && <LingoStage loading={loading} voiceOn={voiceOn} onToggleVoice={toggleVoice} onOpenVoice={openVoiceMode} />}
             <div style={{ flex: 1, overflowY: "auto", padding: "16px 14px 8px", scrollbarWidth: "none" }}>
-              {!started ? <EmptyState lang={lang} onLangChange={handleLangChange} onOpenSpeak={() => setSpeakOpen(true)} /> : messageAreaJSX}
+              {!started ? <EmptyState lang={lang} onLangChange={handleLangChange} onOpenSpeak={() => setSpeakOpen(true)} onOpenVoice={openVoiceMode} /> : messageAreaJSX}
             </div>
             <InputBar {...inputProps} /><div style={{ height: 40 }} />
           </div>
