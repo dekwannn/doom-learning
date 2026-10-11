@@ -10,7 +10,11 @@
 
 import { createClient } from "npm:@supabase/supabase-js@2";
 
-const MODEL = "llama-3.3-70b-versatile";
+// llama-3.3-70b-versatile was shut down by Groq on 2026-08-16; its recommended replacement is gpt-oss-120b.
+// Override without a code change: supabase secrets set GROQ_MODEL=<model id>
+const DEFAULT_MODEL = "openai/gpt-oss-120b";
+// gpt-oss reasons before answering; that reasoning counts toward the completion budget, so add headroom
+const REASONING_HEADROOM = 512;
 const LIMITS = {
   systemChars: 6000,
   messages: 12,
@@ -67,6 +71,7 @@ Deno.serve(async (req) => {
   if (origin && !ALLOWED_ORIGINS.has(origin)) return json({ error: "Origin not allowed" }, 403, origin);
 
   const groqKey = Deno.env.get("GROQ_API_KEY");
+  const model = Deno.env.get("GROQ_MODEL") || DEFAULT_MODEL;
   const supabaseUrl = Deno.env.get("SUPABASE_URL");
   const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
   if (!groqKey || !supabaseUrl || !serviceKey) return json({ error: "Server not configured" }, 500, origin);
@@ -105,13 +110,19 @@ Deno.serve(async (req) => {
     method: "POST",
     headers: { "Content-Type": "application/json", Authorization: `Bearer ${groqKey}` },
     body: JSON.stringify({
-      model: MODEL,
+      model,
       messages: [{ role: "system", content: body.system }, ...body.messages],
       temperature: body.temperature,
-      max_tokens: body.maxTokens,
+      ...(model.startsWith("openai/gpt-oss")
+        ? { max_completion_tokens: body.maxTokens + REASONING_HEADROOM, reasoning_effort: "low", include_reasoning: false }
+        : { max_tokens: body.maxTokens }),
     }),
   });
-  if (!groq.ok) return json({ error: "AI service error" }, 502, origin);
+  if (!groq.ok) {
+    // Full details go to the function logs (Dashboard → Edge Functions → lingo-chat → Logs); the client only gets the status code
+    console.error("Groq error", groq.status, (await groq.text()).slice(0, 500));
+    return json({ error: "AI service error", upstreamStatus: groq.status }, 502, origin);
+  }
   const data = await groq.json();
   const content = data?.choices?.[0]?.message?.content;
   if (typeof content !== "string") return json({ error: "AI service error" }, 502, origin);

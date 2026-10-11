@@ -33,10 +33,16 @@ npx supabase db push
 # Key Groq baru disimpan sebagai secret (tidak pernah masuk ke aplikasi)
 npx supabase secrets set GROQ_API_KEY=<key-groq-baru>
 
-# Deploy function (tanpa verifikasi JWT di gateway, supaya tamu tetap bisa memakai Lingo;
-# function sendiri yang membedakan pengguna login dan tamu, dengan batas yang lebih ketat untuk tamu)
-npx supabase functions deploy lingo-chat --no-verify-jwt
+# Deploy function. `verify_jwt = false` sudah diatur di supabase/config.toml, supaya tamu tetap bisa memakai Lingo;
+# function sendiri yang membedakan pengguna login dan tamu, dengan batas yang lebih ketat untuk tamu.
+# --use-api: build di server Supabase (tidak perlu Docker)
+npx supabase functions deploy lingo-chat --use-api
 ```
+
+**Model AI:** `llama-3.3-70b-versatile` sudah dimatikan Groq pada 16 Agustus 2026. Function memakai
+`openai/gpt-oss-120b` (pengganti yang direkomendasikan Groq) dengan reasoning rendah. Kalau model ini nanti
+juga dipensiunkan, cukup ganti lewat secret tanpa mengubah kode: `npx supabase secrets set GROQ_MODEL=<id-model>`.
+Daftar model yang dipensiunkan: https://console.groq.com/docs/deprecations
 
 Batas default (bisa diubah di `supabase/functions/lingo-chat/index.ts`, bagian `RATE`):
 40 request / 10 menit untuk pengguna login, 12 request / 10 menit per IP untuk tamu.
