@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect, useCallback, JSX } from "react";
 import { useRouter } from "next/navigation";
+import { askLingo } from "@/lib/lingo-ai";
 
 /* ─── Responsive Hook ──────────────────────────────────── */
 function useBreakpoint() {
@@ -194,22 +195,14 @@ async function callGroq(
   lang: LangCode,
   systemOverride?: string,
 ): Promise<string> {
-  const apiKey = process.env.NEXT_PUBLIC_GROQ_API_KEY ?? "";
-  const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
-    body: JSON.stringify({
-      model: "llama-3.3-70b-versatile",
-      messages: [
-        { role: "system", content: systemOverride ?? buildChatPrompt(lang) },
-        ...history.slice(-10),
-        { role: "user", content: userText },
-      ],
-      temperature: 0.7, max_tokens: 600,
-    }),
+  // Goes through the lingo-chat Edge Function; the Groq key stays on the server
+  return askLingo({
+    system: systemOverride ?? buildChatPrompt(lang),
+    history: history.slice(-10),
+    userText,
+    temperature: 0.7,
+    maxTokens: 600,
   });
-  const data = await res.json();
-  return data?.choices?.[0]?.message?.content ?? "Maaf, ada gangguan. Coba lagi ya.";
 }
 
 /* ─── TTS ──────────────────────────────────────────────── */
