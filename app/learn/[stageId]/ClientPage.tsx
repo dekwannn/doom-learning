@@ -2,6 +2,7 @@
 
 import { use, useState, useEffect, useRef, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import { askLingo } from "@/lib/lingo-ai";
 import { useLanguageStore } from "@/store/useLanguageStore";
 import { useProgress } from "@/hooks/useProgress";
 import { StrokeOrderModal } from "@/components/StrokeOrderModal";
@@ -93,28 +94,14 @@ async function askGroq(
   userText: string,
   ctx: LingoContext,
 ): Promise<string> {
-  const apiKey = process.env.NEXT_PUBLIC_GROQ_API_KEY ?? "";
-  const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model: "llama-3.3-70b-versatile",
-      messages: [
-        { role: "system", content: buildLingoSystem(ctx) },
-        ...history.slice(-8),
-        { role: "user", content: userText },
-      ],
-      temperature: 0.65,
-      max_tokens: 400,
-    }),
+  // Goes through the lingo-chat Edge Function; the Groq key stays on the server
+  return askLingo({
+    system: buildLingoSystem(ctx),
+    history: history.slice(-8),
+    userText,
+    temperature: 0.65,
+    maxTokens: 400,
   });
-  const data = await res.json();
-  return (
-    data?.choices?.[0]?.message?.content ?? "Maaf, ada gangguan. Coba lagi ya."
-  );
 }
 
 function buildSuggestions(ctx: LingoContext): { icon: string; text: string }[] {

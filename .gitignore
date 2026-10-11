@@ -41,3 +41,13 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# Android signing keys — never commit these
+*.jks
+*.keystore
+lingora-new
+android/key.properties
+android/app/release/
+
+# Supabase local state
+supabase/.temp/
