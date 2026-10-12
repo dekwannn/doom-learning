@@ -4,8 +4,13 @@ Lingo's voice server: Kokoro-82M (Apache 2.0) running on your own computer.
 The app sends the English text Lingo wants to say and gets a WAV back. If this server is off or
 unreachable, the app simply uses the browser voice, so nothing breaks.
 
-  GET  /health            -> {"ok": true, "voice": "af_heart"}
-  POST /tts  {"text": ""}  -> audio/wav (24 kHz mono)
+  GET  /health                  -> {"ok": true, "voice": "af_heart", "pronunciation": "ready" | "loading" | "off"}
+  POST /tts  {"text": ""}        -> audio/wav (24 kHz mono)
+  POST /assess?target=<text>     body: audio/wav of the learner (16-bit PCM)  -> pronunciation check (JSON)
+       target is optional: the sentence the learner tried to say; without it, what Whisper heard is used
+
+The pronunciation check is optional: it needs the extra packages in requirements-pronunciation.txt
+(install-pronunciation.bat). Without them the server still speaks; /assess answers 501.
 
 Settings (environment variables, all optional):
   LINGO_VOICE        Kokoro voice name             (default af_heart)
@@ -22,6 +27,7 @@ import time
 import wave
 from collections import defaultdict, deque
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from urllib.parse import parse_qs, urlparse
 
 import numpy as np
 from kokoro_onnx import Kokoro
@@ -50,6 +56,44 @@ kokoro = Kokoro(MODEL, VOICES)
 kokoro.create("Ready.", voice=VOICE, speed=SPEED, lang="en-us")  # warm up, so the first real request is fast
 synth_lock = threading.Lock()  # the CPU does one sentence at a time
 recent = defaultdict(deque)
+
+# Pronunciation check: loaded in the background so Lingo can already speak while it loads (~1 minute)
+checker = None
+checker_state = "loading"
+check_lock = threading.Lock()
+
+
+def load_checker():
+    global checker, checker_state
+    try:
+        from pronunciation import Checker
+    except ImportError:
+        checker_state = "off"
+        print("Pronunciation check off (run install-pronunciation.bat to turn it on)", flush=True)
+        return
+    started = time.time()
+    try:
+        checker = Checker()
+        checker_state = "ready"
+        print(f"Pronunciation check ready ({time.time() - started:.0f}s)", flush=True)
+    except Exception as exc:  # e.g. a model could not be downloaded
+        checker_state = "off"
+        print(f"Pronunciation check failed to load: {exc}", flush=True)
+
+
+def read_wav_16k(data: bytes) -> np.ndarray:
+    """16-bit PCM WAV (any rate, mono or stereo) -> mono float32 at 16 kHz"""
+    with wave.open(io.BytesIO(data)) as w:
+        if w.getsampwidth() != 2:
+            raise ValueError("expected 16-bit PCM")
+        rate, channels = w.getframerate(), w.getnchannels()
+        pcm = np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16).astype(np.float32) / 32768
+    if channels > 1:
+        pcm = pcm.reshape(-1, channels).mean(axis=1)
+    if rate != 16000:
+        n = int(len(pcm) * 16000 / rate)
+        pcm = np.interp(np.linspace(0, len(pcm), n, endpoint=False), np.arange(len(pcm)), pcm).astype(np.float32)
+    return pcm
 
 
 def to_wav(samples: np.ndarray, rate: int) -> bytes:
@@ -85,6 +129,9 @@ class Handler(BaseHTTPRequestHandler):
             self.send_header("Vary", "Origin")
         self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
         self.send_header("Access-Control-Allow-Headers", "content-type, ngrok-skip-browser-warning")
+        # Chrome asks before a public site (lingora-learn.vercel.app) may call this computer (Private Network Access)
+        if self.headers.get("Access-Control-Request-Private-Network") == "true" and origin in ALLOWED_ORIGINS:
+            self.send_header("Access-Control-Allow-Private-Network", "true")
 
     def _send(self, status: int, body: bytes, ctype: str):
         self.send_response(status)
@@ -104,11 +151,13 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         if self.path.rstrip("/") == "/health":
-            return self._json(200, {"ok": True, "voice": VOICE})
+            return self._json(200, {"ok": True, "voice": VOICE, "pronunciation": checker_state})
         self._json(404, {"error": "Not found"})
 
     def do_POST(self):
-        if self.path.rstrip("/") != "/tts":
+        url = urlparse(self.path)
+        route = url.path.rstrip("/")
+        if route not in ("/tts", "/assess"):
             return self._json(404, {"error": "Not found"})
         origin = (self.headers.get("Origin") or "").rstrip("/")
         if origin and origin not in ALLOWED_ORIGINS:
@@ -116,6 +165,8 @@ class Handler(BaseHTTPRequestHandler):
         addr = self.headers.get("X-Forwarded-For", self.client_address[0]).split(",")[0].strip()
         if not allowed(addr):
             return self._json(429, {"error": "Too many requests"})
+        if route == "/assess":
+            return self.assess(parse_qs(url.query).get("target", [""])[0].strip()[:MAX_CHARS] or None)
         try:
             length = min(int(self.headers.get("Content-Length", "0")), 8192)
             text = str(json.loads(self.rfile.read(length) or b"{}").get("text", "")).strip()
@@ -130,7 +181,26 @@ class Handler(BaseHTTPRequestHandler):
         print(f"{time.time() - started:4.1f}s  {text[:70]}", flush=True)
         self._send(200, to_wav(samples, rate), "audio/wav")
 
+    def assess(self, target):
+        if checker_state != "ready":
+            status = 503 if checker_state == "loading" else 501
+            return self._json(status, {"error": f"Pronunciation check {checker_state}"})
+        length = int(self.headers.get("Content-Length", "0"))
+        if length <= 44 or length > 3_000_000:  # up to ~90 s of 16 kHz audio
+            return self._json(400, {"error": "Invalid audio"})
+        try:
+            audio = read_wav_16k(self.rfile.read(length))
+        except (ValueError, wave.Error, EOFError):
+            return self._json(400, {"error": "Invalid audio"})
+        started = time.time()
+        with check_lock:
+            result = checker.check(audio, target)
+        flagged = [w["word"] for w in result["words"] if not w["ok"]]
+        print(f"{time.time() - started:4.1f}s  check {result['score']:3d}  {result['said'][:50]!r}  {flagged}", flush=True)
+        self._json(200, result)
+
 
 if __name__ == "__main__":
+    threading.Thread(target=load_checker, daemon=True).start()
     print(f"Lingo voice server: http://localhost:{PORT}  (Ctrl+C to stop)", flush=True)
     ThreadingHTTPServer(("0.0.0.0", PORT), Handler).serve_forever()
