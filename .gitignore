@@ -51,3 +51,8 @@ android/app/release/
 
 # Supabase local state
 supabase/.temp/
+
+# Lingo voice server (voice-server/): local Python environment and downloaded voice models
+voice-server/.venv/
+voice-server/models/
+voice-server/.tmp/

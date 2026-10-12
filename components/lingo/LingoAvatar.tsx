@@ -5,7 +5,7 @@
 // mouth while Lingo speaks. Speech comes from lib/lingo-speech (or a `mouthOpen` value from real audio later).
 
 import { useEffect, useId, useRef, useState } from "react";
-import { onLingoSpeech } from "@/lib/lingo-speech";
+import { getLingoVoiceLevel, onLingoSpeech } from "@/lib/lingo-speech";
 
 export type LingoState = "idle" | "listening" | "thinking" | "speaking";
 
@@ -75,10 +75,13 @@ export default function LingoAvatar({
       const mode: LingoState = speaking ? "speaking" : cur.state;
       const t = now / 1000;
 
-      // Mouth: real volume when given, otherwise ~3 syllables per second, with a small kick on every word
+      // Mouth: the real loudness of Lingo's voice when it is known, otherwise ~3 syllables per second
+      // with a small kick on every word (device voice)
       let target = 0;
+      const voiceLevel = getLingoVoiceLevel();
       if (speaking) {
         if (typeof cur.mouthOpen === "number") target = cur.mouthOpen;
+        else if (voiceLevel !== null) target = voiceLevel;
         else {
           const sinceWord = (now - cur.lastWordAt) / 1000;
           const kick = Math.max(0, 1 - sinceWord / 0.25) * 0.35;
