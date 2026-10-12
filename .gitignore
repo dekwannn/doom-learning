@@ -56,3 +56,5 @@ supabase/.temp/
 voice-server/.venv/
 voice-server/models/
 voice-server/.tmp/
+voice-server/.ngrok/
+voice-server/tunnel-domain.txt

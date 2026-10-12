@@ -129,6 +129,9 @@ class Handler(BaseHTTPRequestHandler):
             self.send_header("Vary", "Origin")
         self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
         self.send_header("Access-Control-Allow-Headers", "content-type, ngrok-skip-browser-warning")
+        # Chrome asks before a public site (lingora-learn.vercel.app) may call this computer (Private Network Access)
+        if self.headers.get("Access-Control-Request-Private-Network") == "true" and origin in ALLOWED_ORIGINS:
+            self.send_header("Access-Control-Allow-Private-Network", "true")
 
     def _send(self, status: int, body: bytes, ctype: str):
         self.send_response(status)
