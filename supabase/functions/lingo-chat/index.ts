@@ -21,8 +21,9 @@ const LIMITS = {
   messageChars: 2000,
   maxTokens: 600,
 };
-// Requests allowed per window, per signed-in user or (for guests) per IP address
-const RATE = { windowMinutes: 10, user: 40, guest: 12 };
+// Requests allowed per window, per signed-in user or (for guests) per IP address.
+// "Bicara dengan Lingo" uses one request per spoken turn, so leave room for a real conversation.
+const RATE = { windowMinutes: 10, user: 60, guest: 30 };
 
 // Origins allowed to call this function from a browser (web app, local dev, Capacitor Android)
 const ALLOWED_ORIGINS = new Set([

@@ -45,7 +45,7 @@ juga dipensiunkan, cukup ganti lewat secret tanpa mengubah kode: `npx supabase s
 Daftar model yang dipensiunkan: https://console.groq.com/docs/deprecations
 
 Batas default (bisa diubah di `supabase/functions/lingo-chat/index.ts`, bagian `RATE`):
-40 request / 10 menit untuk pengguna login, 12 request / 10 menit per IP untuk tamu.
+60 request / 10 menit untuk pengguna login, 30 request / 10 menit per IP untuk tamu.
 Domain yang diizinkan ada di `ALLOWED_ORIGINS` — tambahkan domain lain jika nanti dipakai.
 
 ## 3. Bersihkan env lama
