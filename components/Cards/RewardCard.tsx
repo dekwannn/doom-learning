@@ -2,6 +2,7 @@
 'use client';
 import { useState } from 'react';
 import { useUserStore } from '@/store/useUserStore';
+import { Star, Sparkles, PartyPopper, Gift } from "lucide-react";
 
 export default function RewardCard({ data, xpReward }: { data: any, xpReward: number }) {
   const [claimed, setClaimed] = useState(false);
@@ -29,7 +30,7 @@ export default function RewardCard({ data, xpReward }: { data: any, xpReward: nu
             animationDuration: `${0.8 + Math.random() * 0.6}s`,
             opacity: 0.8,
           }}>
-          {['✨', '⭐', '🌟', '💫'][i % 4]}
+          {i % 2 ? <Star size={22} color="#fbbf24" fill="#fbbf24" /> : <Sparkles size={22} color="#fde68a" />}
         </div>
       ))}
 
@@ -40,13 +41,13 @@ export default function RewardCard({ data, xpReward }: { data: any, xpReward: nu
           transform: claimed ? 'scale(1.2) rotate(12deg)' : 'scale(1)',
           transition: 'transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)',
         }}>
-        {claimed ? '🎉' : '🎁'}
+        {claimed ? <PartyPopper size={88} color="#fbbf24" /> : <Gift size={88} color="#fbbf24" />}
       </div>
 
       <div className="relative z-10 px-4 py-3 rounded-2xl mb-2"
         style={{ background: 'rgba(245,158,11,0.08)', border: '1px solid rgba(245,158,11,0.2)' }}>
         <span className="text-[10px] font-black uppercase tracking-widest" style={{ color: '#fbbf24' }}>
-          🎁 Bonus Reward
+          Bonus Reward
         </span>
       </div>
 
@@ -65,7 +66,7 @@ export default function RewardCard({ data, xpReward }: { data: any, xpReward: nu
           border: claimed ? '1px solid rgba(255,255,255,0.07)' : 'none',
           boxShadow: claimed ? 'none' : '0 0 30px rgba(245,158,11,0.4)',
         }}>
-        {claimed ? 'Teruskan Scroll ⬇️' : `Klaim +${xpReward} XP ⚡`}
+        {claimed ? 'Teruskan Scroll' : `Klaim +${xpReward} XP`}
       </button>
     </div>
   );

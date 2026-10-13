@@ -41,7 +41,7 @@ export default function PlayHeader({ onGuide, stageMeta }: Props) {
       {/* Row 1: close / xp / combo / music / guide */}
       <div className="flex items-center gap-2">
 
-        {/* ✕ close */}
+        {/* close */}
         <Link href="/adventure" className="pointer-events-auto active:scale-90 transition-transform" style={iconBtn}>
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
             <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>

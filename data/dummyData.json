@@ -1199,20 +1199,20 @@
             },
             {
               "word": "He",
-              "meaning": "Dia (♂)"
+              "meaning": "Dia (laki-laki)"
             },
             {
               "word": "She",
-              "meaning": "Dia (♀)"
+              "meaning": "Dia (perempuan)"
             }
           ],
           "shuffledMeanings": [
-            "Dia (♀)",
+            "Dia (perempuan)",
             "Mereka",
             "Kami / Kita",
-            "Dia (♂)"
+            "Dia (laki-laki)"
           ],
-          "explanation": "Ingat ini dengan baik: We → Kami / Kita | They → Mereka | He → Dia laki-laki (♂) | She → Dia perempuan (♀)."
+          "explanation": "Ingat ini dengan baik: We → Kami / Kita | They → Mereka | He → Dia laki-laki (laki-laki) | She → Dia perempuan (perempuan)."
         }
       },
       {
@@ -1584,11 +1584,11 @@
           "pairs": [
             { "word": "I am", "meaning": "Saya adalah" },
             { "word": "You are", "meaning": "Kamu adalah" },
-            { "word": "He is", "meaning": "Dia (♂) adalah" },
+            { "word": "He is", "meaning": "Dia (laki-laki) adalah" },
             { "word": "They are", "meaning": "Mereka adalah" }
           ],
-          "shuffledMeanings": [ "Mereka adalah", "Saya adalah", "Dia (♂) adalah", "Kamu adalah" ],
-          "explanation": "Ingat ini dengan baik: I am → Saya adalah | You are → Kamu adalah | He is → Dia (♂) adalah | They are → Mereka adalah."
+          "shuffledMeanings": [ "Mereka adalah", "Saya adalah", "Dia (laki-laki) adalah", "Kamu adalah" ],
+          "explanation": "Ingat ini dengan baik: I am → Saya adalah | You are → Kamu adalah | He is → Dia (laki-laki) adalah | They are → Mereka adalah."
         }
       },
       {
@@ -6709,7 +6709,7 @@
         "xpReward": 50,
         "content": {
           "title": "Practice Complete!",
-          "message": "Great work! Keep practicing.\n🇮🇩 Bagus! Terus berlatih."
+          "message": "Great work! Keep practicing.\nArti: Bagus! Terus berlatih."
         }
       }
     ],
@@ -6782,7 +6782,7 @@
         "xpReward": 75,
         "content": {
           "title": "Level 2 Practice Done!",
-          "message": "Excellent work!\n🇮🇩 Luar biasa!"
+          "message": "Excellent work!\nArti: Luar biasa!"
         }
       }
     ]

@@ -219,7 +219,7 @@ export default function ListeningQuizCard({ data, xpReward }: { data: any; xpRew
 
       {selected && (
         <div style={{ borderTop:`1px solid ${isCorrect?'rgba(16,185,129,0.2)':'rgba(239,68,68,0.2)'}`, paddingTop:14, marginTop:14, display:'flex', flexDirection:'column', gap:5 }}>
-          <p style={{ color:isCorrect?'#34d399':'#f87171', fontSize:13, fontWeight:800 }}>{isCorrect?'✓ Correct':'✗ Incorrect'}</p>
+          <p style={{ color:isCorrect?'#34d399':'#f87171', fontSize:13, fontWeight:800 }}>{isCorrect?'Correct':'Incorrect'}</p>
           <BilingualExplanation text={data.explanation}/>
         </div>
       )}

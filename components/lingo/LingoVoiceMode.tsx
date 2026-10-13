@@ -14,6 +14,7 @@ import LingoAvatar, { type LingoState } from "@/components/lingo/LingoAvatar";
 import { assessPronunciation, pronunciationNote, type PronunciationResult, wordsToFix } from "@/lib/lingo-pronunciation";
 import { getLingoVoiceHealth, speakSegments, splitForSpeech, stopLingoSpeech } from "@/lib/lingo-speech";
 import { MicRecorder } from "@/lib/mic-recorder";
+import { Check } from "lucide-react";
 
 type Turn = { role: "user" | "assistant"; content: string };
 type Phase = "idle" | "listening" | "thinking" | "speaking";
@@ -85,7 +86,7 @@ function PronunciationCard({ result }: { result: PronunciationResult }) {
   const fix = wordsToFix(result);
   if (fix.length === 0) {
     if (result.words.length === 0) return null;
-    return <div style={{ color: "#86efac", fontSize: 12.5, fontWeight: 600, textAlign: "center" }}>✓ Pengucapanmu jelas!</div>;
+    return <div style={{ color: "#86efac", fontSize: 12.5, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 5 }}><Check size={14} strokeWidth={3} /> Pengucapanmu jelas!</div>;
   }
   const groups: { tip: string; words: string[] }[] = [];
   for (const w of fix) {
@@ -317,7 +318,7 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
     if (!openRef.current || turn !== turnRef.current) return;
     historyRef.current = [...historyRef.current, { role: "user", content: text }, { role: "assistant", content: res }];
     const parsed = splitTranslation(res);
-    onTurn(text, parsed ? `${parsed.spoken}\n\n🇮🇩 ${parsed.translation}` : res);
+    onTurn(text, parsed ? `${parsed.spoken}\n\nArti: ${parsed.translation}` : res);
     setReply(parsed?.spoken ?? res);
     setTranslation(parsed?.translation ?? "");
     setPhase("speaking");
@@ -415,13 +416,13 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
       {/* Which language the user speaks in, and whether Lingo corrects their pronunciation */}
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: 6, position: "relative", padding: "0 16px" }}>
         <span style={{ color: "#52525b", fontSize: 12, marginRight: 2 }}>Aku bicara:</span>
-        <button onClick={() => changeHearLang("id-ID")} style={chip(hearLang === "id-ID")}>🇮🇩 Indonesia</button>
+        <button onClick={() => changeHearLang("id-ID")} style={chip(hearLang === "id-ID")}>ID Indonesia</button>
         <button onClick={() => changeHearLang(target.ttsLang)} style={chip(hearLang === target.ttsLang)}>{target.flag} {target.name}</button>
       </div>
       {pron === "ready" && canRecord() && speaksTarget && (
         <button onClick={() => { if (phase === "listening") pause(); setPronOn((v) => !v); }} aria-pressed={pronOn}
           style={{ ...chip(pronOn), marginTop: 8, position: "relative" }}>
-          🎯 Koreksi pengucapan: {pronOn ? "Aktif" : "Mati"}
+          Koreksi pengucapan: {pronOn ? "Aktif" : "Mati"}
         </button>
       )}
 
@@ -439,7 +440,7 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
             <p style={{ color: "#f4f4f5", fontSize: 16, lineHeight: 1.55, margin: 0 }}><Caption text={reply} /></p>
           )}
           {translation && phase !== "listening" && (
-            <p style={{ color: "#71717a", fontSize: 13, lineHeight: 1.5, margin: "8px 0 0" }}>🇮🇩 {translation}</p>
+            <p style={{ color: "#71717a", fontSize: 13, lineHeight: 1.5, margin: "8px 0 0" }}>{translation}</p>
           )}
         </div>
         {showCard && check && <PronunciationCard result={check} />}

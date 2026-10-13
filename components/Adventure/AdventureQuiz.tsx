@@ -9,7 +9,7 @@ import dummyData from '@/data/dummyData.json';
 import GoogleAd from '@/components/Ads/GoogleAd';
 import { supabase } from '@/lib/supabase';
 import { useRankStore } from '@/store/useRankStore';
-import { X, CheckCircle2, XCircle, ChevronRight, Info, Lightbulb, BookOpen } from 'lucide-react';; // <-- PENTING: Jangan lupa install lucide-react jika belum
+import { X, CheckCircle2, XCircle, ChevronRight, Info, Lightbulb, BookOpen, Zap } from 'lucide-react';; // <-- PENTING: Jangan lupa install lucide-react jika belum
 
 // ── Sound & TTS ──────────────────────────────────────────────────────────────
 function playSound(type: 'correct' | 'wrong' | 'complete') {
@@ -290,7 +290,7 @@ function ChoiceStep({ data, type, color, onAnswer }: { data:any; type:string; co
         <div style={{ borderTop:`1px solid ${sel===data.correctAnswer?'rgba(16,185,129,0.2)':'rgba(239,68,68,0.2)'}`, paddingTop:12, display:'flex', flexDirection:'column', gap:8, animation: 'fadeUp 0.3s ease' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
              {sel===data.correctAnswer ? <CheckCircle2 size={18} color="#34d399"/> : <XCircle size={18} color="#f87171"/>}
-             <p style={{ color:sel===data.correctAnswer?'#34d399':'#f87171', fontSize:14, fontWeight:800 }}>{sel===data.correctAnswer?'✓ Correct':'✗ Incorrect'}</p>
+             <p style={{ color:sel===data.correctAnswer?'#34d399':'#f87171', fontSize:14, fontWeight:800 }}>{sel===data.correctAnswer?'Correct':'Incorrect'}</p>
           </div>
           
           {/* Penjelasan Spesifik per Opsi */}
@@ -341,7 +341,7 @@ function SentenceStep({ data, color, onAnswer }: { data:any; color:string; onAns
       : <div style={{ borderTop:`1px solid ${ok?'rgba(16,185,129,0.2)':'rgba(239,68,68,0.2)'}`, paddingTop:12, animation: 'fadeUp 0.3s ease' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
             {ok ? <CheckCircle2 size={18} color="#34d399"/> : <XCircle size={18} color="#f87171"/>}
-            <p style={{ color:ok?'#34d399':'#f87171', fontSize:14, fontWeight:800 }}>{ok?'✓ Correct!':'✗ Incorrect'}</p>
+            <p style={{ color:ok?'#34d399':'#f87171', fontSize:14, fontWeight:800 }}>{ok?'Correct!':'Incorrect'}</p>
           </div>
           {!ok&&<p style={{ color:'#71717a', fontSize:13, marginBottom: 8 }}>Answer: <span style={{ color:'#e4e4e7', fontWeight:600 }}>{data.correctSentence}</span></p>}
           <div style={{ background: 'rgba(255,255,255,0.02)', padding: '12px 14px', borderRadius: 12, border: '1px solid rgba(255,255,255,0.04)' }}>
@@ -479,7 +479,7 @@ function MatchingStep({ data, color, onAnswer }: { data:any; color:string; onAns
       </div>
       {checked && (
         <div style={{ borderTop:`1px solid ${Object.values(result).every(Boolean)?'rgba(16,185,129,0.2)':'rgba(239,68,68,0.2)'}`, paddingTop:12, display:'flex', flexDirection:'column', gap:6, animation: 'fadeUp 0.3s ease' }}>
-          <p style={{ color:Object.values(result).every(Boolean)?'#34d399':'#f87171', fontSize:13, fontWeight:800 }}>{Object.values(result).every(Boolean)?`✓ Perfect! All ${pairs.length} pairs correct`:`✗ ${Object.values(result).filter(Boolean).length}/${pairs.length} correct`}</p>
+          <p style={{ color:Object.values(result).every(Boolean)?'#34d399':'#f87171', fontSize:13, fontWeight:800 }}>{Object.values(result).every(Boolean)?`Perfect! All ${pairs.length} pairs correct`:`${Object.values(result).filter(Boolean).length}/${pairs.length} correct`}</p>
           {!Object.values(result).every(Boolean) && (
             <div style={{ display:'flex', flexDirection:'column', gap:4 }}>
               {pairs.filter(p => !result[p.word]).map(p => (
@@ -592,7 +592,7 @@ function ListeningStep({ data, color, onAnswer }: { data:any; color:string; onAn
         <div style={{ borderTop:`1px solid ${sel===data.correctAnswer?'rgba(16,185,129,0.2)':'rgba(239,68,68,0.2)'}`, paddingTop:12, animation: 'fadeUp 0.3s ease' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
             {sel===data.correctAnswer ? <CheckCircle2 size={18} color="#34d399"/> : <XCircle size={18} color="#f87171"/>}
-            <p style={{ color:sel===data.correctAnswer?'#34d399':'#f87171', fontSize:14, fontWeight:800 }}>{sel===data.correctAnswer ? '✓ Correct' : '✗ Incorrect'}</p>
+            <p style={{ color:sel===data.correctAnswer?'#34d399':'#f87171', fontSize:14, fontWeight:800 }}>{sel===data.correctAnswer ? 'Correct' : 'Incorrect'}</p>
           </div>
           
           <div style={{ background: 'rgba(255,255,255,0.03)', padding: '14px', borderRadius: 12, border: `1px solid ${sel === data.correctAnswer ? 'rgba(16,185,129,0.2)' : 'rgba(239,68,68,0.2)'}` }}>
@@ -752,17 +752,17 @@ function SpeakingStep({ data, color, onAnswer }: { data:any; color:string; onAns
 // Komentar Lingo di layar hasil. Dulu pakai GIF dari Tenor/Giphy, tapi link-nya mati (404);
 // sekarang Lingo sendiri yang bereaksi (gambar lokal, selalu tampil, juga saat offline)
 const MEME_WIN = [
-  'POV: Lu pas tau jawaban kuisnya bener semua 💃',
-  'Satu kata buat lu: MELEDAKKK! 💥',
-  'Mantap bang messi, lanjut ke stage berikutnya! 🚀',
-  'Ilmu bertambah, IQ naik, masa depan STONKS! 📈',
+  'POV: Lu pas tau jawaban kuisnya bener semua!',
+  'Satu kata buat lu: MELEDAKKK!',
+  'Mantap bang messi, lanjut ke stage berikutnya!',
+  'Ilmu bertambah, IQ naik, masa depan STONKS!',
 ];
 
 const MEME_LOSE = [
-  'Tadi malem gak belajar ya? Jujur lu! 😿',
-  'Gua nungguin lu kelar belajar sampe lumutan nih... 🍄',
-  'Bingung ya? Sama, gua juga bingung liat nilai lu. 🤨',
-  'Satu kali lagi! Masa kalah ama kuis ginian? 💪',
+  'Tadi malem gak belajar ya? Jujur lu!',
+  'Gua nungguin lu kelar belajar sampe lumutan nih...',
+  'Bingung ya? Sama, gua juga bingung liat nilai lu.',
+  'Satu kali lagi! Masa kalah ama kuis ginian?',
 ];
 
 const MIN_CORRECT = 8; 
@@ -1083,7 +1083,7 @@ export default function AdventureQuiz({ feedData, chapter, stage, stageIndex, to
           <ProgressBar current={currentIdx} total={total} color={color} />
           {combo>=2&&!isReplay&&(
             <div style={{ display:'inline-flex', alignItems:'center', gap:6, marginTop:8, background:'rgba(250,204,21,0.06)', borderRadius:99, padding:'3px 12px', border:'1px solid rgba(250,204,21,0.15)' }}>
-              <span style={{ color:'#facc15', fontSize:11, fontWeight:800 }}>⚡ {combo}× Combo!</span>
+              <span style={{ color:'#facc15', fontSize:11, fontWeight:800, display:'inline-flex', alignItems:'center', gap:3 }}><Zap size={11} fill="#facc15" /> {combo}× Combo!</span>
             </div>
           )}
         </div>

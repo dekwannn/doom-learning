@@ -16,6 +16,7 @@ import koData from '@/data/koData.json';
 // ── IMPORT DRIVER.JS ──
 import { driver } from 'driver.js';
 import 'driver.js/dist/driver.css';
+import { Lock } from "lucide-react";
 
 /* ─── Language data resolver ──────────────────────────── */
 const DATA_MAP: Record<string, any> = {
@@ -186,7 +187,7 @@ function ChapterSidePanel({
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: chUnlocked ? 8 : 0 }}>
                   <div style={{ width: 8, height: 8, borderRadius: '50%', flexShrink: 0, background: chUnlocked ? ch.color : '#27272a', boxShadow: chUnlocked && isActive ? `0 0 8px ${ch.color}` : 'none' }}/>
                   <span style={{ color: chUnlocked ? (isActive ? '#f4f4f5' : '#e4e4e7') : '#3f3f46', fontSize: 13, fontWeight: 700, flex: 1 }}>{ch.title}</span>
-                  <span style={{ color: '#52525b', fontSize: 11 }}>{chUnlocked ? `${chCompleted}/${chStages.length}` : '🔒'}</span>
+                  <span style={{ color: '#52525b', fontSize: 11 }}>{chUnlocked ? `${chCompleted}/${chStages.length}` : <Lock size={11} />}</span>
                 </div>
                 {chUnlocked && (
                   <div style={{ height: 3, background: 'rgba(255,255,255,0.06)', borderRadius: 99, overflow: 'hidden' }}>
@@ -272,10 +273,10 @@ function LanguageBadge() {
   const selectedLanguage = useLanguageStore(s => s.selectedLanguage);
   const lang = LANGUAGES.find(l => l.code === (selectedLanguage ?? 'en'));
   if (!lang) return null;
-  const flag = selectedLanguage === 'ja' ? '🇯🇵' : selectedLanguage === 'zh' ? '🇨🇳' : selectedLanguage === 'ko' ? '🇰🇷' : '🇬🇧';
+  const flag = selectedLanguage === 'ja' ? 'JA' : selectedLanguage === 'zh' ? 'ZH' : selectedLanguage === 'ko' ? 'KO' : 'EN';
   return (
     <button id="tour-language" onClick={() => router.push('/language-select')} style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '5px 11px', background: `${lang.color}12`, border: `1px solid ${lang.color}28`, borderRadius: 99, cursor: 'pointer' }}>
-      <span style={{ fontSize: 14, lineHeight: 1 }}>{flag}</span>
+      <span style={{ fontSize: 10, fontWeight: 800, letterSpacing: '0.06em', lineHeight: 1, color: lang.color }}>{flag}</span>
       <span style={{ color: lang.color, fontSize: 11, fontWeight: 700 }}>{lang.name}</span>
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke={lang.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
     </button>

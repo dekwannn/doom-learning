@@ -83,10 +83,10 @@ const CATEGORIES: { id: string; label: string; color: string }[] = [
   { id: 'xp',       label: 'XP',      color: '#facc15' },
   { id: 'streak',   label: 'Streak',  color: '#ef4444' },
   { id: 'mastery',  label: 'Mastery', color: '#a855f7' },
-  { id: 'english',  label: '🇬🇧 EN',  color: '#3b82f6' },
-  { id: 'japanese', label: '🇯🇵 JA',  color: '#f43f5e' },
-  { id: 'mandarin', label: '🇨🇳 ZH',  color: '#f59e0b' },
-  { id: 'korean',   label: '🇰🇷 KO',  color: '#8b5cf6' },
+  { id: 'english',  label: 'EN',  color: '#3b82f6' },
+  { id: 'japanese', label: 'JA',  color: '#f43f5e' },
+  { id: 'mandarin', label: 'ZH',  color: '#f59e0b' },
+  { id: 'korean',   label: 'KO',  color: '#8b5cf6' },
 ];
 
 function RingProgress({ pct, color, size = 120 }: { pct: number; color: string; size?: number }) {

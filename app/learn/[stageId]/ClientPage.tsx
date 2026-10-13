@@ -16,6 +16,7 @@ import zhStudyData from "@/data/zhStudyData.json";
 import zhAdventureData from "@/data/zhData.json";
 import koStudyData from "@/data/koStudyData.json";
 import koAdventureData from "@/data/koData.json";
+import { MessageCircle, Volume2, BookOpen, Sparkles, Lightbulb, PartyPopper } from "lucide-react";
 
 const STUDY_DATA_MAP: Record<string, any> = {
   en: enStudyData,
@@ -87,7 +88,7 @@ function buildLingoSystem(ctx: LingoContext) {
 - Chapter: "${ctx.chapterTitle}"
 - Stage: "${ctx.stageLabel}"
 - Section: "${ctx.sectionHeading}"
-Panduan: jawab singkat (maks 4 kalimat), bahasa Indonesia, highlight ${langName} dengan **tanda bintang**, gunakan [AUDIO:teks:${LANG_TTS[ctx.lang] ?? "en-US"}] untuk frasa yang perlu didengar, tetap relevan ke konteks materi.`;
+Panduan: jawab singkat (maks 4 kalimat), bahasa Indonesia, highlight ${langName} dengan **tanda bintang**, gunakan [AUDIO:teks:${LANG_TTS[ctx.lang] ?? "en-US"}] untuk frasa yang perlu didengar, tetap relevan ke konteks materi, tanpa emoji.`;
 }
 
 async function askGroq(
@@ -105,33 +106,33 @@ async function askGroq(
   });
 }
 
-function buildSuggestions(ctx: LingoContext): { icon: string; text: string }[] {
+function buildSuggestions(ctx: LingoContext): { icon: React.ReactNode; text: string }[] {
   const langName = LANG_NAMES[ctx.lang] ?? "bahasa ini";
   if (ctx.clickedWord)
     return [
-      { icon: "💬", text: `Apa arti "${ctx.clickedWord}" dalam ${langName}?` },
-      { icon: "🔊", text: `Bagaimana cara mengucapkan "${ctx.clickedWord}"?` },
+      { icon: <MessageCircle size={14} />, text: `Apa arti "${ctx.clickedWord}" dalam ${langName}?` },
+      { icon: <Volume2 size={14} />, text: `Bagaimana cara mengucapkan "${ctx.clickedWord}"?` },
       {
-        icon: "📖",
+        icon: <BookOpen size={14} />,
         text: `Beri contoh kalimat lain dengan "${ctx.clickedWord}"`,
       },
     ];
   if (ctx.examplePhrase)
     return [
-      { icon: "💬", text: `Jelaskan kalimat: "${ctx.examplePhrase}"` },
-      { icon: "🔊", text: `Bagaimana cara mengucapkan frasa ini?` },
-      { icon: "📖", text: `Apa pola grammar di kalimat ini?` },
+      { icon: <MessageCircle size={14} />, text: `Jelaskan kalimat: "${ctx.examplePhrase}"` },
+      { icon: <Volume2 size={14} />, text: `Bagaimana cara mengucapkan frasa ini?` },
+      { icon: <BookOpen size={14} />, text: `Apa pola grammar di kalimat ini?` },
     ];
   return [
     {
-      icon: "💬",
+      icon: <MessageCircle size={14} />,
       text: `Jelaskan lebih lanjut tentang "${ctx.sectionHeading}"`,
     },
     {
-      icon: "📖",
+      icon: <BookOpen size={14} />,
       text: `Beri contoh lain dari materi "${ctx.sectionHeading}"`,
     },
-    { icon: "✨", text: `Apa yang paling penting di "${ctx.chapterTitle}"?` },
+    { icon: <Sparkles size={14} />, text: `Apa yang paling penting di "${ctx.chapterTitle}"?` },
   ];
 }
 
@@ -925,7 +926,7 @@ function getSectionMeta(t: string) {
       label: t,
       color: "#71717a",
       accent: "rgba(113,113,122,0.08)",
-      icon: "📝",
+      icon: "",
     }
   );
 }
@@ -1550,7 +1551,7 @@ function SectionCard({
                   textTransform: "uppercase",
                 }}
               >
-                💡 Tap kata untuk tanya Lingo
+                Tap kata untuk tanya Lingo
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
                 {section.examples.map((ex, i) =>
@@ -1587,8 +1588,8 @@ function SectionCard({
                 alignItems: "flex-start",
               }}
             >
-              <span style={{ fontSize: 13, flexShrink: 0, marginTop: 1 }}>
-                💡
+              <span style={{ flexShrink: 0, marginTop: 1, display: "flex" }}>
+                <Lightbulb size={14} color="#facc15" />
               </span>
               <p
                 style={{
@@ -2047,7 +2048,7 @@ function ListeningPractice({
               margin: "0 0 2px",
             }}
           >
-            🎧 Audio
+            Audio
           </p>
           <p
             style={{ color: "rgba(255,255,255,0.4)", fontSize: 11, margin: 0 }}
@@ -2097,7 +2098,6 @@ function ListeningPractice({
                 transition: "all 0.15s",
               }}
             >
-              {isRight ? "✓ " : isWrong ? "✗ " : ""}
               {opt}
             </button>
           );
@@ -2418,8 +2418,8 @@ function SpeakingPractice({
             }}
           >
             {score >= 60
-              ? `✓ Bagus! ${score}% cocok`
-              : `✗ Belum tepat (${score}%). Coba lagi!`}
+              ? `Bagus! ${score}% cocok`
+              : `Belum tepat (${score}%). Coba lagi!`}
           </p>
         </div>
       )}
@@ -3147,7 +3147,7 @@ export default function LearnStagePage({ params }: Props) {
                     fontSize: 22,
                   }}
                 >
-                  🎉
+                  <PartyPopper size={22} color={cc.color} />
                 </div>
                 <p
                   style={{

@@ -2,6 +2,7 @@
 'use client';
 import { useUserStore } from '@/store/useUserStore';
 import { useEffect, useState } from 'react';
+import { Flame, Zap, Target } from "lucide-react";
 
 export default function Header() {
   const { xp, streak, combo } = useUserStore();
@@ -22,7 +23,7 @@ export default function Header() {
             border: '1px solid rgba(255,255,255,0.08)',
             backdropFilter: 'blur(12px)',
           }}>
-          <span className="text-base" style={{ filter: 'drop-shadow(0 0 4px rgba(245,158,11,0.6))' }}>🔥</span>
+          <Flame size={16} color="#f59e0b" fill="#f59e0b" style={{ filter: 'drop-shadow(0 0 4px rgba(245,158,11,0.6))' }} />
           <span className="text-white font-black text-sm">{streak}</span>
         </div>
 
@@ -33,7 +34,7 @@ export default function Header() {
             border: '1px solid rgba(255,255,255,0.08)',
             backdropFilter: 'blur(12px)',
           }}>
-          <span className="text-base">⚡</span>
+          <Zap size={16} color="#facc15" fill="#facc15" />
           <span className="font-black text-sm" style={{ color: '#facc15' }}>{xp}</span>
         </div>
 
@@ -46,7 +47,7 @@ export default function Header() {
               backdropFilter: 'blur(12px)',
               boxShadow: '0 0 12px rgba(234,88,12,0.4)',
             }}>
-            <span className="text-base">🎯</span>
+            <Target size={16} color="#fb923c" />
             <span className="text-white font-black text-sm">x{combo >= 5 ? '2.0' : '1.5'}</span>
           </div>
         )}

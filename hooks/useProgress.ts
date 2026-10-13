@@ -56,7 +56,7 @@ export function useProgress() {
   const xp              = isEnglish ? enXp              : langXp;
   const combo           = isEnglish ? enCombo           : langCombo;
   
-  // 🔥 PERUBAHAN UTAMA: Streak selalu global, tidak peduli isEnglish atau bukan!
+  // PERUBAHAN UTAMA: Streak selalu global, tidak peduli isEnglish atau bukan!
   const streak          = enStreak; 
 
   const stageStars      = isEnglish ? enStageStars      : langStageStars;
@@ -102,7 +102,7 @@ export function useProgress() {
   const resetCombo = () =>
     isEnglish ? enResetCombo() : langResetCombo();
 
-  // 🔥 PERUBAHAN UTAMA: Fungsi setStreak selalu menembak ke brankas global
+  // PERUBAHAN UTAMA: Fungsi setStreak selalu menembak ke brankas global
   const setStreak = (n: number) => {
     enSetStreak(n);
   };

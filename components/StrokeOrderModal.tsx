@@ -379,7 +379,7 @@ export function StrokeOrderModal({ onClose }: { onClose: () => void }) {
             {/* Tip */}
             <div style={{ padding: '10px 14px', borderRadius: 10, background: 'rgba(245,158,11,0.05)', border: '1px solid rgba(245,158,11,0.12)' }}>
               <p style={{ color: '#a08a30', fontSize: 11, lineHeight: 1.65, margin: 0 }}>
-                💡 Data goresan menggunakan <strong style={{ color: '#f59e0b' }}>KanjiVG</strong> (CC BY 3.0) — yang tersedia open source.</p>
+                Data goresan menggunakan <strong style={{ color: '#f59e0b' }}>KanjiVG</strong> (CC BY 3.0) — yang tersedia open source.</p>
             </div>
           </div>
         </div>

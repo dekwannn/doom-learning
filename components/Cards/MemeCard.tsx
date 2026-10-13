@@ -9,7 +9,7 @@ export default function MemeCard({ data }: { data: any }) {
       <div className="px-5 mb-4">
         <span className="text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full"
           style={{ background: 'rgba(255,255,255,0.05)', color: '#a1a1aa', border: '1px solid rgba(255,255,255,0.08)' }}>
-          ☕ Istirahat Sejenak
+          Istirahat Sejenak
         </span>
       </div>
 
@@ -53,12 +53,12 @@ export default function MemeCard({ data }: { data: any }) {
             background: 'rgba(59,130,246,0.07)',
             border: '1px solid rgba(59,130,246,0.2)',
           }}>
-          <p className="text-zinc-500 text-xs font-black uppercase tracking-wider mb-2">🌐 Terjemahan Konteks</p>
+          <p className="text-zinc-500 text-xs font-black uppercase tracking-wider mb-2">Terjemahan Konteks</p>
           <p className="text-zinc-300 italic text-sm leading-relaxed">{data.translation}</p>
         </div>
       </div>
 
-      <p className="text-center text-zinc-600 mt-6 text-xs animate-pulse">Swipe ke atas untuk lanjut ⬆️</p>
+      <p className="text-center text-zinc-600 mt-6 text-xs animate-pulse">Swipe ke atas untuk lanjut</p>
     </div>
   );
 }

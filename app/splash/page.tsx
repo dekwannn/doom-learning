@@ -193,7 +193,7 @@ export default function SplashTestPage() {
           <p style={{ color: '#fff', fontSize: 20, fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.1 }}>
             Lingora
           </p>
-          <p style={{ color: '#52525b', fontSize: 12, marginTop: 2 }}>Good day 👋 Keep it up!</p>
+          <p style={{ color: '#52525b', fontSize: 12, marginTop: 2 }}>Good day, keep it up!</p>
         </div>
         <div style={{ marginLeft: 'auto' }}>
           <div style={{
@@ -364,7 +364,7 @@ export default function SplashTestPage() {
         borderRadius: 12, padding: '12px 16px',
       }}>
         <p style={{ color: '#a08a30', fontSize: 12, lineHeight: 1.7, margin: 0 }}>
-          💡 Ganti <code style={{ background: 'rgba(255,255,255,0.06)', padding: '1px 5px', borderRadius: 4, fontSize: 11 }}>LogoPlaceholder</code> dengan{' '}
+          Ganti <code style={{ background: 'rgba(255,255,255,0.06)', padding: '1px 5px', borderRadius: 4, fontSize: 11 }}>LogoPlaceholder</code> dengan{' '}
           <code style={{ background: 'rgba(255,255,255,0.06)', padding: '1px 5px', borderRadius: 4, fontSize: 11 }}>{`<img src="/images/logo.png" />`}</code>{' '}
           di dua tempat (splash & header).
         </p>
