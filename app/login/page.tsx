@@ -4,6 +4,7 @@
 
 import { useState, Suspense } from 'react'
 import { supabase } from '@/lib/supabase'
+import { safeRedirect } from '@/lib/safe-redirect'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { Eye, EyeOff, Mail, Loader2, Sparkles, ArrowRight } from 'lucide-react'
@@ -11,7 +12,8 @@ import { Eye, EyeOff, Mail, Loader2, Sparkles, ArrowRight } from 'lucide-react'
 function LoginContent() {
   const router       = useRouter()
   const searchParams = useSearchParams()
-  const redirectTo   = searchParams.get('redirectTo') || '/'
+  const redirectTo   = safeRedirect(searchParams.get('redirectTo'))
+  const callbackUrl  = () => `${window.location.origin}/auth/callback?redirectTo=${encodeURIComponent(redirectTo)}`
 
   const [email,    setEmail]    = useState('')
   const [password, setPassword] = useState('')
@@ -26,7 +28,7 @@ function LoginContent() {
     setLoading(true); clear()
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: `${window.location.origin}/auth/callback?redirectTo=${redirectTo}` },
+      options: { redirectTo: callbackUrl() },
     })
     if (error) { setError(error.message); setLoading(false) }
   }
@@ -50,7 +52,7 @@ function LoginContent() {
     setLoading(true); clear()
     const { error } = await supabase.auth.signInWithOtp({
       email,
-      options: { emailRedirectTo: `${window.location.origin}/auth/callback?redirectTo=${redirectTo}` },
+      options: { emailRedirectTo: callbackUrl() },
     })
     setLoading(false)
     if (error) return setError(error.message)
