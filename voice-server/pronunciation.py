@@ -33,6 +33,13 @@ WHISPER_MODEL = "base.en"
 SAME = {"ɐ": "ə", "ʌ": "ə", "ɝ": "ɚ", "ɜ": "ɚ", "ᵻ": "ɪ", "ɾ": "t", "ʔ": "t", "o": "oʊ", "e": "eɪ",
         "r": "ɹ", "ɫ": "l", "n̩": "n", "l̩": "l", "ɑ": "ɔ", "əl": "l"}
 CONSONANTS = set("p b t d k ɡ f v θ ð s z ʃ ʒ h tʃ dʒ m n ŋ l ɹ w j".split())
+NASALS = {"m", "n", "ŋ"}
+# Short words whose vowel is normally weak in a sentence ("has" → həz, "am" → əm): a changed vowel there is not a mistake
+WEAK_WORDS = {"a", "an", "and", "am", "are", "as", "at", "but", "can", "for", "from", "had", "has", "have", "her",
+              "his", "is", "of", "or", "shall", "than", "that", "the", "them", "there", "to", "was", "we", "were",
+              "will", "would", "you", "your", "some", "just", "been", "do", "does", "me", "he", "she", "it", "in"}
+VOWELS = {"iː", "ɪ", "æ", "ɛ", "ə", "ɚ", "ɔ", "ʊ", "u", "uː", "eɪ", "aɪ", "ɔɪ", "aʊ", "oʊ", "ɑ"}
+SIBILANTS = {"s", "z", "ʃ", "ʒ"}
 
 # expected sound -> (sounds it is often replaced with, tip in Indonesian)
 KNOWN_MISTAKES = {
@@ -106,6 +113,19 @@ class Checker:
                 item["heard"].append(h)
             e = exp_n[ei]
             if h == e:
+                continue
+            nxt = exp_n[ei + 1] if ei + 1 < len(exp_n) else None
+            # Fine in normal speech, not mistakes: "a" before n/m/ng sounds like "e" in American English (thank, man),
+            # and a final consonant merges into the same sound starting the next word (this song, bus stop)
+            if flat[ei] == "æ" and nxt in NASALS and h in {"ɛ", "eɪ"}:
+                continue
+            if words[owner[ei]][0].lower() in WEAK_WORDS and (e in VOWELS or flat[ei] in VOWELS):
+                item["minor"] += 1
+                minor += 1
+                continue
+            if h is None and ei in last and nxt is not None and (nxt == e or {e, nxt} <= SIBILANTS):
+                item["minor"] += 1
+                minor += 1
                 continue
             known = KNOWN_MISTAKES.get(flat[ei]) or KNOWN_MISTAKES.get(e)
             if known and h in known[0]:
