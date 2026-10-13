@@ -749,18 +749,20 @@ function SpeakingStep({ data, color, onAnswer }: { data:any; color:string; onAns
 }
 
 // ── ResultScreen ──────────────────────────────────────────────────────────────
+// Komentar Lingo di layar hasil. Dulu pakai GIF dari Tenor/Giphy, tapi link-nya mati (404);
+// sekarang Lingo sendiri yang bereaksi (gambar lokal, selalu tampil, juga saat offline)
 const MEME_WIN = [
-  { url: 'https://media1.tenor.com/m/Xas_9YfT4uQAAAAC/cat-dance.gif', text: 'POV: Lu pas tau jawaban kuisnya bener semua 💃' },
-  { url: 'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3p0eXU1ZnR4bmV4emR4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/l0HTYUmU67pUSEHhC/giphy.gif', text: 'Satu kata buat lu: MELEDAKKK! 💥' },
-  { url: 'https://media1.tenor.com/m/O1vG-6O6z9AAAAAC/baby-celebrate.gif', text: 'Mantap bang messi, lanjut ke stage berikutnya! 🚀' },
-  { url: 'https://media1.tenor.com/m/t1C-Z_vJ36oAAAAC/stonks-up.gif', text: 'Ilmu bertambah, IQ naik, masa depan STONKS! 📈' }
+  'POV: Lu pas tau jawaban kuisnya bener semua 💃',
+  'Satu kata buat lu: MELEDAKKK! 💥',
+  'Mantap bang messi, lanjut ke stage berikutnya! 🚀',
+  'Ilmu bertambah, IQ naik, masa depan STONKS! 📈',
 ];
 
 const MEME_LOSE = [
-  { url: 'https://media1.tenor.com/m/yhe_675mN8QAAAAC/sad-cat-crying.gif', text: 'Tadi malem gak belajar ya? Jujur lu! 😿' },
-  { url: 'https://media1.tenor.com/m/S26A-0vR50gAAAAC/mr-bean-waiting.gif', text: 'Gua nungguin lu kelar belajar sampe lumutan nih... 🍄' },
-  { url: 'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3p0eXU1ZnR4bmV4emR4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/6uGhT1O4sxpi8/giphy.gif', text: 'Bingung ya? Sama, gua juga bingung liat nilai lu. 🤨' },
-  { url: 'https://media1.tenor.com/m/7757t90P8o4AAAAC/dont-give-up.gif', text: 'Satu kali lagi! Masa kalah ama kuis ginian? 💪' }
+  'Tadi malem gak belajar ya? Jujur lu! 😿',
+  'Gua nungguin lu kelar belajar sampe lumutan nih... 🍄',
+  'Bingung ya? Sama, gua juga bingung liat nilai lu. 🤨',
+  'Satu kali lagi! Masa kalah ama kuis ginian? 💪',
 ];
 
 const MIN_CORRECT = 8; 
@@ -770,7 +772,7 @@ function ResultScreen({ score, total, xpEarned, color, stageLabel, chapterTitle,
   
   const pct=Math.round((score/total)*100);
   const stars=pct>=90?3:pct>=70?2:pct>=50?1:0;
-  const [randomMeme, setRandomMeme] = useState<{url: string, text: string} | null>(null);
+  const [randomMeme, setRandomMeme] = useState<string | null>(null);
   const [showReview, setShowReview] = useState(false);
 
   useEffect(() => {
@@ -785,10 +787,15 @@ function ResultScreen({ score, total, xpEarned, color, stageLabel, chapterTitle,
       
       {randomMeme && (
         <div style={{ marginBottom: 24, display: 'flex', flexDirection: 'column', alignItems: 'center', animation: 'fadeUp 0.5s ease' }}>
-          <div style={{ width: 140, height: 140, borderRadius: 16, overflow: 'hidden', border: `2px solid ${passed ? color : '#ef4444'}`, boxShadow: `0 8px 30px ${passed ? color : '#ef4444'}30`, marginBottom: 12 }}>
-            <img src={randomMeme.url} alt="Meme" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <style>{`@keyframes lingoCheer{0%,100%{transform:translateY(0) rotate(0)}30%{transform:translateY(-14px) rotate(-6deg)}60%{transform:translateY(0) rotate(4deg)}}@keyframes lingoSigh{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg) translateY(4px)}}`}</style>
+          <div style={{ width: 140, height: 140, borderRadius: 16, border: `2px solid ${passed ? color : '#ef4444'}`, background: passed ? `${color}10` : 'rgba(239,68,68,0.06)', boxShadow: `0 8px 30px ${passed ? color : '#ef4444'}30`, marginBottom: 12, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img
+              src="/maskot.webp"
+              alt="Lingo"
+              style={{ width: 104, height: 'auto', animation: passed ? 'lingoCheer 1.1s ease-in-out infinite' : 'lingoSigh 2.4s ease-in-out infinite', filter: passed ? 'none' : 'saturate(0.6)' }}
+            />
           </div>
-          <p style={{ fontSize: 14, fontWeight: 800, color: passed ? color : '#f87171', fontStyle: 'italic', maxWidth: 250 }}>"{randomMeme.text}"</p>
+          <p style={{ fontSize: 14, fontWeight: 800, color: passed ? color : '#f87171', fontStyle: 'italic', maxWidth: 250 }}>"{randomMeme}"</p>
         </div>
       )}
 
