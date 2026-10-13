@@ -34,9 +34,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     })
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
+      (event, session) => {
         if (event === 'SIGNED_IN' && session?.user) {
-          await handleLogin(session.user.id)
+          // JANGAN await query Supabase di dalam callback ini: Supabase menunggu callback selesai sambil
+          // memegang kunci sesi, sementara query butuh kunci yang sama → login tertahan sampai timeout.
+          // Jalankan setelah callback selesai (anjuran dokumentasi Supabase).
+          const userId = session.user.id
+          setTimeout(() => { handleLogin(userId) }, 0)
         }
         if (event === 'SIGNED_OUT') {
           isHandlingLogin = false
@@ -96,12 +100,11 @@ async function handleLogin(userId: string) {
 // ignoreDuplicates: true — tidak overwrite data yang sudah ada
 async function createLeaderboardRows(userId: string) {
   const langs: LangCode[] = ['en', 'ja', 'zh', 'ko']
-  for (const lang of langs) {
-    await supabase
-      .from('xp_progress')
-      .upsert(
-        { user_id: userId, language_code: lang, total_xp: 0, stages_completed: 0 },
-        { onConflict: 'user_id,language_code', ignoreDuplicates: true }
-      )
-  }
+  // Satu request untuk semua bahasa
+  await supabase
+    .from('xp_progress')
+    .upsert(
+      langs.map(lang => ({ user_id: userId, language_code: lang, total_xp: 0, stages_completed: 0 })),
+      { onConflict: 'user_id,language_code', ignoreDuplicates: true }
+    )
 }
