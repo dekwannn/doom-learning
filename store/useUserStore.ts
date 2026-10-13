@@ -2,6 +2,9 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import dummyData from "@/data/dummyData.json";
+import jaData from "@/data/jaData.json";
+import zhData from "@/data/zhData.json";
+import koData from "@/data/koData.json";
 import { useLanguageStore } from "@/store/useLanguageStore";
 
 export interface AchievementDef {
@@ -53,6 +56,17 @@ export const ACHIEVEMENT_DEFS: AchievementDef[] = [
   { id: "ko_master", iconName: "Shield", color: "#7c3aed", label: "Hallyu Scholar", desc: "Selesaikan semua chapter Bahasa Korea", category: "korean", rarity: "legendary" },
 ];
 
+/** The chapters of each language (from the lesson data), so chapter and "master" achievements follow the real content */
+type ChapterData = { id: number | string; stages: { id: string }[] }[];
+const ACHIEVEMENT_LANGS = ["en", "ja", "zh", "ko"] as const;
+const LANG_CHAPTERS: Record<(typeof ACHIEVEMENT_LANGS)[number], ChapterData> = {
+  en: (dummyData as { chapters: ChapterData }).chapters,
+  ja: (jaData as { chapters: ChapterData }).chapters,
+  zh: (zhData as { chapters: ChapterData }).chapters,
+  ko: (koData as { chapters: ChapterData }).chapters,
+};
+const CHAPTER_ONE_ACHIEVEMENT: Record<(typeof ACHIEVEMENT_LANGS)[number], string> = { en: "en_chapter1", ja: "ja_hiragana", zh: "zh_pinyin", ko: "ko_hangul" };
+
 export interface UnlockedAchievement {
   id: string;
   unlockedAt: number;
@@ -100,15 +114,16 @@ interface UserState {
 
   markStageComplete: (stageId: string, xpEarned?: number) => void;
   isStageCompleted: (stageId: string) => boolean;
-  unlockAchievement: (id: string) => void;
+  /** `silent`: unlocked without the popup (e.g. found again from saved progress on app start) */
+  unlockAchievement: (id: string, silent?: boolean) => void;
   dismissPendingAchievement: () => void;
-  checkAndUnlockAchievements: (context: {
-    justCompletedStageId?: string;
+  checkAndUnlockAchievements: (context?: {
+    /** A stage was just finished (for the time-of-day achievements) */
+    stageFinished?: boolean;
     justCompletedStars?: number;
     allCorrect?: boolean;
-    completedChapterIds?: string[];
-    language?: string;
-    completedLangs?: string[];
+    /** Unlock without popups */
+    silent?: boolean;
   }) => void;
 
   unlockAll: () => void;
@@ -262,109 +277,85 @@ export const useUserStore = create<UserState>()(
 
       isStageCompleted: (stageId) => get().completedStages[stageId] === true,
 
-      unlockAchievement: (id) => {
+      unlockAchievement: (id, silent = false) => {
         if (get().unlockedAchievements.some((a) => a.id === id)) return;
         set((s) => ({
           unlockedAchievements: [...s.unlockedAchievements, { id, unlockedAt: Date.now() }],
-          pendingAchievements: [...s.pendingAchievements, id],
+          pendingAchievements: silent ? s.pendingAchievements : [...s.pendingAchievements, id],
         }));
       },
 
       dismissPendingAchievement: () =>
         set((s) => ({ pendingAchievements: s.pendingAchievements.slice(1) })),
 
-      // ── LOGIKA UNLOCK YANG SUDAH DIPERBAIKI TOTAL ──
-      checkAndUnlockAchievements: (ctx) => {
-        const { unlockedAchievements, xp, streak, combo, unlockAchievement } = get();
-        const has = (id: string) => unlockedAchievements.some((a) => a.id === id);
-        const lang = ctx.language ?? "en";
-        const now = new Date();
-        const hour = now.getHours();
-
+      // Achievements are worked out from ALL saved progress (every language), not only from the stage that was
+      // just finished: progress from before an achievement existed, restored from the cloud, or finished as a replay
+      // still counts. Called after each finished stage (with what happened in it) and on app start (silent).
+      checkAndUnlockAchievements: (ctx = {}) => {
+        const s = get();
         const langStore = useLanguageStore.getState();
+        const unlock = (id: string) => s.unlockAchievement(id, ctx.silent);
+        let totalCompleted = 0;
+        let totalXp = 0;
+        let langsStarted = 0;
+        let chaptersStarted = 0;
+        let anyThreeStars = false;
 
-        // Hitung progres akurat dari semua bahasa (termasuk yang baru saja ditamatkan di sesi ini)
-        let enCompleted = Object.values(get().completedStages).filter(Boolean).length;
-        let jaCompleted = Object.values(langStore.progress['ja']?.completedStages || {}).filter(Boolean).length;
-        let zhCompleted = Object.values(langStore.progress['zh']?.completedStages || {}).filter(Boolean).length;
-        let koCompleted = Object.values(langStore.progress['ko']?.completedStages || {}).filter(Boolean).length;
+        for (const lang of ACHIEVEMENT_LANGS) {
+          const p = lang === "en"
+            ? { xp: s.xp, completed: s.completedStages, stars: s.stageStars }
+            : { xp: langStore.progress[lang]?.xp ?? 0, completed: langStore.progress[lang]?.completedStages ?? {}, stars: langStore.progress[lang]?.stageStars ?? {} };
+          const chapters = LANG_CHAPTERS[lang];
+          const done = (id: string) => p.completed[id] === true;
+          const stages = chapters.flatMap((c) => c.stages.map((st) => st.id));
+          const completed = stages.filter(done).length;
+          const threeStars = Object.values(p.stars).filter((v) => v >= 3).length;
 
-        if (ctx.justCompletedStageId) {
-          if (lang === 'en' && !get().completedStages[ctx.justCompletedStageId]) enCompleted++;
-          if (lang === 'ja' && !langStore.progress['ja']?.completedStages?.[ctx.justCompletedStageId]) jaCompleted++;
-          if (lang === 'zh' && !langStore.progress['zh']?.completedStages?.[ctx.justCompletedStageId]) zhCompleted++;
-          if (lang === 'ko' && !langStore.progress['ko']?.completedStages?.[ctx.justCompletedStageId]) koCompleted++;
+          totalCompleted += completed;
+          totalXp += p.xp;
+          if (completed > 0) langsStarted++;
+          chaptersStarted += chapters.filter((c) => c.stages.some((st) => done(st.id))).length;
+          if (threeStars > 0) anyThreeStars = true;
+
+          // Per language: first stage, all of chapter 1, 3 stars on 5 stages, every stage of the language
+          if (completed >= 1) unlock(`${lang}_first`);
+          if (chapters[0]?.stages.length && chapters[0].stages.every((st) => done(st.id))) unlock(CHAPTER_ONE_ACHIEVEMENT[lang]);
+          if (threeStars >= 5) unlock(`${lang}_all_stars`);
+          if (stages.length > 0 && completed === stages.length) unlock(`${lang}_master`);
         }
 
-        const globalCompleted = enCompleted + jaCompleted + zhCompleted + koCompleted;
+        // General
+        if (totalCompleted >= 1) unlock("first_blood");
+        if (totalCompleted >= 5) unlock("scholar");
+        if (totalCompleted >= 15) unlock("bookworm");
+        if (totalCompleted >= 30) unlock("graduate");
+        if (chaptersStarted >= 3) unlock("explorer");
+        if (langsStarted >= 3) unlock("polyglot");
 
-        // Bintang
-        let currentStageStars: Record<string, number> = {};
-        if (lang === "en") currentStageStars = { ...get().stageStars };
-        else currentStageStars = { ...(langStore.progress[lang]?.stageStars || {}) };
-        
-        if (ctx.justCompletedStageId && ctx.justCompletedStars) {
-           currentStageStars[ctx.justCompletedStageId] = Math.max(currentStageStars[ctx.justCompletedStageId] || 0, ctx.justCompletedStars);
+        // Mastery: from saved stars, or from what happened in the stage just finished
+        if (anyThreeStars || ctx.justCompletedStars === 3) unlock("hat_trick");
+        if (ctx.allCorrect) {
+          unlock("perfectionist");
+          unlock("speedrun");
         }
-        const langStars3 = Object.values(currentStageStars).filter((s) => s >= 3).length;
+        if (Math.max(s.combo, langStore.getCombo()) >= 5) unlock("combo_master");
 
-        // 1. General & Mastery
-        if (!has("first_blood") && globalCompleted >= 1) unlockAchievement("first_blood");
-        if (!has("scholar") && globalCompleted >= 5) unlockAchievement("scholar");
-        if (!has("bookworm") && globalCompleted >= 15) unlockAchievement("bookworm");
-        if (!has("graduate") && globalCompleted >= 30) unlockAchievement("graduate");
-
-        if (!has("hat_trick") && ctx.justCompletedStars === 3) unlockAchievement("hat_trick");
-        if (!has("perfectionist") && ctx.allCorrect) unlockAchievement("perfectionist");
-        if (!has("speedrun") && ctx.allCorrect) unlockAchievement("speedrun");
-        if (!has("combo_master") && combo >= 5) unlockAchievement("combo_master");
-        
-        // Explorer (13 stage = setidaknya sudah menyentuh chapter 3 jika per chapter 6 stage)
-        if (!has("explorer") && globalCompleted >= 13) unlockAchievement("explorer");
-        
-        // Polyglot (Selesaikan minimal 1 stage di 3 bahasa berbeda)
-        const activeLangs = [enCompleted, jaCompleted, zhCompleted, koCompleted].filter(c => c > 0).length;
-        if (!has("polyglot") && activeLangs >= 3) unlockAchievement("polyglot");
-        
-        if (!has("night_owl") && hour >= 22) unlockAchievement("night_owl");
-        if (!has("early_bird") && hour < 7) unlockAchievement("early_bird");
-
-        // 2. XP & Streak
-        if (!has("xp_100") && xp >= 100) unlockAchievement("xp_100");
-        if (!has("xp_500") && xp >= 500) unlockAchievement("xp_500");
-        if (!has("xp_1500") && xp >= 1500) unlockAchievement("xp_1500");
-        if (!has("xp_3000") && xp >= 3000) unlockAchievement("xp_3000");
-        if (!has("xp_6000") && xp >= 6000) unlockAchievement("xp_6000");
-
-        if (!has("streak_3") && streak >= 3) unlockAchievement("streak_3");
-        if (!has("on_fire") && streak >= 7) unlockAchievement("on_fire");
-        if (!has("dedicated") && streak >= 30) unlockAchievement("dedicated");
-
-        // 3. Language Specific Mastery (Kini meng-cover "Master" untuk setiap bahasa)
-        if (lang === "en") {
-          if (!has("en_first")) unlockAchievement("en_first");
-          if (!has("en_chapter1") && ctx.completedChapterIds?.includes("1")) unlockAchievement("en_chapter1");
-          if (!has("en_all_stars") && langStars3 >= 5) unlockAchievement("en_all_stars");
-          if (!has("en_master") && enCompleted >= 30) unlockAchievement("en_master");
+        // Time of day: only when a stage was just finished
+        if (ctx.stageFinished) {
+          const hour = new Date().getHours();
+          if (hour >= 22) unlock("night_owl");
+          if (hour < 7) unlock("early_bird");
         }
-        if (lang === "ja") {
-          if (!has("ja_first")) unlockAchievement("ja_first");
-          if (!has("ja_hiragana") && ctx.completedChapterIds?.includes("1")) unlockAchievement("ja_hiragana");
-          if (!has("ja_all_stars") && langStars3 >= 5) unlockAchievement("ja_all_stars");
-          if (!has("ja_master") && jaCompleted >= 30) unlockAchievement("ja_master");
-        }
-        if (lang === "zh") {
-          if (!has("zh_first")) unlockAchievement("zh_first");
-          if (!has("zh_pinyin") && ctx.completedChapterIds?.includes("1")) unlockAchievement("zh_pinyin");
-          if (!has("zh_all_stars") && langStars3 >= 5) unlockAchievement("zh_all_stars");
-          if (!has("zh_master") && zhCompleted >= 30) unlockAchievement("zh_master");
-        }
-        if (lang === "ko") {
-          if (!has("ko_first")) unlockAchievement("ko_first");
-          if (!has("ko_hangul") && ctx.completedChapterIds?.includes("1")) unlockAchievement("ko_hangul");
-          if (!has("ko_all_stars") && langStars3 >= 5) unlockAchievement("ko_all_stars");
-          if (!has("ko_master") && koCompleted >= 30) unlockAchievement("ko_master");
-        }
+
+        // XP (all languages together) and streak
+        if (totalXp >= 100) unlock("xp_100");
+        if (totalXp >= 500) unlock("xp_500");
+        if (totalXp >= 1500) unlock("xp_1500");
+        if (totalXp >= 3000) unlock("xp_3000");
+        if (totalXp >= 6000) unlock("xp_6000");
+        if (s.streak >= 3) unlock("streak_3");
+        if (s.streak >= 7) unlock("on_fire");
+        if (s.streak >= 30) unlock("dedicated");
       },
 
       unlockAll: () => {

@@ -914,20 +914,9 @@ export default function AdventureQuiz({ feedData, chapter, stage, stageIndex, to
         setStreakIncreased(isStreakUp);
         useUserStore.getState().incrementDailyStage();
 
-        const isChapterComplete = chapter.stages.every((s: any) => 
-           isStageCompleted(s.id) || s.id === stage.id
-        );
-        const completedChapterIds = isChapterComplete ? [String(chapter.id)] : [];
-
-        useUserStore.getState().checkAndUnlockAchievements?.({ 
-          justCompletedStageId: stage.id, 
-          justCompletedStars: stars, 
-          allCorrect, 
-          completedChapterIds, 
-          language: selectedLanguage 
-        });
-
         markStageComplete(stage.id, xpEarnedRef.current);
+        // After the stage is saved as complete, so the check sees it (chapters, "master", counts)
+        useUserStore.getState().checkAndUnlockAchievements({ stageFinished: true, justCompletedStars: stars, allCorrect });
 
         try {
           const { data: { user } } = await supabase.auth.getUser();

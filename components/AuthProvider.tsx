@@ -6,7 +6,7 @@ import { useEffect, useRef } from 'react'
 import { supabase }          from '@/lib/supabase'
 import { useUserStore }      from '@/store/useUserStore'
 import { useLanguageStore }  from '@/store/useLanguageStore'
-import { resetCloudGate, restoreFromCloud } from '@/lib/cloud-save'
+import { resetCloudGate, restoreFromCloud, saveToCloud } from '@/lib/cloud-save'
 
 const STORE_KEYS = [
   'langlearn-user-store-v1',
@@ -26,6 +26,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (isMounted.current) return
     isMounted.current = true
+
+    // Achievements earned by progress saved on this phone (also for guests), found without popups
+    useUserStore.getState().checkAndUnlockAchievements({ silent: true })
 
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session?.user) {
@@ -81,6 +84,7 @@ async function handleLogin(userId: string) {
     if (lastUserId === userId) {
       // ── User sama, reload biasa → JANGAN reset; pakai progres yang lebih jauh (HP ini atau cloud)
       await restoreFromCloud(userId)
+      await unlockFromProgress(userId)
       return
     }
 
@@ -90,10 +94,19 @@ async function handleLogin(userId: string) {
     localStorage.setItem(LAST_USER_KEY, userId)
     await createLeaderboardRows(userId)
     await restoreFromCloud(userId)
+    await unlockFromProgress(userId)
 
   } finally {
     isHandlingLogin = false
   }
+}
+
+// Achievements the restored progress has earned (e.g. stages finished before an achievement existed),
+// unlocked without popups and saved to the cloud
+async function unlockFromProgress(userId: string) {
+  const before = useUserStore.getState().unlockedAchievements.length
+  useUserStore.getState().checkAndUnlockAchievements({ silent: true })
+  if (useUserStore.getState().unlockedAchievements.length > before) await saveToCloud(userId)
 }
 
 // Buat row kosong untuk semua bahasa di leaderboard jika belum ada
