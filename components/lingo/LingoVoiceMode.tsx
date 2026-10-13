@@ -1,13 +1,19 @@
 "use client";
 
 // "Bicara dengan Lingo": a full-screen Lingo that listens and answers out loud (English for now).
-// Listening uses the browser's speech recognition. Lingo answers in simple English with its own voice
-// (voice-server/, falls back to the device voice), and the Indonesian translation is shown as a caption.
-// One turn = listen → think → speak; after speaking Lingo listens again on its own until paused or closed.
+// Lingo answers in simple English with its own voice (voice-server/, falls back to the device voice), and the
+// Indonesian translation is shown as a caption.
+// Listening: when the voice server's pronunciation check is ready and the learner speaks English, the app records
+// their voice itself and the server both hears the words and checks the sounds; Lingo then kindly corrects a
+// mispronounced word out loud and a card shows a tip. Otherwise the browser's speech recognition is used.
+// One turn = listen → think → speak; after speaking Lingo listens again on its own until paused or closed
+// (after a correction it waits, so the learner can read the tip and try the word).
 
 import { useEffect, useRef, useState } from "react";
 import LingoAvatar, { type LingoState } from "@/components/lingo/LingoAvatar";
-import { checkLingoVoice, speakSegments, splitForSpeech, stopLingoSpeech } from "@/lib/lingo-speech";
+import { assessPronunciation, pronunciationNote, type PronunciationResult, wordsToFix } from "@/lib/lingo-pronunciation";
+import { getLingoVoiceHealth, speakSegments, splitForSpeech, stopLingoSpeech } from "@/lib/lingo-speech";
+import { MicRecorder } from "@/lib/mic-recorder";
 
 type Turn = { role: "user" | "assistant"; content: string };
 type Phase = "idle" | "listening" | "thinking" | "speaking";
@@ -29,6 +35,7 @@ function getRecognition(): (new () => Recognition) | null {
   const w = window as unknown as { SpeechRecognition?: new () => Recognition; webkitSpeechRecognition?: new () => Recognition };
   return w.SpeechRecognition ?? w.webkitSpeechRecognition ?? null;
 }
+const canRecord = () => typeof navigator !== "undefined" && !!navigator.mediaDevices?.getUserMedia;
 
 // Lingo's size on screen. Voice mode is only ever opened by a tap, so window is available.
 const fitSize = () => Math.round(Math.min(300, window.innerWidth * 0.62, window.innerHeight * 0.36));
@@ -65,6 +72,53 @@ const MicIcon =({ c, s }: { c: string; s: number }) => (
   </svg>
 );
 
+const SpeakerIcon = ({ c, s }: { c: string; s: number }) => (
+  <svg width={s} height={s} viewBox="0 0 24 24" fill="none">
+    <path d="M4 9v6h4l5 4V5L8 9H4z" stroke={c} strokeWidth="2" strokeLinejoin="round" />
+    <path d="M16.5 8.5a5 5 0 010 7" stroke={c} strokeWidth="2" strokeLinecap="round" />
+  </svg>
+);
+
+/** How the learner said it: the words to fix (words with the same tip together), a button to hear Lingo say
+ * each one, and the tip; or a short "clear!" when nothing needs fixing */
+function PronunciationCard({ result }: { result: PronunciationResult }) {
+  const fix = wordsToFix(result);
+  if (fix.length === 0) {
+    if (result.words.length === 0) return null;
+    return <div style={{ color: "#86efac", fontSize: 12.5, fontWeight: 600, textAlign: "center" }}>✓ Pengucapanmu jelas!</div>;
+  }
+  const groups: { tip: string; words: string[] }[] = [];
+  for (const w of fix) {
+    const tip = w.issues[0].tip;
+    const g = groups.find((x) => x.tip === tip);
+    if (g) g.words.push(w.word);
+    else groups.push({ tip, words: [w.word] });
+  }
+  return (
+    <div style={{ width: "100%", maxWidth: 420, borderRadius: 16, border: "1px solid rgba(250,204,21,0.25)", background: "rgba(250,204,21,0.06)", padding: "12px 14px", textAlign: "left" }}>
+      <div style={{ color: "#facc15", fontSize: 10.5, fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>Perbaiki pengucapan</div>
+      {groups.map((g, i) => (
+        <div key={g.tip} style={{ paddingTop: i ? 10 : 0, marginTop: i ? 10 : 0, borderTop: i ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 6 }}>
+            {g.words.map((word) => (
+              <button
+                key={word}
+                onClick={() => speakSegments([{ text: word, lang: "en-US" }], undefined, { natural: true })}
+                aria-label={`Dengar cara mengucapkan ${word}`}
+                style={{ display: "flex", alignItems: "center", gap: 6, padding: "5px 10px", borderRadius: 99, border: "1px solid rgba(92,250,46,0.4)", background: "rgba(92,250,46,0.1)", color: "#bef264", fontSize: 14, fontWeight: 800, cursor: "pointer", fontFamily: "system-ui, sans-serif" }}
+              >
+                <SpeakerIcon c="#bef264" s={14} />
+                {word}
+              </button>
+            ))}
+          </div>
+          <p style={{ margin: 0, color: "#d4d4d8", fontSize: 12.5, lineHeight: 1.5 }}>{g.tip}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }: {
   /** The language being learned */
   target: { flag: string; name: string; ttsLang: string };
@@ -82,17 +136,36 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
   const [hint, setHint] = useState("");
   const [hearLang, setHearLang] = useState(target.ttsLang); // practising: speak in the language being learned
   const [size, setSize] = useState(fitSize);
-  const [supported] = useState(() => !!getRecognition());
+  const [recognition] = useState(() => !!getRecognition());
   const [naturalVoice, setNaturalVoice] = useState<boolean | null>(null); // Lingo's voice server reachable?
+  const [pron, setPron] = useState<"ready" | "loading" | "off">("off"); // pronunciation check on the voice server
+  const [pronOn, setPronOn] = useState(true); // the learner can turn the correction off
+  const [checking, setChecking] = useState(false);
+  const [check, setCheck] = useState<PronunciationResult | null>(null);
+  const [micLevel, setMicLevel] = useState(0);
+  const [recording, setRecording] = useState(false); // shown as a halo that follows the voice
 
-  // Wake Lingo's voice server and show which voice will be used
+  // Wake Lingo's voice server and see what it can do; while the pronunciation check is still loading, ask again
   useEffect(() => {
     let alive = true;
-    void checkLingoVoice().then((ok) => { if (alive) setNaturalVoice(ok); });
-    return () => { alive = false; };
+    let tries = 0;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const poll = () => {
+      void getLingoVoiceHealth().then((h) => {
+        if (!alive) return;
+        setNaturalVoice(h !== null);
+        setPron(h?.pronunciation ?? "off");
+        if (h?.pronunciation === "loading" && ++tries < 12) timer = setTimeout(poll, 10_000);
+      });
+    };
+    poll();
+    return () => { alive = false; clearTimeout(timer); };
   }, []);
 
   const recRef = useRef<Recognition | null>(null);
+  const recorderRef = useRef<MicRecorder | null>(null);
+  const recordingRef = useRef(false); // listening through our own recorder (not the browser's recognition)
+  const turnRef = useRef(0); // increases when a turn is cut off, so late answers from it are ignored
   const historyRef = useRef<Turn[]>(history);
   const openRef = useRef(true);
   const autoRef = useRef(false); // keep the conversation going hands-free
@@ -108,21 +181,38 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
       window.removeEventListener("resize", fit);
       recRef.current?.abort();
       recRef.current = null;
+      recorderRef.current?.close();
+      recorderRef.current = null;
       stopLingoSpeech();
     };
   }, []);
 
-  // The latest versions of listen/answer, so recognition and speech callbacks never use stale ones
-  const actions = useRef<{ listen: () => void; answer: (text: string) => Promise<void> } | null>(null);
+  // Record and check pronunciation: the server is ready, the learner wants it, and they speak English
+  const checkPronunciation = pron === "ready" && pronOn && canRecord() && hearLang.toLowerCase().startsWith("en");
+  const supported = checkPronunciation || recognition;
 
-  function listen() {
-    const SR = getRecognition();
-    if (!SR || !openRef.current) return;
-    stopLingoSpeech();
+  // The latest versions of the actions, so recognition, recorder and speech callbacks never use stale ones
+  const actions = useRef<{ listen: () => void; answer: (text: string, note?: string) => Promise<void>; finishRecording: () => Promise<void> } | null>(null);
+
+  function stopListening() {
     const old = recRef.current;
     recRef.current = null;
     old?.abort();
+    recordingRef.current = false;
+    recorderRef.current?.cancel();
+    setRecording(false);
+    setMicLevel(0);
+  }
 
+  function listen() {
+    if (!openRef.current) return;
+    stopLingoSpeech();
+    stopListening();
+    turnRef.current++;
+    if (checkPronunciation) { void listenRecorded(); return; }
+
+    const SR = getRecognition();
+    if (!SR) return;
     const rec = new SR();
     rec.lang = hearLangRef.current;
     rec.continuous = false; // ends by itself after a short pause
@@ -149,17 +239,82 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
     recRef.current = rec;
     setHeard("");
     setHint("");
+    setCheck(null);
     setPhase("listening");
     try { rec.start(); } catch { recRef.current = null; setPhase("idle"); }
   }
 
-  async function answer(text: string) {
+  async function listenRecorded() {
+    const turn = turnRef.current;
+    const recorder = recorderRef.current ?? new MicRecorder();
+    recorderRef.current = recorder;
+    try {
+      await recorder.open(); // asks for the microphone the first time only
+    } catch {
+      autoRef.current = false;
+      setPhase("idle");
+      setHint("Izinkan akses mikrofon dulu, lalu ketuk lagi.");
+      return;
+    }
+    if (!openRef.current || turn !== turnRef.current) return;
+    setHeard("");
+    setHint("");
+    setCheck(null);
+    setPhase("listening");
+    recordingRef.current = true;
+    setRecording(true);
+    recorder.start({ onLevel: setMicLevel, onEnd: () => void actions.current?.finishRecording() });
+  }
+
+  async function finishRecording() {
+    const recorder = recorderRef.current;
+    if (!recordingRef.current || !recorder) return;
+    recordingRef.current = false;
+    setRecording(false);
+    const turn = turnRef.current;
+    const wav = recorder.stop();
+    setMicLevel(0);
+    if (!wav) {
+      autoRef.current = false;
+      setPhase("idle");
+      setHint("Saya belum mendengar suaramu. Ketuk mikrofon untuk bicara.");
+      return;
+    }
+    setPhase("thinking");
+    setChecking(true);
+    const result = await assessPronunciation(wav);
+    setChecking(false);
+    if (!openRef.current || turn !== turnRef.current) return;
+    if (!result) {
+      // The check is not available right now: go on with the browser's recognition
+      setPron("off");
+      autoRef.current = false;
+      setPhase("idle");
+      setHint("Koreksi pengucapan sedang tidak tersedia. Ketuk mikrofon dan ulangi, ya.");
+      return;
+    }
+    if (!result.said.trim()) {
+      autoRef.current = false;
+      setPhase("idle");
+      setHint("Suaramu kurang jelas. Coba ulangi lebih dekat ke mikrofon.");
+      return;
+    }
+    setHeard(result.said);
+    setCheck(result);
+    // After a correction, wait for the learner (to read the tip and try the word) instead of listening right away
+    if (wordsToFix(result).length > 0) autoRef.current = false;
+    void actions.current?.answer(result.said, pronunciationNote(result));
+  }
+
+  async function answer(text: string, note = "") {
+    const turn = turnRef.current;
     setPhase("thinking");
     setReply("");
     setTranslation("");
     let res: string;
-    try { res = await ask(historyRef.current, text); } catch { res = "Maaf, ada gangguan. Coba lagi ya."; }
-    if (!openRef.current) return;
+    // The note (how the learner pronounced it) goes only to Lingo; the chat keeps the learner's own words
+    try { res = await ask(historyRef.current, note ? `${text}\n\n${note}` : text); } catch { res = "Maaf, ada gangguan. Coba lagi ya."; }
+    if (!openRef.current || turn !== turnRef.current) return;
     historyRef.current = [...historyRef.current, { role: "user", content: text }, { role: "assistant", content: res }];
     const parsed = splitTranslation(res);
     onTurn(text, parsed ? `${parsed.spoken}\n\n🇮🇩 ${parsed.translation}` : res);
@@ -175,21 +330,25 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
     else speakSegments(splitForSpeech(res), afterSpeaking); // Indonesian (e.g. an error message): device voice
   }
   useEffect(() => {
-    actions.current = { listen, answer };
+    actions.current = { listen, answer, finishRecording };
   });
 
   function pause() {
     autoRef.current = false;
-    const rec = recRef.current;
-    recRef.current = null;
-    rec?.abort();
+    turnRef.current++;
+    stopListening();
+    setChecking(false);
     stopLingoSpeech();
     setPhase("idle");
   }
 
   function onMic() {
     if (!supported) return;
-    if (phase === "listening") { recRef.current?.stop(); return; } // done talking: send now
+    if (phase === "listening") { // done talking: send now
+      if (recordingRef.current) void finishRecording();
+      else recRef.current?.stop();
+      return;
+    }
     if (phase === "thinking") return;
     autoRef.current = true;
     listen(); // from idle, or cutting in while Lingo is speaking
@@ -198,7 +357,7 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
   function changeHearLang(l: string) {
     setHearLang(l);
     hearLangRef.current = l;
-    if (phase === "listening") listen(); // restart in the new language
+    if (phase === "listening") pause(); // the way of listening may change with the language: tap again to talk
   }
 
   useEffect(() => {
@@ -211,9 +370,9 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
   const status = !supported
     ? "Browser ini belum bisa mendengar suara. Coba buka Lingora di Chrome."
     : phase === "listening" ? "Saya mendengarkan…"
-    : phase === "thinking" ? "Sebentar, saya pikirkan dulu…"
+    : phase === "thinking" ? (checking ? "Saya dengarkan cara kamu mengucapkannya…" : "Sebentar, saya pikirkan dulu…")
     : phase === "speaking" ? "Ketuk mikrofon untuk menyela"
-    : hint || "Ketuk mikrofon, lalu mulai bicara";
+    : hint || (check && wordsToFix(check).length > 0 ? "Coba ucapkan katanya, lalu ketuk mikrofon untuk lanjut" : "Ketuk mikrofon, lalu mulai bicara");
   const glow = phase === "thinking" ? "rgba(250,204,21,0.16)" : phase === "idle" ? "rgba(92,250,46,0.07)" : "rgba(92,250,46,0.2)";
   const chip = (active: boolean): React.CSSProperties => ({
     padding: "6px 12px", borderRadius: 99, fontSize: 12, fontWeight: 600, cursor: "pointer",
@@ -221,6 +380,10 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
     background: active ? "rgba(92,250,46,0.1)" : "rgba(255,255,255,0.03)",
     color: active ? "#bef264" : "#71717a", fontFamily: "system-ui, sans-serif",
   });
+  const speaksTarget = hearLang.toLowerCase().startsWith("en");
+  // The correction card needs room: Lingo is drawn smaller while it shows
+  const showCard = !!check && phase !== "listening" && phase !== "thinking";
+  const lingoSize = showCard && wordsToFix(check).length > 0 ? Math.round(size * 0.6) : size;
 
   return (
     <div role="dialog" aria-modal="true" aria-label="Bicara dengan Lingo"
@@ -249,20 +412,26 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
         <div style={{ width: 38 }} />
       </div>
 
-      {/* Which language the user speaks in */}
-      <div style={{ display: "flex", alignItems: "center", gap: 6, position: "relative" }}>
+      {/* Which language the user speaks in, and whether Lingo corrects their pronunciation */}
+      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: 6, position: "relative", padding: "0 16px" }}>
         <span style={{ color: "#52525b", fontSize: 12, marginRight: 2 }}>Aku bicara:</span>
         <button onClick={() => changeHearLang("id-ID")} style={chip(hearLang === "id-ID")}>🇮🇩 Indonesia</button>
         <button onClick={() => changeHearLang(target.ttsLang)} style={chip(hearLang === target.ttsLang)}>{target.flag} {target.name}</button>
       </div>
+      {pron === "ready" && canRecord() && speaksTarget && (
+        <button onClick={() => { if (phase === "listening") pause(); setPronOn((v) => !v); }} aria-pressed={pronOn}
+          style={{ ...chip(pronOn), marginTop: 8, position: "relative" }}>
+          🎯 Koreksi pengucapan: {pronOn ? "Aktif" : "Mati"}
+        </button>
+      )}
 
       {/* Lingo */}
-      <div style={{ flex: 1, minHeight: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 18, position: "relative", width: "100%", maxWidth: 520, padding: "0 24px" }}>
-        <LingoAvatar size={size} state={avatarState} />
+      <div style={{ flex: 1, minHeight: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, position: "relative", width: "100%", maxWidth: 520, padding: "0 24px" }}>
+        <LingoAvatar size={lingoSize} state={avatarState} />
         <div aria-live="polite" style={{ color: phase === "thinking" ? "#facc15" : phase === "idle" ? "#71717a" : "#86efac", fontSize: 14, fontWeight: 600, textAlign: "center", minHeight: 20 }}>{status}</div>
 
         {/* What was heard, and what Lingo answered */}
-        <div style={{ minHeight: 96, maxHeight: "24vh", overflowY: "auto", textAlign: "center", scrollbarWidth: "none" }}>
+        <div style={{ minHeight: 72, maxHeight: "20vh", overflowY: "auto", textAlign: "center", scrollbarWidth: "none" }}>
           {heard && (
             <p style={{ color: phase === "listening" ? "#e4e4e7" : "#71717a", fontSize: phase === "listening" ? 17 : 13.5, lineHeight: 1.5, margin: "0 0 10px", transition: "all 0.2s" }}>“{heard}”</p>
           )}
@@ -273,6 +442,7 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
             <p style={{ color: "#71717a", fontSize: 13, lineHeight: 1.5, margin: "8px 0 0" }}>🇮🇩 {translation}</p>
           )}
         </div>
+        {showCard && check && <PronunciationCard result={check} />}
       </div>
 
       {/* Controls */}
@@ -281,6 +451,10 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
           {phase === "listening" && [0, 0.8].map(d => (
             <span key={d} style={{ position: "absolute", inset: 0, borderRadius: "50%", border: "2px solid rgba(92,250,46,0.6)", animation: `lvmRing 1.6s ease-out ${d}s infinite` }} />
           ))}
+          {/* While recording, a soft halo follows how loud the learner speaks */}
+          {phase === "listening" && recording && (
+            <span style={{ position: "absolute", inset: -6, borderRadius: "50%", background: "rgba(92,250,46,0.18)", transform: `scale(${1 + micLevel * 0.45})`, transition: "transform 0.08s linear" }} />
+          )}
           <button onClick={onMic} disabled={!supported || phase === "thinking"}
             aria-label={phase === "listening" ? "Selesai bicara" : "Mulai bicara"}
             style={{ position: "absolute", inset: 0, borderRadius: "50%", border: "none", cursor: !supported || phase === "thinking" ? "default" : "pointer", display: "flex", alignItems: "center", justifyContent: "center",

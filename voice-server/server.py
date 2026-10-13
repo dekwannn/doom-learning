@@ -40,7 +40,9 @@ PORT = int(os.environ.get("LINGO_VOICE_PORT", "8800"))
 VOICE = os.environ.get("LINGO_VOICE", "af_heart")
 SPEED = float(os.environ.get("LINGO_VOICE_SPEED", "1.05"))
 MAX_CHARS = 400  # one or two sentences per request; the app sends Lingo's reply sentence by sentence
-RATE = (60, 600)  # at most 60 requests per 10 minutes per address (the server may be reachable through a tunnel)
+# At most 150 requests per 10 minutes per address (the server may be reachable through a tunnel).
+# One spoken turn is about 1 pronunciation check plus 3-5 sentences of Lingo's voice.
+RATE = (150, 600)
 
 # Browsers allowed to call this server (web app, local dev, Capacitor Android) plus any extra ones from the env
 ALLOWED_ORIGINS = {

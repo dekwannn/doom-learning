@@ -69,22 +69,32 @@ export function getLingoVoiceLevel(): number | null {
   return level;
 }
 
-/** Whether Lingo's voice server answers (also wakes it up); false when none is configured */
-export async function checkLingoVoice(): Promise<boolean> {
-  if (!VOICE_URL) return false;
+/** Lingo's voice server address (NEXT_PUBLIC_LINGO_VOICE_URL), "" when none is configured */
+export const LINGO_VOICE_URL = VOICE_URL;
+
+/** What Lingo's voice server can do right now (also wakes it up); null when it does not answer or none is configured */
+export async function getLingoVoiceHealth(): Promise<{ pronunciation: "ready" | "loading" | "off" } | null> {
+  if (!VOICE_URL) return null;
   try {
     const res = await fetch(`${VOICE_URL}/health`, { headers: VOICE_HEADERS, signal: AbortSignal.timeout(4000) });
-    const ok = res.ok;
-    if (ok) naturalOffUntil = 0;
-    return ok;
+    if (!res.ok) return null;
+    naturalOffUntil = 0;
+    const data = (await res.json().catch(() => ({}))) as { pronunciation?: string };
+    return { pronunciation: data.pronunciation === "ready" || data.pronunciation === "loading" ? data.pronunciation : "off" };
   } catch {
-    return false;
+    return null;
   }
+}
+
+/** Whether Lingo's voice server answers (also wakes it up); false when none is configured */
+export async function checkLingoVoice(): Promise<boolean> {
+  return (await getLingoVoiceHealth()) !== null;
 }
 
 /** Splits text into sentences (short first sentence = Lingo starts talking sooner) */
 function sentences(text: string): string[] {
-  const parts = text.match(/[^.!?]+[.!?]+["')\]]*|[^.!?]+$/g) ?? [text];
+  // A closing quote (straight or curly) stays with its sentence: The phrase is “I love you.” | Can you try?
+  const parts = text.match(/[^.!?]+[.!?]+["'”’»)\]]*|[^.!?]+$/g) ?? [text];
   return parts.map((s) => s.trim()).filter(Boolean).flatMap((s) => (s.length > 380 ? s.match(/.{1,380}(\s|$)/g)!.map((p) => p.trim()) : [s]));
 }
 
@@ -130,9 +140,11 @@ async function speakNatural(parts: SpeechSegment[], myRun: number, onDone?: () =
   if (!VOICE_URL || !c || !analyser || Date.now() < naturalOffUntil) return false;
   if (!parts.every((p) => p.lang.toLowerCase().startsWith("en"))) return false; // the server speaks English only
 
-  // Ask for every sentence at once (the server answers them in turn) and play each as soon as it is ready
+  // Ask for the sentences one after another, in order (the first one is ready soonest), and play each as soon
+  // as it is ready while the next one is being made
   const list = parts.flatMap((p) => sentences(p.text));
-  const clips = list.map((s) => fetchClip(s));
+  const clips: Promise<ArrayBuffer | null>[] = [];
+  list.forEach((s, i) => clips.push(i === 0 ? fetchClip(s) : clips[i - 1].then(() => (myRun === run ? fetchClip(s) : null))));
   const decode = async (i: number) => {
     const wav = await clips[i];
     return wav ? c.decodeAudioData(wav).catch(() => null) : null;

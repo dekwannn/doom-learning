@@ -49,6 +49,12 @@ sounds that were heard, a score and, per word, the mistakes with a tip. With `ta
 tried to say) the check is exact; without it, what Whisper heard is used, which can hide a mistake
 ("three" said as "tree" is written as "tree").
 
+In the app, "Bicara dengan Lingo" uses it while the learner speaks English: the app records the voice itself
+(instead of the browser's speech recognition), Lingo kindly corrects a mispronounced word out loud, and a card
+shows the tip with a button to hear the word. Normal weak forms ("has" as həz), "a" before n/ng ("thank") and a
+final sound merging into the next word ("this song") are not reported. When the check is off or unreachable,
+the app goes back to the browser's speech recognition.
+
 ## Phones of friends (outside this computer)
 
 `localhost` only works on this computer. To let other phones reach the server, open it through
