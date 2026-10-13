@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { askLingo } from "@/lib/lingo-ai";
 import { useLanguageStore } from "@/store/useLanguageStore";
 import { useProgress } from "@/hooks/useProgress";
+import { useUserStore } from "@/store/useUserStore";
 import { StrokeOrderModal } from "@/components/StrokeOrderModal";
 
 import enStudyData from "@/data/studyData.json";
@@ -3116,6 +3117,9 @@ export default function LearnStagePage({ params }: Props) {
                 lang={selectedLanguage}
                 onAllDone={() => {
                   setPracticeComplete(true);
+                  // Belajar materi juga menjaga streak harian dan dihitung untuk target "Baca materi"
+                  useUserStore.getState().updateStreak();
+                  useUserStore.getState().incrementDailyMaterial();
                   addXp(totalXp);
                 }}
               />

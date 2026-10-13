@@ -9,36 +9,8 @@ import type { User, Session } from '@supabase/supabase-js'
 import { useUserStore } from '@/store/useUserStore'
 import { useLanguageStore } from '@/store/useLanguageStore'
 
-// Fungsi untuk mendownload dan merestore data dari Cloud ke Device lokal
-async function restoreProgressFromCloud(userId: string) {
-  try {
-    const { data, error } = await supabase.from('profiles').select('save_data').eq('id', userId).single()
-    if (error) return
-
-    if (data && data.save_data) {
-      const { userStore, langStore } = data.save_data as any
-      
-      // 1. Ambil data pending achievement yang mungkin sedang berjalan di layar
-      if (userStore) {
-        const currentPending = useUserStore.getState().pendingAchievements || [];
-        useUserStore.setState({ ...userStore, pendingAchievements: currentPending });
-      }
-      
-      // 2. Jangan timpa pilihan bahasa (selectedLanguage) jika di Cloud ternyata kosong
-      if (langStore) {
-        const currentLang = useLanguageStore.getState().selectedLanguage;
-        useLanguageStore.setState({ 
-          ...langStore, 
-          // currentLang ditaruh di depan agar selalu menang!
-          selectedLanguage: currentLang || langStore.selectedLanguage 
-        });
-      }
-      console.log('✅ Cloud Save berhasil di-download!')
-    }
-  } catch (error) {
-    console.error('Gagal mendownload Cloud Save:', error)
-  }
-}
+// Catatan: progres dari cloud dipulihkan sekali oleh AuthProvider (lib/cloud-save.ts), bukan di sini,
+// supaya tidak ada dua proses yang saling menimpa progres.
 
 export function useAuth() {
   const [user, setUser]       = useState<User | null>(null)
@@ -47,27 +19,17 @@ export function useAuth() {
 
   useEffect(() => {
     // Ambil session awal
-    supabase.auth.getSession().then(async ({ data: { session } }) => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session)
       setUser(session?.user ?? null)
-      
-      // Jika sudah login saat web baru dibuka, download progress
-      if (session?.user) {
-        await restoreProgressFromCloud(session.user.id)
-      }
       setLoading(false)
     })
 
     // Listen perubahan auth state (misal: baru saja login / daftar)
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
+      (_event, session) => {
         setSession(session)
         setUser(session?.user ?? null)
-        
-        // Cukup panggil saat event SIGNED_IN (login / register sukses)
-        if (session?.user && event === 'SIGNED_IN') {
-           await restoreProgressFromCloud(session.user.id)
-        }
         setLoading(false)
       }
     )

@@ -6,6 +6,7 @@ import { useEffect, useRef } from 'react'
 import { supabase }          from '@/lib/supabase'
 import { useUserStore }      from '@/store/useUserStore'
 import { useLanguageStore }  from '@/store/useLanguageStore'
+import { resetCloudGate, restoreFromCloud } from '@/lib/cloud-save'
 
 const STORE_KEYS = [
   'langlearn-user-store-v1',
@@ -42,6 +43,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           localStorage.removeItem(LAST_USER_KEY)
           clearLocalStorage()
           resetStores()
+          resetCloudGate()
         }
       }
     )
@@ -73,59 +75,33 @@ async function handleLogin(userId: string) {
     const lastUserId = localStorage.getItem(LAST_USER_KEY)
 
     if (lastUserId === userId) {
-      // ── User sama, reload biasa → JANGAN reset, langsung load dari Supabase
-      // ke Zustand hanya jika store kosong (xp = 0 semua)
-      await syncFromSupabase(userId, false)
+      // ── User sama, reload biasa → JANGAN reset; pakai progres yang lebih jauh (HP ini atau cloud)
+      await restoreFromCloud(userId)
       return
     }
 
-    // ── User berbeda / pertama kali login → reset semua lalu load
+    // ── User berbeda / pertama kali login di HP ini → reset semua lalu ambil dari cloud
     clearLocalStorage()
     resetStores()
     localStorage.setItem(LAST_USER_KEY, userId)
-    await syncFromSupabase(userId, true)
+    await createLeaderboardRows(userId)
+    await restoreFromCloud(userId)
 
   } finally {
     isHandlingLogin = false
   }
 }
 
-async function syncFromSupabase(userId: string, isNewLogin: boolean) {
-  // Buat row kosong untuk semua bahasa jika belum ada
-  // ignoreDuplicates: true — tidak overwrite data yang sudah ada
-  if (isNewLogin) {
-    const langs: LangCode[] = ['en', 'ja', 'zh', 'ko']
-    for (const lang of langs) {
-      await supabase
-        .from('xp_progress')
-        .upsert(
-          { user_id: userId, language_code: lang, total_xp: 0, stages_completed: 0 },
-          { onConflict: 'user_id,language_code', ignoreDuplicates: true }
-        )
-    }
+// Buat row kosong untuk semua bahasa di leaderboard jika belum ada
+// ignoreDuplicates: true — tidak overwrite data yang sudah ada
+async function createLeaderboardRows(userId: string) {
+  const langs: LangCode[] = ['en', 'ja', 'zh', 'ko']
+  for (const lang of langs) {
+    await supabase
+      .from('xp_progress')
+      .upsert(
+        { user_id: userId, language_code: lang, total_xp: 0, stages_completed: 0 },
+        { onConflict: 'user_id,language_code', ignoreDuplicates: true }
+      )
   }
-
-  // Fetch progress dari Supabase
-  const { data, error } = await supabase
-    .from('xp_progress')
-    .select('language_code, total_xp, stages_completed')
-    .eq('user_id', userId)
-
-  if (error) {
-    console.warn('[AuthProvider] Gagal fetch progress:', error.message)
-    return
-  }
-
-  if (!data || data.length === 0) return
-
-  // Isi ke store per bahasa
-  data.forEach(row => {
-    const lang = row.language_code as LangCode
-    if (row.total_xp === 0) return // skip kalau 0, biarkan store default
-    if (lang === 'en') {
-      useUserStore.getState().setXpDirect?.(row.total_xp)
-    } else {
-      useLanguageStore.getState().setXpDirect?.(lang, row.total_xp)
-    }
-  })
 }

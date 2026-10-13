@@ -4,6 +4,7 @@
 import { useUserStore }     from '@/store/useUserStore';
 import { useLanguageStore } from '@/store/useLanguageStore';
 import { supabase }         from '@/lib/supabase';
+import { saveToCloud, whenCloudReady } from '@/lib/cloud-save';
 import { useCallback }      from 'react';
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -78,19 +79,10 @@ export function useProgress() {
         p_stages_to_add: stagesToAdd,
       });
 
-      // 2. Tembakkan CLOUD SAVE ke tabel profiles
-      const userState = useUserStore.getState();
-      const langState = useLanguageStore.getState();
-
-      await supabase
-        .from('profiles')
-        .update({
-          save_data: {
-            userStore: userState,
-            langStore: langState
-          }
-        })
-        .eq('id', user.id);
+      // 2. CLOUD SAVE ke tabel profiles — tunggu sampai progres dari cloud sudah diambil,
+      //    supaya HP baru tidak menimpa progres lama dengan data kosong
+      await whenCloudReady();
+      await saveToCloud(user.id);
 
     } catch (err) {
       console.warn('[useProgress] Supabase sync failed:', err);
