@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import { useAuth } from '@/hooks/useAuth'
-import { ChevronLeft, Flame, Globe } from 'lucide-react'
+import { ChevronLeft, Flame, Globe, Crown, Zap } from 'lucide-react'
 import Link from 'next/link'
 
 type LangFilter = 'all' | 'en' | 'ja' | 'zh' | 'ko'
@@ -19,11 +19,11 @@ interface Entry {
 }
 
 const LANGS: { code: LangFilter; label: string; flag: string }[] = [
-  { code:'all', label:'Semua',   flag:'🌍' },
-  { code:'en',  label:'English', flag:'🇬🇧' },
-  { code:'ja',  label:'日本語',   flag:'🇯🇵' },
-  { code:'zh',  label:'中文',     flag:'🇨🇳' },
-  { code:'ko',  label:'한국어',   flag:'🇰🇷' },
+  { code:'all', label:'Semua',   flag:'' },
+  { code:'en',  label:'English', flag:'EN' },
+  { code:'ja',  label:'日本語',   flag:'JA' },
+  { code:'zh',  label:'中文',     flag:'ZH' },
+  { code:'ko',  label:'한국어',   flag:'KO' },
 ]
 
 function useBreakpoint() {
@@ -195,7 +195,7 @@ export default function LeaderboardPage() {
                   transition:'all 0.18s',
                   marginBottom:-1,
                 }}>
-                  <span style={{ fontSize:14 }}>{l.flag}</span>
+                  {l.flag ? <span style={{ fontSize:10, fontWeight:800, letterSpacing:'0.06em' }}>{l.flag}</span> : <Globe size={13} />}
                   {l.label}
                 </button>
               )
@@ -240,7 +240,7 @@ export default function LeaderboardPage() {
                           {/* Rank badge / crown */}
                           <div style={{ height:28, display:'flex', alignItems:'center', justifyContent:'center', marginBottom:6 }}>
                             {isFirst ? (
-                              <span style={{ fontSize: isTablet ? 24 : 20, animation:'float 3s ease-in-out infinite', filter:'drop-shadow(0 0 6px rgba(250,204,21,0.5))' }}>👑</span>
+                              <span style={{ fontSize: isTablet ? 24 : 20, animation:'float 3s ease-in-out infinite', filter:'drop-shadow(0 0 6px rgba(250,204,21,0.5))', display:'inline-flex' }}><Crown size={isTablet ? 24 : 20} color="#facc15" fill="#facc15" /></span>
                             ) : (
                               <div style={{ display:'flex', flexDirection:'column', alignItems:'center' }}>
                                 <div style={{ width:0, height:0, borderLeft:'5px solid transparent', borderRight:'5px solid transparent', borderBottom:`6px solid ${col}`, marginBottom:1 }}/>
@@ -263,7 +263,7 @@ export default function LeaderboardPage() {
 
                           {/* XP score */}
                           <div style={{ display:'flex', alignItems:'center', gap:4 }}>
-                            <span style={{ fontSize: isFirst ? 14 : 12 }}>⚡</span>
+                            <Zap size={isFirst ? 14 : 12} color="#facc15" fill="#facc15" />
                             <span style={{ color:col, fontSize: isFirst ? 16 : 13, fontWeight:900, letterSpacing:'-0.02em' }}>
                               {entry.total_xp.toLocaleString()}
                             </span>
@@ -339,7 +339,7 @@ export default function LeaderboardPage() {
 
                       {/* XP right */}
                       <div style={{ display:'flex', alignItems:'center', gap:4, flexShrink:0 }}>
-                        <span style={{ fontSize:13 }}>⚡</span>
+                        <Zap size={13} color="#facc15" fill="#facc15" />
                         <span style={{ color: isMe ? '#a5b4fc' : '#facc15', fontSize:15, fontWeight:900, letterSpacing:'-0.02em' }}>
                           {entry.total_xp.toLocaleString()}
                         </span>
@@ -354,7 +354,7 @@ export default function LeaderboardPage() {
                 <div style={{ margin:'20px 16px 0', padding:'14px 18px', background:'rgba(99,102,241,0.07)', border:'1px solid rgba(99,102,241,0.18)', borderRadius:16, display:'flex', alignItems:'center', gap:12 }}>
                   <Globe size={15} color="#818cf8" style={{ flexShrink:0 }}/>
                   <p style={{ color:'#818cf8', fontSize:12, margin:0, lineHeight:1.5 }}>
-                    Kamu belum masuk top 50 untuk <strong>{filter === 'all' ? 'semua bahasa' : LANGS.find(l=>l.code===filter)?.label}</strong>. Terus semangat! 💪
+                    Kamu belum masuk top 50 untuk <strong>{filter === 'all' ? 'semua bahasa' : LANGS.find(l=>l.code===filter)?.label}</strong>. Terus semangat!
                   </p>
                 </div>
               )}

@@ -196,7 +196,7 @@ export default function MatchingCard({ data, xpReward, onResult }: Props) {
           )
         ) : (
           <p style={{ color: isCorrect ? '#34d399' : '#f87171', fontSize:11, fontWeight:700 }}>
-            {isCorrect ? '✓ Semua benar!' : '✗ Ada yang salah'}
+            {isCorrect ? 'Semua benar!' : 'Ada yang salah'}
           </p>
         )}
       </div>
@@ -307,7 +307,7 @@ export default function MatchingCard({ data, xpReward, onResult }: Props) {
             cursor: allMatched ? 'pointer' : 'default',
           }}
         >
-          {allMatched ? '✓ Check Matches' : `${matchedCount} / ${pairs.length} matched`}
+          {allMatched ? 'Check Matches' : `${matchedCount} / ${pairs.length} matched`}
         </button>
       ) : (
         <div style={{
@@ -318,7 +318,7 @@ export default function MatchingCard({ data, xpReward, onResult }: Props) {
         }}>
           <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
             <p style={{ color: isCorrect ? '#34d399' : '#f87171', fontSize:14, fontWeight:800 }}>
-              {isCorrect ? '🎉 Perfect Match!' : '✗ Not quite right'}
+              {isCorrect ? 'Perfect Match!' : 'Not quite right'}
             </p>
             {isCorrect && (
               <p style={{ color:'#71717a', fontSize:12, fontWeight:700 }}>+{earnedXp} XP</p>

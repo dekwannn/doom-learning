@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { askLingo } from '@/lib/lingo-ai';
+import { MessageCircle, Volume2, BookOpen } from "lucide-react";
 
 /* ══════════════════════════════════════════════════════════
    TYPES
@@ -335,7 +336,7 @@ export function LingoModal({ isOpen, onClose, context, initialPrompt }: Props) {
                   }}
                 >
                   <span style={{ fontSize: 14, flexShrink: 0 }}>
-                    {i === 0 ? '💬' : i === 1 ? '🔊' : '📖'}
+                    {i === 0 ? <MessageCircle size={14} /> : i === 1 ? <Volume2 size={14} /> : <BookOpen size={14} />}
                   </span>
                   {s}
                 </button>

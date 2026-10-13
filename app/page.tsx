@@ -10,7 +10,7 @@ import dummyData from '@/data/dummyData.json';
 import jaData from '@/data/jaData.json';
 import zhData from '@/data/zhData.json';
 import koData from '@/data/koData.json';
-import { Map, PenLine, Flame, Star, ChevronRight, BookOpen, Zap, Trophy, TrendingUp } from 'lucide-react';
+import { Map, PenLine, Flame, Star, ChevronRight, BookOpen, Zap, Trophy, TrendingUp, Lock } from 'lucide-react';
 
 const DATA_MAP: Record<string, any> = {
   en: dummyData,
@@ -103,7 +103,7 @@ function ChapterRow({ ch, xp, stageStars, stageUnlocked, wide=false }: { ch:any;
               <span style={{ color:chUnlocked?'#e4e4e7':'#3f3f46',fontSize:wide?14:13,fontWeight:700,display:'block' }}>{ch.title}</span>
               {wide&&<span style={{ color:'#52525b',fontSize:11,fontWeight:500 }}>{ch.subtitle}</span>}
             </div>
-            <span style={{ color:'#52525b',fontSize:11,flexShrink:0,marginLeft:8 }}>{chUnlocked?`${chCompleted}/${chStages.length}`:`🔒 ${ch.xpRequired} XP`}</span>
+            <span style={{ color:'#52525b',fontSize:11,flexShrink:0,marginLeft:8,whiteSpace:'nowrap' }}>{chUnlocked?`${chCompleted}/${chStages.length}`:<><Lock size={10} style={{ display:'inline-block', verticalAlign:'-1px', marginRight:3 }}/>{ch.xpRequired} XP</>}</span>
           </div>
           {chUnlocked&&<div style={{ height:3,background:'rgba(255,255,255,0.05)',borderRadius:99,overflow:'hidden' }}><div style={{ height:'100%',width:`${chPct}%`,background:ch.color,borderRadius:99,boxShadow:`0 0 6px ${ch.color}60`,transition:'width 0.8s ease' }}/></div>}
         </div>
@@ -163,14 +163,14 @@ function LanguagePill() {
   const selectedLanguage = useLanguageStore(s => s.selectedLanguage);
   const lang = LANGUAGES.find(l => l.code === (selectedLanguage ?? 'en'));
   if (!lang) return null;
-  const flagMap: Record<string, string> = { ja:'🇯🇵', zh:'🇨🇳', ko:'🇰🇷', fr:'🇫🇷' };
-  const flag = flagMap[selectedLanguage ?? ''] ?? '🇬🇧';
+  const flagMap: Record<string, string> = { ja:'JA', zh:'ZH', ko:'KO', fr:'FR' };
+  const flag = flagMap[selectedLanguage ?? ''] ?? 'EN';
   return (
     <button
       onClick={() => router.push('/language-select')}
       style={{ display:'flex',alignItems:'center',gap:6,padding:'5px 10px',background:`${lang.color}15`,border:`1px solid ${lang.color}30`,borderRadius:99,cursor:'pointer',flexShrink:0 }}
     >
-      <span style={{ fontSize:13 }}>{flag}</span>
+      <span style={{ fontSize: 10, fontWeight: 800, letterSpacing: '0.06em', color:lang.color }}>{flag}</span>
       <span style={{ color:lang.color,fontSize:11,fontWeight:700 }}>{lang.name}</span>
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
         <path d="M7 10l5 5 5-5" stroke={lang.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

@@ -1,4 +1,5 @@
 'use client';
+import { Trophy, Flame } from "lucide-react";
 
 export default function DailyTargetCard({ data }: { data: any }) {
   return (
@@ -11,7 +12,7 @@ export default function DailyTargetCard({ data }: { data: any }) {
       {/* Trophy */}
       <div className="text-7xl mb-5 relative z-10"
         style={{ filter: 'drop-shadow(0 0 24px rgba(16,185,129,0.6))' }}>
-        🏆
+        <Trophy size={72} color="#34d399" />
       </div>
 
       <div className="relative z-10 px-4 py-2 rounded-2xl mb-3"
@@ -37,7 +38,7 @@ export default function DailyTargetCard({ data }: { data: any }) {
           border: '1px solid rgba(255,255,255,0.08)',
           backdropFilter: 'blur(12px)',
         }}>
-        <span className="text-4xl" style={{ filter: 'drop-shadow(0 0 8px rgba(245,158,11,0.6))' }}>🔥</span>
+        <Flame size={36} color="#f59e0b" fill="#f59e0b" style={{ filter: 'drop-shadow(0 0 8px rgba(245,158,11,0.6))' }} />
         <div className="text-left">
           <p className="text-zinc-500 text-[10px] font-black uppercase tracking-widest">Streak Aktif</p>
           <p className="text-white text-3xl font-black">{data.streakCount} <span className="text-base text-zinc-400 font-bold">Hari</span></p>
@@ -51,7 +52,7 @@ export default function DailyTargetCard({ data }: { data: any }) {
             boxShadow: '0 0 24px rgba(16,185,129,0.35)',
             color: 'white',
           }}>
-          Selesai & Keluar ✓
+          Selesai & Keluar
         </button>
         <button className="w-full py-4 rounded-2xl font-medium text-sm transition-all active:scale-95"
           style={{
@@ -59,7 +60,7 @@ export default function DailyTargetCard({ data }: { data: any }) {
             border: '1px solid rgba(255,255,255,0.08)',
             color: '#a1a1aa',
           }}>
-          Lanjut Scroll (Extra XP) ⚡
+          Lanjut Scroll (Extra XP)
         </button>
       </div>
     </div>

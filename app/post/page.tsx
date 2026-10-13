@@ -14,7 +14,12 @@ import {
   Repeat,
   FastForward,
   Sparkles,
-  Play
+  Play,
+  MessageCircle,
+  Sprout,
+  Trophy,
+  BadgeCheck,
+  Check
 } from 'lucide-react';
 
 // ─── FONT INJECTION ────────────────────────────────────────────────────────────
@@ -138,7 +143,7 @@ const HomeContent = () => (
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           {/* Language Pill */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '5px 10px', background: `rgba(59,130,246,0.15)`, border: `1px solid rgba(59,130,246,0.3)`, borderRadius: 99, flexShrink: 0 }}>
-            <span style={{ fontSize: 13, lineHeight: 1 }}>🇬🇧</span>
+            <span style={{ fontSize: 10, fontWeight: 800, letterSpacing: '0.06em', lineHeight: 1 }}>EN</span>
             <span style={{ color: '#3b82f6', fontSize: 11, fontWeight: 700 }}>English</span>
           </div>
           {/* XP */}
@@ -228,7 +233,7 @@ const HomeContent = () => (
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <span style={{ color: '#3f3f46', fontSize: 13, fontWeight: 700, display: 'block' }}>Chapter 2</span>
-                <span style={{ color: '#52525b', fontSize: 11, flexShrink: 0, marginLeft: 8 }}>🔒 600 XP</span>
+                <span style={{ color: '#52525b', fontSize: 11, flexShrink: 0, marginLeft: 8 }}><Lock size={10} style={{ display: 'inline-block', verticalAlign: '-1px', marginRight: 3 }} />600 XP</span>
               </div>
             </div>
           </div>
@@ -465,7 +470,7 @@ const AssistantChatContent = () => (
     </div>
     <div style={{ flex: 1, overflowY: 'hidden', padding: '12px 12px 8px', display: 'flex', flexDirection: 'column', gap: 10 }}>
       <div style={{ display: 'flex', gap: 5, marginBottom: 2 }}>
-        {['🇬🇧 Inggris', '🇰🇷 Korea', '🇯🇵 Jepang', '🇨🇳 Mandarin'].map((l, i) => (
+        {['EN Inggris', 'KO Korea', 'JA Jepang', 'ZH Mandarin'].map((l, i) => (
           <div key={i} style={{ padding: '2px 8px', borderRadius: 99, border: i === 0 ? '1px solid rgba(59,130,246,0.45)' : '1px solid rgba(255,255,255,0.07)', background: i === 0 ? 'rgba(59,130,246,0.1)' : 'transparent', color: i === 0 ? '#93c5fd' : '#52525b', fontSize: 9, fontWeight: 600 }}>{l}</div>
         ))}
       </div>
@@ -533,7 +538,7 @@ const SpeakingFeedbackContent = () => (
           </div>
           <div>
             <p style={{ color: '#f4f4f5', fontSize: 12, fontWeight: 700, margin: 0 }}>Hasil Penilaian</p>
-            <p style={{ color: '#52525b', fontSize: 9, margin: 0 }}>🇬🇧 Inggris · Greetings</p>
+            <p style={{ color: '#52525b', fontSize: 9, margin: 0 }}>EN Inggris · Greetings</p>
           </div>
         </div>
         <div style={{ width: 26, height: 26, borderRadius: 7, background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.07)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -585,21 +590,21 @@ const SpeakingFeedbackContent = () => (
   </div>
 );
 
-const PROFILE_MOCK = { xp: 340, streak: 5, completedCount: 1, level: 1, label: 'Pemula', color: '#10b981', ring: '#34d399', emoji: '🌱', progress: 68, nextXp: 500 };
+const PROFILE_MOCK = { xp: 340, streak: 5, completedCount: 1, level: 1, label: 'Pemula', color: '#10b981', ring: '#34d399', emoji: <Sprout size={26} color="#fff" />, progress: 68, nextXp: 500 };
 const ACHIEVEMENTS_MOCK = [
-  { id: 'first',   icon: '🌟', label: 'Mulai Belajar',  desc: 'Selesaikan 1 stage',   unlocked: true,  rarity: 'common'    },
-  { id: 'streak3', icon: '🔥', label: 'Streak 3 Hari',  desc: 'Belajar 3 hari',       unlocked: true,  rarity: 'rare'      },
-  { id: 'vocab',   icon: '📖', label: 'Pencinta Vocab', desc: 'Baca 5 vocab',          unlocked: false, rarity: 'common'    },
-  { id: 'chat',    icon: '💬', label: 'Si Penanya',     desc: 'Tanya Lingo 3x',       unlocked: false, rarity: 'rare'      },
-  { id: 'perfect', icon: '💯', label: 'Sempurna',       desc: 'Nilai 100% di quiz',   unlocked: false, rarity: 'epic'      },
-  { id: 'legend',  icon: '🏆', label: 'Legenda',        desc: 'Capai level 4',        unlocked: false, rarity: 'legendary' },
+  { id: 'first',   icon: <Star size={17} color="#facc15" fill="#facc15" />, label: 'Mulai Belajar',  desc: 'Selesaikan 1 stage',   unlocked: true,  rarity: 'common'    },
+  { id: 'streak3', icon: <Flame size={17} color="#f97316" />, label: 'Streak 3 Hari',  desc: 'Belajar 3 hari',       unlocked: true,  rarity: 'rare'      },
+  { id: 'vocab',   icon: <BookOpen size={17} color="#3b82f6" />, label: 'Pencinta Vocab', desc: 'Baca 5 vocab',          unlocked: false, rarity: 'common'    },
+  { id: 'chat',    icon: <MessageCircle size={17} color="#6366f1" />, label: 'Si Penanya',     desc: 'Tanya Lingo 3x',       unlocked: false, rarity: 'rare'      },
+  { id: 'perfect', icon: <BadgeCheck size={17} color="#10b981" />, label: 'Sempurna',       desc: 'Nilai 100% di quiz',   unlocked: false, rarity: 'epic'      },
+  { id: 'legend',  icon: <Trophy size={17} color="#f59e0b" />, label: 'Legenda',        desc: 'Capai level 4',        unlocked: false, rarity: 'legendary' },
 ];
 const RARITY_COL: Record<string, string> = { common: '#71717a', rare: '#3b82f6', epic: '#a855f7', legendary: '#f59e0b' };
 const LEVELS_MOCK = [
-  { level: 1, min: 0,    max: 500,  label: 'Pemula',  color: '#10b981', emoji: '🌱' },
-  { level: 2, min: 500,  max: 1500, label: 'Pelajar', color: '#3b82f6', emoji: '📚' },
-  { level: 3, min: 1500, max: 3000, label: 'Mahir',   color: '#a855f7', emoji: '⚡' },
-  { level: 4, min: 3000, max: 6000, label: 'Ahli',    color: '#f59e0b', emoji: '🏆' },
+  { level: 1, min: 0,    max: 500,  label: 'Pemula',  color: '#10b981', emoji: <Sprout size={14} color="#10b981" /> },
+  { level: 2, min: 500,  max: 1500, label: 'Pelajar', color: '#3b82f6', emoji: <BookOpen size={14} color="#3b82f6" /> },
+  { level: 3, min: 1500, max: 3000, label: 'Mahir',   color: '#a855f7', emoji: <Zap size={14} color="#a855f7" /> },
+  { level: 4, min: 3000, max: 6000, label: 'Ahli',    color: '#f59e0b', emoji: <Trophy size={14} color="#f59e0b" /> },
 ];
 
 const ProfileContent = () => {
@@ -636,7 +641,7 @@ const ProfileContent = () => {
           </div>
         </div>
         <div style={{ padding: '12px 12px 0', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 7, flexShrink: 0 }}>
-          {[{ icon: '🔥', value: p.streak, label: 'Streak', color: '#ef4444' },{ icon: '⭐', value: p.xp, label: 'Total XP', color: '#facc15' },{ icon: '🎯', value: p.completedCount, label: 'Selesai', color: p.color }].map((s, i) => (
+          {[{ icon: <Flame size={16} color="#ef4444" />, value: p.streak, label: 'Streak', color: '#ef4444' },{ icon: <Star size={16} color="#facc15" fill="#facc15" />, value: p.xp, label: 'Total XP', color: '#facc15' },{ icon: <Target size={16} color={p.color} />, value: p.completedCount, label: 'Selesai', color: p.color }].map((s, i) => (
             <div key={i} style={{ background: '#0e0e14', border: `1px solid ${s.color}18`, borderRadius: 13, padding: '11px 8px', textAlign: 'center' }}>
               <div style={{ fontSize: 16, marginBottom: 4 }}>{s.icon}</div>
               <div style={{ fontSize: 16, fontWeight: 900, color: '#f4f4f5', lineHeight: 1 }}>{s.value}</div>
@@ -670,7 +675,7 @@ const ProfileContent = () => {
                     <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
                       <span style={{ color: isCurrent ? l.color : isPast ? '#71717a' : '#52525b', fontSize: 10, fontWeight: 700 }}>Lv.{l.level} — {l.label}</span>
                       {isCurrent && <div style={{ width: 4, height: 4, borderRadius: '50%', background: l.color }} />}
-                      {isPast && <span style={{ color: '#10b981', fontSize: 9 }}>✓</span>}
+                      {isPast && <Check size={10} color="#10b981" strokeWidth={3} />}
                     </div>
                     <span style={{ color: '#3f3f46', fontSize: 8 }}>{l.min.toLocaleString()}–{l.max.toLocaleString()} XP</span>
                   </div>
@@ -773,7 +778,7 @@ const CourseContent = () => (
                 {ch.stages.map((st, si) => (
                   <div key={si} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '9px 12px', borderBottom: si < ch.stages.length - 1 ? '1px solid rgba(255,255,255,0.04)' : 'none', opacity: st.done ? 0.75 : 1 }}>
                     <div style={{ width: 26, height: 26, borderRadius: 7, flexShrink: 0, background: st.done ? '#10b98120' : `${ch.color}15`, border: `1px solid ${st.done ? '#10b98150' : ch.color + '28'}`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10, fontWeight: 800, color: st.done ? '#10b981' : ch.color }}>
-                      {st.done ? '✓' : si + 1}
+                      {st.done ? <Check size={13} strokeWidth={3} /> : si + 1}
                     </div>
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <p style={{ color: st.done ? 'rgba(255,255,255,0.5)' : '#e4e4e7', fontSize: 11, fontWeight: 600, margin: 0, textDecoration: st.done ? 'line-through' : 'none' }}>{st.label}</p>
@@ -1721,13 +1726,13 @@ const Slide10 = ({ handle }: any) => (
     <Glow top={-60} right={-60} color="rgba(176,106,255,0.14)" size={600} />
     <Wm text="LINGO AI." bottom={40} left={-10} size={185} />
     <div style={{ position: 'absolute', top: 280, left: 80, width: 380, zIndex: 10, display: 'flex', flexDirection: 'column' }}>
-      <SlidePill text="Feature — AI Assistant" color={T.purple} icon="🤖" />
+      <SlidePill text="Feature — AI Assistant" color={T.purple} icon={<Bot size={14} color={T.purple} />} />
       <SlideH1 size={60}>Tanya Apa Saja,<br /><span style={{ color: '#8b8ff8', fontStyle: 'italic' }}>Kapan Saja.</span></SlideH1>
       <SlideSub maxWidth={360}>Lingo menjawab pertanyaan grammar, kosakata, dan pengucapan — sesuai konteks materi yang sedang dipelajari.</SlideSub>
-      <FeatRow icon="💬" color="#6366f1" title="Chat Kontekstual" desc="Lingo tahu stage yang dipelajari" />
-      <FeatRow icon="🎤" color={T.purple} title="Speaking + Skor AI" desc="Ucapkan kalimat → dapat penilaian detail" />
-      <FeatRow icon="🔊" color={T.blue} title="Audio Pronunciation" desc="Dengarkan contoh ucapan langsung" />
-      <FeatRow icon="🌍" color={T.green} title="4 Bahasa Didukung" desc="Inggris, Jepang, Mandarin, Korea" />
+      <FeatRow icon={<MessageCircle size={22} color="#6366f1" />} color="#6366f1" title="Chat Kontekstual" desc="Lingo tahu stage yang dipelajari" />
+      <FeatRow icon={<Mic size={22} color={T.purple} />} color={T.purple} title="Speaking + Skor AI" desc="Ucapkan kalimat → dapat penilaian detail" />
+      <FeatRow icon={<Volume2 size={22} color={T.blue} />} color={T.blue} title="Audio Pronunciation" desc="Dengarkan contoh ucapan langsung" />
+      <FeatRow icon={<Globe size={22} color={T.green} />} color={T.green} title="4 Bahasa Didukung" desc="Inggris, Jepang, Mandarin, Korea" />
     </div>
     <div style={{ position: 'absolute', top: 258, left: '50%', marginLeft: -15, transform: 'translateX(-50%) rotate(-3deg)', zIndex: 20, transformOrigin: 'bottom center', boxShadow: '0 50px 100px rgba(0,0,0,0.9)' }}>
       <PhoneWrap><AssistantChatContent /></PhoneWrap>
@@ -1780,7 +1785,7 @@ const Slide12 = ({ handle }: any) => (
       <line x1="770" y1="750" x2="735" y2="750" stroke={T.green} strokeWidth="1.2" strokeDasharray="4 3" opacity="0.7"/>
       <circle cx="770" cy="750" r="3" fill={T.green} opacity="0.8"/>
     </svg>
-    <Callout top={450} left={28} color={T.blue} icon="🌐" title="4 Bahasa Didukung" desc="EN · JA · ZH · KO — ganti bahasa dari input bar" extra={
+    <Callout top={450} left={28} color={T.blue} icon={<Globe size={18} color={T.blue} />} title="4 Bahasa Didukung" desc="EN · JA · ZH · KO — ganti bahasa dari input bar" extra={
       <div style={{ display: 'flex', gap: 6, marginTop: 12 }}>
         {[['EN',T.blue],['JA',T.purple],['ZH',T.amber],['KO',T.green]].map(([l,c]) => (
           <div key={l} style={{ padding: '3px 10px', background: `${c}10`, border: `1px solid ${c}25`, borderRadius: 7 }}>
@@ -1789,7 +1794,7 @@ const Slide12 = ({ handle }: any) => (
         ))}
       </div>
     } />
-    <Callout top={900} left={28} color="#8b8ff8" icon="🔊" title="Audio Pronunciation" desc="Lingo mainkan contoh ucapan langsung dalam chat" extra={
+    <Callout top={900} left={28} color="#8b8ff8" icon={<Volume2 size={18} color="#8b8ff8" />} title="Audio Pronunciation" desc="Lingo mainkan contoh ucapan langsung dalam chat" extra={
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 11px', background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.18)', borderRadius: 9, marginTop: 12 }}>
         <div style={{ width: 22, height: 22, borderRadius: '50%', background: 'rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
           <svg width="7" height="7" viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9" fill="#8b8ff8"/></svg>
@@ -1797,7 +1802,7 @@ const Slide12 = ({ handle }: any) => (
         <span style={{ fontFamily: dm, fontSize: 12, fontWeight: 600, color: '#8b8ff8' }}>I'm grateful for your help</span>
       </div>
     } />
-    <Callout top={665} right={28} color={T.green} icon="💬" title="Chat Kontekstual" desc="Lingo tahu stage yang dipelajari — jawaban selalu relevan dengan materi" extra={
+    <Callout top={665} right={28} color={T.green} icon={<MessageCircle size={18} color={T.green} />} title="Chat Kontekstual" desc="Lingo tahu stage yang dipelajari — jawaban selalu relevan dengan materi" extra={
       <div style={{ padding: '8px 12px', background: 'rgba(37,99,235,0.08)', border: '1px solid rgba(59,130,246,0.15)', borderRadius: 9, marginTop: 12 }}>
         <p style={{ fontFamily: dm, fontSize: 12, color: T.sub, lineHeight: 1.55, margin: 0 }}>Tekan pada <strong style={{ color: T.blue }}>"GRATE-ful"</strong> — ucapkan pelan dan jelas.</p>
       </div>
@@ -1833,13 +1838,13 @@ const Slide13 = ({ handle }: any) => (
       <line x1="770" y1="960" x2="735" y2="960" stroke={T.amber} strokeWidth="1.2" strokeDasharray="4 3" opacity="0.7"/>
       <circle cx="770" cy="960" r="3" fill={T.amber} opacity="0.8"/>
     </svg>
-    <Callout top={665} left={28} color={T.purple} icon="🎤" title="Tap untuk Berbicara" desc="Satu tombol — rekam suara dan kirim ke AI untuk dinilai langsung" extra={
+    <Callout top={665} left={28} color={T.purple} icon={<Mic size={18} color={T.purple} />} title="Tap untuk Berbicara" desc="Satu tombol — rekam suara dan kirim ke AI untuk dinilai langsung" extra={
       <div style={{ height: 36, background: 'rgba(124,58,237,0.12)', border: `1px solid rgba(176,106,255,0.25)`, borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 12 }}>
         <Mic size={13} color={T.purple} />
         <span style={{ fontFamily: dm, fontWeight: 700, fontSize: 13, color: T.purple }}>Tap untuk Berbicara</span>
       </div>
     } />
-    <Callout top={480} right={28} color={T.green} icon="🎯" title="Skor 0–100 Instan" desc="AI nilai pronunciation & fluency dalam hitungan detik" extra={
+    <Callout top={480} right={28} color={T.green} icon={<Target size={18} color={T.green} />} title="Skor 0–100 Instan" desc="AI nilai pronunciation & fluency dalam hitungan detik" extra={
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 12 }}>
         <div style={{ width: 46, height: 46, borderRadius: '50%', border: `2.5px solid ${T.green}`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
           <span style={{ fontFamily: syne, fontWeight: 800, fontSize: 16, color: T.green }}>88</span>
@@ -1850,7 +1855,7 @@ const Slide13 = ({ handle }: any) => (
         </div>
       </div>
     } />
-    <Callout top={870} right={28} color={T.amber} icon="💡" title="Feedback 3 Kategori" desc="Bagus · Perbaikan · Saran — spesifik per kalimat, bukan sekadar nilai" extra={
+    <Callout top={870} right={28} color={T.amber} icon={<Lightbulb size={18} color={T.amber} />} title="Feedback 3 Kategori" desc="Bagus · Perbaikan · Saran — spesifik per kalimat, bukan sekadar nilai" extra={
       <div style={{ padding: '8px 12px', background: `rgba(255,191,46,0.05)`, border: `1px solid rgba(255,191,46,0.15)`, borderRadius: 9, marginTop: 12 }}>
         <p style={{ fontFamily: dm, fontSize: 12, color: '#a08a30', lineHeight: 1.55, margin: 0 }}>Perlambat di kata "grateful" agar lebih jelas terdengar.</p>
       </div>
@@ -1887,7 +1892,7 @@ const Slide7 = ({ handle, wa, porto }: any) => (
         Tertarik membangun UI/UX aplikasi yang interaktif dan memanjakan mata? Mari berkolaborasi!
       </p>
       <div style={{ display: 'flex', gap: 20, width: '100%', maxWidth: 860, justifyContent: 'center' }}>
-        {[{ icon: '🌐', color: T.blue, label: 'Portfolio', value: porto },{ icon: '💬', color: T.green, label: 'WhatsApp', value: wa },{ icon: '📸', color: T.purple, label: 'Instagram', value: handle }].map(ct => (
+        {[{ icon: <Globe size={30} color={T.blue} />, color: T.blue, label: 'Portfolio', value: porto },{ icon: <MessageCircle size={30} color={T.green} />, color: T.green, label: 'WhatsApp', value: wa },{ icon: <Instagram size={30} color={T.purple} />, color: T.purple, label: 'Instagram', value: handle }].map(ct => (
           <div key={ct.label} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'linear-gradient(180deg,rgba(28,28,40,0.9),rgba(14,14,20,0.9))', border: '1px solid rgba(255,255,255,0.09)', borderRadius: 28, padding: '28px 20px' }}>
             <div style={{ width: 62, height: 62, borderRadius: 18, background: `${ct.color}18`, border: `1px solid ${ct.color}28`, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 16, fontSize: 30 }}>{ct.icon}</div>
             <p style={{ fontFamily: dm, fontWeight: 700, fontSize: 12, color: T.muted, letterSpacing: '0.1em', textTransform: 'uppercase', margin: '0 0 8px' }}>{ct.label}</p>

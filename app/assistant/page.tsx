@@ -30,10 +30,10 @@ interface Message {
 
 /* ─── Language config ──────────────────────────────────── */
 const LANGUAGES = [
-  { code: "en", flag: "🇬🇧", name: "Inggris",  ttsLang: "en-US" },
-  { code: "ko", flag: "🇰🇷", name: "Korea",    ttsLang: "ko-KR" },
-  { code: "ja", flag: "🇯🇵", name: "Jepang",   ttsLang: "ja-JP" },
-  { code: "zh", flag: "🇨🇳", name: "Mandarin", ttsLang: "zh-CN" },
+  { code: "en", flag: "EN", name: "Inggris",  ttsLang: "en-US" },
+  { code: "ko", flag: "KO", name: "Korea",    ttsLang: "ko-KR" },
+  { code: "ja", flag: "JA", name: "Jepang",   ttsLang: "ja-JP" },
+  { code: "zh", flag: "ZH", name: "Mandarin", ttsLang: "zh-CN" },
 ];
 type LangCode = "en" | "ko" | "ja" | "zh";
 
@@ -142,7 +142,7 @@ function buildChatPrompt(lang: LangCode) {
 - Highlight kata penting dengan **tanda bintang**
 - Gunakan [AUDIO:teks:kode_bahasa] untuk frasa yang perlu didengar
 - Jawab singkat dan jelas
-- Hindari penggunaan emoji berlebihan`;
+- Jangan gunakan emoji`;
 }
 
 // "Bicara dengan Lingo" has a natural voice for English only so far; the other languages are "segera hadir"
@@ -195,7 +195,7 @@ function buildFeedbackPrompt(lang: LangCode, target: string, transcript: string)
 Kalimat target: "${target}"
 Ucapan pengguna: "${transcript}"
 
-Beri feedback dalam format WAJIB ini (tanpa emoji kecuali yang ditentukan):
+Beri feedback dalam format WAJIB ini (tanpa emoji):
 
 SKOR: [angka 0-100]
 
@@ -583,7 +583,7 @@ function SpeakingModal({ lang, onClose, onAddMessages }: {
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4, paddingTop: 4, marginLeft: 12, animation: "popIn 0.4s cubic-bezier(0.34,1.56,0.64,1)" }}>
                 <div style={{ position: "relative", background: "rgba(168,85,247,0.12)", border: "1px solid rgba(168,85,247,0.28)", borderRadius: 14, padding: "9px 14px", maxWidth: 220, textAlign: "center", animation: "slideUp 0.3s ease 0.1s both" }}>
                   <p style={{ color: "#e2d4ff", fontSize: 13, fontWeight: 700, margin: "0 0 2px" }}>Ayo ucapkan kalimat ini!</p>
-                  <p style={{ color: "#71717a", fontSize: 11, margin: 0 }}>Bicara pelan dan jelas ya 😊</p>
+                  <p style={{ color: "#71717a", fontSize: 11, margin: 0 }}>Bicara pelan dan jelas ya</p>
                   <div style={{ position: "absolute", bottom: -7, left: "90%", transform: "translateX(-50%)", width: 0, height: 0, borderLeft: "7px solid transparent", borderRight: "7px solid transparent", borderTop: "7px solid rgba(168,85,247,0.28)" }} />
                   <div style={{ position: "absolute", bottom: -6, left: "90%", transform: "translateX(-50%)", width: 0, height: 0, borderLeft: "6px solid transparent", borderRight: "6px solid transparent", borderTop: "6px solid #0e0e18" }} />
                 </div>
@@ -626,7 +626,7 @@ function SpeakingModal({ lang, onClose, onAddMessages }: {
               {/* Maskot excited + bubble */}
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
                 <div style={{ position: "relative", background: "rgba(168,85,247,0.15)", border: "1px solid rgba(168,85,247,0.35)", borderRadius: 14, padding: "9px 14px", textAlign: "center" }}>
-                  <p style={{ color: "#e2d4ff", fontSize: 13, fontWeight: 700, margin: 0 }}>Lingo mendengarkan... 👂</p>
+                  <p style={{ color: "#e2d4ff", fontSize: 13, fontWeight: 700, margin: 0 }}>Lingo mendengarkan...</p>
                   <div style={{ position: "absolute", bottom: -7, left: "50%", transform: "translateX(-50%)", width: 0, height: 0, borderLeft: "7px solid transparent", borderRight: "7px solid transparent", borderTop: "7px solid rgba(168,85,247,0.35)" }} />
                   <div style={{ position: "absolute", bottom: -6, left: "50%", transform: "translateX(-50%)", width: 0, height: 0, borderLeft: "6px solid transparent", borderRight: "6px solid transparent", borderTop: "6px solid #0e0e18" }} />
                 </div>
@@ -673,7 +673,7 @@ function SpeakingModal({ lang, onClose, onAddMessages }: {
               {/* Maskot thinking + bubble */}
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
                 <div style={{ position: "relative", background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.25)", borderRadius: 14, padding: "9px 14px", textAlign: "center" }}>
-                  <p style={{ color: "#93c5fd", fontSize: 13, fontWeight: 700, margin: 0 }}>Hmm, Lingo lagi mikir... 🤔</p>
+                  <p style={{ color: "#93c5fd", fontSize: 13, fontWeight: 700, margin: 0 }}>Hmm, Lingo lagi mikir...</p>
                   <div style={{ position: "absolute", bottom: -7, left: "50%", transform: "translateX(-50%)", width: 0, height: 0, borderLeft: "7px solid transparent", borderRight: "7px solid transparent", borderTop: "7px solid rgba(59,130,246,0.25)" }} />
                   <div style={{ position: "absolute", bottom: -6, left: "50%", transform: "translateX(-50%)", width: 0, height: 0, borderLeft: "6px solid transparent", borderRight: "6px solid transparent", borderTop: "6px solid #0e0e18" }} />
                 </div>

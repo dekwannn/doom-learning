@@ -20,6 +20,7 @@ import zhStudyData from "@/data/zhStudyData.json";
 import zhAdventureData from "@/data/zhData.json";
 import koStudyData     from '@/data/koStudyData.json';
 import koAdventureData from '@/data/koData.json';
+import { Check } from "lucide-react";
 
 const STUDY_DATA_MAP: Record<string, any> = {
   en: enStudyData,
@@ -54,12 +55,12 @@ const SECTION_TYPE_LABELS: Record<string, { label: string }> = {
 
 /* ─── Language config display ─────────────────────────── */
 const LANG_META: Record<string, { name: string; flag: string; learnTitle: string; learnSubtitle: string }> = {
-  en: { name: "English", flag: "🇬🇧", learnTitle: "Learn English", learnSubtitle: "Pelajari materi sebelum mengerjakan soal" },
-  ja: { name: "日本語", flag: "🇯🇵", learnTitle: "Belajar Bahasa Jepang", learnSubtitle: "Dari hiragana, kanji, hingga percakapan dasar" },
-  zh: { name: "普通话", flag: "🇨🇳", learnTitle: "Belajar Bahasa Mandarin", learnSubtitle: "Dari pinyin, karakter, hingga percakapan sehari-hari" },
+  en: { name: "English", flag: "EN", learnTitle: "Learn English", learnSubtitle: "Pelajari materi sebelum mengerjakan soal" },
+  ja: { name: "日本語", flag: "JA", learnTitle: "Belajar Bahasa Jepang", learnSubtitle: "Dari hiragana, kanji, hingga percakapan dasar" },
+  zh: { name: "普通话", flag: "ZH", learnTitle: "Belajar Bahasa Mandarin", learnSubtitle: "Dari pinyin, karakter, hingga percakapan sehari-hari" },
   ko: {
     name: '한국어',
-    flag: '🇰🇷',
+    flag: 'KO',
     learnTitle: 'Belajar Bahasa Korea',
     learnSubtitle: 'Dari Hangul, kosakata, hingga percakapan sehari-hari',
   },
@@ -114,7 +115,7 @@ export default function LearnPage() {
       }}>
         {/* Language badge */}
         <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 10 }}>
-          <span style={{ fontSize: 16 }}>{langMeta.flag}</span>
+          <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: "0.06em", color: "rgba(255,255,255,0.55)" }}>{langMeta.flag}</span>
           <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", color: "rgba(255,255,255,0.25)", textTransform: "uppercase" }}>
             {langMeta.name} · BELAJAR
           </span>
@@ -208,7 +209,7 @@ export default function LearnPage() {
                     fontSize: 16, fontWeight: 900,
                     color: isChapterCompleted ? "#10b981" : color,
                   }}>
-                    {isChapterCompleted ? "✓" : (chapter.id ?? idx + 1)}
+                    {isChapterCompleted ? <Check size={16} strokeWidth={3} /> : (chapter.id ?? idx + 1)}
                   </div>
 
                   {/* Progress badge */}
@@ -334,7 +335,7 @@ export default function LearnPage() {
                           fontSize: 13, fontWeight: 800,
                           color: isCompleted ? "#10b981" : color,
                         }}>
-                          {isCompleted ? "✓" : (si + 1)}
+                          {isCompleted ? <Check size={14} strokeWidth={3} /> : (si + 1)}
                         </div>
 
                         {/* Stage info */}
@@ -360,7 +361,7 @@ export default function LearnPage() {
                             )}
                             {(practiceTypes as string[]).slice(0, 4).map(type => (
                               <span key={type} style={{ fontSize: 10 }} title={type}>
-                                {PRACTICE_ICONS[type] ?? "📝"}
+                                {PRACTICE_ICONS[type] ?? ""}
                               </span>
                             ))}
                           </div>
