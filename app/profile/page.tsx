@@ -233,7 +233,7 @@ function ProfileAvatar({ url, name, color, iconName, size = 100, isTablet = fals
 /* ─── Page ─────────────────────────────────────────────── */
 export default function ProfilePage() {
   const selectedLanguage = useLanguageStore(s => s.selectedLanguage) || 'en';
-  const { xp: rawXp, streak: rawStreak, completedStages } = useProgress();
+  const { xp: rawXp, streak: rawStreak, completedStages, addXp } = useProgress();
   const { unlockedAchievements } = useUserStore();
   const router = useRouter();
 
@@ -450,7 +450,7 @@ const DailyTargets = () => {
                 <span style={{ color:'#52525b', fontSize:10, fontWeight:700, fontFamily:'system-ui,sans-serif' }}>Diambil</span>
               ) : isCompleted ? (
                 <button 
-                  onClick={() => claimReward(t.id, t.xp)}
+                  onClick={() => { if (claimReward(t.id)) addXp(t.xp); }}
                   style={{ background: lvl.color, border: 'none', color: '#000', fontSize: 11, fontWeight: 800, padding: '6px 12px', borderRadius: 99, cursor: 'pointer', boxShadow: `0 0 8px ${lvl.color}80`, animation: 'pulse 2s infinite' }}
                 >
                   Klaim +{t.xp}

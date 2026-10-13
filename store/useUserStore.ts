@@ -89,7 +89,8 @@ interface UserState {
   incrementDailyStage: () => void;
   incrementDailyQuestion: () => void;
   incrementDailyMaterial: () => void;
-  claimDailyReward: (taskId: string, rewardXp: number) => void;
+  /** true jika target ini baru saja diklaim (belum pernah hari ini) */
+  claimDailyReward: (taskId: string) => boolean;
 
   unlockStage: (stageId: string) => void;
   setStageStars: (stageId: string, stars: number) => void;
@@ -185,19 +186,15 @@ export const useUserStore = create<UserState>()(
         const stats = s.dailyStats.date === today ? s.dailyStats : initialDailyStats;
         return { dailyStats: { ...stats, materialsRead: stats.materialsRead + 1, date: today } };
       }),
-      claimDailyReward: (taskId, rewardXp) => set((s) => {
-        const today = getTodayStr();
-        if (s.dailyStats.date !== today) return s; 
-        if (s.dailyStats.claimed[taskId]) return s; 
-        
-        return {
-          xp: s.xp + rewardXp,
-          dailyStats: { 
-            ...s.dailyStats, 
-            claimed: { ...s.dailyStats.claimed, [taskId]: true } 
-          }
-        };
-      }),
+      // Hanya menandai target sudah diklaim; XP-nya ditambahkan pemanggil lewat useProgress().addXp,
+      // supaya masuk ke bahasa yang sedang dipelajari dan ikut tersimpan ke leaderboard
+      claimDailyReward: (taskId) => {
+        const s = get();
+        if (s.dailyStats.date !== getTodayStr()) return false;
+        if (s.dailyStats.claimed[taskId]) return false;
+        set({ dailyStats: { ...s.dailyStats, claimed: { ...s.dailyStats.claimed, [taskId]: true } } });
+        return true;
+      },
 
       reset: () => set({
         xp: 0,
