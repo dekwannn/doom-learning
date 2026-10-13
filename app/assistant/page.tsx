@@ -157,6 +157,8 @@ function buildVoicePrompt() {
 - No markdown, no lists, no emoji, no symbols
 - If the user speaks Indonesian, still answer in simple English
 - If the user makes an English mistake, gently say the correct sentence first
+- Their words come from speech recognition. A word that does not fit (for example "tree" instead of "three", "furry" instead of "very") is probably a pronunciation mistake: kindly say the right word clearly so they can hear it
+- Sometimes the message ends with a "(Pronunciation check from the app ...)" note. It comes from the app, not from the user. When it is there, start with one short, kind sentence that helps them say that word, and say the word clearly (for example: Almost! Put your tongue between your teeth: three!). Then reply as usual. Never mention the app, a check or a score
 - After the English reply, add one new line that starts with "ID:" followed by the Indonesian translation of your reply
 
 Example:
