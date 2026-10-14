@@ -198,7 +198,8 @@ class Handler(BaseHTTPRequestHandler):
         with check_lock:
             result = checker.check(audio, target)
         flagged = [w["word"] for w in result["words"] if not w["ok"]]
-        print(f"{time.time() - started:4.1f}s  check {result['score']:3d}  {result['said'][:50]!r}  {flagged}", flush=True)
+        print(f"{time.time() - started:4.1f}s  check {result['score']:3d}  {len(audio) / 16000:4.1f}s audio  "
+              f"{result['said'][:50]!r}  {flagged}", flush=True)
         self._json(200, result)
 
 

@@ -427,7 +427,8 @@ export default function Home() {
   useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
-    if (!selectedLanguage) router.replace('/language-select');
+    // Read the store itself: during the first (hydration) render the hook still shows the empty server state
+    if (!useLanguageStore.getState().selectedLanguage) router.replace('/language-select');
   }, [selectedLanguage, router]);
 
   useEffect(() => {
@@ -448,10 +449,10 @@ export default function Home() {
   useEffect(() => {
     if (!mounted || loading || !selectedLanguage) return;
     const hasSeenTour = localStorage.getItem('tour_adventure_done');
-    if (!hasSeenTour) {
-      const tour = createTour();
-      setTimeout(() => tour.drive(), 600);
-    }
+    if (hasSeenTour) return;
+    const tour = createTour();
+    const timer = setTimeout(() => tour.drive(), 600);
+    return () => { clearTimeout(timer); if (tour.isActive()) tour.destroy(); };
   }, [mounted, loading, selectedLanguage]);
 
   // ── EARLY RETURN: loading screen ──

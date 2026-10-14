@@ -120,7 +120,7 @@ function PronunciationCard({ result }: { result: PronunciationResult }) {
   );
 }
 
-export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }: {
+export default function LingoVoiceMode({ target, history, ask, onTurn, onClose, title = "Bicara dengan Lingo", opener, filterReply, onCheck, panel }: {
   /** The language being learned */
   target: { flag: string; name: string; ttsLang: string };
   /** The chat so far, so Lingo remembers the context */
@@ -129,6 +129,15 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
   /** Called after every turn, so the chat page can keep the conversation */
   onTurn: (userText: string, reply: string) => void;
   onClose: () => void;
+  title?: string;
+  /** Lingo speaks first with this line ("<English>\nID: <Indonesian>"), e.g. to open a scenario */
+  opener?: string;
+  /** Takes extra lines out of Lingo's reply before it is shown and spoken (the full reply stays in the history) */
+  filterReply?: (reply: string) => string;
+  /** Every pronunciation check, e.g. to list the corrections at the end of a scenario */
+  onCheck?: (result: PronunciationResult) => void;
+  /** Shown under the language choice, e.g. a scenario's missions */
+  panel?: React.ReactNode;
 }) {
   const [phase, setPhase] = useState<Phase>("idle");
   const [heard, setHeard] = useState("");
@@ -145,6 +154,7 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
   const [check, setCheck] = useState<PronunciationResult | null>(null);
   const [micLevel, setMicLevel] = useState(0);
   const [recording, setRecording] = useState(false); // shown as a halo that follows the voice
+  const openerSpoken = useRef(false);
 
   // Wake Lingo's voice server and see what it can do; while the pronunciation check is still loading, ask again
   useEffect(() => {
@@ -302,6 +312,7 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
     }
     setHeard(result.said);
     setCheck(result);
+    onCheck?.(result);
     // After a correction, wait for the learner (to read the tip and try the word) instead of listening right away
     if (wordsToFix(result).length > 0) autoRef.current = false;
     void actions.current?.answer(result.said, pronunciationNote(result));
@@ -317,8 +328,9 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
     try { res = await ask(historyRef.current, note ? `${text}\n\n${note}` : text); } catch { res = "Maaf, ada gangguan. Coba lagi ya."; }
     if (!openRef.current || turn !== turnRef.current) return;
     historyRef.current = [...historyRef.current, { role: "user", content: text }, { role: "assistant", content: res }];
-    const parsed = splitTranslation(res);
-    onTurn(text, parsed ? `${parsed.spoken}\n\nArti: ${parsed.translation}` : res);
+    const shown = filterReply ? filterReply(res) : res;
+    const parsed = splitTranslation(shown);
+    onTurn(text, parsed ? `${parsed.spoken}\n\nArti: ${parsed.translation}` : shown);
     setReply(parsed?.spoken ?? res);
     setTranslation(parsed?.translation ?? "");
     setPhase("speaking");
@@ -328,8 +340,19 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
       else setPhase("idle");
     };
     if (parsed) speakSegments(splitForSpeech(parsed.spoken, target.ttsLang), afterSpeaking, { natural: true });
-    else speakSegments(splitForSpeech(res), afterSpeaking); // Indonesian (e.g. an error message): device voice
+    else speakSegments(splitForSpeech(shown), afterSpeaking); // Indonesian (e.g. an error message): device voice
   }
+
+  // Lingo opens the conversation (scenarios): shown and spoken once
+  useEffect(() => {
+    if (!opener || openerSpoken.current) return;
+    openerSpoken.current = true;
+    const parsed = splitTranslation(opener);
+    setReply(parsed?.spoken ?? opener);
+    setTranslation(parsed?.translation ?? "");
+    setPhase("speaking");
+    speakSegments(splitForSpeech(parsed?.spoken ?? opener, target.ttsLang), () => { if (openRef.current) setPhase("idle"); }, { natural: true });
+  }, [opener, target.ttsLang]);
   useEffect(() => {
     actions.current = { listen, answer, finishRecording };
   });
@@ -382,9 +405,9 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
     color: active ? "#bef264" : "#71717a", fontFamily: "system-ui, sans-serif",
   });
   const speaksTarget = hearLang.toLowerCase().startsWith("en");
-  // The correction card needs room: Lingo is drawn smaller while it shows
   const showCard = !!check && phase !== "listening" && phase !== "thinking";
-  const lingoSize = showCard && wordsToFix(check).length > 0 ? Math.round(size * 0.6) : size;
+  // The correction card and a scenario's missions need room: Lingo is drawn smaller then
+  const lingoSize = Math.round(size * (showCard && wordsToFix(check).length > 0 ? (panel ? 0.5 : 0.6) : panel ? 0.68 : 1));
 
   return (
     <div role="dialog" aria-modal="true" aria-label="Bicara dengan Lingo"
@@ -403,7 +426,7 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" /></svg>
         </button>
         <div style={{ textAlign: "center" }}>
-          <div style={{ color: "#f4f4f5", fontSize: 15, fontWeight: 700 }}>Bicara dengan Lingo</div>
+          <div style={{ color: "#f4f4f5", fontSize: 15, fontWeight: 700 }}>{title}</div>
           {naturalVoice !== null && (
             <div style={{ color: naturalVoice ? "#86efac" : "#71717a", fontSize: 10.5, fontWeight: 600, marginTop: 2 }}>
               {naturalVoice ? "● Suara Lingo" : "Suara browser"}
@@ -425,6 +448,8 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose }
           Koreksi pengucapan: {pronOn ? "Aktif" : "Mati"}
         </button>
       )}
+
+      {panel && <div style={{ width: "100%", maxWidth: 520, padding: "10px 16px 0", position: "relative" }}>{panel}</div>}
 
       {/* Lingo */}
       <div style={{ flex: 1, minHeight: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, position: "relative", width: "100%", maxWidth: 520, padding: "0 24px" }}>

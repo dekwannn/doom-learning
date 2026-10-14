@@ -15,7 +15,7 @@ export default function GuestLimitScreen({ backTo, backLabel }: { backTo: string
   return (
     <main style={{ minHeight: '100vh', background: '#0a0a0d', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24, fontFamily: 'system-ui, sans-serif' }}>
       <div style={{ width: '100%', maxWidth: 380, textAlign: 'center', background: '#0e0e14', border: '1px solid rgba(92,250,46,0.18)', borderRadius: 24, padding: '32px 24px', boxShadow: '0 24px 60px rgba(0,0,0,0.4)' }}>
-        <img src="/maskot.webp" alt="Lingo" style={{ width: 112, height: 'auto', margin: '0 auto 16px', display: 'block' }} />
+        <img src="/maskot.png" alt="Lingo" style={{ width: 112, height: 'auto', margin: '0 auto 16px', display: 'block' }} />
         <h1 style={{ color: '#f4f4f5', fontSize: 20, fontWeight: 800, margin: '0 0 8px', lineHeight: 1.3 }}>
           Kamu sudah main {GUEST_FREE_STAGES} stage!
         </h1>

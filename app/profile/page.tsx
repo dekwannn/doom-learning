@@ -13,7 +13,7 @@ import {
   Zap, Target, CheckCircle, Timer, BookOpen, Library, GraduationCap,
   Flame, Compass, Globe, Moon, Sunrise, Sprout, Star, Gem, Crown, Trophy,
   CalendarCheck, Languages, BookMarked, Sparkles, Shield, PenLine, Sword,
-  PenTool, Mountain, LogOut, LogIn, LucideIcon, Loader2, Edit3, X, Check
+  PenTool, Mountain, LogOut, LogIn, CloudUpload, LucideIcon, Loader2, Edit3, X, Check
 } from 'lucide-react';
 
 /* ── Icon registry & Config ── */
@@ -169,23 +169,8 @@ function ActionButtons({ router, onLogout, guest = false }: { router: ReturnType
         Leaderboard
       </button>
 
-      {guest ? (
-        // Guests: sign in to keep their progress in the cloud
-        <button
-          onClick={() => router.push('/login?redirectTo=%2Fprofile')}
-          style={{
-            display:'flex', alignItems:'center', gap:7,
-            padding:'9px 18px', borderRadius:99, cursor:'pointer',
-            background:'rgba(16,185,129,0.12)',
-            border:'1px solid rgba(16,185,129,0.35)',
-            color:'#34d399', fontSize:13, fontWeight:700,
-            fontFamily:'system-ui,sans-serif',
-          }}
-        >
-          <LogIn size={14} color="#34d399" />
-          Masuk
-        </button>
-      ) : (
+      {/* Guests sign in from the "Simpan progresmu" card instead */}
+      {guest ? null : (
       <button
         onClick={onLogout}
         style={{
@@ -206,7 +191,26 @@ function ActionButtons({ router, onLogout, guest = false }: { router: ReturnType
   );
 }
 
-function ProfileAvatar({ url, name, color, iconName, size = 100, isTablet = false, isEditing = false }: { url: string | null; name: string; color: string; iconName: string; size?: number; isTablet?: boolean; isEditing?: boolean }) {
+/** Guests: keep the progress by signing in */
+function GuestSaveCard({ router }: { router: ReturnType<typeof useRouter> }) {
+  return (
+    <div style={{ marginTop: 16, textAlign: 'left', background: 'linear-gradient(135deg,rgba(16,185,129,0.12),rgba(16,185,129,0.03))', border: '1px solid rgba(16,185,129,0.3)', borderRadius: 18, padding: 14, fontFamily: 'system-ui,sans-serif' }}>
+      <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+        <CloudUpload size={22} color="#34d399" style={{ flexShrink: 0 }} />
+        <div>
+          <p style={{ color: '#f4f4f5', fontSize: 14, fontWeight: 800, margin: 0 }}>Simpan progresmu</p>
+          <p style={{ color: '#a1a1aa', fontSize: 12, lineHeight: 1.5, margin: '3px 0 0' }}>Masuk supaya XP, bintang, dan badge tidak hilang dan bisa dibuka di HP lain.</p>
+        </div>
+      </div>
+      <button onClick={() => router.push('/login?redirectTo=%2Fprofile')}
+        style={{ marginTop: 12, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, padding: 11, borderRadius: 12, border: 'none', cursor: 'pointer', background: 'linear-gradient(135deg,#10b981,#059669)', color: '#fff', fontSize: 13.5, fontWeight: 800 }}>
+        <LogIn size={16} /> Masuk atau daftar
+      </button>
+    </div>
+  );
+}
+
+function ProfileAvatar({ url, name, color, iconName, size = 100, isTablet = false, isEditing = false, guest = false }: { url: string | null; name: string; color: string; iconName: string; size?: number; isTablet?: boolean; isEditing?: boolean; guest?: boolean }) {
   const innerSize = size - 16; 
   const initials = name?.slice(0, 2).toUpperCase() || '??';
 
@@ -220,7 +224,9 @@ function ProfileAvatar({ url, name, color, iconName, size = 100, isTablet = fals
         position: 'relative', zIndex: 5,
         opacity: isEditing ? 0.7 : 1, transition: 'opacity 0.2s'
       }}>
-        {url ? (
+        {guest ? (
+          <img src="/maskot.png" alt="Lingo" style={{ width: '70%', height: 'auto' }} />
+        ) : url ? (
           <img src={url} alt={name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         ) : (
           <span style={{ color: color, fontSize: size * 0.3, fontWeight: 800 }}>{initials}</span>
@@ -251,7 +257,7 @@ function ProfileAvatar({ url, name, color, iconName, size = 100, isTablet = fals
 /* ─── Page ─────────────────────────────────────────────── */
 export default function ProfilePage() {
   const selectedLanguage = useLanguageStore(s => s.selectedLanguage) || 'en';
-  const { xp: rawXp, streak: rawStreak, completedStages, addXp } = useProgress();
+  const { xp: rawXp, streak: rawStreak, completedStages } = useProgress();
   const { unlockedAchievements } = useUserStore();
   const router = useRouter();
 
@@ -263,7 +269,8 @@ export default function ProfilePage() {
   const [username,   setUsername]   = useState('');
   const [joinedAt,   setJoinedAt]   = useState('');
   const [avatarUrl,  setAvatarUrl]  = useState<string | null>(null);
-  const [isLoadingProfile, setIsLoadingProfile] = useState(true); 
+  const [isLoadingProfile, setIsLoadingProfile] = useState(true);
+  const isGuest = !isLoadingProfile && !userId; // not signed in
 
   // Edit State
   const [isEditing, setIsEditing] = useState(false);
@@ -418,71 +425,6 @@ export default function ProfilePage() {
     </div>
   );
 
-const DailyTargets = () => {
-    // Ambil data real-time dari Store
-    const dailyStats = useUserStore(s => s.dailyStats);
-    const claimReward = useUserStore(s => s.claimDailyReward);
-    
-    // Pastikan UI hanya membaca data hari ini (kalau ganti hari, reset otomatis)
-    const today = new Date().toDateString();
-    const isToday = dailyStats?.date === today;
-    
-    const stagesDone = isToday ? dailyStats.stagesCompleted : 0;
-    const questionsDone = isToday ? dailyStats.questionsAnswered : 0;
-    const materialsDone = isToday ? dailyStats.materialsRead : 0;
-    const claimed = isToday ? dailyStats.claimed : {};
-
-    const missions = [
-      { id: 'stage', label: 'Selesaikan 1 stage', current: stagesDone, target: 1, xp: 50 },
-      { id: 'quest', label: 'Kerjakan 5 soal', current: questionsDone, target: 5, xp: 30 },
-      { id: 'vocab', label: 'Baca 2 materi (Vocab)', current: materialsDone, target: 2, xp: 20 },
-    ];
-
-    return (
-      <div style={{ background:'#0e0e14', border:`1px solid ${lvl.color}20`, borderRadius:18, padding:'18px 20px' }}>
-        <p style={{ color:'#3f3f46', fontSize:10, fontWeight:800, letterSpacing:'0.12em', textTransform:'uppercase', marginBottom:14, fontFamily:'system-ui,sans-serif' }}>Target Hari Ini</p>
-        
-        {missions.map((t, i) => {
-          const isCompleted = t.current >= t.target;
-          const isClaimed = claimed[t.id] === true;
-
-          return (
-            <div key={t.id} style={{ display:'flex', alignItems:'center', gap:10, padding:'10px 0', borderBottom:i<2?'1px solid rgba(255,255,255,0.04)':'none' }}>
-              
-              {/* Lingkaran Indikator */}
-              <div style={{ width:24, height:24, borderRadius:8, flexShrink:0, background:isClaimed?`${lvl.color}25`:'rgba(255,255,255,0.04)', border:`1px solid ${isClaimed?lvl.color+'40':'rgba(255,255,255,0.08)'}`, display:'flex', alignItems:'center', justifyContent:'center' }}>
-                {isClaimed ? (
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke={lvl.color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                ) : (
-                  <span style={{ fontSize: 10, color: '#71717a', fontWeight: 'bold' }}>{Math.min(t.current, t.target)}/{t.target}</span>
-                )}
-              </div>
-
-              {/* Teks Misi */}
-              <span style={{ flex:1, color:isClaimed?'#71717a':'#d4d4d8', fontSize:13, fontFamily:'system-ui,sans-serif', textDecoration:isClaimed?'line-through':'none' }}>
-                {t.label}
-              </span>
-
-              {/* Tombol Klaim atau Teks XP */}
-              {isClaimed ? (
-                <span style={{ color:'#52525b', fontSize:10, fontWeight:700, fontFamily:'system-ui,sans-serif' }}>Diambil</span>
-              ) : isCompleted ? (
-                <button 
-                  onClick={() => { if (claimReward(t.id)) addXp(t.xp); }}
-                  style={{ background: lvl.color, border: 'none', color: '#000', fontSize: 11, fontWeight: 800, padding: '6px 12px', borderRadius: 99, cursor: 'pointer', boxShadow: `0 0 8px ${lvl.color}80`, animation: 'pulse 2s infinite' }}
-                >
-                  Klaim +{t.xp}
-                </button>
-              ) : (
-                <span style={{ color:'#facc15', fontSize:11, fontWeight:700, fontFamily:'system-ui,sans-serif' }}>+{t.xp} XP</span>
-              )}
-            </div>
-          );
-        })}
-      </div>
-    );
-  };
-
   const LevelRoadmap = () => (
     <div>
       <p style={{ color:'#3f3f46', fontSize:10, fontWeight:800, letterSpacing:'0.12em', textTransform:'uppercase', marginBottom:10, fontFamily:'system-ui,sans-serif' }}>Perjalanan Level</p>
@@ -542,7 +484,7 @@ const DailyTargets = () => {
                 ) : (
                   <>
                     <RingProgress pct={lvl.progress} color={lvl.color} size={100}/>
-                    <ProfileAvatar url={avatarUrl} name={isEditing ? editName : username} color={lvl.color} iconName={lvl.iconName} size={100} isTablet={true} isEditing={isEditing} />
+                    <ProfileAvatar url={avatarUrl} name={isEditing ? editName : username} color={lvl.color} iconName={lvl.iconName} size={100} isTablet={true} isEditing={isEditing} guest={isGuest} />
                   </>
                 )}
               </div>
@@ -579,24 +521,25 @@ const DailyTargets = () => {
                   </div>
                 ) : (
                   <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                    <h1 style={{ fontSize:26, fontWeight:900, color:'#f4f4f5', letterSpacing:'-0.04em', margin:'0 0 4px', lineHeight:1 }}>{username || 'Pelajar'}</h1>
-                    <button 
+                    <h1 style={{ fontSize:26, fontWeight:900, color:'#f4f4f5', letterSpacing:'-0.04em', margin:'0 0 4px', lineHeight:1 }}>{isGuest ? 'Tamu' : (username || 'Pelajar')}</h1>
+                    {!isGuest && <button 
                       onClick={() => setIsEditing(true)} 
                       style={{ background: 'transparent', border: 'none', color: '#71717a', cursor: 'pointer', padding: 4, display: 'flex', alignItems: 'center' }}
                       title="Edit Profil"
                     >
                       <Edit3 size={16} />
-                    </button>
+                    </button>}
                   </div>
                 )}
                 
                 {isLoadingProfile ? (
                    <div style={{ width: 120, height: 14, background: 'rgba(255,255,255,0.05)', borderRadius: 4, animation: 'pulseBg 1.5s infinite' }} />
-                ) : !isEditing && (
+                ) : !isEditing && !isGuest && (
                    <p style={{ fontSize:12, color:'#52525b', margin:'0 0 0', fontFamily:'system-ui,sans-serif' }}>Bergabung sejak {joinedAt || '...'}</p>
                 )}
 
-                {!isEditing && <ActionButtons router={router} onLogout={handleLogout} guest={!isLoadingProfile && !userId} />}
+                {!isEditing && <ActionButtons router={router} onLogout={handleLogout} guest={isGuest} />}
+                {isGuest && <GuestSaveCard router={router} />}
 
                 {lvl.next && !isEditing && (
                   <div style={{ marginTop:14 }}>
@@ -640,7 +583,6 @@ const DailyTargets = () => {
                 </p>
               </div>
             )}
-            <DailyTargets/>
             <LevelRoadmap/>
             <AchievementsSection cols={3}/>
           </div>
@@ -673,7 +615,7 @@ const DailyTargets = () => {
             ) : (
               <>
                 <RingProgress pct={lvl.progress} color={lvl.color} size={100}/>
-                <ProfileAvatar url={avatarUrl} name={isEditing ? editName : username} color={lvl.color} iconName={lvl.iconName} size={100} isTablet={false} isEditing={isEditing} />
+                <ProfileAvatar url={avatarUrl} name={isEditing ? editName : username} color={lvl.color} iconName={lvl.iconName} size={100} isTablet={false} isEditing={isEditing} guest={isGuest} />
               </>
             )}
           </div>
@@ -711,24 +653,25 @@ const DailyTargets = () => {
              </div>
           ) : (
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, margin: '0 0 4px' }}>
-              <h1 style={{ fontSize:26, fontWeight:900, color:'#f4f4f5', letterSpacing:'-0.04em', lineHeight:1, margin: 0 }}>{username || 'Pelajar'}</h1>
-              <button 
+              <h1 style={{ fontSize:26, fontWeight:900, color:'#f4f4f5', letterSpacing:'-0.04em', lineHeight:1, margin: 0 }}>{isGuest ? 'Tamu' : (username || 'Pelajar')}</h1>
+              {!isGuest && <button 
                 onClick={() => setIsEditing(true)} 
                 style={{ background: 'transparent', border: 'none', color: '#71717a', cursor: 'pointer', padding: 4, display: 'flex', alignItems: 'center' }}
                 title="Edit Profil"
               >
                 <Edit3 size={18} />
-              </button>
+              </button>}
             </div>
           )}
 
           {isLoadingProfile ? (
             <div style={{ width: 100, height: 14, background: 'rgba(255,255,255,0.05)', borderRadius: 4, margin: '0 auto', animation: 'pulseBg 1.5s infinite' }} />
-          ) : !isEditing && (
+          ) : !isEditing && !isGuest && (
              <p style={{ fontSize:12, color:'#52525b', margin:0, fontFamily:'system-ui,sans-serif' }}>Bergabung sejak {joinedAt || '...'}</p>
           )}
 
-          {!isEditing && <ActionButtons router={router} onLogout={handleLogout} guest={!isLoadingProfile && !userId} />}
+          {!isEditing && <ActionButtons router={router} onLogout={handleLogout} guest={isGuest} />}
+          {isGuest && <GuestSaveCard router={router} />}
         </div>
 
         {/* Stats */}
@@ -771,7 +714,6 @@ const DailyTargets = () => {
           </div>
         )}
 
-        <div style={{ padding:'16px 16px 0' }}><DailyTargets/></div>
         <div style={{ padding:'16px 16px 0' }}><LevelRoadmap/></div>
         <div style={{ padding:'16px 16px 0' }}><AchievementsSection cols={3}/></div>
       </div>

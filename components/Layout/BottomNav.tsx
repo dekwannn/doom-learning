@@ -15,21 +15,21 @@ import {
 const NAV_ITEMS = [
   {
     href: '/',
-    label: 'Home',
+    label: 'Beranda',
     icon: House,
     activeColor: '#34d399',
     glowColor: 'rgba(52,211,153,0.65)',
   },
   {
     href: '/adventure',
-    label: 'Adventure',
+    label: 'Petualangan',
     icon: Map,
     activeColor: '#fb923c',
     glowColor: 'rgba(251,146,60,0.65)',
   },
   {
     href: '/assistant',
-    label: 'Assistant',
+    label: 'Lingo',
     icon: BotMessageSquare,
     activeColor: '#fff',
     glowColor: 'rgba(99,102,241,0.7)',
@@ -37,14 +37,14 @@ const NAV_ITEMS = [
   },
   {
     href: '/learn',
-    label: 'Courses',
+    label: 'Materi',
     icon: BookOpen,
     activeColor: '#60a5fa',
     glowColor: 'rgba(96,165,250,0.65)',
   },
   {
     href: '/profile',
-    label: 'Profile',
+    label: 'Profil',
     icon: UserRound,
     activeColor: '#c084fc',
     glowColor: 'rgba(192,132,252,0.65)',
@@ -112,18 +112,13 @@ export default function BottomNav() {
                   transform: active ? 'scale(1.05)' : 'scale(1)',
                 }}
               >
-                <Icon
-                  size={22}
-                  color={active ? '#fff' : '#52525b'}
-                  strokeWidth={active ? 2 : 1.8}
-                />
+                {/* Lingo himself in the middle of the menu */}
+                <img src="/maskot.png" alt="" style={{ width: 36, height: 'auto', filter: active ? 'none' : 'saturate(0.85)' }} />
               </div>
               <span
                 style={{
-                  fontSize: 9,
-                  fontWeight: 800,
-                  letterSpacing: '0.06em',
-                  textTransform: 'uppercase',
+                  fontSize: 10.5,
+                  fontWeight: 700,
                   color: active ? '#fff' : '#3f3f46',
                   transition: 'color 0.2s',
                 }}
@@ -172,10 +167,8 @@ export default function BottomNav() {
             </div>
             <span
               style={{
-                fontSize: 9,
-                fontWeight: 800,
-                letterSpacing: '0.06em',
-                textTransform: 'uppercase',
+                fontSize: 10.5,
+                fontWeight: 700,
                 color: active ? activeColor : '#3f3f46',
                 transition: 'color 0.2s',
               }}

@@ -87,7 +87,10 @@ class Checker:
         return [(w, p.split()) for w, p in zip(words, phones)]
 
     def check(self, audio16k: np.ndarray, target: str | None = None) -> dict:
-        segments, _ = self.whisper.transcribe(audio16k, language="en", beam_size=1)
+        # vad_filter skips silence and condition_on_previous_text=False stops Whisper repeating itself on it
+        # (short clips with silence could otherwise take tens of seconds)
+        segments, _ = self.whisper.transcribe(audio16k, language="en", beam_size=1, vad_filter=True,
+                                              condition_on_previous_text=False, without_timestamps=True)
         said = " ".join(s.text for s in segments).strip()
         heard = self.heard_phones(audio16k)
         words = self.expected_words(target or said)
@@ -102,7 +105,8 @@ class Checker:
 
         exp_n = [norm(p) for p in flat]
         heard_n = [norm(p) for p in heard]
-        per_word = [{"word": w, "expected": "".join(p), "heard": [], "issues": [], "minor": 0} for w, p in words]
+        per_word = [{"word": w, "expected": "".join(p), "heard": [], "issues": [], "minor": 0, "same": 0, "size": len(p)}
+                    for w, p in words]
         major = minor = 0
         for ei, h in align(exp_n, heard_n):
             if ei is None:
@@ -113,14 +117,17 @@ class Checker:
                 item["heard"].append(h)
             e = exp_n[ei]
             if h == e:
+                item["same"] += 1
                 continue
             nxt = exp_n[ei + 1] if ei + 1 < len(exp_n) else None
             # Fine in normal speech, not mistakes: "a" before n/m/ng sounds like "e" in American English (thank, man),
             # and a final consonant merges into the same sound starting the next word (this song, bus stop)
             if flat[ei] == "æ" and nxt in NASALS and h in {"ɛ", "eɪ"}:
+                item["same"] += 1
                 continue
             if words[owner[ei]][0].lower() in WEAK_WORDS and (e in VOWELS or flat[ei] in VOWELS):
                 item["minor"] += 1
+                item["same"] += 1  # a weak vowel is the normal way to say it: it still matches
                 minor += 1
                 continue
             if h is None and ei in last and nxt is not None and (nxt == e or {e, nxt} <= SIBILANTS):
@@ -147,7 +154,10 @@ class Checker:
             "score": round(score),
             "words": [
                 {"word": w["word"], "ok": not w["issues"], "expected": w["expected"],
-                 "heard": "".join(w["heard"]), "issues": w["issues"]}
+                 "heard": "".join(w["heard"]), "issues": w["issues"],
+                 # how many of the word's sounds were heard as expected (0..1): with a known target (speaking
+                 # cards), a word said wrong altogether has a low match even without a known mistake
+                 "match": round(w["same"] / w["size"], 2) if w["size"] else 1.0}
                 for w in per_word
             ],
         }

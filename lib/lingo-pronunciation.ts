@@ -6,7 +6,8 @@
 import { LINGO_VOICE_URL } from "@/lib/lingo-speech";
 
 export type PronunciationIssue = { expected: string; heard: string | null; tip: string };
-export type PronunciationWord = { word: string; ok: boolean; expected: string; heard: string; issues: PronunciationIssue[] };
+/** `match`: share of the word's sounds heard as expected (0..1); low when a word was said wrong altogether */
+export type PronunciationWord = { word: string; ok: boolean; expected: string; heard: string; issues: PronunciationIssue[]; match?: number };
 export type PronunciationResult = { said: string; target: string | null; heard: string; score: number; words: PronunciationWord[] };
 
 /** Checks how the learner said it; null when the server could not check (off, busy, unreachable) */
