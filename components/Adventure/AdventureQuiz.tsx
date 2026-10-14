@@ -792,7 +792,7 @@ function ResultScreen({ score, total, xpEarned, color, stageLabel, chapterTitle,
         <div style={{ marginBottom: 24, display: 'flex', flexDirection: 'column', alignItems: 'center', animation: 'fadeUp 0.5s ease' }}>
           <div style={{ width: 160, height: 160, borderRadius: 16, overflow: 'hidden', border: `2px solid ${passed ? color : '#ef4444'}`, background: '#0e0e14', boxShadow: `0 8px 30px ${passed ? color : '#ef4444'}30`, marginBottom: 6, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             {memeFailed ? (
-              <img src="/maskot.webp" alt="Lingo" style={{ width: 112, height: 'auto' }} />
+              <img src="/maskot.png" alt="Lingo" style={{ width: 112, height: 'auto' }} />
             ) : (
               <img src={randomMeme.gif} alt={randomMeme.alt} onError={() => setMemeFailed(true)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             )}

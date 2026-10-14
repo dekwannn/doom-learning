@@ -37,13 +37,6 @@ const CHAPTERS_DATA_MAP: Record<string, any> = {
 };
 
 /* ─── Chapter images per index ────────────────────────── */
-const CHAPTER_IMAGES: Record<number, string> = {
-  0: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80",
-  1: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80",
-  2: "https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=800&q=80",
-  3: "https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?w=800&q=80",
-  4: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80",
-};
 
 /* ─── Section type labels ─────────────────────────────── */
 const SECTION_TYPE_LABELS: Record<string, { label: string }> = {
@@ -55,13 +48,13 @@ const SECTION_TYPE_LABELS: Record<string, { label: string }> = {
 
 /* ─── Language config display ─────────────────────────── */
 const LANG_META: Record<string, { name: string; flag: string; learnTitle: string; learnSubtitle: string }> = {
-  en: { name: "English", flag: "EN", learnTitle: "Learn English", learnSubtitle: "Pelajari materi sebelum mengerjakan soal" },
-  ja: { name: "日本語", flag: "JA", learnTitle: "Belajar Bahasa Jepang", learnSubtitle: "Dari hiragana, kanji, hingga percakapan dasar" },
-  zh: { name: "普通话", flag: "ZH", learnTitle: "Belajar Bahasa Mandarin", learnSubtitle: "Dari pinyin, karakter, hingga percakapan sehari-hari" },
+  en: { name: "Bahasa Inggris", flag: "EN", learnTitle: "Materi bahasa Inggris", learnSubtitle: "Pahami dulu di sini, lalu main kuisnya di Petualangan" },
+  ja: { name: "Bahasa Jepang", flag: "JA", learnTitle: "Materi bahasa Jepang", learnSubtitle: "Dari hiragana, kanji, hingga percakapan dasar" },
+  zh: { name: "Bahasa Mandarin", flag: "ZH", learnTitle: "Materi bahasa Mandarin", learnSubtitle: "Dari pinyin, karakter, hingga percakapan sehari-hari" },
   ko: {
-    name: '한국어',
+    name: 'Bahasa Korea',
     flag: 'KO',
-    learnTitle: 'Belajar Bahasa Korea',
+    learnTitle: 'Materi bahasa Korea',
     learnSubtitle: 'Dari Hangul, kosakata, hingga percakapan sehari-hari',
   },
 };
@@ -117,7 +110,7 @@ export default function LearnPage() {
         <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 10 }}>
           <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: "0.06em", color: "rgba(255,255,255,0.55)" }}>{langMeta.flag}</span>
           <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", color: "rgba(255,255,255,0.25)", textTransform: "uppercase" }}>
-            {langMeta.name} · BELAJAR
+            {langMeta.name} · MATERI
           </span>
         </div>
 
@@ -154,7 +147,6 @@ export default function LearnPage() {
         {chaptersData.map((chapter: any, idx: number) => {
           const isOpen = expandedChapter === idx;
           const color: string = chapter.color ?? "#3b82f6";
-          const imgUrl = CHAPTER_IMAGES[idx] ?? CHAPTER_IMAGES[0];
           const stages: any[] = chapter.stages ?? [];
 
           // Hitung progress
@@ -174,6 +166,7 @@ export default function LearnPage() {
           });
 
           const chapterProgress = stages.length > 0 ? Math.round((completedCount / stages.length) * 100) : 0;
+          const nextStageId = stages.find((st: any) => !completedStages[st.id])?.id;
           const isChapterCompleted = stages.length > 0 && completedCount === stages.length;
 
           return (
@@ -191,12 +184,9 @@ export default function LearnPage() {
               >
                 {/* Hero image */}
                 <div style={{ position: "relative", height: 120, overflow: "hidden" }}>
-                  <img src={imgUrl} alt={chapter.title}
-                    style={{ width: "100%", height: "100%", objectFit: "cover",
-                      filter: isChapterCompleted ? "brightness(0.3) saturate(0.4)" : "brightness(0.4) saturate(1.1)",
-                      display: "block" }}
-                  />
-                  <div style={{ position: "absolute", inset: 0, background: `linear-gradient(135deg, ${color}55 0%, transparent 55%, rgba(8,8,16,0.75) 100%)` }} />
+                  {/* Cover in the chapter's colour, with Lingo */}
+                  <div style={{ position: "absolute", inset: 0, background: `radial-gradient(circle at 82% 35%, ${color}${isChapterCompleted ? "22" : "40"} 0%, transparent 55%), linear-gradient(135deg, ${color}26 0%, #0b0b14 70%)` }} />
+                  <img src="/maskot.png" alt="" style={{ position: "absolute", right: 14, top: 38, width: 66, transform: "rotate(8deg)", opacity: isChapterCompleted ? 0.55 : 1, filter: `drop-shadow(0 6px 14px ${color}55)` }} />
 
                   {/* Chapter badge */}
                   <div style={{
@@ -300,6 +290,7 @@ export default function LearnPage() {
                     const soalCount   = entry?.practice?.length ?? 0;
                     const stageXp     = entry?.practice?.reduce((s: number, p: any) => s + (p.xpReward ?? 0), 0) ?? 0;
                     const isCompleted = completedStages[stage.id] === true;
+                    const isNext      = stage.id === nextStageId;
                     const isHovered   = hoveredStage === stage.id;
 
                     // Kumpulkan tipe soal unik
@@ -318,22 +309,21 @@ export default function LearnPage() {
                         style={{
                           width: "100%", display: "flex", alignItems: "center", gap: 12,
                           padding: "12px 14px",
-                          background: isHovered ? `${color}0c` : "transparent",
+                          background: isHovered || isNext ? `${color}0c` : "transparent",
                           border: "none",
                           borderBottom: si < stages.length - 1 ? "1px solid rgba(255,255,255,0.04)" : "none",
                           cursor: "pointer", textAlign: "left",
                           transition: "background 0.15s",
-                          opacity: isCompleted ? 0.75 : 1,
                         }}
                       >
                         {/* Stage indicator */}
                         <div style={{
                           width: 34, height: 34, borderRadius: 10, flexShrink: 0,
-                          background: isCompleted ? "#10b98118" : `${color}14`,
-                          border: `1px solid ${isCompleted ? "#10b98145" : color+"28"}`,
+                          background: isCompleted ? "#10b98118" : isNext ? color : `${color}14`,
+                          border: `1px solid ${isCompleted ? "#10b98145" : isNext ? color : color+"28"}`,
                           display: "flex", alignItems: "center", justifyContent: "center",
                           fontSize: 13, fontWeight: 800,
-                          color: isCompleted ? "#10b981" : color,
+                          color: isCompleted ? "#10b981" : isNext ? "#0a0a0d" : color,
                         }}>
                           {isCompleted ? <Check size={14} strokeWidth={3} /> : (si + 1)}
                         </div>
@@ -341,15 +331,16 @@ export default function LearnPage() {
                         {/* Stage info */}
                         <div style={{ flex: 1, minWidth: 0 }}>
                           <p style={{
-                            color: isCompleted ? "rgba(255,255,255,0.5)" : "#e4e4e7",
-                            fontSize: 13, fontWeight: 600, margin: 0, lineHeight: 1.3,
-                            textDecoration: isCompleted ? "line-through" : "none",
+                            color: "#e4e4e7",
+                            fontSize: 13, fontWeight: isNext ? 800 : 600, margin: 0, lineHeight: 1.3,
                           }}>
                             {stage.label ?? entry?.title ?? `Stage ${si + 1}`}
                           </p>
-                          {entry && (
-                            <p style={{ margin: "3px 0 0", fontSize: 11, color: "rgba(255,255,255,0.28)" }}>
-                              {entry.title}
+                          {isCompleted ? (
+                            <p style={{ margin: "3px 0 0", fontSize: 11, color: "#34d399", fontWeight: 700 }}>Selesai · ulangi</p>
+                          ) : entry && (
+                            <p style={{ margin: "3px 0 0", fontSize: 11, color: isNext ? color : "rgba(255,255,255,0.28)", fontWeight: isNext ? 700 : 400 }}>
+                              {isNext ? `Berikutnya · ${entry.title}` : entry.title}
                             </p>
                           )}
                           {/* Practice type icons */}

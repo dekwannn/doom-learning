@@ -2,7 +2,9 @@
 
 import React, { useState, useRef, useEffect, useCallback, JSX } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { askLingo } from "@/lib/lingo-ai";
+import { buildVoicePrompt } from "@/lib/lingo-prompts";
 import { isSpeechSupported, onLingoSpeech, speakSegments, speakText, splitForSpeech, stopLingoSpeech } from "@/lib/lingo-speech";
 import LingoAvatar from "@/components/lingo/LingoAvatar";
 import LingoVoiceMode from "@/components/lingo/LingoVoiceMode";
@@ -150,22 +152,6 @@ const VOICE_MODE_LANGS = new Set<LangCode>(["en"]);
 
 // Voice mode (English): Lingo is a speaking buddy. The English part is read aloud by the natural voice,
 // the "ID:" line is shown as a caption so beginners can follow.
-function buildVoicePrompt() {
-  return `You are Lingo, a cheerful, upbeat English speaking buddy from LINGORA for Indonesian learners. This is a spoken conversation: your reply is read aloud.
-- Sound happy and encouraging, like a friendly cartoon character: short sentences, exclamation marks, words like "Yay!", "Awesome!", "Great job!" when they fit
-- Reply in simple English (beginner level), like real talking: at most 2 short sentences, then a short question so the conversation continues
-- No markdown, no lists, no emoji, no symbols
-- If the user speaks Indonesian, still answer in simple English
-- If the user makes an English mistake, gently say the correct sentence first
-- Their words come from speech recognition. A word that does not fit (for example "tree" instead of "three", "furry" instead of "very") is probably a pronunciation mistake: kindly say the right word clearly so they can hear it
-- Sometimes the message ends with a "(Pronunciation check from the app ...)" note. It comes from the app, not from the user. When it is there, start with one short, kind sentence that helps them say that word, and say the word clearly (for example: Almost! Put your tongue between your teeth: three!). Then reply as usual. Never mention the app, a check or a score
-- After the English reply, add one new line that starts with "ID:" followed by the Indonesian translation of your reply
-
-Example:
-Good morning! I'm happy to talk with you. How are you today?
-ID: Selamat pagi! Aku senang mengobrol denganmu. Apa kabarmu hari ini?`;
-}
-
 function buildSentencePrompt(lang: LangCode, topic: string, level: string) {
   const topicLabel = TOPICS.find(t => t.id === topic)?.label ?? topic;
   const levelLabel = LEVELS.find(l => l.id === level)?.label ?? level;
@@ -828,7 +814,7 @@ function EmptyState({ lang, onLangChange, onOpenSpeak, onOpenVoice, wide = false
         color: "#52525b", fontSize: 13, lineHeight: 1.6,
         margin: "0 0 28px", maxWidth: 220,
       }}>
-        Ajak saya bicara, atau latihan speaking.
+        Ajak saya bicara, atau pilih latihan.
       </p>
 
       {/* Language: one compact dropdown */}
@@ -870,30 +856,37 @@ function EmptyState({ lang, onLangChange, onOpenSpeak, onOpenVoice, wide = false
         </div>
       )}
 
-      {/* Speaking button */}
-      <button
-        onClick={onOpenSpeak}
-        style={{
-          display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-          width: "100%", maxWidth: 260, padding: "11px 0", borderRadius: 12,
-          background: "rgba(124,58,237,0.1)",
-          border: "1px solid rgba(168,85,247,0.25)",
-          color: "#c084fc", fontSize: 13, fontWeight: 600,
-          cursor: "pointer", fontFamily: "system-ui, sans-serif",
-          transition: "all 0.18s",
-        }}
-        onMouseEnter={e => {
-          (e.currentTarget as HTMLElement).style.background = "rgba(124,58,237,0.18)";
-          (e.currentTarget as HTMLElement).style.borderColor = "rgba(168,85,247,0.4)";
-        }}
-        onMouseLeave={e => {
-          (e.currentTarget as HTMLElement).style.background = "rgba(124,58,237,0.1)";
-          (e.currentTarget as HTMLElement).style.borderColor = "rgba(168,85,247,0.25)";
-        }}
-      >
-        {IC.mic("#c084fc", 14)}
-        Latihan Speaking
-      </button>
+      {/* Practice: speaking cards (for now the speaking practice) and scenario chats (coming soon) */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, width: "100%", maxWidth: 260 }}>
+        <Link
+          href="/kartu"
+          style={{
+            display: "block", textDecoration: "none",
+            textAlign: "left", padding: "11px 12px", borderRadius: 14, cursor: "pointer",
+            background: "rgba(124,58,237,0.08)", border: "1px solid rgba(167,139,250,0.28)",
+            fontFamily: "system-ui, sans-serif",
+          }}
+        >
+          <span style={{ display: "inline-block", fontSize: 9, fontWeight: 800, background: "rgba(167,139,250,0.18)", color: "#c4b5fd", padding: "2px 6px", borderRadius: 6, marginBottom: 6 }}>BARU</span>
+          <div>{IC.mic("#a78bfa", 18)}</div>
+          <p style={{ color: "#e4e4e7", fontSize: 12.5, fontWeight: 800, margin: "5px 0 0" }}>Kartu ucapan</p>
+          <p style={{ color: "#71717a", fontSize: 11, margin: "2px 0 0", lineHeight: 1.4 }}>Ucapkan, Lingo koreksi</p>
+        </Link>
+        <Link
+          href="/skenario"
+          style={{
+            display: "block", textDecoration: "none",
+            textAlign: "left", padding: "11px 12px", borderRadius: 14, cursor: "pointer",
+            background: "rgba(251,146,60,0.06)", border: "1px solid rgba(251,146,60,0.3)",
+            fontFamily: "system-ui, sans-serif",
+          }}
+        >
+          <span style={{ display: "inline-block", fontSize: 9, fontWeight: 800, background: "rgba(251,146,60,0.18)", color: "#fdba74", padding: "2px 6px", borderRadius: 6, marginBottom: 6 }}>BARU</span>
+          <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fb923c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" /></svg></div>
+          <p style={{ color: "#e4e4e7", fontSize: 12.5, fontWeight: 800, margin: "5px 0 0" }}>Ngobrol skenario</p>
+          <p style={{ color: "#71717a", fontSize: 11, margin: "2px 0 0", lineHeight: 1.4 }}>Kafe, sekolah, toko</p>
+        </Link>
+      </div>
 
       {/* Hint */}
       <p style={{ color: "#3f3f46", fontSize: 11.5, margin: "18px 0 0" }}>
@@ -1062,6 +1055,15 @@ export default function AssistantPage() {
   }, []);
   const openVoiceMode = () => { if (!voiceModeReady) return; stopLingoSpeech(); setVoiceModeOpen(true); };
   const closeVoiceMode = useCallback(() => setVoiceModeOpen(false), []);
+
+  // Opened from the home page's quick practice (/assistant?buka=suara): open voice mode once, then clean the address
+  useEffect(() => {
+    const want = new URLSearchParams(window.location.search).get("buka");
+    if (!want) return;
+    window.history.replaceState(null, "", window.location.pathname);
+    if (want === "suara" && VOICE_MODE_LANGS.has(lang)) { stopLingoSpeech(); setVoiceModeOpen(true); }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- only when the page opens
+  }, []);
 
   const resetChat = () => { stopLingoSpeech(); setMessages([]); setChatHistory([]); setStarted(false); };
   const handleLangChange = (newLang: LangCode) => {
