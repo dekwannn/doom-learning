@@ -6,8 +6,9 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, ChevronRight, Coffee, Layers, Lock, Mic, Play, Trophy } from 'lucide-react';
+import { ArrowRight, ChevronRight, Lock } from 'lucide-react';
 import LingoAvatar from '@/components/lingo/LingoAvatar';
+import { CafeScene, CardsScene, GoScene, MedalScene, TalkScene, TrophyScene } from '@/components/Home/LingoScenes';
 import { supabase } from '@/lib/supabase';
 import { ACHIEVEMENT_DEFS, useUserStore } from '@/store/useUserStore';
 
@@ -63,9 +64,7 @@ export function ContinueCard({ ch, stage, index, count }: { ch: HomeChapter; sta
     <Link href={`/adventure/${ch.id}/${stage.id}`} style={{ textDecoration: 'none' }}>
       <div style={{ ...card, borderColor: `${ch.color}45`, boxShadow: `0 0 26px ${ch.color}14` }}>
         <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-          <div style={{ width: 48, height: 48, borderRadius: 14, background: `${ch.color}18`, border: `1px solid ${ch.color}40`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-            <Play size={22} color={ch.color} fill={ch.color} />
-          </div>
+          <GoScene color={ch.color} size={60} />
           <div style={{ flex: 1, minWidth: 0 }}>
             <p style={{ ...muted, margin: 0 }}>{ch.title} · {ch.subtitle}</p>
             <p style={{ color: '#fff', fontSize: 17, fontWeight: 800, margin: '2px 0 0' }}>{stage.label}</p>
@@ -86,31 +85,52 @@ export function ContinueCard({ ch, stage, index, count }: { ch: HomeChapter; sta
 export function AllDoneCard() {
   return (
     <div style={{ ...card, textAlign: 'center', borderColor: 'rgba(250,204,21,0.25)' }}>
-      <Trophy size={28} color="#facc15" style={{ margin: '0 auto' }} />
+      <div style={{ display: 'flex', justifyContent: 'center' }}><TrophyScene size={84} /></div>
       <p style={{ color: '#fff', fontSize: 15, fontWeight: 800, margin: '8px 0 2px' }}>Semua stage yang terbuka sudah selesai</p>
       <p style={{ ...muted, margin: 0 }}>Kumpulkan XP untuk membuka chapter berikutnya, atau ulangi stage untuk bintang 3.</p>
     </div>
   );
 }
 
-function Tile({ href, icon, label, sub, badge }: { href?: string; icon: React.ReactNode; label: string; sub?: string; badge?: { text: string; color: string } }) {
-  const body = (
-    <div style={{ ...card, padding: '12px 8px', textAlign: 'center', position: 'relative', height: '100%', opacity: href ? 1 : 0.75 }}>
-      {badge && <span style={{ position: 'absolute', top: 6, right: 6, fontSize: 9, fontWeight: 800, background: `${badge.color}22`, color: badge.color, padding: '2px 6px', borderRadius: 6 }}>{badge.text}</span>}
-      <div style={{ display: 'flex', justifyContent: 'center' }}>{icon}</div>
-      <p style={{ color: '#e4e4e7', fontSize: 11.5, fontWeight: 700, margin: '7px 0 0', lineHeight: 1.3 }}>{label}</p>
-      {sub && <p style={{ color: '#71717a', fontSize: 10.5, fontWeight: 600, margin: '2px 0 0' }}>{sub}</p>}
-    </div>
+const Badge = ({ color }: { color: string }) => (
+  <span style={{ position: 'absolute', top: 8, right: 8, fontSize: 9, fontWeight: 800, background: `${color}22`, color, padding: '2px 6px', borderRadius: 6, zIndex: 1 }}>BARU</span>
+);
+
+/** A practice card with a scene of Lingo on top */
+function PracticeCard({ href, scene, label, sub, color, isNew }: { href: string; scene: React.ReactNode; label: string; sub: string; color: string; isNew?: boolean }) {
+  return (
+    <Link href={href} style={{ textDecoration: 'none' }}>
+      <div style={{ ...card, padding: 0, overflow: 'hidden', position: 'relative', height: '100%', borderColor: `${color}33` }}>
+        {isNew && <Badge color={color} />}
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '12px 6px 2px', background: `radial-gradient(circle at 50% 70%, ${color}2e, transparent 70%)` }}>{scene}</div>
+        <div style={{ padding: '6px 12px 12px' }}>
+          <p style={{ color: '#f4f4f5', fontSize: 13, fontWeight: 800, margin: 0, lineHeight: 1.25 }}>{label}</p>
+          <p style={{ color: '#71717a', fontSize: 11, margin: '2px 0 0', lineHeight: 1.35 }}>{sub}</p>
+        </div>
+      </div>
+    </Link>
   );
-  return href ? <Link href={href} style={{ textDecoration: 'none' }}>{body}</Link> : body;
 }
 
 export function QuickPractice({ voiceReady }: { voiceReady: boolean }) {
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 8 }}>
-      <Tile href={voiceReady ? '/assistant?buka=suara' : '/assistant'} icon={<Mic size={24} color="#5cfa2e" />} label="Bicara dengan Lingo" sub={voiceReady ? undefined : 'Inggris dulu'} />
-      <Tile href="/kartu" icon={<Layers size={24} color="#a78bfa" />} label="Kartu ucapan" badge={{ text: 'BARU', color: '#c4b5fd' }} />
-      <Tile href="/skenario" icon={<Coffee size={24} color="#fb923c" />} label="Ngobrol skenario" badge={{ text: 'BARU', color: '#fdba74' }} />
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+      <Link href={voiceReady ? '/assistant?buka=suara' : '/assistant'} style={{ textDecoration: 'none', gridColumn: '1 / -1' }}>
+        <div style={{ ...card, display: 'flex', alignItems: 'center', gap: 8, padding: '10px 10px 10px 16px', borderColor: 'rgba(92,250,46,0.25)', background: 'linear-gradient(120deg,#0e0e14 35%,rgba(92,250,46,0.13))' }}>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <p style={{ color: '#f4f4f5', fontSize: 15, fontWeight: 800, margin: 0 }}>Bicara dengan Lingo</p>
+            <p style={{ ...muted, margin: '3px 0 10px', lineHeight: 1.4 }}>
+              {voiceReady ? 'Ngobrol pakai suara, Lingo bantu benerin ucapanmu' : 'Mode suara baru ada untuk bahasa Inggris. Ngobrol lewat chat dulu, yuk'}
+            </p>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, padding: '6px 12px', borderRadius: 99, background: '#5cfa2e', color: '#0a0a0a', fontSize: 12, fontWeight: 800 }}>
+              {voiceReady ? 'Mulai ngobrol' : 'Buka chat'} <ArrowRight size={13} />
+            </span>
+          </div>
+          <TalkScene />
+        </div>
+      </Link>
+      <PracticeCard href="/kartu" scene={<CardsScene />} label="Kartu ucapan" sub="Ucapkan kartunya, Lingo cek tiap kata" color="#a78bfa" isNew />
+      <PracticeCard href="/skenario" scene={<CafeScene />} label="Ngobrol skenario" sub="Main peran di kafe, toko, bandara" color="#fb923c" isNew />
     </div>
   );
 }
@@ -176,9 +196,7 @@ export function RankCard({ lang }: { lang: string }) {
     <SectionLabel>Peringkat kamu</SectionLabel>
     <Link href={guest ? '/login?redirectTo=%2F' : '/leaderboard'} style={{ textDecoration: 'none' }}>
       <div style={{ ...card, display: 'flex', gap: 12, alignItems: 'center', borderColor: 'rgba(250,204,21,0.22)' }}>
-        <div style={{ width: 42, height: 42, borderRadius: 12, background: 'rgba(250,204,21,0.12)', border: '1px solid rgba(250,204,21,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-          <Trophy size={21} color="#facc15" />
-        </div>
+        <TrophyScene size={56} />
         <div style={{ flex: 1, minWidth: 0 }}>
           <p style={{ color: '#f4f4f5', fontSize: 13, fontWeight: 800, margin: 0 }}>{title}</p>
           <p style={{ ...muted, margin: '2px 0 0' }}>{sub}</p>
@@ -202,9 +220,7 @@ export function LatestAchievement() {
     <SectionLabel>Pencapaian terbaru</SectionLabel>
     <Link href="/profile" style={{ textDecoration: 'none' }}>
       <div style={{ ...card, display: 'flex', gap: 12, alignItems: 'center' }}>
-        <div style={{ width: 42, height: 42, borderRadius: 12, background: `${def.color}1f`, border: `1px solid ${def.color}45`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-          <Trophy size={21} color={def.color} />
-        </div>
+        <MedalScene color={def.color} size={56} />
         <div style={{ flex: 1, minWidth: 0 }}>
           <p style={{ color: '#f4f4f5', fontSize: 13, fontWeight: 800, margin: 0 }}>{def.label}</p>
           <p style={{ ...muted, margin: '2px 0 0' }}>{def.desc}</p>
