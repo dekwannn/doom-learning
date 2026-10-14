@@ -7,8 +7,9 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { ArrowLeft, ArrowRight, Check, ChevronRight, Layers, Lock, Mic, RotateCcw, Square, Volume2 } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, ChevronRight, Mic, RotateCcw, Square, Volume2 } from 'lucide-react';
 import LingoAvatar, { type LingoState } from '@/components/lingo/LingoAvatar';
+import { CardsScene } from '@/components/Home/LingoScenes';
 import { useLanguageStore } from '@/store/useLanguageStore';
 import { useUserStore } from '@/store/useUserStore';
 import { useProgress } from '@/hooks/useProgress';
@@ -66,6 +67,12 @@ export default function KartuPage() {
   );
 }
 
+/** Three short words of the deck for the cards Lingo holds */
+function deckWords(d: CardDeck): string[] {
+  const short = d.cards.filter((c) => c.kind === 'kata' && c.text.length <= 9).map((c) => c.text);
+  return short.length >= 3 ? short.slice(0, 3) : ['Hi!', 'Thank you', 'Yes'];
+}
+
 function DeckPicker({ decks, xp, onPick }: { decks: CardDeck[]; xp: number; onPick: (d: CardDeck) => void }) {
   return (
     <div style={{ marginTop: 18 }}>
@@ -79,9 +86,9 @@ function DeckPicker({ decks, xp, onPick }: { decks: CardDeck[]; xp: number; onPi
           const open = xp >= d.xpRequired;
           return (
             <button key={d.id} onClick={() => open && onPick(d)} disabled={!open}
-              style={{ display: 'flex', alignItems: 'center', gap: 12, textAlign: 'left', padding: 14, borderRadius: 16, cursor: open ? 'pointer' : 'default', background: '#0e0e14', border: `1px solid ${open ? `${d.color}40` : 'rgba(255,255,255,0.06)'}`, opacity: open ? 1 : 0.55, fontFamily: FONT }}>
-              <div style={{ width: 42, height: 42, borderRadius: 12, background: `${d.color}18`, border: `1px solid ${d.color}40`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                {open ? <Layers size={20} color={d.color} /> : <Lock size={18} color="#71717a" />}
+              style={{ display: 'flex', alignItems: 'center', gap: 10, textAlign: 'left', padding: '8px 14px 8px 8px', borderRadius: 16, cursor: open ? 'pointer' : 'default', background: '#0e0e14', border: `1px solid ${open ? `${d.color}40` : 'rgba(255,255,255,0.06)'}`, opacity: open ? 1 : 0.7, fontFamily: FONT }}>
+              <div style={{ borderRadius: 12, background: open ? `radial-gradient(circle at 50% 70%, ${d.color}30, transparent 72%)` : undefined, flexShrink: 0 }}>
+                <CardsScene scale={0.56} color={open ? d.color : '#71717a'} words={deckWords(d)} locked={!open} />
               </div>
               <div style={{ flex: 1, minWidth: 0 }}>
                 <p style={{ margin: 0, color: '#f4f4f5', fontSize: 14, fontWeight: 800 }}>{d.title}</p>

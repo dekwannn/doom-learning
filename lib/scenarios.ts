@@ -9,7 +9,6 @@ export type Scenario = {
   id: string;
   title: string;
   place: string;
-  icon: "users" | "coffee" | "shirt" | "map" | "hotel" | "plane";
   color: string;
   role: string;
   setting: string;
@@ -19,7 +18,7 @@ export type Scenario = {
 
 export const SCENARIOS: Scenario[] = [
   {
-    id: "kenalan", title: "Kenalan dengan teman baru", place: "Sekolah", icon: "users", color: "#10b981",
+    id: "kenalan", title: "Kenalan dengan teman baru", place: "Sekolah", color: "#10b981",
     role: "Sam, a friendly new classmate", setting: "the first day at school, before class starts",
     opener: "Hi! I'm Sam. I'm new here. What's your name?\nID: Hai! Aku Sam. Aku murid baru di sini. Siapa namamu?",
     missions: [
@@ -29,7 +28,7 @@ export const SCENARIOS: Scenario[] = [
     ],
   },
   {
-    id: "kafe", title: "Pesan di kafe", place: "Kafe", icon: "coffee", color: "#f59e0b",
+    id: "kafe", title: "Pesan di kafe", place: "Kafe", color: "#f59e0b",
     role: "a cheerful barista", setting: "a small cafe, the learner is at the counter",
     opener: "Hello and welcome! What can I get for you today?\nID: Halo, selamat datang! Mau pesan apa hari ini?",
     missions: [
@@ -39,7 +38,7 @@ export const SCENARIOS: Scenario[] = [
     ],
   },
   {
-    id: "toko", title: "Belanja baju", place: "Toko", icon: "shirt", color: "#ec4899",
+    id: "toko", title: "Belanja baju", place: "Toko", color: "#ec4899",
     role: "a helpful shop assistant", setting: "a clothes shop",
     opener: "Hi there! Can I help you find something?\nID: Halo! Ada yang bisa saya bantu carikan?",
     missions: [
@@ -49,7 +48,7 @@ export const SCENARIOS: Scenario[] = [
     ],
   },
   {
-    id: "arah", title: "Tanya arah", place: "Jalan", icon: "map", color: "#3b82f6",
+    id: "arah", title: "Tanya arah", place: "Jalan", color: "#3b82f6",
     role: "a kind local person", setting: "a busy street in a city the learner is visiting",
     opener: "Hi! You look a little lost. Can I help you?\nID: Hai! Kamu kelihatan bingung. Ada yang bisa saya bantu?",
     missions: [
@@ -59,7 +58,7 @@ export const SCENARIOS: Scenario[] = [
     ],
   },
   {
-    id: "hotel", title: "Check-in hotel", place: "Hotel", icon: "hotel", color: "#a855f7",
+    id: "hotel", title: "Check-in hotel", place: "Hotel", color: "#a855f7",
     role: "a polite hotel receptionist", setting: "the front desk of a hotel",
     opener: "Good evening, welcome to our hotel! How can I help you?\nID: Selamat malam, selamat datang di hotel kami! Ada yang bisa saya bantu?",
     missions: [
@@ -69,7 +68,7 @@ export const SCENARIOS: Scenario[] = [
     ],
   },
   {
-    id: "bandara", title: "Di bandara", place: "Bandara", icon: "plane", color: "#06b6d4",
+    id: "bandara", title: "Di bandara", place: "Bandara", color: "#06b6d4",
     role: "an airline check-in staff member", setting: "the check-in counter at an airport",
     opener: "Good morning! Where are you flying to today?\nID: Selamat pagi! Hari ini kamu terbang ke mana?",
     missions: [

@@ -7,7 +7,8 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { ArrowLeft, Check, Coffee, Hotel, Lightbulb, Map as MapIcon, Plane, RotateCcw, Shirt, Users, Volume2 } from 'lucide-react';
+import { ArrowLeft, Check, Lightbulb, RotateCcw, Volume2 } from 'lucide-react';
+import { SCENARIO_SCENES } from '@/components/Home/LingoScenes';
 import LingoVoiceMode from '@/components/lingo/LingoVoiceMode';
 import LingoAvatar from '@/components/lingo/LingoAvatar';
 import { askLingo } from '@/lib/lingo-ai';
@@ -20,7 +21,6 @@ import { useProgress } from '@/hooks/useProgress';
 const FONT = 'system-ui, sans-serif';
 const XP_PER_MISSION = 10;
 const DONE_KEY = 'lingora_scenarios_done'; // scenarios finished on this phone (for a check mark on the list)
-const ICONS = { users: Users, coffee: Coffee, shirt: Shirt, map: MapIcon, hotel: Hotel, plane: Plane };
 const ENGLISH = { flag: 'EN', name: 'Inggris', ttsLang: 'en-US' };
 
 type Correction = { word: string; tip: string };
@@ -64,19 +64,21 @@ export default function SkenarioPage() {
         </div>
 
         <p style={{ color: '#52525b', fontSize: 10.5, fontWeight: 800, letterSpacing: '0.14em', textTransform: 'uppercase', margin: '22px 4px 9px' }}>Pilih situasi</p>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
           {SCENARIOS.map((s) => {
-            const Icon = ICONS[s.icon];
+            const Scene = SCENARIO_SCENES[s.id];
             const done = finished.includes(s.id);
             return (
               <button key={s.id} onClick={() => setPlaying(s)}
-                style={{ position: 'relative', textAlign: 'left', padding: 14, borderRadius: 18, cursor: 'pointer', background: '#0e0e14', border: `1px solid ${s.color}40`, fontFamily: FONT }}>
-                {done && <span style={{ position: 'absolute', top: 10, right: 10, width: 20, height: 20, borderRadius: '50%', background: '#10b981', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Check size={12} color="#04342c" strokeWidth={3} /></span>}
-                <div style={{ width: 42, height: 42, borderRadius: 12, background: `${s.color}18`, border: `1px solid ${s.color}40`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Icon size={21} color={s.color} />
+                style={{ position: 'relative', textAlign: 'left', padding: 0, overflow: 'hidden', borderRadius: 18, cursor: 'pointer', background: '#0e0e14', border: `1px solid ${s.color}40`, fontFamily: FONT }}>
+                {done && <span style={{ position: 'absolute', top: 8, left: 8, zIndex: 3, display: 'flex', alignItems: 'center', gap: 3, padding: '2px 7px 2px 4px', borderRadius: 99, background: '#10b981', color: '#04342c', fontSize: 9.5, fontWeight: 800 }}><Check size={11} strokeWidth={3} /> Selesai</span>}
+                <div style={{ display: 'flex', justifyContent: 'center', padding: '10px 4px 0', background: `radial-gradient(circle at 50% 75%, ${s.color}30, transparent 70%)` }}>
+                  {Scene && <Scene />}
                 </div>
-                <p style={{ margin: '10px 0 0', color: '#f4f4f5', fontSize: 13.5, fontWeight: 800, lineHeight: 1.3 }}>{s.title}</p>
-                <p style={{ margin: '3px 0 0', color: '#71717a', fontSize: 11.5 }}>{s.place} · 3 misi</p>
+                <div style={{ padding: '6px 12px 12px' }}>
+                  <p style={{ margin: 0, color: '#f4f4f5', fontSize: 13.5, fontWeight: 800, lineHeight: 1.3 }}>{s.title}</p>
+                  <p style={{ margin: '3px 0 0', color: '#71717a', fontSize: 11.5 }}>{s.place} · 3 misi</p>
+                </div>
               </button>
             );
           })}
