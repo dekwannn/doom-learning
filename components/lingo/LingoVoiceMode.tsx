@@ -11,6 +11,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import LingoAvatar, { type LingoState } from "@/components/lingo/LingoAvatar";
+import type { OutfitId } from "@/components/lingo/LingoOutfits";
 import { assessPronunciation, pronunciationNote, type PronunciationResult, wordsToFix } from "@/lib/lingo-pronunciation";
 import { getLingoVoiceHealth, speakSegments, splitForSpeech, stopLingoSpeech } from "@/lib/lingo-speech";
 import { MicRecorder } from "@/lib/mic-recorder";
@@ -120,7 +121,7 @@ function PronunciationCard({ result }: { result: PronunciationResult }) {
   );
 }
 
-export default function LingoVoiceMode({ target, history, ask, onTurn, onClose, title = "Bicara dengan Lingo", opener, filterReply, onCheck, panel }: {
+export default function LingoVoiceMode({ target, history, ask, onTurn, onClose, title = "Bicara dengan Lingo", opener, filterReply, onCheck, panel, outfit }: {
   /** The language being learned */
   target: { flag: string; name: string; ttsLang: string };
   /** The chat so far, so Lingo remembers the context */
@@ -138,6 +139,8 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose, 
   onCheck?: (result: PronunciationResult) => void;
   /** Shown under the language choice, e.g. a scenario's missions */
   panel?: React.ReactNode;
+  /** What Lingo wears for this conversation (scenario roles) */
+  outfit?: OutfitId;
 }) {
   const [phase, setPhase] = useState<Phase>("idle");
   const [heard, setHeard] = useState("");
@@ -453,7 +456,7 @@ export default function LingoVoiceMode({ target, history, ask, onTurn, onClose, 
 
       {/* Lingo */}
       <div style={{ flex: 1, minHeight: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, position: "relative", width: "100%", maxWidth: 520, padding: "0 24px" }}>
-        <LingoAvatar size={lingoSize} state={avatarState} />
+        <LingoAvatar size={lingoSize} state={avatarState} outfit={outfit} />
         <div aria-live="polite" style={{ color: phase === "thinking" ? "#facc15" : phase === "idle" ? "#71717a" : "#86efac", fontSize: 14, fontWeight: 600, textAlign: "center", minHeight: 20 }}>{status}</div>
 
         {/* What was heard, and what Lingo answered */}
