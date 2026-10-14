@@ -6,6 +6,8 @@ import { askLingo } from "@/lib/lingo-ai";
 import { useLanguageStore } from "@/store/useLanguageStore";
 import { useProgress } from "@/hooks/useProgress";
 import { useUserStore } from "@/store/useUserStore";
+import { useGuestLimit } from "@/lib/guest-limit";
+import GuestLimitScreen from "@/components/GuestLimitScreen";
 import { StrokeOrderModal } from "@/components/StrokeOrderModal";
 
 import enStudyData from "@/data/studyData.json";
@@ -2603,6 +2605,7 @@ export default function LearnStagePage({ params }: Props) {
   const { stageId } = use(params);
   const selectedLanguage = useLanguageStore((s) => s.selectedLanguage) ?? "en";
   const { xp, addXp } = useProgress();
+  const guestLimited = useGuestLimit(stageId);
 
   const [scrollY, setScrollY] = useState(0);
   const [scrollMax, setScrollMax] = useState(1);
@@ -2711,6 +2714,9 @@ export default function LearnStagePage({ params }: Props) {
     (s: number, p: any) => s + (p.xpReward ?? 0),
     0,
   );
+
+  // Guests who used their free stages sign in before a new lesson
+  if (guestLimited) return <GuestLimitScreen backTo="/learn" backLabel="Kembali ke daftar materi" />;
 
   return (
     <main
