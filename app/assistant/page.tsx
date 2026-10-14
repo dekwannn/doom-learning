@@ -8,6 +8,7 @@ import { buildVoicePrompt } from "@/lib/lingo-prompts";
 import { isSpeechSupported, onLingoSpeech, speakSegments, speakText, splitForSpeech, stopLingoSpeech } from "@/lib/lingo-speech";
 import LingoAvatar from "@/components/lingo/LingoAvatar";
 import LingoVoiceMode from "@/components/lingo/LingoVoiceMode";
+import { CafeScene, CardsScene } from "@/components/Home/LingoScenes";
 
 /* ─── Responsive Hook ──────────────────────────────────── */
 function useBreakpoint() {
@@ -856,7 +857,7 @@ function EmptyState({ lang, onLangChange, onOpenSpeak, onOpenVoice, wide = false
         </div>
       )}
 
-      {/* Practice: speaking cards (for now the speaking practice) and scenario chats (coming soon) */}
+      {/* Practice: speaking cards and scenario chats */}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, width: "100%", maxWidth: 260 }}>
         <Link
           href="/kartu"
@@ -867,8 +868,8 @@ function EmptyState({ lang, onLangChange, onOpenSpeak, onOpenVoice, wide = false
             fontFamily: "system-ui, sans-serif",
           }}
         >
-          <span style={{ display: "inline-block", fontSize: 9, fontWeight: 800, background: "rgba(167,139,250,0.18)", color: "#c4b5fd", padding: "2px 6px", borderRadius: 6, marginBottom: 6 }}>BARU</span>
-          <div>{IC.mic("#a78bfa", 18)}</div>
+          <span style={{ display: "inline-block", fontSize: 9, fontWeight: 800, background: "rgba(167,139,250,0.18)", color: "#c4b5fd", padding: "2px 6px", borderRadius: 6, marginBottom: 2 }}>BARU</span>
+          <div style={{ display: "flex", justifyContent: "center" }}><CardsScene scale={0.7} /></div>
           <p style={{ color: "#e4e4e7", fontSize: 12.5, fontWeight: 800, margin: "5px 0 0" }}>Kartu ucapan</p>
           <p style={{ color: "#71717a", fontSize: 11, margin: "2px 0 0", lineHeight: 1.4 }}>Ucapkan, Lingo koreksi</p>
         </Link>
@@ -881,8 +882,8 @@ function EmptyState({ lang, onLangChange, onOpenSpeak, onOpenVoice, wide = false
             fontFamily: "system-ui, sans-serif",
           }}
         >
-          <span style={{ display: "inline-block", fontSize: 9, fontWeight: 800, background: "rgba(251,146,60,0.18)", color: "#fdba74", padding: "2px 6px", borderRadius: 6, marginBottom: 6 }}>BARU</span>
-          <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fb923c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" /></svg></div>
+          <span style={{ display: "inline-block", fontSize: 9, fontWeight: 800, background: "rgba(251,146,60,0.18)", color: "#fdba74", padding: "2px 6px", borderRadius: 6, marginBottom: 2 }}>BARU</span>
+          <div style={{ display: "flex", justifyContent: "center" }}><CafeScene scale={0.7} /></div>
           <p style={{ color: "#e4e4e7", fontSize: 12.5, fontWeight: 800, margin: "5px 0 0" }}>Ngobrol skenario</p>
           <p style={{ color: "#71717a", fontSize: 11, margin: "2px 0 0", lineHeight: 1.4 }}>Kafe, sekolah, toko</p>
         </Link>
