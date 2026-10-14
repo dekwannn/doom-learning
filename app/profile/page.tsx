@@ -13,7 +13,7 @@ import {
   Zap, Target, CheckCircle, Timer, BookOpen, Library, GraduationCap,
   Flame, Compass, Globe, Moon, Sunrise, Sprout, Star, Gem, Crown, Trophy,
   CalendarCheck, Languages, BookMarked, Sparkles, Shield, PenLine, Sword,
-  PenTool, Mountain, LogOut, LucideIcon, Loader2, Edit3, X, Check
+  PenTool, Mountain, LogOut, LogIn, LucideIcon, Loader2, Edit3, X, Check
 } from 'lucide-react';
 
 /* ── Icon registry & Config ── */
@@ -150,7 +150,7 @@ function AchievementCard({ def, unlocked }: { def: (typeof ACHIEVEMENT_DEFS)[num
   );
 }
 
-function ActionButtons({ router, onLogout }: { router: ReturnType<typeof useRouter>; onLogout: () => void }) {
+function ActionButtons({ router, onLogout, guest = false }: { router: ReturnType<typeof useRouter>; onLogout: () => void; guest?: boolean }) {
   return (
     <div style={{ display:'flex', gap:8, marginTop:14, justifyContent:'center' }}>
       <button
@@ -169,6 +169,23 @@ function ActionButtons({ router, onLogout }: { router: ReturnType<typeof useRout
         Leaderboard
       </button>
 
+      {guest ? (
+        // Guests: sign in to keep their progress in the cloud
+        <button
+          onClick={() => router.push('/login?redirectTo=%2Fprofile')}
+          style={{
+            display:'flex', alignItems:'center', gap:7,
+            padding:'9px 18px', borderRadius:99, cursor:'pointer',
+            background:'rgba(16,185,129,0.12)',
+            border:'1px solid rgba(16,185,129,0.35)',
+            color:'#34d399', fontSize:13, fontWeight:700,
+            fontFamily:'system-ui,sans-serif',
+          }}
+        >
+          <LogIn size={14} color="#34d399" />
+          Masuk
+        </button>
+      ) : (
       <button
         onClick={onLogout}
         style={{
@@ -184,6 +201,7 @@ function ActionButtons({ router, onLogout }: { router: ReturnType<typeof useRout
         <LogOut size={14} color="#f87171" />
         Keluar
       </button>
+      )}
     </div>
   );
 }
@@ -578,7 +596,7 @@ const DailyTargets = () => {
                    <p style={{ fontSize:12, color:'#52525b', margin:'0 0 0', fontFamily:'system-ui,sans-serif' }}>Bergabung sejak {joinedAt || '...'}</p>
                 )}
 
-                {!isEditing && <ActionButtons router={router} onLogout={handleLogout} />}
+                {!isEditing && <ActionButtons router={router} onLogout={handleLogout} guest={!isLoadingProfile && !userId} />}
 
                 {lvl.next && !isEditing && (
                   <div style={{ marginTop:14 }}>
@@ -710,7 +728,7 @@ const DailyTargets = () => {
              <p style={{ fontSize:12, color:'#52525b', margin:0, fontFamily:'system-ui,sans-serif' }}>Bergabung sejak {joinedAt || '...'}</p>
           )}
 
-          {!isEditing && <ActionButtons router={router} onLogout={handleLogout} />}
+          {!isEditing && <ActionButtons router={router} onLogout={handleLogout} guest={!isLoadingProfile && !userId} />}
         </div>
 
         {/* Stats */}

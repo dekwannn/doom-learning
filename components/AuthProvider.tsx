@@ -17,7 +17,6 @@ const STORE_KEYS = [
 // Ini yang jadi patokan "apakah ini user baru atau reload biasa"
 const LAST_USER_KEY = 'lingora-last-user-id'
 
-type LangCode = 'en' | 'ja' | 'zh' | 'ko'
 let isHandlingLogin = false
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
@@ -88,11 +87,14 @@ async function handleLogin(userId: string) {
       return
     }
 
-    // ── User berbeda / pertama kali login di HP ini → reset semua lalu ambil dari cloud
-    clearLocalStorage()
-    resetStores()
+    // ── Akun lain pernah login di HP ini → reset dulu, supaya progresnya tidak tercampur.
+    //    Belum pernah ada akun (main sebagai tamu) → progres tamu dipertahankan dan ikut ke akun ini
+    //    (restoreFromCloud memakai yang lebih jauh: progres tamu atau progres akun di cloud).
+    if (lastUserId) {
+      clearLocalStorage()
+      resetStores()
+    }
     localStorage.setItem(LAST_USER_KEY, userId)
-    await createLeaderboardRows(userId)
     await restoreFromCloud(userId)
     await unlockFromProgress(userId)
 
@@ -109,15 +111,5 @@ async function unlockFromProgress(userId: string) {
   if (useUserStore.getState().unlockedAchievements.length > before) await saveToCloud(userId)
 }
 
-// Buat row kosong untuk semua bahasa di leaderboard jika belum ada
-// ignoreDuplicates: true — tidak overwrite data yang sudah ada
-async function createLeaderboardRows(userId: string) {
-  const langs: LangCode[] = ['en', 'ja', 'zh', 'ko']
-  // Satu request untuk semua bahasa
-  await supabase
-    .from('xp_progress')
-    .upsert(
-      langs.map(lang => ({ user_id: userId, language_code: lang, total_xp: 0, stages_completed: 0 })),
-      { onConflict: 'user_id,language_code', ignoreDuplicates: true }
-    )
-}
+// Baris leaderboard (xp_progress) dibuat oleh upsert_xp di database saat XP pertama masuk;
+// aplikasi tidak lagi menulis tabel itu sendiri.

@@ -46,12 +46,17 @@ function progressScore(save: SaveData): number {
 let markReady: () => void = () => {}
 let ready = new Promise<void>((resolve) => { markReady = resolve })
 export const whenCloudReady = () => ready
+// Kalau progres dari cloud gagal diambil, jangan menulis ke cloud sama sekali di sesi ini:
+// progres di HP tetap aman dan dikirim di sesi berikutnya, tanpa risiko menimpa progres yang lebih jauh
+let saveBlocked = false
 /** Saat logout: akun berikutnya harus memulihkan progresnya dulu sebelum boleh menulis */
 export function resetCloudGate() {
   ready = new Promise<void>((resolve) => { markReady = resolve })
+  saveBlocked = false
 }
 
 export async function saveToCloud(userId: string) {
+  if (saveBlocked) return
   const save_data: SaveData = { userStore: userSnapshot(), langStore: langSnapshot(), savedAt: new Date().toISOString() }
   const { error } = await supabase.from('profiles').update({ save_data }).eq('id', userId)
   if (error) console.warn('[cloud-save] Gagal menyimpan:', error.message)
@@ -78,12 +83,13 @@ function applySave(save: SaveData) {
  */
 export async function restoreFromCloud(userId: string) {
   try {
-    const { data, error } = await supabase.from('profiles').select('save_data').eq('id', userId).single()
+    const { save, error } = await readCloudSave(userId)
     if (error) {
-      console.warn('[cloud-save] Gagal mengambil progres:', error.message)
+      console.warn('[cloud-save] Gagal mengambil progres:', error)
+      saveBlocked = true
       return
     }
-    const cloud = (data?.save_data ?? null) as SaveData | null
+    const cloud = save
     const local: SaveData = { userStore: userSnapshot(), langStore: langSnapshot() }
 
     if (cloud && progressScore(cloud) >= progressScore(local)) {
@@ -95,6 +101,19 @@ export async function restoreFromCloud(userId: string) {
   } finally {
     markReady()
   }
+}
+
+/**
+ * Cloud Save milik akun ini. save_data hanya bisa dibaca pemiliknya, lewat fungsi get_my_save_data di database;
+ * sebelum fungsi itu ada (database lama), dibaca langsung dari tabel profiles.
+ */
+async function readCloudSave(userId: string): Promise<{ save: SaveData | null; error?: string }> {
+  const rpc = await supabase.rpc('get_my_save_data')
+  if (!rpc.error) return { save: (rpc.data ?? null) as SaveData | null }
+  if (rpc.error.code !== 'PGRST202') return { save: null, error: rpc.error.message } // PGRST202: the function does not exist yet
+  const { data, error } = await supabase.from('profiles').select('save_data').eq('id', userId).single()
+  if (error) return { save: null, error: error.message }
+  return { save: (data?.save_data ?? null) as SaveData | null }
 }
 
 /** Akun lama: belum ada save_data, tapi XP-nya tercatat di xp_progress (leaderboard) */

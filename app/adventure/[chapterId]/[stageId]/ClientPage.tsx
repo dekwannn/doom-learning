@@ -4,6 +4,8 @@ import { use, useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLanguageStore } from '@/store/useLanguageStore';
 import { useProgress } from '@/hooks/useProgress';
+import { useGuestLimit } from '@/lib/guest-limit';
+import GuestLimitScreen from '@/components/GuestLimitScreen';
 import AdventureQuiz from '@/components/Adventure/AdventureQuiz';
 import dummyData from '@/data/dummyData.json';
 import jaData from '@/data/jaData.json';
@@ -233,6 +235,7 @@ export default function AdventureStage({ params }: Props) {
   const selectedLanguage = useLanguageStore(s => s.selectedLanguage);
 
   const { xp, stageStars, stageUnlocked, completedStages } = useProgress();
+  const guestLimited = useGuestLimit(stageId);
 
   const langData   = getLangData(selectedLanguage);
   const chapters   = langData.chapters;
@@ -252,6 +255,9 @@ export default function AdventureStage({ params }: Props) {
       </div>
     </main>
   );
+
+  // Guests who used their free stages sign in before a new stage
+  if (guestLimited) return <GuestLimitScreen backTo="/adventure" backLabel="Kembali ke peta" />;
 
   if (stage.type === 'intro' || feedData.length === 0) {
     if (isWide) {
