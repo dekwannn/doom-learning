@@ -749,20 +749,22 @@ function SpeakingStep({ data, color, onAnswer }: { data:any; color:string; onAns
 }
 
 // ── ResultScreen ──────────────────────────────────────────────────────────────
-// Komentar Lingo di layar hasil. Dulu pakai GIF dari Tenor/Giphy, tapi link-nya mati (404);
-// sekarang Lingo sendiri yang bereaksi (gambar lokal, selalu tampil, juga saat offline)
-const MEME_WIN = [
-  'POV: Lu pas tau jawaban kuisnya bener semua!',
-  'Satu kata buat lu: MELEDAKKK!',
-  'Mantap bang messi, lanjut ke stage berikutnya!',
-  'Ilmu bertambah, IQ naik, masa depan STONKS!',
+// Meme di layar hasil: satu GIF dari GIPHY yang cocok dengan tiap komentar (rating G/PG, versi WebP 200 px
+// supaya ringan). GIF-nya tetap di server GIPHY; kalau ada yang tidak termuat, Lingo yang tampil.
+type Meme = { gif: string; alt: string; text: string };
+const giphy = (id: string) => `https://media.giphy.com/media/${id}/200w.webp`;
+const MEME_WIN: Meme[] = [
+  { gif: giphy('3UkqVq3F50bVCi9URl'), alt: 'Kucing berjoget', text: 'POV: Lu pas tau jawaban kuisnya bener semua!' },
+  { gif: giphy('0NwSQpGY6ipgOSt8LL'), alt: 'Mind blown', text: 'Satu kata buat lu: MELEDAKKK!' },
+  { gif: giphy('rQjzGopagogVzLsIs5'), alt: 'Joget kemenangan', text: 'Mantap bang messi, lanjut ke stage berikutnya!' },
+  { gif: giphy('YnwnJfBUBrZ6APqVfq'), alt: 'Stonks', text: 'Ilmu bertambah, IQ naik, masa depan STONKS!' },
 ];
 
-const MEME_LOSE = [
-  'Tadi malem gak belajar ya? Jujur lu!',
-  'Gua nungguin lu kelar belajar sampe lumutan nih...',
-  'Bingung ya? Sama, gua juga bingung liat nilai lu.',
-  'Satu kali lagi! Masa kalah ama kuis ginian?',
+const MEME_LOSE: Meme[] = [
+  { gif: giphy('ANbD1CCdA3iI8'), alt: 'Fry curiga', text: 'Tadi malem gak belajar ya? Jujur lu!' },
+  { gif: giphy('QZyBvNVaMbIZ9yadec'), alt: 'Tengkorak menunggu', text: 'Gua nungguin lu kelar belajar sampe lumutan nih...' },
+  { gif: giphy('WRQBXSCnEFJIuxktnw'), alt: 'Math lady bingung', text: 'Bingung ya? Sama, gua juga bingung liat nilai lu.' },
+  { gif: giphy('yoJC2K6rCzwNY2EngA'), alt: 'You can do it', text: 'Satu kali lagi! Masa kalah ama kuis ginian?' },
 ];
 
 const MIN_CORRECT = 8; 
@@ -772,7 +774,8 @@ function ResultScreen({ score, total, xpEarned, color, stageLabel, chapterTitle,
   
   const pct=Math.round((score/total)*100);
   const stars=pct>=90?3:pct>=70?2:pct>=50?1:0;
-  const [randomMeme, setRandomMeme] = useState<string | null>(null);
+  const [randomMeme, setRandomMeme] = useState<Meme | null>(null);
+  const [memeFailed, setMemeFailed] = useState(false); // the GIF did not load: show Lingo instead
   const [showReview, setShowReview] = useState(false);
 
   useEffect(() => {
@@ -787,15 +790,15 @@ function ResultScreen({ score, total, xpEarned, color, stageLabel, chapterTitle,
       
       {randomMeme && (
         <div style={{ marginBottom: 24, display: 'flex', flexDirection: 'column', alignItems: 'center', animation: 'fadeUp 0.5s ease' }}>
-          <style>{`@keyframes lingoCheer{0%,100%{transform:translateY(0) rotate(0)}30%{transform:translateY(-14px) rotate(-6deg)}60%{transform:translateY(0) rotate(4deg)}}@keyframes lingoSigh{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg) translateY(4px)}}`}</style>
-          <div style={{ width: 140, height: 140, borderRadius: 16, border: `2px solid ${passed ? color : '#ef4444'}`, background: passed ? `${color}10` : 'rgba(239,68,68,0.06)', boxShadow: `0 8px 30px ${passed ? color : '#ef4444'}30`, marginBottom: 12, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img
-              src="/maskot.webp"
-              alt="Lingo"
-              style={{ width: 104, height: 'auto', animation: passed ? 'lingoCheer 1.1s ease-in-out infinite' : 'lingoSigh 2.4s ease-in-out infinite', filter: passed ? 'none' : 'saturate(0.6)' }}
-            />
+          <div style={{ width: 160, height: 160, borderRadius: 16, overflow: 'hidden', border: `2px solid ${passed ? color : '#ef4444'}`, background: '#0e0e14', boxShadow: `0 8px 30px ${passed ? color : '#ef4444'}30`, marginBottom: 6, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            {memeFailed ? (
+              <img src="/maskot.webp" alt="Lingo" style={{ width: 112, height: 'auto' }} />
+            ) : (
+              <img src={randomMeme.gif} alt={randomMeme.alt} onError={() => setMemeFailed(true)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            )}
           </div>
-          <p style={{ fontSize: 14, fontWeight: 800, color: passed ? color : '#f87171', fontStyle: 'italic', maxWidth: 250 }}>"{randomMeme}"</p>
+          {!memeFailed && <p style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.08em', color: '#52525b', margin: '0 0 10px' }}>VIA GIPHY</p>}
+          <p style={{ fontSize: 14, fontWeight: 800, color: passed ? color : '#f87171', fontStyle: 'italic', maxWidth: 250 }}>"{randomMeme.text}"</p>
         </div>
       )}
 
