@@ -6,6 +6,7 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import { getLingoVoiceLevel, onLingoSpeech } from "@/lib/lingo-speech";
+import { LingoOutfit, type OutfitId } from "@/components/lingo/LingoOutfits";
 
 export type LingoState = "idle" | "listening" | "thinking" | "speaking";
 
@@ -22,6 +23,7 @@ export default function LingoAvatar({
   size = 96,
   state = "idle",
   mouthOpen,
+  outfit,
   style,
 }: {
   size?: number;
@@ -29,6 +31,8 @@ export default function LingoAvatar({
   state?: LingoState;
   /** 0..1 from real audio volume; when omitted, the mouth follows a natural talking rhythm */
   mouthOpen?: number;
+  /** What Lingo wears, e.g. a barista's beret in the cafe role-play */
+  outfit?: OutfitId;
   style?: React.CSSProperties;
 }) {
   const uid = useId().replace(/[^a-zA-Z0-9]/g, "");
@@ -187,6 +191,7 @@ export default function LingoAvatar({
           <g clipPath={`url(#${uid}mouth)`}>
             <ellipse ref={tongueRef} cx="368" cy="461" rx="0" ry="0" fill="#F0808F" />
           </g>
+          {outfit && <LingoOutfit id={outfit} />}
         </svg>
       </div>
     </div>

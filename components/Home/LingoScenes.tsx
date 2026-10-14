@@ -163,7 +163,7 @@ export function CafeScene({ scale }: SceneProps) {
   const { line, speaking } = useLines(CAFE_LINES, 3000, 1400);
   return (
     <Stage scale={scale} clip>
-      <LingoAvatar size={82} state={speaking ? 'speaking' : 'idle'} style={{ position: 'absolute', left: 6, top: 14 }} />
+      <LingoAvatar outfit="barista" size={82} state={speaking ? 'speaking' : 'idle'} style={{ position: 'absolute', left: 6, top: 14 }} />
       <Counter />
       <div style={{ position: 'absolute', left: 74, bottom: 20, width: 26, height: 40 }}>
         {[0, 1].map((k) => (
@@ -188,7 +188,7 @@ export function MeetScene({ scale }: SceneProps) {
   const { line, speaking } = useLines(["Hi! I'm Sam.", "What's your name?"], 3000, 1400);
   return (
     <Stage scale={scale}>
-      <LingoAvatar size={80} state={speaking ? 'speaking' : 'idle'} style={{ position: 'absolute', left: 4, bottom: 2 }} />
+      <LingoAvatar outfit="student" size={80} state={speaking ? 'speaking' : 'idle'} style={{ position: 'absolute', left: 4, bottom: 2 }} />
       <div className="lgs-anim" style={{ position: 'absolute', left: 80, top: 46, width: 16, height: 14, transformOrigin: '10% 100%', ...anim('lgs-hand', 0.9) }}>
         <Paw x={0} y={0} w={16} />
       </div>
@@ -211,7 +211,7 @@ export function ShopScene({ scale }: SceneProps) {
   const { line, speaking } = useLines(['Try this one!', 'Nice color, right?'], 3000, 1400);
   return (
     <Stage scale={scale}>
-      <LingoAvatar size={78} state={speaking ? 'speaking' : 'idle'} style={{ position: 'absolute', left: 0, top: 24 }} />
+      <LingoAvatar outfit="shop" size={78} state={speaking ? 'speaking' : 'idle'} style={{ position: 'absolute', left: 0, top: 24 }} />
       <div className="lgs-anim" style={{ position: 'absolute', left: 80, top: 40, width: 50, height: 60, transformOrigin: '50% 0%', ...anim('lgs-bob', 2.4) }}>
         <svg viewBox="0 0 50 60" width={50} height={60} style={{ filter: 'drop-shadow(0 3px 4px rgba(0,0,0,0.45))' }}>
           <path d="M25 9 V4 Q25 1 28 1.5" stroke="#d4d4d8" strokeWidth="2" fill="none" strokeLinecap="round" />
@@ -236,7 +236,7 @@ export function MapScene({ scale }: SceneProps) {
       <div style={{ position: 'absolute', left: 117, top: 34, width: 4, height: 70, background: '#a1a1aa', borderRadius: 2 }} />
       <div style={{ ...sign, left: 102, top: 40, width: 36, background: '#3b82f6', clipPath: 'polygon(0 0, 82% 0, 100% 50%, 82% 100%, 0 100%)', paddingLeft: 3 }}>STATION</div>
       <div style={{ ...sign, left: 100, top: 56, width: 30, background: '#60a5fa', clipPath: 'polygon(18% 0, 100% 0, 100% 100%, 18% 100%, 0 50%)', paddingLeft: 9 }}>PARK</div>
-      <LingoAvatar size={76} state={speaking ? 'speaking' : 'idle'} style={{ position: 'absolute', left: 4, top: 16 }} />
+      <LingoAvatar outfit="local" size={76} state={speaking ? 'speaking' : 'idle'} style={{ position: 'absolute', left: 4, top: 16 }} />
       <svg viewBox="0 0 54 36" width={54} height={36} style={{ position: 'absolute', left: 15, top: 64, filter: 'drop-shadow(0 3px 4px rgba(0,0,0,0.45))' }}>
         <path d="M0 3 L18 0 L36 3 L54 0 V33 L36 36 L18 33 L0 36 Z" fill="#fef3c7" />
         <path d="M18 0 V33 M36 3 V36" stroke="#e7d7a6" strokeWidth="1" />
@@ -256,7 +256,7 @@ export function HotelScene({ scale }: SceneProps) {
   const { line, speaking } = useLines(['Good evening!', "Here's your key!"], 3000, 1400);
   return (
     <Stage scale={scale} clip>
-      <LingoAvatar size={82} state={speaking ? 'speaking' : 'idle'} style={{ position: 'absolute', left: 4, top: 14 }} />
+      <LingoAvatar outfit="hotel" size={82} state={speaking ? 'speaking' : 'idle'} style={{ position: 'absolute', left: 4, top: 14 }} />
       <Counter top="#a78bfa" from="#5b3b8f" to="#3b2363" />
       <div style={{ position: 'absolute', left: 102, bottom: 22, width: 28, height: 22 }}>
         <svg className="lgs-anim" viewBox="0 0 28 18" width={28} height={18} style={{ position: 'absolute', bottom: 0, transformOrigin: '50% 100%', ...anim('lgs-ding', 2.4) }}>
@@ -289,7 +289,7 @@ export function AirportScene({ scale }: SceneProps) {
         <path d="M1 7 L20 5 Q24 5 23 7 Q22 8.5 18 8.5 L3 9 Z" fill="#e4e4e7" />
         <path d="M9 7 L14 1 H16 L14 7 Z M9 8 L13 12 H15 L13 8 Z M2 7 L1 3 H3 L5 7 Z" fill="#22d3ee" />
       </svg>
-      <LingoAvatar size={76} state={speaking ? 'speaking' : 'idle'} style={{ position: 'absolute', left: 2, top: 26 }} />
+      <LingoAvatar outfit="airline" size={76} state={speaking ? 'speaking' : 'idle'} style={{ position: 'absolute', left: 2, top: 26 }} />
       <svg viewBox="0 0 30 40" width={30} height={40} style={{ position: 'absolute', left: 104, bottom: 2, filter: 'drop-shadow(0 2px 3px rgba(0,0,0,0.45))' }}>
         <path d="M10 8 V3 H20 V8" stroke="#a1a1aa" strokeWidth="2.4" fill="none" />
         <rect x="2" y="8" width="26" height="27" rx="5" fill="#06b6d4" />

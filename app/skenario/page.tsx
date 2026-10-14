@@ -9,6 +9,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { ArrowLeft, Check, Lightbulb, RotateCcw, Volume2 } from 'lucide-react';
 import { SCENARIO_SCENES } from '@/components/Home/LingoScenes';
+import { SCENARIO_OUTFITS } from '@/components/lingo/LingoOutfits';
 import LingoVoiceMode from '@/components/lingo/LingoVoiceMode';
 import LingoAvatar from '@/components/lingo/LingoAvatar';
 import { askLingo } from '@/lib/lingo-ai';
@@ -162,6 +163,7 @@ function RolePlay({ scenario, onEnd }: { scenario: Scenario; onEnd: (r: Result) 
       filterReply={filterReply}
       onCheck={onCheck}
       panel={panel}
+      outfit={SCENARIO_OUTFITS[scenario.id]}
     />
   );
 }
@@ -185,7 +187,7 @@ function Summary({ result, onAgain, onList }: { result: Result; onAgain: () => v
   return (
     <main style={{ minHeight: '100vh', background: '#08080f', display: 'flex', justifyContent: 'center', fontFamily: FONT, color: '#f4f4f5' }}>
       <div style={{ width: '100%', maxWidth: 480, padding: '36px 16px 40px', textAlign: 'center' }}>
-        <div style={{ display: 'flex', justifyContent: 'center' }}><LingoAvatar size={110} /></div>
+        <div style={{ display: 'flex', justifyContent: 'center', paddingTop: 10 }}><LingoAvatar size={110} outfit={SCENARIO_OUTFITS[scenario.id]} /></div>
         <p style={{ fontSize: 20, fontWeight: 800, margin: '12px 0 4px' }}>{done.length === total ? 'Misi selesai semua!' : done.length > 0 ? 'Bagus, sebagian misi beres!' : 'Ayo coba lagi!'}</p>
         <p style={{ color: '#71717a', fontSize: 13, margin: 0 }}>{scenario.title} · {done.length} dari {total} misi</p>
         {xp > 0 && <p style={{ color: '#facc15', fontSize: 13, fontWeight: 800, margin: '8px 0 0' }}>+{xp} XP</p>}
