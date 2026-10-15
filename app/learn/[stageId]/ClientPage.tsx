@@ -21,7 +21,7 @@ import zhStudyData from "@/data/zhStudyData.json";
 import zhAdventureData from "@/data/zhData.json";
 import koStudyData from "@/data/koStudyData.json";
 import koAdventureData from "@/data/koData.json";
-import { MessageCircle, Volume2, BookOpen, Sparkles, Lightbulb, PartyPopper } from "lucide-react";
+import { MessageCircle, Volume2, BookOpen, Sparkles, Lightbulb, PartyPopper, Check } from "lucide-react";
 
 const STUDY_DATA_MAP: Record<string, any> = {
   en: enStudyData,
@@ -53,6 +53,8 @@ interface TatoebaRef {
 }
 /** Where a lesson's content comes from */
 interface LessonSourceInfo {
+  /** The CEFR descriptor the learning objectives refer to */
+  framework?: { name: string; url: string; level: string; quotes: string[] };
   vocabulary?: { name: string; by: string; url: string; note: string };
   sentences?: TatoebaRef[];
   authored?: string;
@@ -70,6 +72,8 @@ interface StudyEntry {
   sections: Section[];
   practice: any[];
   sources?: LessonSourceInfo;
+  /** What the learner can do after the lesson (CEFR level and Indonesian "can do" lines) */
+  objectives?: { level: string; items: string[] };
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -1319,6 +1323,16 @@ function LessonSources({ sources, sections }: { sources: LessonSourceInfo; secti
       </button>
       {open && (
         <div style={{ padding: "0 14px 14px", display: "flex", flexDirection: "column", gap: 12, fontSize: 12, lineHeight: 1.55, color: "#a1a1aa" }}>
+          {sources.framework && (
+            <div>
+              <div style={{ color: "#e4e4e7", fontWeight: 700 }}>Tujuan belajar</div>
+              Mengacu ke deskriptor level {sources.framework.level} di{" "}
+              <a href={sources.framework.url} target="_blank" rel="noreferrer" style={link}>{sources.framework.name}</a>:
+              {sources.framework.quotes.map((q) => (
+                <div key={q} style={{ marginTop: 4, paddingLeft: 10, borderLeft: "2px solid rgba(255,255,255,0.1)", fontStyle: "italic" }}>&ldquo;{q}&rdquo;</div>
+              ))}
+            </div>
+          )}
           {sources.vocabulary && (
             <div>
               <div style={{ color: "#e4e4e7", fontWeight: 700 }}>Kosakata</div>
@@ -3244,6 +3258,22 @@ export default function LearnStagePage({ params }: Props) {
                 </div>
               ))}
             </div>
+            {entry.objectives && (
+              <div style={{ marginTop: 14, padding: "12px 14px", borderRadius: 14, background: `${cc.color}0d`, border: `1px solid ${cc.color}30` }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, marginBottom: 6 }}>
+                  <span style={{ color: "#e4e4e7", fontSize: 12.5, fontWeight: 800 }}>Setelah materi ini kamu bisa</span>
+                  <span style={{ color: cc.color, fontSize: 10, fontWeight: 800, letterSpacing: "0.08em", padding: "2px 7px", borderRadius: 6, background: `${cc.color}18` }}>
+                    CEFR {entry.objectives.level}
+                  </span>
+                </div>
+                {entry.objectives.items.map((o) => (
+                  <div key={o} style={{ display: "flex", gap: 8, alignItems: "flex-start", color: "#d4d4d8", fontSize: 12.5, lineHeight: 1.5, marginTop: 3 }}>
+                    <span style={{ width: 5, height: 5, borderRadius: 3, background: cc.color, flexShrink: 0, marginTop: 8 }} />
+                    {o}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
           )}
 
@@ -3334,6 +3364,17 @@ export default function LearnStagePage({ params }: Props) {
                     ? `+${earnedXp} XP berhasil diperoleh`
                     : "Latihan ulang selesai. XP materi ini sudah kamu dapat sebelumnya."}
                 </p>
+                {entry.objectives && (
+                  <div style={{ textAlign: "left", margin: "0 0 18px", padding: "12px 14px", borderRadius: 12, background: "rgba(16,185,129,0.06)", border: "1px solid rgba(16,185,129,0.22)" }}>
+                    <p style={{ color: "#34d399", fontSize: 11, fontWeight: 800, letterSpacing: "0.08em", margin: "0 0 6px" }}>SEKARANG KAMU BISA</p>
+                    {entry.objectives.items.map((o) => (
+                      <div key={o} style={{ display: "flex", gap: 8, alignItems: "flex-start", color: "#e4e4e7", fontSize: 12.5, lineHeight: 1.5, marginTop: 4 }}>
+                        <Check size={14} color="#34d399" style={{ flexShrink: 0, marginTop: 3 }} />
+                        {o}
+                      </div>
+                    ))}
+                  </div>
+                )}
                 <div style={{ display: "flex", gap: 10 }}>
                   <button
                     onClick={() => router.push("/learn")}

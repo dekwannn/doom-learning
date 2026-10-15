@@ -182,7 +182,25 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Menyapa orang sesuai waktu: pagi, siang, sore, dan malam",
+        "Berpamitan dengan goodbye dan good night"
+      ],
+      "cefr": [
+        "G1"
+      ]
     }
   },
   "c1s2": {
@@ -396,7 +414,25 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Memakai please, thank you, sorry, dan excuse me dalam situasi sehari-hari",
+        "Menjawab ucapan terima kasih dengan you're welcome"
+      ],
+      "cefr": [
+        "G1"
+      ]
     }
   },
   "c1s3": {
@@ -598,7 +634,25 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Menyebutkan namamu dan menanyakan nama orang lain",
+        "Menanggapi perkenalan dengan nice to meet you"
+      ],
+      "cefr": [
+        "G2"
+      ]
     }
   },
   "c1s4": {
@@ -788,7 +842,24 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Memakai I, you, he, she, it, we, dan they untuk membicarakan orang dan benda"
+      ],
+      "cefr": [
+        "G2"
+      ]
     }
   },
   "c1s5": {
@@ -970,7 +1041,24 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Membuat kalimat sederhana dengan am dan is untuk menjelaskan dirimu dan orang lain"
+      ],
+      "cefr": [
+        "G2"
+      ]
     }
   },
   "c1s6": {
@@ -1160,7 +1248,27 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has.",
+          "Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Berkenalan singkat: menyapa, menyebut nama, dan berpamitan",
+        "Menanyakan apakah seseorang juga pelajar"
+      ],
+      "cefr": [
+        "G2",
+        "G3"
+      ]
     }
   },
   "c2s1": {
@@ -1515,7 +1623,25 @@
           ]
         }
       ],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Menyebut benda di kelas dan di rumah",
+        "Memakai a untuk benda yang baru disebut dan the untuk benda yang sudah jelas"
+      ],
+      "cefr": [
+        "G1"
+      ]
     }
   },
   "c2s2": {
@@ -1850,7 +1976,25 @@
           ]
         }
       ],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Menyebut makanan dan minuman sehari-hari",
+        "Meminta sesuatu dengan sopan: Can I have ..., please?"
+      ],
+      "cefr": [
+        "G1"
+      ]
     }
   },
   "c2s3": {
@@ -2209,7 +2353,25 @@
           ]
         }
       ],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Menyebut warna-warna dasar",
+        "Meletakkan warna sebelum benda: a red bag"
+      ],
+      "cefr": [
+        "G1"
+      ]
     }
   },
   "c2s4": {
@@ -2580,7 +2742,27 @@
           ]
         }
       ],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type.",
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Menyebut angka 1 sampai 10",
+        "Menghitung benda dan menyebut umur: I am ten years old"
+      ],
+      "cefr": [
+        "G1",
+        "G2"
+      ]
     }
   },
   "c2s5": {
@@ -2758,7 +2940,24 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Menunjuk benda yang dekat dengan this dan yang jauh dengan that"
+      ],
+      "cefr": [
+        "G1"
+      ]
     }
   },
   "c2s6": {
@@ -2940,7 +3139,24 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Menggambarkan benda yang kamu punya dengan angka, warna, dan this/that"
+      ],
+      "cefr": [
+        "G2"
+      ]
     }
   },
   "c3s1": {
@@ -3299,7 +3515,25 @@
           ]
         }
       ],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Menyebut kegiatan sehari-hari dengan kata kerja dasar",
+        "Menambahkan -s pada kata kerja untuk he, she, dan it"
+      ],
+      "cefr": [
+        "G1"
+      ]
     }
   },
   "c3s2": {
@@ -3606,7 +3840,24 @@
           ]
         }
       ],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Menceritakan kegiatan rutinmu dari pagi sampai malam"
+      ],
+      "cefr": [
+        "G1"
+      ]
     }
   },
   "c3s3": {
@@ -3945,7 +4196,24 @@
           ]
         }
       ],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Menyebut kapan sesuatu terjadi: pagi, siang, hari ini, besok, dan kemarin"
+      ],
+      "cefr": [
+        "G1"
+      ]
     }
   },
   "c3s4": {
@@ -4131,7 +4399,27 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has.",
+          "Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Menyebut jam kegiatanmu dengan at",
+        "Menjawab pertanyaan What time do you ...?"
+      ],
+      "cefr": [
+        "G2",
+        "G3"
+      ]
     }
   },
   "c3s5": {
@@ -4394,7 +4682,24 @@
           ]
         }
       ],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Bertanya dengan what, where, when, dan who"
+      ],
+      "cefr": [
+        "G2"
+      ]
     }
   },
   "c3s6": {
@@ -4576,7 +4881,26 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has.",
+          "Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Bertanya dan menjawab tentang rutinitas harian dalam obrolan singkat"
+      ],
+      "cefr": [
+        "G2",
+        "G3"
+      ]
     }
   },
   "c4s1": {
@@ -4855,7 +5179,24 @@
           ]
         }
       ],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Menggambarkan orang dan benda dengan kata sifat dasar dan lawan katanya"
+      ],
+      "cefr": [
+        "G2"
+      ]
     }
   },
   "c4s2": {
@@ -5134,7 +5475,24 @@
           ]
         }
       ],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Menggambarkan penampilan orang yang kamu kenal: tinggi, muda, kuat"
+      ],
+      "cefr": [
+        "G2"
+      ]
     }
   },
   "c4s3": {
@@ -5417,7 +5775,24 @@
           ]
         }
       ],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Menggambarkan benda dengan ukuran, warna, dan sifatnya"
+      ],
+      "cefr": [
+        "G2"
+      ]
     }
   },
   "c4s4": {
@@ -5603,7 +5978,24 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Memilih am, is, atau are sesuai subjeknya"
+      ],
+      "cefr": [
+        "G2"
+      ]
     }
   },
   "c4s5": {
@@ -5785,7 +6177,24 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Membuat kalimat deskripsi sederhana tentang cuaca, kelas, dan benda di sekitarmu"
+      ],
+      "cefr": [
+        "G1"
+      ]
     }
   },
   "c4s6": {
@@ -5963,7 +6372,24 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Menggambarkan teman atau tempat dalam beberapa kalimat"
+      ],
+      "cefr": [
+        "G2"
+      ]
     }
   },
   "c5s1": {
@@ -6145,7 +6571,24 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Bertanya dan menjawab tentang nama, asal, umur, dan kabar"
+      ],
+      "cefr": [
+        "G2"
+      ]
     }
   },
   "c5s2": {
@@ -6323,7 +6766,25 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Memperkenalkan dirimu dengan lengkap: nama, asal, dan umur",
+        "Menjawab pertanyaan ya/tidak dengan Yes, I am / No, I'm not"
+      ],
+      "cefr": [
+        "G2"
+      ]
     }
   },
   "c5s3": {
@@ -6501,7 +6962,24 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Menanyakan nama benda dan pemiliknya: What is this? Whose is this?"
+      ],
+      "cefr": [
+        "G2"
+      ]
     }
   },
   "c5s4": {
@@ -6679,7 +7157,26 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has.",
+          "Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Bertanya dan menjawab tentang kesukaan dengan Do you like ...?"
+      ],
+      "cefr": [
+        "G2",
+        "G3"
+      ]
     }
   },
   "c5s5": {
@@ -6861,7 +7358,25 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Membuka, menjalani, dan menutup obrolan singkat",
+        "Menanyakan balik kabar lawan bicara"
+      ],
+      "cefr": [
+        "G3"
+      ]
     }
   },
   "c5s6": {
@@ -7051,7 +7566,26 @@
         "note": "Semua kosakata di materi ini level A1."
       },
       "sentences": [],
-      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora.",
+      "framework": {
+        "name": "CEFR, skala global (Council of Europe)",
+        "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+        "level": "A1",
+        "quotes": [
+          "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has.",
+          "Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help."
+        ]
+      }
+    },
+    "objectives": {
+      "level": "A1",
+      "items": [
+        "Melakukan percakapan perkenalan dari awal sampai akhir"
+      ],
+      "cefr": [
+        "G2",
+        "G3"
+      ]
     }
   }
 }
