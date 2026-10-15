@@ -6,9 +6,12 @@ import { askLingo } from "@/lib/lingo-ai";
 import { useLanguageStore } from "@/store/useLanguageStore";
 import { useProgress } from "@/hooks/useProgress";
 import { useUserStore } from "@/store/useUserStore";
+import { useStudyStore } from "@/store/useStudyStore";
+import { speakSegments } from "@/lib/lingo-speech";
 import { useGuestLimit } from "@/lib/guest-limit";
 import GuestLimitScreen from "@/components/GuestLimitScreen";
 import { StrokeOrderModal } from "@/components/StrokeOrderModal";
+import LingoAvatar from "@/components/lingo/LingoAvatar";
 
 import enStudyData from "@/data/studyData.json";
 import enDummyData from "@/data/dummyData.json";
@@ -39,6 +42,8 @@ interface Props {
 interface Example {
   en: string;
   id: string;
+  /** A sentence using the word, with its translation (vocabulary rows) */
+  example?: { en: string; id: string };
 }
 interface Section {
   type: string;
@@ -139,13 +144,9 @@ function buildSuggestions(ctx: LingoContext): { icon: React.ReactNode; text: str
 }
 
 /* ── Lingo TTS ── */
+// Lingo's own natural voice (English, from the voice server); other languages use the device voice
 function lingoSpeak(text: string, lang: string) {
-  if (typeof window === "undefined" || !window.speechSynthesis) return;
-  window.speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = LANG_TTS[lang] ?? "en-US";
-  u.rate = 0.85;
-  window.speechSynthesis.speak(u);
+  speakSegments([{ text, lang: LANG_TTS[lang] ?? "en-US" }], undefined, { natural: true });
 }
 
 function LingoAudioChip({ text, lang }: { text: string; lang: string }) {
@@ -508,7 +509,7 @@ function LingoModal({
               style={{
                 margin: 0,
                 fontSize: 10,
-                color: "#52525b",
+                color: "#8b8b94",
                 overflow: "hidden",
                 textOverflow: "ellipsis",
                 whiteSpace: "nowrap",
@@ -573,7 +574,7 @@ function LingoModal({
             >
               <p
                 style={{
-                  color: "#3f3f46",
+                  color: "#71717a",
                   fontSize: 10,
                   margin: "0 0 2px",
                   fontWeight: 700,
@@ -796,7 +797,7 @@ function LingoModal({
 }
 
 /* ── Floating Action Button ── */
-function LingoFAB({ onClick }: { onClick: () => void }) {
+function LingoFAB({ onClick, bottom = 24 }: { onClick: () => void; bottom?: number }) {
   const [hovered, setHovered] = useState(false);
   return (
     <button
@@ -806,7 +807,7 @@ function LingoFAB({ onClick }: { onClick: () => void }) {
       title="Tanya Lingo"
       style={{
         position: "fixed",
-        bottom: 24,
+        bottom,
         right: 20,
         zIndex: 40,
         display: "flex",
@@ -849,7 +850,15 @@ function LingoFAB({ onClick }: { onClick: () => void }) {
 }
 
 /* ── Tappable phrase in examples ── */
-function TappablePhrase({ text, onTap }: { text: string; onTap: () => void }) {
+function TappablePhrase({
+  text,
+  onTap,
+  style,
+}: {
+  text: string;
+  onTap: () => void;
+  style?: React.CSSProperties;
+}) {
   return (
     <span
       onClick={onTap}
@@ -864,7 +873,7 @@ function TappablePhrase({ text, onTap }: { text: string; onTap: () => void }) {
         fontWeight: 500,
         color: "#f4f4f5",
         lineHeight: 1.45,
-        // hapus borderBottom
+        ...style,
       }}
       onMouseEnter={(e) => {
         const el = e.currentTarget as HTMLElement;
@@ -945,12 +954,7 @@ const isStrokeSection = (s: Section) =>
 
 /* ── TTS ── */
 function speak(text: string, lang = "ja-JP") {
-  if (typeof window === "undefined") return;
-  window.speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = lang;
-  u.rate = 0.85;
-  window.speechSynthesis.speak(u);
+  speakSegments([{ text, lang }], undefined, { natural: true });
 }
 const getTtsLang = (l: string) =>
   ({ ja: "ja-JP", zh: "zh-CN", ko: "ko-KR" })[l] ?? "en-US";
@@ -961,12 +965,15 @@ function PlayBtn({
   text,
   color,
   ttsLang,
+  size = 28,
 }: {
   text: string;
   color: string;
   ttsLang: string;
+  size?: number;
 }) {
   const [p, setP] = useState(false);
+  const icon = Math.round(size * 0.36);
   return (
     <button
       onClick={() => {
@@ -975,13 +982,14 @@ function PlayBtn({
         setTimeout(() => setP(false), 1600);
       }}
       title="Dengarkan"
+      aria-label={`Dengarkan: ${text}`}
       style={{
         flexShrink: 0,
-        width: 24,
-        height: 24,
-        borderRadius: 7,
-        background: p ? color : "rgba(255,255,255,0.06)",
-        border: `1px solid ${p ? color : "rgba(255,255,255,0.1)"}`,
+        width: size,
+        height: size,
+        borderRadius: Math.round(size * 0.32),
+        background: p ? color : `${color}1a`,
+        border: `1px solid ${p ? color : `${color}40`}`,
         cursor: "pointer",
         display: "flex",
         alignItems: "center",
@@ -1011,7 +1019,7 @@ function PlayBtn({
           ))}
         </div>
       ) : (
-        <svg width="8" height="9" viewBox="0 0 9 10" fill="none">
+        <svg width={icon} height={icon} viewBox="0 0 9 10" fill="none">
           <path d="M2 1.5l5 3-5 3V1.5z" fill={color} />
         </svg>
       )}
@@ -1174,6 +1182,143 @@ function BilingualRow({
           {ex.id}
         </span>
       </div>
+      {ex.example && (
+        <div
+          style={{
+            gridColumn: "1 / -1",
+            display: "flex",
+            alignItems: "flex-start",
+            gap: 7,
+            padding: "8px 12px 10px",
+            borderTop: "1px solid rgba(255,255,255,0.05)",
+            background: "rgba(255,255,255,0.01)",
+          }}
+        >
+          <PlayBtn text={ex.example.en} color={color} ttsLang={ttsLang} />
+          <div style={{ minWidth: 0 }}>
+            {onTapPhrase ? (
+              <TappablePhrase text={ex.example.en} onTap={() => onTapPhrase(ex.example!.en)} />
+            ) : (
+              <span style={{ color: "#d4d4d8", fontSize: 12, lineHeight: 1.45 }}>{ex.example.en}</span>
+            )}
+            <span style={{ display: "block", color: "#71717a", fontSize: 11.5, lineHeight: 1.45, fontStyle: "italic", marginTop: 2 }}>
+              {ex.example.id}
+            </span>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ── Word Card (vocabulary) ── */
+// One word per card: the word large with a big play button, its meaning, and the example sentence when there is one
+function WordCard({
+  ex,
+  color,
+  ttsLang,
+  onTapPhrase,
+}: {
+  ex: Example;
+  color: string;
+  ttsLang: string;
+  onTapPhrase?: (text: string) => void;
+}) {
+  return (
+    <div
+      style={{
+        borderRadius: 14,
+        border: `1px solid ${ex.example ? `${color}38` : "rgba(255,255,255,0.07)"}`,
+        background: ex.example
+          ? `linear-gradient(180deg, ${color}10, rgba(255,255,255,0.02))`
+          : "rgba(255,255,255,0.025)",
+        padding: "12px 12px 12px 10px",
+        display: "flex",
+        flexDirection: "column",
+        gap: 10,
+      }}
+    >
+      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+        <PlayBtn text={ex.en} color={color} ttsLang={ttsLang} size={38} />
+        <div style={{ minWidth: 0, display: "flex", flexDirection: "column", gap: 2 }}>
+          {onTapPhrase ? (
+            <TappablePhrase
+              text={ex.en}
+              onTap={() => onTapPhrase(ex.en)}
+              style={{ fontSize: 17, fontWeight: 800, lineHeight: 1.3, padding: "0 2px" }}
+            />
+          ) : (
+            <span style={{ color: "#f4f4f5", fontSize: 17, fontWeight: 800, lineHeight: 1.3 }}>{ex.en}</span>
+          )}
+          <span style={{ color: "#a1a1aa", fontSize: 12.5, lineHeight: 1.45, paddingLeft: 2 }}>{ex.id}</span>
+        </div>
+      </div>
+      {ex.example && (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            gap: 10,
+            borderTop: "1px dashed rgba(255,255,255,0.08)",
+            paddingTop: 10,
+            paddingLeft: 4,
+          }}
+        >
+          <PlayBtn text={ex.example.en} color={color} ttsLang={ttsLang} size={28} />
+          <div style={{ minWidth: 0 }}>
+            {onTapPhrase ? (
+              <TappablePhrase
+                text={ex.example.en}
+                onTap={() => onTapPhrase(ex.example!.en)}
+                style={{ fontSize: 13, color: "#e4e4e7" }}
+              />
+            ) : (
+              <span style={{ color: "#e4e4e7", fontSize: 13, lineHeight: 1.45 }}>{ex.example.en}</span>
+            )}
+            <span style={{ display: "block", color: "#a1a1aa", fontSize: 12, lineHeight: 1.45, fontStyle: "italic", marginTop: 2, paddingLeft: 3 }}>
+              {ex.example.id}
+            </span>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ── Lingo tip ── */
+// The section's tip, said by Lingo in a speech bubble
+function LingoTip({ tip }: { tip: string }) {
+  return (
+    <div style={{ marginTop: 16, display: "flex", gap: 10, alignItems: "flex-start" }}>
+      <LingoAvatar size={44} style={{ flexShrink: 0 }} />
+      <div
+        style={{
+          position: "relative",
+          flex: 1,
+          minWidth: 0,
+          padding: "10px 13px",
+          borderRadius: "4px 14px 14px 14px",
+          background: "rgba(250,204,21,0.07)",
+          border: "1px solid rgba(250,204,21,0.2)",
+        }}
+      >
+        <span
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 5,
+            color: "#facc15",
+            fontSize: 10,
+            fontWeight: 800,
+            letterSpacing: "0.08em",
+            textTransform: "uppercase",
+            marginBottom: 3,
+          }}
+        >
+          <Lightbulb size={11} color="#facc15" /> Tips dari Lingo
+        </span>
+        <p style={{ color: "#fde68a", fontSize: 12.5, lineHeight: 1.6, margin: 0 }}>{tip}</p>
+      </div>
     </div>
   );
 }
@@ -1333,6 +1478,7 @@ function SectionCard({
   const [showModal, setShowModal] = useState(false);
   const meta = getSectionMeta(section.type);
   const isBilingual = getRenderMode(section.type) === "bilingual";
+  const isWordCards = section.type === "vocabulary";
   const ttsLang = getTtsLang(lang);
   const colA = getColLabel(lang);
   const showBtn = isStrokeSection(section);
@@ -1508,7 +1654,40 @@ function SectionCard({
           >
             {section.body}
           </p>
-          {section.examples.length > 0 && (
+          {section.examples.length > 0 && isWordCards && (
+            <>
+              <p
+                style={{
+                  fontSize: 10,
+                  color: "#8b8b94",
+                  margin: "0 0 8px",
+                  fontWeight: 600,
+                }}
+              >
+                Ketuk tombol putar untuk mendengar, ketuk kata untuk tanya Lingo
+              </p>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 240px), 1fr))",
+                  gap: 8,
+                }}
+              >
+                {section.examples.map((ex, i) =>
+                  ex.en.includes("→") ? (
+                    <div key={i} style={{ gridColumn: "1 / -1" }}>
+                      <BilingualRow ex={ex} color={meta.color} ttsLang={ttsLang} onTapPhrase={handleTapPhrase} />
+                    </div>
+                  ) : (
+                    <div key={i} style={{ gridColumn: ex.example ? "1 / -1" : undefined }}>
+                      <WordCard ex={ex} color={meta.color} ttsLang={ttsLang} onTapPhrase={handleTapPhrase} />
+                    </div>
+                  ),
+                )}
+              </div>
+            </>
+          )}
+          {section.examples.length > 0 && !isWordCards && (
             <>
               {isBilingual && (
                 <div
@@ -1523,7 +1702,7 @@ function SectionCard({
                       fontSize: 9,
                       fontWeight: 700,
                       letterSpacing: "0.08em",
-                      color: "#52525b",
+                      color: "#8b8b94",
                       textTransform: "uppercase",
                     }}
                   >
@@ -1534,7 +1713,7 @@ function SectionCard({
                       fontSize: 9,
                       fontWeight: 700,
                       letterSpacing: "0.08em",
-                      color: "#52525b",
+                      color: "#8b8b94",
                       textTransform: "uppercase",
                     }}
                   >
@@ -1545,17 +1724,15 @@ function SectionCard({
               {/* Tap hint */}
               <p
                 style={{
-                  fontSize: 9,
-                  color: "#3f3f46",
+                  fontSize: 10,
+                  color: "#8b8b94",
                   margin: "0 0 6px",
                   fontWeight: 600,
-                  letterSpacing: "0.06em",
-                  textTransform: "uppercase",
                 }}
               >
-                Tap kata untuk tanya Lingo
+                Ketuk kata untuk tanya Lingo
               </p>
-              <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                 {section.examples.map((ex, i) =>
                   isBilingual ? (
                     <BilingualRow
@@ -1577,34 +1754,7 @@ function SectionCard({
               </div>
             </>
           )}
-          {section.tip && (
-            <div
-              style={{
-                marginTop: 14,
-                padding: "10px 14px",
-                borderRadius: 10,
-                background: "rgba(250,204,21,0.05)",
-                border: "1px solid rgba(250,204,21,0.12)",
-                display: "flex",
-                gap: 10,
-                alignItems: "flex-start",
-              }}
-            >
-              <span style={{ flexShrink: 0, marginTop: 1, display: "flex" }}>
-                <Lightbulb size={14} color="#facc15" />
-              </span>
-              <p
-                style={{
-                  color: "#a08a30",
-                  fontSize: 12,
-                  lineHeight: 1.6,
-                  margin: 0,
-                }}
-              >
-                {section.tip}
-              </p>
-            </div>
-          )}
+          {section.tip && <LingoTip tip={section.tip} />}
         </div>
       </div>
       {showModal && <StrokeOrderModal onClose={() => setShowModal(false)} />}
@@ -1640,7 +1790,7 @@ function ChoicePractice({
   const check = () => {
     if (!sel || chk) return;
     setChk(true);
-    setTimeout(() => onDone(ok), 1000);
+    setTimeout(() => onDone(ok), 500);
   };
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -1749,7 +1899,7 @@ function ChoicePractice({
             borderRadius: 10,
             background: sel ? `${chColor}1a` : "rgba(255,255,255,0.02)",
             border: `1px solid ${sel ? `${chColor}44` : "rgba(255,255,255,0.05)"}`,
-            color: sel ? chColor : "#3f3f46",
+            color: sel ? chColor : "#71717a",
             fontSize: 13,
             fontWeight: 700,
             cursor: sel ? "pointer" : "default",
@@ -1976,7 +2126,7 @@ function ListeningPractice({
   const check = () => {
     if (!sel || chk) return;
     setChk(true);
-    setTimeout(() => onDone(ok), 1000);
+    setTimeout(() => onDone(ok), 500);
   };
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -2136,7 +2286,7 @@ function ListeningPractice({
             borderRadius: 10,
             background: sel ? `${chColor}1a` : "rgba(255,255,255,0.02)",
             border: `1px solid ${sel ? `${chColor}44` : "rgba(255,255,255,0.05)"}`,
-            color: sel ? chColor : "#3f3f46",
+            color: sel ? chColor : "#71717a",
             fontSize: 13,
             fontWeight: 700,
             cursor: sel ? "pointer" : "default",
@@ -2208,7 +2358,7 @@ function SpeakingPractice({
       setTranscript(t);
       setScore(s);
       setStatus("done");
-      setTimeout(() => onDone(s >= 60), 1200);
+      setTimeout(() => onDone(s >= 60), 600);
     };
     rec.onerror = () => {
       setStatus("done");
@@ -2442,11 +2592,15 @@ function PracticeSection({
 }) {
   const [cur, setCur] = useState(0);
   const [res, setRes] = useState<boolean[]>([]);
+  // The question is answered; it stays on screen with its explanation until the learner moves on
+  const answered = res.length > cur;
+  const isLast = cur + 1 >= items.length;
   const done = (ok: boolean) => {
-    const n = [...res, ok];
-    setRes(n);
-    if (cur + 1 < items.length) setTimeout(() => setCur(cur + 1), 1200);
-    else setTimeout(onAllDone, 1200);
+    setRes((r) => (r.length > cur ? r : [...r, ok]));
+  };
+  const next = () => {
+    if (isLast) onAllDone();
+    else setCur(cur + 1);
   };
   const item = items[cur];
   if (!item) return null;
@@ -2499,14 +2653,14 @@ function PracticeSection({
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <div style={{ display: "flex", gap: 5 }}>
+          <div style={{ display: "flex", gap: 4 }}>
             {items.map((_, i) => (
               <div
                 key={i}
                 style={{
-                  width: 7,
-                  height: 7,
-                  borderRadius: "50%",
+                  width: i === cur ? 20 : 12,
+                  height: 6,
+                  borderRadius: 99,
                   background:
                     i < res.length
                       ? res[i]
@@ -2515,17 +2669,17 @@ function PracticeSection({
                       : i === cur
                         ? chColor
                         : "rgba(255,255,255,0.12)",
-                  transition: "background 0.3s",
+                  transition: "background 0.3s, width 0.3s",
                 }}
               />
             ))}
           </div>
-          <span style={{ color: "#3f3f46", fontSize: 11, fontWeight: 600 }}>
-            {cur + 1}/{items.length}
+          <span style={{ color: "#a1a1aa", fontSize: 11, fontWeight: 700 }}>
+            Soal {cur + 1}/{items.length}
           </span>
         </div>
       </div>
-      <div style={{ padding: "14px 16px" }}>
+      <div key={cur} style={{ padding: "14px 16px" }}>
         {(item.type === "translation_quiz" ||
           item.type === "fill_in_blank" ||
           item.type === "mini_conversation") && (
@@ -2560,38 +2714,101 @@ function PracticeSection({
         ].includes(item.type) && (
           <ChoicePractice item={item} onDone={done} chColor={chColor} />
         )}
+        {answered && (
+          <button
+            onClick={next}
+            autoFocus
+            style={{
+              width: "100%",
+              height: 48,
+              marginTop: 12,
+              borderRadius: 12,
+              background: `linear-gradient(135deg,${chColor},${chColor}cc)`,
+              border: "none",
+              color: "#fff",
+              fontSize: 14,
+              fontWeight: 800,
+              cursor: "pointer",
+              boxShadow: `0 4px 18px ${chColor}40`,
+            }}
+          >
+            {isLast ? "Selesai" : "Soal berikutnya →"}
+          </button>
+        )}
       </div>
     </div>
   );
 }
 
-function ReadingProgress({
-  scrollY,
-  total,
+/* ── Lesson steps: one per topic, then the practice ── */
+function LessonSteps({
+  labels,
+  step,
+  reached,
+  allDone,
+  color,
+  onGo,
 }: {
-  scrollY: number;
-  total: number;
+  labels: string[];
+  step: number;
+  /** The furthest step opened so far; steps up to it can be revisited */
+  reached: number;
+  allDone: boolean;
+  color: string;
+  onGo: (i: number) => void;
 }) {
-  const pct = Math.min(100, (scrollY / Math.max(total - 1, 1)) * 100);
   return (
-    <div
-      style={{
-        position: "absolute",
-        bottom: 0,
-        left: 0,
-        right: 0,
-        height: 2,
-        background: "rgba(255,255,255,0.04)",
-      }}
-    >
-      <div
-        style={{
-          height: "100%",
-          width: `${pct}%`,
-          background: "linear-gradient(90deg,#3b82f6,#10b981)",
-          transition: "width 0.1s linear",
-        }}
-      />
+    <div style={{ display: "flex", gap: 6, padding: "10px 16px 12px", borderBottom: "1px solid rgba(255,255,255,0.05)", flexShrink: 0 }}>
+      {labels.map((label, i) => {
+        const done = allDone || i < reached;
+        const on = i === step;
+        const open = i <= reached;
+        return (
+          <button
+            key={i}
+            onClick={() => open && onGo(i)}
+            disabled={!open}
+            aria-current={on ? "step" : undefined}
+            aria-label={`Langkah ${i + 1}: ${label}`}
+            style={{
+              flex: 1,
+              minWidth: 0,
+              display: "flex",
+              flexDirection: "column",
+              gap: 6,
+              background: "none",
+              border: "none",
+              padding: 0,
+              cursor: open ? "pointer" : "default",
+              textAlign: "left",
+            }}
+          >
+            <span
+              style={{
+                display: "block",
+                width: "100%",
+                height: 4,
+                borderRadius: 99,
+                background: on ? color : done ? "#10b981" : "rgba(255,255,255,0.08)",
+                transition: "background 0.3s",
+              }}
+            />
+            <span
+              style={{
+                fontSize: 10.5,
+                fontWeight: on ? 800 : 600,
+                color: on ? "#f4f4f5" : done ? "#a1a1aa" : "#71717a",
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                width: "100%",
+              }}
+            >
+              {label}
+            </span>
+          </button>
+        );
+      })}
     </div>
   );
 }
@@ -2607,10 +2824,15 @@ export default function LearnStagePage({ params }: Props) {
   const { xp, addXp } = useProgress();
   const guestLimited = useGuestLimit(stageId);
 
-  const [scrollY, setScrollY] = useState(0);
-  const [scrollMax, setScrollMax] = useState(1);
-  const [practiceUnlocked, setPracticeUnlocked] = useState(false);
+  // One topic per step; the step after the last topic is the practice
+  const [step, setStep] = useState(0);
+  const [reached, setReached] = useState(0);
+  // The scrolling content; it appears only after the lesson has loaded, so it is tracked with a ref callback
+  const [scrollEl, setScrollEl] = useState<HTMLDivElement | null>(null);
   const [practiceComplete, setPracticeComplete] = useState(false);
+  // A lesson gives its XP only the first time it is finished
+  const wasDone = useStudyStore((s) => !!s.done[selectedLanguage]?.[stageId]);
+  const [earnedXp, setEarnedXp] = useState(0);
 
   /* ── Lingo state ── */
   const [lingoOpen, setLingoOpen] = useState(false);
@@ -2636,20 +2858,15 @@ export default function LearnStagePage({ params }: Props) {
     ? ((studyData as any)[stage.feedKey] ?? null)
     : null;
 
+  // Each step starts at its top
   useEffect(() => {
-    const el = document.getElementById("study-scroll");
-    if (!el) return;
-    const upd = () => {
-      const sy = el.scrollTop,
-        sm = el.scrollHeight - el.clientHeight;
-      setScrollY(sy);
-      setScrollMax(sm);
-      if (!practiceUnlocked && sy / Math.max(sm, 1) > 0.6)
-        setPracticeUnlocked(true);
-    };
-    el.addEventListener("scroll", upd);
-    return () => el.removeEventListener("scroll", upd);
-  }, [practiceUnlocked]);
+    scrollEl?.scrollTo({ top: 0 });
+  }, [scrollEl, step]);
+
+  const goToStep = (i: number) => {
+    setStep(i);
+    setReached((r) => Math.max(r, i));
+  };
 
   /* ── Open Lingo helper ── */
   const openLingo = useCallback(
@@ -2679,7 +2896,7 @@ export default function LearnStagePage({ params }: Props) {
         }}
       >
         <div style={{ textAlign: "center" }}>
-          <p style={{ color: "#52525b", fontSize: 14 }}>
+          <p style={{ color: "#8b8b94", fontSize: 14 }}>
             Materi tidak ditemukan.
           </p>
           <button
@@ -2714,6 +2931,15 @@ export default function LearnStagePage({ params }: Props) {
     (s: number, p: any) => s + (p.xpReward ?? 0),
     0,
   );
+  const nTopics = entry.sections.length;
+  const stepLabels = [
+    ...entry.sections.map((s) => getSectionMeta(s.type).label),
+    "Latihan",
+  ];
+  const onPractice = step >= nTopics;
+  const nextLabel = onPractice ? "" : stepLabels[step + 1];
+  // The practice has no forward button (it moves on by itself); once finished there is nothing to step through
+  const showFooter = !onPractice || (!practiceComplete && step > 0);
 
   // Guests who used their free stages sign in before a new lesson
   if (guestLimited) return <GuestLimitScreen backTo="/learn" backLabel="Kembali ke daftar materi" />;
@@ -2816,12 +3042,20 @@ export default function LearnStagePage({ params }: Props) {
               </span>
             </div>
           </div>
-          <ReadingProgress scrollY={scrollY} total={scrollMax} />
         </div>
+        <LessonSteps
+          labels={stepLabels}
+          step={step}
+          reached={reached}
+          allDone={practiceComplete}
+          color={cc.color}
+          onGo={goToStep}
+        />
 
         {/* Scroll area */}
         <div
           id="study-scroll"
+          ref={setScrollEl}
           style={{
             flex: 1,
             overflowY: "auto",
@@ -2829,7 +3063,8 @@ export default function LearnStagePage({ params }: Props) {
             scrollbarWidth: "none",
           }}
         >
-          {/* Hero */}
+          {/* Hero (on the first step only) */}
+          {step === 0 && (
           <div
             style={{
               padding: "22px 16px 18px",
@@ -2858,7 +3093,7 @@ export default function LearnStagePage({ params }: Props) {
                 marginBottom: 10,
               }}
             >
-              <span style={{ color: "#52525b", fontSize: 11, fontWeight: 600 }}>
+              <span style={{ color: "#8b8b94", fontSize: 11, fontWeight: 600 }}>
                 {chapter.subtitle}
               </span>
               <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
@@ -2911,7 +3146,7 @@ export default function LearnStagePage({ params }: Props) {
                   bd: "1px solid rgba(255,255,255,0.08)",
                 },
                 {
-                  label: `+${totalXp} XP`,
+                  label: wasDone && !practiceComplete ? "XP sudah didapat" : `+${totalXp} XP`,
                   color: "#facc15",
                   bg: "rgba(250,204,21,0.06)",
                   bd: "1px solid rgba(250,204,21,0.15)",
@@ -2941,182 +3176,35 @@ export default function LearnStagePage({ params }: Props) {
               ))}
             </div>
           </div>
+          )}
 
-          {/* Section divider */}
-          <div style={{ padding: "18px 16px 10px" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <div
-                style={{
-                  flex: 1,
-                  height: 1,
-                  background: "rgba(255,255,255,0.05)",
-                }}
-              />
-              <span
-                style={{
-                  color: "#3f3f46",
-                  fontSize: 9,
-                  fontWeight: 700,
-                  letterSpacing: "0.14em",
-                  textTransform: "uppercase",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                Materi Pembelajaran
-              </span>
-              <div
-                style={{
-                  flex: 1,
-                  height: 1,
-                  background: "rgba(255,255,255,0.05)",
-                }}
-              />
-            </div>
-          </div>
-
-          {/* Sections */}
-          <div
-            style={{
-              padding: "0 12px",
-              display: "flex",
-              flexDirection: "column",
-              gap: 10,
-            }}
-          >
-            {entry.sections.map((section, i) => (
-              <SectionCard
-                key={i}
-                section={section}
-                id={`section-${i}`}
-                lang={selectedLanguage}
-                chapterTitle={chapter.title}
-                stageLabel={stage.label}
-                onOpenLingo={(ctx, prompt) => openLingo(ctx, prompt)}
-              />
-            ))}
-          </div>
-
-          {/* Practice divider */}
-          <div style={{ padding: "18px 16px 10px" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <div
-                style={{
-                  flex: 1,
-                  height: 1,
-                  background: "rgba(255,255,255,0.05)",
-                }}
-              />
-              <span
-                style={{
-                  color: "#3f3f46",
-                  fontSize: 9,
-                  fontWeight: 700,
-                  letterSpacing: "0.14em",
-                  textTransform: "uppercase",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                Latihan Soal
-              </span>
-              <div
-                style={{
-                  flex: 1,
-                  height: 1,
-                  background: "rgba(255,255,255,0.05)",
-                }}
-              />
-            </div>
-          </div>
-
-          {/* Practice */}
-          <div style={{ padding: "0 12px" }}>
-            {!practiceUnlocked ? (
-              <div
-                style={{
-                  background: "#0e0e14",
-                  borderRadius: 16,
-                  border: "1px solid rgba(255,255,255,0.06)",
-                  padding: "28px 20px",
-                  textAlign: "center",
-                }}
-              >
-                <div
-                  style={{
-                    width: 44,
-                    height: 44,
-                    borderRadius: 12,
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    margin: "0 auto 14px",
-                  }}
-                >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <rect
-                      x="5"
-                      y="11"
-                      width="14"
-                      height="10"
-                      rx="2"
-                      stroke="#52525b"
-                      strokeWidth="2"
-                    />
-                    <path
-                      d="M8 11V7a4 4 0 018 0v4"
-                      stroke="#52525b"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </div>
+          <div style={{ padding: "14px 12px 0" }}>
+            {!onPractice && (
+              <>
                 <p
                   style={{
-                    color: "#71717a",
-                    fontSize: 13,
+                    color: cc.color,
+                    fontSize: 11,
                     fontWeight: 700,
-                    margin: "0 0 6px",
+                    margin: "0 4px 8px",
                   }}
                 >
-                  Baca dulu materinya
+                  Langkah {step + 1} dari {nTopics}
                 </p>
-                <p
-                  style={{ color: "#3f3f46", fontSize: 12, margin: "0 0 14px" }}
-                >
-                  Latihan akan muncul setelah kamu selesai membaca
-                </p>
-                <div
-                  style={{
-                    height: 3,
-                    background: "rgba(255,255,255,0.04)",
-                    borderRadius: 99,
-                    overflow: "hidden",
-                    maxWidth: 160,
-                    margin: "0 auto",
-                  }}
-                >
-                  <div
-                    style={{
-                      height: "100%",
-                      width: `${Math.min(100, (scrollY / Math.max(scrollMax, 1)) * (100 / 0.6))}%`,
-                      background: `linear-gradient(90deg,${cc.color},${cc.ring})`,
-                      borderRadius: 99,
-                      transition: "width 0.2s ease",
-                    }}
-                  />
-                </div>
-                <p style={{ color: "#3f3f46", fontSize: 10, marginTop: 6 }}>
-                  {Math.round(
-                    Math.min(
-                      100,
-                      (scrollY / Math.max(scrollMax, 1)) * (100 / 0.6),
-                    ),
-                  )}
-                  % terbaca
-                </p>
-              </div>
-            ) : !practiceComplete ? (
+                <SectionCard
+                  key={step}
+                  section={entry.sections[step]}
+                  id={`section-${step}`}
+                  lang={selectedLanguage}
+                  chapterTitle={chapter.title}
+                  stageLabel={stage.label}
+                  onOpenLingo={(ctx, prompt) => openLingo(ctx, prompt)}
+                />
+              </>
+            )}
+            {/* Stays mounted while the learner looks back at a topic, so answers already given are kept */}
+            {reached >= nTopics && !practiceComplete && (
+              <div hidden={!onPractice}>
               <PracticeSection
                 items={entry.practice}
                 chColor={cc.color}
@@ -3126,10 +3214,15 @@ export default function LearnStagePage({ params }: Props) {
                   // Belajar materi juga menjaga streak harian dan dihitung untuk target "Baca materi"
                   useUserStore.getState().updateStreak();
                   useUserStore.getState().incrementDailyMaterial();
-                  addXp(totalXp);
+                  // XP only the first time; reading it again is practice
+                  const first = useStudyStore.getState().markDone(selectedLanguage, stageId);
+                  if (first && totalXp > 0) addXp(totalXp);
+                  setEarnedXp(first ? totalXp : 0);
                 }}
               />
-            ) : (
+              </div>
+            )}
+            {onPractice && practiceComplete && (
               <div
                 style={{
                   background: "#0e0e14",
@@ -3168,7 +3261,9 @@ export default function LearnStagePage({ params }: Props) {
                 <p
                   style={{ color: "#71717a", fontSize: 12, margin: "0 0 18px" }}
                 >
-                  +{totalXp} XP berhasil diperoleh
+                  {earnedXp > 0
+                    ? `+${earnedXp} XP berhasil diperoleh`
+                    : "Latihan ulang selesai. XP materi ini sudah kamu dapat sebelumnya."}
                 </p>
                 <div style={{ display: "flex", gap: 10 }}>
                   <button
@@ -3208,12 +3303,65 @@ export default function LearnStagePage({ params }: Props) {
               </div>
             )}
           </div>
-          <div style={{ height: 48 }} />
+          <div style={{ height: 32 }} />
         </div>
+
+        {/* Step buttons */}
+        {showFooter && (
+          <div
+            style={{
+              flexShrink: 0,
+              display: "flex",
+              gap: 10,
+              padding: "12px 16px calc(14px + env(safe-area-inset-bottom, 0px))",
+              borderTop: "1px solid rgba(255,255,255,0.06)",
+              background: "#0a0a0d",
+            }}
+          >
+            {step > 0 && (
+              <button
+                onClick={() => goToStep(step - 1)}
+                style={{
+                  flex: onPractice ? 1 : "0 0 auto",
+                  height: 48,
+                  padding: "0 18px",
+                  borderRadius: 12,
+                  background: "rgba(255,255,255,0.05)",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                  color: "#d4d4d8",
+                  fontSize: 13,
+                  fontWeight: 700,
+                  cursor: "pointer",
+                }}
+              >
+                {onPractice ? "← Kembali ke materi" : "← Sebelumnya"}
+              </button>
+            )}
+            {!onPractice && (
+              <button
+                onClick={() => goToStep(step + 1)}
+                style={{
+                  flex: 1,
+                  height: 48,
+                  borderRadius: 12,
+                  background: `linear-gradient(135deg,${cc.color},${cc.ring})`,
+                  border: "none",
+                  color: "#fff",
+                  fontSize: 14,
+                  fontWeight: 800,
+                  cursor: "pointer",
+                  boxShadow: `0 4px 18px ${cc.color}40`,
+                }}
+              >
+                {step + 1 >= nTopics ? "Mulai latihan →" : `Lanjut ke ${nextLabel} →`}
+              </button>
+            )}
+          </div>
+        )}
       </div>
 
       {/* ── Floating Lingo Button ── */}
-      <LingoFAB onClick={() => openLingo()} />
+      <LingoFAB onClick={() => openLingo()} bottom={showFooter ? 96 : 24} />
 
       {/* ── Lingo Modal ── */}
       {lingoCtx && (
