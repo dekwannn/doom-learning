@@ -1,12 +1,12 @@
 {
   "c1s1": {
-    "title": "Basic Greetings",
-    "intro": "Greetings are the first thing you say when you meet someone. In English, the greeting you use depends on the time of day and how well you know the person.",
+    "title": "Sapaan Dasar",
+    "intro": "Sapaan adalah hal pertama yang kamu ucapkan saat bertemu seseorang. Dalam bahasa Inggris, sapaan yang dipakai tergantung waktu dan seberapa dekat kamu dengan orang itu.",
     "sections": [
       {
         "type": "vocabulary",
-        "heading": "Essential Greetings",
-        "body": "These are the most common English greetings. Use them when you first see or meet someone.",
+        "heading": "Sapaan Penting",
+        "body": "Ini sapaan bahasa Inggris yang paling sering dipakai. Ucapkan saat pertama kali melihat atau bertemu seseorang.",
         "examples": [
           {
             "en": "Hello!",
@@ -18,15 +18,15 @@
           },
           {
             "en": "Good morning!",
-            "id": "Selamat pagi! (used before noon)"
+            "id": "Selamat pagi! (sebelum jam 12 siang)"
           },
           {
             "en": "Good afternoon!",
-            "id": "Selamat siang! (noon–5 PM)"
+            "id": "Selamat siang! (jam 12 siang sampai 5 sore)"
           },
           {
             "en": "Good evening!",
-            "id": "Selamat sore/malam! (after 5 PM)"
+            "id": "Selamat sore/malam! (setelah jam 5 sore)"
           },
           {
             "en": "Goodbye!",
@@ -34,15 +34,15 @@
           },
           {
             "en": "Good night!",
-            "id": "Selamat malam! (when parting at night)"
+            "id": "Selamat malam! (saat berpisah di malam hari)"
           }
         ],
-        "tip": "\"Good night\" is only used when saying goodbye late at night, not as a greeting."
+        "tip": "\"Good night\" hanya dipakai untuk berpamitan di malam hari, bukan untuk menyapa."
       },
       {
         "type": "grammar",
-        "heading": "Time-based Greetings",
-        "body": "English greetings change depending on the time of day. Memorise this simple pattern:",
+        "heading": "Sapaan Menurut Waktu",
+        "body": "Sapaan bahasa Inggris berubah sesuai waktu. Hafalkan pola sederhana ini:",
         "examples": [
           {
             "en": "Morning (before 12 PM) → Good morning",
@@ -57,27 +57,27 @@
             "id": "Malam hari → Selamat malam"
           }
         ],
-        "tip": "When in doubt, \"Hello\" or \"Hi\" works at ANY time of day."
+        "tip": "Kalau ragu, \"Hello\" atau \"Hi\" bisa dipakai kapan saja."
       },
       {
         "type": "pronunciation",
-        "heading": "How to Pronounce",
-        "body": "Listen carefully to the stress in each greeting. The stressed syllable is shown in CAPS.",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
         "examples": [
           {
-            "en": "hel-LO",
-            "id": "/həˈloʊ/"
+            "en": "Hello",
+            "id": "hel-LO · /həˈloʊ/"
           },
           {
-            "en": "good MOR-ning",
-            "id": "/ɡʊd ˈmɔːrnɪŋ/"
+            "en": "Good morning",
+            "id": "good MOR-ning · /ɡʊd ˈmɔːrnɪŋ/"
           },
           {
-            "en": "GOOD-bye",
-            "id": "/ˌɡʊdˈbaɪ/"
+            "en": "Goodbye",
+            "id": "good-BYE · /ɡʊdˈbaɪ/"
           }
         ],
-        "tip": "Smile when you say hello — it makes your English sound more natural and friendly!"
+        "tip": "Tersenyumlah saat mengucapkan hello. Bahasa Inggrismu jadi terdengar lebih ramah dan natural!"
       }
     ],
     "practice": [
@@ -94,7 +94,7 @@
             "Sampai jumpa"
           ],
           "correctAnswer": "Selamat siang",
-          "explanation": "\"Good afternoon\" = Selamat siang, used between noon and 5 PM."
+          "explanation": "\"Good afternoon\" = Selamat siang, dipakai dari jam 12 siang sampai sekitar jam 5 sore."
         }
       },
       {
@@ -103,20 +103,86 @@
         "xpReward": 15,
         "content": {
           "phrase": "Good morning!",
-          "hint": "Say: Good morning!",
+          "hint": "Ucapkan: Good morning!",
           "translation": "Selamat pagi!"
+        }
+      },
+      {
+        "id": "study_c1s1_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Hello",
+              "meaning": "Halo"
+            },
+            {
+              "word": "Good morning",
+              "meaning": "Selamat pagi"
+            },
+            {
+              "word": "Good evening",
+              "meaning": "Selamat malam"
+            },
+            {
+              "word": "Goodbye",
+              "meaning": "Selamat tinggal"
+            }
+          ],
+          "shuffledMeanings": [
+            "Selamat tinggal",
+            "Selamat pagi",
+            "Selamat malam",
+            "Halo"
+          ],
+          "explanation": "Hello = Halo. Good morning = Selamat pagi. Good evening = Selamat malam. Goodbye = Selamat tinggal."
+        }
+      },
+      {
+        "id": "study_c1s1_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "Good morning, teacher!",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "Good morning, teacher!",
+            "Hello, how are you?",
+            "Good night, see you tomorrow!",
+            "Goodbye, my friend!"
+          ],
+          "correctAnswer": "Good morning, teacher!",
+          "explanation": "Lingo mengucapkan \"Good morning, teacher!\" yang artinya \"Selamat pagi, Bu Guru!\""
+        }
+      },
+      {
+        "id": "study_c1s1_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'Hello, how are you?'?",
+          "options": [
+            "Selamat tinggal, temanku!",
+            "Selamat siang, semuanya!",
+            "Halo, apa kabar?",
+            "Selamat malam, sampai jumpa besok!"
+          ],
+          "correctAnswer": "Halo, apa kabar?",
+          "explanation": "\"Hello, how are you?\" = Halo, apa kabar?"
         }
       }
     ]
   },
   "c1s2": {
-    "title": "Polite Expressions",
-    "intro": "Polite expressions are the foundation of good English manners. Using words like 'please', 'thank you', and 'sorry' will make you sound natural and respectful in any situation.",
+    "title": "Ungkapan Sopan",
+    "intro": "Ungkapan sopan adalah dasar sopan santun dalam bahasa Inggris. Kata seperti please, thank you, dan sorry membuat kamu terdengar natural dan menghargai orang lain.",
     "sections": [
       {
         "type": "vocabulary",
-        "heading": "Key Polite Words",
-        "body": "These four expressions are used every day in English. Learn them well!",
+        "heading": "Kata Sopan Utama",
+        "body": "Ungkapan-ungkapan ini dipakai setiap hari dalam bahasa Inggris. Pelajari baik-baik!",
         "examples": [
           {
             "en": "Please",
@@ -139,16 +205,16 @@
             "id": "Permisi"
           }
         ],
-        "tip": "Always say 'please' at the end of a request: \"Can you help me, please?\""
+        "tip": "Ucapkan please di akhir permintaan: \"Can you help me, please?\""
       },
       {
         "type": "grammar",
-        "heading": "How to Use Them",
-        "body": "Here are common sentence patterns using polite expressions:",
+        "heading": "Cara Memakainya",
+        "body": "Ini pola kalimat yang sering dipakai dengan ungkapan sopan:",
         "examples": [
           {
             "en": "Can you help me, please?",
-            "id": "Bisakah kamu membantuku, tolong?"
+            "id": "Bisa tolong bantu saya?"
           },
           {
             "en": "Thank you very much!",
@@ -167,12 +233,12 @@
             "id": "Permisi, di mana kamar mandinya?"
           }
         ],
-        "tip": "\"Excuse me\" is for getting someone's attention or getting past them. \"Sorry\" is for apologising."
+        "tip": "\"Excuse me\" untuk menarik perhatian atau minta jalan. \"Sorry\" untuk minta maaf."
       },
       {
         "type": "conversation",
-        "heading": "Quick Dialogue",
-        "body": "See how polite expressions flow naturally in conversation:",
+        "heading": "Dialog Singkat",
+        "body": "Lihat bagaimana ungkapan sopan muncul dalam percakapan sehari-hari:",
         "examples": [
           {
             "en": "A: Excuse me, can you help me please?",
@@ -190,7 +256,32 @@
             "en": "B: You're welcome!",
             "id": "B: Sama-sama!"
           }
-        ]
+        ],
+        "tip": ""
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Please",
+            "id": "PLEASE · /pliːz/ (ujungnya bunyi z)"
+          },
+          {
+            "en": "Thank you",
+            "id": "THANK you · /ˈθæŋk juː/ (th: ujung lidah di antara gigi)"
+          },
+          {
+            "en": "Sorry",
+            "id": "SOR-ry · /ˈsɑːri/"
+          },
+          {
+            "en": "Excuse me",
+            "id": "ex-CUSE me · /ɪkˈskjuːz miː/"
+          }
+        ],
+        "tip": "Bunyi th di thank you: julurkan sedikit ujung lidah di antara gigi, lalu tiup pelan."
       }
     ],
     "practice": [
@@ -207,7 +298,7 @@
             "Thank"
           ],
           "correctAnswer": "Excuse",
-          "explanation": "\"Excuse me\" is used to politely get someone's attention or to ask for help."
+          "explanation": "\"Excuse me\" dipakai untuk menarik perhatian orang dengan sopan atau saat minta tolong."
         }
       },
       {
@@ -216,20 +307,86 @@
         "xpReward": 15,
         "content": {
           "phrase": "Thank you very much!",
-          "hint": "Say: Thank you very much!",
+          "hint": "Ucapkan: Thank you very much!",
           "translation": "Terima kasih banyak!"
+        }
+      },
+      {
+        "id": "study_c1s2_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Please",
+              "meaning": "Tolong"
+            },
+            {
+              "word": "Thank you",
+              "meaning": "Terima kasih"
+            },
+            {
+              "word": "Sorry",
+              "meaning": "Maaf"
+            },
+            {
+              "word": "Excuse me",
+              "meaning": "Permisi"
+            }
+          ],
+          "shuffledMeanings": [
+            "Permisi",
+            "Terima kasih",
+            "Maaf",
+            "Tolong"
+          ],
+          "explanation": "Please = Tolong. Thank you = Terima kasih. Sorry = Maaf. Excuse me = Permisi."
+        }
+      },
+      {
+        "id": "study_c1s2_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "Can you help me, please?",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "Thank you very much!",
+            "I'm sorry I'm late.",
+            "Excuse me, where is the bathroom?",
+            "Can you help me, please?"
+          ],
+          "correctAnswer": "Can you help me, please?",
+          "explanation": "Lingo mengucapkan \"Can you help me, please?\" yang artinya \"Bisa tolong bantu saya?\""
+        }
+      },
+      {
+        "id": "study_c1s2_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'Thank you very much!'?",
+          "options": [
+            "Permisi, bisakah kamu membantuku?",
+            "Terima kasih banyak!",
+            "Maaf saya terlambat.",
+            "Permisi, di mana kamar mandinya?"
+          ],
+          "correctAnswer": "Terima kasih banyak!",
+          "explanation": "\"Thank you very much!\" = Terima kasih banyak!"
         }
       }
     ]
   },
   "c1s3": {
-    "title": "Introducing Yourself",
-    "intro": "The first thing you tell a new person is your name. English has simple, friendly phrases for introducing yourself. Mastering these will help you start any conversation confidently.",
+    "title": "Memperkenalkan Diri",
+    "intro": "Hal pertama yang kamu sampaikan ke orang baru adalah namamu. Bahasa Inggris punya kalimat sederhana dan ramah untuk berkenalan. Kalau sudah lancar, kamu bisa memulai percakapan dengan percaya diri.",
     "sections": [
       {
         "type": "vocabulary",
-        "heading": "Introduction Phrases",
-        "body": "Use these phrases when you meet someone for the first time:",
+        "heading": "Kalimat Perkenalan",
+        "body": "Pakai kalimat-kalimat ini saat bertemu seseorang untuk pertama kali:",
         "examples": [
           {
             "en": "My name is …",
@@ -252,12 +409,12 @@
             "id": "Kamu dari mana?"
           }
         ],
-        "tip": "\"Nice to meet you\" is the polite response when someone introduces themselves to you."
+        "tip": "\"Nice to meet you\" adalah jawaban sopan saat seseorang memperkenalkan dirinya."
       },
       {
         "type": "grammar",
-        "heading": "Name Introduction Pattern",
-        "body": "There are two common ways to introduce your name in English:",
+        "heading": "Pola Menyebut Nama",
+        "body": "Ada dua cara umum menyebutkan nama dalam bahasa Inggris:",
         "examples": [
           {
             "en": "My name is Budi.",
@@ -272,12 +429,12 @@
             "id": "Hai! Saya Dian. Senang bertemu denganmu!"
           }
         ],
-        "tip": "\"I'm\" is the contracted form of \"I am\" — used in casual speech."
+        "tip": "\"I'm\" adalah bentuk singkat dari \"I am\" dan dipakai dalam obrolan santai."
       },
       {
         "type": "conversation",
-        "heading": "First Meeting Dialogue",
-        "body": "A natural introduction sounds like this:",
+        "heading": "Dialog Pertemuan Pertama",
+        "body": "Perkenalan yang natural terdengar seperti ini:",
         "examples": [
           {
             "en": "A: Hi! My name is Sari.",
@@ -295,7 +452,28 @@
             "en": "B: Nice to meet you too!",
             "id": "B: Senang bertemu denganmu juga!"
           }
-        ]
+        ],
+        "tip": ""
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Name",
+            "id": "NAME · /neɪm/ (dibaca seperti 'neim')"
+          },
+          {
+            "en": "Nice to meet you",
+            "id": "NICE to MEET you · /naɪs tə miːt juː/"
+          },
+          {
+            "en": "Where are you from?",
+            "id": "WHERE are you FROM · /wer ɑːr juː frʌm/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -321,20 +499,86 @@
         "xpReward": 15,
         "content": {
           "phrase": "Nice to meet you!",
-          "hint": "Say: Nice to meet you!",
+          "hint": "Ucapkan: Nice to meet you!",
           "translation": "Senang bertemu denganmu!"
+        }
+      },
+      {
+        "id": "study_c1s3_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "My name is",
+              "meaning": "Nama saya"
+            },
+            {
+              "word": "Nice to meet you",
+              "meaning": "Senang bertemu denganmu"
+            },
+            {
+              "word": "What is your name?",
+              "meaning": "Siapa namamu?"
+            },
+            {
+              "word": "Where are you from?",
+              "meaning": "Kamu dari mana?"
+            }
+          ],
+          "shuffledMeanings": [
+            "Kamu dari mana?",
+            "Senang bertemu denganmu",
+            "Siapa namamu?",
+            "Nama saya"
+          ],
+          "explanation": "My name is = Nama saya. Nice to meet you = Senang bertemu denganmu. What is your name? = Siapa namamu?. Where are you from? = Kamu dari mana?."
+        }
+      },
+      {
+        "id": "study_c1s3_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "Nice to meet you!",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "Where are you from?",
+            "My name is Budi.",
+            "Nice to meet you!",
+            "What is your name?"
+          ],
+          "correctAnswer": "Nice to meet you!",
+          "explanation": "Lingo mengucapkan \"Nice to meet you!\" yang artinya \"Senang bertemu denganmu!\""
+        }
+      },
+      {
+        "id": "study_c1s3_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'What is your name?'?",
+          "options": [
+            "Siapa namamu?",
+            "Kamu dari mana?",
+            "Nama saya Budi.",
+            "Saya Sari."
+          ],
+          "correctAnswer": "Siapa namamu?",
+          "explanation": "\"What is your name?\" = Siapa namamu?"
         }
       }
     ]
   },
   "c1s4": {
-    "title": "Basic Pronouns",
-    "intro": "Pronouns replace nouns so we don't have to repeat names. English has clear, simple pronouns for every person. Knowing them is essential for building any sentence.",
+    "title": "Kata Ganti Orang",
+    "intro": "Kata ganti dipakai menggantikan nama supaya kita tidak mengulanginya terus. Bahasa Inggris punya kata ganti yang jelas untuk setiap orang, dan kamu butuh ini untuk menyusun kalimat apa pun.",
     "sections": [
       {
         "type": "vocabulary",
-        "heading": "Subject Pronouns",
-        "body": "Subject pronouns tell us WHO does the action in a sentence.",
+        "heading": "Kata Ganti Subjek",
+        "body": "Kata ganti subjek menunjukkan SIAPA yang melakukan sesuatu dalam kalimat.",
         "examples": [
           {
             "en": "I",
@@ -365,12 +609,12 @@
             "id": "Mereka"
           }
         ],
-        "tip": "\"It\" is for animals and things. \"He\" and \"She\" are only for people."
+        "tip": "\"It\" untuk hewan dan benda. \"He\" dan \"She\" hanya untuk orang."
       },
       {
         "type": "grammar",
-        "heading": "Pronouns in Sentences",
-        "body": "Replace the noun with the correct pronoun:",
+        "heading": "Kata Ganti dalam Kalimat",
+        "body": "Ganti nama orang dengan kata ganti yang tepat:",
         "examples": [
           {
             "en": "Budi is a student → He is a student.",
@@ -389,7 +633,27 @@
             "id": "Budi dan Sari → Mereka"
           }
         ],
-        "tip": "Use \"They\" for a group of people, regardless of gender."
+        "tip": "Pakai \"They\" untuk sekelompok orang, laki-laki maupun perempuan."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "She",
+            "id": "SHE · /ʃiː/ (bunyi 'sy', bukan 's')"
+          },
+          {
+            "en": "They",
+            "id": "THEY · /ðeɪ/ (th: ujung lidah di antara gigi)"
+          },
+          {
+            "en": "We",
+            "id": "WE · /wiː/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -406,7 +670,7 @@
             "They"
           ],
           "correctAnswer": "He",
-          "explanation": "\"His name\" shows the teacher is male, so we use \"He\"."
+          "explanation": "\"His name\" menunjukkan gurunya laki-laki, jadi kata gantinya \"He\"."
         }
       },
       {
@@ -415,20 +679,86 @@
         "xpReward": 15,
         "content": {
           "phrase": "I am a student.",
-          "hint": "Say: I am a student.",
+          "hint": "Ucapkan: I am a student.",
           "translation": "Saya adalah seorang pelajar."
+        }
+      },
+      {
+        "id": "study_c1s4_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "I",
+              "meaning": "Saya"
+            },
+            {
+              "word": "She",
+              "meaning": "Dia (perempuan)"
+            },
+            {
+              "word": "We",
+              "meaning": "Kami / Kita"
+            },
+            {
+              "word": "They",
+              "meaning": "Mereka"
+            }
+          ],
+          "shuffledMeanings": [
+            "Mereka",
+            "Dia (perempuan)",
+            "Kami / Kita",
+            "Saya"
+          ],
+          "explanation": "I = Saya. She = Dia (perempuan). We = Kami / Kita. They = Mereka."
+        }
+      },
+      {
+        "id": "study_c1s4_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "He is my brother.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "They are at school.",
+            "He is my brother.",
+            "She is a doctor.",
+            "We are friends."
+          ],
+          "correctAnswer": "He is my brother.",
+          "explanation": "Lingo mengucapkan \"He is my brother.\" yang artinya \"Dia saudara laki-laki saya.\""
+        }
+      },
+      {
+        "id": "study_c1s4_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'She is a doctor.'?",
+          "options": [
+            "Kami berteman.",
+            "Mereka ada di sekolah.",
+            "Itu kucing saya.",
+            "Dia seorang dokter."
+          ],
+          "correctAnswer": "Dia seorang dokter.",
+          "explanation": "\"She is a doctor.\" = Dia seorang dokter."
         }
       }
     ]
   },
   "c1s5": {
-    "title": "Simple Sentences with Am / Is",
-    "intro": "The verb 'to be' (am, is, are) is the most important verb in English. It connects a subject to a description. Let's master 'am' and 'is' first.",
+    "title": "Kalimat Sederhana dengan Am / Is",
+    "intro": "Kata kerja to be (am, is, are) adalah kata kerja terpenting dalam bahasa Inggris. Kata ini menghubungkan subjek dengan keterangannya. Kita kuasai am dan is dulu.",
     "sections": [
       {
         "type": "grammar",
-        "heading": "When to Use Am vs Is",
-        "body": "The verb 'to be' changes depending on the subject. Study this pattern carefully:",
+        "heading": "Kapan Pakai Am dan Is",
+        "body": "Bentuk to be berubah sesuai subjeknya. Perhatikan pola ini baik-baik:",
         "examples": [
           {
             "en": "I am …",
@@ -447,12 +777,12 @@
             "id": "Itu adalah …"
           }
         ],
-        "tip": "ONLY use 'am' with 'I'. Use 'is' with he, she, and it."
+        "tip": "Am HANYA dipakai dengan I. Pakai is untuk he, she, dan it."
       },
       {
         "type": "vocabulary",
-        "heading": "Simple Descriptions",
-        "body": "Use am / is + adjective to describe yourself or someone else:",
+        "heading": "Keterangan Sederhana",
+        "body": "Pakai am / is + kata sifat untuk menggambarkan dirimu atau orang lain:",
         "examples": [
           {
             "en": "I am happy.",
@@ -475,7 +805,27 @@
             "id": "Itu adalah sebuah buku."
           }
         ],
-        "tip": "The structure is: Subject + am/is + [adjective or noun]."
+        "tip": "Polanya: Subjek + am/is + kata sifat atau kata benda."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Happy",
+            "id": "HAP-py · /ˈhæpi/"
+          },
+          {
+            "en": "Teacher",
+            "id": "TEA-cher · /ˈtiːtʃər/"
+          },
+          {
+            "en": "Tired",
+            "id": "TIRED · /taɪərd/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -492,7 +842,7 @@
             "be"
           ],
           "correctAnswer": "am",
-          "explanation": "\"Am\" is only used with \"I\". Never say \"I is\" or \"I are\"."
+          "explanation": "\"Am\" hanya dipakai dengan \"I\". Jangan pernah bilang \"I is\" atau \"I are\"."
         }
       },
       {
@@ -501,20 +851,86 @@
         "xpReward": 15,
         "content": {
           "phrase": "I am happy.",
-          "hint": "Say: I am happy.",
+          "hint": "Ucapkan: I am happy.",
           "translation": "Saya bahagia."
+        }
+      },
+      {
+        "id": "study_c1s5_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "I am happy",
+              "meaning": "Saya bahagia"
+            },
+            {
+              "word": "I am tired",
+              "meaning": "Saya lelah"
+            },
+            {
+              "word": "He is a teacher",
+              "meaning": "Dia seorang guru"
+            },
+            {
+              "word": "It is a book",
+              "meaning": "Itu sebuah buku"
+            }
+          ],
+          "shuffledMeanings": [
+            "Itu sebuah buku",
+            "Saya lelah",
+            "Dia seorang guru",
+            "Saya bahagia"
+          ],
+          "explanation": "I am happy = Saya bahagia. I am tired = Saya lelah. He is a teacher = Dia seorang guru. It is a book = Itu sebuah buku."
+        }
+      },
+      {
+        "id": "study_c1s5_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "I am happy.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "I am happy.",
+            "I am tired.",
+            "She is my friend.",
+            "He is a teacher."
+          ],
+          "correctAnswer": "I am happy.",
+          "explanation": "Lingo mengucapkan \"I am happy.\" yang artinya \"Saya bahagia.\""
+        }
+      },
+      {
+        "id": "study_c1s5_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'I am tired.'?",
+          "options": [
+            "Dia adalah seorang guru.",
+            "Itu adalah sebuah buku.",
+            "Saya lelah.",
+            "Dia adalah temanku."
+          ],
+          "correctAnswer": "Saya lelah.",
+          "explanation": "\"I am tired.\" = Saya lelah."
         }
       }
     ]
   },
   "c1s6": {
-    "title": "Chapter 1 Review — Putting It Together",
-    "intro": "You've learned greetings, polite words, introductions, pronouns, and am/is. Now let's see how they work together in real conversation.",
+    "title": "Ulasan Chapter 1: Semua Digabungkan",
+    "intro": "Kamu sudah belajar sapaan, kata sopan, perkenalan, kata ganti, dan am/is. Sekarang lihat bagaimana semuanya dipakai bersama dalam percakapan nyata.",
     "sections": [
       {
         "type": "conversation",
-        "heading": "Full Introduction Dialogue",
-        "body": "Read this conversation and notice how everything from Chapter 1 comes together:",
+        "heading": "Dialog Perkenalan Lengkap",
+        "body": "Baca percakapan ini dan perhatikan bagaimana semua materi Chapter 1 dipakai bersama:",
         "examples": [
           {
             "en": "A: Good morning! My name is Rina.",
@@ -540,12 +956,13 @@
             "en": "B: Goodbye, Rina!",
             "id": "B: Sampai jumpa, Rina!"
           }
-        ]
+        ],
+        "tip": ""
       },
       {
         "type": "grammar",
-        "heading": "Chapter 1 Quick Review",
-        "body": "Key patterns from this chapter:",
+        "heading": "Ringkasan Chapter 1",
+        "body": "Pola-pola penting dari chapter ini:",
         "examples": [
           {
             "en": "Greeting: Good morning / Hello / Hi",
@@ -568,7 +985,27 @@
             "id": "Kata kerja: Saya adalah … / Dia adalah …"
           }
         ],
-        "tip": "Practice saying a full introduction out loud every day — it will become natural very quickly!"
+        "tip": "Latih perkenalan lengkap dengan suara keras setiap hari. Lama-lama akan terasa natural!"
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Student",
+            "id": "STU-dent · /ˈstuːdənt/"
+          },
+          {
+            "en": "Nice to meet you too",
+            "id": "NICE to MEET you TOO · /naɪs tə miːt juː tuː/"
+          },
+          {
+            "en": "Goodbye",
+            "id": "good-BYE · /ɡʊdˈbaɪ/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -585,7 +1022,7 @@
             "Excuse me"
           ],
           "correctAnswer": "You're welcome",
-          "explanation": "The correct response to 'Thank you' is 'You're welcome' (Sama-sama)."
+          "explanation": "Jawaban yang tepat untuk \"Thank you\" adalah \"You're welcome\" (Sama-sama)."
         }
       },
       {
@@ -594,67 +1031,165 @@
         "xpReward": 15,
         "content": {
           "phrase": "My name is Rina. Nice to meet you!",
-          "hint": "Say: My name is [your name]. Nice to meet you!",
+          "hint": "Ucapkan: My name is [namamu]. Nice to meet you!",
           "translation": "Nama saya Rina. Senang bertemu denganmu!"
+        }
+      },
+      {
+        "id": "study_c1s6_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Good morning",
+              "meaning": "Selamat pagi"
+            },
+            {
+              "word": "Thank you",
+              "meaning": "Terima kasih"
+            },
+            {
+              "word": "Nice to meet you",
+              "meaning": "Senang bertemu denganmu"
+            },
+            {
+              "word": "Student",
+              "meaning": "Pelajar"
+            }
+          ],
+          "shuffledMeanings": [
+            "Pelajar",
+            "Terima kasih",
+            "Senang bertemu denganmu",
+            "Selamat pagi"
+          ],
+          "explanation": "Good morning = Selamat pagi. Thank you = Terima kasih. Nice to meet you = Senang bertemu denganmu. Student = Pelajar."
+        }
+      },
+      {
+        "id": "study_c1s6_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "Good morning! My name is Rina.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "Hello Rina! I am Budi. Nice to meet you!",
+            "Nice to meet you too, Budi!",
+            "I am a student. Are you a student too?",
+            "Good morning! My name is Rina."
+          ],
+          "correctAnswer": "Good morning! My name is Rina.",
+          "explanation": "Lingo mengucapkan \"Good morning! My name is Rina.\" yang artinya \"Selamat pagi! Nama saya Rina.\""
+        }
+      },
+      {
+        "id": "study_c1s6_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'Hello Rina! I am Budi. Nice to meet you!'?",
+          "options": [
+            "Ya, saya! Sampai jumpa, Budi!",
+            "Halo Rina! Saya Budi. Senang bertemu denganmu!",
+            "Senang bertemu denganmu juga, Budi!",
+            "Saya adalah pelajar. Apakah kamu juga pelajar?"
+          ],
+          "correctAnswer": "Halo Rina! Saya Budi. Senang bertemu denganmu!",
+          "explanation": "\"Hello Rina! I am Budi. Nice to meet you!\" = Halo Rina! Saya Budi. Senang bertemu denganmu!"
         }
       }
     ]
   },
   "c2s1": {
-    "title": "Objects Around Us",
-    "intro": "Knowing the names of everyday objects is one of the fastest ways to grow your vocabulary. In this stage, we focus on things you see at school and home every day.",
+    "title": "Benda di Sekitar Kita",
+    "intro": "Mengenal nama benda sehari-hari adalah cara tercepat menambah kosakata. Di stage ini kita fokus pada benda yang kamu lihat setiap hari di sekolah dan di rumah.",
     "sections": [
       {
         "type": "vocabulary",
-        "heading": "Classroom & Home Objects",
-        "body": "These are common objects you'll find at school and at home:",
+        "heading": "Benda di Kelas dan Rumah",
+        "body": "Ini benda-benda yang biasa ada di sekolah dan di rumah:",
         "examples": [
           {
-            "en": "Book — Buku",
-            "id": "I use a book to study."
+            "en": "Book",
+            "id": "Buku",
+            "example": {
+              "en": "I use a book to study.",
+              "id": "Saya memakai buku untuk belajar."
+            }
           },
           {
-            "en": "Table — Meja",
-            "id": "The book is on the table."
+            "en": "Table",
+            "id": "Meja",
+            "example": {
+              "en": "The book is on the table.",
+              "id": "Buku itu ada di atas meja."
+            }
           },
           {
-            "en": "Chair — Kursi",
-            "id": "I sit on a chair."
+            "en": "Chair",
+            "id": "Kursi",
+            "example": {
+              "en": "I sit on a chair.",
+              "id": "Saya duduk di kursi."
+            }
           },
           {
-            "en": "Pen — Pena",
-            "id": "I use a pen to write."
+            "en": "Pen",
+            "id": "Pena",
+            "example": {
+              "en": "I use a pen to write.",
+              "id": "Saya memakai pena untuk menulis."
+            }
           },
           {
-            "en": "Bag — Tas",
-            "id": "I carry my books in my bag."
+            "en": "Bag",
+            "id": "Tas",
+            "example": {
+              "en": "I carry my books in my bag.",
+              "id": "Saya membawa buku-buku saya di dalam tas."
+            }
           },
           {
-            "en": "Phone — Telepon / HP",
-            "id": "She puts her phone in her bag."
+            "en": "Phone",
+            "id": "Telepon / HP",
+            "example": {
+              "en": "She puts her phone in her bag.",
+              "id": "Dia menaruh HP-nya di dalam tas."
+            }
           },
           {
-            "en": "Window — Jendela",
-            "id": "The window is open."
+            "en": "Window",
+            "id": "Jendela",
+            "example": {
+              "en": "The window is open.",
+              "id": "Jendelanya terbuka."
+            }
           },
           {
-            "en": "Door — Pintu",
-            "id": "Please close the door."
+            "en": "Door",
+            "id": "Pintu",
+            "example": {
+              "en": "Please close the door.",
+              "id": "Tolong tutup pintunya."
+            }
           }
         ],
-        "tip": "When learning object names, point to the real object and say the English word out loud."
+        "tip": "Saat menghafal nama benda, tunjuk bendanya lalu ucapkan kata bahasa Inggrisnya dengan keras."
       },
       {
         "type": "grammar",
-        "heading": "Using 'The' and 'A'",
-        "body": "English uses articles before nouns. 'A' = one unspecified thing. 'The' = a specific thing.",
+        "heading": "Memakai The dan A",
+        "body": "Bahasa Inggris memakai artikel sebelum kata benda. A = satu benda yang belum tertentu. The = benda yang sudah jelas.",
         "examples": [
           {
-            "en": "I have a book. (any book)",
+            "en": "I have a book. (buku apa saja)",
             "id": "Saya punya sebuah buku."
           },
           {
-            "en": "The book is on the table. (specific book)",
+            "en": "The book is on the table. (buku tertentu)",
             "id": "Buku itu ada di atas meja."
           },
           {
@@ -662,7 +1197,31 @@
             "id": "Dia punya tas. → Tas itu biru."
           }
         ],
-        "tip": "Use 'a' the first time you mention something. Use 'the' after that, when it's clear which one you mean."
+        "tip": "Pakai a saat pertama kali menyebut sesuatu. Setelah itu pakai the, karena sudah jelas benda mana yang dimaksud."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Table",
+            "id": "TA-ble · /ˈteɪbəl/"
+          },
+          {
+            "en": "Chair",
+            "id": "CHAIR · /tʃer/ (dibaca seperti 'cer')"
+          },
+          {
+            "en": "Phone",
+            "id": "PHONE · /foʊn/ (ph dibaca f)"
+          },
+          {
+            "en": "Window",
+            "id": "WIN-dow · /ˈwɪndoʊ/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -679,7 +1238,7 @@
             "bag"
           ],
           "correctAnswer": "pen",
-          "explanation": "A pen is used for writing. A book is for reading, a chair is for sitting."
+          "explanation": "Pen (pena) dipakai untuk menulis. Book untuk membaca, chair untuk duduk."
         }
       },
       {
@@ -688,56 +1247,150 @@
         "xpReward": 15,
         "content": {
           "phrase": "The book is on the table.",
-          "hint": "Say: The book is on the table.",
+          "hint": "Ucapkan: The book is on the table.",
           "translation": "Buku itu ada di atas meja."
+        }
+      },
+      {
+        "id": "study_c2s1_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Book",
+              "meaning": "Buku"
+            },
+            {
+              "word": "Chair",
+              "meaning": "Kursi"
+            },
+            {
+              "word": "Window",
+              "meaning": "Jendela"
+            },
+            {
+              "word": "Door",
+              "meaning": "Pintu"
+            }
+          ],
+          "shuffledMeanings": [
+            "Pintu",
+            "Kursi",
+            "Jendela",
+            "Buku"
+          ],
+          "explanation": "Book = Buku. Chair = Kursi. Window = Jendela. Door = Pintu."
+        }
+      },
+      {
+        "id": "study_c2s1_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "I use a book to study.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "The book is on the table.",
+            "I sit on a chair.",
+            "I use a pen to write.",
+            "I use a book to study."
+          ],
+          "correctAnswer": "I use a book to study.",
+          "explanation": "Lingo mengucapkan \"I use a book to study.\" yang artinya \"Saya memakai buku untuk belajar.\""
+        }
+      },
+      {
+        "id": "study_c2s1_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'The book is on the table.'?",
+          "options": [
+            "Saya membawa buku-buku saya di dalam tas.",
+            "Buku itu ada di atas meja.",
+            "Saya duduk di kursi.",
+            "Saya memakai pena untuk menulis."
+          ],
+          "correctAnswer": "Buku itu ada di atas meja.",
+          "explanation": "\"The book is on the table.\" = Buku itu ada di atas meja."
         }
       }
     ]
   },
   "c2s2": {
-    "title": "Food & Drink",
-    "intro": "Food and drink vocabulary is incredibly useful for daily conversation — whether you're at a restaurant, a canteen, or just talking about your day.",
+    "title": "Makanan dan Minuman",
+    "intro": "Kosakata makanan dan minuman sangat berguna untuk obrolan sehari-hari, baik di restoran, di kantin, atau saat bercerita tentang harimu.",
     "sections": [
       {
         "type": "vocabulary",
-        "heading": "Common Food & Drink Words",
-        "body": "Memorise these essential food and drink words:",
+        "heading": "Kata Makanan dan Minuman",
+        "body": "Hafalkan kata-kata makanan dan minuman penting ini:",
         "examples": [
           {
-            "en": "Rice — Nasi",
-            "id": "I eat rice every day."
+            "en": "Rice",
+            "id": "Nasi",
+            "example": {
+              "en": "I eat rice every day.",
+              "id": "Saya makan nasi setiap hari."
+            }
           },
           {
-            "en": "Bread — Roti",
-            "id": "I have bread for breakfast."
+            "en": "Bread",
+            "id": "Roti",
+            "example": {
+              "en": "I have bread for breakfast.",
+              "id": "Saya sarapan roti."
+            }
           },
           {
-            "en": "Water — Air",
-            "id": "Can I have a glass of water?"
+            "en": "Water",
+            "id": "Air",
+            "example": {
+              "en": "Can I have a glass of water?",
+              "id": "Boleh saya minta segelas air?"
+            }
           },
           {
-            "en": "Milk — Susu",
-            "id": "I drink milk every morning."
+            "en": "Milk",
+            "id": "Susu",
+            "example": {
+              "en": "I drink milk every morning.",
+              "id": "Saya minum susu setiap pagi."
+            }
           },
           {
-            "en": "Coffee — Kopi",
-            "id": "I like coffee in the morning."
+            "en": "Coffee",
+            "id": "Kopi",
+            "example": {
+              "en": "I like coffee in the morning.",
+              "id": "Saya suka minum kopi di pagi hari."
+            }
           },
           {
-            "en": "Apple — Apel",
-            "id": "She eats an apple after school."
+            "en": "Apple",
+            "id": "Apel",
+            "example": {
+              "en": "She eats an apple after school.",
+              "id": "Dia makan apel sepulang sekolah."
+            }
           },
           {
-            "en": "Egg — Telur",
-            "id": "I eat an egg for breakfast."
+            "en": "Egg",
+            "id": "Telur",
+            "example": {
+              "en": "I eat an egg for breakfast.",
+              "id": "Saya sarapan sebutir telur."
+            }
           }
         ],
-        "tip": "Practice ordering food by saying: \"Can I have [food], please?\""
+        "tip": "Latihan memesan makanan dengan kalimat: \"Can I have [makanan], please?\""
       },
       {
         "type": "grammar",
-        "heading": "Talking About Meals",
-        "body": "Use these patterns to talk about what you eat and drink:",
+        "heading": "Bercerita tentang Makan",
+        "body": "Pakai pola ini untuk bercerita tentang apa yang kamu makan dan minum:",
         "examples": [
           {
             "en": "I eat rice for lunch.",
@@ -756,7 +1409,31 @@
             "id": "Boleh saya minta segelas air?"
           }
         ],
-        "tip": "\"Eat\" is for solid food. \"Drink\" is for liquids. Don't mix them up!"
+        "tip": "Eat untuk makanan padat, drink untuk minuman. Jangan tertukar!"
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Water",
+            "id": "WA-ter · /ˈwɔːtər/"
+          },
+          {
+            "en": "Bread",
+            "id": "BREAD · /bred/ (dibaca 'bred', bukan 'brid')"
+          },
+          {
+            "en": "Coffee",
+            "id": "COF-fee · /ˈkɔːfi/"
+          },
+          {
+            "en": "Apple",
+            "id": "AP-ple · /ˈæpəl/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -773,7 +1450,7 @@
             "apple"
           ],
           "correctAnswer": "milk",
-          "explanation": "\"Drink\" is used with liquids. Milk (susu) is a common breakfast drink."
+          "explanation": "\"Drink\" dipakai untuk minuman. Milk (susu) adalah minuman sarapan yang umum."
         }
       },
       {
@@ -782,60 +1459,158 @@
         "xpReward": 15,
         "content": {
           "phrase": "I eat rice every day.",
-          "hint": "Say: I eat rice every day.",
+          "hint": "Ucapkan: I eat rice every day.",
           "translation": "Saya makan nasi setiap hari."
+        }
+      },
+      {
+        "id": "study_c2s2_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Rice",
+              "meaning": "Nasi"
+            },
+            {
+              "word": "Water",
+              "meaning": "Air"
+            },
+            {
+              "word": "Bread",
+              "meaning": "Roti"
+            },
+            {
+              "word": "Egg",
+              "meaning": "Telur"
+            }
+          ],
+          "shuffledMeanings": [
+            "Telur",
+            "Air",
+            "Roti",
+            "Nasi"
+          ],
+          "explanation": "Rice = Nasi. Water = Air. Bread = Roti. Egg = Telur."
+        }
+      },
+      {
+        "id": "study_c2s2_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "I eat rice every day.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "Can I have a glass of water?",
+            "I drink milk every morning.",
+            "I eat rice every day.",
+            "I have bread for breakfast."
+          ],
+          "correctAnswer": "I eat rice every day.",
+          "explanation": "Lingo mengucapkan \"I eat rice every day.\" yang artinya \"Saya makan nasi setiap hari.\""
+        }
+      },
+      {
+        "id": "study_c2s2_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'I have bread for breakfast.'?",
+          "options": [
+            "Saya sarapan roti.",
+            "Boleh saya minta segelas air?",
+            "Saya minum susu setiap pagi.",
+            "Saya suka minum kopi di pagi hari."
+          ],
+          "correctAnswer": "Saya sarapan roti.",
+          "explanation": "\"I have bread for breakfast.\" = Saya sarapan roti."
         }
       }
     ]
   },
   "c2s3": {
-    "title": "Colors",
-    "intro": "Colors are some of the most useful adjectives in English. They let you describe objects, clothing, and your surroundings. Colors come BEFORE the noun they describe.",
+    "title": "Warna",
+    "intro": "Warna adalah kata sifat yang sangat berguna dalam bahasa Inggris untuk menggambarkan benda, pakaian, dan lingkungan sekitar. Warna diletakkan SEBELUM kata benda yang diterangkannya.",
     "sections": [
       {
         "type": "vocabulary",
-        "heading": "Basic Colors",
-        "body": "Learn all the basic English colors and their Indonesian equivalents:",
+        "heading": "Warna Dasar",
+        "body": "Pelajari warna-warna dasar dalam bahasa Inggris beserta artinya:",
         "examples": [
           {
-            "en": "Red — Merah",
-            "id": "The apple is red."
+            "en": "Red",
+            "id": "Merah",
+            "example": {
+              "en": "The apple is red.",
+              "id": "Apel itu merah."
+            }
           },
           {
-            "en": "Blue — Biru",
-            "id": "The sky is blue."
+            "en": "Blue",
+            "id": "Biru",
+            "example": {
+              "en": "The sky is blue.",
+              "id": "Langitnya biru."
+            }
           },
           {
-            "en": "Green — Hijau",
-            "id": "The grass is green."
+            "en": "Green",
+            "id": "Hijau",
+            "example": {
+              "en": "The grass is green.",
+              "id": "Rumputnya hijau."
+            }
           },
           {
-            "en": "Yellow — Kuning",
-            "id": "The sun is yellow."
+            "en": "Yellow",
+            "id": "Kuning",
+            "example": {
+              "en": "The sun is yellow.",
+              "id": "Mataharinya kuning."
+            }
           },
           {
-            "en": "White — Putih",
-            "id": "She has a white bag."
+            "en": "White",
+            "id": "Putih",
+            "example": {
+              "en": "She has a white bag.",
+              "id": "Dia punya tas putih."
+            }
           },
           {
-            "en": "Black — Hitam",
-            "id": "He has black shoes."
+            "en": "Black",
+            "id": "Hitam",
+            "example": {
+              "en": "He has black shoes.",
+              "id": "Dia punya sepatu hitam."
+            }
           },
           {
-            "en": "Orange — Oranye",
-            "id": "I like orange juice."
+            "en": "Orange",
+            "id": "Oranye",
+            "example": {
+              "en": "I like orange juice.",
+              "id": "Saya suka jus jeruk."
+            }
           },
           {
-            "en": "Purple — Ungu",
-            "id": "She likes purple flowers."
+            "en": "Purple",
+            "id": "Ungu",
+            "example": {
+              "en": "She likes purple flowers.",
+              "id": "Dia suka bunga ungu."
+            }
           }
         ],
-        "tip": "The Indonesian flag is red (merah) and white (putih) — Merah Putih!"
+        "tip": "Bendera Indonesia berwarna red (merah) dan white (putih)!"
       },
       {
         "type": "grammar",
-        "heading": "Color + Noun Pattern",
-        "body": "In English, the color always comes BEFORE the noun (opposite to Indonesian):",
+        "heading": "Pola Warna + Benda",
+        "body": "Dalam bahasa Inggris, warna selalu diletakkan SEBELUM kata benda (kebalikan dari bahasa Indonesia):",
         "examples": [
           {
             "en": "a red bag (bukan 'a bag red')",
@@ -854,7 +1629,31 @@
             "id": "pensil kuning saya → my yellow pencil"
           }
         ],
-        "tip": "Remember: English word order for adjectives is reversed compared to Indonesian!"
+        "tip": "Ingat: urutan kata sifat dalam bahasa Inggris terbalik dibanding bahasa Indonesia!"
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Yellow",
+            "id": "YEL-low · /ˈjeloʊ/"
+          },
+          {
+            "en": "Purple",
+            "id": "PUR-ple · /ˈpɜːrpəl/"
+          },
+          {
+            "en": "Orange",
+            "id": "OR-ange · /ˈɔːrɪndʒ/"
+          },
+          {
+            "en": "Green",
+            "id": "GREEN · /ɡriːn/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -880,68 +1679,174 @@
         "xpReward": 15,
         "content": {
           "phrase": "I have a red bag.",
-          "hint": "Say: I have a red bag.",
+          "hint": "Ucapkan: I have a red bag.",
           "translation": "Saya punya tas merah."
+        }
+      },
+      {
+        "id": "study_c2s3_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Red",
+              "meaning": "Merah"
+            },
+            {
+              "word": "Blue",
+              "meaning": "Biru"
+            },
+            {
+              "word": "Yellow",
+              "meaning": "Kuning"
+            },
+            {
+              "word": "Black",
+              "meaning": "Hitam"
+            }
+          ],
+          "shuffledMeanings": [
+            "Hitam",
+            "Biru",
+            "Kuning",
+            "Merah"
+          ],
+          "explanation": "Red = Merah. Blue = Biru. Yellow = Kuning. Black = Hitam."
+        }
+      },
+      {
+        "id": "study_c2s3_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "The apple is red.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "The sun is yellow.",
+            "The apple is red.",
+            "The sky is blue.",
+            "The grass is green."
+          ],
+          "correctAnswer": "The apple is red.",
+          "explanation": "Lingo mengucapkan \"The apple is red.\" yang artinya \"Apel itu merah.\""
+        }
+      },
+      {
+        "id": "study_c2s3_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'The sky is blue.'?",
+          "options": [
+            "Rumputnya hijau.",
+            "Mataharinya kuning.",
+            "Dia punya tas putih.",
+            "Langitnya biru."
+          ],
+          "correctAnswer": "Langitnya biru.",
+          "explanation": "\"The sky is blue.\" = Langitnya biru."
         }
       }
     ]
   },
   "c2s4": {
-    "title": "Numbers 1–10",
-    "intro": "Numbers are essential for everyday communication — telling the time, shopping, and giving your age. Let's master the numbers from one to ten.",
+    "title": "Angka 1–10",
+    "intro": "Angka dibutuhkan untuk banyak hal sehari-hari, seperti menyebut jam, berbelanja, dan memberi tahu umur. Kita kuasai angka satu sampai sepuluh.",
     "sections": [
       {
         "type": "vocabulary",
-        "heading": "Numbers 1–10",
-        "body": "Memorise these numbers and how to pronounce them:",
+        "heading": "Angka 1–10",
+        "body": "Hafalkan angka-angka ini beserta cara mengucapkannya:",
         "examples": [
           {
-            "en": "One — Satu",
-            "id": "I have one book."
+            "en": "One",
+            "id": "Satu",
+            "example": {
+              "en": "I have one book.",
+              "id": "Saya punya satu buku."
+            }
           },
           {
-            "en": "Two — Dua",
-            "id": "She has two sisters."
+            "en": "Two",
+            "id": "Dua",
+            "example": {
+              "en": "She has two sisters.",
+              "id": "Dia punya dua saudara perempuan."
+            }
           },
           {
-            "en": "Three — Tiga",
-            "id": "I have three cats."
+            "en": "Three",
+            "id": "Tiga",
+            "example": {
+              "en": "I have three cats.",
+              "id": "Saya punya tiga kucing."
+            }
           },
           {
-            "en": "Four — Empat",
-            "id": "There are four chairs."
+            "en": "Four",
+            "id": "Empat",
+            "example": {
+              "en": "There are four chairs.",
+              "id": "Ada empat kursi."
+            }
           },
           {
-            "en": "Five — Lima",
-            "id": "I have five fingers."
+            "en": "Five",
+            "id": "Lima",
+            "example": {
+              "en": "I have five pencils.",
+              "id": "Saya punya lima pensil."
+            }
           },
           {
-            "en": "Six — Enam",
-            "id": "I wake up at six."
+            "en": "Six",
+            "id": "Enam",
+            "example": {
+              "en": "I wake up at six.",
+              "id": "Saya bangun jam enam."
+            }
           },
           {
-            "en": "Seven — Tujuh",
-            "id": "There are seven days in a week."
+            "en": "Seven",
+            "id": "Tujuh",
+            "example": {
+              "en": "There are seven days in a week.",
+              "id": "Ada tujuh hari dalam seminggu."
+            }
           },
           {
-            "en": "Eight — Delapan",
-            "id": "I eat breakfast at eight."
+            "en": "Eight",
+            "id": "Delapan",
+            "example": {
+              "en": "I eat breakfast at eight.",
+              "id": "Saya sarapan jam delapan."
+            }
           },
           {
-            "en": "Nine — Sembilan",
-            "id": "There are nine students."
+            "en": "Nine",
+            "id": "Sembilan",
+            "example": {
+              "en": "There are nine students.",
+              "id": "Ada sembilan pelajar."
+            }
           },
           {
-            "en": "Ten — Sepuluh",
-            "id": "I have ten fingers."
+            "en": "Ten",
+            "id": "Sepuluh",
+            "example": {
+              "en": "I have ten fingers.",
+              "id": "Saya punya sepuluh jari."
+            }
           }
         ],
-        "tip": "To say your age: I am [number] years old. — \"I am fifteen years old.\""
+        "tip": "Untuk menyebut umur: I am [angka] years old, misalnya \"I am fifteen years old.\""
       },
       {
         "type": "grammar",
-        "heading": "Numbers in Sentences",
-        "body": "Use numbers directly before the noun they count:",
+        "heading": "Angka dalam Kalimat",
+        "body": "Letakkan angka tepat sebelum benda yang dihitung:",
         "examples": [
           {
             "en": "I have two brothers.",
@@ -956,7 +1861,31 @@
             "id": "Dia punya satu saudara perempuan."
           }
         ],
-        "tip": "After a number, the noun is usually plural (add -s): one cat → two cats."
+        "tip": "Setelah angka lebih dari satu, kata bendanya biasanya diberi -s: one cat, two cats."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Three",
+            "id": "THREE · /θriː/ (th: ujung lidah di antara gigi, bukan 'tri')"
+          },
+          {
+            "en": "Seven",
+            "id": "SEV-en · /ˈsevən/"
+          },
+          {
+            "en": "Eight",
+            "id": "EIGHT · /eɪt/ (dibaca seperti 'eit')"
+          },
+          {
+            "en": "Ten",
+            "id": "TEN · /ten/"
+          }
+        ],
+        "tip": "Bedakan three (tiga) dan tree (pohon): three diawali bunyi th."
       }
     ],
     "practice": [
@@ -973,7 +1902,7 @@
             "Six"
           ],
           "correctAnswer": "Four",
-          "explanation": "Four = 4 (Empat). Three = 3, Five = 5, Six = 6."
+          "explanation": "Four = 4 (empat). Three = 3, Five = 5, Six = 6."
         }
       },
       {
@@ -982,27 +1911,93 @@
         "xpReward": 15,
         "content": {
           "phrase": "I have three cats.",
-          "hint": "Say: I have three cats.",
+          "hint": "Ucapkan: I have three cats.",
           "translation": "Saya punya tiga kucing."
+        }
+      },
+      {
+        "id": "study_c2s4_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Two",
+              "meaning": "Dua"
+            },
+            {
+              "word": "Five",
+              "meaning": "Lima"
+            },
+            {
+              "word": "Seven",
+              "meaning": "Tujuh"
+            },
+            {
+              "word": "Ten",
+              "meaning": "Sepuluh"
+            }
+          ],
+          "shuffledMeanings": [
+            "Sepuluh",
+            "Lima",
+            "Tujuh",
+            "Dua"
+          ],
+          "explanation": "Two = Dua. Five = Lima. Seven = Tujuh. Ten = Sepuluh."
+        }
+      },
+      {
+        "id": "study_c2s4_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "I have one book.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "I have one book.",
+            "She has two sisters.",
+            "I have three cats.",
+            "There are four chairs."
+          ],
+          "correctAnswer": "I have one book.",
+          "explanation": "Lingo mengucapkan \"I have one book.\" yang artinya \"Saya punya satu buku.\""
+        }
+      },
+      {
+        "id": "study_c2s4_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'She has two sisters.'?",
+          "options": [
+            "Ada empat kursi.",
+            "Saya punya lima pensil.",
+            "Dia punya dua saudara perempuan.",
+            "Saya punya tiga kucing."
+          ],
+          "correctAnswer": "Dia punya dua saudara perempuan.",
+          "explanation": "\"She has two sisters.\" = Dia punya dua saudara perempuan."
         }
       }
     ]
   },
   "c2s5": {
     "title": "This is / That is",
-    "intro": "\"This\" and \"That\" are demonstrative pronouns — they point to things. \"This\" points to something NEAR you, \"That\" points to something FAR away.",
+    "intro": "This dan that dipakai untuk menunjuk benda. This untuk sesuatu yang DEKAT denganmu, that untuk sesuatu yang JAUH.",
     "sections": [
       {
         "type": "grammar",
-        "heading": "This vs That",
-        "body": "The difference is simple — it's all about distance:",
+        "heading": "This dan That",
+        "body": "Bedanya sederhana, hanya soal jarak:",
         "examples": [
           {
-            "en": "This is my phone. (near me)",
+            "en": "This is my phone. (dekat)",
             "id": "Ini adalah HP saya. (dekat)"
           },
           {
-            "en": "That is a big mountain. (far away)",
+            "en": "That is a big mountain. (jauh)",
             "id": "Itu adalah gunung besar. (jauh)"
           },
           {
@@ -1010,16 +2005,16 @@
             "id": "Ini adalah temanku Budi."
           },
           {
-            "en": "What is that? (pointing far)",
+            "en": "What is that? (menunjuk yang jauh)",
             "id": "Apa itu? (menunjuk ke kejauhan)"
           }
         ],
-        "tip": "Simple rule: THIS = near (ini), THAT = far (itu)."
+        "tip": "Aturan gampang: THIS = ini (dekat), THAT = itu (jauh)."
       },
       {
         "type": "vocabulary",
-        "heading": "Describing with This/That",
-        "body": "Combine 'this/that' with a color and noun for fuller descriptions:",
+        "heading": "Menjelaskan dengan This dan That",
+        "body": "Gabungkan this/that dengan warna dan kata benda supaya keterangannya lebih lengkap:",
         "examples": [
           {
             "en": "This is a red apple.",
@@ -1038,7 +2033,27 @@
             "id": "Itu adalah rumah putih besar."
           }
         ],
-        "tip": "Pattern: This/That + is + a/an + [color] + [noun]"
+        "tip": "Polanya: This/That + is + a/an + warna + benda"
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "This",
+            "id": "THIS · /ðɪs/ (th bergetar: ujung lidah di antara gigi)"
+          },
+          {
+            "en": "That",
+            "id": "THAT · /ðæt/"
+          },
+          {
+            "en": "Mountain",
+            "id": "MOUN-tain · /ˈmaʊntən/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -1055,7 +2070,7 @@
             "Here"
           ],
           "correctAnswer": "That",
-          "explanation": "\"That\" points to something far away. \"This\" is for things nearby."
+          "explanation": "\"That\" menunjuk sesuatu yang jauh. \"This\" untuk yang dekat."
         }
       },
       {
@@ -1064,20 +2079,86 @@
         "xpReward": 15,
         "content": {
           "phrase": "This is a red apple.",
-          "hint": "Say: This is a red apple.",
+          "hint": "Ucapkan: This is a red apple.",
           "translation": "Ini adalah apel merah."
+        }
+      },
+      {
+        "id": "study_c2s5_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "This",
+              "meaning": "Ini"
+            },
+            {
+              "word": "That",
+              "meaning": "Itu"
+            },
+            {
+              "word": "Big",
+              "meaning": "Besar"
+            },
+            {
+              "word": "Car",
+              "meaning": "Mobil"
+            }
+          ],
+          "shuffledMeanings": [
+            "Mobil",
+            "Itu",
+            "Besar",
+            "Ini"
+          ],
+          "explanation": "This = Ini. That = Itu. Big = Besar. Car = Mobil."
+        }
+      },
+      {
+        "id": "study_c2s5_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "This is my friend Budi.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "This is a red apple.",
+            "That is a blue car.",
+            "This is my green bag.",
+            "This is my friend Budi."
+          ],
+          "correctAnswer": "This is my friend Budi.",
+          "explanation": "Lingo mengucapkan \"This is my friend Budi.\" yang artinya \"Ini adalah temanku Budi.\""
+        }
+      },
+      {
+        "id": "study_c2s5_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'This is a red apple.'?",
+          "options": [
+            "Itu adalah rumah putih besar.",
+            "Ini adalah apel merah.",
+            "Itu adalah mobil biru.",
+            "Ini adalah tas hijau saya."
+          ],
+          "correctAnswer": "Ini adalah apel merah.",
+          "explanation": "\"This is a red apple.\" = Ini adalah apel merah."
         }
       }
     ]
   },
   "c2s6": {
-    "title": "Chapter 2 Review — Objects, Colors & Numbers",
-    "intro": "Time to review everything from Chapter 2! You've learned objects, food, colors, numbers, and how to use 'this/that'. Let's combine them into rich descriptions.",
+    "title": "Ulasan Chapter 2: Benda, Warna, dan Angka",
+    "intro": "Saatnya mengulang Chapter 2! Kamu sudah belajar benda, makanan, warna, angka, dan cara memakai this/that. Sekarang gabungkan semuanya menjadi keterangan yang lengkap.",
     "sections": [
       {
         "type": "grammar",
-        "heading": "Building Rich Descriptions",
-        "body": "Combine numbers, colors, and objects to make detailed sentences:",
+        "heading": "Menyusun Keterangan Lengkap",
+        "body": "Gabungkan angka, warna, dan benda untuk membuat kalimat yang detail:",
         "examples": [
           {
             "en": "This is a green bag.",
@@ -1096,12 +2177,12 @@
             "id": "Dia punya tiga pena biru."
           }
         ],
-        "tip": "Pattern: number + color + noun (e.g. three blue pens)"
+        "tip": "Polanya: angka + warna + benda (contoh: three blue pens)"
       },
       {
         "type": "vocabulary",
-        "heading": "Chapter 2 Word List",
-        "body": "Key vocabulary from this chapter:",
+        "heading": "Daftar Kata Chapter 2",
+        "body": "Kosakata penting dari chapter ini:",
         "examples": [
           {
             "en": "Objects: book, chair, table, pen, bag, phone",
@@ -1123,7 +2204,28 @@
             "en": "Pointers: This is … / That is …",
             "id": "Ini adalah … / Itu adalah …"
           }
-        ]
+        ],
+        "tip": ""
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Black",
+            "id": "BLACK · /blæk/"
+          },
+          {
+            "en": "Six",
+            "id": "SIX · /sɪks/"
+          },
+          {
+            "en": "Bag",
+            "id": "BAG · /bæɡ/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -1140,7 +2242,7 @@
             "That is a green apple."
           ],
           "correctAnswer": "This is a red apple.",
-          "explanation": "\"Ini\" = This (nearby), \"apel merah\" = red apple. Correct: This is a red apple."
+          "explanation": "\"Ini\" = This (dekat), \"apel merah\" = red apple. Jadi: This is a red apple."
         }
       },
       {
@@ -1149,60 +2251,158 @@
         "xpReward": 15,
         "content": {
           "phrase": "This is a green bag.",
-          "hint": "Say: This is a green bag.",
+          "hint": "Ucapkan: This is a green bag.",
           "translation": "Ini adalah tas hijau."
+        }
+      },
+      {
+        "id": "study_c2s6_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Bag",
+              "meaning": "Tas"
+            },
+            {
+              "word": "Green",
+              "meaning": "Hijau"
+            },
+            {
+              "word": "Six",
+              "meaning": "Enam"
+            },
+            {
+              "word": "Pen",
+              "meaning": "Pena"
+            }
+          ],
+          "shuffledMeanings": [
+            "Pena",
+            "Hijau",
+            "Enam",
+            "Tas"
+          ],
+          "explanation": "Bag = Tas. Green = Hijau. Six = Enam. Pen = Pena."
+        }
+      },
+      {
+        "id": "study_c2s6_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "This is a green bag.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "There are six red chairs.",
+            "She has three blue pens.",
+            "This is a green bag.",
+            "I have two black phones."
+          ],
+          "correctAnswer": "This is a green bag.",
+          "explanation": "Lingo mengucapkan \"This is a green bag.\" yang artinya \"Ini adalah tas hijau.\""
+        }
+      },
+      {
+        "id": "study_c2s6_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'I have two black phones.'?",
+          "options": [
+            "Ini adalah tas hijau.",
+            "Saya punya dua HP hitam.",
+            "Ada enam kursi merah.",
+            "Dia punya tiga pena biru."
+          ],
+          "correctAnswer": "Saya punya dua HP hitam.",
+          "explanation": "\"I have two black phones.\" = Saya punya dua HP hitam."
         }
       }
     ]
   },
   "c3s1": {
-    "title": "Common Action Verbs",
-    "intro": "Verbs are the heart of every sentence — they express actions. Knowing the most common English action verbs lets you describe almost anything you do in a day.",
+    "title": "Kata Kerja Sehari-hari",
+    "intro": "Kata kerja adalah inti setiap kalimat karena menunjukkan tindakan. Dengan kata kerja yang paling umum, kamu bisa menceritakan hampir semua kegiatanmu dalam sehari.",
     "sections": [
       {
         "type": "vocabulary",
-        "heading": "Top Action Verbs",
-        "body": "These are the most frequently used action verbs in everyday English:",
+        "heading": "Kata Kerja Utama",
+        "body": "Ini kata kerja yang paling sering dipakai dalam bahasa Inggris sehari-hari:",
         "examples": [
           {
-            "en": "Eat — Makan",
-            "id": "I eat rice for lunch."
+            "en": "Eat",
+            "id": "Makan",
+            "example": {
+              "en": "I eat rice for lunch.",
+              "id": "Saya makan nasi untuk makan siang."
+            }
           },
           {
-            "en": "Drink — Minum",
-            "id": "She drinks milk every morning."
+            "en": "Drink",
+            "id": "Minum",
+            "example": {
+              "en": "She drinks milk every morning.",
+              "id": "Dia minum susu setiap pagi."
+            }
           },
           {
-            "en": "Go — Pergi",
-            "id": "I go to school every day."
+            "en": "Go",
+            "id": "Pergi",
+            "example": {
+              "en": "I go to school every day.",
+              "id": "Saya pergi ke sekolah setiap hari."
+            }
           },
           {
-            "en": "See / Watch — Melihat / Menonton",
-            "id": "He watches a movie on Saturday."
+            "en": "See / Watch",
+            "id": "Melihat / Menonton",
+            "example": {
+              "en": "He watches a movie on Saturday.",
+              "id": "Dia menonton film pada hari Sabtu."
+            }
           },
           {
-            "en": "Like — Menyukai",
-            "id": "I like English."
+            "en": "Like",
+            "id": "Menyukai",
+            "example": {
+              "en": "I like English.",
+              "id": "Saya suka bahasa Inggris."
+            }
           },
           {
-            "en": "Study — Belajar",
-            "id": "We study at school."
+            "en": "Study",
+            "id": "Belajar",
+            "example": {
+              "en": "We study at school.",
+              "id": "Kami belajar di sekolah."
+            }
           },
           {
-            "en": "Sleep — Tidur",
-            "id": "I sleep at 10 PM."
+            "en": "Sleep",
+            "id": "Tidur",
+            "example": {
+              "en": "I sleep at 10 PM.",
+              "id": "Saya tidur jam 10 malam."
+            }
           },
           {
-            "en": "Make — Membuat",
-            "id": "She makes breakfast."
+            "en": "Make",
+            "id": "Membuat",
+            "example": {
+              "en": "She makes breakfast.",
+              "id": "Dia membuat sarapan."
+            }
           }
         ],
-        "tip": "For he/she/it, add -s to the verb: I eat → He eats. I go → She goes."
+        "tip": "Untuk he/she/it, tambahkan -s pada kata kerja: I eat → He eats. I go → She goes."
       },
       {
         "type": "grammar",
-        "heading": "Subject + Verb Sentences",
-        "body": "Use subject + verb to build simple action sentences:",
+        "heading": "Kalimat Subjek + Kata Kerja",
+        "body": "Pakai subjek + kata kerja untuk membuat kalimat kegiatan sederhana:",
         "examples": [
           {
             "en": "I go to school every day.",
@@ -1221,7 +2421,31 @@
             "id": "Dia tidur pukul 10 malam."
           }
         ],
-        "tip": "\"Every day\" means habitual action. Put it at the end of the sentence."
+        "tip": "\"Every day\" menunjukkan kebiasaan. Letakkan di akhir kalimat."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Eat",
+            "id": "EAT · /iːt/ (i panjang)"
+          },
+          {
+            "en": "Drink",
+            "id": "DRINK · /drɪŋk/"
+          },
+          {
+            "en": "Study",
+            "id": "STUD-y · /ˈstʌdi/"
+          },
+          {
+            "en": "Watch",
+            "id": "WATCH · /wɑːtʃ/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -1238,7 +2462,7 @@
             "make"
           ],
           "correctAnswer": "go",
-          "explanation": "\"Go to school\" is the correct phrase. \"Eat to school\" doesn't make sense."
+          "explanation": "\"Go to school\" adalah ungkapan yang benar. \"Eat to school\" tidak masuk akal."
         }
       },
       {
@@ -1247,52 +2471,142 @@
         "xpReward": 15,
         "content": {
           "phrase": "I go to school every day.",
-          "hint": "Say: I go to school every day.",
+          "hint": "Ucapkan: I go to school every day.",
           "translation": "Saya pergi ke sekolah setiap hari."
+        }
+      },
+      {
+        "id": "study_c3s1_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Eat",
+              "meaning": "Makan"
+            },
+            {
+              "word": "Drink",
+              "meaning": "Minum"
+            },
+            {
+              "word": "Go",
+              "meaning": "Pergi"
+            },
+            {
+              "word": "Sleep",
+              "meaning": "Tidur"
+            }
+          ],
+          "shuffledMeanings": [
+            "Tidur",
+            "Minum",
+            "Pergi",
+            "Makan"
+          ],
+          "explanation": "Eat = Makan. Drink = Minum. Go = Pergi. Sleep = Tidur."
+        }
+      },
+      {
+        "id": "study_c3s1_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "I eat rice for lunch.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "I go to school every day.",
+            "He watches a movie on Saturday.",
+            "I eat rice for lunch.",
+            "She drinks milk every morning."
+          ],
+          "correctAnswer": "I eat rice for lunch.",
+          "explanation": "Lingo mengucapkan \"I eat rice for lunch.\" yang artinya \"Saya makan nasi untuk makan siang.\""
+        }
+      },
+      {
+        "id": "study_c3s1_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'She drinks milk every morning.'?",
+          "options": [
+            "Dia minum susu setiap pagi.",
+            "Saya pergi ke sekolah setiap hari.",
+            "Dia menonton film pada hari Sabtu.",
+            "Saya suka bahasa Inggris."
+          ],
+          "correctAnswer": "Dia minum susu setiap pagi.",
+          "explanation": "\"She drinks milk every morning.\" = Dia minum susu setiap pagi."
         }
       }
     ]
   },
   "c3s2": {
-    "title": "Daily Activities & Routines",
-    "intro": "Talking about your daily routine is one of the most common topics in English conversation. Let's learn how to describe what you do from morning to night.",
+    "title": "Kegiatan dan Rutinitas Harian",
+    "intro": "Rutinitas harian adalah topik yang sangat sering muncul dalam obrolan bahasa Inggris. Kita belajar menceritakan kegiatanmu dari pagi sampai malam.",
     "sections": [
       {
         "type": "vocabulary",
-        "heading": "Morning Routine Verbs",
-        "body": "These verbs describe what most people do in the morning:",
+        "heading": "Kegiatan Pagi Hari",
+        "body": "Kata kerja ini menggambarkan kegiatan kebanyakan orang di pagi hari:",
         "examples": [
           {
-            "en": "Wake up — Bangun tidur",
-            "id": "I wake up at 5 AM."
+            "en": "Wake up",
+            "id": "Bangun tidur",
+            "example": {
+              "en": "I wake up at 5 AM.",
+              "id": "Saya bangun jam 5 pagi."
+            }
           },
           {
-            "en": "Eat breakfast — Sarapan",
-            "id": "I eat breakfast at 6."
+            "en": "Eat breakfast",
+            "id": "Sarapan",
+            "example": {
+              "en": "I eat breakfast at 6.",
+              "id": "Saya sarapan jam 6."
+            }
           },
           {
-            "en": "Go to school — Pergi ke sekolah",
-            "id": "I go to school at 7."
+            "en": "Go to school",
+            "id": "Pergi ke sekolah",
+            "example": {
+              "en": "I go to school at 7.",
+              "id": "Saya berangkat ke sekolah jam 7."
+            }
           },
           {
-            "en": "Study — Belajar",
-            "id": "I study in the morning."
+            "en": "Study",
+            "id": "Belajar",
+            "example": {
+              "en": "I study in the morning.",
+              "id": "Saya belajar di pagi hari."
+            }
           },
           {
-            "en": "Go home — Pulang ke rumah",
-            "id": "I go home after school."
+            "en": "Go home",
+            "id": "Pulang ke rumah",
+            "example": {
+              "en": "I go home after school.",
+              "id": "Saya pulang ke rumah sepulang sekolah."
+            }
           },
           {
-            "en": "Sleep — Tidur",
-            "id": "I sleep at 10 PM."
+            "en": "Sleep",
+            "id": "Tidur",
+            "example": {
+              "en": "I sleep at 10 PM.",
+              "id": "Saya tidur jam 10 malam."
+            }
           }
         ],
-        "tip": "Use \"at\" before clock times: wake up AT six, sleep AT ten."
+        "tip": "Pakai at sebelum jam: wake up AT six, sleep AT ten."
       },
       {
         "type": "grammar",
-        "heading": "Routine Sentence Pattern",
-        "body": "To describe a routine, use: subject + verb + time/frequency:",
+        "heading": "Pola Kalimat Rutinitas",
+        "body": "Untuk menceritakan rutinitas, pakai: subjek + kata kerja + waktu/kebiasaan:",
         "examples": [
           {
             "en": "I wake up at five every morning.",
@@ -1304,14 +2618,34 @@
           },
           {
             "en": "He goes to school at half past eight.",
-            "id": "Dia pergi ke sekolah jam delapan setengah."
+            "id": "Dia berangkat ke sekolah jam setengah sembilan."
           },
           {
             "en": "After school, I study.",
             "id": "Setelah sekolah, saya belajar."
           }
         ],
-        "tip": "\"After school\" and \"before school\" are very useful phrases for describing your day."
+        "tip": "\"After school\" (sepulang sekolah) dan \"before school\" (sebelum sekolah) sangat berguna untuk bercerita tentang harimu."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Wake up",
+            "id": "wake UP · /weɪk ʌp/"
+          },
+          {
+            "en": "Breakfast",
+            "id": "BREAK-fast · /ˈbrekfəst/ (dibaca 'brek-fest', bukan 'breik-fast')"
+          },
+          {
+            "en": "Sleep",
+            "id": "SLEEP · /sliːp/ (i panjang)"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -1328,7 +2662,7 @@
             "study"
           ],
           "correctAnswer": "sleep",
-          "explanation": "\"Sleep at 10 PM\" means you go to bed at 10. \"Wake up at 5 AM\" is the opposite."
+          "explanation": "\"Sleep at 10 PM\" artinya tidur jam 10 malam. Lawannya \"wake up at 5 AM\" (bangun jam 5 pagi)."
         }
       },
       {
@@ -1337,63 +2671,181 @@
         "xpReward": 15,
         "content": {
           "phrase": "I wake up at six.",
-          "hint": "Say: I wake up at six.",
+          "hint": "Ucapkan: I wake up at six.",
           "translation": "Saya bangun jam enam."
+        }
+      },
+      {
+        "id": "study_c3s2_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Wake up",
+              "meaning": "Bangun tidur"
+            },
+            {
+              "word": "Eat breakfast",
+              "meaning": "Sarapan"
+            },
+            {
+              "word": "Go home",
+              "meaning": "Pulang ke rumah"
+            },
+            {
+              "word": "Study",
+              "meaning": "Belajar"
+            }
+          ],
+          "shuffledMeanings": [
+            "Belajar",
+            "Sarapan",
+            "Pulang ke rumah",
+            "Bangun tidur"
+          ],
+          "explanation": "Wake up = Bangun tidur. Eat breakfast = Sarapan. Go home = Pulang ke rumah. Study = Belajar."
+        }
+      },
+      {
+        "id": "study_c3s2_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "I wake up at 5 AM.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "I study in the morning.",
+            "I wake up at 5 AM.",
+            "I eat breakfast at 6.",
+            "I go to school at 7."
+          ],
+          "correctAnswer": "I wake up at 5 AM.",
+          "explanation": "Lingo mengucapkan \"I wake up at 5 AM.\" yang artinya \"Saya bangun jam 5 pagi.\""
+        }
+      },
+      {
+        "id": "study_c3s2_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'I eat breakfast at 6.'?",
+          "options": [
+            "Saya berangkat ke sekolah jam 7.",
+            "Saya belajar di pagi hari.",
+            "Saya pulang ke rumah sepulang sekolah.",
+            "Saya sarapan jam 6."
+          ],
+          "correctAnswer": "Saya sarapan jam 6.",
+          "explanation": "\"I eat breakfast at 6.\" = Saya sarapan jam 6."
         }
       }
     ]
   },
   "c3s3": {
-    "title": "Time Expressions",
-    "intro": "To talk about WHEN things happen, you need time expressions. These small words and phrases — morning, afternoon, today, tomorrow — anchor your sentences in time.",
+    "title": "Keterangan Waktu",
+    "intro": "Untuk menyebut KAPAN sesuatu terjadi, kamu butuh keterangan waktu. Kata-kata kecil seperti morning, afternoon, today, dan tomorrow menunjukkan waktu dalam kalimatmu.",
     "sections": [
       {
         "type": "vocabulary",
-        "heading": "Time of Day",
-        "body": "These words describe different parts of the day:",
+        "heading": "Bagian Hari",
+        "body": "Kata-kata ini menyebut bagian-bagian dalam sehari:",
         "examples": [
           {
-            "en": "Morning — Pagi",
-            "id": "Good morning! I exercise every morning."
+            "en": "Morning",
+            "id": "Pagi",
+            "example": {
+              "en": "Good morning! I exercise every morning.",
+              "id": "Selamat pagi! Saya berolahraga setiap pagi."
+            }
           },
           {
-            "en": "Afternoon — Siang",
-            "id": "I eat lunch in the afternoon."
+            "en": "Afternoon",
+            "id": "Siang",
+            "example": {
+              "en": "I eat lunch in the afternoon.",
+              "id": "Saya makan siang di siang hari."
+            }
           },
           {
-            "en": "Evening — Sore / Petang",
-            "id": "Good evening! We study in the evening."
+            "en": "Evening",
+            "id": "Sore / Petang",
+            "example": {
+              "en": "Good evening! We study in the evening.",
+              "id": "Selamat sore! Kami belajar di sore hari."
+            }
           },
           {
-            "en": "Night — Malam",
-            "id": "I sleep at night."
+            "en": "Night",
+            "id": "Malam",
+            "example": {
+              "en": "I sleep at night.",
+              "id": "Saya tidur di malam hari."
+            }
           }
         ],
-        "tip": "Use \"in the\" before morning/afternoon/evening: IN the morning, IN the afternoon."
+        "tip": "Pakai in the sebelum morning/afternoon/evening: IN the morning, IN the afternoon."
       },
       {
         "type": "vocabulary",
-        "heading": "Day Words",
-        "body": "These words tell you WHEN something happens relative to today:",
+        "heading": "Kata Penunjuk Hari",
+        "body": "Kata-kata ini menunjukkan KAPAN sesuatu terjadi dibanding hari ini:",
         "examples": [
           {
-            "en": "Today — Hari ini",
-            "id": "Today is Monday."
+            "en": "Today",
+            "id": "Hari ini",
+            "example": {
+              "en": "Today is Monday.",
+              "id": "Hari ini hari Senin."
+            }
           },
           {
-            "en": "Tomorrow — Besok",
-            "id": "See you tomorrow!"
+            "en": "Tomorrow",
+            "id": "Besok",
+            "example": {
+              "en": "See you tomorrow!",
+              "id": "Sampai jumpa besok!"
+            }
           },
           {
-            "en": "Yesterday — Kemarin",
-            "id": "I was sick yesterday."
+            "en": "Yesterday",
+            "id": "Kemarin",
+            "example": {
+              "en": "I was sick yesterday.",
+              "id": "Kemarin saya sakit."
+            }
           },
           {
-            "en": "Now — Sekarang",
-            "id": "I am studying now."
+            "en": "Now",
+            "id": "Sekarang",
+            "example": {
+              "en": "I am studying now.",
+              "id": "Saya sedang belajar sekarang."
+            }
           }
         ],
-        "tip": "\"See you tomorrow!\" = Sampai jumpa besok! — a very common farewell."
+        "tip": "\"See you tomorrow!\" = Sampai jumpa besok! Ucapan perpisahan yang sangat umum."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Afternoon",
+            "id": "af-ter-NOON · /ˌæftərˈnuːn/"
+          },
+          {
+            "en": "Tomorrow",
+            "id": "to-MOR-row · /təˈmɑːroʊ/"
+          },
+          {
+            "en": "Yesterday",
+            "id": "YES-ter-day · /ˈjestərdeɪ/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -1410,7 +2862,7 @@
             "morning"
           ],
           "correctAnswer": "tomorrow",
-          "explanation": "\"Tomorrow\" = besok. If you need to study tonight, the test is tomorrow."
+          "explanation": "\"Tomorrow\" = besok. Kalau harus belajar malam ini, berarti ujiannya besok."
         }
       },
       {
@@ -1419,20 +2871,86 @@
         "xpReward": 15,
         "content": {
           "phrase": "See you tomorrow!",
-          "hint": "Say: See you tomorrow!",
+          "hint": "Ucapkan: See you tomorrow!",
           "translation": "Sampai jumpa besok!"
+        }
+      },
+      {
+        "id": "study_c3s3_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Today",
+              "meaning": "Hari ini"
+            },
+            {
+              "word": "Tomorrow",
+              "meaning": "Besok"
+            },
+            {
+              "word": "Yesterday",
+              "meaning": "Kemarin"
+            },
+            {
+              "word": "Now",
+              "meaning": "Sekarang"
+            }
+          ],
+          "shuffledMeanings": [
+            "Sekarang",
+            "Besok",
+            "Kemarin",
+            "Hari ini"
+          ],
+          "explanation": "Today = Hari ini. Tomorrow = Besok. Yesterday = Kemarin. Now = Sekarang."
+        }
+      },
+      {
+        "id": "study_c3s3_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "Good morning! I exercise every morning.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "Good morning! I exercise every morning.",
+            "I eat lunch in the afternoon.",
+            "Good evening! We study in the evening.",
+            "I sleep at night."
+          ],
+          "correctAnswer": "Good morning! I exercise every morning.",
+          "explanation": "Lingo mengucapkan \"Good morning! I exercise every morning.\" yang artinya \"Selamat pagi! Saya berolahraga setiap pagi.\""
+        }
+      },
+      {
+        "id": "study_c3s3_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'I eat lunch in the afternoon.'?",
+          "options": [
+            "Saya tidur di malam hari.",
+            "Hari ini hari Senin.",
+            "Saya makan siang di siang hari.",
+            "Selamat sore! Kami belajar di sore hari."
+          ],
+          "correctAnswer": "Saya makan siang di siang hari.",
+          "explanation": "\"I eat lunch in the afternoon.\" = Saya makan siang di siang hari."
         }
       }
     ]
   },
   "c3s4": {
-    "title": "Talking About Your Routine",
-    "intro": "Now we combine verbs, time expressions, and clock times to describe a full daily routine. This is one of the most common conversation topics in English.",
+    "title": "Menceritakan Rutinitasmu",
+    "intro": "Sekarang kita gabungkan kata kerja, keterangan waktu, dan jam untuk menceritakan rutinitas sehari penuh. Ini salah satu topik obrolan paling umum dalam bahasa Inggris.",
     "sections": [
       {
         "type": "grammar",
-        "heading": "Clock Time Patterns",
-        "body": "Here's how to say what you do at specific times:",
+        "heading": "Pola dengan Jam",
+        "body": "Begini cara menyebut kegiatan pada jam tertentu:",
         "examples": [
           {
             "en": "I wake up at seven.",
@@ -1451,12 +2969,12 @@
             "id": "Saya tidur jam sepuluh."
           }
         ],
-        "tip": "Use AT + clock time. Use IN THE + morning / afternoon / evening."
+        "tip": "Pakai AT + jam. Pakai IN THE + morning / afternoon / evening."
       },
       {
         "type": "conversation",
-        "heading": "Sharing Your Routine",
-        "body": "Here's how a routine conversation sounds:",
+        "heading": "Bercerita tentang Rutinitas",
+        "body": "Begini contoh obrolan tentang rutinitas:",
         "examples": [
           {
             "en": "A: When do you wake up?",
@@ -1482,7 +3000,28 @@
             "en": "B: I sleep at ten at night.",
             "id": "B: Saya tidur jam sepuluh malam."
           }
-        ]
+        ],
+        "tip": ""
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Every day",
+            "id": "EV-ery DAY · /ˈevri deɪ/"
+          },
+          {
+            "en": "Dinner",
+            "id": "DIN-ner · /ˈdɪnər/"
+          },
+          {
+            "en": "Evening",
+            "id": "EVE-ning · /ˈiːvnɪŋ/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -1499,7 +3038,7 @@
             "I wake up at seven."
           ],
           "correctAnswer": "I eat dinner at seven.",
-          "explanation": "Makan malam = dinner. Pukul 7 = at seven. So: I eat dinner at seven."
+          "explanation": "Makan malam = dinner. Pukul 7 = at seven. Jadi: I eat dinner at seven."
         }
       },
       {
@@ -1508,44 +3047,126 @@
         "xpReward": 15,
         "content": {
           "phrase": "I eat breakfast at eight.",
-          "hint": "Say: I eat breakfast at eight.",
+          "hint": "Ucapkan: I eat breakfast at eight.",
           "translation": "Saya sarapan jam delapan."
+        }
+      },
+      {
+        "id": "study_c3s4_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Breakfast",
+              "meaning": "Sarapan"
+            },
+            {
+              "word": "Dinner",
+              "meaning": "Makan malam"
+            },
+            {
+              "word": "Every morning",
+              "meaning": "Setiap pagi"
+            },
+            {
+              "word": "After school",
+              "meaning": "Sepulang sekolah"
+            }
+          ],
+          "shuffledMeanings": [
+            "Sepulang sekolah",
+            "Makan malam",
+            "Setiap pagi",
+            "Sarapan"
+          ],
+          "explanation": "Breakfast = Sarapan. Dinner = Makan malam. Every morning = Setiap pagi. After school = Sepulang sekolah."
+        }
+      },
+      {
+        "id": "study_c3s4_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "I wake up at seven.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "I eat breakfast at eight.",
+            "I study in the evening.",
+            "I sleep at ten.",
+            "I wake up at seven."
+          ],
+          "correctAnswer": "I wake up at seven.",
+          "explanation": "Lingo mengucapkan \"I wake up at seven.\" yang artinya \"Saya bangun jam tujuh.\""
+        }
+      },
+      {
+        "id": "study_c3s4_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'I eat breakfast at eight.'?",
+          "options": [
+            "Jam berapa kamu bangun?",
+            "Saya sarapan jam delapan.",
+            "Saya belajar di malam hari.",
+            "Saya tidur jam sepuluh."
+          ],
+          "correctAnswer": "Saya sarapan jam delapan.",
+          "explanation": "\"I eat breakfast at eight.\" = Saya sarapan jam delapan."
         }
       }
     ]
   },
   "c3s5": {
-    "title": "Asking Simple Questions",
-    "intro": "Question words (who, what, where, when) are the key to asking about anything. With just these four words, you can start almost any conversation in English.",
+    "title": "Bertanya dengan Sederhana",
+    "intro": "Kata tanya (who, what, where, when) adalah kunci untuk menanyakan apa saja. Dengan empat kata ini saja, kamu bisa memulai hampir semua percakapan dalam bahasa Inggris.",
     "sections": [
       {
         "type": "vocabulary",
-        "heading": "The 4 Core Question Words",
-        "body": "Memorise these four and you can ask about almost anything:",
+        "heading": "Empat Kata Tanya Utama",
+        "body": "Hafalkan empat kata ini, dan kamu bisa menanyakan hampir apa saja:",
         "examples": [
           {
-            "en": "What — Apa / Apakah",
-            "id": "What is this? / What do you eat?"
+            "en": "What",
+            "id": "Apa / Apakah",
+            "example": {
+              "en": "What is this? / What do you eat?",
+              "id": "Apa ini? / Apa yang kamu makan?"
+            }
           },
           {
-            "en": "Where — Di mana",
-            "id": "Where do you live? / Where is the school?"
+            "en": "Where",
+            "id": "Di mana",
+            "example": {
+              "en": "Where do you live? / Where is the school?",
+              "id": "Kamu tinggal di mana? / Sekolahnya di mana?"
+            }
           },
           {
-            "en": "When — Kapan",
-            "id": "When do you sleep? / When is the test?"
+            "en": "When",
+            "id": "Kapan",
+            "example": {
+              "en": "When do you sleep? / When is the test?",
+              "id": "Kapan kamu tidur? / Kapan ujiannya?"
+            }
           },
           {
-            "en": "Who — Siapa",
-            "id": "Who is your teacher? / Who is that?"
+            "en": "Who",
+            "id": "Siapa",
+            "example": {
+              "en": "Who is your teacher? / Who is that?",
+              "id": "Siapa gurumu? / Siapa itu?"
+            }
           }
         ],
-        "tip": "Question word + do/does + subject + verb: What do you eat for breakfast?"
+        "tip": "Kata tanya + do/does + subjek + kata kerja: What do you eat for breakfast?"
       },
       {
         "type": "grammar",
-        "heading": "Question Structure",
-        "body": "Basic pattern: Question word + do/does + subject + verb",
+        "heading": "Susunan Kalimat Tanya",
+        "body": "Pola dasar: kata tanya + do/does + subjek + kata kerja",
         "examples": [
           {
             "en": "What do you eat for breakfast?",
@@ -1564,7 +3185,31 @@
             "id": "Siapa teman terbaikmu?"
           }
         ],
-        "tip": "\"Do\" is used with I/you/we/they. \"Does\" is used with he/she/it."
+        "tip": "Do dipakai dengan I/you/we/they. Does dipakai dengan he/she/it."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "What",
+            "id": "WHAT · /wʌt/"
+          },
+          {
+            "en": "Where",
+            "id": "WHERE · /wer/"
+          },
+          {
+            "en": "When",
+            "id": "WHEN · /wen/"
+          },
+          {
+            "en": "Who",
+            "id": "WHO · /huː/ (w tidak dibaca)"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -1581,7 +3226,7 @@
             "What"
           ],
           "correctAnswer": "What",
-          "explanation": "\"What\" asks about things. \"What is your favorite subject?\" = Apa mata pelajaran favoritmu?"
+          "explanation": "\"What\" menanyakan benda atau hal. \"What is your favorite subject?\" = Apa mata pelajaran favoritmu?"
         }
       },
       {
@@ -1590,20 +3235,86 @@
         "xpReward": 15,
         "content": {
           "phrase": "What do you eat for breakfast?",
-          "hint": "Say: What do you eat for breakfast?",
+          "hint": "Ucapkan: What do you eat for breakfast?",
           "translation": "Apa yang kamu makan untuk sarapan?"
+        }
+      },
+      {
+        "id": "study_c3s5_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "What",
+              "meaning": "Apa"
+            },
+            {
+              "word": "Where",
+              "meaning": "Di mana"
+            },
+            {
+              "word": "When",
+              "meaning": "Kapan"
+            },
+            {
+              "word": "Who",
+              "meaning": "Siapa"
+            }
+          ],
+          "shuffledMeanings": [
+            "Siapa",
+            "Di mana",
+            "Kapan",
+            "Apa"
+          ],
+          "explanation": "What = Apa. Where = Di mana. When = Kapan. Who = Siapa."
+        }
+      },
+      {
+        "id": "study_c3s5_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "What do you eat for breakfast?",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "When do you wake up?",
+            "Who is your best friend?",
+            "What do you eat for breakfast?",
+            "Where do you go after school?"
+          ],
+          "correctAnswer": "What do you eat for breakfast?",
+          "explanation": "Lingo mengucapkan \"What do you eat for breakfast?\" yang artinya \"Apa yang kamu makan untuk sarapan?\""
+        }
+      },
+      {
+        "id": "study_c3s5_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'Where do you go after school?'?",
+          "options": [
+            "Apa yang kamu makan untuk sarapan?",
+            "Ke mana kamu pergi setelah sekolah?",
+            "Kapan kamu bangun?",
+            "Siapa teman terbaikmu?"
+          ],
+          "correctAnswer": "Ke mana kamu pergi setelah sekolah?",
+          "explanation": "\"Where do you go after school?\" = Ke mana kamu pergi setelah sekolah?"
         }
       }
     ]
   },
   "c3s6": {
-    "title": "Chapter 3 Review — Daily Activities",
-    "intro": "You've covered verbs, daily routines, time expressions, and question words. Now combine them to describe your full day and ask questions about others' routines.",
+    "title": "Ulasan Chapter 3: Kegiatan Sehari-hari",
+    "intro": "Kamu sudah belajar kata kerja, rutinitas harian, keterangan waktu, dan kata tanya. Sekarang gabungkan semuanya untuk menceritakan harimu dan menanyakan rutinitas orang lain.",
     "sections": [
       {
         "type": "conversation",
-        "heading": "Full Routine Conversation",
-        "body": "Read this dialogue using everything from Chapter 3:",
+        "heading": "Percakapan Rutinitas Lengkap",
+        "body": "Baca dialog ini, yang memakai semua materi Chapter 3:",
         "examples": [
           {
             "en": "A: When do you wake up every day?",
@@ -1629,12 +3340,13 @@
             "en": "B: I sleep at ten. See you tomorrow!",
             "id": "B: Saya tidur jam sepuluh. Sampai jumpa besok!"
           }
-        ]
+        ],
+        "tip": ""
       },
       {
         "type": "grammar",
-        "heading": "Chapter 3 Patterns Summary",
-        "body": "Key grammar from this chapter:",
+        "heading": "Ringkasan Pola Chapter 3",
+        "body": "Tata bahasa penting dari chapter ini:",
         "examples": [
           {
             "en": "Routine: I [verb] at [time].",
@@ -1649,7 +3361,27 @@
             "id": "Pertanyaan: Kapan/Apa/Di mana kamu [kata kerja]?"
           }
         ],
-        "tip": "To sound fluent, chain activities: \"I wake up, eat breakfast, then go to school.\""
+        "tip": "Supaya terdengar lancar, sambungkan kegiatanmu: \"I wake up, eat breakfast, then go to school.\""
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Every night",
+            "id": "EV-ery NIGHT · /ˈevri naɪt/"
+          },
+          {
+            "en": "After school",
+            "id": "AF-ter SCHOOL · /ˈæftər skuːl/"
+          },
+          {
+            "en": "See you tomorrow",
+            "id": "SEE you to-MOR-row · /siː juː təˈmɑːroʊ/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -1666,7 +3398,7 @@
             "Where"
           ],
           "correctAnswer": "When",
-          "explanation": "\"When\" asks about time. \"When do you wake up?\" = Kapan/jam berapa kamu bangun?"
+          "explanation": "\"When\" menanyakan waktu. \"When do you wake up?\" = Jam berapa kamu bangun?"
         }
       },
       {
@@ -1675,48 +3407,134 @@
         "xpReward": 15,
         "content": {
           "phrase": "I study every night.",
-          "hint": "Say: I study every night.",
+          "hint": "Ucapkan: I study every night.",
           "translation": "Saya belajar setiap malam."
+        }
+      },
+      {
+        "id": "study_c3s6_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Wake up",
+              "meaning": "Bangun tidur"
+            },
+            {
+              "word": "Every night",
+              "meaning": "Setiap malam"
+            },
+            {
+              "word": "What time",
+              "meaning": "Jam berapa"
+            },
+            {
+              "word": "See you tomorrow",
+              "meaning": "Sampai jumpa besok"
+            }
+          ],
+          "shuffledMeanings": [
+            "Sampai jumpa besok",
+            "Setiap malam",
+            "Jam berapa",
+            "Bangun tidur"
+          ],
+          "explanation": "Wake up = Bangun tidur. Every night = Setiap malam. What time = Jam berapa. See you tomorrow = Sampai jumpa besok."
+        }
+      },
+      {
+        "id": "study_c3s6_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "When do you wake up every day?",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "I go home and study every night.",
+            "When do you wake up every day?",
+            "I wake up at six. Then I eat breakfast.",
+            "What do you do after school?"
+          ],
+          "correctAnswer": "When do you wake up every day?",
+          "explanation": "Lingo mengucapkan \"When do you wake up every day?\" yang artinya \"Jam berapa kamu bangun setiap hari?\""
+        }
+      },
+      {
+        "id": "study_c3s6_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'I wake up at six. Then I eat breakfast.'?",
+          "options": [
+            "Apa yang kamu lakukan setelah sekolah?",
+            "Saya pulang dan belajar setiap malam.",
+            "Jam berapa kamu tidur?",
+            "Saya bangun jam enam. Lalu saya sarapan."
+          ],
+          "correctAnswer": "Saya bangun jam enam. Lalu saya sarapan.",
+          "explanation": "\"I wake up at six. Then I eat breakfast.\" = Saya bangun jam enam. Lalu saya sarapan."
         }
       }
     ]
   },
   "c4s1": {
-    "title": "Basic Adjectives",
-    "intro": "Adjectives describe people, places, and things. They make your English more expressive and detailed. The most useful adjectives come in opposite pairs.",
+    "title": "Kata Sifat Dasar",
+    "intro": "Kata sifat menggambarkan orang, tempat, dan benda, sehingga bahasa Inggrismu lebih ekspresif dan detail. Kata sifat yang paling berguna biasanya berpasangan dengan lawan katanya.",
     "sections": [
       {
         "type": "vocabulary",
-        "heading": "Core Adjective Pairs",
-        "body": "Learn adjectives in pairs — it doubles your vocabulary instantly:",
+        "heading": "Pasangan Kata Sifat",
+        "body": "Pelajari kata sifat berpasangan supaya kosakatamu langsung bertambah dua kali lipat:",
         "examples": [
           {
-            "en": "Big ↔ Small — Besar ↔ Kecil",
-            "id": "This is a big dog. That is a small cat."
+            "en": "Big ↔ Small",
+            "id": "Besar ↔ Kecil",
+            "example": {
+              "en": "This is a big dog. That is a small cat.",
+              "id": "Ini anjing besar. Itu kucing kecil."
+            }
           },
           {
-            "en": "Good ↔ Bad — Baik ↔ Buruk",
-            "id": "She is a good student. The weather is bad."
+            "en": "Good ↔ Bad",
+            "id": "Baik ↔ Buruk",
+            "example": {
+              "en": "She is a good student. The weather is bad.",
+              "id": "Dia pelajar yang baik. Cuacanya buruk."
+            }
           },
           {
-            "en": "Happy ↔ Sad — Bahagia ↔ Sedih",
-            "id": "I am very happy today. She looks sad."
+            "en": "Happy ↔ Sad",
+            "id": "Bahagia ↔ Sedih",
+            "example": {
+              "en": "I am very happy today. She looks sad.",
+              "id": "Saya sangat bahagia hari ini. Dia terlihat sedih."
+            }
           },
           {
-            "en": "Hot ↔ Cold — Panas ↔ Dingin",
-            "id": "The coffee is hot. The water is cold."
+            "en": "Hot ↔ Cold",
+            "id": "Panas ↔ Dingin",
+            "example": {
+              "en": "The coffee is hot. The water is cold.",
+              "id": "Kopinya panas. Airnya dingin."
+            }
           },
           {
-            "en": "Fast ↔ Slow — Cepat ↔ Lambat",
-            "id": "He runs fast. The bus is slow."
+            "en": "Fast ↔ Slow",
+            "id": "Cepat ↔ Lambat",
+            "example": {
+              "en": "He runs fast. The bus is slow.",
+              "id": "Dia berlari cepat. Busnya lambat."
+            }
           }
         ],
-        "tip": "Add \"very\" before an adjective to make it stronger: very big, very happy."
+        "tip": "Tambahkan very sebelum kata sifat supaya lebih kuat: very big, very happy."
       },
       {
         "type": "grammar",
-        "heading": "Adjective Position",
-        "body": "In English, adjectives go BEFORE the noun OR after 'to be':",
+        "heading": "Letak Kata Sifat",
+        "body": "Dalam bahasa Inggris, kata sifat diletakkan SEBELUM kata benda ATAU setelah to be:",
         "examples": [
           {
             "en": "Before noun: a big dog, a happy student",
@@ -1731,7 +3549,27 @@
             "id": "Saya sangat bahagia hari ini."
           }
         ],
-        "tip": "Both positions are correct. \"A big house\" and \"The house is big\" are both fine."
+        "tip": "Dua-duanya benar. \"A big house\" dan \"The house is big\" sama-sama boleh."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Small",
+            "id": "SMALL · /smɔːl/"
+          },
+          {
+            "en": "Cold",
+            "id": "COLD · /koʊld/"
+          },
+          {
+            "en": "Slow",
+            "id": "SLOW · /sloʊ/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -1748,7 +3586,7 @@
             "sad"
           ],
           "correctAnswer": "big",
-          "explanation": "\"Not small\" means the dog is big. Big is the antonym of small."
+          "explanation": "\"Not small\" berarti anjingnya besar. Big adalah lawan kata small."
         }
       },
       {
@@ -1757,48 +3595,134 @@
         "xpReward": 15,
         "content": {
           "phrase": "I am very happy today.",
-          "hint": "Say: I am very happy today.",
+          "hint": "Ucapkan: I am very happy today.",
           "translation": "Saya sangat bahagia hari ini."
+        }
+      },
+      {
+        "id": "study_c4s1_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Big",
+              "meaning": "Besar"
+            },
+            {
+              "word": "Happy",
+              "meaning": "Bahagia"
+            },
+            {
+              "word": "Hot",
+              "meaning": "Panas"
+            },
+            {
+              "word": "Fast",
+              "meaning": "Cepat"
+            }
+          ],
+          "shuffledMeanings": [
+            "Cepat",
+            "Bahagia",
+            "Panas",
+            "Besar"
+          ],
+          "explanation": "Big = Besar. Happy = Bahagia. Hot = Panas. Fast = Cepat."
+        }
+      },
+      {
+        "id": "study_c4s1_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "She is a good student. The weather is bad.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "He runs fast. The bus is slow.",
+            "She is a good student. The weather is bad.",
+            "I am very happy today. She looks sad.",
+            "The coffee is hot. The water is cold."
+          ],
+          "correctAnswer": "She is a good student. The weather is bad.",
+          "explanation": "Lingo mengucapkan \"She is a good student. The weather is bad.\" yang artinya \"Dia pelajar yang baik. Cuacanya buruk.\""
+        }
+      },
+      {
+        "id": "study_c4s1_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'I am very happy today. She looks sad.'?",
+          "options": [
+            "Saya sangat bahagia hari ini. Dia terlihat sedih.",
+            "Kopinya panas. Airnya dingin.",
+            "Dia berlari cepat. Busnya lambat.",
+            "Dia pelajar yang baik. Cuacanya buruk."
+          ],
+          "correctAnswer": "Saya sangat bahagia hari ini. Dia terlihat sedih.",
+          "explanation": "\"I am very happy today. She looks sad.\" = Saya sangat bahagia hari ini. Dia terlihat sedih."
         }
       }
     ]
   },
   "c4s2": {
-    "title": "Physical Descriptions",
-    "intro": "Describing physical appearance is a key conversation skill. In English, you can describe height, age, and build using simple adjectives with 'to be'.",
+    "title": "Ciri-ciri Fisik",
+    "intro": "Menggambarkan penampilan seseorang adalah kemampuan penting dalam obrolan. Dalam bahasa Inggris, kamu bisa menyebut tinggi badan, umur, dan postur dengan kata sifat sederhana dan to be.",
     "sections": [
       {
         "type": "vocabulary",
-        "heading": "Physical Adjectives",
-        "body": "These adjectives describe how people look:",
+        "heading": "Kata Sifat Penampilan",
+        "body": "Kata sifat ini menggambarkan penampilan seseorang:",
         "examples": [
           {
-            "en": "Tall ↔ Short — Tinggi ↔ Pendek",
-            "id": "My brother is very tall. My sister is short."
+            "en": "Tall ↔ Short",
+            "id": "Tinggi ↔ Pendek",
+            "example": {
+              "en": "My brother is very tall. My sister is short.",
+              "id": "Saudara laki-laki saya sangat tinggi. Saudara perempuan saya pendek."
+            }
           },
           {
-            "en": "Young ↔ Old — Muda ↔ Tua",
-            "id": "She is young. My grandmother is old."
+            "en": "Young ↔ Old",
+            "id": "Muda ↔ Tua",
+            "example": {
+              "en": "She is young. My grandmother is old.",
+              "id": "Dia masih muda. Nenek saya sudah tua."
+            }
           },
           {
-            "en": "Strong — Kuat",
-            "id": "He is tall and strong."
+            "en": "Strong",
+            "id": "Kuat",
+            "example": {
+              "en": "He is tall and strong.",
+              "id": "Dia tinggi dan kuat."
+            }
           },
           {
-            "en": "Cute — Lucu / Imut",
-            "id": "The baby is small and cute."
+            "en": "Cute",
+            "id": "Lucu / Imut",
+            "example": {
+              "en": "The baby is small and cute.",
+              "id": "Bayinya kecil dan lucu."
+            }
           },
           {
-            "en": "Handsome / Pretty — Tampan / Cantik",
-            "id": "He is handsome. She is pretty."
+            "en": "Handsome / Pretty",
+            "id": "Tampan / Cantik",
+            "example": {
+              "en": "He is handsome. She is pretty.",
+              "id": "Dia tampan. Dia cantik."
+            }
           }
         ],
-        "tip": "\"Handsome\" is usually for men. \"Pretty\" or \"beautiful\" is usually for women."
+        "tip": "\"Handsome\" biasanya untuk laki-laki. \"Pretty\" atau \"beautiful\" biasanya untuk perempuan."
       },
       {
         "type": "grammar",
-        "heading": "Describing with Multiple Adjectives",
-        "body": "Use 'and' to connect two or more adjectives:",
+        "heading": "Memakai Beberapa Kata Sifat",
+        "body": "Pakai and untuk menghubungkan dua kata sifat atau lebih:",
         "examples": [
           {
             "en": "She is tall and young.",
@@ -1813,7 +3737,27 @@
             "id": "Nenekku sudah tua tapi sangat bijaksana."
           }
         ],
-        "tip": "Use commas when listing three or more adjectives: tall, strong, and handsome."
+        "tip": "Pakai koma kalau ada tiga kata sifat atau lebih: tall, strong, and handsome."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Tall",
+            "id": "TALL · /tɔːl/"
+          },
+          {
+            "en": "Young",
+            "id": "YOUNG · /jʌŋ/"
+          },
+          {
+            "en": "Handsome",
+            "id": "HAND-some · /ˈhænsəm/ (d tidak dibaca)"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -1830,7 +3774,7 @@
             "old"
           ],
           "correctAnswer": "tall",
-          "explanation": "Two meters is very tall! \"Almost two meters\" = sangat tinggi."
+          "explanation": "Hampir dua meter itu sangat tinggi! Jadi jawabannya tall."
         }
       },
       {
@@ -1839,23 +3783,89 @@
         "xpReward": 15,
         "content": {
           "phrase": "She is tall and young.",
-          "hint": "Say: She is tall and young.",
+          "hint": "Ucapkan: She is tall and young.",
           "translation": "Dia tinggi dan muda."
+        }
+      },
+      {
+        "id": "study_c4s2_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Tall",
+              "meaning": "Tinggi"
+            },
+            {
+              "word": "Young",
+              "meaning": "Muda"
+            },
+            {
+              "word": "Strong",
+              "meaning": "Kuat"
+            },
+            {
+              "word": "Cute",
+              "meaning": "Lucu"
+            }
+          ],
+          "shuffledMeanings": [
+            "Lucu",
+            "Muda",
+            "Kuat",
+            "Tinggi"
+          ],
+          "explanation": "Tall = Tinggi. Young = Muda. Strong = Kuat. Cute = Lucu."
+        }
+      },
+      {
+        "id": "study_c4s2_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "My brother is very tall. My sister is short.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "My brother is very tall. My sister is short.",
+            "She is young. My grandmother is old.",
+            "He is tall and strong.",
+            "The baby is small and cute."
+          ],
+          "correctAnswer": "My brother is very tall. My sister is short.",
+          "explanation": "Lingo mengucapkan \"My brother is very tall. My sister is short.\" yang artinya \"Saudara laki-laki saya sangat tinggi. Saudara perempuan saya pendek.\""
+        }
+      },
+      {
+        "id": "study_c4s2_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'She is young. My grandmother is old.'?",
+          "options": [
+            "Bayinya kecil dan lucu.",
+            "Dia tampan. Dia cantik.",
+            "Dia masih muda. Nenek saya sudah tua.",
+            "Dia tinggi dan kuat."
+          ],
+          "correctAnswer": "Dia masih muda. Nenek saya sudah tua.",
+          "explanation": "\"She is young. My grandmother is old.\" = Dia masih muda. Nenek saya sudah tua."
         }
       }
     ]
   },
   "c4s3": {
-    "title": "Describing Objects",
-    "intro": "You can combine size, color, and adjectives to build detailed descriptions of any object. This is the foundation of descriptive English.",
+    "title": "Menggambarkan Benda",
+    "intro": "Kamu bisa menggabungkan ukuran, warna, dan kata sifat lain untuk menggambarkan benda apa pun dengan detail. Ini dasar untuk membuat deskripsi dalam bahasa Inggris.",
     "sections": [
       {
         "type": "grammar",
-        "heading": "Adjective Order Rule",
-        "body": "When using multiple adjectives, English has a specific order: size → color → noun",
+        "heading": "Urutan Kata Sifat",
+        "body": "Kalau memakai beberapa kata sifat, bahasa Inggris punya urutan tertentu: ukuran → warna → benda",
         "examples": [
           {
-            "en": "a small white cat (size + color + noun)",
+            "en": "a small white cat (ukuran + warna + benda)",
             "id": "seekor kucing putih kecil"
           },
           {
@@ -1871,34 +3881,75 @@
             "id": "gaun biru panjang"
           }
         ],
-        "tip": "General rule: Opinion → Size → Color → Noun. (e.g. a beautiful small white cat)"
+        "tip": "Aturan umumnya: pendapat → ukuran → warna → benda (contoh: a beautiful small white cat)."
       },
       {
         "type": "vocabulary",
-        "heading": "More Useful Adjectives",
-        "body": "Expand your description vocabulary with these words:",
+        "heading": "Kata Sifat Lainnya",
+        "body": "Tambah kosakata deskripsimu dengan kata-kata ini:",
         "examples": [
           {
-            "en": "Beautiful / Ugly — Indah / Jelek",
-            "id": "This is a beautiful flower."
+            "en": "Beautiful / Ugly",
+            "id": "Indah / Jelek",
+            "example": {
+              "en": "This is a beautiful flower.",
+              "id": "Ini bunga yang indah."
+            }
           },
           {
-            "en": "Expensive / Cheap — Mahal / Murah",
-            "id": "That car is very expensive."
+            "en": "Expensive / Cheap",
+            "id": "Mahal / Murah",
+            "example": {
+              "en": "That car is very expensive.",
+              "id": "Mobil itu sangat mahal."
+            }
           },
           {
-            "en": "Heavy / Light — Berat / Ringan",
-            "id": "The bag is heavy."
+            "en": "Heavy / Light",
+            "id": "Berat / Ringan",
+            "example": {
+              "en": "The bag is heavy.",
+              "id": "Tasnya berat."
+            }
           },
           {
-            "en": "Clean / Dirty — Bersih / Kotor",
-            "id": "The room is clean."
+            "en": "Clean / Dirty",
+            "id": "Bersih / Kotor",
+            "example": {
+              "en": "The room is clean.",
+              "id": "Kamarnya bersih."
+            }
           },
           {
-            "en": "New / Old — Baru / Lama",
-            "id": "She has a new phone."
+            "en": "New / Old",
+            "id": "Baru / Lama",
+            "example": {
+              "en": "She has a new phone.",
+              "id": "Dia punya HP baru."
+            }
           }
-        ]
+        ],
+        "tip": ""
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Beautiful",
+            "id": "BEAU-ti-ful · /ˈbjuːtɪfəl/"
+          },
+          {
+            "en": "Expensive",
+            "id": "ex-PEN-sive · /ɪkˈspensɪv/"
+          },
+          {
+            "en": "Heavy",
+            "id": "HEAV-y · /ˈhevi/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -1915,7 +3966,7 @@
             "That is a white bag."
           ],
           "correctAnswer": "This is a black bag.",
-          "explanation": "Ini = This (nearby). Tas hitam = black bag. So: This is a black bag."
+          "explanation": "Ini = This (dekat). Tas hitam = black bag. Jadi: This is a black bag."
         }
       },
       {
@@ -1924,20 +3975,86 @@
         "xpReward": 15,
         "content": {
           "phrase": "I have a small white cat.",
-          "hint": "Say: I have a small white cat.",
+          "hint": "Ucapkan: I have a small white cat.",
           "translation": "Saya punya kucing putih kecil."
+        }
+      },
+      {
+        "id": "study_c4s3_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Beautiful",
+              "meaning": "Indah"
+            },
+            {
+              "word": "Expensive",
+              "meaning": "Mahal"
+            },
+            {
+              "word": "Heavy",
+              "meaning": "Berat"
+            },
+            {
+              "word": "Clean",
+              "meaning": "Bersih"
+            }
+          ],
+          "shuffledMeanings": [
+            "Bersih",
+            "Mahal",
+            "Berat",
+            "Indah"
+          ],
+          "explanation": "Beautiful = Indah. Expensive = Mahal. Heavy = Berat. Clean = Bersih."
+        }
+      },
+      {
+        "id": "study_c4s3_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "This is a beautiful flower.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "That car is very expensive.",
+            "The bag is heavy.",
+            "The room is clean.",
+            "This is a beautiful flower."
+          ],
+          "correctAnswer": "This is a beautiful flower.",
+          "explanation": "Lingo mengucapkan \"This is a beautiful flower.\" yang artinya \"Ini bunga yang indah.\""
+        }
+      },
+      {
+        "id": "study_c4s3_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'That car is very expensive.'?",
+          "options": [
+            "Dia punya HP baru.",
+            "Mobil itu sangat mahal.",
+            "Tasnya berat.",
+            "Kamarnya bersih."
+          ],
+          "correctAnswer": "Mobil itu sangat mahal.",
+          "explanation": "\"That car is very expensive.\" = Mobil itu sangat mahal."
         }
       }
     ]
   },
   "c4s4": {
-    "title": "Using Is / Are",
-    "intro": "You've mastered 'am' and 'is'. Now we add 'are' — used for plural subjects and for 'you'. Together, am/is/are form the complete 'to be' verb.",
+    "title": "Memakai Is / Are",
+    "intro": "Kamu sudah menguasai am dan is. Sekarang kita tambahkan are, yang dipakai untuk subjek jamak dan untuk you. Am, is, dan are bersama-sama membentuk to be secara lengkap.",
     "sections": [
       {
         "type": "grammar",
-        "heading": "Complete To Be Chart",
-        "body": "Memorise this complete pattern:",
+        "heading": "Tabel To Be Lengkap",
+        "body": "Hafalkan pola lengkap ini:",
         "examples": [
           {
             "en": "I am …",
@@ -1960,27 +4077,27 @@
             "id": "Mereka adalah …"
           }
         ],
-        "tip": "Quick rule: IS for one person/thing (he, she, it). ARE for more than one OR 'you'."
+        "tip": "Aturan cepat: IS untuk satu orang/benda (he, she, it). ARE untuk lebih dari satu ATAU you."
       },
       {
         "type": "vocabulary",
-        "heading": "Is vs Are in Sentences",
-        "body": "See the difference in context:",
+        "heading": "Is dan Are dalam Kalimat",
+        "body": "Lihat perbedaannya dalam kalimat:",
         "examples": [
           {
-            "en": "This book is thick. (one thing → is)",
+            "en": "This book is thick. (satu benda: is)",
             "id": "Buku ini tebal."
           },
           {
-            "en": "These books are thick. (many → are)",
+            "en": "These books are thick. (banyak benda: are)",
             "id": "Buku-buku ini tebal."
           },
           {
-            "en": "My friend is kind. (one person → is)",
+            "en": "My friend is kind. (satu orang: is)",
             "id": "Temanku baik."
           },
           {
-            "en": "My friends are kind. (many → are)",
+            "en": "My friends are kind. (banyak orang: are)",
             "id": "Teman-temanku baik."
           },
           {
@@ -1988,7 +4105,27 @@
             "id": "Mereka adalah teman terbaik saya."
           }
         ],
-        "tip": "When the subject ends in -s (friends, students, parents), use ARE."
+        "tip": "Kalau subjeknya berakhiran -s (friends, students, parents), pakai ARE."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Are",
+            "id": "ARE · /ɑːr/"
+          },
+          {
+            "en": "Friends",
+            "id": "FRIENDS · /frendz/ (ujungnya bunyi dz)"
+          },
+          {
+            "en": "Thick",
+            "id": "THICK · /θɪk/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -2005,7 +4142,7 @@
             "be"
           ],
           "correctAnswer": "are",
-          "explanation": "\"My parents\" = two people = plural → use \"are\". (My mother IS, but my parents ARE.)"
+          "explanation": "\"My parents\" = dua orang (jamak), jadi pakai \"are\". (My mother IS, tapi my parents ARE.)"
         }
       },
       {
@@ -2014,20 +4151,86 @@
         "xpReward": 15,
         "content": {
           "phrase": "They are my best friends.",
-          "hint": "Say: They are my best friends.",
+          "hint": "Ucapkan: They are my best friends.",
           "translation": "Mereka adalah teman terbaik saya."
+        }
+      },
+      {
+        "id": "study_c4s4_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "I am",
+              "meaning": "Saya"
+            },
+            {
+              "word": "You are",
+              "meaning": "Kamu"
+            },
+            {
+              "word": "We are",
+              "meaning": "Kami / Kita"
+            },
+            {
+              "word": "They are",
+              "meaning": "Mereka"
+            }
+          ],
+          "shuffledMeanings": [
+            "Mereka",
+            "Kamu",
+            "Kami / Kita",
+            "Saya"
+          ],
+          "explanation": "I am = Saya. You are = Kamu. We are = Kami / Kita. They are = Mereka."
+        }
+      },
+      {
+        "id": "study_c4s4_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "They are my best friends.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "We are students.",
+            "They are kind.",
+            "They are my best friends.",
+            "You are my friend."
+          ],
+          "correctAnswer": "They are my best friends.",
+          "explanation": "Lingo mengucapkan \"They are my best friends.\" yang artinya \"Mereka adalah teman terbaik saya.\""
+        }
+      },
+      {
+        "id": "study_c4s4_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'You are my friend.'?",
+          "options": [
+            "Kamu temanku.",
+            "Kami pelajar.",
+            "Mereka baik hati.",
+            "Dia tinggi."
+          ],
+          "correctAnswer": "Kamu temanku.",
+          "explanation": "\"You are my friend.\" = Kamu temanku."
         }
       }
     ]
   },
   "c4s5": {
-    "title": "Simple Descriptions",
-    "intro": "Now we bring it all together — subjects, to be, and adjectives — to write clear, complete sentences that describe people, animals, and things.",
+    "title": "Deskripsi Sederhana",
+    "intro": "Sekarang kita gabungkan subjek, to be, dan kata sifat untuk membuat kalimat lengkap yang jelas tentang orang, hewan, dan benda.",
     "sections": [
       {
         "type": "grammar",
-        "heading": "Description Sentence Pattern",
-        "body": "The core pattern: Subject + is/are + adjective(s)",
+        "heading": "Pola Kalimat Deskripsi",
+        "body": "Pola utamanya: Subjek + is/are + kata sifat",
         "examples": [
           {
             "en": "The apple is red.",
@@ -2050,12 +4253,12 @@
             "id": "Para pelajar itu pintar dan rajin."
           }
         ],
-        "tip": "You can stack adjectives: The apple is red AND sweet AND delicious."
+        "tip": "Kata sifat bisa ditumpuk: The apple is red AND sweet AND delicious."
       },
       {
         "type": "conversation",
-        "heading": "Describing Things Around You",
-        "body": "Practice describing things you see every day:",
+        "heading": "Menggambarkan Benda di Sekitarmu",
+        "body": "Latih cara menggambarkan hal-hal yang kamu lihat setiap hari:",
         "examples": [
           {
             "en": "A: What is the weather like today?",
@@ -2073,7 +4276,28 @@
             "en": "B: It is big, clean, and very bright.",
             "id": "B: Besar, bersih, dan sangat terang."
           }
-        ]
+        ],
+        "tip": ""
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Weather",
+            "id": "WEATH-er · /ˈweðər/"
+          },
+          {
+            "en": "Sunny",
+            "id": "SUN-ny · /ˈsʌni/"
+          },
+          {
+            "en": "Classroom",
+            "id": "CLASS-room · /ˈklæsruːm/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -2090,7 +4314,7 @@
             "The weather is good and big."
           ],
           "correctAnswer": "Today the weather is hot and sunny.",
-          "explanation": "Panas = hot, cerah = sunny. \"Today the weather is hot and sunny.\" is correct."
+          "explanation": "Panas = hot, cerah = sunny. Jadi: Today the weather is hot and sunny."
         }
       },
       {
@@ -2099,20 +4323,86 @@
         "xpReward": 15,
         "content": {
           "phrase": "The apple is red.",
-          "hint": "Say: The apple is red.",
+          "hint": "Ucapkan: The apple is red.",
           "translation": "Apel itu berwarna merah."
+        }
+      },
+      {
+        "id": "study_c4s5_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Hot",
+              "meaning": "Panas"
+            },
+            {
+              "word": "Sunny",
+              "meaning": "Cerah"
+            },
+            {
+              "word": "Kind",
+              "meaning": "Baik hati"
+            },
+            {
+              "word": "Smart",
+              "meaning": "Pintar"
+            }
+          ],
+          "shuffledMeanings": [
+            "Pintar",
+            "Cerah",
+            "Baik hati",
+            "Panas"
+          ],
+          "explanation": "Hot = Panas. Sunny = Cerah. Kind = Baik hati. Smart = Pintar."
+        }
+      },
+      {
+        "id": "study_c4s5_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "The apple is red.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "The water is cold and clean.",
+            "The apple is red.",
+            "The sky is blue and clear.",
+            "My teacher is very kind."
+          ],
+          "correctAnswer": "The apple is red.",
+          "explanation": "Lingo mengucapkan \"The apple is red.\" yang artinya \"Apel itu berwarna merah.\""
+        }
+      },
+      {
+        "id": "study_c4s5_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'The sky is blue and clear.'?",
+          "options": [
+            "Guruku sangat baik.",
+            "Airnya dingin dan bersih.",
+            "Para pelajar itu pintar dan rajin.",
+            "Langit itu biru dan jernih."
+          ],
+          "correctAnswer": "Langit itu biru dan jernih.",
+          "explanation": "\"The sky is blue and clear.\" = Langit itu biru dan jernih."
         }
       }
     ]
   },
   "c4s6": {
-    "title": "Chapter 4 Review — Describing People & Things",
-    "intro": "You've mastered adjectives, physical descriptions, adjective order, and the full 'to be' verb. Now write rich, complete descriptions of anything!",
+    "title": "Ulasan Chapter 4: Menggambarkan Orang dan Benda",
+    "intro": "Kamu sudah menguasai kata sifat, ciri-ciri fisik, urutan kata sifat, dan to be secara lengkap. Sekarang buat deskripsi yang lengkap tentang apa saja!",
     "sections": [
       {
         "type": "grammar",
-        "heading": "Full Description Formula",
-        "body": "Combine everything for a powerful description:",
+        "heading": "Rumus Deskripsi Lengkap",
+        "body": "Gabungkan semuanya untuk membuat deskripsi yang kuat:",
         "examples": [
           {
             "en": "The garden is beautiful and green.",
@@ -2131,12 +4421,12 @@
             "id": "Para pelajar itu pintar dan rajin."
           }
         ],
-        "tip": "Great description = subject + is/are + [size] + [appearance] + [personality]"
+        "tip": "Deskripsi yang bagus = subjek + is/are + ukuran + penampilan + sifat"
       },
       {
         "type": "conversation",
-        "heading": "Describing a Friend",
-        "body": "Practice describing someone you know:",
+        "heading": "Menggambarkan Teman",
+        "body": "Latih cara menggambarkan orang yang kamu kenal:",
         "examples": [
           {
             "en": "A: Tell me about your best friend!",
@@ -2154,7 +4444,28 @@
             "en": "B: She is young, and she has a big, beautiful smile.",
             "id": "B: Dia muda dan punya senyum besar yang indah."
           }
-        ]
+        ],
+        "tip": ""
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Funny",
+            "id": "FUN-ny · /ˈfʌni/"
+          },
+          {
+            "en": "Cheerful",
+            "id": "CHEER-ful · /ˈtʃɪrfəl/"
+          },
+          {
+            "en": "Garden",
+            "id": "GAR-den · /ˈɡɑːrdən/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -2171,7 +4482,7 @@
             "My friend is young and small."
           ],
           "correctAnswer": "My friend is short and funny.",
-          "explanation": "Pendek = short, lucu = funny. \"My friend is short and funny.\""
+          "explanation": "Pendek = short, lucu = funny. Jadi: My friend is short and funny."
         }
       },
       {
@@ -2180,20 +4491,86 @@
         "xpReward": 15,
         "content": {
           "phrase": "My friend is short and funny.",
-          "hint": "Say: My friend is short and funny.",
+          "hint": "Ucapkan: My friend is short and funny.",
           "translation": "Temanku pendek dan lucu."
+        }
+      },
+      {
+        "id": "study_c4s6_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Funny",
+              "meaning": "Lucu"
+            },
+            {
+              "word": "Cheerful",
+              "meaning": "Ceria"
+            },
+            {
+              "word": "Garden",
+              "meaning": "Taman"
+            },
+            {
+              "word": "Smile",
+              "meaning": "Senyum"
+            }
+          ],
+          "shuffledMeanings": [
+            "Senyum",
+            "Ceria",
+            "Taman",
+            "Lucu"
+          ],
+          "explanation": "Funny = Lucu. Cheerful = Ceria. Garden = Taman. Smile = Senyum."
+        }
+      },
+      {
+        "id": "study_c4s6_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "The garden is beautiful and green.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "The garden is beautiful and green.",
+            "My friend is short and funny.",
+            "She is young, tall, and cheerful.",
+            "The students are smart and hardworking."
+          ],
+          "correctAnswer": "The garden is beautiful and green.",
+          "explanation": "Lingo mengucapkan \"The garden is beautiful and green.\" yang artinya \"Tamannya indah dan hijau.\""
+        }
+      },
+      {
+        "id": "study_c4s6_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'My friend is short and funny.'?",
+          "options": [
+            "Para pelajar itu pintar dan rajin.",
+            "Ceritakan tentang teman terbaikmu!",
+            "Temanku pendek dan lucu.",
+            "Dia muda, tinggi, dan ceria."
+          ],
+          "correctAnswer": "Temanku pendek dan lucu.",
+          "explanation": "\"My friend is short and funny.\" = Temanku pendek dan lucu."
         }
       }
     ]
   },
   "c5s1": {
-    "title": "Personal Questions",
-    "intro": "When you meet someone new, the conversation almost always includes personal questions about name, origin, and age. Let's master how to ask AND answer these questions confidently.",
+    "title": "Pertanyaan Pribadi",
+    "intro": "Saat bertemu orang baru, obrolan hampir selalu berisi pertanyaan pribadi tentang nama, asal, dan umur. Kita belajar bertanya DAN menjawabnya dengan percaya diri.",
     "sections": [
       {
         "type": "vocabulary",
-        "heading": "Key Personal Questions",
-        "body": "These are the most common questions people ask when getting to know someone:",
+        "heading": "Pertanyaan Pribadi Utama",
+        "body": "Ini pertanyaan yang paling sering ditanyakan saat berkenalan:",
         "examples": [
           {
             "en": "What is your name?",
@@ -2216,12 +4593,12 @@
             "id": "Apakah kamu seorang pelajar?"
           }
         ],
-        "tip": "The most common response to \"How are you?\" is \"I'm fine, thank you!\" or \"I'm good, thanks!\""
+        "tip": "Jawaban paling umum untuk \"How are you?\" adalah \"I'm fine, thank you!\" atau \"I'm good, thanks!\""
       },
       {
         "type": "grammar",
-        "heading": "Answering Personal Questions",
-        "body": "Pattern for answering personal questions:",
+        "heading": "Menjawab Pertanyaan Pribadi",
+        "body": "Pola untuk menjawab pertanyaan pribadi:",
         "examples": [
           {
             "en": "Q: What is your name? → A: My name is Budi.",
@@ -2240,7 +4617,27 @@
             "id": "Apa kabar? → Saya baik, terima kasih!"
           }
         ],
-        "tip": "Always answer in full sentences — it sounds more natural and shows confidence."
+        "tip": "Jawablah dengan kalimat lengkap supaya terdengar natural dan percaya diri."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "How are you?",
+            "id": "how ARE you · /haʊ ɑːr juː/"
+          },
+          {
+            "en": "How old are you?",
+            "id": "how OLD are you · /haʊ oʊld ɑːr juː/"
+          },
+          {
+            "en": "Fine",
+            "id": "FINE · /faɪn/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -2257,7 +4654,7 @@
             "do"
           ],
           "correctAnswer": "are",
-          "explanation": "\"How are you?\" is the standard greeting question. Answer: I am fine, thank you!"
+          "explanation": "\"How are you?\" adalah pertanyaan sapaan yang baku. Jawabannya: I am fine, thank you!"
         }
       },
       {
@@ -2266,20 +4663,86 @@
         "xpReward": 15,
         "content": {
           "phrase": "Where are you from?",
-          "hint": "Say: Where are you from?",
+          "hint": "Ucapkan: Where are you from?",
           "translation": "Kamu berasal dari mana?"
+        }
+      },
+      {
+        "id": "study_c5s1_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "How are you?",
+              "meaning": "Apa kabar?"
+            },
+            {
+              "word": "How old are you?",
+              "meaning": "Berapa umurmu?"
+            },
+            {
+              "word": "Where are you from?",
+              "meaning": "Kamu dari mana?"
+            },
+            {
+              "word": "What is your name?",
+              "meaning": "Siapa namamu?"
+            }
+          ],
+          "shuffledMeanings": [
+            "Siapa namamu?",
+            "Berapa umurmu?",
+            "Kamu dari mana?",
+            "Apa kabar?"
+          ],
+          "explanation": "How are you? = Apa kabar?. How old are you? = Berapa umurmu?. Where are you from? = Kamu dari mana?. What is your name? = Siapa namamu?."
+        }
+      },
+      {
+        "id": "study_c5s1_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "What is your name?",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "What is your name?",
+            "Where are you from?",
+            "How are you?",
+            "How old are you?"
+          ],
+          "correctAnswer": "What is your name?",
+          "explanation": "Lingo mengucapkan \"What is your name?\" yang artinya \"Siapa namamu?\""
+        }
+      },
+      {
+        "id": "study_c5s1_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'Where are you from?'?",
+          "options": [
+            "Berapa umurmu?",
+            "Apakah kamu seorang pelajar?",
+            "Kamu dari mana?",
+            "Apa kabar?"
+          ],
+          "correctAnswer": "Kamu dari mana?",
+          "explanation": "\"Where are you from?\" = Kamu dari mana?"
         }
       }
     ]
   },
   "c5s2": {
-    "title": "Answering About Yourself",
-    "intro": "The ability to introduce yourself fully — name, origin, and age — is the foundation of all social English. Let's build a complete self-introduction.",
+    "title": "Bercerita tentang Diri Sendiri",
+    "intro": "Kemampuan memperkenalkan diri dengan lengkap (nama, asal, dan umur) adalah dasar semua obrolan dalam bahasa Inggris. Kita susun perkenalan diri yang lengkap.",
     "sections": [
       {
         "type": "conversation",
-        "heading": "Full Self-Introduction",
-        "body": "Here's a complete introduction you can use immediately:",
+        "heading": "Perkenalan Diri Lengkap",
+        "body": "Ini contoh perkenalan lengkap yang bisa langsung kamu pakai:",
         "examples": [
           {
             "en": "Hello! My name is Reza.",
@@ -2302,12 +4765,12 @@
             "id": "Senang bertemu denganmu!"
           }
         ],
-        "tip": "For age: I am [number] years old. — \"I am fifteen years old.\""
+        "tip": "Untuk umur: I am [angka] years old, misalnya \"I am fifteen years old.\""
       },
       {
         "type": "grammar",
-        "heading": "Yes/No Questions with Is/Are",
-        "body": "Yes/No questions flip the subject and to be verb:",
+        "heading": "Pertanyaan Ya/Tidak dengan Is/Are",
+        "body": "Dalam pertanyaan ya/tidak, posisi subjek dan to be ditukar:",
         "examples": [
           {
             "en": "Are you a student? → Yes, I am. / No, I'm not.",
@@ -2315,14 +4778,34 @@
           },
           {
             "en": "Is she your sister? → Yes, she is. / No, she isn't.",
-            "id": "Apakah dia saudaramu? → Ya. / Tidak."
+            "id": "Apakah dia saudara perempuanmu? → Ya. / Tidak."
           },
           {
             "en": "Are they your friends? → Yes, they are.",
-            "id": "Apakah mereka temanmu? → Ya, mereka."
+            "id": "Apakah mereka temanmu? → Ya, benar."
           }
         ],
-        "tip": "Short answers: Yes, I am. / No, I'm not. Don't just say \"Yes\" or \"No\" — add the pronoun and verb."
+        "tip": "Jawaban singkat: Yes, I am. / No, I'm not. Jangan hanya \"Yes\" atau \"No\", tambahkan kata ganti dan to be."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Thirteen",
+            "id": "thir-TEEN · /ˌθɜːrˈtiːn/ (angka -teen ditekan di akhir)"
+          },
+          {
+            "en": "Thirty",
+            "id": "THIR-ty · /ˈθɜːrti/ (angka -ty ditekan di awal)"
+          },
+          {
+            "en": "Years old",
+            "id": "YEARS old · /jɪrz oʊld/"
+          }
+        ],
+        "tip": "Thirteen dan thirty sering tertukar. Dengarkan tekanannya: thir-TEEN, THIR-ty."
       }
     ],
     "practice": [
@@ -2339,7 +4822,7 @@
             "is / are"
           ],
           "correctAnswer": "is / am",
-          "explanation": "My name IS (3rd person singular) + I AM (1st person). Pattern: is / am."
+          "explanation": "My name IS (kata ganti orang ketiga) + I AM (orang pertama). Jadi polanya: is / am."
         }
       },
       {
@@ -2348,44 +4831,110 @@
         "xpReward": 15,
         "content": {
           "phrase": "My name is Reza. I am from Jakarta.",
-          "hint": "Say: My name is [name]. I am from [city].",
+          "hint": "Ucapkan: My name is [nama]. I am from [kota].",
           "translation": "Nama saya Reza. Saya dari Jakarta."
+        }
+      },
+      {
+        "id": "study_c5s2_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Years old",
+              "meaning": "Tahun (umur)"
+            },
+            {
+              "word": "Student",
+              "meaning": "Pelajar"
+            },
+            {
+              "word": "Yes, I am",
+              "meaning": "Ya, benar"
+            },
+            {
+              "word": "No, I'm not",
+              "meaning": "Bukan / Tidak"
+            }
+          ],
+          "shuffledMeanings": [
+            "Bukan / Tidak",
+            "Pelajar",
+            "Ya, benar",
+            "Tahun (umur)"
+          ],
+          "explanation": "Years old = Tahun (umur). Student = Pelajar. Yes, I am = Ya, benar. No, I'm not = Bukan / Tidak."
+        }
+      },
+      {
+        "id": "study_c5s2_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "Hello! My name is Reza.",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "I am from Jakarta.",
+            "I am thirteen years old.",
+            "I am a student at SMP 5.",
+            "Hello! My name is Reza."
+          ],
+          "correctAnswer": "Hello! My name is Reza.",
+          "explanation": "Lingo mengucapkan \"Hello! My name is Reza.\" yang artinya \"Halo! Nama saya Reza.\""
+        }
+      },
+      {
+        "id": "study_c5s2_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'I am from Jakarta.'?",
+          "options": [
+            "Senang bertemu denganmu!",
+            "Saya dari Jakarta.",
+            "Saya berumur tiga belas tahun.",
+            "Saya pelajar di SMP 5."
+          ],
+          "correctAnswer": "Saya dari Jakarta.",
+          "explanation": "\"I am from Jakarta.\" = Saya dari Jakarta."
         }
       }
     ]
   },
   "c5s3": {
-    "title": "Asking About Things",
-    "intro": "\"What is this?\" and \"What is that?\" are two of the most useful questions in English. You can use them to learn the name of anything you see.",
+    "title": "Bertanya tentang Benda",
+    "intro": "\"What is this?\" dan \"What is that?\" adalah dua pertanyaan paling berguna dalam bahasa Inggris. Kamu bisa memakainya untuk mengetahui nama benda apa pun yang kamu lihat.",
     "sections": [
       {
         "type": "vocabulary",
-        "heading": "Questions About Objects",
-        "body": "Use these questions to ask about things around you:",
+        "heading": "Pertanyaan tentang Benda",
+        "body": "Pakai pertanyaan ini untuk bertanya tentang benda di sekitarmu:",
         "examples": [
           {
-            "en": "What is this? — Apa ini?",
-            "id": "Use for something NEAR you."
+            "en": "What is this?",
+            "id": "Apa ini? (untuk benda yang dekat)"
           },
           {
-            "en": "What is that? — Apa itu?",
-            "id": "Use for something FAR from you."
+            "en": "What is that?",
+            "id": "Apa itu? (untuk benda yang jauh)"
           },
           {
-            "en": "Whose is this? — Ini milik siapa?",
-            "id": "Ask about ownership."
+            "en": "Whose is this?",
+            "id": "Ini milik siapa? (menanyakan pemilik)"
           },
           {
-            "en": "Is this yours? — Apakah ini milikmu?",
-            "id": "Confirm ownership."
+            "en": "Is this yours?",
+            "id": "Apakah ini milikmu? (memastikan pemilik)"
           }
         ],
-        "tip": "If you don't know the English name for something, just point and say \"What is this?\""
+        "tip": "Kalau tidak tahu nama bahasa Inggris suatu benda, tunjuk saja dan tanya \"What is this?\""
       },
       {
         "type": "conversation",
-        "heading": "Asking & Answering",
-        "body": "Natural conversations about objects:",
+        "heading": "Bertanya dan Menjawab",
+        "body": "Contoh obrolan natural tentang benda:",
         "examples": [
           {
             "en": "A: What is this? — It is a dictionary.",
@@ -2403,7 +4952,28 @@
             "en": "A: Whose pen is this? — It is mine.",
             "id": "A: Pena siapa ini? — Punyaku."
           }
-        ]
+        ],
+        "tip": ""
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Dictionary",
+            "id": "DIC-tion-ar-y · /ˈdɪkʃəneri/"
+          },
+          {
+            "en": "Whose",
+            "id": "WHOSE · /huːz/ (w tidak dibaca)"
+          },
+          {
+            "en": "Mine",
+            "id": "MINE · /maɪn/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -2420,7 +4990,7 @@
             "Who"
           ],
           "correctAnswer": "What",
-          "explanation": "\"What\" asks about things. \"What is this?\" = Apa ini? The answer is the name of the object."
+          "explanation": "\"What\" menanyakan benda. \"What is this?\" = Apa ini? Jawabannya nama bendanya."
         }
       },
       {
@@ -2429,20 +4999,86 @@
         "xpReward": 15,
         "content": {
           "phrase": "What is this?",
-          "hint": "Say: What is this?",
+          "hint": "Ucapkan: What is this?",
           "translation": "Apa ini?"
+        }
+      },
+      {
+        "id": "study_c5s3_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "What is this?",
+              "meaning": "Apa ini?"
+            },
+            {
+              "word": "What is that?",
+              "meaning": "Apa itu?"
+            },
+            {
+              "word": "Whose is this?",
+              "meaning": "Ini milik siapa?"
+            },
+            {
+              "word": "Dictionary",
+              "meaning": "Kamus"
+            }
+          ],
+          "shuffledMeanings": [
+            "Kamus",
+            "Apa itu?",
+            "Ini milik siapa?",
+            "Apa ini?"
+          ],
+          "explanation": "What is this? = Apa ini?. What is that? = Apa itu?. Whose is this? = Ini milik siapa?. Dictionary = Kamus."
+        }
+      },
+      {
+        "id": "study_c5s3_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "What is this?",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "Whose is this?",
+            "Is this yours?",
+            "What is this?",
+            "What is that?"
+          ],
+          "correctAnswer": "What is this?",
+          "explanation": "Lingo mengucapkan \"What is this?\" yang artinya \"Apa ini?\""
+        }
+      },
+      {
+        "id": "study_c5s3_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'What is that?'?",
+          "options": [
+            "Apa ini?",
+            "Apa itu?",
+            "Ini milik siapa?",
+            "Apakah ini milikmu?"
+          ],
+          "correctAnswer": "Apa itu?",
+          "explanation": "\"What is that?\" = Apa itu?"
         }
       }
     ]
   },
   "c5s4": {
-    "title": "Asking About Preferences",
-    "intro": "\"Do you like…?\" is one of the most common ways to start a conversation and find common interests. Master this pattern and you'll never run out of things to talk about.",
+    "title": "Bertanya tentang Kesukaan",
+    "intro": "\"Do you like...?\" adalah salah satu cara paling umum untuk memulai obrolan dan menemukan kesukaan yang sama. Kuasai pola ini dan kamu tidak akan kehabisan bahan obrolan.",
     "sections": [
       {
         "type": "grammar",
-        "heading": "Do You Like… Pattern",
-        "body": "Use DO (for I/you/we/they) and DOES (for he/she/it) to ask about preferences:",
+        "heading": "Pola Do You Like...",
+        "body": "Pakai DO (untuk I/you/we/they) dan DOES (untuk he/she/it) untuk menanyakan kesukaan:",
         "examples": [
           {
             "en": "Do you like music? — Yes, I do! / No, I don't.",
@@ -2461,12 +5097,12 @@
             "id": "Apakah dia suka olahraga? — Tidak."
           }
         ],
-        "tip": "Short answers: Yes, I do. / No, I don't. (NOT \"Yes, I like\" or \"No, I not like\")"
+        "tip": "Jawaban singkat: Yes, I do. / No, I don't. (BUKAN \"Yes, I like\" atau \"No, I not like\")"
       },
       {
         "type": "conversation",
-        "heading": "Preference Conversation",
-        "body": "How to talk about likes naturally:",
+        "heading": "Obrolan tentang Kesukaan",
+        "body": "Begini cara membicarakan kesukaan dengan natural:",
         "examples": [
           {
             "en": "A: Do you like reading?",
@@ -2484,7 +5120,28 @@
             "en": "B: Yes, she does! She loves football.",
             "id": "B: Ya! Dia sangat suka sepak bola."
           }
-        ]
+        ],
+        "tip": ""
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Music",
+            "id": "MU-sic · /ˈmjuːzɪk/"
+          },
+          {
+            "en": "Football",
+            "id": "FOOT-ball · /ˈfʊtbɔːl/"
+          },
+          {
+            "en": "Don't",
+            "id": "DON'T · /doʊnt/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -2501,7 +5158,7 @@
             "isn't"
           ],
           "correctAnswer": "don't",
-          "explanation": "Negative of \"do\" = don't (do not). \"No, I don't.\" is the correct short answer."
+          "explanation": "Bentuk negatif dari \"do\" adalah don't (do not). \"No, I don't.\" adalah jawaban singkat yang benar."
         }
       },
       {
@@ -2510,20 +5167,86 @@
         "xpReward": 15,
         "content": {
           "phrase": "Do you like football?",
-          "hint": "Say: Do you like football?",
+          "hint": "Ucapkan: Do you like football?",
           "translation": "Apakah kamu suka sepak bola?"
+        }
+      },
+      {
+        "id": "study_c5s4_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Music",
+              "meaning": "Musik"
+            },
+            {
+              "word": "Football",
+              "meaning": "Sepak bola"
+            },
+            {
+              "word": "Reading",
+              "meaning": "Membaca"
+            },
+            {
+              "word": "Cooking",
+              "meaning": "Memasak"
+            }
+          ],
+          "shuffledMeanings": [
+            "Memasak",
+            "Sepak bola",
+            "Membaca",
+            "Musik"
+          ],
+          "explanation": "Music = Musik. Football = Sepak bola. Reading = Membaca. Cooking = Memasak."
+        }
+      },
+      {
+        "id": "study_c5s4_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "Do you like reading?",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "Yes, she does! She loves football.",
+            "Do you like reading?",
+            "No, I don't. But I like music!",
+            "Does your friend like sports?"
+          ],
+          "correctAnswer": "Do you like reading?",
+          "explanation": "Lingo mengucapkan \"Do you like reading?\" yang artinya \"Apakah kamu suka membaca?\""
+        }
+      },
+      {
+        "id": "study_c5s4_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'No, I don't. But I like music!'?",
+          "options": [
+            "Tidak. Tapi saya suka musik!",
+            "Apakah temanmu suka olahraga?",
+            "Ya! Dia sangat suka sepak bola.",
+            "Apakah kamu suka membaca?"
+          ],
+          "correctAnswer": "Tidak. Tapi saya suka musik!",
+          "explanation": "\"No, I don't. But I like music!\" = Tidak. Tapi saya suka musik!"
         }
       }
     ]
   },
   "c5s5": {
-    "title": "Short Conversations",
-    "intro": "Now we put everything together into real short conversations. A conversation has flow — greeting, question, answer, follow-up. Let's practise the complete pattern.",
+    "title": "Percakapan Singkat",
+    "intro": "Sekarang kita gabungkan semuanya menjadi percakapan singkat yang nyata. Percakapan punya alur: sapaan, pertanyaan, jawaban, lalu tanggapan. Kita latih pola lengkapnya.",
     "sections": [
       {
         "type": "conversation",
-        "heading": "Meeting a Friend",
-        "body": "A typical short conversation between two people who know each other:",
+        "heading": "Bertemu Teman",
+        "body": "Contoh percakapan singkat antara dua orang yang sudah saling kenal:",
         "examples": [
           {
             "en": "A: Hi! How are you?",
@@ -2543,15 +5266,15 @@
           },
           {
             "en": "A: Bye!",
-            "id": "A: Selamat tinggal!"
+            "id": "A: Dadah!"
           }
         ],
-        "tip": "Always return the question! When someone asks \"How are you?\", ask \"And you?\" back."
+        "tip": "Selalu tanya balik! Kalau ditanya \"How are you?\", tanyakan \"And you?\""
       },
       {
         "type": "grammar",
-        "heading": "Conversation Starters & Closers",
-        "body": "Phrases to open and close any English conversation:",
+        "heading": "Pembuka dan Penutup Obrolan",
+        "body": "Ungkapan untuk membuka dan menutup obrolan dalam bahasa Inggris:",
         "examples": [
           {
             "en": "Openers: Hi! / Hello! / Good morning!",
@@ -2569,7 +5292,28 @@
             "en": "See you + time: See you tomorrow! / See you later!",
             "id": "Sampai jumpa besok! / Sampai nanti!"
           }
-        ]
+        ],
+        "tip": ""
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Great",
+            "id": "GREAT · /ɡreɪt/ (dibaca seperti 'greit')"
+          },
+          {
+            "en": "Later",
+            "id": "LA-ter · /ˈleɪtər/"
+          },
+          {
+            "en": "See you",
+            "id": "SEE you · /siː juː/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -2586,7 +5330,7 @@
             "I am busy."
           ],
           "correctAnswer": "I am fine.",
-          "explanation": "\"I am fine.\" = Saya baik-baik saja. It is the most common response to \"How are you?\""
+          "explanation": "\"I am fine.\" = Saya baik-baik saja. Ini jawaban paling umum untuk \"How are you?\""
         }
       },
       {
@@ -2595,20 +5339,86 @@
         "xpReward": 15,
         "content": {
           "phrase": "How are you? I am fine, thank you!",
-          "hint": "Say: How are you? I am fine, thank you!",
+          "hint": "Ucapkan: How are you? I am fine, thank you!",
           "translation": "Apa kabar? Saya baik-baik saja, terima kasih!"
+        }
+      },
+      {
+        "id": "study_c5s5_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "How are you?",
+              "meaning": "Apa kabar?"
+            },
+            {
+              "word": "I am fine",
+              "meaning": "Saya baik-baik saja"
+            },
+            {
+              "word": "See you later",
+              "meaning": "Sampai nanti"
+            },
+            {
+              "word": "Bye",
+              "meaning": "Dadah"
+            }
+          ],
+          "shuffledMeanings": [
+            "Dadah",
+            "Saya baik-baik saja",
+            "Sampai nanti",
+            "Apa kabar?"
+          ],
+          "explanation": "How are you? = Apa kabar?. I am fine = Saya baik-baik saja. See you later = Sampai nanti. Bye = Dadah."
+        }
+      },
+      {
+        "id": "study_c5s5_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "Hi! How are you?",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "Hi! How are you?",
+            "I am fine, thank you! And you?",
+            "I am great, thanks!",
+            "See you tomorrow!"
+          ],
+          "correctAnswer": "Hi! How are you?",
+          "explanation": "Lingo mengucapkan \"Hi! How are you?\" yang artinya \"Hai! Apa kabar?\""
+        }
+      },
+      {
+        "id": "study_c5s5_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'I am fine, thank you! And you?'?",
+          "options": [
+            "Saya sangat baik, terima kasih!",
+            "Sampai jumpa besok!",
+            "Hai! Apa kabar?",
+            "Saya baik, terima kasih! Dan kamu?"
+          ],
+          "correctAnswer": "Saya baik, terima kasih! Dan kamu?",
+          "explanation": "\"I am fine, thank you! And you?\" = Saya baik, terima kasih! Dan kamu?"
         }
       }
     ]
   },
   "c5s6": {
-    "title": "Final Challenge — Full Conversations",
-    "intro": "This is the final stage! Bring together everything from all 5 chapters: greetings, polite words, introductions, vocabulary, grammar, and full conversations.",
+    "title": "Tantangan Akhir: Percakapan Lengkap",
+    "intro": "Ini stage terakhir! Gabungkan semua materi dari 5 chapter: sapaan, kata sopan, perkenalan, kosakata, tata bahasa, dan percakapan lengkap.",
     "sections": [
       {
         "type": "conversation",
-        "heading": "The Complete English Conversation",
-        "body": "Here is a model conversation using everything you have learned:",
+        "heading": "Percakapan Bahasa Inggris Lengkap",
+        "body": "Ini contoh percakapan yang memakai semua yang sudah kamu pelajari:",
         "examples": [
           {
             "en": "A: Good morning! My name is Rina. Nice to meet you!",
@@ -2634,12 +5444,13 @@
             "en": "B: Goodbye! See you tomorrow!",
             "id": "B: Selamat tinggal! Sampai jumpa besok!"
           }
-        ]
+        ],
+        "tip": ""
       },
       {
         "type": "grammar",
-        "heading": "Everything You Have Learned",
-        "body": "Congratulations! Here is a summary of all key patterns from all 5 chapters:",
+        "heading": "Semua yang Sudah Kamu Pelajari",
+        "body": "Selamat! Ini ringkasan pola-pola penting dari kelima chapter:",
         "examples": [
           {
             "en": "Ch.1: Hello / Thank you / My name is / I am",
@@ -2662,7 +5473,27 @@
             "id": "Percakapan nyata tentang diri sendiri"
           }
         ],
-        "tip": "Practice every day! Even one sentence a day will make a huge difference over time."
+        "tip": "Latihan setiap hari! Satu kalimat sehari pun akan membuat perbedaan besar."
+      },
+      {
+        "type": "pronunciation",
+        "heading": "Cara Mengucapkan",
+        "body": "Suku kata yang ditekan ditulis dengan huruf besar. Ketuk tombol putar untuk mendengar Lingo mengucapkannya, lalu tirukan.",
+        "examples": [
+          {
+            "en": "Sports",
+            "id": "SPORTS · /spɔːrts/"
+          },
+          {
+            "en": "Meet",
+            "id": "MEET · /miːt/ (i panjang, bedakan dengan 'eat')"
+          },
+          {
+            "en": "Tomorrow",
+            "id": "to-MOR-row · /təˈmɑːroʊ/"
+          }
+        ],
+        "tip": ""
       }
     ],
     "practice": [
@@ -2679,7 +5510,7 @@
             "Good morning! Where are you from? — I am good!"
           ],
           "correctAnswer": "Hello! How are you? — Fine, thank you!",
-          "explanation": "Halo = Hello, Apa kabar = How are you, Baik = Fine/Good, Terima kasih = thank you."
+          "explanation": "Halo = Hello, Apa kabar = How are you, Baik = Fine/Good, Terima kasih = Thank you."
         }
       },
       {
@@ -2688,8 +5519,74 @@
         "xpReward": 15,
         "content": {
           "phrase": "Good morning! My name is Rina. Nice to meet you!",
-          "hint": "Say a full greeting + introduction. You can use your real name.",
+          "hint": "Ucapkan sapaan dan perkenalan lengkap. Boleh pakai namamu sendiri.",
           "translation": "Selamat pagi! Nama saya Rina. Senang bertemu denganmu!"
+        }
+      },
+      {
+        "id": "study_c5s6_p3",
+        "type": "matching_word",
+        "xpReward": 15,
+        "content": {
+          "instruction": "Cocokkan kata bahasa Inggris dengan artinya!",
+          "pairs": [
+            {
+              "word": "Good morning",
+              "meaning": "Selamat pagi"
+            },
+            {
+              "word": "Where are you from?",
+              "meaning": "Kamu dari mana?"
+            },
+            {
+              "word": "Do you like sports?",
+              "meaning": "Apakah kamu suka olahraga?"
+            },
+            {
+              "word": "See you tomorrow",
+              "meaning": "Sampai jumpa besok"
+            }
+          ],
+          "shuffledMeanings": [
+            "Sampai jumpa besok",
+            "Kamu dari mana?",
+            "Apakah kamu suka olahraga?",
+            "Selamat pagi"
+          ],
+          "explanation": "Good morning = Selamat pagi. Where are you from? = Kamu dari mana?. Do you like sports? = Apakah kamu suka olahraga?. See you tomorrow = Sampai jumpa besok."
+        }
+      },
+      {
+        "id": "study_c5s6_p4",
+        "type": "listening_quiz",
+        "xpReward": 15,
+        "content": {
+          "audioText": "Yes, I am! Do you like sports?",
+          "question": "Kalimat mana yang diucapkan Lingo?",
+          "options": [
+            "Goodbye! See you tomorrow!",
+            "I am from Bali.",
+            "Nice to meet you!",
+            "Yes, I am! Do you like sports?"
+          ],
+          "correctAnswer": "Yes, I am! Do you like sports?",
+          "explanation": "Lingo mengucapkan \"Yes, I am! Do you like sports?\" yang artinya \"Ya! Apakah kamu suka olahraga?\""
+        }
+      },
+      {
+        "id": "study_c5s6_p5",
+        "type": "translation_quiz",
+        "xpReward": 10,
+        "content": {
+          "question": "Apa arti kalimat 'Goodbye! See you tomorrow!'?",
+          "options": [
+            "Saya suka sepak bola.",
+            "Selamat tinggal! Sampai jumpa besok!",
+            "Saya dari Bali.",
+            "Senang bertemu denganmu!"
+          ],
+          "correctAnswer": "Selamat tinggal! Sampai jumpa besok!",
+          "explanation": "\"Goodbye! See you tomorrow!\" = Selamat tinggal! Sampai jumpa besok!"
         }
       }
     ]

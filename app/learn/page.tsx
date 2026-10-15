@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import BottomNav from "@/components/Layout/BottomNav";
 import { useLanguageStore } from "@/store/useLanguageStore";
-import { useProgress } from "@/hooks/useProgress";
+import { useStudyStore } from "@/store/useStudyStore";
 
 /* ─── Data per bahasa ─────────────────────────────────────
    Tambah entry baru di sini kalau ada bahasa baru.
@@ -62,7 +62,8 @@ const LANG_META: Record<string, { name: string; flag: string; learnTitle: string
 export default function LearnPage() {
   const router = useRouter();
   const selectedLanguage = useLanguageStore(s => s.selectedLanguage) ?? "en";
-  const { completedStages } = useProgress();
+  // Lessons finished in "Materi" (tracked on their own, apart from the adventure stages)
+  const studied = useStudyStore(s => s.done[selectedLanguage]) ?? {};
 
   const [expandedChapter, setExpandedChapter] = useState<number | null>(0);
   const [hoveredStage, setHoveredStage] = useState<string | null>(null);
@@ -155,7 +156,7 @@ export default function LearnPage() {
           const sectionTypeCounts: Record<string, number> = {};
 
           stages.forEach((stage: any) => {
-            if (completedStages[stage.id]) completedCount++;
+            if (studied[stage.id]) completedCount++;
             const entry = stage.feedKey ? (studyData as any)[stage.feedKey] : null;
             if (entry) {
               entry.sections?.forEach((sec: any) => {
@@ -166,7 +167,7 @@ export default function LearnPage() {
           });
 
           const chapterProgress = stages.length > 0 ? Math.round((completedCount / stages.length) * 100) : 0;
-          const nextStageId = stages.find((st: any) => !completedStages[st.id])?.id;
+          const nextStageId = stages.find((st: any) => !studied[st.id])?.id;
           const isChapterCompleted = stages.length > 0 && completedCount === stages.length;
 
           return (
@@ -289,7 +290,7 @@ export default function LearnPage() {
                     const materiCount = entry?.sections?.length ?? 0;
                     const soalCount   = entry?.practice?.length ?? 0;
                     const stageXp     = entry?.practice?.reduce((s: number, p: any) => s + (p.xpReward ?? 0), 0) ?? 0;
-                    const isCompleted = completedStages[stage.id] === true;
+                    const isCompleted = !!studied[stage.id];
                     const isNext      = stage.id === nextStageId;
                     const isHovered   = hoveredStage === stage.id;
 
@@ -337,7 +338,7 @@ export default function LearnPage() {
                             {stage.label ?? entry?.title ?? `Stage ${si + 1}`}
                           </p>
                           {isCompleted ? (
-                            <p style={{ margin: "3px 0 0", fontSize: 11, color: "#34d399", fontWeight: 700 }}>Selesai · ulangi</p>
+                            <p style={{ margin: "3px 0 0", fontSize: 11, color: "#34d399", fontWeight: 700 }}>Sudah dibaca · ulangi</p>
                           ) : entry && (
                             <p style={{ margin: "3px 0 0", fontSize: 11, color: isNext ? color : "rgba(255,255,255,0.28)", fontWeight: isNext ? 700 : 400 }}>
                               {isNext ? `Berikutnya · ${entry.title}` : entry.title}
