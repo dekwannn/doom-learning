@@ -173,7 +173,17 @@
           "explanation": "\"Hello, how are you?\" = Halo, apa kabar?"
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c1s2": {
     "title": "Ungkapan Sopan",
@@ -377,7 +387,17 @@
           "explanation": "\"Thank you very much!\" = Terima kasih banyak!"
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c1s3": {
     "title": "Memperkenalkan Diri",
@@ -569,7 +589,17 @@
           "explanation": "\"What is your name?\" = Siapa namamu?"
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c1s4": {
     "title": "Kata Ganti Orang",
@@ -749,7 +779,17 @@
           "explanation": "\"She is a doctor.\" = Dia seorang dokter."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c1s5": {
     "title": "Kalimat Sederhana dengan Am / Is",
@@ -921,7 +961,17 @@
           "explanation": "\"I am tired.\" = Saya lelah."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c1s6": {
     "title": "Ulasan Chapter 1: Semua Digabungkan",
@@ -1101,7 +1151,17 @@
           "explanation": "\"Hello Rina! I am Budi. Nice to meet you!\" = Halo Rina! Saya Budi. Senang bertemu denganmu!"
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c2s1": {
     "title": "Benda di Sekitar Kita",
@@ -1116,8 +1176,16 @@
             "en": "Book",
             "id": "Buku",
             "example": {
-              "en": "I use a book to study.",
-              "id": "Saya memakai buku untuk belajar."
+              "en": "I have a book.",
+              "id": "Aku punya buku.",
+              "tatoeba": {
+                "en": 2793249,
+                "id": 13732287,
+                "by": [
+                  "CK",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
@@ -1125,47 +1193,95 @@
             "id": "Meja",
             "example": {
               "en": "The book is on the table.",
-              "id": "Buku itu ada di atas meja."
+              "id": "Buku itu ada di atas meja.",
+              "tatoeba": {
+                "en": 2163151,
+                "id": 10363931,
+                "by": [
+                  "Source_VOA",
+                  "koala"
+                ]
+              }
             }
           },
           {
             "en": "Chair",
             "id": "Kursi",
             "example": {
-              "en": "I sit on a chair.",
-              "id": "Saya duduk di kursi."
+              "en": "Where is your chair?",
+              "id": "Kursimu di mana?",
+              "tatoeba": {
+                "en": 11911343,
+                "id": 11962175,
+                "by": [
+                  "zogwarg",
+                  "Pacific"
+                ]
+              }
             }
           },
           {
             "en": "Pen",
-            "id": "Pena",
+            "id": "Pena / Pulpen",
             "example": {
-              "en": "I use a pen to write.",
-              "id": "Saya memakai pena untuk menulis."
+              "en": "Do you have a pen?",
+              "id": "Apa kau punya pulpen?",
+              "tatoeba": {
+                "en": 33771,
+                "id": 4331566,
+                "by": [
+                  "CK",
+                  "Bilmanda"
+                ]
+              }
             }
           },
           {
             "en": "Bag",
             "id": "Tas",
             "example": {
-              "en": "I carry my books in my bag.",
-              "id": "Saya membawa buku-buku saya di dalam tas."
+              "en": "Please open your bag.",
+              "id": "Tolong buka tasmu.",
+              "tatoeba": {
+                "en": 35158,
+                "id": 5871031,
+                "by": [
+                  "CK",
+                  "Bilmanda"
+                ]
+              }
             }
           },
           {
             "en": "Phone",
             "id": "Telepon / HP",
             "example": {
-              "en": "She puts her phone in her bag.",
-              "id": "Dia menaruh HP-nya di dalam tas."
+              "en": "I have a new phone.",
+              "id": "Aku punya telepon baru.",
+              "tatoeba": {
+                "en": 7851651,
+                "id": 13699655,
+                "by": [
+                  "CK",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
             "en": "Window",
             "id": "Jendela",
             "example": {
-              "en": "The window is open.",
-              "id": "Jendelanya terbuka."
+              "en": "Please open the window.",
+              "id": "Tolong buka jendelanya.",
+              "tatoeba": {
+                "en": 274213,
+                "id": 5865095,
+                "by": [
+                  "CK",
+                  "Bilmanda"
+                ]
+              }
             }
           },
           {
@@ -1173,7 +1289,15 @@
             "id": "Pintu",
             "example": {
               "en": "Please close the door.",
-              "id": "Tolong tutup pintunya."
+              "id": "Tolong tutup pintunya.",
+              "tatoeba": {
+                "en": 495838,
+                "id": 5868237,
+                "by": [
+                  "CK",
+                  "Bilmanda"
+                ]
+              }
             }
           }
         ],
@@ -1289,16 +1413,16 @@
         "type": "listening_quiz",
         "xpReward": 15,
         "content": {
-          "audioText": "I use a book to study.",
+          "audioText": "I have a book.",
           "question": "Kalimat mana yang diucapkan Lingo?",
           "options": [
             "The book is on the table.",
-            "I sit on a chair.",
-            "I use a pen to write.",
-            "I use a book to study."
+            "Where is your chair?",
+            "Do you have a pen?",
+            "I have a book."
           ],
-          "correctAnswer": "I use a book to study.",
-          "explanation": "Lingo mengucapkan \"I use a book to study.\" yang artinya \"Saya memakai buku untuk belajar.\""
+          "correctAnswer": "I have a book.",
+          "explanation": "Lingo mengucapkan \"I have a book.\" yang artinya \"Aku punya buku.\""
         }
       },
       {
@@ -1308,16 +1432,91 @@
         "content": {
           "question": "Apa arti kalimat 'The book is on the table.'?",
           "options": [
-            "Saya membawa buku-buku saya di dalam tas.",
+            "Tolong buka tasmu.",
             "Buku itu ada di atas meja.",
-            "Saya duduk di kursi.",
-            "Saya memakai pena untuk menulis."
+            "Kursimu di mana?",
+            "Apa kau punya pulpen?"
           ],
           "correctAnswer": "Buku itu ada di atas meja.",
           "explanation": "\"The book is on the table.\" = Buku itu ada di atas meja."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [
+        {
+          "en": 2793249,
+          "id": 13732287,
+          "by": [
+            "CK",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 2163151,
+          "id": 10363931,
+          "by": [
+            "Source_VOA",
+            "koala"
+          ]
+        },
+        {
+          "en": 11911343,
+          "id": 11962175,
+          "by": [
+            "zogwarg",
+            "Pacific"
+          ]
+        },
+        {
+          "en": 33771,
+          "id": 4331566,
+          "by": [
+            "CK",
+            "Bilmanda"
+          ]
+        },
+        {
+          "en": 35158,
+          "id": 5871031,
+          "by": [
+            "CK",
+            "Bilmanda"
+          ]
+        },
+        {
+          "en": 7851651,
+          "id": 13699655,
+          "by": [
+            "CK",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 274213,
+          "id": 5865095,
+          "by": [
+            "CK",
+            "Bilmanda"
+          ]
+        },
+        {
+          "en": 495838,
+          "id": 5868237,
+          "by": [
+            "CK",
+            "Bilmanda"
+          ]
+        }
+      ],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c2s2": {
     "title": "Makanan dan Minuman",
@@ -1333,55 +1532,111 @@
             "id": "Nasi",
             "example": {
               "en": "I eat rice every day.",
-              "id": "Saya makan nasi setiap hari."
+              "id": "Aku makan nasi setiap hari.",
+              "tatoeba": {
+                "en": 7089421,
+                "id": 10063948,
+                "by": [
+                  "CK",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
             "en": "Bread",
             "id": "Roti",
             "example": {
-              "en": "I have bread for breakfast.",
-              "id": "Saya sarapan roti."
+              "en": "We buy bread.",
+              "id": "Kami membeli roti.",
+              "tatoeba": {
+                "en": 5347061,
+                "id": 10015509,
+                "by": [
+                  "CarpeLanam",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
             "en": "Water",
             "id": "Air",
             "example": {
-              "en": "Can I have a glass of water?",
-              "id": "Boleh saya minta segelas air?"
+              "en": "I drink water.",
+              "id": "Aku minum air.",
+              "tatoeba": {
+                "en": 7932256,
+                "id": 2763119,
+                "by": [
+                  "Seael",
+                  "Bilmanda"
+                ]
+              }
             }
           },
           {
             "en": "Milk",
             "id": "Susu",
             "example": {
-              "en": "I drink milk every morning.",
-              "id": "Saya minum susu setiap pagi."
+              "en": "Milk is white.",
+              "id": "Susu berwarna putih.",
+              "tatoeba": {
+                "en": 10248826,
+                "id": 11239824,
+                "by": [
+                  "ddnktr",
+                  "Pacific"
+                ]
+              }
             }
           },
           {
             "en": "Coffee",
             "id": "Kopi",
             "example": {
-              "en": "I like coffee in the morning.",
-              "id": "Saya suka minum kopi di pagi hari."
+              "en": "I like coffee.",
+              "id": "Aku suka kopi.",
+              "tatoeba": {
+                "en": 3524072,
+                "id": 11227101,
+                "by": [
+                  "robbieheslop",
+                  "Pi31415i"
+                ]
+              }
             }
           },
           {
             "en": "Apple",
             "id": "Apel",
             "example": {
-              "en": "She eats an apple after school.",
-              "id": "Dia makan apel sepulang sekolah."
+              "en": "I'm eating an apple.",
+              "id": "Saya sedang makan apel.",
+              "tatoeba": {
+                "en": 2445198,
+                "id": 11475116,
+                "by": [
+                  "AlanF_US",
+                  "Pacific"
+                ]
+              }
             }
           },
           {
             "en": "Egg",
             "id": "Telur",
             "example": {
-              "en": "I eat an egg for breakfast.",
-              "id": "Saya sarapan sebutir telur."
+              "en": "This is an egg.",
+              "id": "Ini telur.",
+              "tatoeba": {
+                "en": 1761900,
+                "id": 12196646,
+                "by": [
+                  "Dejo",
+                  "Pacific"
+                ]
+              }
             }
           }
         ],
@@ -1460,7 +1715,7 @@
         "content": {
           "phrase": "I eat rice every day.",
           "hint": "Ucapkan: I eat rice every day.",
-          "translation": "Saya makan nasi setiap hari."
+          "translation": "Aku makan nasi setiap hari."
         }
       },
       {
@@ -1504,13 +1759,13 @@
           "audioText": "I eat rice every day.",
           "question": "Kalimat mana yang diucapkan Lingo?",
           "options": [
-            "Can I have a glass of water?",
-            "I drink milk every morning.",
+            "I drink water.",
+            "Milk is white.",
             "I eat rice every day.",
-            "I have bread for breakfast."
+            "We buy bread."
           ],
           "correctAnswer": "I eat rice every day.",
-          "explanation": "Lingo mengucapkan \"I eat rice every day.\" yang artinya \"Saya makan nasi setiap hari.\""
+          "explanation": "Lingo mengucapkan \"I eat rice every day.\" yang artinya \"Aku makan nasi setiap hari.\""
         }
       },
       {
@@ -1518,18 +1773,85 @@
         "type": "translation_quiz",
         "xpReward": 10,
         "content": {
-          "question": "Apa arti kalimat 'I have bread for breakfast.'?",
+          "question": "Apa arti kalimat 'We buy bread.'?",
           "options": [
-            "Saya sarapan roti.",
-            "Boleh saya minta segelas air?",
-            "Saya minum susu setiap pagi.",
-            "Saya suka minum kopi di pagi hari."
+            "Kami membeli roti.",
+            "Aku minum air.",
+            "Susu berwarna putih.",
+            "Aku suka kopi."
           ],
-          "correctAnswer": "Saya sarapan roti.",
-          "explanation": "\"I have bread for breakfast.\" = Saya sarapan roti."
+          "correctAnswer": "Kami membeli roti.",
+          "explanation": "\"We buy bread.\" = Kami membeli roti."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [
+        {
+          "en": 7089421,
+          "id": 10063948,
+          "by": [
+            "CK",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 5347061,
+          "id": 10015509,
+          "by": [
+            "CarpeLanam",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 7932256,
+          "id": 2763119,
+          "by": [
+            "Seael",
+            "Bilmanda"
+          ]
+        },
+        {
+          "en": 10248826,
+          "id": 11239824,
+          "by": [
+            "ddnktr",
+            "Pacific"
+          ]
+        },
+        {
+          "en": 3524072,
+          "id": 11227101,
+          "by": [
+            "robbieheslop",
+            "Pi31415i"
+          ]
+        },
+        {
+          "en": 2445198,
+          "id": 11475116,
+          "by": [
+            "AlanF_US",
+            "Pacific"
+          ]
+        },
+        {
+          "en": 1761900,
+          "id": 12196646,
+          "by": [
+            "Dejo",
+            "Pacific"
+          ]
+        }
+      ],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c2s3": {
     "title": "Warna",
@@ -1544,8 +1866,16 @@
             "en": "Red",
             "id": "Merah",
             "example": {
-              "en": "The apple is red.",
-              "id": "Apel itu merah."
+              "en": "The book is red.",
+              "id": "Buku itu berwarna merah.",
+              "tatoeba": {
+                "en": 801719,
+                "id": 4027261,
+                "by": [
+                  "CM",
+                  "Bilmanda"
+                ]
+              }
             }
           },
           {
@@ -1553,55 +1883,111 @@
             "id": "Biru",
             "example": {
               "en": "The sky is blue.",
-              "id": "Langitnya biru."
+              "id": "Langit berwarna biru.",
+              "tatoeba": {
+                "en": 18275,
+                "id": 4555924,
+                "by": [
+                  "CK",
+                  "dbahasa"
+                ]
+              }
             }
           },
           {
             "en": "Green",
             "id": "Hijau",
             "example": {
-              "en": "The grass is green.",
-              "id": "Rumputnya hijau."
+              "en": "I have a green apple.",
+              "id": "Aku punya apel hijau.",
+              "tatoeba": {
+                "en": 11990035,
+                "id": 11990062,
+                "by": [
+                  "carlosalberto",
+                  "Pacific"
+                ]
+              }
             }
           },
           {
             "en": "Yellow",
             "id": "Kuning",
             "example": {
-              "en": "The sun is yellow.",
-              "id": "Mataharinya kuning."
+              "en": "Bananas are yellow.",
+              "id": "Pisang berwarna kuning.",
+              "tatoeba": {
+                "en": 559000,
+                "id": 11199535,
+                "by": [
+                  "djinni74",
+                  "Pacific"
+                ]
+              }
             }
           },
           {
             "en": "White",
             "id": "Putih",
             "example": {
-              "en": "She has a white bag.",
-              "id": "Dia punya tas putih."
+              "en": "This cat is white.",
+              "id": "Kucing ini putih.",
+              "tatoeba": {
+                "en": 5317926,
+                "id": 12134234,
+                "by": [
+                  "Adelpa",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
             "en": "Black",
             "id": "Hitam",
             "example": {
-              "en": "He has black shoes.",
-              "id": "Dia punya sepatu hitam."
+              "en": "The dog is black.",
+              "id": "Anjing itu hitam.",
+              "tatoeba": {
+                "en": 3958285,
+                "id": 12438602,
+                "by": [
+                  "senryakun",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
             "en": "Orange",
             "id": "Oranye",
             "example": {
-              "en": "I like orange juice.",
-              "id": "Saya suka jus jeruk."
+              "en": "I want orange juice.",
+              "id": "Saya ingin jus jeruk.",
+              "tatoeba": {
+                "en": 7807966,
+                "id": 4556552,
+                "by": [
+                  "sharris123",
+                  "dbahasa"
+                ]
+              }
             }
           },
           {
             "en": "Purple",
             "id": "Ungu",
             "example": {
-              "en": "She likes purple flowers.",
-              "id": "Dia suka bunga ungu."
+              "en": "My favourite colour is purple.",
+              "id": "Warna kesukaanku adalah ungu.",
+              "tatoeba": {
+                "en": 3251263,
+                "id": 11326814,
+                "by": [
+                  "andibing",
+                  "Pacific"
+                ]
+              }
             }
           }
         ],
@@ -1721,16 +2107,16 @@
         "type": "listening_quiz",
         "xpReward": 15,
         "content": {
-          "audioText": "The apple is red.",
+          "audioText": "The book is red.",
           "question": "Kalimat mana yang diucapkan Lingo?",
           "options": [
-            "The sun is yellow.",
-            "The apple is red.",
+            "Bananas are yellow.",
+            "The book is red.",
             "The sky is blue.",
-            "The grass is green."
+            "I have a green apple."
           ],
-          "correctAnswer": "The apple is red.",
-          "explanation": "Lingo mengucapkan \"The apple is red.\" yang artinya \"Apel itu merah.\""
+          "correctAnswer": "The book is red.",
+          "explanation": "Lingo mengucapkan \"The book is red.\" yang artinya \"Buku itu berwarna merah.\""
         }
       },
       {
@@ -1740,16 +2126,91 @@
         "content": {
           "question": "Apa arti kalimat 'The sky is blue.'?",
           "options": [
-            "Rumputnya hijau.",
-            "Mataharinya kuning.",
-            "Dia punya tas putih.",
-            "Langitnya biru."
+            "Aku punya apel hijau.",
+            "Pisang berwarna kuning.",
+            "Kucing ini putih.",
+            "Langit berwarna biru."
           ],
-          "correctAnswer": "Langitnya biru.",
-          "explanation": "\"The sky is blue.\" = Langitnya biru."
+          "correctAnswer": "Langit berwarna biru.",
+          "explanation": "\"The sky is blue.\" = Langit berwarna biru."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [
+        {
+          "en": 801719,
+          "id": 4027261,
+          "by": [
+            "CM",
+            "Bilmanda"
+          ]
+        },
+        {
+          "en": 18275,
+          "id": 4555924,
+          "by": [
+            "CK",
+            "dbahasa"
+          ]
+        },
+        {
+          "en": 11990035,
+          "id": 11990062,
+          "by": [
+            "carlosalberto",
+            "Pacific"
+          ]
+        },
+        {
+          "en": 559000,
+          "id": 11199535,
+          "by": [
+            "djinni74",
+            "Pacific"
+          ]
+        },
+        {
+          "en": 5317926,
+          "id": 12134234,
+          "by": [
+            "Adelpa",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 3958285,
+          "id": 12438602,
+          "by": [
+            "senryakun",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 7807966,
+          "id": 4556552,
+          "by": [
+            "sharris123",
+            "dbahasa"
+          ]
+        },
+        {
+          "en": 3251263,
+          "id": 11326814,
+          "by": [
+            "andibing",
+            "Pacific"
+          ]
+        }
+      ],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c2s4": {
     "title": "Angka 1–10",
@@ -1772,16 +2233,32 @@
             "en": "Two",
             "id": "Dua",
             "example": {
-              "en": "She has two sisters.",
-              "id": "Dia punya dua saudara perempuan."
+              "en": "I have two cats.",
+              "id": "Saya punya dua ekor kucing.",
+              "tatoeba": {
+                "en": 2412739,
+                "id": 3081432,
+                "by": [
+                  "fjrjdk",
+                  "Bilmanda"
+                ]
+              }
             }
           },
           {
             "en": "Three",
             "id": "Tiga",
             "example": {
-              "en": "I have three cats.",
-              "id": "Saya punya tiga kucing."
+              "en": "I have three dogs.",
+              "id": "Aku punya tiga ekor anjing.",
+              "tatoeba": {
+                "en": 289638,
+                "id": 13680811,
+                "by": [
+                  "CK",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
@@ -1796,48 +2273,96 @@
             "en": "Five",
             "id": "Lima",
             "example": {
-              "en": "I have five pencils.",
-              "id": "Saya punya lima pensil."
+              "en": "It's five o'clock.",
+              "id": "Sekarang pukul lima.",
+              "tatoeba": {
+                "en": 1371779,
+                "id": 11840811,
+                "by": [
+                  "Anon",
+                  "Pacific"
+                ]
+              }
             }
           },
           {
             "en": "Six",
             "id": "Enam",
             "example": {
-              "en": "I wake up at six.",
-              "id": "Saya bangun jam enam."
+              "en": "I usually get up at six.",
+              "id": "Biasanya saya bangun pada pukul enam.",
+              "tatoeba": {
+                "en": 253112,
+                "id": 365979,
+                "by": [
+                  "CK",
+                  "hayabusa_future"
+                ]
+              }
             }
           },
           {
             "en": "Seven",
             "id": "Tujuh",
             "example": {
-              "en": "There are seven days in a week.",
-              "id": "Ada tujuh hari dalam seminggu."
+              "en": "I go to school at seven.",
+              "id": "Aku pergi ke sekolah pada pukul tujuh.",
+              "tatoeba": {
+                "en": 264923,
+                "id": 11473641,
+                "by": [
+                  "CK",
+                  "Pacific"
+                ]
+              }
             }
           },
           {
             "en": "Eight",
             "id": "Delapan",
             "example": {
-              "en": "I eat breakfast at eight.",
-              "id": "Saya sarapan jam delapan."
+              "en": "He's eight years old.",
+              "id": "Dia berumur 8 tahun.",
+              "tatoeba": {
+                "en": 2762773,
+                "id": 7061856,
+                "by": [
+                  "CK",
+                  "purichan"
+                ]
+              }
             }
           },
           {
             "en": "Nine",
             "id": "Sembilan",
             "example": {
-              "en": "There are nine students.",
-              "id": "Ada sembilan pelajar."
+              "en": "School starts at nine.",
+              "id": "Sekolah mulai pada pukul sembilan.",
+              "tatoeba": {
+                "en": 716137,
+                "id": 10605784,
+                "by": [
+                  "papabear",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
             "en": "Ten",
             "id": "Sepuluh",
             "example": {
-              "en": "I have ten fingers.",
-              "id": "Saya punya sepuluh jari."
+              "en": "It's ten o'clock.",
+              "id": "Sekarang jam sepuluh.",
+              "tatoeba": {
+                "en": 2706996,
+                "id": 10567200,
+                "by": [
+                  "CN",
+                  "HAGNi"
+                ]
+              }
             }
           }
         ],
@@ -1910,9 +2435,9 @@
         "type": "speaking_test",
         "xpReward": 15,
         "content": {
-          "phrase": "I have three cats.",
-          "hint": "Ucapkan: I have three cats.",
-          "translation": "Saya punya tiga kucing."
+          "phrase": "I have three dogs.",
+          "hint": "Ucapkan: I have three dogs.",
+          "translation": "Aku punya tiga ekor anjing."
         }
       },
       {
@@ -1957,8 +2482,8 @@
           "question": "Kalimat mana yang diucapkan Lingo?",
           "options": [
             "I have one book.",
-            "She has two sisters.",
-            "I have three cats.",
+            "I have two cats.",
+            "I have three dogs.",
             "There are four chairs."
           ],
           "correctAnswer": "I have one book.",
@@ -1970,18 +2495,93 @@
         "type": "translation_quiz",
         "xpReward": 10,
         "content": {
-          "question": "Apa arti kalimat 'She has two sisters.'?",
+          "question": "Apa arti kalimat 'I have two cats.'?",
           "options": [
             "Ada empat kursi.",
-            "Saya punya lima pensil.",
-            "Dia punya dua saudara perempuan.",
-            "Saya punya tiga kucing."
+            "Sekarang pukul lima.",
+            "Saya punya dua ekor kucing.",
+            "Aku punya tiga ekor anjing."
           ],
-          "correctAnswer": "Dia punya dua saudara perempuan.",
-          "explanation": "\"She has two sisters.\" = Dia punya dua saudara perempuan."
+          "correctAnswer": "Saya punya dua ekor kucing.",
+          "explanation": "\"I have two cats.\" = Saya punya dua ekor kucing."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [
+        {
+          "en": 2412739,
+          "id": 3081432,
+          "by": [
+            "fjrjdk",
+            "Bilmanda"
+          ]
+        },
+        {
+          "en": 289638,
+          "id": 13680811,
+          "by": [
+            "CK",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 1371779,
+          "id": 11840811,
+          "by": [
+            "Anon",
+            "Pacific"
+          ]
+        },
+        {
+          "en": 253112,
+          "id": 365979,
+          "by": [
+            "CK",
+            "hayabusa_future"
+          ]
+        },
+        {
+          "en": 264923,
+          "id": 11473641,
+          "by": [
+            "CK",
+            "Pacific"
+          ]
+        },
+        {
+          "en": 2762773,
+          "id": 7061856,
+          "by": [
+            "CK",
+            "purichan"
+          ]
+        },
+        {
+          "en": 716137,
+          "id": 10605784,
+          "by": [
+            "papabear",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 2706996,
+          "id": 10567200,
+          "by": [
+            "CN",
+            "HAGNi"
+          ]
+        }
+      ],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c2s5": {
     "title": "This is / That is",
@@ -2149,7 +2749,17 @@
           "explanation": "\"This is a red apple.\" = Ini adalah apel merah."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c2s6": {
     "title": "Ulasan Chapter 2: Benda, Warna, dan Angka",
@@ -2321,7 +2931,17 @@
           "explanation": "\"I have two black phones.\" = Saya punya dua HP hitam."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c3s1": {
     "title": "Kata Kerja Sehari-hari",
@@ -2336,64 +2956,128 @@
             "en": "Eat",
             "id": "Makan",
             "example": {
-              "en": "I eat rice for lunch.",
-              "id": "Saya makan nasi untuk makan siang."
+              "en": "I eat rice.",
+              "id": "Aku makan nasi.",
+              "tatoeba": {
+                "en": 7073209,
+                "id": 11160591,
+                "by": [
+                  "azraelgnosis",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
             "en": "Drink",
             "id": "Minum",
             "example": {
-              "en": "She drinks milk every morning.",
-              "id": "Dia minum susu setiap pagi."
+              "en": "I drink tea.",
+              "id": "Aku minum teh.",
+              "tatoeba": {
+                "en": 7067947,
+                "id": 12936854,
+                "by": [
+                  "azraelgnosis",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
             "en": "Go",
             "id": "Pergi",
             "example": {
-              "en": "I go to school every day.",
-              "id": "Saya pergi ke sekolah setiap hari."
+              "en": "I go to school.",
+              "id": "Saya pergi ke sekolah.",
+              "tatoeba": {
+                "en": 472089,
+                "id": 3293790,
+                "by": [
+                  "tamsanh",
+                  "orion17"
+                ]
+              }
             }
           },
           {
             "en": "See / Watch",
             "id": "Melihat / Menonton",
             "example": {
-              "en": "He watches a movie on Saturday.",
-              "id": "Dia menonton film pada hari Sabtu."
+              "en": "We watch television every evening.",
+              "id": "Kami menonton televisi setiap malam.",
+              "tatoeba": {
+                "en": 263284,
+                "id": 11008245,
+                "by": [
+                  "CK",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
             "en": "Like",
             "id": "Menyukai",
             "example": {
-              "en": "I like English.",
-              "id": "Saya suka bahasa Inggris."
+              "en": "I like art.",
+              "id": "Aku suka seni.",
+              "tatoeba": {
+                "en": 2245930,
+                "id": 11171864,
+                "by": [
+                  "CK",
+                  "Pacific"
+                ]
+              }
             }
           },
           {
             "en": "Study",
             "id": "Belajar",
             "example": {
-              "en": "We study at school.",
-              "id": "Kami belajar di sekolah."
+              "en": "You can study here.",
+              "id": "Kamu bisa belajar di sini.",
+              "tatoeba": {
+                "en": 16715,
+                "id": 4136939,
+                "by": [
+                  "CK",
+                  "Bilmanda"
+                ]
+              }
             }
           },
           {
             "en": "Sleep",
             "id": "Tidur",
             "example": {
-              "en": "I sleep at 10 PM.",
-              "id": "Saya tidur jam 10 malam."
+              "en": "I can't sleep.",
+              "id": "Aku tidak bisa tidur.",
+              "tatoeba": {
+                "en": 1189413,
+                "id": 4450007,
+                "by": [
+                  "Vortarulo",
+                  "Bilmanda"
+                ]
+              }
             }
           },
           {
             "en": "Make",
             "id": "Membuat",
             "example": {
-              "en": "She makes breakfast.",
-              "id": "Dia membuat sarapan."
+              "en": "What did you make?",
+              "id": "Apa yang kau buat?",
+              "tatoeba": {
+                "en": 24693,
+                "id": 3864808,
+                "by": [
+                  "CK",
+                  "orion17"
+                ]
+              }
             }
           }
         ],
@@ -2470,9 +3154,9 @@
         "type": "speaking_test",
         "xpReward": 15,
         "content": {
-          "phrase": "I go to school every day.",
-          "hint": "Ucapkan: I go to school every day.",
-          "translation": "Saya pergi ke sekolah setiap hari."
+          "phrase": "I go to school.",
+          "hint": "Ucapkan: I go to school.",
+          "translation": "Saya pergi ke sekolah."
         }
       },
       {
@@ -2513,16 +3197,16 @@
         "type": "listening_quiz",
         "xpReward": 15,
         "content": {
-          "audioText": "I eat rice for lunch.",
+          "audioText": "I eat rice.",
           "question": "Kalimat mana yang diucapkan Lingo?",
           "options": [
-            "I go to school every day.",
-            "He watches a movie on Saturday.",
-            "I eat rice for lunch.",
-            "She drinks milk every morning."
+            "I go to school.",
+            "We watch television every evening.",
+            "I eat rice.",
+            "I drink tea."
           ],
-          "correctAnswer": "I eat rice for lunch.",
-          "explanation": "Lingo mengucapkan \"I eat rice for lunch.\" yang artinya \"Saya makan nasi untuk makan siang.\""
+          "correctAnswer": "I eat rice.",
+          "explanation": "Lingo mengucapkan \"I eat rice.\" yang artinya \"Aku makan nasi.\""
         }
       },
       {
@@ -2530,18 +3214,93 @@
         "type": "translation_quiz",
         "xpReward": 10,
         "content": {
-          "question": "Apa arti kalimat 'She drinks milk every morning.'?",
+          "question": "Apa arti kalimat 'I drink tea.'?",
           "options": [
-            "Dia minum susu setiap pagi.",
-            "Saya pergi ke sekolah setiap hari.",
-            "Dia menonton film pada hari Sabtu.",
-            "Saya suka bahasa Inggris."
+            "Aku minum teh.",
+            "Saya pergi ke sekolah.",
+            "Kami menonton televisi setiap malam.",
+            "Aku suka seni."
           ],
-          "correctAnswer": "Dia minum susu setiap pagi.",
-          "explanation": "\"She drinks milk every morning.\" = Dia minum susu setiap pagi."
+          "correctAnswer": "Aku minum teh.",
+          "explanation": "\"I drink tea.\" = Aku minum teh."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [
+        {
+          "en": 7073209,
+          "id": 11160591,
+          "by": [
+            "azraelgnosis",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 7067947,
+          "id": 12936854,
+          "by": [
+            "azraelgnosis",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 472089,
+          "id": 3293790,
+          "by": [
+            "tamsanh",
+            "orion17"
+          ]
+        },
+        {
+          "en": 263284,
+          "id": 11008245,
+          "by": [
+            "CK",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 2245930,
+          "id": 11171864,
+          "by": [
+            "CK",
+            "Pacific"
+          ]
+        },
+        {
+          "en": 16715,
+          "id": 4136939,
+          "by": [
+            "CK",
+            "Bilmanda"
+          ]
+        },
+        {
+          "en": 1189413,
+          "id": 4450007,
+          "by": [
+            "Vortarulo",
+            "Bilmanda"
+          ]
+        },
+        {
+          "en": 24693,
+          "id": 3864808,
+          "by": [
+            "CK",
+            "orion17"
+          ]
+        }
+      ],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c3s2": {
     "title": "Kegiatan dan Rutinitas Harian",
@@ -2556,48 +3315,96 @@
             "en": "Wake up",
             "id": "Bangun tidur",
             "example": {
-              "en": "I wake up at 5 AM.",
-              "id": "Saya bangun jam 5 pagi."
+              "en": "It's time to wake up.",
+              "id": "Sudah waktunya bangun.",
+              "tatoeba": {
+                "en": 3818968,
+                "id": 5032683,
+                "by": [
+                  "CK",
+                  "Bilmanda"
+                ]
+              }
             }
           },
           {
             "en": "Eat breakfast",
             "id": "Sarapan",
             "example": {
-              "en": "I eat breakfast at 6.",
-              "id": "Saya sarapan jam 6."
+              "en": "Do you eat breakfast every day?",
+              "id": "Apakah kamu sarapan setiap hari?",
+              "tatoeba": {
+                "en": 4049105,
+                "id": 13917644,
+                "by": [
+                  "CK",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
             "en": "Go to school",
             "id": "Pergi ke sekolah",
             "example": {
-              "en": "I go to school at 7.",
-              "id": "Saya berangkat ke sekolah jam 7."
+              "en": "Do you go to school by bus?",
+              "id": "Apa kau pergi ke sekolah dengan bus?",
+              "tatoeba": {
+                "en": 69793,
+                "id": 4582620,
+                "by": [
+                  "CK",
+                  "Bilmanda"
+                ]
+              }
             }
           },
           {
             "en": "Study",
             "id": "Belajar",
             "example": {
-              "en": "I study in the morning.",
-              "id": "Saya belajar di pagi hari."
+              "en": "I need to study.",
+              "id": "Aku perlu belajar.",
+              "tatoeba": {
+                "en": 400128,
+                "id": 4739276,
+                "by": [
+                  "CK",
+                  "Bilmanda"
+                ]
+              }
             }
           },
           {
             "en": "Go home",
             "id": "Pulang ke rumah",
             "example": {
-              "en": "I go home after school.",
-              "id": "Saya pulang ke rumah sepulang sekolah."
+              "en": "I have to go home.",
+              "id": "Saya harus pulang.",
+              "tatoeba": {
+                "en": 256788,
+                "id": 1233993,
+                "by": [
+                  "CK",
+                  "golfrid_rhs"
+                ]
+              }
             }
           },
           {
             "en": "Sleep",
             "id": "Tidur",
             "example": {
-              "en": "I sleep at 10 PM.",
-              "id": "Saya tidur jam 10 malam."
+              "en": "Go to sleep.",
+              "id": "Pergilah tidur.",
+              "tatoeba": {
+                "en": 453530,
+                "id": 4254820,
+                "by": [
+                  "saasmath",
+                  "Bilmanda"
+                ]
+              }
             }
           }
         ],
@@ -2713,16 +3520,16 @@
         "type": "listening_quiz",
         "xpReward": 15,
         "content": {
-          "audioText": "I wake up at 5 AM.",
+          "audioText": "It's time to wake up.",
           "question": "Kalimat mana yang diucapkan Lingo?",
           "options": [
-            "I study in the morning.",
-            "I wake up at 5 AM.",
-            "I eat breakfast at 6.",
-            "I go to school at 7."
+            "I need to study.",
+            "It's time to wake up.",
+            "Do you eat breakfast every day?",
+            "Do you go to school by bus?"
           ],
-          "correctAnswer": "I wake up at 5 AM.",
-          "explanation": "Lingo mengucapkan \"I wake up at 5 AM.\" yang artinya \"Saya bangun jam 5 pagi.\""
+          "correctAnswer": "It's time to wake up.",
+          "explanation": "Lingo mengucapkan \"It's time to wake up.\" yang artinya \"Sudah waktunya bangun.\""
         }
       },
       {
@@ -2730,18 +3537,77 @@
         "type": "translation_quiz",
         "xpReward": 10,
         "content": {
-          "question": "Apa arti kalimat 'I eat breakfast at 6.'?",
+          "question": "Apa arti kalimat 'Do you eat breakfast every day?'?",
           "options": [
-            "Saya berangkat ke sekolah jam 7.",
-            "Saya belajar di pagi hari.",
-            "Saya pulang ke rumah sepulang sekolah.",
-            "Saya sarapan jam 6."
+            "Apa kau pergi ke sekolah dengan bus?",
+            "Aku perlu belajar.",
+            "Saya harus pulang.",
+            "Apakah kamu sarapan setiap hari?"
           ],
-          "correctAnswer": "Saya sarapan jam 6.",
-          "explanation": "\"I eat breakfast at 6.\" = Saya sarapan jam 6."
+          "correctAnswer": "Apakah kamu sarapan setiap hari?",
+          "explanation": "\"Do you eat breakfast every day?\" = Apakah kamu sarapan setiap hari?"
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [
+        {
+          "en": 3818968,
+          "id": 5032683,
+          "by": [
+            "CK",
+            "Bilmanda"
+          ]
+        },
+        {
+          "en": 4049105,
+          "id": 13917644,
+          "by": [
+            "CK",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 69793,
+          "id": 4582620,
+          "by": [
+            "CK",
+            "Bilmanda"
+          ]
+        },
+        {
+          "en": 400128,
+          "id": 4739276,
+          "by": [
+            "CK",
+            "Bilmanda"
+          ]
+        },
+        {
+          "en": 256788,
+          "id": 1233993,
+          "by": [
+            "CK",
+            "golfrid_rhs"
+          ]
+        },
+        {
+          "en": 453530,
+          "id": 4254820,
+          "by": [
+            "saasmath",
+            "Bilmanda"
+          ]
+        }
+      ],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c3s3": {
     "title": "Keterangan Waktu",
@@ -2756,32 +3622,64 @@
             "en": "Morning",
             "id": "Pagi",
             "example": {
-              "en": "Good morning! I exercise every morning.",
-              "id": "Selamat pagi! Saya berolahraga setiap pagi."
+              "en": "Good morning, everyone.",
+              "id": "Selamat pagi, semuanya.",
+              "tatoeba": {
+                "en": 22127,
+                "id": 365995,
+                "by": [
+                  "CK",
+                  "hayabusa_future"
+                ]
+              }
             }
           },
           {
             "en": "Afternoon",
             "id": "Siang",
             "example": {
-              "en": "I eat lunch in the afternoon.",
-              "id": "Saya makan siang di siang hari."
+              "en": "It's two in the afternoon.",
+              "id": "Sekarang pukul dua siang.",
+              "tatoeba": {
+                "en": 11451425,
+                "id": 13836341,
+                "by": [
+                  "sundown",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
             "en": "Evening",
             "id": "Sore / Petang",
             "example": {
-              "en": "Good evening! We study in the evening.",
-              "id": "Selamat sore! Kami belajar di sore hari."
+              "en": "Good evening, how are you?",
+              "id": "Selamat malam, apa kabar?",
+              "tatoeba": {
+                "en": 413820,
+                "id": 11133057,
+                "by": [
+                  "Dorenda",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
             "en": "Night",
             "id": "Malam",
             "example": {
-              "en": "I sleep at night.",
-              "id": "Saya tidur di malam hari."
+              "en": "Good night, Mom.",
+              "id": "Selamat malam, Bu.",
+              "tatoeba": {
+                "en": 64833,
+                "id": 3253715,
+                "by": [
+                  "shanghainese",
+                  "orion17"
+                ]
+              }
             }
           }
         ],
@@ -2796,32 +3694,64 @@
             "en": "Today",
             "id": "Hari ini",
             "example": {
-              "en": "Today is Monday.",
-              "id": "Hari ini hari Senin."
+              "en": "Today is Friday.",
+              "id": "Hari ini hari Jumat.",
+              "tatoeba": {
+                "en": 1151784,
+                "id": 12117007,
+                "by": [
+                  "CK",
+                  "Pacific"
+                ]
+              }
             }
           },
           {
             "en": "Tomorrow",
             "id": "Besok",
             "example": {
-              "en": "See you tomorrow!",
-              "id": "Sampai jumpa besok!"
+              "en": "See you tomorrow.",
+              "id": "Sampai jumpa besok.",
+              "tatoeba": {
+                "en": 497969,
+                "id": 11908488,
+                "by": [
+                  "CM",
+                  "Pacific"
+                ]
+              }
             }
           },
           {
             "en": "Yesterday",
             "id": "Kemarin",
             "example": {
-              "en": "I was sick yesterday.",
-              "id": "Kemarin saya sakit."
+              "en": "Yesterday I was sick.",
+              "id": "Kemarin aku sakit.",
+              "tatoeba": {
+                "en": 6157631,
+                "id": 13739058,
+                "by": [
+                  "amoeba",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
             "en": "Now",
             "id": "Sekarang",
             "example": {
-              "en": "I am studying now.",
-              "id": "Saya sedang belajar sekarang."
+              "en": "I'm here now.",
+              "id": "Sekarang aku di sini.",
+              "tatoeba": {
+                "en": 2248024,
+                "id": 12844500,
+                "by": [
+                  "CK",
+                  "HAGNi"
+                ]
+              }
             }
           }
         ],
@@ -2870,9 +3800,9 @@
         "type": "speaking_test",
         "xpReward": 15,
         "content": {
-          "phrase": "See you tomorrow!",
-          "hint": "Ucapkan: See you tomorrow!",
-          "translation": "Sampai jumpa besok!"
+          "phrase": "See you tomorrow.",
+          "hint": "Ucapkan: See you tomorrow.",
+          "translation": "Sampai jumpa besok."
         }
       },
       {
@@ -2913,16 +3843,16 @@
         "type": "listening_quiz",
         "xpReward": 15,
         "content": {
-          "audioText": "Good morning! I exercise every morning.",
+          "audioText": "Good morning, everyone.",
           "question": "Kalimat mana yang diucapkan Lingo?",
           "options": [
-            "Good morning! I exercise every morning.",
-            "I eat lunch in the afternoon.",
-            "Good evening! We study in the evening.",
-            "I sleep at night."
+            "Good morning, everyone.",
+            "It's two in the afternoon.",
+            "Good evening, how are you?",
+            "Good night, Mom."
           ],
-          "correctAnswer": "Good morning! I exercise every morning.",
-          "explanation": "Lingo mengucapkan \"Good morning! I exercise every morning.\" yang artinya \"Selamat pagi! Saya berolahraga setiap pagi.\""
+          "correctAnswer": "Good morning, everyone.",
+          "explanation": "Lingo mengucapkan \"Good morning, everyone.\" yang artinya \"Selamat pagi, semuanya.\""
         }
       },
       {
@@ -2930,18 +3860,93 @@
         "type": "translation_quiz",
         "xpReward": 10,
         "content": {
-          "question": "Apa arti kalimat 'I eat lunch in the afternoon.'?",
+          "question": "Apa arti kalimat 'It's two in the afternoon.'?",
           "options": [
-            "Saya tidur di malam hari.",
-            "Hari ini hari Senin.",
-            "Saya makan siang di siang hari.",
-            "Selamat sore! Kami belajar di sore hari."
+            "Selamat malam, Bu.",
+            "Hari ini hari Jumat.",
+            "Sekarang pukul dua siang.",
+            "Selamat malam, apa kabar?"
           ],
-          "correctAnswer": "Saya makan siang di siang hari.",
-          "explanation": "\"I eat lunch in the afternoon.\" = Saya makan siang di siang hari."
+          "correctAnswer": "Sekarang pukul dua siang.",
+          "explanation": "\"It's two in the afternoon.\" = Sekarang pukul dua siang."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [
+        {
+          "en": 22127,
+          "id": 365995,
+          "by": [
+            "CK",
+            "hayabusa_future"
+          ]
+        },
+        {
+          "en": 11451425,
+          "id": 13836341,
+          "by": [
+            "sundown",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 413820,
+          "id": 11133057,
+          "by": [
+            "Dorenda",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 64833,
+          "id": 3253715,
+          "by": [
+            "shanghainese",
+            "orion17"
+          ]
+        },
+        {
+          "en": 1151784,
+          "id": 12117007,
+          "by": [
+            "CK",
+            "Pacific"
+          ]
+        },
+        {
+          "en": 497969,
+          "id": 11908488,
+          "by": [
+            "CM",
+            "Pacific"
+          ]
+        },
+        {
+          "en": 6157631,
+          "id": 13739058,
+          "by": [
+            "amoeba",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 2248024,
+          "id": 12844500,
+          "by": [
+            "CK",
+            "HAGNi"
+          ]
+        }
+      ],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c3s4": {
     "title": "Menceritakan Rutinitasmu",
@@ -3117,7 +4122,17 @@
           "explanation": "\"I eat breakfast at eight.\" = Saya sarapan jam delapan."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c3s5": {
     "title": "Bertanya dengan Sederhana",
@@ -3132,32 +4147,64 @@
             "en": "What",
             "id": "Apa / Apakah",
             "example": {
-              "en": "What is this? / What do you eat?",
-              "id": "Apa ini? / Apa yang kamu makan?"
+              "en": "What is this?",
+              "id": "Ini apa?",
+              "tatoeba": {
+                "en": 392210,
+                "id": 4345384,
+                "by": [
+                  "sysko",
+                  "Bilmanda"
+                ]
+              }
             }
           },
           {
             "en": "Where",
             "id": "Di mana",
             "example": {
-              "en": "Where do you live? / Where is the school?",
-              "id": "Kamu tinggal di mana? / Sekolahnya di mana?"
+              "en": "Where are you?",
+              "id": "Kamu di mana?",
+              "tatoeba": {
+                "en": 2168,
+                "id": 3806662,
+                "by": [
+                  "CK",
+                  "orion17"
+                ]
+              }
             }
           },
           {
             "en": "When",
             "id": "Kapan",
             "example": {
-              "en": "When do you sleep? / When is the test?",
-              "id": "Kapan kamu tidur? / Kapan ujiannya?"
+              "en": "When can we eat?",
+              "id": "Kapan kita bisa makan?",
+              "tatoeba": {
+                "en": 322004,
+                "id": 4325178,
+                "by": [
+                  "CK",
+                  "Bilmanda"
+                ]
+              }
             }
           },
           {
             "en": "Who",
             "id": "Siapa",
             "example": {
-              "en": "Who is your teacher? / Who is that?",
-              "id": "Siapa gurumu? / Siapa itu?"
+              "en": "Who are you?",
+              "id": "Kamu siapa?",
+              "tatoeba": {
+                "en": 356200,
+                "id": 4556409,
+                "by": [
+                  "yorickvidal",
+                  "dbahasa"
+                ]
+              }
             }
           }
         ],
@@ -3305,7 +4352,50 @@
           "explanation": "\"Where do you go after school?\" = Ke mana kamu pergi setelah sekolah?"
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [
+        {
+          "en": 392210,
+          "id": 4345384,
+          "by": [
+            "sysko",
+            "Bilmanda"
+          ]
+        },
+        {
+          "en": 2168,
+          "id": 3806662,
+          "by": [
+            "CK",
+            "orion17"
+          ]
+        },
+        {
+          "en": 322004,
+          "id": 4325178,
+          "by": [
+            "CK",
+            "Bilmanda"
+          ]
+        },
+        {
+          "en": 356200,
+          "id": 4556409,
+          "by": [
+            "yorickvidal",
+            "dbahasa"
+          ]
+        }
+      ],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c3s6": {
     "title": "Ulasan Chapter 3: Kegiatan Sehari-hari",
@@ -3477,7 +4567,17 @@
           "explanation": "\"I wake up at six. Then I eat breakfast.\" = Saya bangun jam enam. Lalu saya sarapan."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c4s1": {
     "title": "Kata Sifat Dasar",
@@ -3492,40 +4592,80 @@
             "en": "Big ↔ Small",
             "id": "Besar ↔ Kecil",
             "example": {
-              "en": "This is a big dog. That is a small cat.",
-              "id": "Ini anjing besar. Itu kucing kecil."
+              "en": "My house is big.",
+              "id": "Rumahku besar.",
+              "tatoeba": {
+                "en": 250554,
+                "id": 331370,
+                "by": [
+                  "Scott",
+                  "umarsaid"
+                ]
+              }
             }
           },
           {
             "en": "Good ↔ Bad",
             "id": "Baik ↔ Buruk",
             "example": {
-              "en": "She is a good student. The weather is bad.",
-              "id": "Dia pelajar yang baik. Cuacanya buruk."
+              "en": "This is good.",
+              "id": "Ini bagus.",
+              "tatoeba": {
+                "en": 2233688,
+                "id": 12201718,
+                "by": [
+                  "CK",
+                  "Ultronimation"
+                ]
+              }
             }
           },
           {
             "en": "Happy ↔ Sad",
             "id": "Bahagia ↔ Sedih",
             "example": {
-              "en": "I am very happy today. She looks sad.",
-              "id": "Saya sangat bahagia hari ini. Dia terlihat sedih."
+              "en": "I'm very happy.",
+              "id": "Saya sangat senang.",
+              "tatoeba": {
+                "en": 255245,
+                "id": 11581298,
+                "by": [
+                  "CK",
+                  "Pacific"
+                ]
+              }
             }
           },
           {
             "en": "Hot ↔ Cold",
             "id": "Panas ↔ Dingin",
             "example": {
-              "en": "The coffee is hot. The water is cold.",
-              "id": "Kopinya panas. Airnya dingin."
+              "en": "The tea is hot.",
+              "id": "Tehnya panas.",
+              "tatoeba": {
+                "en": 462952,
+                "id": 12046082,
+                "by": [
+                  "lukaszpp",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
             "en": "Fast ↔ Slow",
             "id": "Cepat ↔ Lambat",
             "example": {
-              "en": "He runs fast. The bus is slow.",
-              "id": "Dia berlari cepat. Busnya lambat."
+              "en": "This dog runs fast.",
+              "id": "Anjing ini larinya cepat.",
+              "tatoeba": {
+                "en": 1112501,
+                "id": 13706790,
+                "by": [
+                  "futurulus",
+                  "HAGNi"
+                ]
+              }
             }
           }
         ],
@@ -3637,16 +4777,16 @@
         "type": "listening_quiz",
         "xpReward": 15,
         "content": {
-          "audioText": "She is a good student. The weather is bad.",
+          "audioText": "This is good.",
           "question": "Kalimat mana yang diucapkan Lingo?",
           "options": [
-            "He runs fast. The bus is slow.",
-            "She is a good student. The weather is bad.",
-            "I am very happy today. She looks sad.",
-            "The coffee is hot. The water is cold."
+            "This dog runs fast.",
+            "This is good.",
+            "I'm very happy.",
+            "The tea is hot."
           ],
-          "correctAnswer": "She is a good student. The weather is bad.",
-          "explanation": "Lingo mengucapkan \"She is a good student. The weather is bad.\" yang artinya \"Dia pelajar yang baik. Cuacanya buruk.\""
+          "correctAnswer": "This is good.",
+          "explanation": "Lingo mengucapkan \"This is good.\" yang artinya \"Ini bagus.\""
         }
       },
       {
@@ -3654,18 +4794,69 @@
         "type": "translation_quiz",
         "xpReward": 10,
         "content": {
-          "question": "Apa arti kalimat 'I am very happy today. She looks sad.'?",
+          "question": "Apa arti kalimat 'I'm very happy.'?",
           "options": [
-            "Saya sangat bahagia hari ini. Dia terlihat sedih.",
-            "Kopinya panas. Airnya dingin.",
-            "Dia berlari cepat. Busnya lambat.",
-            "Dia pelajar yang baik. Cuacanya buruk."
+            "Saya sangat senang.",
+            "Tehnya panas.",
+            "Anjing ini larinya cepat.",
+            "Ini bagus."
           ],
-          "correctAnswer": "Saya sangat bahagia hari ini. Dia terlihat sedih.",
-          "explanation": "\"I am very happy today. She looks sad.\" = Saya sangat bahagia hari ini. Dia terlihat sedih."
+          "correctAnswer": "Saya sangat senang.",
+          "explanation": "\"I'm very happy.\" = Saya sangat senang."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [
+        {
+          "en": 250554,
+          "id": 331370,
+          "by": [
+            "Scott",
+            "umarsaid"
+          ]
+        },
+        {
+          "en": 2233688,
+          "id": 12201718,
+          "by": [
+            "CK",
+            "Ultronimation"
+          ]
+        },
+        {
+          "en": 255245,
+          "id": 11581298,
+          "by": [
+            "CK",
+            "Pacific"
+          ]
+        },
+        {
+          "en": 462952,
+          "id": 12046082,
+          "by": [
+            "lukaszpp",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 1112501,
+          "id": 13706790,
+          "by": [
+            "futurulus",
+            "HAGNi"
+          ]
+        }
+      ],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c4s2": {
     "title": "Ciri-ciri Fisik",
@@ -3680,40 +4871,80 @@
             "en": "Tall ↔ Short",
             "id": "Tinggi ↔ Pendek",
             "example": {
-              "en": "My brother is very tall. My sister is short.",
-              "id": "Saudara laki-laki saya sangat tinggi. Saudara perempuan saya pendek."
+              "en": "He is tall and slim.",
+              "id": "Dia tinggi dan ramping.",
+              "tatoeba": {
+                "en": 8404295,
+                "id": 11579462,
+                "by": [
+                  "Ergulis",
+                  "Pacific"
+                ]
+              }
             }
           },
           {
             "en": "Young ↔ Old",
             "id": "Muda ↔ Tua",
             "example": {
-              "en": "She is young. My grandmother is old.",
-              "id": "Dia masih muda. Nenek saya sudah tua."
+              "en": "He's still young.",
+              "id": "Dia masih muda.",
+              "tatoeba": {
+                "en": 1651109,
+                "id": 7429265,
+                "by": [
+                  "Spamster",
+                  "purichan"
+                ]
+              }
             }
           },
           {
             "en": "Strong",
             "id": "Kuat",
             "example": {
-              "en": "He is tall and strong.",
-              "id": "Dia tinggi dan kuat."
+              "en": "My brother is small but strong.",
+              "id": "Saudaraku kecil tetapi kuat.",
+              "tatoeba": {
+                "en": 278567,
+                "id": 3253722,
+                "by": [
+                  "CK",
+                  "orion17"
+                ]
+              }
             }
           },
           {
             "en": "Cute",
             "id": "Lucu / Imut",
             "example": {
-              "en": "The baby is small and cute.",
-              "id": "Bayinya kecil dan lucu."
+              "en": "The cat is very cute.",
+              "id": "Kucing itu sangat imut.",
+              "tatoeba": {
+                "en": 44566,
+                "id": 10670340,
+                "by": [
+                  "CK",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
             "en": "Handsome / Pretty",
             "id": "Tampan / Cantik",
             "example": {
-              "en": "He is handsome. She is pretty.",
-              "id": "Dia tampan. Dia cantik."
+              "en": "He is very handsome.",
+              "id": "Dia sangat tampan.",
+              "tatoeba": {
+                "en": 400911,
+                "id": 12678887,
+                "by": [
+                  "CK",
+                  "HAGNi"
+                ]
+              }
             }
           }
         ],
@@ -3825,16 +5056,16 @@
         "type": "listening_quiz",
         "xpReward": 15,
         "content": {
-          "audioText": "My brother is very tall. My sister is short.",
+          "audioText": "He is tall and slim.",
           "question": "Kalimat mana yang diucapkan Lingo?",
           "options": [
-            "My brother is very tall. My sister is short.",
-            "She is young. My grandmother is old.",
-            "He is tall and strong.",
-            "The baby is small and cute."
+            "He is tall and slim.",
+            "He's still young.",
+            "My brother is small but strong.",
+            "The cat is very cute."
           ],
-          "correctAnswer": "My brother is very tall. My sister is short.",
-          "explanation": "Lingo mengucapkan \"My brother is very tall. My sister is short.\" yang artinya \"Saudara laki-laki saya sangat tinggi. Saudara perempuan saya pendek.\""
+          "correctAnswer": "He is tall and slim.",
+          "explanation": "Lingo mengucapkan \"He is tall and slim.\" yang artinya \"Dia tinggi dan ramping.\""
         }
       },
       {
@@ -3842,18 +5073,69 @@
         "type": "translation_quiz",
         "xpReward": 10,
         "content": {
-          "question": "Apa arti kalimat 'She is young. My grandmother is old.'?",
+          "question": "Apa arti kalimat 'He's still young.'?",
           "options": [
-            "Bayinya kecil dan lucu.",
-            "Dia tampan. Dia cantik.",
-            "Dia masih muda. Nenek saya sudah tua.",
-            "Dia tinggi dan kuat."
+            "Kucing itu sangat imut.",
+            "Dia sangat tampan.",
+            "Dia masih muda.",
+            "Saudaraku kecil tetapi kuat."
           ],
-          "correctAnswer": "Dia masih muda. Nenek saya sudah tua.",
-          "explanation": "\"She is young. My grandmother is old.\" = Dia masih muda. Nenek saya sudah tua."
+          "correctAnswer": "Dia masih muda.",
+          "explanation": "\"He's still young.\" = Dia masih muda."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [
+        {
+          "en": 8404295,
+          "id": 11579462,
+          "by": [
+            "Ergulis",
+            "Pacific"
+          ]
+        },
+        {
+          "en": 1651109,
+          "id": 7429265,
+          "by": [
+            "Spamster",
+            "purichan"
+          ]
+        },
+        {
+          "en": 278567,
+          "id": 3253722,
+          "by": [
+            "CK",
+            "orion17"
+          ]
+        },
+        {
+          "en": 44566,
+          "id": 10670340,
+          "by": [
+            "CK",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 400911,
+          "id": 12678887,
+          "by": [
+            "CK",
+            "HAGNi"
+          ]
+        }
+      ],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c4s3": {
     "title": "Menggambarkan Benda",
@@ -3892,40 +5174,80 @@
             "en": "Beautiful / Ugly",
             "id": "Indah / Jelek",
             "example": {
-              "en": "This is a beautiful flower.",
-              "id": "Ini bunga yang indah."
+              "en": "Life is beautiful.",
+              "id": "Hidup itu indah.",
+              "tatoeba": {
+                "en": 1829,
+                "id": 11446176,
+                "by": [
+                  "CK",
+                  "Pacific"
+                ]
+              }
             }
           },
           {
             "en": "Expensive / Cheap",
             "id": "Mahal / Murah",
             "example": {
-              "en": "That car is very expensive.",
-              "id": "Mobil itu sangat mahal."
+              "en": "It's too expensive!",
+              "id": "Harganya terlalu mahal!",
+              "tatoeba": {
+                "en": 1719,
+                "id": 886042,
+                "by": [
+                  "Swift",
+                  "windra"
+                ]
+              }
             }
           },
           {
             "en": "Heavy / Light",
             "id": "Berat / Ringan",
             "example": {
-              "en": "The bag is heavy.",
-              "id": "Tasnya berat."
+              "en": "This bag is too heavy.",
+              "id": "Tas ini terlalu berat.",
+              "tatoeba": {
+                "en": 4328913,
+                "id": 12905972,
+                "by": [
+                  "AlanF_US",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
             "en": "Clean / Dirty",
             "id": "Bersih / Kotor",
             "example": {
-              "en": "The room is clean.",
-              "id": "Kamarnya bersih."
+              "en": "My shoes are clean.",
+              "id": "Sepatuku bersih.",
+              "tatoeba": {
+                "en": 13975357,
+                "id": 13993007,
+                "by": [
+                  "carlosalberto",
+                  "HAGNi"
+                ]
+              }
             }
           },
           {
             "en": "New / Old",
             "id": "Baru / Lama",
             "example": {
-              "en": "She has a new phone.",
-              "id": "Dia punya HP baru."
+              "en": "It's a new book.",
+              "id": "Ini buku baru.",
+              "tatoeba": {
+                "en": 871646,
+                "id": 12416042,
+                "by": [
+                  "ColinG",
+                  "HAGNi"
+                ]
+              }
             }
           }
         ],
@@ -4017,16 +5339,16 @@
         "type": "listening_quiz",
         "xpReward": 15,
         "content": {
-          "audioText": "This is a beautiful flower.",
+          "audioText": "Life is beautiful.",
           "question": "Kalimat mana yang diucapkan Lingo?",
           "options": [
-            "That car is very expensive.",
-            "The bag is heavy.",
-            "The room is clean.",
-            "This is a beautiful flower."
+            "It's too expensive!",
+            "This bag is too heavy.",
+            "My shoes are clean.",
+            "Life is beautiful."
           ],
-          "correctAnswer": "This is a beautiful flower.",
-          "explanation": "Lingo mengucapkan \"This is a beautiful flower.\" yang artinya \"Ini bunga yang indah.\""
+          "correctAnswer": "Life is beautiful.",
+          "explanation": "Lingo mengucapkan \"Life is beautiful.\" yang artinya \"Hidup itu indah.\""
         }
       },
       {
@@ -4034,18 +5356,69 @@
         "type": "translation_quiz",
         "xpReward": 10,
         "content": {
-          "question": "Apa arti kalimat 'That car is very expensive.'?",
+          "question": "Apa arti kalimat 'It's too expensive!'?",
           "options": [
-            "Dia punya HP baru.",
-            "Mobil itu sangat mahal.",
-            "Tasnya berat.",
-            "Kamarnya bersih."
+            "Ini buku baru.",
+            "Harganya terlalu mahal!",
+            "Tas ini terlalu berat.",
+            "Sepatuku bersih."
           ],
-          "correctAnswer": "Mobil itu sangat mahal.",
-          "explanation": "\"That car is very expensive.\" = Mobil itu sangat mahal."
+          "correctAnswer": "Harganya terlalu mahal!",
+          "explanation": "\"It's too expensive!\" = Harganya terlalu mahal!"
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Kosakata level A1, kecuali cheap (A2)."
+      },
+      "sentences": [
+        {
+          "en": 1829,
+          "id": 11446176,
+          "by": [
+            "CK",
+            "Pacific"
+          ]
+        },
+        {
+          "en": 1719,
+          "id": 886042,
+          "by": [
+            "Swift",
+            "windra"
+          ]
+        },
+        {
+          "en": 4328913,
+          "id": 12905972,
+          "by": [
+            "AlanF_US",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 13975357,
+          "id": 13993007,
+          "by": [
+            "carlosalberto",
+            "HAGNi"
+          ]
+        },
+        {
+          "en": 871646,
+          "id": 12416042,
+          "by": [
+            "ColinG",
+            "HAGNi"
+          ]
+        }
+      ],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c4s4": {
     "title": "Memakai Is / Are",
@@ -4221,7 +5594,17 @@
           "explanation": "\"You are my friend.\" = Kamu temanku."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c4s5": {
     "title": "Deskripsi Sederhana",
@@ -4393,7 +5776,17 @@
           "explanation": "\"The sky is blue and clear.\" = Langit itu biru dan jernih."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c4s6": {
     "title": "Ulasan Chapter 4: Menggambarkan Orang dan Benda",
@@ -4413,8 +5806,8 @@
             "id": "Temanku pendek dan lucu."
           },
           {
-            "en": "She is young, tall, and cheerful.",
-            "id": "Dia muda, tinggi, dan ceria."
+            "en": "She is young, tall, and nice.",
+            "id": "Dia muda, tinggi, dan baik."
           },
           {
             "en": "The students are smart and hardworking.",
@@ -4457,8 +5850,8 @@
             "id": "FUN-ny · /ˈfʌni/"
           },
           {
-            "en": "Cheerful",
-            "id": "CHEER-ful · /ˈtʃɪrfəl/"
+            "en": "Nice",
+            "id": "NICE · /naɪs/"
           },
           {
             "en": "Garden",
@@ -4507,8 +5900,8 @@
               "meaning": "Lucu"
             },
             {
-              "word": "Cheerful",
-              "meaning": "Ceria"
+              "word": "Nice",
+              "meaning": "Baik"
             },
             {
               "word": "Garden",
@@ -4521,7 +5914,7 @@
           ],
           "shuffledMeanings": [
             "Senyum",
-            "Ceria",
+            "Baik",
             "Taman",
             "Lucu"
           ],
@@ -4538,7 +5931,7 @@
           "options": [
             "The garden is beautiful and green.",
             "My friend is short and funny.",
-            "She is young, tall, and cheerful.",
+            "She is young, tall, and nice.",
             "The students are smart and hardworking."
           ],
           "correctAnswer": "The garden is beautiful and green.",
@@ -4555,13 +5948,23 @@
             "Para pelajar itu pintar dan rajin.",
             "Ceritakan tentang teman terbaikmu!",
             "Temanku pendek dan lucu.",
-            "Dia muda, tinggi, dan ceria."
+            "Dia muda, tinggi, dan baik."
           ],
           "correctAnswer": "Temanku pendek dan lucu.",
           "explanation": "\"My friend is short and funny.\" = Temanku pendek dan lucu."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c5s1": {
     "title": "Pertanyaan Pribadi",
@@ -4733,7 +6136,17 @@
           "explanation": "\"Where are you from?\" = Kamu dari mana?"
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c5s2": {
     "title": "Bercerita tentang Diri Sendiri",
@@ -4901,7 +6314,17 @@
           "explanation": "\"I am from Jakarta.\" = Saya dari Jakarta."
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c5s3": {
     "title": "Bertanya tentang Benda",
@@ -5069,7 +6492,17 @@
           "explanation": "\"What is that?\" = Apa itu?"
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c5s4": {
     "title": "Bertanya tentang Kesukaan",
@@ -5237,7 +6670,17 @@
           "explanation": "\"No, I don't. But I like music!\" = Tidak. Tapi saya suka musik!"
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c5s5": {
     "title": "Percakapan Singkat",
@@ -5409,7 +6852,17 @@
           "explanation": "\"I am fine, thank you! And you?\" = Saya baik, terima kasih! Dan kamu?"
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   },
   "c5s6": {
     "title": "Tantangan Akhir: Percakapan Lengkap",
@@ -5589,6 +7042,16 @@
           "explanation": "\"Goodbye! See you tomorrow!\" = Selamat tinggal! Sampai jumpa besok!"
         }
       }
-    ]
+    ],
+    "sources": {
+      "vocabulary": {
+        "name": "CEFR-J Wordlist 1.5",
+        "by": "Yukio Tono, Tokyo University of Foreign Studies",
+        "url": "https://www.cefr-j.org/",
+        "note": "Semua kosakata di materi ini level A1."
+      },
+      "sentences": [],
+      "authored": "Penjelasan, dialog, pengucapan, dan soal disusun oleh tim Lingora."
+    }
   }
 }
