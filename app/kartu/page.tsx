@@ -207,15 +207,25 @@ function CardSession({ deck, lang, onDone, onAgain }: { deck: CardDeck; lang: st
       setHint('Pemeriksa pengucapan sedang tidak tersedia. Ketuk mikrofon dan ulangi, ya.');
       return;
     }
-    // The card is known, so a word counts as right only when its sounds were mostly heard (not just free of known mistakes)
-    const words = result.words.map((w) => ({ word: w.word, ok: w.ok && (w.match ?? 1) >= 0.6 }));
+    // The card is known, so a word counts as right only when its sounds were mostly heard (not just free of known mistakes).
+    // A word that sounds alike but is another word ("eat" for "meet") keeps most of its sounds, so it is also checked
+    // against what was heard: a card word missing there only counts when nearly all of its sounds were heard.
+    const inSaid = compareHeard(card.text, result.said, lang).words;
+    const sameWords = inSaid.length === result.words.length;
+    const otherWord = (i: number) => sameWords && !inSaid[i].ok && (result.words[i].match ?? 1) < 0.9;
+    const words = result.words.map((w, i) => ({ word: w.word, ok: w.ok && (w.match ?? 1) >= 0.6 && !otherWord(i) }));
     const avgMatch = result.words.length ? result.words.reduce((s, w) => s + (w.match ?? 1), 0) / result.words.length : 0;
     const tips = wordsToFix(result, 3).map((w) => ({ word: w.word, tip: w.issues[0].tip }));
-    for (const w of result.words) {
-      if (tips.length >= 3) break;
-      if (!tips.some((t) => t.word === w.word) && (w.match ?? 1) < 0.6) tips.push({ word: w.word, tip: 'Dengarkan cara Lingo mengucapkan kata ini, lalu tirukan pelan-pelan.' });
-    }
-    grade({ score: Math.round(Math.min(result.score, avgMatch * 100)), heard: result.said, words, tips });
+    result.words.forEach((w, i) => {
+      if (tips.length >= 3 || tips.some((t) => t.word === w.word)) return;
+      if (otherWord(i)) tips.push({ word: w.word, tip: `Terdengar seperti kata lain. Dengarkan cara Lingo mengucapkan "${w.word}", lalu ulangi.` });
+      else if ((w.match ?? 1) < 0.6) tips.push({ word: w.word, tip: 'Dengarkan cara Lingo mengucapkan kata ini, lalu tirukan pelan-pelan.' });
+    });
+    // A card with a word still wrong is not passed yet
+    const okShare = words.length ? (words.filter((w) => w.ok).length / words.length) * 100 : 0;
+    let score = Math.round(Math.min(result.score, avgMatch * 100, okShare));
+    if (words.some((w) => !w.ok)) score = Math.min(score, PASS - 1);
+    grade({ score, heard: result.said, words, tips });
   }
 
   function stopListening() {
