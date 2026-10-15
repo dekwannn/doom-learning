@@ -42,8 +42,20 @@ interface Props {
 interface Example {
   en: string;
   id: string;
-  /** A sentence using the word, with its translation (vocabulary rows) */
-  example?: { en: string; id: string };
+  /** A sentence using the word, with its translation (vocabulary rows); from Tatoeba when `tatoeba` is set */
+  example?: { en: string; id: string; tatoeba?: TatoebaRef };
+}
+/** A Tatoeba sentence pair: the English and Indonesian sentence ids and their authors */
+interface TatoebaRef {
+  en: number;
+  id: number;
+  by: [string, string];
+}
+/** Where a lesson's content comes from */
+interface LessonSourceInfo {
+  vocabulary?: { name: string; by: string; url: string; note: string };
+  sentences?: TatoebaRef[];
+  authored?: string;
 }
 interface Section {
   type: string;
@@ -57,6 +69,7 @@ interface StudyEntry {
   intro: string;
   sections: Section[];
   practice: any[];
+  sources?: LessonSourceInfo;
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -1287,6 +1300,62 @@ function WordCard({
 
 /* ── Lingo tip ── */
 // The section's tip, said by Lingo in a speech bubble
+/** "Sumber materi": the word list the vocabulary was checked against, the Tatoeba sentences with their authors (CC BY), and what Lingora wrote */
+function LessonSources({ sources, sections }: { sources: LessonSourceInfo; sections: Section[] }) {
+  const [open, setOpen] = useState(false);
+  const sentence = (id: number) => sections.flatMap((s) => s.examples).find((e) => e.example?.tatoeba?.en === id)?.example;
+  const link = { color: "#93c5fd", textDecoration: "none" } as const;
+  return (
+    <div style={{ marginTop: 16, borderRadius: 14, border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.02)" }}>
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, padding: "12px 14px", background: "none", border: "none", color: "#a1a1aa", fontSize: 12.5, fontWeight: 700, cursor: "pointer", textAlign: "left" }}
+      >
+        <span style={{ display: "flex", alignItems: "center", gap: 7 }}>
+          <BookOpen size={14} /> Sumber materi
+        </span>
+        <span style={{ color: "#52525b" }}>{open ? "Tutup" : "Lihat"}</span>
+      </button>
+      {open && (
+        <div style={{ padding: "0 14px 14px", display: "flex", flexDirection: "column", gap: 12, fontSize: 12, lineHeight: 1.55, color: "#a1a1aa" }}>
+          {sources.vocabulary && (
+            <div>
+              <div style={{ color: "#e4e4e7", fontWeight: 700 }}>Kosakata</div>
+              Dicek dengan{" "}
+              <a href={sources.vocabulary.url} target="_blank" rel="noreferrer" style={link}>{sources.vocabulary.name}</a>{" "}
+              ({sources.vocabulary.by}). {sources.vocabulary.note}
+            </div>
+          )}
+          {sources.sentences && sources.sentences.length > 0 && (
+            <div>
+              <div style={{ color: "#e4e4e7", fontWeight: 700 }}>Contoh kalimat</div>
+              Dari{" "}
+              <a href="https://tatoeba.org" target="_blank" rel="noreferrer" style={link}>Tatoeba</a>, lisensi{" "}
+              <a href="https://creativecommons.org/licenses/by/2.0/fr/" target="_blank" rel="noreferrer" style={link}>CC BY 2.0 FR</a>:
+              <ul style={{ margin: "6px 0 0", paddingLeft: 16, display: "flex", flexDirection: "column", gap: 4 }}>
+                {sources.sentences.map((t) => (
+                  <li key={t.en}>
+                    &ldquo;{sentence(t.en)?.en ?? ""}&rdquo;{" "}
+                    <a href={`https://tatoeba.org/id/sentences/show/${t.en}`} target="_blank" rel="noreferrer" style={link}>#{t.en}</a> oleh {t.by[0]}, terjemahan{" "}
+                    <a href={`https://tatoeba.org/id/sentences/show/${t.id}`} target="_blank" rel="noreferrer" style={link}>#{t.id}</a> oleh {t.by[1]}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {sources.authored && (
+            <div>
+              <div style={{ color: "#e4e4e7", fontWeight: 700 }}>Lainnya</div>
+              {sources.authored}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function LingoTip({ tip }: { tip: string }) {
   return (
     <div style={{ marginTop: 16, display: "flex", gap: 10, alignItems: "flex-start" }}>
@@ -3302,6 +3371,7 @@ export default function LearnStagePage({ params }: Props) {
                 </div>
               </div>
             )}
+            {onPractice && entry.sources && <LessonSources sources={entry.sources} sections={entry.sections} />}
           </div>
           <div style={{ height: 32 }} />
         </div>
