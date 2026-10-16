@@ -1743,6 +1743,29 @@
       }
     },
     {
+      "id": "c2s1_p1",
+      "type": "picture_quiz",
+      "xpReward": 10,
+      "content": {
+        "picture": "pen",
+        "question": "Apa nama benda ini dalam bahasa Inggris?",
+        "options": [
+          "Pen",
+          "Book",
+          "Bag",
+          "Phone"
+        ],
+        "correctAnswer": "Pen",
+        "explanations": {
+          "Pen": "Benar! Pen = pena atau pulpen, dipakai untuk menulis.",
+          "Book": "Salah. Book = buku. Benda di gambar dipakai untuk menulis: pen.",
+          "Bag": "Salah. Bag = tas. Benda di gambar adalah pen (pena).",
+          "Phone": "Salah. Phone = ponsel. Benda di gambar adalah pen (pena)."
+        },
+        "audioText": "pen"
+      }
+    },
+    {
       "id": "c2s1_3",
       "type": "matching_word",
       "xpReward": 10,
@@ -1808,6 +1831,27 @@
           "There is a table on the book.": "Salah. Ini berarti 'Ada meja di atas buku' — posisinya terbalik.",
           "There is a chair on the table.": "Salah. 'Chair' artinya kursi, bukan buku.",
           "There is a pen under the table.": "Salah. 'Pen' artinya pena dan 'under' artinya di bawah, bukan di atas."
+        }
+      }
+    },
+    {
+      "id": "c2s1_p2",
+      "type": "listen_picture",
+      "xpReward": 15,
+      "content": {
+        "audioText": "bag",
+        "question": "Dengarkan, lalu pilih gambar yang benar.",
+        "options": [
+          "phone",
+          "bag",
+          "door",
+          "window"
+        ],
+        "correctAnswer": "bag",
+        "explanation": "Bag = tas.",
+        "review": {
+          "word": "Bag",
+          "meaning": "Tas"
         }
       }
     },
@@ -1893,6 +1937,47 @@
       }
     },
     {
+      "id": "c2s1_p3",
+      "type": "tap_picture",
+      "xpReward": 20,
+      "content": {
+        "scene": "room",
+        "instruction": "Baca atau dengarkan nama bendanya, lalu sentuh bendanya di gambar.",
+        "targets": [
+          {
+            "key": "book",
+            "word": "book",
+            "meaning": "buku"
+          },
+          {
+            "key": "chair",
+            "word": "chair",
+            "meaning": "kursi"
+          },
+          {
+            "key": "window",
+            "word": "window",
+            "meaning": "jendela"
+          },
+          {
+            "key": "table",
+            "word": "table",
+            "meaning": "meja"
+          },
+          {
+            "key": "door",
+            "word": "door",
+            "meaning": "pintu"
+          },
+          {
+            "key": "phone",
+            "word": "phone",
+            "meaning": "ponsel"
+          }
+        ]
+      }
+    },
+    {
       "id": "c2s1_12",
       "type": "speaking_test",
       "xpReward": 20,
@@ -1928,6 +2013,29 @@
           "meaningId": "Cairan bening tanpa rasa yang penting untuk kehidupan.",
           "exampleSentence": "Please give me a glass of water.",
           "audioUrl": "tts://Water"
+        }
+      },
+      {
+        "id": "c2s2_p1",
+        "type": "picture_quiz",
+        "xpReward": 10,
+        "content": {
+          "picture": "bread",
+          "question": "Apa nama makanan ini dalam bahasa Inggris?",
+          "options": [
+            "Rice",
+            "Bread",
+            "Apple",
+            "Milk"
+          ],
+          "correctAnswer": "Bread",
+          "explanations": {
+            "Bread": "Benar! Bread = roti.",
+            "Rice": "Salah. Rice = nasi. Makanan di gambar adalah bread (roti).",
+            "Apple": "Salah. Apple = apel. Makanan di gambar adalah bread (roti).",
+            "Milk": "Salah. Milk = susu. Makanan di gambar adalah bread (roti)."
+          },
+          "audioText": "bread"
         }
       },
       {
@@ -1996,6 +2104,27 @@
             "I like bread and coffee.": "Benar! 'Bread' = roti dan 'coffee' = kopi.",
             "I like apple and milk.": "Salah. 'Apple' = apel dan 'milk' = susu.",
             "I like water and bread.": "Salah. Urutannya terbalik dan 'water' bukan kopi."
+          }
+        }
+      },
+      {
+        "id": "c2s2_p2",
+        "type": "listen_picture",
+        "xpReward": 15,
+        "content": {
+          "audioText": "water",
+          "question": "Dengarkan, lalu pilih gambar yang benar.",
+          "options": [
+            "milk",
+            "coffee",
+            "water",
+            "rice"
+          ],
+          "correctAnswer": "water",
+          "explanation": "Water = air.",
+          "review": {
+            "word": "Water",
+            "meaning": "Air"
           }
         }
       },
@@ -2088,6 +2217,47 @@
         }
       },
       {
+        "id": "c2s2_p3",
+        "type": "tap_picture",
+        "xpReward": 20,
+        "content": {
+          "scene": "kitchen",
+          "instruction": "Baca atau dengarkan nama bendanya, lalu sentuh bendanya di gambar.",
+          "targets": [
+            {
+              "key": "rice",
+              "word": "rice",
+              "meaning": "nasi"
+            },
+            {
+              "key": "milk",
+              "word": "milk",
+              "meaning": "susu"
+            },
+            {
+              "key": "apple",
+              "word": "apple",
+              "meaning": "apel"
+            },
+            {
+              "key": "coffee",
+              "word": "coffee",
+              "meaning": "kopi"
+            },
+            {
+              "key": "water",
+              "word": "water",
+              "meaning": "air"
+            },
+            {
+              "key": "bread",
+              "word": "bread",
+              "meaning": "roti"
+            }
+          ]
+        }
+      },
+      {
         "id": "c2s2_12",
         "type": "speaking_test",
         "xpReward": 20,
@@ -2123,6 +2293,29 @@
           "meaningId": "Warna langit yang cerah.",
           "exampleSentence": "The sea is blue.",
           "audioUrl": "tts://Blue"
+        }
+      },
+      {
+        "id": "c2s3_p1",
+        "type": "picture_quiz",
+        "xpReward": 10,
+        "content": {
+          "picture": "color:green",
+          "question": "Balon ini warnanya apa dalam bahasa Inggris?",
+          "options": [
+            "Blue",
+            "Green",
+            "Yellow",
+            "Purple"
+          ],
+          "correctAnswer": "Green",
+          "explanations": {
+            "Green": "Benar! Green = hijau.",
+            "Blue": "Salah. Blue = biru. Balon di gambar berwarna green (hijau).",
+            "Yellow": "Salah. Yellow = kuning. Balon di gambar berwarna green (hijau).",
+            "Purple": "Salah. Purple = ungu. Balon di gambar berwarna green (hijau)."
+          },
+          "audioText": "green"
         }
       },
       {
@@ -2191,6 +2384,33 @@
             "She has a yellow pencil.": "Benar! 'Yellow' = kuning dan 'pencil' = pensil.",
             "She has a green pencil.": "Salah. 'Green' artinya hijau, bukan kuning.",
             "She has a white pencil.": "Salah. 'White' artinya putih, bukan kuning."
+          }
+        }
+      },
+      {
+        "id": "c2s3_p2",
+        "type": "listen_picture",
+        "xpReward": 15,
+        "content": {
+          "audioText": "purple",
+          "question": "Dengarkan warnanya, lalu pilih balonnya.",
+          "options": [
+            "color:orange",
+            "color:purple",
+            "color:red",
+            "color:blue"
+          ],
+          "labels": {
+            "color:orange": "orange",
+            "color:purple": "purple",
+            "color:red": "red",
+            "color:blue": "blue"
+          },
+          "correctAnswer": "color:purple",
+          "explanation": "Purple = ungu.",
+          "review": {
+            "word": "Purple",
+            "meaning": "Ungu"
           }
         }
       },
@@ -2271,6 +2491,48 @@
         }
       },
       {
+        "id": "c2s3_p3",
+        "type": "tap_picture",
+        "xpReward": 20,
+        "content": {
+          "scene": "balloons",
+          "instruction": "Sentuh balon dengan warna yang disebut.",
+          "noun": "balloon",
+          "targets": [
+            {
+              "key": "red",
+              "word": "red",
+              "meaning": "merah"
+            },
+            {
+              "key": "yellow",
+              "word": "yellow",
+              "meaning": "kuning"
+            },
+            {
+              "key": "blue",
+              "word": "blue",
+              "meaning": "biru"
+            },
+            {
+              "key": "white",
+              "word": "white",
+              "meaning": "putih"
+            },
+            {
+              "key": "black",
+              "word": "black",
+              "meaning": "hitam"
+            },
+            {
+              "key": "orange",
+              "word": "orange",
+              "meaning": "oranye"
+            }
+          ]
+        }
+      },
+      {
         "id": "c2s3_12",
         "type": "speaking_test",
         "xpReward": 20,
@@ -2306,6 +2568,29 @@
           "meaningId": "Angka 10.",
           "exampleSentence": "There are ten students in the room.",
           "audioUrl": "tts://Ten"
+        }
+      },
+      {
+        "id": "c2s4_p1",
+        "type": "picture_quiz",
+        "xpReward": 10,
+        "content": {
+          "picture": "apples:3",
+          "question": "How many apples? Ada berapa apel?",
+          "options": [
+            "One",
+            "Three",
+            "Five",
+            "Ten"
+          ],
+          "correctAnswer": "Three",
+          "explanations": {
+            "Three": "Benar! Ada tiga apel: three apples.",
+            "One": "Salah. One = satu. Hitung lagi: ada three (tiga) apel.",
+            "Five": "Salah. Five = lima. Hitung lagi: ada three (tiga) apel.",
+            "Ten": "Salah. Ten = sepuluh. Hitung lagi: ada three (tiga) apel."
+          },
+          "audioText": "three apples"
         }
       },
       {
@@ -2373,6 +2658,29 @@
         }
       },
       {
+        "id": "c2s4_p2",
+        "type": "picture_quiz",
+        "xpReward": 10,
+        "content": {
+          "picture": "apples:7",
+          "question": "How many apples? Ada berapa apel?",
+          "options": [
+            "Six",
+            "Seven",
+            "Eight",
+            "Nine"
+          ],
+          "correctAnswer": "Seven",
+          "explanations": {
+            "Seven": "Benar! Ada tujuh apel: seven apples.",
+            "Six": "Salah. Six = enam. Hitung lagi: ada seven (tujuh) apel.",
+            "Eight": "Salah. Eight = delapan. Hitung lagi: ada seven (tujuh) apel.",
+            "Nine": "Salah. Nine = sembilan. Hitung lagi: ada seven (tujuh) apel."
+          },
+          "audioText": "seven apples"
+        }
+      },
+      {
         "id": "c2s4_7",
         "type": "sentence_building",
         "xpReward": 10,
@@ -2433,6 +2741,33 @@
             "There are seven days in a week.": "Benar! 'Seven' = 7 dan seminggu memang ada 7 hari.",
             "There are eight days in a week.": "Salah. 'Eight' = 8, seminggu tidak ada 8 hari.",
             "There are five days in a week.": "Salah. 'Five' = 5, jumlah ini hanya berlaku untuk hari kerja."
+          }
+        }
+      },
+      {
+        "id": "c2s4_p3",
+        "type": "listen_picture",
+        "xpReward": 15,
+        "content": {
+          "audioText": "five",
+          "question": "Dengarkan angkanya, lalu pilih jumlah apel yang sama.",
+          "options": [
+            "apples:3",
+            "apples:5",
+            "apples:8",
+            "apples:10"
+          ],
+          "labels": {
+            "apples:3": "three",
+            "apples:5": "five",
+            "apples:8": "eight",
+            "apples:10": "ten"
+          },
+          "correctAnswer": "apples:5",
+          "explanation": "Five = lima.",
+          "review": {
+            "word": "Five",
+            "meaning": "Lima"
           }
         }
       },
@@ -2677,6 +3012,29 @@
         }
       },
       {
+        "id": "c2s6_p1",
+        "type": "picture_quiz",
+        "xpReward": 10,
+        "content": {
+          "picture": "book",
+          "question": "What is this? Apa ini dalam bahasa Inggris?",
+          "options": [
+            "Bag",
+            "Book",
+            "Pen",
+            "Door"
+          ],
+          "correctAnswer": "Book",
+          "explanations": {
+            "Book": "Benar! Book = buku.",
+            "Bag": "Salah. Bag = tas. Benda di gambar adalah book (buku).",
+            "Pen": "Salah. Pen = pena. Benda di gambar adalah book (buku).",
+            "Door": "Salah. Door = pintu. Benda di gambar adalah book (buku)."
+          },
+          "audioText": "book"
+        }
+      },
+      {
         "id": "c2s6_2",
         "type": "translation_quiz",
         "xpReward": 15,
@@ -2744,6 +3102,33 @@
             "I would like rice and water.": "Benar! Nasi dan air adalah makanan/minuman yang tepat untuk menjawab 'What would you like to eat?'.",
             "I would like a blue chair.": "Salah. Kursi adalah furnitur, bukan makanan.",
             "I would like three books.": "Salah. Buku adalah benda untuk dibaca, bukan dimakan."
+          }
+        }
+      },
+      {
+        "id": "c2s6_p2",
+        "type": "listen_picture",
+        "xpReward": 15,
+        "content": {
+          "audioText": "nine",
+          "question": "Dengarkan angkanya, lalu pilih jumlah apel yang sama.",
+          "options": [
+            "apples:6",
+            "apples:9",
+            "apples:7",
+            "apples:4"
+          ],
+          "labels": {
+            "apples:6": "six",
+            "apples:9": "nine",
+            "apples:7": "seven",
+            "apples:4": "four"
+          },
+          "correctAnswer": "apples:9",
+          "explanation": "Nine = sembilan.",
+          "review": {
+            "word": "Nine",
+            "meaning": "Sembilan"
           }
         }
       },
@@ -2825,6 +3210,37 @@
           "jumbledWords": ["black", "two", "I", "have", "phones"],
           "correctSentence": "I have two black phones",
           "explanation": "Susunan yang benar: Subjek (I) + Kata Kerja (have) + Angka (two) + Kata Sifat (black) + Kata Benda Jamak (phones)."
+        }
+      },
+      {
+        "id": "c2s6_p3",
+        "type": "tap_picture",
+        "xpReward": 20,
+        "content": {
+          "scene": "kitchen",
+          "instruction": "Baca atau dengarkan nama bendanya, lalu sentuh bendanya di gambar.",
+          "targets": [
+            {
+              "key": "coffee",
+              "word": "coffee",
+              "meaning": "kopi"
+            },
+            {
+              "key": "apple",
+              "word": "apple",
+              "meaning": "apel"
+            },
+            {
+              "key": "milk",
+              "word": "milk",
+              "meaning": "susu"
+            },
+            {
+              "key": "bread",
+              "word": "bread",
+              "meaning": "roti"
+            }
+          ]
         }
       },
       {
