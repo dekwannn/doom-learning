@@ -10,36 +10,10 @@ import GoogleAd from '@/components/Ads/GoogleAd';
 import { supabase } from '@/lib/supabase';
 import { useRankStore } from '@/store/useRankStore';
 import { useReviewStore } from '@/store/useReviewStore';
+import { playSound, speakText } from '@/lib/quiz-sound';
+import { Picture } from './Pictures';
+import { ListenPictureStep, TapPictureStep } from './PictureSteps';
 import { X, CheckCircle2, XCircle, ChevronRight, Info, Lightbulb, BookOpen, Zap } from 'lucide-react';; // <-- PENTING: Jangan lupa install lucide-react jika belum
-
-// ── Sound & TTS ──────────────────────────────────────────────────────────────
-function playSound(type: 'correct' | 'wrong' | 'complete') {
-  if (typeof window === 'undefined') return;
-  try {
-    const ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
-    if (type === 'correct') {
-      [[523.25,0,0.12],[659.25,0.1,0.12],[783.99,0.2,0.18]].forEach(([freq,delay,dur])=>{const o=ctx.createOscillator();const og=ctx.createGain();o.connect(og);og.connect(ctx.destination);o.type='sine';o.frequency.value=freq as number;og.gain.setValueAtTime(0,ctx.currentTime+(delay as number));og.gain.linearRampToValueAtTime(0.18,ctx.currentTime+(delay as number)+0.02);og.gain.linearRampToValueAtTime(0,ctx.currentTime+(delay as number)+(dur as number));o.start(ctx.currentTime+(delay as number));o.stop(ctx.currentTime+(delay as number)+(dur as number));});
-    } else if (type === 'wrong') {
-      [[220,0,0.08],[196,0.09,0.14]].forEach(([freq,delay,dur])=>{const o=ctx.createOscillator();const og=ctx.createGain();o.connect(og);og.connect(ctx.destination);o.type='sawtooth';o.frequency.value=freq as number;og.gain.setValueAtTime(0,ctx.currentTime+(delay as number));og.gain.linearRampToValueAtTime(0.12,ctx.currentTime+(delay as number)+0.02);og.gain.linearRampToValueAtTime(0,ctx.currentTime+(delay as number)+(dur as number));o.start(ctx.currentTime+(delay as number));o.stop(ctx.currentTime+(delay as number)+(dur as number));});
-    } else {
-      [[523.25,0,0.1],[659.25,0.1,0.1],[783.99,0.2,0.1],[1046.5,0.3,0.25]].forEach(([freq,delay,dur])=>{const o=ctx.createOscillator();const og=ctx.createGain();o.connect(og);og.connect(ctx.destination);o.type='sine';o.frequency.value=freq as number;og.gain.setValueAtTime(0,ctx.currentTime+(delay as number));og.gain.linearRampToValueAtTime(0.2,ctx.currentTime+(delay as number)+0.03);og.gain.linearRampToValueAtTime(0,ctx.currentTime+(delay as number)+(dur as number));o.start(ctx.currentTime+(delay as number));o.stop(ctx.currentTime+(delay as number)+(dur as number));});
-    }
-  } catch(_){}
-}
-
-function speakText(text: string, onStart?: ()=>void, onEnd?: ()=>void) {
-  if (typeof window === 'undefined' || !('speechSynthesis' in window)) { onEnd?.(); return; }
-  window.speechSynthesis.cancel();
-  const utt = new SpeechSynthesisUtterance(text);
-  utt.lang = 'en-US'; utt.rate = 0.85; utt.pitch = 1.0; utt.volume = 1.0;
-  const voices = window.speechSynthesis.getVoices();
-  const v = voices.find(v => v.lang === 'en-US') || voices.find(v => v.lang.startsWith('en'));
-  if (v) utt.voice = v;
-  utt.onstart = () => onStart?.();
-  utt.onend   = () => onEnd?.();
-  utt.onerror = () => onEnd?.();
-  window.speechSynthesis.speak(utt);
-}
 
 function similarity(a: string, b: string) {
   const norm = (s: string) => s.toLowerCase().replace(/[.,!?;:'"()\-]/g,'').replace(/\s+/g,' ').trim();
@@ -247,13 +221,15 @@ function VocabStep({ data, color }: { data:any; color:string }) {
 function ChoiceStep({ data, type, color, onAnswer }: { data:any; type:string; color:string; onAnswer:(c:boolean, ans:string)=>void }) {
   const [sel, setSel] = useState<string|null>(null);
   const [checked, setChecked] = useState(false);
-  const LABEL: Record<string,string> = { fill_in_blank:'Fill in the Blank', translation_quiz:'Translation', mini_conversation:'Conversation' };
+  const LABEL: Record<string,string> = { fill_in_blank:'Fill in the Blank', translation_quiz:'Translation', mini_conversation:'Conversation', picture_quiz:'Picture Quiz' };
   
   const handleCheck = () => {
     if (!sel || checked) return;
     setChecked(true);
     const correct = sel === data.correctAnswer;
     playSound(correct ? 'correct' : 'wrong');
+    // A picture question says the word after answering, so the picture, the word and its sound go together
+    if (data.audioText) setTimeout(() => speakText(data.audioText), 600);
     setTimeout(() => onAnswer(correct, sel), 50); // Kirim jawaban user ke onAnswer
   };
 
@@ -268,6 +244,11 @@ function ChoiceStep({ data, type, color, onAnswer }: { data:any; type:string; co
             <p style={{ color:'#d4d4d8', fontSize:14, lineHeight:1.55 }}>"{d.text}"</p>
           </div>
         ))}
+        {data.picture && (
+          <div style={{ width:'min(100%, 220px)', aspectRatio:'1', margin:'0 auto 14px', borderRadius:18, background:'rgba(255,255,255,0.025)', border:'1px solid rgba(255,255,255,0.06)' }}>
+            <Picture id={data.picture} />
+          </div>
+        )}
         <h2 style={{ fontSize:20, fontWeight:900, color:'#fff', letterSpacing:'-0.01em', lineHeight:1.4 }}>{data.sentence||data.question}</h2>
       </div>
       <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
@@ -966,7 +947,8 @@ export default function AdventureQuiz({ feedData, chapter, stage, stageIndex, to
       question: item.content.sentence || item.content.question || item.content.instruction || item.content.word,
       correct: correct,
       userAnswer: userAnswer,
-      correctAnswer: item.content.correctAnswer || item.content.correctSentence || item.content.meaning,
+      correctAnswer: item.content.labels?.[item.content.correctAnswer] || item.content.correctAnswer || item.content.correctSentence || item.content.meaning
+        || item.content.targets?.map((t: any) => `${t.word} = ${t.meaning}`).join(', '),
       explanation: item.content.explanations?.[userAnswer] || item.content.explanation || 'Kosakata Baru'
     }]);
 
@@ -1060,7 +1042,9 @@ export default function AdventureQuiz({ feedData, chapter, stage, stageIndex, to
   const isSentence  = item?.type === 'sentence_building';
   const isListening = item?.type === 'listening_quiz';
   const isSpeaking  = item?.type === 'speaking_test';
-  const isChoice    = !!item && !isVocab && !isMatch && !isSentence && !isListening && !isSpeaking;
+  const isListenPic = item?.type === 'listen_picture';
+  const isTapPic    = item?.type === 'tap_picture';
+  const isChoice    = !!item && !isVocab && !isMatch && !isSentence && !isListening && !isSpeaking && !isListenPic && !isTapPic;
 
   return (
     <div style={{ display:'flex', flexDirection:'column', height:'100%', background:'#0a0a0d', overflow:'hidden' }}>
@@ -1116,6 +1100,8 @@ export default function AdventureQuiz({ feedData, chapter, stage, stageIndex, to
             {isMatch     && <MatchingStep data={item.content} color={color} onAnswer={onAnswer}/>}
             {isListening && <ListeningStep data={item.content} color={color} onAnswer={onAnswer}/>}
             {isSpeaking  && <SpeakingStep  data={item.content} color={color} onAnswer={onSpeakingAnswer}/>}
+            {isListenPic && <ListenPictureStep data={item.content} color={color} onAnswer={onAnswer}/>}
+            {isTapPic    && <TapPictureStep data={item.content} color={color} onAnswer={onAnswer}/>}
           </div>
         ) : null}
       </div>
