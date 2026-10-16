@@ -154,7 +154,7 @@ function LoginContent() {
         )}
       </div>
 
-      <p style={footerNote}>Dengan melanjutkan, kamu menyetujui Ketentuan Layanan dan Kebijakan Privasi LINGORA.</p>
+      <p style={footerNote}>Dengan melanjutkan, kamu menyetujui <Link href="/syarat" style={{ color:'#a1a1aa', textDecoration:'underline', textUnderlineOffset:3 }}>Syarat Penggunaan</Link> dan <Link href="/privasi" style={{ color:'#a1a1aa', textDecoration:'underline', textUnderlineOffset:3 }}>Kebijakan Privasi</Link> Lingora.</p>
       
       <style>{`
         @keyframes spin { to { transform: rotate(360deg) } }

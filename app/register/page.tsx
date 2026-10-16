@@ -348,7 +348,7 @@ export default function RegisterPage() {
       </div>
 
       <p style={footerNote}>
-        Dengan mendaftar, kamu menyetujui Ketentuan Layanan dan Kebijakan Privasi LINGORA.
+        Dengan mendaftar, kamu menyetujui <Link href="/syarat" style={{ color:'#a1a1aa', textDecoration:'underline', textUnderlineOffset:3 }}>Syarat Penggunaan</Link> dan <Link href="/privasi" style={{ color:'#a1a1aa', textDecoration:'underline', textUnderlineOffset:3 }}>Kebijakan Privasi</Link> Lingora.
       </p>
       
       <style>{`

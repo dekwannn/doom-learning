@@ -9,6 +9,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLanguageStore, LANGUAGES, type LanguageDef } from '@/store/useLanguageStore';
 import Image from 'next/image';
+import LegalLinks from '@/components/Legal/LegalLinks';
 
 // ── IMPORT DRIVER.JS ──
 import { driver } from 'driver.js';
@@ -296,6 +297,8 @@ export default function LanguageSelectPage() {
             ) : 'Pilih bahasa terlebih dahulu'}
           </button>
         </div>
+
+        <div style={{ marginTop: 28 }}><LegalLinks /></div>
 
         {/* ── CSS Driver.js — sama persis dengan adventure page ── */}
         <style>{`
