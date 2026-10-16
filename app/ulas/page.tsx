@@ -2,8 +2,9 @@
 
 // src/app/ulas/page.tsx
 // "Ulas kata": a short review of the words met in stages, lessons and speaking cards, on a Leitner schedule.
-// Each word asks for its meaning (retrieval practice); a right answer moves it to a later review, a wrong one
-// brings it back soon. With too few words for choices, the card is flipped and the learner says if they knew it.
+// Each word asks for its meaning (retrieval practice); Japanese also asks for the reading of a hiragana (see
+// lib/review-questions). A right answer moves a word to a later review, a wrong one brings it back soon. With too
+// few choices, the card is flipped and the learner says if they knew it.
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -15,6 +16,7 @@ import { dueCards, INTERVAL_DAYS, nextDue, type ReviewCard, useReviewStore } fro
 import { useProgress } from '@/hooks/useProgress';
 import { TTS_LANG } from '@/lib/speaking-cards';
 import { speakSegments } from '@/lib/lingo-speech';
+import { buildQuestion, type ChoicePool, japanesePool, type ReviewQuestion } from '@/lib/review-questions';
 
 const FONT = 'system-ui, sans-serif';
 const PER_SESSION = 10;
@@ -32,7 +34,7 @@ function whenText(ms: number | null) {
   return `${days} hari lagi`;
 }
 
-type Question = { card: ReviewCard; options: string[] | null };
+type Question = ReviewQuestion;
 
 export default function UlasPage() {
   const router = useRouter();
@@ -43,17 +45,18 @@ export default function UlasPage() {
 
   const mine = useMemo(() => Object.values(cards).filter((c) => c.lang === lang), [cards, lang]);
   const due = useMemo(() => dueCards(cards, lang), [cards, lang]);
+  // Japanese: every hiragana and meaning of the course as extra choices (loaded only for Japanese)
+  const [jaPool, setJaPool] = useState<ChoicePool | null>(null);
+  useEffect(() => {
+    if (lang !== 'ja' || jaPool) return;
+    let alive = true;
+    void import('@/data/jaData.json').then((m) => { if (alive) setJaPool(japanesePool(m.default as Parameters<typeof japanesePool>[0])); });
+    return () => { alive = false; };
+  }, [lang, jaPool]);
+  const pool = lang === 'ja' ? jaPool : null;
 
   const start = () => {
-    const picked = due.slice(0, PER_SESSION);
-    // Choices: the right meaning and three other meanings of this language's words
-    const meanings = [...new Set(mine.map((c) => c.meaning))];
-    setSession(
-      shuffle(picked).map((card) => {
-        const others = shuffle(meanings.filter((m) => m !== card.meaning)).slice(0, 3);
-        return { card, options: others.length === 3 ? shuffle([card.meaning, ...others]) : null };
-      }),
-    );
+    setSession(shuffle(due.slice(0, PER_SESSION)).map((card) => buildQuestion(card, mine, pool)));
     setResult(null);
   };
 
@@ -76,6 +79,7 @@ export default function UlasPage() {
             key={session.map((q) => q.card.id).join()}
             questions={session}
             lang={lang}
+            remake={(card) => buildQuestion(card, mine, pool)}
             onEnd={(r) => { setSession(null); setResult(r); }}
           />
         ) : result ? (
@@ -172,7 +176,13 @@ function Overview({ mine, due, lang, onStart }: { mine: ReviewCard[]; due: Revie
   );
 }
 
-function Session({ questions, lang, onEnd }: { questions: Question[]; lang: string; onEnd: (r: { right: string[]; wrong: ReviewCard[] }) => void }) {
+function Session({ questions, lang, remake, onEnd }: {
+  questions: Question[];
+  lang: string;
+  /** A fresh question for a word asked once more (Japanese may ask it the other way round) */
+  remake: (card: ReviewCard) => Question;
+  onEnd: (r: { right: string[]; wrong: ReviewCard[] }) => void;
+}) {
   const grade = useReviewStore((s) => s.grade);
   const [queue, setQueue] = useState(questions);
   const [index, setIndex] = useState(0);
@@ -185,7 +195,7 @@ function Session({ questions, lang, onEnd }: { questions: Question[]; lang: stri
   const total = questions.length;
   const doneCount = Object.keys(firstTry).length;
 
-  const say = () => speakSegments([{ text: q.card.word, lang: tts }], undefined, { natural: true });
+  const say = () => speakSegments([{ text: q.speak, lang: tts }], undefined, { natural: true });
 
   /** Grades the word on its first try; returns the answers so far and whether a missed word was queued once more */
   const answer = (right: boolean): { queued: boolean; answers: Record<string, boolean> } => {
@@ -196,13 +206,13 @@ function Session({ questions, lang, onEnd }: { questions: Question[]; lang: stri
     useUserStore.getState().incrementDailyQuestion(); // counts toward "Kerjakan 5 soal"
     // A word missed comes once more at the end of this session
     if (right) return { queued: false, answers };
-    setQueue((list) => [...list, { ...q, options: q.options ? shuffle(q.options) : null }]);
+    setQueue((list) => [...list, remake(q.card)]);
     return { queued: true, answers };
   };
   const choose = (option: string) => {
     if (picked) return;
     setPicked(option);
-    answer(option === q.card.meaning);
+    answer(option === q.answer);
   };
   const next = ({ queued, answers }: { queued: boolean; answers: Record<string, boolean> } = { queued: false, answers: firstTry }) => {
     setPicked(null);
@@ -229,31 +239,31 @@ function Session({ questions, lang, onEnd }: { questions: Question[]; lang: stri
 
       <div style={{ marginTop: 18, background: '#0e0e14', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 20, padding: '22px 18px', textAlign: 'center' }}>
         <p style={{ margin: 0, fontSize: 10.5, fontWeight: 800, letterSpacing: '0.14em', color: '#52525b' }}>
-          {index >= total ? 'SEKALI LAGI' : q.card.source === 'kartu' ? 'KATA SULIT' : 'APA ARTINYA?'}
+          {index >= total ? `SEKALI LAGI · ${q.ask}` : q.ask}
         </p>
-        <p style={{ margin: '10px 0 0', fontSize: 30, fontWeight: 900, lineHeight: 1.2 }}>{q.card.word}</p>
-        {q.card.phonetic && <p style={{ margin: '4px 0 0', fontSize: 13, color: '#71717a' }}>{q.card.phonetic}</p>}
-        <button onClick={say}
+        <p lang={lang} style={{ margin: '10px 0 0', fontSize: q.prompt.length <= 2 ? 56 : 30, fontWeight: 900, lineHeight: 1.2 }}>{q.prompt}</p>
+        {q.hint && <p style={{ margin: '4px 0 0', fontSize: 13, color: '#71717a' }}>{q.hint}</p>}
+        {(!q.listenAfter || showResult) && <button onClick={say}
           style={{ marginTop: 12, display: 'inline-flex', alignItems: 'center', gap: 7, padding: '8px 16px', borderRadius: 99, border: '1px solid rgba(92,250,46,0.35)', background: 'rgba(92,250,46,0.08)', color: '#bef264', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: FONT }}>
           <Volume2 size={15} /> Dengar
-        </button>
+        </button>}
       </div>
 
       {q.options ? (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 14 }}>
           {q.options.map((o) => {
-            const isRight = o === q.card.meaning;
+            const isRight = o === q.answer;
             const state = !picked ? 'idle' : isRight ? 'right' : o === picked ? 'wrong' : 'idle';
             return (
               <button key={o} onClick={() => choose(o)} disabled={!!picked}
                 style={{
-                  textAlign: 'left', padding: '12px 14px', borderRadius: 14, fontSize: 14, lineHeight: 1.45, cursor: picked ? 'default' : 'pointer', fontFamily: FONT,
+                  textAlign: q.bigOptions ? 'center' : 'left', padding: '12px 14px', borderRadius: 14, fontSize: q.bigOptions ? 28 : 14, lineHeight: 1.45, cursor: picked ? 'default' : 'pointer', fontFamily: FONT,
                   display: 'flex', alignItems: 'center', gap: 10,
                   background: state === 'right' ? 'rgba(16,185,129,0.12)' : state === 'wrong' ? 'rgba(248,113,113,0.1)' : 'rgba(255,255,255,0.03)',
                   border: `1px solid ${state === 'right' ? 'rgba(16,185,129,0.5)' : state === 'wrong' ? 'rgba(248,113,113,0.45)' : 'rgba(255,255,255,0.08)'}`,
                   color: state === 'idle' && picked ? '#71717a' : '#e4e4e7',
                 }}>
-                <span style={{ flex: 1 }}>{o}</span>
+                <span lang={q.bigOptions ? lang : undefined} style={{ flex: 1 }}>{o}</span>
                 {state === 'right' && <Check size={17} color="#34d399" />}
                 {state === 'wrong' && <X size={17} color="#f87171" />}
               </button>
@@ -263,11 +273,14 @@ function Session({ questions, lang, onEnd }: { questions: Question[]; lang: stri
       ) : !revealed ? (
         <button onClick={() => setRevealed(true)}
           style={{ marginTop: 14, width: '100%', padding: 13, borderRadius: 14, border: '1px solid rgba(255,255,255,0.12)', background: 'rgba(255,255,255,0.03)', color: '#e4e4e7', fontSize: 14, fontWeight: 700, cursor: 'pointer', fontFamily: FONT }}>
-          Lihat arti
+          Lihat jawaban
         </button>
       ) : (
         <div style={{ marginTop: 14 }}>
-          <div style={{ padding: '12px 14px', borderRadius: 14, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', fontSize: 14, lineHeight: 1.5 }}>{q.card.meaning}</div>
+          <div style={{ padding: '12px 14px', borderRadius: 14, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', fontSize: 14, lineHeight: 1.5 }}>
+            <div lang={q.bigOptions ? lang : undefined} style={{ fontSize: q.bigOptions ? 28 : 14, fontWeight: 700 }}>{q.answer}</div>
+            {q.after.map((a) => <div key={a} style={{ color: '#a1a1aa', fontSize: 12.5, marginTop: 4 }}>{a}</div>)}
+          </div>
           {firstTry[q.card.id] === undefined && (
             <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
               <button onClick={() => next(answer(false))} style={{ flex: 1, padding: 13, borderRadius: 14, border: '1px solid rgba(248,113,113,0.4)', background: 'rgba(248,113,113,0.08)', color: '#fca5a5', fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: FONT }}>Belum ingat</button>
@@ -279,10 +292,9 @@ function Session({ questions, lang, onEnd }: { questions: Question[]; lang: stri
 
       {showResult && q.options && (
         <>
-          {q.card.example && (
+          {q.after.length > 0 && (
             <div style={{ marginTop: 12, padding: '10px 14px', borderRadius: 14, background: 'rgba(96,165,250,0.06)', border: '1px solid rgba(96,165,250,0.2)', fontSize: 13, color: '#bfdbfe', lineHeight: 1.5 }}>
-              <span style={{ fontSize: 10.5, fontWeight: 800, letterSpacing: '0.12em', color: '#60a5fa' }}>CONTOH</span>
-              <div style={{ marginTop: 3 }}>{q.card.example}</div>
+              {q.after.map((a) => <div key={a} style={{ marginTop: 2 }}>{a}</div>)}
             </div>
           )}
           <button onClick={() => next()}
