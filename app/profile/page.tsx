@@ -15,6 +15,7 @@ import {
   CalendarCheck, Languages, BookMarked, Sparkles, Shield, PenLine, Sword,
   PenTool, Mountain, LogOut, LogIn, CloudUpload, LucideIcon, Loader2, Edit3, X, Check
 } from 'lucide-react';
+import LegalLinks from '@/components/Legal/LegalLinks';
 
 /* ── Icon registry & Config ── */
 const ICON_MAP: Record<string, LucideIcon> = {
@@ -585,6 +586,7 @@ export default function ProfilePage() {
             )}
             <LevelRoadmap/>
             <AchievementsSection cols={3}/>
+            <div style={{ marginTop:8 }}><LegalLinks/></div>
           </div>
         </div>
         <AchievementPopup/>
@@ -716,6 +718,7 @@ export default function ProfilePage() {
 
         <div style={{ padding:'16px 16px 0' }}><LevelRoadmap/></div>
         <div style={{ padding:'16px 16px 0' }}><AchievementsSection cols={3}/></div>
+        <div style={{ padding:'28px 16px 0' }}><LegalLinks/></div>
       </div>
       <AchievementPopup/>
       <BottomNav/>

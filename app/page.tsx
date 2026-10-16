@@ -13,6 +13,7 @@ import jaData from '@/data/jaData.json';
 import zhData from '@/data/zhData.json';
 import koData from '@/data/koData.json';
 import { Flame, Zap } from 'lucide-react';
+import LegalLinks from '@/components/Legal/LegalLinks';
 
 const DATA_MAP: Record<string, { chapters: unknown[] }> = {
   en: dummyData,
@@ -186,6 +187,7 @@ export default function HomePage() {
   const chapter = (<><SectionLabel>Chapter kamu</SectionLabel><ChapterCard ch={currentChapter} done={chapterDone} count={currentChapter.stages.length} nextChapter={nextChapter} xp={xp} /></>);
   const rank = <RankCard lang={activeLang} />;
   const latest = <LatestAchievement />;
+  const footer = <div style={{ margin: '28px 0 8px' }}><LegalLinks /></div>;
 
   const background = (
     <>
@@ -206,7 +208,7 @@ export default function HomePage() {
             {header}
             <div style={{ display: 'grid', gridTemplateColumns: isDesktop ? '360px 1fr' : '300px 1fr', gap: isDesktop ? 28 : 20, marginTop: 20 }}>
               <div>{greeting}{targets}{rank}</div>
-              <div>{continueBlock}{practice}{chapter}{latest}</div>
+              <div>{continueBlock}{practice}{chapter}{latest}{footer}</div>
             </div>
           </div>
         </div>
@@ -230,6 +232,7 @@ export default function HomePage() {
           {chapter}
           {rank}
           {latest}
+          {footer}
         </div>
         <BottomNav />
       </div>
