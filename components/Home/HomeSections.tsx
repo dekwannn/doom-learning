@@ -12,6 +12,7 @@ import { CafeScene, CardsScene, GoScene, MedalScene, TalkScene, TrophyScene } fr
 import { supabase } from '@/lib/supabase';
 import { ACHIEVEMENT_DEFS, useUserStore } from '@/store/useUserStore';
 import { dueCards, nextDue, useReviewStore } from '@/store/useReviewStore';
+import { chapterOpen } from '@/lib/chapter-open';
 
 const FONT = 'system-ui,sans-serif';
 const card: React.CSSProperties = { background: '#0e0e14', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 18, padding: 14, fontFamily: FONT };
@@ -165,7 +166,7 @@ export function QuickPractice({ voiceReady }: { voiceReady: boolean }) {
   );
 }
 
-export function ChapterCard({ ch, done, count, nextChapter, xp }: { ch: HomeChapter; done: number; count: number; nextChapter?: HomeChapter; xp: number }) {
+export function ChapterCard({ ch, done, count, nextChapter, xp, placedChapter = 0 }: { ch: HomeChapter; done: number; count: number; nextChapter?: HomeChapter; xp: number; placedChapter?: number }) {
   return (
     <div style={card}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}>
@@ -179,7 +180,7 @@ export function ChapterCard({ ch, done, count, nextChapter, xp }: { ch: HomeChap
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 11.5, gap: 8 }}>
         <span style={{ color: '#71717a', display: 'flex', alignItems: 'center', gap: 4 }}>
           {nextChapter ? (
-            xp >= nextChapter.xpRequired
+            chapterOpen(nextChapter, xp, placedChapter)
               ? <>{nextChapter.title} sudah terbuka</>
               : <><Lock size={11} /> {nextChapter.title} terbuka di {nextChapter.xpRequired} XP</>
           ) : 'Chapter terakhir'}

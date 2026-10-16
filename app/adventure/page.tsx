@@ -7,6 +7,7 @@ import { useEffect, useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLanguageStore, LANGUAGES } from '@/store/useLanguageStore';
 import { useProgress } from '@/hooks/useProgress';
+import { chapterOpen } from '@/lib/chapter-open';
 import { useAuth } from '@/hooks/useAuth';
 import dummyData from '@/data/dummyData.json';
 import jaData from '@/data/jaData.json';
@@ -116,11 +117,31 @@ function ChapterDecorations({ w, h, color, offsetY }: { w: number; h: number; co
   );
 }
 
+/* ─── Placement test invitation ─────────────────────────────── */
+/** For beginners who have not taken the placement test yet (and whose chapter 2 is not open yet) */
+const showPlacement = (chapters: { id: number | string; xpRequired?: number }[], xp: number, placedChapter: number) =>
+  placedChapter === 0 && chapters.length > 1 && !chapterOpen(chapters[1], xp, 0);
+
+function PlacementInvite({ compact = false }: { compact?: boolean }) {
+  const router = useRouter();
+  return (
+    <button onClick={() => router.push('/tes-penempatan')}
+      style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 10, textAlign: 'left', cursor: 'pointer', background: 'linear-gradient(135deg,rgba(16,185,129,0.12),rgba(59,130,246,0.06))', border: '1px solid rgba(16,185,129,0.28)', borderRadius: compact ? 12 : 16, padding: compact ? '8px 12px' : '12px 14px', marginTop: compact ? 12 : 0 }}>
+      <svg width={compact ? 18 : 22} height={compact ? 18 : 22} viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}><path d="M4 20h16M6 16l4-4 3 3 5-6" stroke="#34d399" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/><circle cx="18" cy="9" r="2" fill="#34d399"/></svg>
+      <span style={{ flex: 1, minWidth: 0 }}>
+        <span style={{ display: 'block', color: '#e4e4e7', fontSize: compact ? 12.5 : 13.5, fontWeight: 800 }}>Sudah bisa dasarnya?</span>
+        <span style={{ display: 'block', color: '#71717a', fontSize: compact ? 11 : 12, marginTop: 1 }}>Ikut tes penempatan, lewati chapter yang sudah kamu kuasai</span>
+      </span>
+      <span style={{ color: '#34d399', fontSize: 16, fontWeight: 900 }}>›</span>
+    </button>
+  );
+}
+
 /* ─── Sidebar ─────────────────────────────────────────────── */
 function ChapterSidePanel({
-  chapters, xp, stageStars, stageUnlocked, completedStages, activeChapterIdx, onChapterClick,
+  chapters, xp, placedChapter, stageStars, stageUnlocked, completedStages, activeChapterIdx, onChapterClick,
 }: {
-  chapters: any[]; xp: number; stageStars: any; stageUnlocked: any;
+  chapters: any[]; xp: number; placedChapter: number; stageStars: any; stageUnlocked: any;
   completedStages: any; activeChapterIdx: number; onChapterClick: (ci: number) => void;
 }) {
   const totalStages = chapters.reduce((a: number, ch: any) => a + ch.stages.length, 0);
@@ -129,6 +150,7 @@ function ChapterSidePanel({
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: '24px 20px', overflowY: 'auto', height: '100%' }}>
+      {showPlacement(chapters, xp, placedChapter) && <PlacementInvite />}
       {/* Progress ring */}
       <div style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 18, padding: '18px 16px', display: 'flex', alignItems: 'center', gap: 16 }}>
         <svg width={56} height={56} viewBox="0 0 56 56" style={{ flexShrink: 0 }}>
@@ -171,7 +193,7 @@ function ChapterSidePanel({
         <p style={{ color: '#3f3f46', fontSize: 10, fontWeight: 800, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 10 }}>Chapters</p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
           {chapters.map((ch: any, ci: number) => {
-            const chUnlocked = xp >= ch.xpRequired;
+            const chUnlocked = chapterOpen(ch, xp, placedChapter);
             const chStages = ch.stages as any[];
             const chCompleted = chStages.filter((s: any) => completedStages[s.id]).length;
             const chPct = Math.round((chCompleted / chStages.length) * 100);
@@ -417,7 +439,7 @@ export default function Home() {
   const { loading } = useAuth();
 
   const selectedLanguage = useLanguageStore(s => s.selectedLanguage);
-  const { xp, stageStars, stageUnlocked, completedStages } = useProgress();
+  const { xp, stageStars, stageUnlocked, completedStages, placedChapter } = useProgress();
 
   const [mounted,          setMounted]          = useState(false);
   const [pressed,          setPressed]          = useState<string | null>(null);
@@ -565,10 +587,10 @@ export default function Home() {
         // Ambil ID stage terakhir dari chapter sebelumnya
         const lastStageOfPrevChapter = prevChapter ? prevChapter.stages[prevChapter.stages.length - 1].id : null;
 
-        // Chapter terbuka jika: ini chapter pertama ATAU (XP cukup DAN stage terakhir chapter lalu sudah terbuka)
+        // Chapter terbuka jika: ini chapter pertama ATAU (XP cukup, atau dibuka tes penempatan, DAN stage terakhir chapter lalu sudah terbuka)
         const isChUnlocked = ci === 0 
-          ? xp >= ch.xpRequired 
-          : xp >= ch.xpRequired && (lastStageOfPrevChapter ? stageUnlocked[lastStageOfPrevChapter] : true);
+          ? chapterOpen(ch, xp, placedChapter)
+          : chapterOpen(ch, xp, placedChapter) && (lastStageOfPrevChapter ? stageUnlocked[lastStageOfPrevChapter] : true);
 
         return (
           <div key={ci}>
@@ -737,7 +759,7 @@ export default function Home() {
 
           <div style={{ display: 'grid', gridTemplateColumns: `${sidebarW}px 1fr`, flex: 1, minHeight: 0, overflow: 'hidden' }}>
             <div style={{ borderRight: '1px solid rgba(255,255,255,0.04)', background: 'rgba(8,8,15,0.8)', height: 'calc(100vh - 69px)', position: 'sticky', top: 69, overflowY: 'auto', scrollbarWidth: 'none' }}>
-              <ChapterSidePanel chapters={chapters} xp={xp} stageStars={stageStars}
+              <ChapterSidePanel chapters={chapters} xp={xp} placedChapter={placedChapter} stageStars={stageStars}
                 stageUnlocked={stageUnlocked} completedStages={completedStages}
                 activeChapterIdx={activeChapterIdx} onChapterClick={handleChapterClick}/>
             </div>
@@ -784,6 +806,7 @@ export default function Home() {
           <div style={{ width:'100%', height:3, borderRadius:99, background:'#1a1a28', overflow:'hidden' }}>
             <div style={{ height:'100%', width:`${Math.min(100,(xp/6000)*100)}%`, background:'linear-gradient(90deg,#10b981,#3b82f6,#a855f7)', borderRadius:99, transition:'width 1s ease', boxShadow:'0 0 10px rgba(99,102,241,0.55)' }}/>
           </div>
+          {showPlacement(chapters, xp, placedChapter) && <PlacementInvite compact />}
         </div>
 
         {/* ── Map Scroll Area ── */}

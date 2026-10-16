@@ -23,6 +23,7 @@ function userSnapshot() {
     stageStars: s.stageStars,
     stageUnlocked: s.stageUnlocked,
     completedStages: s.completedStages,
+    placedChapter: s.placedChapter,
     unlockedAchievements: s.unlockedAchievements,
     dailyStats: s.dailyStats,
   }

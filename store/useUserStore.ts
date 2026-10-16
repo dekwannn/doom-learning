@@ -88,6 +88,8 @@ interface UserState {
   stageStars: Record<string, number>;
   stageUnlocked: Record<string, boolean>;
   completedStages: Record<string, boolean>;
+  /** Chapter the placement test started the learner at (its chapters are open without the XP); 0 = no test */
+  placedChapter: number;
   unlockedAchievements: UnlockedAchievement[];
   pendingAchievements: string[];
   
@@ -107,6 +109,7 @@ interface UserState {
   claimDailyReward: (taskId: string) => boolean;
 
   unlockStage: (stageId: string) => void;
+  setPlacedChapter: (chapter: number) => void;
   setStageStars: (stageId: string, stars: number) => void;
   isStageUnlocked: (chapterId: number, stageId: string) => boolean;
   isChapterUnlocked: (chapterXpRequired: number) => boolean;
@@ -156,6 +159,7 @@ export const useUserStore = create<UserState>()(
       stageStars: {},
       stageUnlocked: buildInitialUnlocks(),
       completedStages: {},
+      placedChapter: 0,
       unlockedAchievements: [],
       pendingAchievements: [],
       
@@ -219,6 +223,7 @@ export const useUserStore = create<UserState>()(
         stageStars: {},
         stageUnlocked: buildInitialUnlocks(),
         completedStages: {},
+        placedChapter: 0,
         unlockedAchievements: [],
         pendingAchievements: [],
         dailyStats: initialDailyStats,
@@ -252,6 +257,8 @@ export const useUserStore = create<UserState>()(
         });
       },
 
+      setPlacedChapter: (chapter) => set({ placedChapter: chapter }),
+
       setStageStars: (stageId, stars) => {
         set((s) => {
           const cur = s.stageStars[stageId] ?? 0;
@@ -266,7 +273,7 @@ export const useUserStore = create<UserState>()(
         const chapters = (dummyData as any).chapters;
         if (!chapters) return false;
         const ch = chapters.find((c: any) => c.id === chapterId);
-        if (!ch || get().xp < ch.xpRequired) return false;
+        if (!ch || (get().xp < ch.xpRequired && get().placedChapter < ch.id)) return false;
         return get().stageUnlocked[stageId] ?? false;
       },
 
@@ -377,6 +384,7 @@ export const useUserStore = create<UserState>()(
         stageStars: s.stageStars,
         stageUnlocked: s.stageUnlocked,
         completedStages: s.completedStages,
+        placedChapter: s.placedChapter,
         unlockedAchievements: s.unlockedAchievements,
         dailyStats: s.dailyStats,
       }),

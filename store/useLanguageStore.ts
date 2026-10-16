@@ -28,6 +28,8 @@ export interface LangProgress {
   stageStars: Record<string, number>;
   stageUnlocked: Record<string, boolean>;
   completedStages: Record<string, boolean>;
+  /** Chapter the placement test started the learner at (its chapters are open without the XP) */
+  placedChapter?: number;
 }
 
 function emptyProgress(): LangProgress {
@@ -46,6 +48,7 @@ interface LanguageState {
   resetCombo: () => void;
   setStreak: (n: number) => void;
   unlockStage: (stageId: string, allStages: any[]) => void;
+  setPlacedChapter: (chapter: number) => void;
   setStageStars: (stageId: string, stars: number) => void;
   markStageComplete: (stageId: string) => void;
 
@@ -145,6 +148,13 @@ export const useLanguageStore = create<LanguageState>()(
             [selectedLanguage]: { ...cur, stageUnlocked: newUnlocked },
           },
         });
+      },
+
+      setPlacedChapter: (chapter) => {
+        const { selectedLanguage, progress } = get();
+        if (!selectedLanguage) return;
+        const cur = progress[selectedLanguage] ?? emptyProgress();
+        set({ progress: { ...progress, [selectedLanguage]: { ...cur, placedChapter: chapter } } });
       },
 
       setStageStars: (stageId, stars) => {

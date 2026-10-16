@@ -24,6 +24,8 @@ export function useProgress() {
   const enStageStars      = useUserStore(s => s.stageStars);
   const enStageUnlocked   = useUserStore(s => s.stageUnlocked);
   const enCompletedStages = useUserStore(s => s.completedStages);
+  const enPlacedChapter   = useUserStore(s => s.placedChapter ?? 0);
+  const enSetPlaced       = useUserStore(s => s.setPlacedChapter);
 
   const enAddXp          = useUserStore(s => s.addXp);
   const enIncrementCombo = useUserStore(s => s.incrementCombo);
@@ -41,6 +43,8 @@ export function useProgress() {
   const langStageStars = useLanguageStore(s => s.progress[activeLang]?.stageStars ?? EMPTY_OBJ);
   const langStageUnlocked = useLanguageStore(s => s.progress[activeLang]?.stageUnlocked ?? EMPTY_OBJ);
   const langCompletedStages = useLanguageStore(s => s.progress[activeLang]?.completedStages ?? EMPTY_OBJ);
+  const langPlacedChapter = useLanguageStore(s => s.progress[activeLang]?.placedChapter ?? 0);
+  const langSetPlaced = useLanguageStore(s => s.setPlacedChapter);
 
   // ── Language store — actions ───────────────────────────────────────────────
   const langAddXp         = useLanguageStore(s => s.addXp);
@@ -62,6 +66,9 @@ export function useProgress() {
   const stageStars      = isEnglish ? enStageStars      : langStageStars;
   const stageUnlocked   = isEnglish ? enStageUnlocked   : langStageUnlocked;
   const completedStages = isEnglish ? enCompletedStages : langCompletedStages;
+  /** Chapter the placement test started this language at (0 = no test); see lib/chapter-open.ts */
+  const placedChapter   = isEnglish ? enPlacedChapter   : langPlacedChapter;
+  const setPlacedChapter = (chapter: number) => (isEnglish ? enSetPlaced(chapter) : langSetPlaced(chapter));
 
   // ── Supabase sync — CLOUD SAVE ───────────────────────────────────────────
   const syncToSupabase = useCallback(async (
@@ -130,7 +137,7 @@ export function useProgress() {
     stageStars[stageId] ?? 0;
 
   return {
-    xp, combo, streak, stageStars, stageUnlocked, completedStages,
+    xp, combo, streak, stageStars, stageUnlocked, completedStages, placedChapter, setPlacedChapter,
     selectedLanguage, isEnglish,
     addXp, incrementCombo, resetCombo, setStreak, setStageStars,
     markStageComplete, isStageCompleted, unlockStage, getStageStars,
