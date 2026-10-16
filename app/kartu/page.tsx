@@ -14,6 +14,7 @@ import { useLanguageStore } from '@/store/useLanguageStore';
 import { useUserStore } from '@/store/useUserStore';
 import { useReviewStore } from '@/store/useReviewStore';
 import { useProgress } from '@/hooks/useProgress';
+import { chapterOpen } from '@/lib/chapter-open';
 import { buildDecks, type CardDeck, compareHeard, type SpeakingCard, TTS_LANG } from '@/lib/speaking-cards';
 import { assessPronunciation, wordsToFix } from '@/lib/lingo-pronunciation';
 import { getLingoVoiceHealth, speakSegments, stopLingoSpeech } from '@/lib/lingo-speech';
@@ -41,7 +42,7 @@ type Verdict = { score: number; words: { word: string; ok: boolean }[]; heard: s
 export default function KartuPage() {
   const router = useRouter();
   const lang = useLanguageStore((s) => s.selectedLanguage) ?? 'en';
-  const { xp } = useProgress();
+  const { xp, placedChapter } = useProgress();
   const decks = useMemo(() => buildDecks(lang).filter((d) => d.cards.length > 0), [lang]);
   const [deck, setDeck] = useState<CardDeck | null>(null);
   const [round, setRound] = useState(0); // a new set of cards each time a deck is (re)started
@@ -62,7 +63,7 @@ export default function KartuPage() {
 
         {deck
           ? <CardSession key={`${deck.id}-${round}`} deck={deck} lang={lang} onDone={() => setDeck(null)} onAgain={() => setRound((r) => r + 1)} />
-          : <DeckPicker decks={decks} xp={xp} onPick={(d) => { setDeck(d); setRound((r) => r + 1); }} />}
+          : <DeckPicker decks={decks} xp={xp} placedChapter={placedChapter} onPick={(d) => { setDeck(d); setRound((r) => r + 1); }} />}
       </div>
     </main>
   );
@@ -74,7 +75,7 @@ function deckWords(d: CardDeck): string[] {
   return short.length >= 3 ? short.slice(0, 3) : ['Hi!', 'Thank you', 'Yes'];
 }
 
-function DeckPicker({ decks, xp, onPick }: { decks: CardDeck[]; xp: number; onPick: (d: CardDeck) => void }) {
+function DeckPicker({ decks, xp, placedChapter, onPick }: { decks: CardDeck[]; xp: number; placedChapter: number; onPick: (d: CardDeck) => void }) {
   return (
     <div style={{ marginTop: 18 }}>
       <div style={{ display: 'flex', gap: 12, alignItems: 'center', background: 'linear-gradient(135deg,rgba(167,139,250,0.12),rgba(167,139,250,0.03))', border: '1px solid rgba(167,139,250,0.25)', borderRadius: 18, padding: 14 }}>
@@ -84,7 +85,7 @@ function DeckPicker({ decks, xp, onPick }: { decks: CardDeck[]; xp: number; onPi
       <p style={{ color: '#52525b', fontSize: 10.5, fontWeight: 800, letterSpacing: '0.14em', textTransform: 'uppercase', margin: '22px 4px 9px' }}>Pilih chapter</p>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
         {decks.map((d) => {
-          const open = xp >= d.xpRequired;
+          const open = chapterOpen(d, xp, placedChapter);
           return (
             <button key={d.id} onClick={() => open && onPick(d)} disabled={!open}
               style={{ display: 'flex', alignItems: 'center', gap: 10, textAlign: 'left', padding: '8px 14px 8px 8px', borderRadius: 16, cursor: open ? 'pointer' : 'default', background: '#0e0e14', border: `1px solid ${open ? `${d.color}40` : 'rgba(255,255,255,0.06)'}`, opacity: open ? 1 : 0.7, fontFamily: FONT }}>

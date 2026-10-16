@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useUserStore } from '@/store/useUserStore';
 import { useProgress } from '@/hooks/useProgress';
+import { chapterOpen } from '@/lib/chapter-open';
 import DailyTargets, { DAILY_MISSIONS, useDailyProgress } from '@/components/DailyTargets';
 import { activeStreak, AllDoneCard, ChapterCard, ContinueCard, GreetingCard, LatestAchievement, QuickPractice, RankCard, ReviewCard, SectionLabel, type HomeChapter, type HomeStage } from '@/components/Home/HomeSections';
 import { useLanguageStore, LANGUAGES } from '@/store/useLanguageStore';
@@ -120,7 +121,7 @@ export default function HomePage() {
 
   const selectedLanguage = useLanguageStore(s => s.selectedLanguage);
   const activeLang = selectedLanguage ?? 'en';
-  const { xp, stageUnlocked, completedStages } = useProgress();
+  const { xp, stageUnlocked, completedStages, placedChapter } = useProgress();
   const streak = useUserStore(s => activeStreak(s.streak, s.lastStreakDate));
   const { doneCount } = useDailyProgress();
 
@@ -130,7 +131,8 @@ export default function HomePage() {
   // The next stage to play: the first open stage not finished yet
   let continueStage: { ch: HomeChapter; stage: HomeStage; index: number } | null = null;
   outer: for (const ch of CHAPTERS) {
-    if (xp < ch.xpRequired) break;
+    if (!chapterOpen(ch, xp, placedChapter)) break;
+    if (Number(ch.id) < placedChapter) continue; // the placement test started the learner at a later chapter
     for (let i = 0; i < ch.stages.length; i++) {
       const stage = ch.stages[i];
       if ((stageUnlocked[stage.id] ?? false) && !isDone(stage.id)) {
@@ -139,7 +141,7 @@ export default function HomePage() {
       }
     }
   }
-  const unlockedChapters = CHAPTERS.filter((ch) => xp >= ch.xpRequired);
+  const unlockedChapters = CHAPTERS.filter((ch) => chapterOpen(ch, xp, placedChapter));
   const currentChapter = continueStage?.ch ?? unlockedChapters[unlockedChapters.length - 1] ?? CHAPTERS[0];
   const nextChapter = CHAPTERS[CHAPTERS.indexOf(currentChapter) + 1];
   const chapterDone = currentChapter.stages.filter((s) => isDone(s.id)).length;
@@ -184,7 +186,7 @@ export default function HomePage() {
   );
   const practice = (<><SectionLabel>Latihan cepat</SectionLabel><QuickPractice voiceReady={activeLang === 'en'} /></>);
   const targets = (<><SectionLabel>Target hari ini</SectionLabel><DailyTargets /></>);
-  const chapter = (<><SectionLabel>Chapter kamu</SectionLabel><ChapterCard ch={currentChapter} done={chapterDone} count={currentChapter.stages.length} nextChapter={nextChapter} xp={xp} /></>);
+  const chapter = (<><SectionLabel>Chapter kamu</SectionLabel><ChapterCard ch={currentChapter} done={chapterDone} count={currentChapter.stages.length} nextChapter={nextChapter} xp={xp} placedChapter={placedChapter} /></>);
   const rank = <RankCard lang={activeLang} />;
   const latest = <LatestAchievement />;
   const footer = <div style={{ margin: '28px 0 8px' }}><LegalLinks /></div>;
