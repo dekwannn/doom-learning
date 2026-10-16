@@ -1,7 +1,7 @@
 // src/components/Adventure/VideoStep.tsx
 // "video_quiz": a short role-play of Lingo and a friend (made with Remotion and Lingo's voice, see the my-video
-// project), then a question about it. The subtitles are not in the video: they are drawn here from the lines'
-// timings, so they can be turned off, and the Indonesian translation can be added.
+// project), then a question about it. No subtitles while watching: it is a listening question. Slow and replay
+// help instead, and the whole conversation (with its translation) is shown once it is answered.
 'use client';
 import { useRef, useState } from 'react';
 import { CheckCircle2, XCircle, Play, RotateCcw } from 'lucide-react';
@@ -12,16 +12,13 @@ type Answer = (correct: boolean, answer: string) => void;
 export interface VideoQuizData {
   video: string;
   poster?: string;
-  /** In seconds, in the video's own time */
+  /** The conversation, shown after answering (start/end in seconds of the video) */
   lines: { who: string; en: string; id: string; start: number; end: number }[];
   question: string;
   options: string[];
   correctAnswer: string;
   explanations?: Record<string, string>;
 }
-
-/** A subtitle stays a moment after its line, so a short reply can still be read */
-const HOLD = 0.6;
 
 const chip = (on: boolean, c = '#facc15') => ({
   fontSize: 12, fontWeight: 700, padding: '7px 12px', borderRadius: 99, cursor: 'pointer',
@@ -35,15 +32,10 @@ export function VideoStep({ data, color, onAnswer }: { data: VideoQuizData; colo
   const [time, setTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [watched, setWatched] = useState(0);
-  const [subs, setSubs] = useState(true);
-  const [translate, setTranslate] = useState(false);
   const [slow, setSlow] = useState(false);
   const [sel, setSel] = useState<string | null>(null);
   const [checked, setChecked] = useState(false);
   const right = sel === data.correctAnswer;
-
-  // The latest line that has started (a held subtitle gives way to the next line at once)
-  const line = [...data.lines].reverse().find((l) => time >= l.start && time < l.end + HOLD);
 
   const play = () => {
     const v = video.current;
@@ -89,21 +81,10 @@ export function VideoStep({ data, color, onAnswer }: { data: VideoQuizData; colo
             onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
             style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover' }} />
 
-          {subs && line && (
-            <div style={{ position: 'absolute', left: 10, right: 10, bottom: 12, textAlign: 'center', pointerEvents: 'none' }}>
-              <span style={{ display: 'inline-block', background: 'rgba(0,0,0,0.62)', borderRadius: 10, padding: '6px 12px', maxWidth: '100%' }}>
-                <span style={{ display: 'block', color: line.who === 'Lingo' ? '#a3e635' : '#7dd3fc', fontSize: 10.5, fontWeight: 800, letterSpacing: '0.06em', textTransform: 'uppercase' }}>{line.who}</span>
-                <span style={{ display: 'block', color: '#fff', fontSize: 15, fontWeight: 800, lineHeight: 1.35 }}>{line.en}</span>
-                {translate && <span style={{ display: 'block', color: '#fde68a', fontSize: 12.5, fontWeight: 600, marginTop: 2 }}>{line.id}</span>}
-              </span>
-            </div>
-          )}
-
           {!playing && (
             <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.28)' }}>
-              {/* Smaller once started, so it does not cover the subtitle when paused halfway */}
-              <div style={{ width: time > 0 ? 46 : 62, height: time > 0 ? 46 : 62, borderRadius: '50%', background: 'rgba(255,255,255,0.94)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 6px 24px rgba(0,0,0,0.4)', marginBottom: time > 0 ? 70 : 0 }}>
-                <Play size={time > 0 ? 20 : 26} color="#111" fill="#111" style={{ marginLeft: 3 }} />
+              <div style={{ width: 62, height: 62, borderRadius: '50%', background: 'rgba(255,255,255,0.94)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 6px 24px rgba(0,0,0,0.4)' }}>
+                <Play size={26} color="#111" fill="#111" style={{ marginLeft: 3 }} />
               </div>
             </div>
           )}
@@ -111,14 +92,15 @@ export function VideoStep({ data, color, onAnswer }: { data: VideoQuizData; colo
         </div>
 
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 10 }}>
-          <button onClick={() => setSubs((s) => !s)} style={chip(subs)}>Subtitle</button>
-          <button onClick={() => setTranslate((t) => !t)} disabled={!subs} style={{ ...chip(translate && subs), opacity: subs ? 1 : 0.4 }}>+ Terjemahan</button>
           <button onClick={toggleSlow} style={chip(slow, '#7dd3fc')}>Pelan</button>
           <button onClick={replay} style={chip(false)}><RotateCcw size={12} /> Ulangi</button>
         </div>
 
         <h2 style={{ fontSize: 18, fontWeight: 900, color: '#fff', lineHeight: 1.4, marginTop: 14 }}>{data.question}</h2>
-        {watched === 0 && !playing && <p style={{ color: '#52525b', fontSize: 12, marginTop: 4 }}>Tonton videonya dulu, lalu jawab.</p>}
+        {watched === 0 && !playing && <p style={{ color: '#52525b', fontSize: 12, marginTop: 4 }}>Tonton dan dengarkan dulu, lalu jawab.</p>}
+        {watched > 0 && !checked && !playing && (
+          <p style={{ color: '#71717a', fontSize: 12, marginTop: 4 }}>Belum yakin? Putar lagi, atau coba <b style={{ color: '#7dd3fc' }}>Pelan</b>.</p>
+        )}
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
