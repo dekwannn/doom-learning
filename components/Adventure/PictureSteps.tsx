@@ -4,9 +4,9 @@
 // - "tap_picture": one scene, several words in a row; the learner touches each named thing in the picture.
 // A word answered wrong goes to "Ulas kata", like the hard words of the speaking cards.
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CheckCircle2, XCircle, Volume2 } from 'lucide-react';
-import { playSound, speakText } from '@/lib/quiz-sound';
+import { playSound, preloadSpeech, SLOW_RATE, speakText, stopSpeech } from '@/lib/quiz-sound';
 import { useLanguageStore } from '@/store/useLanguageStore';
 import { useReviewStore } from '@/store/useReviewStore';
 import { Picture, SceneArt, SCENES } from './Pictures';
@@ -42,6 +42,12 @@ export function ListenPictureStep({ data, color, onAnswer }: { data: ListenPictu
   const [plays, setPlays] = useState(0);
   const label = (id: string) => data.labels?.[id] ?? id;
   const right = sel === data.correctAnswer;
+  // Lingo's voice comes from the voice server: ask for it (normal and slow) before the button is pressed
+  useEffect(() => {
+    preloadSpeech(data.audioText);
+    preloadSpeech(data.audioText, true);
+    return () => stopSpeech();
+  }, [data.audioText]);
 
   const play = (rate?: number) => {
     if (playing) return;
@@ -67,7 +73,7 @@ export function ListenPictureStep({ data, color, onAnswer }: { data: ListenPictu
             {playing ? 'Playing…' : plays === 0 ? 'Play Audio' : `Play Again (×${plays})`}
             {plays === 0 && <span style={{ position: 'absolute', top: 10, right: 12, width: 8, height: 8, borderRadius: '50%', background: '#ef4444', boxShadow: '0 0 4px rgba(239,68,68,0.8)' }} />}
           </button>
-          <button onClick={() => play(0.5)} disabled={playing} aria-label="Putar pelan" style={{ width: 74, height: 58, borderRadius: 12, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', color: '#a1a1aa', fontSize: 12, fontWeight: 800, cursor: playing ? 'default' : 'pointer' }}>
+          <button onClick={() => play(SLOW_RATE)} disabled={playing} aria-label="Putar pelan" style={{ width: 74, height: 58, borderRadius: 12, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', color: '#a1a1aa', fontSize: 12, fontWeight: 800, cursor: playing ? 'default' : 'pointer' }}>
             Pelan
           </button>
         </div>
@@ -148,6 +154,11 @@ export function TapPictureStep({ data, color, onAnswer }: { data: TapPictureData
 
   const phrase = (word: string) => `the ${word}${data.noun ? ` ${data.noun}` : ''}`;
   const say = (word: string) => speakText(phrase(word));
+  const words = data.targets.map((t) => phrase(t.word)).join('|');
+  useEffect(() => {
+    for (const w of words.split('|')) preloadSpeech(w);
+    return () => stopSpeech();
+  }, [words]);
 
   const tap = (key: string) => {
     if (done || !target || found.includes(key)) return;

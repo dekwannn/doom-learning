@@ -5,7 +5,7 @@ The app sends the English text Lingo wants to say and gets a WAV back. If this s
 unreachable, the app simply uses the browser voice, so nothing breaks.
 
   GET  /health                  -> {"ok": true, "voice": "af_heart", "pronunciation": "ready" | "loading" | "off"}
-  POST /tts  {"text": ""}        -> audio/wav (24 kHz mono)
+  POST /tts  {"text": "", "speed": 0.7}  -> audio/wav (24 kHz mono); speed is optional (0.5-1.3, default below)
   POST /assess?target=<text>     body: audio/wav of the learner (16-bit PCM)  -> pronunciation check (JSON)
        target is optional: the sentence the learner tried to say; without it, what Whisper heard is used
 
@@ -171,16 +171,19 @@ class Handler(BaseHTTPRequestHandler):
             return self.assess(parse_qs(url.query).get("target", [""])[0].strip()[:MAX_CHARS] or None)
         try:
             length = min(int(self.headers.get("Content-Length", "0")), 8192)
-            text = str(json.loads(self.rfile.read(length) or b"{}").get("text", "")).strip()
-        except (ValueError, json.JSONDecodeError):
-            text = ""
+            body = json.loads(self.rfile.read(length) or b"{}")
+            text = str(body.get("text", "")).strip()
+            # A slower voice for the "Pelan" buttons; anything odd falls back to the normal speed
+            speed = min(1.3, max(0.5, float(body.get("speed", SPEED))))
+        except (ValueError, TypeError, AttributeError, json.JSONDecodeError):
+            text, speed = "", SPEED
         if not text or len(text) > MAX_CHARS:
             return self._json(400, {"error": "Invalid text"})
 
         started = time.time()
         with synth_lock:
-            samples, rate = kokoro.create(text, voice=VOICE, speed=SPEED, lang="en-us")
-        print(f"{time.time() - started:4.1f}s  {text[:70]}", flush=True)
+            samples, rate = kokoro.create(text, voice=VOICE, speed=speed, lang="en-us")
+        print(f"{time.time() - started:4.1f}s  {text[:70]}" + (f"  (speed {speed:.2f})" if speed != SPEED else ""), flush=True)
         self._send(200, to_wav(samples, rate), "audio/wav")
 
     def assess(self, target):
