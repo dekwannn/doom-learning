@@ -40,6 +40,7 @@ let playing: AudioBufferSourceNode | null = null;
 let level: number | null = null; // loudness of the natural voice right now (0..1); null while it is not playing
 let naturalOffUntil = 0; // after the server did not answer, use the device voice for a while
 const clipCache = new Map<string, ArrayBuffer>(); // sentence → WAV, so repeated sentences are instant
+const clipLoading = new Map<string, Promise<ArrayBuffer | null>>(); // asked but not back yet (a preload), so it is asked once
 
 function audioContext(): AudioContext | null {
   if (typeof window === "undefined") return null;
@@ -98,14 +99,26 @@ function sentences(text: string): string[] {
   return parts.map((s) => s.trim()).filter(Boolean).flatMap((s) => (s.length > 380 ? s.match(/.{1,380}(\s|$)/g)!.map((p) => p.trim()) : [s]));
 }
 
-async function fetchClip(text: string): Promise<ArrayBuffer | null> {
-  const hit = clipCache.get(text);
+/** `speed` (Lingo's server: 0.5-1.3) only when it differs from the server's own speed, e.g. 0.7 for "Pelan" */
+async function fetchClip(text: string, speed?: number): Promise<ArrayBuffer | null> {
+  const key = speed ? `${speed}|${text}` : text;
+  const hit = clipCache.get(key);
   if (hit) return hit.slice(0);
+  let loading = clipLoading.get(key);
+  if (!loading) {
+    loading = requestClip(text, key, speed).finally(() => clipLoading.delete(key));
+    clipLoading.set(key, loading);
+  }
+  const wav = await loading;
+  return wav ? wav.slice(0) : null; // every caller gets its own copy (decodeAudioData takes ownership of it)
+}
+
+async function requestClip(text: string, key: string, speed?: number): Promise<ArrayBuffer | null> {
   try {
     const res = await fetch(`${VOICE_URL}/tts`, {
       method: "POST",
       headers: VOICE_HEADERS,
-      body: JSON.stringify({ text }),
+      body: JSON.stringify(speed ? { text, speed } : { text }),
       signal: AbortSignal.timeout(15000),
     });
     if (!res.ok) {
@@ -113,8 +126,8 @@ async function fetchClip(text: string): Promise<ArrayBuffer | null> {
       return null;
     }
     const wav = await res.arrayBuffer();
-    if (clipCache.size >= 40) clipCache.delete(clipCache.keys().next().value!);
-    clipCache.set(text, wav.slice(0)); // decodeAudioData takes ownership of the buffer it gets
+    if (clipCache.size >= 60) clipCache.delete(clipCache.keys().next().value!);
+    clipCache.set(key, wav);
     return wav;
   } catch {
     naturalOffUntil = Date.now() + 30_000; // server off or unreachable: don't wait for it again right away
@@ -135,7 +148,7 @@ function playClip(c: AudioContext, buffer: AudioBuffer): Promise<void> {
 }
 
 /** Returns false when the natural voice is not available, so the caller can use the device voice instead */
-async function speakNatural(parts: SpeechSegment[], myRun: number, onDone?: () => void): Promise<boolean> {
+async function speakNatural(parts: SpeechSegment[], myRun: number, onDone?: () => void, opts: SpeakOptions = {}): Promise<boolean> {
   const c = audioContext();
   if (!VOICE_URL || !c || !analyser || Date.now() < naturalOffUntil) return false;
   if (!parts.every((p) => p.lang.toLowerCase().startsWith("en"))) return false; // the server speaks English only
@@ -144,7 +157,7 @@ async function speakNatural(parts: SpeechSegment[], myRun: number, onDone?: () =
   // as it is ready while the next one is being made
   const list = parts.flatMap((p) => sentences(p.text));
   const clips: Promise<ArrayBuffer | null>[] = [];
-  list.forEach((s, i) => clips.push(i === 0 ? fetchClip(s) : clips[i - 1].then(() => (myRun === run ? fetchClip(s) : null))));
+  list.forEach((s, i) => clips.push(i === 0 ? fetchClip(s, opts.speed) : clips[i - 1].then(() => (myRun === run ? fetchClip(s, opts.speed) : null))));
   const decode = async (i: number) => {
     const wav = await clips[i];
     return wav ? c.decodeAudioData(wav).catch(() => null) : null;
@@ -177,7 +190,7 @@ async function speakNatural(parts: SpeechSegment[], myRun: number, onDone?: () =
       // This sentence failed: say the rest with the device voice
       playing = null;
       level = null;
-      speakDevice(list.slice(i).map((text) => ({ text, lang: "en-US" })), myRun, onDone);
+      speakDevice(list.slice(i).map((text) => ({ text, lang: "en-US" })), myRun, onDone, opts);
       return true;
     }
     const next = i + 1 < list.length ? decode(i + 1) : null;
@@ -203,7 +216,7 @@ function pickVoice(lang: string): SpeechSynthesisVoice | undefined {
   return voices.find((v) => v.lang.toLowerCase() === lang.toLowerCase()) ?? voices.find((v) => v.lang.toLowerCase().startsWith(base));
 }
 
-function speakDevice(parts: SpeechSegment[], myRun: number, onDone?: () => void) {
+function speakDevice(parts: SpeechSegment[], myRun: number, onDone?: () => void, opts: SpeakOptions = {}) {
   if (!hasDeviceVoice()) {
     emit({ speaking: false });
     onDone?.();
@@ -214,7 +227,7 @@ function speakDevice(parts: SpeechSegment[], myRun: number, onDone?: () => void)
   parts.forEach((seg, i) => {
     const utt = new SpeechSynthesisUtterance(seg.text);
     utt.lang = seg.lang;
-    utt.rate = seg.lang.startsWith("id") ? 0.95 : 0.82;
+    utt.rate = opts.rate ?? (seg.lang.startsWith("id") ? 0.95 : 0.82);
     const voice = pickVoice(seg.lang);
     if (voice) utt.voice = voice;
     utt.onstart = () => {
@@ -250,12 +263,20 @@ function stopPlayback() {
   if (hasDeviceVoice()) window.speechSynthesis.cancel();
 }
 
+export type SpeakOptions = {
+  /** Ask for the natural server voice first (only English is available there for now) */
+  natural?: boolean;
+  /** Speed of the natural voice (0.5-1.3); the server's own speed when left out */
+  speed?: number;
+  /** Rate of the device voice */
+  rate?: number;
+};
+
 /**
  * Speaks the segments one after another; Lingo counts as speaking from the first start to the last end.
  * `onDone` runs once everything has been said (not when it is cut off by stopLingoSpeech or a new speak).
- * `natural: true` asks for the natural server voice first (only English is available there for now).
  */
-export function speakSegments(segments: SpeechSegment[], onDone?: () => void, opts: { natural?: boolean } = {}): void {
+export function speakSegments(segments: SpeechSegment[], onDone?: () => void, opts: SpeakOptions = {}): void {
   const myRun = ++run;
   stopPlayback();
   const parts = segments
@@ -267,12 +288,18 @@ export function speakSegments(segments: SpeechSegment[], onDone?: () => void, op
     return;
   }
   if (!opts.natural) {
-    speakDevice(parts, myRun, onDone);
+    speakDevice(parts, myRun, onDone, opts);
     return;
   }
-  void speakNatural(parts, myRun, onDone).then((ok) => {
-    if (!ok && myRun === run) speakDevice(parts, myRun, onDone);
+  void speakNatural(parts, myRun, onDone, opts).then((ok) => {
+    if (!ok && myRun === run) speakDevice(parts, myRun, onDone, opts);
   });
+}
+
+/** Asks Lingo's server for an English text ahead of time, so it plays at once when it is needed (quiz audio) */
+export function preloadLingoVoice(text: string, speed?: number): void {
+  if (!VOICE_URL || Date.now() < naturalOffUntil || !text.trim()) return;
+  for (const s of sentences(text)) void fetchClip(s, speed);
 }
 
 /** Speaks one text in one language (used by the [AUDIO] buttons and the speaking practice). */

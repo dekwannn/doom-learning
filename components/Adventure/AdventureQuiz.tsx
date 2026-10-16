@@ -10,7 +10,7 @@ import GoogleAd from '@/components/Ads/GoogleAd';
 import { supabase } from '@/lib/supabase';
 import { useRankStore } from '@/store/useRankStore';
 import { useReviewStore } from '@/store/useReviewStore';
-import { playSound, speakText } from '@/lib/quiz-sound';
+import { playSound, preloadSpeech, speakText, stopSpeech } from '@/lib/quiz-sound';
 import { Picture } from './Pictures';
 import { ListenPictureStep, TapPictureStep } from './PictureSteps';
 import { X, CheckCircle2, XCircle, ChevronRight, Info, Lightbulb, BookOpen, Zap } from 'lucide-react';; // <-- PENTING: Jangan lupa install lucide-react jika belum
@@ -158,6 +158,11 @@ function ReviewModal({ isOpen, onClose, data, color }: { isOpen: boolean, onClos
 // ── VocabStep ─────────────────────────────────────────────────────────────────
 function VocabStep({ data, color }: { data:any; color:string }) {
   const [audioState, setAudioState] = useState<'idle' | 'playing' | 'played'>('idle');
+  // Lingo's voice is made on the voice server: ask for it now, so the button plays at once
+  useEffect(() => {
+    if (!data.audioUrl || data.audioUrl.startsWith('tts://')) preloadSpeech(data.word);
+    return () => stopSpeech();
+  }, [data.audioUrl, data.word]);
  
   const handlePlay = () => {
     if (audioState === 'playing') return;
@@ -221,6 +226,7 @@ function VocabStep({ data, color }: { data:any; color:string }) {
 function ChoiceStep({ data, type, color, onAnswer }: { data:any; type:string; color:string; onAnswer:(c:boolean, ans:string)=>void }) {
   const [sel, setSel] = useState<string|null>(null);
   const [checked, setChecked] = useState(false);
+  useEffect(() => { preloadSpeech(data.audioText); return () => stopSpeech(); }, [data.audioText]);
   const LABEL: Record<string,string> = { fill_in_blank:'Fill in the Blank', translation_quiz:'Translation', mini_conversation:'Conversation', picture_quiz:'Picture Quiz' };
   
   const handleCheck = () => {
@@ -493,10 +499,11 @@ function ListeningStep({ data, color, onAnswer }: { data:any; color:string; onAn
   const audioRef = useRef<HTMLAudioElement | null>(null);
  
   useEffect(() => {
+    if (!data.audioUrl) preloadSpeech(data.audioText);
     if (typeof window === 'undefined' || !('speechSynthesis' in window)) { setTtsOk(false); return; }
     const load = () => window.speechSynthesis.getVoices();
     load(); window.speechSynthesis.onvoiceschanged = load;
-    return () => { window.speechSynthesis.cancel(); if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; } };
+    return () => { stopSpeech(); if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; } };
   }, []);
  
   const playAudio = () => {
