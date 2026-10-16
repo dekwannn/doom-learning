@@ -5,6 +5,8 @@ const withPWA = withPWAInit({
   dest: "public",
   disable: process.env.NODE_ENV === "development", // Matikan PWA saat mode coding
   register: true,
+  // The quiz videos are not saved for offline use up front (they load when a video question is opened)
+  publicExcludes: ["!noprecache/**/*", "!video/**/*"],
   // skipWaiting: true,
 });
 
