@@ -13,6 +13,7 @@ import { useReviewStore } from '@/store/useReviewStore';
 import { playSound, preloadSpeech, speakText, stopSpeech } from '@/lib/quiz-sound';
 import { Picture } from './Pictures';
 import { ListenPictureStep, TapPictureStep } from './PictureSteps';
+import { VideoStep } from './VideoStep';
 import { X, CheckCircle2, XCircle, ChevronRight, Info, Lightbulb, BookOpen, Zap } from 'lucide-react';; // <-- PENTING: Jangan lupa install lucide-react jika belum
 
 function similarity(a: string, b: string) {
@@ -1051,7 +1052,8 @@ export default function AdventureQuiz({ feedData, chapter, stage, stageIndex, to
   const isSpeaking  = item?.type === 'speaking_test';
   const isListenPic = item?.type === 'listen_picture';
   const isTapPic    = item?.type === 'tap_picture';
-  const isChoice    = !!item && !isVocab && !isMatch && !isSentence && !isListening && !isSpeaking && !isListenPic && !isTapPic;
+  const isVideo     = item?.type === 'video_quiz';
+  const isChoice    = !!item && !isVocab && !isMatch && !isSentence && !isListening && !isSpeaking && !isListenPic && !isTapPic && !isVideo;
 
   return (
     <div style={{ display:'flex', flexDirection:'column', height:'100%', background:'#0a0a0d', overflow:'hidden' }}>
@@ -1109,6 +1111,7 @@ export default function AdventureQuiz({ feedData, chapter, stage, stageIndex, to
             {isSpeaking  && <SpeakingStep  data={item.content} color={color} onAnswer={onSpeakingAnswer}/>}
             {isListenPic && <ListenPictureStep data={item.content} color={color} onAnswer={onAnswer}/>}
             {isTapPic    && <TapPictureStep data={item.content} color={color} onAnswer={onAnswer}/>}
+            {isVideo     && <VideoStep data={item.content} color={color} onAnswer={onAnswer}/>}
           </div>
         ) : null}
       </div>

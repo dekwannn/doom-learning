@@ -991,6 +991,59 @@
         }
       },
       {
+        "id": "c1s3_v1",
+        "type": "video_quiz",
+        "xpReward": 20,
+        "content": {
+          "video": "/video/en/kenalan.mp4",
+          "poster": "/video/en/kenalan.jpg",
+          "lines": [
+            {
+              "who": "Sari",
+              "en": "Hi! I'm Sari.",
+              "id": "Hai! Aku Sari.",
+              "start": 0.6,
+              "end": 1.8
+            },
+            {
+              "who": "Lingo",
+              "en": "Hi, Sari! My name is Lingo.",
+              "id": "Hai, Sari! Namaku Lingo.",
+              "start": 2.27,
+              "end": 4.4
+            },
+            {
+              "who": "Lingo",
+              "en": "Nice to meet you!",
+              "id": "Senang bertemu denganmu!",
+              "start": 4.87,
+              "end": 6.07
+            },
+            {
+              "who": "Sari",
+              "en": "Nice to meet you, too!",
+              "id": "Senang bertemu denganmu juga!",
+              "start": 6.53,
+              "end": 7.9
+            }
+          ],
+          "question": "Apa jawaban Sari di akhir video?",
+          "options": [
+            "Goodbye!",
+            "Nice to meet you, too!",
+            "Thank you!",
+            "Good morning!"
+          ],
+          "correctAnswer": "Nice to meet you, too!",
+          "explanations": {
+            "Nice to meet you, too!": "Benar! Kalau ada yang bilang 'Nice to meet you!', jawabannya 'Nice to meet you, too!' (senang bertemu denganmu juga).",
+            "Goodbye!": "Salah. 'Goodbye!' diucapkan saat berpisah, bukan saat berkenalan.",
+            "Thank you!": "Salah. Sari tidak berterima kasih; dia membalas 'Nice to meet you, too!'.",
+            "Good morning!": "Salah. 'Good morning!' adalah sapaan pagi; Sari membalas 'Nice to meet you, too!'."
+          }
+        }
+      },
+      {
         "id": "c1s3_12",
         "type": "speaking_test",
         "xpReward": 20,
@@ -2213,6 +2266,59 @@
             "Coffee and eggs": "Salah. 'Coffee' dan 'eggs' tidak disebutkan dalam audio.",
             "Water and apple": "Salah. 'Water' dan 'apple' tidak disebutkan dalam audio.",
             "Bread and coffee": "Salah. Roti disebutkan tapi hanya 'sometimes', dan 'coffee' sama sekali tidak disebutkan."
+          }
+        }
+      },
+      {
+        "id": "c2s2_v1",
+        "type": "video_quiz",
+        "xpReward": 20,
+        "content": {
+          "video": "/video/en/kafe.mp4",
+          "poster": "/video/en/kafe.jpg",
+          "lines": [
+            {
+              "who": "Lingo",
+              "en": "Hi! What would you like?",
+              "id": "Hai! Mau pesan apa?",
+              "start": 0.6,
+              "end": 1.97
+            },
+            {
+              "who": "Budi",
+              "en": "Can I have a coffee, please?",
+              "id": "Boleh saya pesan kopi?",
+              "start": 2.43,
+              "end": 4.27
+            },
+            {
+              "who": "Lingo",
+              "en": "Sure! Here you go.",
+              "id": "Tentu! Silakan.",
+              "start": 4.73,
+              "end": 5.9
+            },
+            {
+              "who": "Budi",
+              "en": "Thank you!",
+              "id": "Terima kasih!",
+              "start": 6.37,
+              "end": 7.33
+            }
+          ],
+          "question": "Apa yang dipesan Budi?",
+          "options": [
+            "Tea",
+            "Coffee",
+            "Milk",
+            "Juice"
+          ],
+          "correctAnswer": "Coffee",
+          "explanations": {
+            "Coffee": "Benar! Budi bilang 'Can I have a coffee, please?' (boleh saya pesan kopi?).",
+            "Tea": "Salah. Tea (teh) ada di menu, tapi Budi memesan coffee (kopi).",
+            "Milk": "Salah. Milk (susu) ada di menu, tapi Budi memesan coffee (kopi).",
+            "Juice": "Salah. Juice (jus) ada di menu, tapi Budi memesan coffee (kopi)."
           }
         }
       },
@@ -5817,6 +5923,59 @@
       }
     },
     {
+      "id": "c5s1_v1",
+      "type": "video_quiz",
+      "xpReward": 20,
+      "content": {
+        "video": "/video/en/asal.mp4",
+        "poster": "/video/en/asal.jpg",
+        "lines": [
+          {
+            "who": "Lingo",
+            "en": "Hello! What is your name?",
+            "id": "Halo! Siapa namamu?",
+            "start": 0.6,
+            "end": 2.03
+          },
+          {
+            "who": "Maya",
+            "en": "My name is Maya.",
+            "id": "Namaku Maya.",
+            "start": 2.5,
+            "end": 3.63
+          },
+          {
+            "who": "Lingo",
+            "en": "Where are you from, Maya?",
+            "id": "Kamu berasal dari mana, Maya?",
+            "start": 4.1,
+            "end": 5.33
+          },
+          {
+            "who": "Maya",
+            "en": "I am from Indonesia.",
+            "id": "Aku berasal dari Indonesia.",
+            "start": 5.8,
+            "end": 7.1
+          }
+        ],
+        "question": "Maya berasal dari mana?",
+        "options": [
+          "Japan",
+          "Korea",
+          "Indonesia",
+          "China"
+        ],
+        "correctAnswer": "Indonesia",
+        "explanations": {
+          "Indonesia": "Benar! Maya bilang 'I am from Indonesia.' (aku berasal dari Indonesia).",
+          "Japan": "Salah. Japan = Jepang. Maya bilang 'I am from Indonesia.'",
+          "Korea": "Salah. Maya bilang 'I am from Indonesia.'",
+          "China": "Salah. Maya bilang 'I am from Indonesia.'"
+        }
+      }
+    },
+    {
       "id": "c5s1_12",
       "type": "speaking_test",
       "xpReward": 20,
@@ -6439,6 +6598,59 @@
         }
       },
       {
+        "id": "c5s4_v1",
+        "type": "video_quiz",
+        "xpReward": 20,
+        "content": {
+          "video": "/video/en/suka.mp4",
+          "poster": "/video/en/suka.jpg",
+          "lines": [
+            {
+              "who": "Lingo",
+              "en": "Do you like rice?",
+              "id": "Kamu suka nasi?",
+              "start": 0.6,
+              "end": 1.7
+            },
+            {
+              "who": "Dimas",
+              "en": "Yes, I do! I like rice.",
+              "id": "Ya! Aku suka nasi.",
+              "start": 2.17,
+              "end": 3.63
+            },
+            {
+              "who": "Lingo",
+              "en": "Do you like milk?",
+              "id": "Kamu suka susu?",
+              "start": 4.1,
+              "end": 5.2
+            },
+            {
+              "who": "Dimas",
+              "en": "No, I don't.",
+              "id": "Tidak.",
+              "start": 5.67,
+              "end": 6.6
+            }
+          ],
+          "question": "Apa yang TIDAK disukai Dimas?",
+          "options": [
+            "Rice",
+            "Milk",
+            "Coffee",
+            "Bread"
+          ],
+          "correctAnswer": "Milk",
+          "explanations": {
+            "Milk": "Benar! Saat ditanya 'Do you like milk?', Dimas menjawab 'No, I don't.' (tidak).",
+            "Rice": "Salah. Dimas suka rice (nasi): 'Yes, I do! I like rice.'",
+            "Coffee": "Salah. Coffee tidak dibicarakan di video. Dimas tidak suka milk (susu).",
+            "Bread": "Salah. Bread tidak dibicarakan di video. Dimas tidak suka milk (susu)."
+          }
+        }
+      },
+      {
         "id": "c5s4_12",
         "type": "speaking_test",
         "xpReward": 20,
@@ -6702,6 +6914,59 @@
             "Fine": "Salah, orang pertama yang mengatakan 'I am fine'.",
             "Tired": "Salah, tidak ada kata 'tired' (lelah) di dalam percakapan.",
             "Sad": "Salah, tidak ada tanda-tanda mereka sedang sedih dalam audio."
+          }
+        }
+      },
+      {
+        "id": "c5s5_v1",
+        "type": "video_quiz",
+        "xpReward": 20,
+        "content": {
+          "video": "/video/en/kabar.mp4",
+          "poster": "/video/en/kabar.jpg",
+          "lines": [
+            {
+              "who": "Rina",
+              "en": "Hi, Lingo! How are you?",
+              "id": "Hai, Lingo! Apa kabar?",
+              "start": 0.6,
+              "end": 2.3
+            },
+            {
+              "who": "Lingo",
+              "en": "I'm fine, thank you. And you?",
+              "id": "Aku baik, terima kasih. Kamu?",
+              "start": 2.77,
+              "end": 4.7
+            },
+            {
+              "who": "Rina",
+              "en": "I'm good. See you later!",
+              "id": "Aku baik. Sampai jumpa nanti!",
+              "start": 5.17,
+              "end": 6.83
+            },
+            {
+              "who": "Lingo",
+              "en": "Goodbye!",
+              "id": "Selamat tinggal!",
+              "start": 7.3,
+              "end": 8.07
+            }
+          ],
+          "question": "Bagaimana kabar Lingo?",
+          "options": [
+            "Sedih",
+            "Baik",
+            "Lapar",
+            "Lelah"
+          ],
+          "correctAnswer": "Baik",
+          "explanations": {
+            "Baik": "Benar! Lingo menjawab 'I'm fine, thank you.' (aku baik, terima kasih).",
+            "Sedih": "Salah. Sedih = sad. Lingo bilang 'I'm fine' (aku baik).",
+            "Lapar": "Salah. Lapar = hungry. Lingo bilang 'I'm fine' (aku baik).",
+            "Lelah": "Salah. Lelah = tired. Lingo bilang 'I'm fine' (aku baik)."
           }
         }
       },
