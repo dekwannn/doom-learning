@@ -12,6 +12,7 @@ import LingoAvatar, { type LingoState } from '@/components/lingo/LingoAvatar';
 import { CardsScene } from '@/components/Home/LingoScenes';
 import { useLanguageStore } from '@/store/useLanguageStore';
 import { useUserStore } from '@/store/useUserStore';
+import { useReviewStore } from '@/store/useReviewStore';
 import { useProgress } from '@/hooks/useProgress';
 import { buildDecks, type CardDeck, compareHeard, type SpeakingCard, TTS_LANG } from '@/lib/speaking-cards';
 import { assessPronunciation, wordsToFix } from '@/lib/lingo-pronunciation';
@@ -153,6 +154,8 @@ function CardSession({ deck, lang, onDone, onAgain }: { deck: CardDeck; lang: st
     setPhase('result');
     if (best[card.id] === undefined) useUserStore.getState().incrementDailyQuestion(); // counts toward "Kerjakan 5 soal"
     setBest((b) => ({ ...b, [card.id]: Math.max(b[card.id] ?? 0, v.score) }));
+    // Not said right yet: the card comes back in "Ulas kata"
+    if (v.score < PASS && card.meaning) useReviewStore.getState().addWords(lang, [{ word: card.text, meaning: card.meaning, phonetic: card.phonetic, source: 'kartu' }], { hard: true });
   };
 
   async function start() {

@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useUserStore } from '@/store/useUserStore';
 import { useProgress } from '@/hooks/useProgress';
 import DailyTargets, { DAILY_MISSIONS, useDailyProgress } from '@/components/DailyTargets';
-import { activeStreak, AllDoneCard, ChapterCard, ContinueCard, GreetingCard, LatestAchievement, QuickPractice, RankCard, SectionLabel, type HomeChapter, type HomeStage } from '@/components/Home/HomeSections';
+import { activeStreak, AllDoneCard, ChapterCard, ContinueCard, GreetingCard, LatestAchievement, QuickPractice, RankCard, ReviewCard, SectionLabel, type HomeChapter, type HomeStage } from '@/components/Home/HomeSections';
 import { useLanguageStore, LANGUAGES } from '@/store/useLanguageStore';
 import BottomNav from '@/components/Layout/BottomNav';
 import dummyData from '@/data/dummyData.json';
@@ -178,6 +178,7 @@ export default function HomePage() {
       {continueStage
         ? <ContinueCard ch={continueStage.ch} stage={continueStage.stage} index={continueStage.index} count={continueStage.ch.stages.length} />
         : <AllDoneCard />}
+      <ReviewCard lang={activeLang} />
     </>
   );
   const practice = (<><SectionLabel>Latihan cepat</SectionLabel><QuickPractice voiceReady={activeLang === 'en'} /></>);

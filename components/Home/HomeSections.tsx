@@ -11,6 +11,7 @@ import LingoAvatar from '@/components/lingo/LingoAvatar';
 import { CafeScene, CardsScene, GoScene, MedalScene, TalkScene, TrophyScene } from '@/components/Home/LingoScenes';
 import { supabase } from '@/lib/supabase';
 import { ACHIEVEMENT_DEFS, useUserStore } from '@/store/useUserStore';
+import { dueCards, nextDue, useReviewStore } from '@/store/useReviewStore';
 
 const FONT = 'system-ui,sans-serif';
 const card: React.CSSProperties = { background: '#0e0e14', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 18, padding: 14, fontFamily: FONT };
@@ -109,6 +110,35 @@ function PracticeCard({ href, scene, label, sub, color, isNew }: { href: string;
         </div>
       </div>
     </Link>
+  );
+}
+
+/** "Ulas kata": how many words are ready for review today (hidden until the learner has met some words) */
+export function ReviewCard({ lang }: { lang: string }) {
+  const cards = useReviewStore((s) => s.cards);
+  const [now] = useState(() => Date.now());
+  const due = dueCards(cards, lang, now);
+  const count = Object.values(cards).filter((c) => c.lang === lang).length;
+  if (count === 0) return null;
+  const next = nextDue(cards, lang);
+  const days = next === null ? 0 : Math.round((next - now) / 86400000);
+  const words = due.map((c) => c.word).filter((w) => w.length <= 9).slice(0, 3);
+  return (
+    <>
+      <SectionLabel>Ulas kata</SectionLabel>
+      <Link href="/ulas" style={{ textDecoration: 'none' }}>
+        <div style={{ ...card, display: 'flex', alignItems: 'center', gap: 10, padding: '8px 14px 8px 8px', borderColor: due.length ? 'rgba(167,139,250,0.35)' : 'rgba(255,255,255,0.07)', background: due.length ? 'linear-gradient(120deg,#0e0e14 40%,rgba(167,139,250,0.12))' : card.background }}>
+          <CardsScene scale={0.55} words={words.length === 3 ? words : undefined} />
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <p style={{ color: '#f4f4f5', fontSize: 15, fontWeight: 800, margin: 0 }}>{due.length ? `${due.length} kata siap diulas` : 'Semua kata sudah diulas'}</p>
+            <p style={{ ...muted, margin: '3px 0 0', lineHeight: 1.4 }}>
+              {due.length ? 'Ingat lagi supaya tidak lupa' : `Ulasan berikutnya ${days <= 0 ? 'nanti hari ini' : days === 1 ? 'besok' : `${days} hari lagi`}`}
+            </p>
+          </div>
+          <ChevronRight size={18} color="#71717a" />
+        </div>
+      </Link>
+    </>
   );
 }
 

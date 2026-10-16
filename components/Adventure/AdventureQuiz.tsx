@@ -9,6 +9,7 @@ import dummyData from '@/data/dummyData.json';
 import GoogleAd from '@/components/Ads/GoogleAd';
 import { supabase } from '@/lib/supabase';
 import { useRankStore } from '@/store/useRankStore';
+import { useReviewStore } from '@/store/useReviewStore';
 import { X, CheckCircle2, XCircle, ChevronRight, Info, Lightbulb, BookOpen, Zap } from 'lucide-react';; // <-- PENTING: Jangan lupa install lucide-react jika belum
 
 // ── Sound & TTS ──────────────────────────────────────────────────────────────
@@ -992,6 +993,15 @@ export default function AdventureQuiz({ feedData, chapter, stage, stageIndex, to
     const item = feedData[currentIdx];
     const xpR = item?.xpReward ?? 10;
 
+    // The word goes into "Ulas kata" (spaced review); English cards explain the word in meaningId
+    if (item?.content?.word) {
+      const c = item.content;
+      useReviewStore.getState().addWords(selectedLanguage, [{
+        word: c.word, meaning: selectedLanguage === 'en' ? (c.meaningId ?? c.meaning) : (c.meaning ?? c.meaningId),
+        phonetic: c.phonetic, example: c.exampleSentence, source: 'stage',
+      }]);
+    }
+
     // Masukkan Kosakata ke dalam review data
     setReviewData(prev => [...prev, {
       question: item.content.word,
@@ -1011,7 +1021,7 @@ export default function AdventureQuiz({ feedData, chapter, stage, stageIndex, to
     const next = currentIdx + 1;
     if (next >= total) finishQuiz(newAnswers);
     else setCurrentIdx(next);
-  }, [currentIdx, feedData, isReplay, total, finishQuiz]);
+  }, [currentIdx, feedData, isReplay, total, finishQuiz, selectedLanguage]);
 
   const handleRetry = useCallback(() => {
     setCurrentIdx(0); setAnswers([]); answersRef.current = [];

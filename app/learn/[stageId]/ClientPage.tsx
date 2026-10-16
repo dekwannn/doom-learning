@@ -7,6 +7,7 @@ import { useLanguageStore } from "@/store/useLanguageStore";
 import { useProgress } from "@/hooks/useProgress";
 import { useUserStore } from "@/store/useUserStore";
 import { useStudyStore } from "@/store/useStudyStore";
+import { useReviewStore } from "@/store/useReviewStore";
 import { speakSegments } from "@/lib/lingo-speech";
 import { useGuestLimit } from "@/lib/guest-limit";
 import GuestLimitScreen from "@/components/GuestLimitScreen";
@@ -3317,6 +3318,13 @@ export default function LearnStagePage({ params }: Props) {
                   const first = useStudyStore.getState().markDone(selectedLanguage, stageId);
                   if (first && totalXp > 0) addXp(totalXp);
                   setEarnedXp(first ? totalXp : 0);
+                  // The lesson's words go into "Ulas kata", to be reviewed later
+                  const words = entry.sections
+                    .filter((s) => s.type === "vocabulary")
+                    .flatMap((s) => s.examples)
+                    .filter((e) => e.example)
+                    .map((e) => ({ word: e.en, meaning: e.id, example: e.example!.en, source: "materi" as const }));
+                  if (words.length) useReviewStore.getState().addWords(selectedLanguage, words);
                 }}
               />
               </div>
